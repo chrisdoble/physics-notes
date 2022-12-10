@@ -1,4 +1,5 @@
 \documentclass{article}
+\usepackage{amsmath}
 \usepackage{bm}
 \usepackage{float}
 \usepackage{graphicx}
@@ -271,7 +272,7 @@
 
     \item The physical interpretation of the above is that a conservative force always acts to push the system towards lower potential energy
 
-    \item $\textbf{F}=-\left(\frac{\partial U}{\partial x}\hat{\mathbf{x}}+\frac{\partial U}{\partial y}\hat{\mathbf{y}}+\frac{\partial U}{\partial z}\hat\mathbf{z}\right)=-\nabla U$
+    \item $\textbf{F} = -\left(\frac{\partial U}{\partial x} \hat{\mathbf{x}} + \frac{\partial U}{\partial y} \hat{\mathbf{y}} + \frac{\partial U}{\partial z} \hat{\mathbf{z}}\right)= -\nabla U$
 \end{itemize}
 
 \section{Momentum, Impulse, and Collisions}
@@ -725,6 +726,39 @@
     \item Vertical SHM is the same as horizontal SHM except the equilibrium position isn't when the spring is unstretched but when its restoring force is equal to the weight of the object
 
     \item Under \textbf{angular SHM} \[\omega=\sqrt{\frac{\kappa}{I}}\] \[f=\frac{1}{2\pi}\sqrt{\frac{\kappa}{I}}\] \[\theta=\Theta\cos(\omega t+\phi)\] where $\Omega$ is the amplitude of the oscillation
+\end{itemize}
+
+\subsection{The Simple Pendulum}
+
+\begin{itemize}
+    \item A \textbf{simple pendulum} is an idealized model consisting of a point mass suspended by a massless, unstretchable string
+
+    \item The restoring force for a simple pendulum is $-mg\sin\theta$ so the motion isn't SHM, however $\sin\theta \approx \theta$ for small $\theta$ in which case the motion is SHM
+
+    \item For small $\theta$ \[k = \frac{mg}{L}\] \[\omega = \sqrt{\frac{g}{L}}\] \[f = \frac{1}{2\pi} \sqrt{\frac{g}{L}}\]
+\end{itemize}
+
+\subsection{The Physical Pendulum}
+
+\begin{itemize}
+    \item A \textbf{physical pendulum} is any real pendulum that uses an extended object, in contrast to the idealized simple pendulum with all of its mass concentrated at a point
+
+    \item When the object is displaced from equilibrium its weight produces a restoring torque \[\tau = -mg\sin\theta\]
+
+    \item Like the simple pendulum, this doesn't describe SHM because it's proportional to $\sin\theta$ rather than $\theta$ but it approximates SHM for small $\theta$
+
+    \item This gives us
+          \begin{align*}
+              -mgd\theta           & = \tau                     \\
+                                   & = I\alpha                  \\
+                                   & = I\frac{d^2 \theta}{dt^2} \\
+              -\frac{mgd}{I}\theta & = \frac{d^2 \theta}{dt^2}
+          \end{align*}
+          so
+          \begin{align*}
+              \omega & = \sqrt{\frac{mgd}{I}}      \\
+              T      & = 2\pi \sqrt{\frac{I}{mgd}}
+          \end{align*}
 \end{itemize}
 
 \end{document}
