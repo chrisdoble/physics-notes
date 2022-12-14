@@ -1,0 +1,89 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{enumerate}
+
+\title{University Physics with Modern Physics Electromagnetism Problems}
+\author{Chris Doble}
+\date{December 2022}
+
+\begin{document}
+
+\maketitle
+
+\tableofcontents
+
+\setcounter{section}{20}
+\section{Electric Charge and Electric Field}
+
+\setcounter{subsection}{2}
+\subsection{Coulomb's Law}
+
+\subsubsection{Example 21.1}
+
+The magnitude of electric repulsion between two $\alpha$ particles is given by \[F_e = \frac{1}{4\pi\epsilon_0}\frac{q^2}{r^2}\] and the magnitude of gravitational attraction is given by \[F_g = \frac{Gm^2}{r^2}\]. The ratio of the two values is
+
+\begin{align*}
+  \frac{F_e}{F_g} & = \frac{1}{4\pi\epsilon_0}\frac{q^2}{r^2}\frac{r^2}{Gm^2} \\
+                  & = \frac{1}{4\pi\epsilon_0}\frac{q^2}{Gm^2}                \\
+                  & = 3.1\times10^{35}
+\end{align*}
+
+showing that the electric repulsion is significantly stronger than the gravitational attraction.
+
+\subsubsection{Example 21.2}
+
+\begin{enumerate}[a)]
+  \item The magnitude of the force that $q_1$ exerts on $q_2$ is
+        \begin{align*}
+          F & = \frac{1}{4\pi\epsilon_0}\frac{q_1q_2}{r^2}                                 \\
+            & = (9.0 \times 10^9)\frac{|(25 \times 10^{-9})(-75 \times 10^{-9})|}{0.030^2} \\
+            & = 1.9 \times 10^{-2}\,\textrm{N}.
+        \end{align*}
+        Since $q_1$ and $q_2$ have opposite charge, the force is attractive (from $q_2$ to $q_1$).
+
+  \item The magnitude of the force that $q_2$ exerts on $q_1$ is the same as in part a, but the direction is reversed (from $q_1$ to $q_2$).
+\end{enumerate}
+
+\subsubsection{Example 21.3}
+
+By the principle of superposition of forces, the net force exerted on $q_3$ is equal to the vector sum of the forces exerted on it by $q_1$ and $q_2$ separately.
+
+Both $q_1$ and $q_3$ have positive charge so they repel each other. $q_1$ is to the right of $q_3$ so $q_3$ experiences a force to the left of magnitude
+
+\begin{align*}
+  F_\textrm{1 on 3} & = \frac{1}{4\pi\epsilon_0}\frac{|q_1q_3|}{r^2}                                \\
+                    & = (9.0 \times 10^9)\frac{|(1.0 \times 10^{-9})(5.0 \times 10^{-9})|}{0.020^2} \\
+                    & = 1.1 \times 10^{-4}\,\textrm{N}.
+\end{align*}
+
+However $q_2$ has a negative charge so it attracts $q_3$. It is also to the right of $q_3$ so $q_3$ experiences a force to the right of magnitude
+
+\begin{align*}
+  F_\textrm{2 on 3} & = \frac{1}{4\pi\epsilon_0}\frac{|q_2q_3|}{r^2}                                \\
+                    & = (9.0 \times 10^9)\frac{|(-3.0 \times 10^{-9})(5.0 \times 10^{-9})}{0.040^2} \\
+                    & = 8.4 \times 10^{-5}\,\textrm{N}.
+\end{align*}
+
+The net force experienced by $q_3$ is therefore
+
+\begin{align*}
+  F & = -F_\textrm{1 on 3} + F_\textrm{2 on 3}   \\
+    & = -1.1 \times 10^{-4} + 8.4 \times 10^{-5} \\
+    & = -2.6 \times 10^{-5}\,\textrm{N}.
+\end{align*}
+
+\subsubsection{Example 21.4}
+
+Since $q_1$ and $q_2$ are of equal charge and are symmetric about the x axis on which $Q$ lies, the vertical components of their forces cancel leaving only the horizontal.
+
+The horizontal component of $q_1$'s force on $Q$ is given by
+
+\begin{align*}
+  F_\textrm{1 on Q, x} & = \frac{1}{4\pi\epsilon_0} \frac{q_1Q}{r_\textrm{1,Q}^2} \cos\alpha                                             \\
+                       & = (9.0 \times 10^9) \frac{(2.0 \times 10^{-6})(4.0 \times 10^{-6})}{\sqrt{0.30^2 + 0.40^2}^2} \frac{0.40}{0.50} \\
+                       & = 0.23\,\textrm{N}.
+\end{align*}
+
+Again, since $q_1$ and $q_2$ are of equal charge and symmetric about the x axis, $F_\textrm{1 on Q, x} = F_\textrm{2 on Q, x}$ and the total force experienced by $Q$ is in the positive x direction of magnitude \[F = 2F_\textrm{1 on Q, x} = 0.46\,\textrm{N}.\]
+
+\end{document}
