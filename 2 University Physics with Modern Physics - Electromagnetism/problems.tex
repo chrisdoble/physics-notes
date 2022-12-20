@@ -512,4 +512,72 @@ Thus the net force experienced by $q_3$ is
         \end{align*}
 \end{enumerate}
 
+\subsubsection{VP21.14.1}
+
+\begin{enumerate}[a)]
+  \item The magnitude of the torque is given by
+
+        \begin{align*}
+          \tau & = p E \sin \theta                                 \\
+               & = (\num{6.13e-30}) (\num{3.00e5}) \sin \ang{50.0} \\
+               & = \qty{1.41e-24}{N.m}.
+        \end{align*}
+
+  \item The potential energy is given by
+
+        \begin{align*}
+          U & = -p E \cos \theta                                 \\
+            & = -(\num{6.13e-30}) (\num{3.00e5}) \cos \ang{50.0} \\
+            & = \qty{-1.18e-24}{J}.
+        \end{align*}
+\end{enumerate}
+
+\subsubsection{VP21.14.2}
+
+To find the magnitude of the charges we can rearrange the torque equation
+
+\begin{align*}
+  \tau & = p E \sin \theta                                                      \\
+       & = q d E \sin \theta                                                    \\
+  q    & = \frac{\tau}{d E \sin \theta}                                         \\
+       & = \frac{\num{6.60e-26}}{(\num{1.10e-10}) (\num{8.50e4}) \sin \ang{90}} \\
+       & = \qty{7.06e-21}{C}.
+\end{align*}
+
+\subsubsection{VP21.14.3}
+
+When the dipole moment is parallel to the field its potential energy is $-p E$ and when it is antiparallel its potential energy is $p E$. Thus, the work required to perform the rotation is $2 p E$ and
+
+\begin{align*}
+  W & = 2 p E                                   \\
+  p & = \frac{W}{2 E}                           \\
+    & = \frac{\num{4.60e-25}}{2 (\num{1.20e5})} \\
+    & = \qty{1.92e-30}{C.m}.
+\end{align*}
+
+\subsubsection{VP21.14.4}
+
+\newcommand{\kev}{\num{8.988e9}}
+
+\begin{enumerate}[a)]
+  \item Rearranging the equation for the dipole moment gives
+
+        \begin{align*}
+          p & = q d                                   \\
+          d & = \frac{p}{q}                           \\
+            & = \frac{\num{3.50e-29}}{\num{1.60e-19}} \\
+            & = \qty{2.19e-10}{m}.
+        \end{align*}
+
+  \item From Example 21.14, the electric field of the molecule along its axis is \[E_y = \ke \frac{2p}{y^3}.\]
+
+        Rearranging for $y$ and substituting in the desired field strength gives
+
+        \begin{align*}
+          y & = \left( \ke \frac{2 p}{E_y} \right)^{1/3}                                             \\
+            & = \left( (\kev) \frac{2 (\num{1.60e-19}) (\num{2.19e-10})}{\num{8.00e4}} \right)^{1/3} \\
+            & = \qty{1.99e-8}{m}.
+        \end{align*}
+\end{enumerate}
+
 \end{document}
