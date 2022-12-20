@@ -262,4 +262,34 @@ By symmetry, each point on the disk has a corresponding point 180° rotation aro
 
 From Example 21.11 we know that the electric field produced by an infinite plane sheet of charge is \[E= \frac{\sigma}{2\epsilon_0}.\] Therefore the electric field outside the sheets is $\mathbf{0}$ and between the sheets is $\sigma/\epsilon_0$ towards the negative sheet.
 
+\subsection{Electric Dipoles}
+
+\subsubsection{Example 21.13}
+
+\begin{enumerate}[a)]
+  \item The electric field is uniform so the net force exerted on the dipole is $\mathbf{0}$
+
+  \item The electric dipole moment is directed from the negative charge to the positive charge and has magnitude \[p = qd = (1.6 \times 10^{-19})(0.125 \times 10^{-9}) = 2.0 \times 10^{-29}\,\textrm{C}\cdot\textrm{m}\]
+
+  \item The torque aligns the electric dipole moment with the electric field so it is directed out of the page and has magnitude \[\tau = qEd\sin\phi = (1.6 \times 10^{-19})(5.0 \times 10^5)(0.125 \times 10^{-9})\sin 35 = 5.7 \times 10^{-24}\,\textrm{N}\cdot\textrm{m}\]
+
+  \item The potential energy of an electric dipole in a uniform electric field is given by \[U = -qdE\cos\phi = (2.0 \times 10^{-29})(5.0 \times 10^5)\cos 35 = 8.2 \times 10^{-24}\,\textrm{J}\]
+\end{enumerate}
+
+\subsubsection{Example 21.14}
+
+As $P$ is on the $y$-axis, the electric fields of the electric dipole's point charges have no $x$ component and thus the net electric field is directed along the $y$-axis.
+
+By the principle of superposition of electric fields, the magnitude of the electric field at $P$ is
+
+\begin{align*}
+  E & = E_- + E_+                                                                                                                         \\
+    & = \frac{1}{4\pi\epsilon_0} \frac{-q}{(y - (-d/2))^2} + \frac{1}{4\pi\epsilon_0} \frac{q}{(y - d/2)^2}                               \\
+    & = \frac{1}{4\pi\epsilon_0}q\left(\frac{1}{(y-d/2)^2} - \frac{1}{(y + d/2)^2}\right)                                                 \\
+    & = \frac{1}{4\pi\epsilon_0} \frac{q}{y^2} \left( \left( 1 - \frac{d}{2y} \right)^{-2} - \left( 1 + \frac{d}{2y} \right)^{-2} \right) \\
+    & \approx \frac{1}{4\pi\epsilon_0} \frac{q}{y^2} \left( 1 + \frac{d}{y} - 1 + \frac{d}{y} \right)                                     \\
+    & = \frac{qd}{2\pi\epsilon_0y^3}                                                                                                      \\
+    & = \frac{p}{2\pi\epsilon_0y^3}.
+\end{align*}
+
 \end{document}
