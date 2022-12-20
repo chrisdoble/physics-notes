@@ -1,6 +1,7 @@
 \documentclass{article}
-\usepackage{amsmath}
-\usepackage{enumerate}
+\usepackage{amsmath} % For align*
+\usepackage{enumerate} % For customisable list labels
+\usepackage{siunitx} % For units
 
 \title{University Physics with Modern Physics Electromagnetism Problems}
 \author{Chris Doble}
@@ -356,7 +357,7 @@ By symmetry the $x$ components of $q_1$ and $q_2$'s electric fields cancel leavi
     & = 3.45 \times 10^{-6} \,\textrm{N}.
 \end{align*}
 
-\subsection{VP21.4.4}
+\subsubsection{VP21.4.4}
 
 The magnitude of the electric force exerted by $q_1$ on $q_3$ is
 
@@ -391,5 +392,124 @@ Thus the net force experienced by $q_3$ is
   \mathbf{F} & = \mathbf{F_1} + \mathbf{F_2}                                                                                \\
              & = (4.53 \times 10^{-7} \,\textrm{N}) \hat{\mathbf{i}} + (3.29 \times 10^{-7} \,\textrm{N}) \hat{\mathbf{j}}.
 \end{align*}
+
+\subsubsection{VP21.10.1}
+
+\begin{enumerate}[a)]
+  \item The source points and field point all lie on the $y$-axis, so the source points' electric fields have no $x$ components. $q_1$ is positive and the field point is below it, so its contribution is negative. $q_2$ is negative and the field point is above it, so its contribution is also negative. Thus the $y$ component of the net electric field is
+
+        \begin{align*}
+          E_y & = \frac{1}{4 \pi \epsilon_0} \left( -\frac{q_1}{(y_1 - y)^2} + \frac{q_2}{(y_2 - y)^2} \right)                                                     \\
+              & = \frac{1}{4 \pi (8.854 \times 10^{-12})} \left( \frac{4.00 \times 10^{-9}}{(0.200 - 0.100)^2} - \frac{5.00 \times 10^{-9}}{(0 - 0.100)^2} \right) \\
+              & = -8.09 \times 10^3 \,\textrm{N}/\textrm{C}.
+        \end{align*}
+
+  \item The source points and field point all lie on the $y$-axis, so the source points' electric fields have no $x$ components. $q_1$ is positive and the field point is above it, so its contribution is positive. $q_2$ is negative and the field point is above it, so its contribution is also negative. Thus the $y$ component of the net electric field is
+
+        \begin{align*}
+          E_y & = \frac{1}{4 \pi \epsilon_0} \left( \frac{q_1}{(y_1 - y)^2} + \frac{q_2}{(y_2 - y)^2} \right)                                                      \\
+              & = \frac{1}{4 \pi (8.854 \times 10^{-12})} \left( \frac{4.00 \times 10^{-9}}{(0.200 - 0.400)^2} - \frac{5.00 \times 10^{-9}}{(0 - 0.400)^2} \right) \\
+              & = 618 \,\textrm{N}/\textrm{C}.
+        \end{align*}
+
+  \item The electric field of $q_1$ has magnitude
+
+        \begin{align*}
+          E_1 & = \frac{1}{4 \pi \epsilon_0} \frac{q_1}{r^2}                                            \\
+              & = \frac{1}{4 \pi (8.854 \times 10^{-12})} \frac{4.00 \times 10^{-9}}{0.200^2 + 0.200^2} \\
+              & = 449 \,\textrm{N}/\textrm{C}.
+        \end{align*}
+
+        It is directed from $q_1$ to the field point and thus in component form is
+
+        \begin{align*}
+          \mathbf{E_1} & = E_1(\cos\phi\hat{\mathbf{i}} - \sin\phi\hat{\mathbf{j}})                                       \\
+                       & = \frac{449}{\sqrt{0.200^2 + 0.200^2}}(0.200\hat{\mathbf{i}} - 0.200\hat{\mathbf{j}})            \\
+                       & = (317 \,\textrm{N}/\textrm{C})\hat{\mathbf{i}} - (317 \,\textrm{N}/\textrm{C})\hat{\mathbf{j}}.
+        \end{align*}
+
+        $q_2$ and the field point both lie on the $x$-axis, and thus its electric field has no $y$ component. In component form it is
+
+        \begin{align*}
+          \mathbf{E_2} & = \frac{1}{4 \pi \epsilon_0} \frac{q_2}{r^2} \hat{\mathbf{i}}                                   \\
+                       & = \frac{1}{4 \pi (8.854 \times 10^{-12})} \frac{-5.00 \times 10^{-9}}{0.200^2} \hat{\mathbf{i}} \\
+                       & = (-1.12 \times 10^{3} \,\textrm{N}/\textrm{C})\hat{\mathbf{i}}.
+        \end{align*}
+
+        The total electric field is thus
+
+        \begin{align*}
+          \mathbf{E} & = \mathbf{E_1} + \mathbf{E_2}                                                                                                \\
+                     & = (-8.03 \times 10^2 \,\textrm{N}/\textrm{C})\hat{\mathbf{i}} + (-3.17 \times 10^2 \,\textrm{N}/\textrm{C})\hat{\mathbf{j}}.
+        \end{align*}
+\end{enumerate}
+
+\subsubsection{VP21.10.2}
+
+\begin{enumerate}[a)]
+  \item Both source points and the field point are on the $x$-axis, so the electric fields at $P$ have no $y$ components.
+
+        $q_1$ is positive and $P$ is to the right of $q_1$, so its electric field points to the right and has magnitude
+
+        \begin{align*}
+          E_1 & = \frac{1}{4 \pi \epsilon_0} \frac{q_1}{r^2}                                   \\
+              & = \frac{1}{4 \pi (8.854 \times 10^{-12})} \frac{1.80 \times 10^{-9}}{0.0200^2} \\
+              & = 4.04 \times 10^4 \,\textrm{N}/\textrm{C}.
+        \end{align*}
+
+  \item The magnitude and direction of the electric field that $q_2$ causes at $P$ can be calculated as
+
+        \begin{align*}
+          E   & = E_1 + E_2                                 \\
+          E_2 & = E - E_1                                   \\
+              & = 6.75 \times 10^4 - 4.04 \times 10^4       \\
+              & = 2.71 \times 10^4 \,\textrm{N}/\textrm{C}.
+        \end{align*}
+
+  \item $E_2$ is positive at $P$, so $q_2$ must be negative. Its value is
+
+        \begin{align*}
+          E_2 & = -\frac{1}{4 \pi \epsilon_0} \frac{q_2}{r^2}                  \\
+          q_2 & = -4 \pi \epsilon_0 E_2 r^2                                    \\
+              & = -4 \pi (8.854 \times 10^{-12}) (2.71 \times 10^4) (0.0200)^2 \\
+              & = -1.21 \times 10^{-9} \,\textrm{C}.
+        \end{align*}
+\end{enumerate}
+
+\subsubsection{21.10.3}
+
+\newcommand{\ke}{\frac{1}{4 \pi \epsilon_0}}
+
+\begin{enumerate}[a)]
+  \item From Example 21.9 we know that the electric field of a charged ring of radius $a$ at a distance $x$ along the ring's axis is directed away from the ring along its axis and has magnitude \[E = \frac{1}{4 \pi \epsilon_0} \frac{Qx}{(x^2 + a^2)^{3/2}}.\]
+
+        By the principle of superposition of electric fields, the electric field of the hydrogen atom is
+
+        \begin{align*}
+          E & = \ke \left( \frac{e}{a^2} - \frac{ea}{(a^2 + a^2)^{3/2}} \right) \\
+            & = \ke e \left( \frac{1}{a^2} - \frac{a}{2\sqrt{2}a^3} \right)     \\
+            & = \ke \frac{e}{a^2} \left( 1 - \frac{1}{2\sqrt{2}} \right).
+        \end{align*}
+
+  \item $1 - 1/(2\sqrt{2}) \approx 0.65$ so the field points away from the proton.
+\end{enumerate}
+
+\subsubsection{21.10.4}
+
+\begin{enumerate}[a)]
+  \item The charge per unit length is \[\lambda = \frac{Q}{L}\] so the charge contained in a segment of length $dx$ is \[\lambda\,dx = \frac{Q}{L}\,dx.\]
+
+  \item The field and source points both lie on the $x$-axis, so the differential electric field has no $y$ component. The $x$ component is \[dE_x = -\ke \frac{\lambda \, dx}{x^2} = -\ke \frac{Q}{Lx^2} \, dx.\]
+
+  \item The total electric field at the origin is
+
+        \begin{align*}
+          E & = \int dE_x                                                   \\
+            & = \int_L^{2L} -\ke \frac{Q}{Lx^2} \, dx                       \\
+            & = -\ke \frac{Q}{L} \left[ -\frac{1}{x} \right]_L^{2L}         \\
+            & = -\ke \frac{Q}{L} \left( -\frac{1}{2L} + \frac{1}{L} \right) \\
+            & = -\ke \frac{Q}{2L^2}.
+        \end{align*}
+\end{enumerate}
 
 \end{document}
