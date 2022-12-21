@@ -5,6 +5,9 @@
 \author{Chris Doble}
 \date{December 2022}
 
+% The Coulomb constant
+\newcommand{\ke}{\frac{1}{4 \pi \epsilon_0}}
+
 \begin{document}
 
 \maketitle
@@ -106,6 +109,38 @@
   \item The net torque on an electric dipole in a uniform electric field is $\mathbf{p} \times \mathbf{E}$ or $qEd\sin\phi$ where $\phi$ is the angle between the electric dipole and the electric field
 
   \item The potential energy of an electric dipole in a uniform electric field is \[U = -\mathbf{p} \cdot \mathbf{E}\]
+\end{itemize}
+
+\section{Gauss's Law}
+
+\subsection{Calculating Electric Flux}
+
+\begin{itemize}
+  \item The electric flux of a uniform electric field through a flat surface $A$ is \[\Phi_E = \mathbf{E} \cdot \mathbf{A}\] where $\mathbf{A}$ is normal to $A$ and has a magnitude equal to its area
+
+  \item The electric flux of a nonuniform electric field through a curved surface $A$ is \[\Phi_E = \int \mathbf{E} \cdot \mathbf{dA}\]
+\end{itemize}
+
+\subsection{Gauss's Law}
+
+\begin{itemize}
+  \item Gauss's law states that the total electric flux through a closed surface is equal to the total electric charge enclosed by the surface divided by $\epsilon_0$ \[\Phi_E = \oint \mathbf{E} \cdot \mathbf{dA} = \frac{Q_\textrm{enc}}{\epsilon_0}\]
+\end{itemize}
+
+\subsection{Applications of Gauss's Law}
+
+\begin{itemize}
+  \item Gauss's law can be used in two ways:
+
+        \begin{itemize}
+          \item If we know the charge distribution and it has enough symmetry to let us evaluate the integral in Gauss's law, we can find the field
+
+          \item If we know the field, we can use Gauss's law to find the charge distribution
+        \end{itemize}
+
+  \item Under electrostatics, excess charge always lies of the surface of a conductor
+
+  \item The electric field of an infinite line charge is \[\mathbf{E} = \ke \frac{2 \lambda}{r} \hat{\mathbf{r}}\]
 \end{itemize}
 
 \end{document}

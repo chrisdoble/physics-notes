@@ -476,7 +476,7 @@ Thus the net force experienced by $q_3$ is
         \end{align*}
 \end{enumerate}
 
-\subsubsection{21.10.3}
+\subsubsection{VP21.10.3}
 
 \newcommand{\ke}{\frac{1}{4 \pi \epsilon_0}}
 
@@ -494,7 +494,7 @@ Thus the net force experienced by $q_3$ is
   \item $1 - 1/(2\sqrt{2}) \approx 0.65$ so the field points away from the proton.
 \end{enumerate}
 
-\subsubsection{21.10.4}
+\subsubsection{VP21.10.4}
 
 \begin{enumerate}[a)]
   \item The charge per unit length is \[\lambda = \frac{Q}{L}\] so the charge contained in a segment of length $dx$ is \[\lambda\,dx = \frac{Q}{L}\,dx.\]
@@ -589,6 +589,109 @@ By symmetry, each point on the semicircle has a corresponding point on the oppos
     & = \ke \frac{Q}{\pi a^2} \int_0^\pi \sin \theta \, d\theta     \\
     & = \ke \frac{Q}{\pi a^2} \left[ -\cos \theta \right]_0^\pi     \\
     & = \ke \frac{2Q}{\pi a^2}.
+\end{align*}
+
+\section{Gauss's Law}
+
+\subsection{Calculating Electric Flux}
+
+\subsubsection{Example 22.1}
+
+\begin{enumerate}[a)]
+  \item The electric flux is given by
+
+        \begin{align*}
+          \Phi_E & = A E \cos \theta                          \\
+                 & = \pi (0.10)^2 (\num{2.0e3}) \cos \ang{30} \\
+                 & = \qty{54}{N.m^2/C}.
+        \end{align*}
+
+  \item $\Phi_E = 0$
+
+  \item $\Phi_E = A E = \qty{63}{N.m^2/C}$
+\end{enumerate}
+
+\subsubsection{Example 22.2}
+
+\begin{enumerate}[a)]
+  \item Four of the six sides are parallel to $E$ and thus contribute no flux. The remaining two surfaces contribute $E L^2$ and $-E L^2$ which add to $0$ and also contribute no flux. The total flux is $0$.
+
+  \item Two of the six sides are parallel to $E$ and thus contribute no flux. Two of the remaining four sides contribute $E L^2 \cos \theta$ and $-E L^2 \cos \theta$ which add to $0$ and also contribute no flux. The final two sides contribute $E L^2 \sin \theta$ and $-E L^2 \sin \theta$ which also add to $0$ and contribute no flux. The total flux is $0$.
+\end{enumerate}
+
+\subsubsection{Example 22.3}
+
+At all points the electric field is normal to the sphere and its magnitude is \[E = \ke \frac{q}{r^2} = (\kev) \frac{\num{3.0e-6}}{0.20^2} = \qty{6.74e5}{N/C}.\]
+
+The total flux is thus \[\Phi_E = AE = 4 \pi r^2 E = 4 \pi (0.20)^2 (\num{6.74e5}) = \qty{3.4e5}{N.m^2/C}.\]
+
+\subsection{Applications of Gauss's Law}
+
+\subsubsection{Example 22.5}
+
+Under electrostatics the electric field inside a conductor is always $\mathbf{0}$.
+
+Using a Gaussian sphere of radius $r > R$ centred on the conducting sphere we can use Gauss's law to calculate the electric field because $\mathbf{E}$ will be perpendicular to $\mathbf{dA}$ and have a constant magnitude
+
+\begin{align*}
+  \oint \mathbf{E} \cdot \mathbf{dA} & = \frac{Q_\textrm{enc}}{\epsilon_0}                \\
+  E \oint dA                         & = \frac{Q_\textrm{enc}}{\epsilon_0}                \\
+  E                                  & = \ke \frac{Q_\textrm{enc}}{r^2}                   \\
+  \mathbf{E}                         & = \ke \frac{Q_\textrm{enc}}{r^2} \hat{\mathbf{r}}.
+\end{align*}
+
+\subsubsection{Example 22.6}
+
+By symmetry the electric field must only have a radial component. Using a Gaussian cylinder of length $L$ and radius $r$ centred on the line $E$ will be perpendicular to $dA$ and have constant magnitude so we can use Gauss's law to derive the electric field
+
+\begin{align*}
+  \oint \mathbf{E} \cdot \mathbf{dA} & = \frac{Q_\textrm{enc}}{\epsilon_0}         \\
+  E \oint dA                         & = \frac{L \lambda}{\epsilon_0}              \\
+  E                                  & = \frac{L \lambda}{2 \pi r L \epsilon_0}    \\
+  \mathbf{E}                         & = \ke \frac{2 \lambda}{r} \hat{\mathbf{r}}.
+\end{align*}
+
+\subsubsection{Example 22.7}
+
+By symmetry, the electric field must be directed away from the sheet. Using a Gaussian cube of side $L$, $E$ will be perpendicular to $dA$ on the far sides of the box and have constant magnitude so we can use Gauss's law to dervice the electric field
+
+\begin{align*}
+  \oint \mathbf{E} \cdot \mathbf{dA} & = \frac{Q_\textrm{enc}}{\epsilon_0} \\
+  2 E L^2                            & = \frac{\sigma L^2}{\epsilon_0}     \\
+  E                                  & = \frac{\sigma}{2 \epsilon_0}.
+\end{align*}
+
+\subsubsection{Example 22.8}
+
+First we position a Gaussian cylinder such that one end is within the plate and the other is between the plates. The end that is within the plate experiences no flux because there are no electric fields within conductors. We can use Gauss's law to find the electric field at the other end and thus between the plates
+
+\begin{align*}
+  \oint \mathbf{E} \cdot \mathbf{dA} & = \frac{Q_\textrm{enc}}{\epsilon_0} \\
+  E A                                & = \frac{\sigma A}{\epsilon_0}       \\
+  E                                  & = \frac{\sigma}{\epsilon_0}.
+\end{align*}
+
+\subsubsection{Example 22.9}
+
+From previous examples we know that for $r > R$ the sphere's electric field is equivalent to that of a point charge \[E = \ke \frac{Q}{r^2}.\]
+
+The sphere is insulating so for $r < R$ its electric field isn't necessarily $\mathbf{0}$. However by symmetry its electric field must only have a radial component so we can use Gauss's law
+
+\begin{align*}
+  \oint \mathbf{E} \cdot \mathbf{dA} & = \frac{Q_\textrm{enc}}{\epsilon_0}                                \\
+  E \oint dA                         & = \frac{V \rho}{\epsilon_0}                                        \\
+  E (4 \pi r^2)                      & = \frac{4}{3} \pi r^3 \frac{Q}{(4/3) \pi R^3} \frac{1}{\epsilon_0} \\
+  \mathbf{E}                         & = \ke \frac{Q r}{R^3} \hat{\mathbf{r}}.
+\end{align*}
+
+\subsubsection{Example 22.10}
+
+For $r > R$ the electric field is as if all the charge were concentrated at the centre of the sphere. We can rearrange the equation for the electric field of a point charge to find the magnitude of the charge
+
+\begin{align*}
+  E & = \ke \frac{q}{r^2}      \\
+  q & = 4 \pi \epsilon_0 E r^2 \\
+    & = \qty{-1.80e-9}{C}.
 \end{align*}
 
 \end{document}
