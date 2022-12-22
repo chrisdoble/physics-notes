@@ -720,4 +720,78 @@ For $r > R$ the electric field is as if all the charge were concentrated at the 
         \end{align*}
 \end{enumerate}
 
+\subsection{Guided Practice}
+
+\subsubsection{VP22.4.4}
+
+\begin{enumerate}[a)]
+  \item $q_1$ is within the Gaussian surface, so \[\Phi_E = \frac{Q_\textrm{enc}}{\epsilon_0} = \frac{\num{3.00e-9}}{8.854e-12} = \qty{339}{N.m^2/C}.\]
+
+  \item $q_2$ is also within the Guassian surface, so \[\Phi_E = \frac{(\num{3.00e-9}) + (\num{-8.00e-9})}{\num{8.854e-12}} = \qty{-565}{N.m^2/C}.\]
+
+  \item $q_3$ is outside the Guassian surface so the flux is unchanged from part b.
+\end{enumerate}
+
+\subsubsection{VP22.10.4}
+
+From Examples 21.12 and 22.8 we know that the electric field between the plates of a capacitor is \[E = \frac{\sigma}{\epsilon_0}.\]
+
+Rearranging the equation for electric force we find
+
+\begin{align*}
+  F                  & = qE                                                      \\
+                     & = q\frac{\sigma}{\epsilon_0}                              \\
+  \Rightarrow \sigma & = \frac{\epsilon_0 F}{q}                                  \\
+                     & = \frac{(\num{8.854e-12}) (\num{22.0e-6})}{\num{3.60e-9}} \\
+                     & = \qty{5.41e-8}{C/m^2}.
+\end{align*}
+
+\subsubsection{VP22.12.1}
+
+The inner surface of the block must have a total charge of $\qty{-3.00}{nC}$ to balance the charge within the cavity, leaving $\qty{-5.00}{nC}$ for the outer surface.
+
+\subsubsection{VP22.12.4}
+
+\begin{enumerate}[a)]
+  \item The inner surface must have a total charge of $\qty{-4.00}{nC}$ to balance charge within the cavity, leaving $\qty{-2.00}{nC}$ for the outer surface.
+
+  \item Found in part a: $\qty{-2.00}{nC}$.
+
+  \item $E = \qty{2.50e3}{N/C}$
+
+  \item $E = \qty{1.65e2}{N/C}$
+\end{enumerate}
+
+\subsubsection{Bridging Problem}
+
+\begin{enumerate}[a)]
+  \item The sphere will include the proton's charge ($+Q$) plus a portion of the electron's charge.
+
+        \begin{align*}
+          q & = Q + \int_0^r \rho \, dV                                          \\
+            & = Q + \int_0^r -\frac{Q}{\pi a_0^3} e^{-2r'/a_0} 4 \pi r'^2 \, dr' \\
+            & = Q - \frac{4Q}{a_0^3} \int_0^r e^{-2r'/a_0} r'^2 \, dr'.          \\
+        \end{align*}
+
+        Using integration by parts
+
+        \begin{align*}
+          \int e^{-2 r / a_0} r^2 \, dr                    & = -\frac{a_0}{2} e^{-2 r / a_0} r^2 - \int -a_0 e^{-2 r / a_0} r \, dr                                                            \\
+                                                           & = -\frac{a_0}{2} e^{-2 r / a_0} r^2 - \left( \frac{a_0^2}{2} e^{-2 r / a_0} r - \int \frac{a_0^2}{2} e^{-2 r / a_0} \, dr \right) \\
+                                                           & = -\frac{a_0}{2} e^{-2 r / a_0} r^2 - \frac{a_0^2}{2} e^{-2 r / a_0} r - \frac{a_0^3}{4} e^{-2 r / a_0} + c                       \\
+                                                           & = -\frac{a_0}{4} e^{-2 r / a_0} \left( 2 r^2 + 2 a_0 r + a_0^2 \right) + c                                                        \\
+          \Rightarrow \int_0^r e^{-2 r' / a_0} r'^2 \, dr' & = \frac{1}{4} a_0 \left( a_0^2 - e^{-2 r / a_0} \left( 2 r^2 + 2 a_0 r + a_0^2 \right) \right)
+        \end{align*}
+
+        Therefore
+
+        \begin{align*}
+          q & = Q - \frac{4 Q}{a_0^3} \frac{1}{4} a_0 \left( a_0^2 - e^{-2 r / a_0} \left( 2 r^2 + 2 a_0 r + a_0^2 \right) \right) \\
+            & = Q \left( 1 - 1 + \frac{e^{-2 r / a_0}}{a_0^2} \left( 2 r^2 + 2 a_0 r + a_0^2 \right) \right)                       \\
+            & = Q e^{-2 r / a_0} \left( 2 \left( \frac{r}{a_0} \right)^2 + 2 \frac{r}{a_0} + 1 \right).
+        \end{align*}
+
+  \item By Gauss's law and symmetry we know that the electric field will only have a radial component and will have magnitude \[E = \ke \frac{q}{r^2}.\]
+\end{enumerate}
+
 \end{document}
