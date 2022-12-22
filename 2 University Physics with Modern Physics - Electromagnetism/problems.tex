@@ -794,4 +794,144 @@ The inner surface of the block must have a total charge of $\qty{-3.00}{nC}$ to 
   \item By Gauss's law and symmetry we know that the electric field will only have a radial component and will have magnitude \[E = \ke \frac{q}{r^2}.\]
 \end{enumerate}
 
+\subsection{Exercises}
+
+\subsubsection{22.2}
+
+The electric field is constant so we can calculate the electric flux as
+
+\begin{align*}
+  \Phi_E & = \mathbf{A} \cdot \mathbf {E}       \\
+         & = A E \cos \theta                    \\
+         & = (0.400)(0.600)(90.0) \cos \ang{70} \\
+         & = \qty{7.4}{N.m^2/C}.
+\end{align*}
+
+\subsubsection{22.9}
+
+\begin{enumerate}[a)]
+  \item Assuming the plastic sphere has no charge, the electric field is $\mathbf{0}$.
+
+  \item By Gauss's law and symmetry the electric field is as if all charge were concentrated at the centre of the sphere, giving $E = \qty{-1.22e8}{N/C}$.
+
+  \item Using the same logic as in part b, $E = \qty{-3.64e7}{N/C}$.
+\end{enumerate}
+
+\subsubsection{22.13}
+
+The electric field of an infinite line charge is \[\mathbf{E} = \ke \frac{2 \lambda}{r} \hat{\mathbf{r}}.\]
+
+The force experienced by the section is
+
+\begin{align*}
+  F & = \int dF                                                   \\
+    & = \int E \, dq                                              \\
+    & = \int_0^L \ke \frac{2 \lambda}{r} \lambda \, dx            \\
+    & = \ke \frac{2 \lambda^2}{r} \int_0^L dx                     \\
+    & = (\num{8.988e9}) \frac{2 (\num{5.20e-6})^2}{0.300}(0.0500) \\
+    & = \qty{0.0810}{N}.
+\end{align*}
+
+\subsubsection{22.23}
+
+\begin{enumerate}[a)]
+  \item The electric field of an infinite plane is \[E = \frac{\sigma}{2 \epsilon_0}.\]
+
+        The point charge and sheet have opposite charges so are attracted to each other. The work done on the electron by the electric field of the sheet is \[W = F d = q \frac{\sigma}{2 \epsilon_0} d = (\num{1.60e-19}) \frac{\num{2.90e-12}}{2 (\num{8.85e-12})} (0.250) = \qty{6.56e-21}{J}.\]
+
+  \item By the work-energy theorem, we can use the kinetic energy of the electron to calculate its velocity
+
+        \begin{align*}
+          W             & = \frac{1}{2} m v^2                                \\
+          \Rightarrow v & = \sqrt{\frac{2 W}{m}}                             \\
+                        & = \sqrt{\frac{2 (\num{6.56e-21})}{\num{9.11e-31}}} \\
+                        & = \qty{1.20e5}{m/s}.
+        \end{align*}
+\end{enumerate}
+
+\subsubsection{22.34}
+
+The electric field is non-uniform so to calculate the electric flux we must perform an integral
+
+\begin{align*}
+  \Phi_E & = \int E \, dA                           \\
+         & = \int_0^L \int_0^L kx \, dx \, dy       \\
+         & = k L \left[ \frac{1}{2} x^2 \right]_0^L \\
+         & = \frac{1}{2} k L^3                      \\
+         & = \frac{1}{2} (964) (0.350)^3            \\
+         & = \qty{20.7}{N.m^2/C}.
+\end{align*}
+
+\subsubsection{22.45}
+
+\begin{enumerate}[a)]
+  \item The charge contained within a sphere of radius $r$ is given by
+
+        \begin{align*}
+          q & = \int_a^r \rho \, dV                              \\
+            & = \int_a^r \frac{\alpha}{r} 4 \pi r'^2 \, dr'      \\
+            & = 4 \pi \alpha \int_a^r r' \, dr'                  \\
+            & = 4 \pi \alpha \left[ \frac{1}{2} r'^2 \right]_a^r \\
+            & = 2 \pi \alpha (r^2 - a^2).
+        \end{align*}
+
+        By symmetry and Gauss's law, the electric field at radius $r$ is the same as if all the charge were concentrated at the centre of the sphere so
+
+        \begin{align*}
+          E & = \ke \frac{q}{r^2}                         \\
+            & = \ke \frac{2 \pi \alpha (r^2 - a^2)}{r^2}.
+        \end{align*}
+
+  \item The net electric field must be equal at $r=a$ and $r=b$
+
+        \begin{align*}
+          \ke \frac{1}{a^2} (2 \pi \alpha (a^2 - a^2) + q) & = \ke \frac{1}{b^2} (2 \pi \alpha (b^2 - a^2) + q) \\
+          q                                                & = \frac{a^2}{b^2} (2 \pi \alpha (b^2 - a^2) + q)   \\
+          q \left(1 - \frac{a^2}{b^2}\right)               & = \frac{a^2}{b^2} 2 \pi \alpha (b^2 - a^2)         \\
+          q                                                & = 2 \pi \alpha a^2.
+        \end{align*}
+
+  \item The net electric field between $r=a$ and $r=b$ will be
+
+        \begin{align*}
+          E & = \ke \frac{1}{r^2} (2 \pi \alpha (r^2 - a^2) + 2 \pi \alpha a^2) \\
+            & = \frac{\alpha}{2 \epsilon_0}.
+        \end{align*}
+\end{enumerate}
+
+\subsubsection{22.61}
+
+\begin{enumerate}[a)]
+  \item By Gauss's law and symmetry, the electric field of the sphere is the same as if the charge were concentrated at its centre. Thus the electric flux through the round side of the cylinder is
+
+        \begin{align*}
+          \Phi_a & = \int \mathbf{E} \cdot \mathbf{dA}                                                                                              \\
+                 & = \int_{-L / 2}^{L / 2} \ke \frac{Q}{r'^2} \cos \theta 2 \pi R \, dz                                                             \\
+                 & = \frac{Q R^2}{2 \epsilon_0} \int_{-L / 2}^{L / 2} (R^2 + z^2)^{-3/2} \, dz                                                      \\
+                 & = \frac{Q R^2}{2 \epsilon_0} \left[ \frac{z}{R^2 \sqrt{R^2 + z^2}} \right]_{-L / 2}^{L / 2}                                      \\
+                 & = \frac{Q R^2}{2 \epsilon_0} \left( \frac{L / 2}{R^2 \sqrt{R^2 + (L / 2)^2}} + \frac{L / 2}{R^2 \sqrt{R^2 + (-L / 2)^2}} \right) \\
+                 & = \frac{Q L}{2 \epsilon_0 \sqrt{R^2 + (L / 2)^2}}.
+        \end{align*}
+
+  \item The electric flux through the top of the cylinder is
+
+        \begin{align*}
+          \Phi_b & = \int \mathbf{E} \cdot \mathbf{dA}                                               \\
+                 & = \int_0^R \ke \frac{Q}{r'^2} \cos \theta 2 \pi x \, dx                           \\
+                 & = \frac{Q}{2 \epsilon_0} \int_0^R \frac{(L / 2) x}{((L / 2)^2 + x^2)^{3/2}} \, dx \\
+                 & = \frac{Q L}{4 \epsilon_0} \int_0^R x ((L / 2)^2 + x^2)^{-3/2} \, dx
+        \end{align*}
+
+        Let $u = (L / 2)^2 + x^2$ so $du = 2 x \, dx$ and thus
+
+        \begin{align*}
+          \Phi_b & = \frac{Q L}{8 \epsilon_0} \int_{(L / 2)^2}^{(L / 2)^2 + R^2} u^{-3/2} \, du                           \\
+                 & = \frac{Q L}{8 \epsilon_0} \left[ -2 u^{-1/2} \right]_{(L / 2)^2}^{(L / 2)^2 + R^2}                    \\
+                 & = \frac{Q L}{4 \epsilon_0} \left( \frac{1}{\sqrt{(L / 2)^2}} -\frac{1}{\sqrt{(L / 2)^2 + R^2}} \right) \\
+                 & = \frac{Q L}{4 \epsilon_0} \left( \frac{2}{L} - \frac{1}{\sqrt{(L / 2)^2 + R^2}} \right).
+        \end{align*}
+
+  \item The same as in part b.
+\end{enumerate}
+
 \end{document}
