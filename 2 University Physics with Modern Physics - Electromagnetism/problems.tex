@@ -992,4 +992,84 @@ The electric field is non-uniform so to calculate the electric flux we must perf
         \end{align*}
 \end{enumerate}
 
+\subsection{Electric Potential}
+
+\subsubsection{Exaple 23.3}
+
+\begin{enumerate}[a)]
+  \item The force on the proton is \[F = eE = (\num{1.602e-19})(\num{1.5e7}) = \qty{2.4e-12}{N}\]
+
+  \item The work done on it by the field is \[W = dF = (\num{0.50})(\num{2.4e-12}) = \qty{1.2e-12}{J} = \qty{7.5}{MeV}\]
+
+  \item The potential difference between the two points is \[V_a - V_b = dE = (0.50)(\num{1.5e7}) = \qty{7.5e6}{V}\]
+\end{enumerate}
+
+\subsubsection{Example 23.4}
+
+\begin{enumerate}[a)]
+  \item The electric potential at $a$ is
+
+        \begin{align*}
+          V & = \ke \left( \frac{q_1}{r_1} + \frac{q_2}{r_2} \right)                                 \\
+            & = (\num{8.988e9}) \left( \frac{\num{12e-9}}{0.060} - \frac{\num{12e-9}}{0.040} \right) \\
+            & = \qty{-9.0e2}{V}
+        \end{align*}
+
+  \item The electric potential at $b$ is
+
+        \begin{align*}
+          V & = \ke \left( \frac{q_1}{r_1} + \frac{q_2}{r_2} \right)                                 \\
+            & = (\num{8.988e9}) \left( \frac{\num{12e-9}}{0.040} - \frac{\num{12e-9}}{0.140} \right) \\
+            & = \qty{1.9e3}{V}
+        \end{align*}
+
+  \item $c$ is equidistant from both charges so the electric potential is $0$
+\end{enumerate}
+
+\subsubsection{Example 23.5}
+
+\begin{enumerate}[a)]
+  \item $U = qV = (\num{4.0e-9})(\num{-9.0e2}) = \qty{-3.6e-6}{J}$
+
+  \item $U = qV = (\num{4.0e-9})(\num{1.9e3}) = \qty{7.6e-6}{J}$
+
+  \item $U = 0$
+\end{enumerate}
+
+\subsubsection{Example 23.6}
+
+\begin{align*}
+  V_a - V_b           & = \int_a^b \mathbf{E} \cdot d\mathbf{l}       \\
+  \Rightarrow V_r - 0 & = \int_r^\infty \ke \frac{q}{r'^2} \,dr'      \\
+  V_r                 & = \ke q \left[ -\frac{1}{r'} \right]_r^\infty \\
+                      & = \ke \frac{q}{r}
+\end{align*}
+
+\subsubsection{Example 23.7}
+
+The potential at $a$ is
+
+\begin{align*}
+  V_a & = \ke \left( \frac{q_1}{r_1} + \frac{q_2}{r_2} \right)                                  \\
+      & = (\num{8.988e9})\left( \frac{\num{3.0e-9}}{0.010} - \frac{\num{3.0e-9}}{0.020} \right) \\
+      & = \qty{1.3e3}{V}.
+\end{align*}
+
+The potential at $b$ is
+
+\begin{align*}
+  V_b & = \ke \left( \frac{q_1}{r_1} + \frac{q_2}{r_2} \right)                                  \\
+      & = (\num{8.988e9})\left( \frac{\num{3.0e-9}}{0.020} - \frac{\num{3.0e-9}}{0.010} \right) \\
+      & = \qty{-1.3e3}{V}.
+\end{align*}
+
+So the potential difference is \[V_a - V_b = \qty{2.6e3}{V}\] the work done on the dust particle as it moves from $a$ to $b$ is \[q_0 (V_a - V_b) = (\num{2.0e-9})(\num{2.6e3}) = \qty{5.3e-6}{J}\] and its speed at $b$ is
+
+\begin{align*}
+  K             & = \frac{1}{2} m v^2                            \\
+  \Rightarrow v & = \sqrt{\frac{2 K}{m}}                         \\
+                & = \sqrt{\frac{2 (\num{5.3e-6})}{\num{5.0e-9}}} \\
+                & = \qty{46}{m/s}.
+\end{align*}
+
 \end{document}

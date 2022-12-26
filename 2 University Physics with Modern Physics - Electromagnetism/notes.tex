@@ -1,5 +1,6 @@
 \documentclass{article}
 \usepackage{amsmath}
+\usepackage{siunitx}
 
 \title{University Physics with Modern Physics Electromagnetism Notes}
 \author{Chris Doble}
@@ -165,6 +166,28 @@
   \item For every electric field due to a static charge distribution, the force exterted by that field is conservative
 
   \item The total electric potential energy of a collection of charges $q_1$, $q_2$, etc. is \[U = \ke \sum_{i < j} \frac{q_i q_j}{r_{ij}}\] where $r_{ij}$ is the distance between $q_i$ and $q_j$
+\end{itemize}
+
+\subsection{Electric Potential}
+
+\begin{itemize}
+  \item \textbf{Potential} is potential energy per unit charge
+
+  \item The unit of potential is the \textbf{volt}, equal to 1 joule per coulomb
+
+  \item The potential difference between two points $V_{ab} = V_a - V_b$ is called the potential of $a$ with respect to $b$ and equals the amount of work done by the electric force when a unit ($\qty{1}{C}$) of charge moves from $a$ to $b$
+
+  \item The electric potential due to a point charge is \[V = \ke \frac{q}{r}\]
+
+  \item The electric potential due to a collection of point charges is \[V = \ke \sum_i \frac{q_i}{r_i}\]
+
+  \item The electric potential due to a continuous charge distribution is \[V = \ke \int \frac{dq}{r}\]
+
+  \item The electric potential difference between two points is given by \[V_a - V_b = \int_a^b \mathbf{E} \cdot d\mathbf{l} = \int_a^b E \cos \phi \,dl\]
+
+  \item Positive charges tend to "fall" from high- to low-potential regions while negative charges do the opposite
+
+  \item When a particle with charge $e = \qty{1.602e-19}{C}$ moves between two points with a potential difference of $\qty{1}{V} = \qty{1}{J/C}$ the change in energy is $U_a - U_b = qV_{ab} = (\qty{1.602e-19}{C})(\qty{1}{J/C}) = \qty{1.602e-19}{J}$ which is called 1 \textbf{electron volt}
 \end{itemize}
 
 \end{document}
