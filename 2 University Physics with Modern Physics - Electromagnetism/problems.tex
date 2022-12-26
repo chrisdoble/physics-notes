@@ -934,4 +934,62 @@ The electric field is non-uniform so to calculate the electric flux we must perf
   \item The same as in part b.
 \end{enumerate}
 
+\section{Electric Potential}
+
+\subsection{Electric Potential Energy}
+
+\subsubsection{Example 23.1}
+
+\begin{enumerate}[a)]
+  \item The work done on the positron by the $\alpha$ particle's electric field is equal to the negative of the change in electric potential between them
+
+        \begin{align*}
+          W & = -\Delta U                                              \\
+            & = -(U_b - U_a)                                           \\
+            & = \ke q q_0 \left( \frac{1}{r_a} - \frac{1}{r_b} \right) \\
+            & = \qty{2.30e-18}{J}.
+        \end{align*}
+
+        By the work-energy theorem this is equal to the positron's change in kinetic energy, so its final speed is
+
+        \begin{align*}
+          K_a + W                 & = K_b                          \\
+          \frac{1}{2} m v_a^2 + W & = \frac{1}{2} m v_b^2          \\
+          \Rightarrow v_b         & = \sqrt{v_a^2 + \frac{2 W}{m}} \\
+                                  & = \qty{3.75e6}{m/s}.
+        \end{align*}
+
+  \item When the positron is very far from the $\alpha$ particle all of their electric potential energy has been converted into kinetic energy
+
+        \begin{align*}
+          K_a + U_a                                   & = K_c                                                           \\
+          \frac{1}{2} m v_a^2 + \ke \frac{q q_0}{r_a} & = \frac{1}{2} m v_c^2                                           \\
+          \Rightarrow v_c                             & = \sqrt{v_a^2 + \frac{1}{2 \pi \epsilon_0} \frac{q q_0}{m r_a}} \\
+                                                      & = \qty{4.37e6}{m/s}.
+        \end{align*}
+
+  \item The electron's speed would decrease until it's stationary, then it would accelerate towards the $\alpha$ particle.
+\end{enumerate}
+
+\subsubsection{Example 23.2}
+
+\begin{enumerate}[a)]
+  \item The work that must be done to bring $q_3$ in from infinity is equal to its electric potential energy with the system at its final position
+
+        \begin{align*}
+          W & = U                                                                             \\
+            & = \frac{q_3}{4 \pi \epsilon_0} \left( \frac{q_1}{r_1} + \frac{q_2}{r_2} \right) \\
+            & = \frac{e}{4 \pi \epsilon_0} \left( \frac{-e}{2a} + \frac{e}{a} \right)         \\
+            & = \frac{e^2}{8 \pi \epsilon_0 a}
+        \end{align*}
+
+  \item The total potential energy is equal to
+
+        \begin{align*}
+          E & = \ke \sum_{i < j} \frac{q_i q_j}{r_{ij}}                            \\
+            & = \ke \left( \frac{-e^2}{a} - \frac{e^2}{2a} + \frac{e^2}{a} \right) \\
+            & = -\frac{e^2}{8 \pi \epsilon_0 a}
+        \end{align*}
+\end{enumerate}
+
 \end{document}
