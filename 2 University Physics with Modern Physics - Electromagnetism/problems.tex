@@ -1136,4 +1136,141 @@ The electric field is
              & = \ke \frac{Q x}{\left( x^2 + a^2 \right)^{3/2}} \hat{\mathbf{i}}.
 \end{align*}
 
+\subsection{Guided Practice}
+
+\subsubsection{VP23.2.1}
+
+\begin{enumerate}[a)]
+  \item The work required to move the electron is equal to the change in the system's potential energy
+
+        \begin{align*}
+          W & = -\ke (82 e^2) \left( \frac{1}{r_2} - \frac{1}{r_1} \right)                                                   \\
+            & = -(\num{8.988e9}) (82) (\num{-1.60e-19})^2 \left( \frac{1}{\num{5.00e-10}} - \frac{1}{\num{1.00e-10}} \right) \\
+            & = \qty{1.51e-16}{J}
+        \end{align*}
+
+  \item The electron will be attracted to the lead nucleus and some of its electric potential energy will be converted to kinetic energy
+
+        \begin{align*}
+          K_1 + U_1                  & = K_2 + U_2                                                                                               \\
+          0 - \ke \frac{82 e^2}{r_1} & = K_2 - \ke \frac{82 e^2}{r_2}                                                                            \\
+          \Rightarrow K_2            & = \ke 82 e^2 \left( \frac{1}{r_2} - \frac{1}{r_1} \right)                                                 \\
+                                     & = (\num{8.988e9})82(\num{-1.60e-19})^2 \left( \frac{1}{\num{8.00e-12}} - \frac{1}{\num{5.00e-10}} \right) \\
+                                     & = \qty{2.32e-15}{J}
+        \end{align*}
+\end{enumerate}
+
+\subsubsection{VP23.2.4}
+
+\begin{enumerate}[a)]
+  \item The potential energy of the charges is equal to the work done to bring in the second charge, so
+
+        \begin{align*}
+          W               & = \ke \frac{q_1 q_2}{r}                                                \\
+          \Rightarrow q_2 & = \frac{4 \pi \epsilon_0 r W}{q_1}                                     \\
+                          & = \frac{4 \pi (\num{8.854e-12})(0.0400)(\num{8.10e-6})}{\num{5.00e-9}} \\
+                          & = \qty{7.21e-9}{C}
+        \end{align*}
+
+  \item The work required to bring in the third charge is
+
+        \begin{align*}
+          W & = \ke q_3 \left( \frac{q_1}{r_1} + \frac{q_2}{r_2} \right)                                                                       \\
+            & = (\num{8.988e9}) (\num{2.00e-9}) \left( \frac{\num{5.00e-9}}{0.0300} + \frac{\num{7.21e-9}}{\sqrt{0.0300^2 + 0.0400^2}} \right) \\
+            & = \qty{5.59e-6}{J}.
+        \end{align*}
+\end{enumerate}
+
+\subsubsection{VP23.7.1}
+
+\begin{enumerate}[a)]
+  \item The electric field is uniform and both points lie on the $x$-axis so \[V_0 - V_P = d E = (0.0500) (\num{5.00e2}) = \qty{25.0}{V}\]
+\end{enumerate}
+
+\subsubsection{VP23.7.2}
+
+\begin{enumerate}[a)]
+  \item The electric potential is \[V = 2 \ke \frac{q}{r} = 2 (\num{8.988e9}) \frac{\num{6.0e-9}}{0.030} = \qty{3.6e3}{V}\]
+
+        \setcounter{enumi}{3}
+  \item The electric field is 0 at the origin
+\end{enumerate}
+
+\subsubsection{VP23.7.4}
+
+\begin{enumerate}[a)]
+  \item Let the electric potential at the surface of the sphere be $0$, then the potential difference between the centre of the sphere and the surface is
+
+        \begin{align*}
+          V_\textrm{centre} - V_\textrm{surface} & = \int \mathbf{E} \cdot d\mathbf{l}                                 \\
+          \Rightarrow V_\textrm{centre}          & = \int_0^R \ke \frac{Q r}{R^3} \,dr                                 \\
+                                                 & = \frac{Q}{4 \pi \epsilon_0 R^3} \left[ \frac{1}{2} r^2 \right]_0^R \\
+                                                 & = \frac{Q}{8 \pi \epsilon_0 R}
+        \end{align*}
+\end{enumerate}
+
+\subsubsection{VP23.12.1}
+
+\begin{enumerate}[a)]
+  \item By Gauss's law and symmetry, the electric field (and thus the electric potential) are the same as if the sphere's charge were concentrated at its centre. Thus the work required to move a test charge from $5R$ to $3R$ is
+
+        \begin{align*}
+          W & = \ke q q_0 \left( \frac{1}{3 R} - \frac{1}{5 R} \right) \\
+            & = \ke \frac{2 q q_0}{15 R}                               \\
+            & = \frac{q q_0}{30 \pi \epsilon_0 R}
+        \end{align*}
+\end{enumerate}
+
+\subsubsection{VP23.12.2}
+
+\begin{enumerate}[a)]
+  \item The electric field is constant, so the electric potential decreases linearly over the distance between the two plates and thus \[V = \frac{d'}{d} V_{ab} = \frac{3.00}{4.50} 24.0 = \qty{16.0}{V}\]
+
+  \item $U = q V = (\num{2.00e-9}) (16.0) = \qty{3.20e-8}{J}$
+
+  \item It will move towards the lower plate. When it reaches the plate its speed will be
+
+        \begin{align*}
+          U             & = K                                              \\
+                        & = \frac{1}{2} m v^2                              \\
+          \Rightarrow v & = \sqrt{\frac{2 U}{m}}                           \\
+                        & = \sqrt{\frac{2 (\num{3.20e-8})}{\num{5.00e-9}}} \\
+                        & = \qty{3.58}{m/s}
+        \end{align*}
+\end{enumerate}
+
+\subsubsection{VP23.12.4}
+
+\begin{enumerate}[a)]
+  \item $dq = \frac{Q}{L} \,dx$
+
+  \item The electric potential at the origin is
+
+        \begin{align*}
+          V & = \int \ke \frac{dq}{r}                       \\
+            & = \ke \int_L^{2 L} \frac{Q}{L x} \,dx         \\
+            & = \ke \frac{Q}{L} \left[ \ln x \right]_L^{2L} \\
+            & = \ke \frac{Q}{L} \ln 2
+        \end{align*}
+\end{enumerate}
+
+\subsubsection{Bridging Problem}
+
+The electric potential at $x = L$ due to the rod is
+
+\begin{align*}
+  V & = \int \ke \frac{dq}{r}                                                                 \\
+    & = \ke \int_{-a}^a \frac{Q}{2 a} \frac{1}{L - x} \,dx                                    \\
+    & = \ke \frac{Q}{2 a} \left[ -\ln \left( L - x \right) \right]_{-a}^a                     \\
+    & = \ke \frac{Q}{2 a} \left( -\ln \left( L - a \right) + \ln \left( L + a \right) \right) \\
+    & = \ke \frac{Q}{2 a} \ln \left( \frac{L + a}{L - a} \right).
+\end{align*}
+
+The work required to bring in a charge $q$ from infinity to $x = L$ is
+
+\begin{align*}
+  W & = q V                                                        \\
+    & = \ke \frac{qQ}{2 a} \ln \left( \frac{L + a}{L - a} \right).
+\end{align*}
+
 \end{document}
