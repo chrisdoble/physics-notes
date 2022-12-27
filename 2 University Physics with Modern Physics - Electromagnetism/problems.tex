@@ -1072,4 +1072,45 @@ So the potential difference is \[V_a - V_b = \qty{2.6e3}{V}\] the work done on t
                 & = \qty{46}{m/s}.
 \end{align*}
 
+\subsection{Calculating Electric Potential}
+
+\subsubsection{Example 23.8}
+
+By Gauss's law and symmetry, the electric field outside the sphere is the same as if all of its charge were concentrated at its centre. So, for $r \ge R$ \[V_\textrm{out} = \ke \frac{q}{r}.\]
+
+There is no charge inside the sphere so the electric potential is equal to that of the surface of the sphere \[V_\textrm{in} = \ke \frac{q}{R}.\]
+
+\subsubsection{Example 23.10}
+
+The line's electric field points radially away from it with magnitude \[E = \frac{1}{2 \pi \epsilon_0} \frac{\lambda}{r}.\]
+
+Setting the electric potential to be $0$ at $r = r_0$ we find that
+
+\begin{align*}
+  V & = \int_r^{r_0} \frac{1}{2 \pi \epsilon_0} \frac{\lambda}{r'} \,dr' \\
+    & = \frac{\lambda}{2 \pi \epsilon_0} \left[ \ln r' \right]_r^{r_0}   \\
+    & = \frac{\lambda}{2 \pi \epsilon_0} \ln{\frac{r_0}{r}}.
+\end{align*}
+
+\subsubsection{Example 23.11}
+
+The electric potential is
+
+\begin{align*}
+  V & = \int \ke \frac{dq}{r}                  \\
+    & = \ke \frac{1}{\sqrt{a^2 + x^2}} \int dq \\
+    & = \ke \frac{Q}{\sqrt{a^2 + x^2}}.
+\end{align*}
+
+\subsubsection{Example 23.12}
+
+The electric potential is
+
+\begin{align*}
+  V & = \int \ke \frac{dq}{r}                                                                  \\
+    & = \ke \int_{-a}^a \frac{1}{\sqrt{x^2 + y^2}} \frac{Q}{2 a} \,dy                          \\
+    & = \ke \frac{Q}{2 a} \left[ \ln \left( y + \sqrt{x^2 + y^2} \right) \right]_{-a}^a        \\
+    & = \ke \frac{Q}{2 a} \ln \left( \frac{\sqrt{a^2 + x^2} + a}{\sqrt{a^2 + x^2} - a} \right)
+\end{align*}
+
 \end{document}
