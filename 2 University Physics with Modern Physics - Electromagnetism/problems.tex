@@ -1273,4 +1273,352 @@ The work required to bring in a charge $q$ from infinity to $x = L$ is
     & = \ke \frac{qQ}{2 a} \ln \left( \frac{L + a}{L - a} \right).
 \end{align*}
 
+\subsection{Exercises}
+
+\subsubsection{23.1}
+
+The electric potential energy at the first position is
+
+\begin{align*}
+  U & = \ke \frac{q_1 q_2}{r_1}                                        \\
+    & = (\num{8.988e9}) \frac{(\num{2.40e-6}) (\num{-4.30e-6})}{0.150} \\
+    & = \qty{-0.618}{J}.
+\end{align*}
+
+The electric potential energy at the second position is
+
+\begin{align*}
+  U & = \ke \frac{q_1 q_2}{r_2}                                                     \\
+    & = (\num{8.988e9}) \frac{(\num{2.40e-6}) (\num{-4.30e-6})}{\sqrt{2 (0.250)^2}} \\
+    & = \qty{-0.262}{J}.
+\end{align*}
+
+The work done by the electric force on $q_2$ is \[W = U_1 - U2 = (\num{-0.618}) - (\num{0.262}) = \qty{-0.356}{J}.\]
+
+\subsubsection{23.3}
+
+The total energy of the system (and thus the work required to assemble it) is
+
+\begin{align*}
+  E & = \ke \sum_{i < j} \frac{q_i q_j}{r_{ij}}                     \\
+    & = \ke 3 \frac{e^2}{r}                                         \\
+    & = (\num{8.988e9}) 3 \frac{(\num{1.60e-19})^2}{\num{2.00e-15}} \\
+    & = \qty{3.45e-13}{J}.
+\end{align*}
+
+\subsubsection{23.5}
+
+\begin{enumerate}[a)]
+  \item When the spheres are $\qty{0.400}{m}$ apart some of the second sphere's initial kinetic energy will have been converted into electric potential energy, slowing it down. Using the principle of conservation of energy we find
+
+        \begin{align*}
+          K_1 + U_1                                     & = K_2 + U_2                                                                                      \\
+          \frac{1}{2} m v_1^2 + \ke \frac{q_1 q_2}{r_1} & = \frac{1}{2} m v_2^2 + \ke \frac{q_1 q_2}{r_2}                                                  \\
+          v_2                                           & = \sqrt{v_1^2 + \frac{q_1 q_2}{2 \pi \epsilon_0 m} \left( \frac{1}{r_1} - \frac{1}{r_2} \right)} \\
+                                                        & = \qty{12.5}{m/s}
+        \end{align*}
+
+  \item When the sphere's are closest, all of the second sphere's initial kinetic energy will have been converted into electric potential energy. Again, using the principle of conservation of energy we find
+
+        \begin{align*}
+          K_1 + U_1                                                         & = U_2                                                        \\
+          \frac{1}{2} m v_1^2 + \ke \frac{q_1 q_2}{r_1}                     & = \ke \frac{q_1 q_2}{r_2}                                    \\
+          m v_1^2 + \frac{q_1 q_2}{2 \pi \epsilon_0 r_1}                    & = \frac{q_1 q_2}{2 \pi \epsilon_0 r_2}                       \\
+          r_2 \left( 2 \pi \epsilon_0 m v_1^2 + \frac{q_1 q_2}{r_1} \right) & = q_1 q_2                                                    \\
+          r_2                                                               & = \frac{q_1 q_2 r_1}{2 \pi \epsilon_0 m r_1 v_1^2 + q_1 q_2} \\
+                                                                            & = \qty{0.323}{m}
+        \end{align*}
+\end{enumerate}
+
+\subsubsection{23.7}
+
+The protons will exert the maximum electric force on each other when thye're closest. This will happen when all of their initial kinetic energy has been converted into electric potential energy. Assuming their electric potential energy is $0$ at the start and using the principle of conservation of energy we find that
+
+\begin{align*}
+  2 K_1                 & = U_2                                  \\
+  2 \frac{1}{2} m v_1^2 & = \ke \frac{e^2}{r_2}                  \\
+  r_2                   & = \frac{e^2}{4 \pi \epsilon_0 m v_1^2} \\
+                        & = \qty{3.44e-12}{m}
+\end{align*}
+
+at which point the electric force between them will be
+
+\begin{align*}
+  F & = \ke \frac{e^2}{r_2^2} \\
+    & = \qty{1.94e-5}{N}
+\end{align*}
+
+\subsubsection{23.9}
+
+\begin{enumerate}[a)]
+  \item The protons will reach their maximum speed when all of their initial electric potential energy has been converted into kinetic energy. Using the principle of conservation of energy, the maximum speed they will reach is
+
+        \begin{align*}
+          U_1                 & = 2 K_2                                     \\
+          \ke \frac{e^2}{r_1} & = 2 \frac{1}{2} m v_2^2                     \\
+          v_2                 & = \sqrt{\frac{e^2}{4 \pi \epsilon_0 m r_1}} \\
+                              & = \qty{1.36e4}{m/s}
+        \end{align*}
+
+  \item The protons will experience their maximum acceleration when they are closest, i.e. at the start. The maximum acceleration will be
+
+        \begin{align*}
+          a & = \frac{F}{m}           \\
+            & = \ke \frac{e^2}{m r^2} \\
+            & = \qty{2.45e17}{m/s^2}
+        \end{align*}
+\end{enumerate}
+
+\subsubsection{23.11}
+
+The potential difference between two points is equal to the work done by the electric force while moving between them, so
+
+\begin{align*}
+  V_a - V_b & = \int_a^b \mathbf{E} \cdot d\mathbf{l}                           \\
+            & = \int_{y_a}^{y_b} (\alpha + \frac{\beta}{y^2}) \,dy              \\
+            & = \left[ \alpha y - \frac{\beta}{y} \right]_{y_a}^{y_b}           \\
+            & = \alpha y_b - \frac{\beta}{y_b} - \alpha y_a + \frac{\beta}{y_a} \\
+            & = \qty{89.3}{V}
+\end{align*}
+
+\subsubsection{23.13}
+
+The particle has negative charge and thus moves from areas of low to high electric potential. Point $B$ has greater electric potential than point $A$ so the particle has lost electric potential energy. As the electric force is the only force acting on the particle, some of its electric potential energy has been converted into kinetic energy and thus it is moving faster. Its final speed is
+
+\begin{align*}
+  K_A + U_A                   & = K_B + U_B                                \\
+  \frac{1}{2} m v_A^2 + q V_A & = \frac{1}{2} m v_B^2 + q V_B              \\
+  v_B                         & = \sqrt{v_A^2 + \frac{2 q}{m} (V_A - V_B)} \\
+                              & = \qty{7.42}{m/s}
+\end{align*}
+
+\subsubsection{23.15}
+
+\begin{enumerate}[a)]
+  \item $W = \qty{0}{J}$
+
+  \item $W = d E q = \qty{7.50e-4}{J}$
+
+  \item $W = -d \cos \theta E q = \qty{-2.06e-3}{J}$
+\end{enumerate}
+
+\subsubsection{23.17}
+
+\begin{enumerate}[a)]
+  \item The electric potential at point $a$ is
+
+        \begin{align*}
+          V & = \ke \left( \frac{q_1}{r} + \frac{q_2}{r} \right)                                                                       \\
+            & = (\num{8.988e9}) \left( \frac{\num{2.00e-6}}{\sqrt{3^2 + 3^2} / 2} - \frac{\num{2.00e-6}}{\sqrt{3^2 + 3^2} / 2} \right) \\
+            & = 0
+        \end{align*}
+
+  \item The electric potential at $b$ is
+
+        \begin{align*}
+          V & = \ke \left( \frac{q_1}{r_1} + \frac{q_2}{r_2} \right)                                                           \\
+            & = (\num{8.988e9}) \left( \frac{\num{2.00e-6}}{\sqrt{0.0300^2 + 0.0300^2}} - \frac{\num{2.00e-6}}{0.0300} \right) \\
+            & = \qty{-176}{kV}
+        \end{align*}
+
+  \item The work done on $q_3$ is \[W = q_3 (V_a - V_b) = \qty{-0.88}{J}\]
+\end{enumerate}
+
+\subsubsection{32.19}
+
+\begin{enumerate}[a)]
+  \item The potential at point $A$ is \[V = \ke \left( \frac{q_1}{r} + \frac{q_2}{r} \right) = \qty{-737}{V}\]
+
+  \item The potential at point $B$ is \[V = \ke \left( \frac{q_1}{r} + \frac{q_2}{r} \right) = \qty{-704}{V}\]
+
+  \item The work done by the electric field on the charge is \[W = q (V_B - V_A) = \qty{8.25e-8}{J}\]
+\end{enumerate}
+
+\subsubsection{23.21}
+
+\begin{enumerate}[a)]
+  \item Negative
+
+  \item The electric field is uniform, so
+
+        \begin{align*}
+          V_B - V_A       & = (y_B - y_A) E_y             \\
+          \Rightarrow E_y & = \frac{V_B - V_A}{y_B - y_A} \\
+                          & = \qty{171}{N/C}
+        \end{align*}
+
+  \item The electric field only does work when moving along the $y$-axis, so the $x$ coordinate can be ignored and \[V_B - V_C = d E_y = \qty{17.1}{V}\]
+\end{enumerate}
+
+\subsubsection{23.23}
+
+\begin{enumerate}[a)]
+  \item $b$
+
+  \item $E = \frac{V_B - V_A}{x_B - x_A} = \qty{800}{N/C}$
+
+  \item $W = q E d = \qty{-4.80e-5}{J}$
+\end{enumerate}
+
+\subsubsection{23.25}
+
+\begin{enumerate}[a)]
+  \item The work done on the sphere is equal to its change in electric potential energy
+
+        \begin{align*}
+          W & = U_1 - U_2                                                                                                   \\
+            & = 0 - \ke Q \left( \frac{q_1}{r_1} + \frac{q_2}{r_2} \right)                                                  \\
+            & = -(\num{8.988e9}) (\num{-0.200e-6}) \left( \frac{\num{6.00e-6}}{0.400} + \frac{\num{6.00e-6}}{0.400} \right) \\
+            & = \qty{5.39e-2}{J}
+        \end{align*}
+
+  \item By the work-energy theorem, the work done on the sphere equals its change in kinetic energy. It was released from rest, so
+
+        \begin{align*}
+          K                 & = W                    \\
+          \frac{1}{2} m v^2 & = W                    \\
+          v                 & = \sqrt{\frac{2 W}{m}} \\
+                            & = \qty{3.00}{m/s}
+        \end{align*}
+\end{enumerate}
+
+\subsubsection{23.27}
+
+\begin{enumerate}[a)]
+  \item
+
+        \begin{enumerate}[i)]
+          \item
+
+                \begin{align*}
+                  V & = \ke \left( \frac{q_1}{R_1} + \frac{q_2}{R_2} \right)                                        \\
+                    & = (\num{8.988e9}) \left( \frac{\num{6.00e-9}}{0.0300} + \frac{\num{-9.00e-9}}{0.0500} \right) \\
+                    & = \qty{180}{V}
+                \end{align*}
+
+          \item
+
+                \begin{align*}
+                  V & = \ke \left( \frac{q_1}{r} + \frac{q_2}{R_2} \right)                                          \\
+                    & = (\num{8.988e9}) \left( \frac{\num{6.00e-9}}{0.0400} + \frac{\num{-9.00e-9}}{0.0500} \right) \\
+                    & = \qty{-270}{V}
+                \end{align*}
+
+          \item
+
+                \begin{align*}
+                  V & = \ke \left( \frac{q_1}{r} + \frac{q_2}{R_2} \right)                                          \\
+                    & = (\num{8.988e9}) \left( \frac{\num{6.00e-9}}{0.0600} + \frac{\num{-9.00e-9}}{0.0600} \right) \\
+                    & = \qty{-450}{V}
+                \end{align*}
+        \end{enumerate}
+
+  \item The potential difference is
+
+        \begin{align*}
+          V_1 - V_2 & = \ke \left( \frac{q_1}{R_1} + \frac{q_2}{R_2} - \frac{q_1}{R_2} - \frac{q_2}{R_2} \right) \\
+                    & = \ke q_1 \left( \frac{1}{R_1} - \frac{1}{R_2} \right)                                     \\
+                    & = \qty{719}{V}
+        \end{align*}
+
+        so the surface of the inner shell has a higher electric potential
+\end{enumerate}
+
+\subsubsection{23.29}
+
+\begin{enumerate}[a)]
+  \item The electric force pulls the electron towards the ring, causing it to accelerate. It will speed up, move towards the ring, and eventually pass through its centre. Once on the other side the electric force will change direction and pull the electron back towards the ring. It will oscillate forever.
+
+  \item From Example 23.11 we know that the electric potential along the axis of a charged ring is given by \[V = \ke \frac{Q}{\sqrt{x^2 + a^2}}.\]
+
+        The electric potential at the electron's initial position is
+
+        \begin{align*}
+          V_1 & = \ke \frac{Q}{\sqrt{x^2 + a^2}}                            \\
+              & = (\num{8.988e9}) \frac{\num{24e-9}}{\sqrt{0.3^2 + 0.15^2}} \\
+              & = \qty{643}{V}.
+        \end{align*}
+
+        The electric potential at the centre of the ring is
+
+        \begin{align*}
+          V_2 & = \ke \frac{Q}{a}                          \\
+              & = (\num{8.988e9}) \frac{\num{24e-9}}{0.15} \\
+              & = \qty{1440}{V}.
+        \end{align*}
+
+        By the work-energy principle, all of the work done by the electric force on the electron will be converted to kinetic energy so its speed at the centre of the ring is
+
+        \begin{align*}
+          W             & = K                                \\
+          e (V_1 - V_2) & = \frac{1}{2} m v^2                \\
+          v             & = \sqrt{\frac{2 e (V_1 - V_2)}{m}} \\
+                        & = \qty{1.67e7}{m/s}.
+        \end{align*}
+\end{enumerate}
+
+\subsubsection{23.31}
+
+By Gauss's law both spheres can be treated as point charges. By the principle of conservation of energy, the small sphere will be closest to the large sphere when all of its kinetic energy has been converted into electric potential energy
+
+\begin{align*}
+  K_1                 & = U_2                                    \\
+  \frac{1}{2} m v_1^2 & = \ke \frac{qQ}{r}                       \\
+  v_1                 & = \sqrt{\frac{qQ}{2 \pi \epsilon_0 m r}} \\
+                      & = \qty{150}{m/s}.
+\end{align*}
+
+\subsection{Problems}
+
+\subsubsection{23.47}
+
+\begin{enumerate}[a)]
+  \item The potential energy of the system is
+
+        \begin{align*}
+          U & = \ke \sum_{i < j} \frac{q_i q_j}{r_{ij}}                                                     \\
+            & = \ke \left( \frac{q_1 q_2}{r_{12}} + \frac{q_1 q_3}{r_{13}} + \frac{q_2 q_3}{r_{23}} \right) \\
+            & = \qty{-3.60e-7}{J}
+        \end{align*}
+
+  \item If the potential energy of the system is $0$ then
+
+        \begin{align*}
+          0 & = \ke \left( \frac{q_1 q_2}{r_2} + \frac{q_1 q_3}{r_3} + \frac{q_2 q_3}{r_2 - r_3} \right) \\
+            & = (r_2 - r_3) r_3 \frac{q_1 q_2}{r_2} + (r_2 - r_3) q_1 q_3 + r_3 q_2 q_3                  \\
+            & = q_1 q_2 r_3 - \frac{q_1 q_2}{r_2} r_3^2 + q_1 q_3 r_2 - q_1 q_3 r_3 + q_2 q_3 r_3        \\
+            & = -\frac{q_1 q_2}{r_2} r_3^2 + (q_1 q_2 - q_1 q_3 + q_2 q_3) r_3 + q_1 q_3 r_2.
+        \end{align*}
+
+        Let
+
+        \begin{align*}
+          a & = -\frac{q_1 q_2}{r_2}                            \\
+            & = -\frac{(\num{4.00e-9}) (\num{-3.00e-9})}{0.200} \\
+            & = \num{6.00e-17}
+        \end{align*}
+
+        \begin{align*}
+          b & = q_1 q_2 - q_1 q_3 + q_2 q_3                                                                          \\
+            & = (\num{4.00e-9}) (\num{-3.00e-9}) - (\num{4.00e-9})(\num{2.00e-9}) + (\num{-3.00e-9}) (\num{2.00e-9}) \\
+            & = \num{-2.60e-17}
+        \end{align*}
+
+        \begin{align*}
+          c & = q_1 q_3 r_2                             \\
+            & = (\num{4.00e-9}) (\num{2.00e-9}) (0.200) \\
+            & = \num{1.60e-18}
+        \end{align*}
+
+        then
+
+        \begin{align*}
+          r_3 & = \frac{-b \pm \sqrt{b^2 - 4 a c}}{2 a}                                                                          \\
+              & = \frac{\num{2.60e-17} \pm \sqrt{(\num{-2.60e-17})^2 - 4 (\num{6.00e-17}) (\num{1.60e-18})}}{2 (\num{6.00e-17})} \\
+              & = \qty{0.074}{m} \textrm{ or } \qty{0.359}{m}
+        \end{align*}
+
+        $r_3 = \qty{0.359}{m}$ doesn't lie between $q_1$ and $q_2$ so it can be discarded and the answer is $r_3 = \qty{0.074}{m}$.
+\end{enumerate}
+
 \end{document}
