@@ -1568,6 +1568,97 @@ By Gauss's law both spheres can be treated as point charges. By the principle of
                       & = \qty{150}{m/s}.
 \end{align*}
 
+\subsubsection{23.33}
+
+\begin{enumerate}[a)]
+  \item By Gauss's law the cylinder's electric potential is equivalent to that of an infinite line charge with the same linear charge density \[V = \frac{\lambda}{2 \pi \epsilon_0} \ln \frac{r_0}{r}.\]
+
+        Setting $r_0 = 0.1000$ the potential difference is
+
+        \begin{align*}
+          V & = \frac{\num{8.50e-6}}{2 \pi (\num{8.854e-12})} \ln \frac{0.10000}{0.0600} \\
+            & = \qty{7.80e4}{V}
+        \end{align*}
+
+  \item There is no charge inside the cylinder so it is an equipotential and the potential difference is $0$
+\end{enumerate}
+
+\subsubsection{23.35}
+
+The electric potential of the line of charge is \[V = \frac{\lambda}{2 \pi \epsilon_0} \ln \frac{r_0}{r}.\]
+
+Setting $r_0 = 0.0450$ the potential difference between the sphere's initial and final positions is
+
+\begin{align*}
+  V_1 - V_2 & = \frac{\lambda}{2 \pi \epsilon_0} \left( \ln \frac{r_0}{r_1} - \ln \frac{r_0}{r_2} \right) \\
+            & = \frac{\lambda}{2 \pi \epsilon_0} \ln \frac{r_2}{r_1}                                      \\
+            & = \qty{5.92e4}{V}
+\end{align*}
+
+By the work-energy theorem, all of the work done by the electric force on the sphere is converted into kinetic energy so
+
+\begin{align*}
+  K & = W              \\
+    & = q (V_1 - V_2)  \\
+    & = \qty{0.474}{J}
+\end{align*}
+
+\subsubsection{23.37}
+
+\begin{enumerate}[a)]
+  \item $E = V / d = \qty{8e3}{N/C}$
+
+  \item $F = q E = \qty{1.92e-5}{N}$
+
+  \item $W = F d = \qty{8.64e-7}{J}$
+
+  \item $\Delta U = -q \Delta V = \qty{-8.64e-7}{J}$
+\end{enumerate}
+
+\subsubsection{23.39}
+
+We can find the total charge of the sphere by rearranging the equation for the magnitude of the electric field at the surface of the sphere
+
+\begin{align*}
+  E             & = \ke \frac{q}{R^2}      \\
+  \Rightarrow q & = 4 \pi \epsilon_0 E R^2 \\
+                & = \qty{-1.69e-8}{C}.
+\end{align*}
+
+The sphere is an equipotential so the electric potential inside is equal to that of the surface
+
+\begin{align*}
+  V & = \ke \frac{q}{R} \\
+    & = \qty{-760}{V}
+\end{align*}
+
+\subsubsection{23.41}
+
+\begin{enumerate}[a)]
+  \item
+
+        \begin{enumerate}[i)]
+          \item $V = \ke q \left( \frac{1}{r_a} - \frac{1}{r_b} \right)$
+
+          \item $V = \ke q \left( \frac{1}{r} - \frac{1}{r_b} \right)$
+
+          \item $V = 0$
+        \end{enumerate}
+
+  \item From above, the potential at the surface of the outer sphere is $0$ so the potential difference is equal to the potential at the surface of the inner sphere \[V = \ke q \left( \frac{1}{r_a} - \frac{1}{r_b} \right).\]
+
+  \item The electric field between the spheres has magnitude
+
+        \begin{align*}
+          E & = -\frac{\partial V}{\partial r}                                                               \\
+            & = -\frac{\partial}{\partial r} \left( \ke q \left( \frac{1}{r} - \frac{1}{r_b} \right) \right) \\
+            & = \ke \frac{q}{r^2}                                                                            \\
+            & = \frac{V_{ab}}{1/r_a - 1/r_b} \frac{1}{r^2}
+        \end{align*}
+
+  \item The electric field outside the larger sphere has magnitude $0$
+\end{enumerate}
+
 \subsection{Problems}
 
 \subsubsection{23.47}
@@ -1619,6 +1710,187 @@ By Gauss's law both spheres can be treated as point charges. By the principle of
         \end{align*}
 
         $r_3 = \qty{0.359}{m}$ doesn't lie between $q_1$ and $q_2$ so it can be discarded and the answer is $r_3 = \qty{0.074}{m}$.
+\end{enumerate}
+
+\subsubsection{23.49}
+
+The potential of an infinite line charge is \[V = \frac{\lambda}{2 \pi \epsilon_0} \ln \frac{r_0}{r}.\]
+
+Setting $r_0 = 0.300$, the potential of the line at point $A$ is $V_{A\textrm{,line}} = 0$, at point $B$ is $V_{B\textrm{,line}} = \qty{3.64e4}{V}$, and thus the potential difference is $V_{AB\textrm{,line}} = V_{A\textrm{,line}} - V_{B\textrm{,line}} = \qty{-3.64e4}{V}$.
+
+The electric field of an infinite sheet of charge is directed away from the sheet and has magnitude \[E = \frac{\sigma}{2 \epsilon_0}.\]
+
+The potential difference due to the sheet is equal to the work per unit charge done by its electric field between points $A$ and $B$ so $V_{AB\textrm{,sheet}} = E d = \qty{2.26e5}{V}$.
+
+Thus the total potential difference is $V_{AB} = V_{AB\textrm{,line}} + V_{AB\textrm{,sheet}} = \qty{1.90e5}{V}$ meaning point $A$ is at higher potential.
+
+\subsubsection{23.51}
+
+In order for the alpha particle to reach a distance $\num{2.0e-14}{m}$ from the surface of the gold nucleus its potential energy at that point must equal the energy it gained from the potential difference
+
+\begin{align*}
+  U             & = (2 e) V                                           \\
+  \Rightarrow V & = \frac{U}{2 e}                                     \\
+                & = \ke \frac{79 e}{r}                                \\
+                & = (\kev) \frac{79 (\num{1.60e-19})}{\num{2.73e-14}} \\
+                & = \qty{4.2e6}{V}.
+\end{align*}
+
+\subsubsection{23.55}
+
+\begin{enumerate}[a)]
+  \item
+
+        \begin{align*}
+          V             & = C x^{4/3}                 \\
+          \Rightarrow C & = \frac{V}{x^{4/3}}         \\
+                        & = \frac{240}{(0.013)^{4/3}} \\
+                        & = \qty{7.85e4}{V/m^{4/3}}
+        \end{align*}
+
+  \item
+        \begin{align*}
+          \mathbf{E} & = -\nabla V                                \\
+                     & = -\frac{4}{3} C x^{1/3} \hat{\mathbf{i}}  \\
+                     & = -(\num{1.05e5}) x^{1/3} \hat{\mathbf{i}}
+        \end{align*}
+
+  \item
+        \begin{align*}
+          \mathbf{F} & = e \mathbf{E}                                                          \\
+                     & = (\num{1.60e-19}) (\num{1.05e5}) (\num{0.0065})^{1/3} \hat{\mathbf{i}} \\
+                     & = (\qty{3.14e-15}{N}) \hat{\mathbf{i}}
+        \end{align*}
+\end{enumerate}
+
+\subsubsection{23.59}
+
+When the sphere is hanging at an angle $\theta$ it experiences net forces
+
+\begin{align*}
+  F_x & = q E - T \sin \theta = 0 \\
+  F_y & = T \cos \theta - m g = 0
+\end{align*}
+
+Rearranging $F_y$ \[T = \frac{m g}{cos \theta}.\]
+
+Substituting this into $F_x$ \[E = \frac{m g \tan \theta}{q}.\]
+
+The electric field between the two plates is constant so their potential difference is \[V = E d = \frac{d m g \tan \theta}{q}.\]
+
+Thus, in order for the sphere to hang at $\ang{30.0}$ the potential difference between the two plates must be
+
+\begin{align*}
+  V & = \frac{(0.0500) (0.00150) (9.81) \tan \ang{30.0}}{\num{8.90e-6}} \\
+    & = \qty{47.7}{V}.
+\end{align*}
+
+\subsubsection{23.67}
+
+Consider a sphere of radius $r$ and charge density \[\rho = \frac{Q}{\frac{4}{3} \pi R^3} = \frac{3 Q}{4 \pi R^3}.\] The charge of the sphere is \[q = \frac{4}{3} \pi r^3 \rho.\] Adding a shell of charge density $\rho$ and thickness $dr$ requires energy
+
+\begin{align*}
+  dE & = \int \ke \frac{q \,dq}{r}                                                                                      \\
+     & = \int_0^{2 \pi} \int_0^\pi \ke \frac{\frac{4}{3} \pi r^3 \rho r \,d\theta \,r \sin \theta \,d\phi \,dr \rho}{r} \\
+     & = \ke \frac{8}{3} \pi^2 r^4 \rho^2 \,dr \int_0^\pi \sin \theta \,d\theta                                         \\
+     & = \ke \frac{16}{3} \pi^2 r^4 \rho^2 \,dr
+\end{align*}
+
+so assembling a sphere of radius $R$ requires energy
+
+\begin{align*}
+  E & = \int dE                                                                                          \\
+    & = \int_0^R \ke \frac{16}{3} \pi^2 r^4 \rho^2 \,dr                                                  \\
+    & = \ke \frac{16}{3} \pi^2 \left( \frac{3 Q}{4 \pi R^3} \right)^2 \left[ \frac{1}{5} r^5 \right]_0^R \\
+    & = \frac{3}{5} \left( \ke \frac{Q^2}{R} \right).
+\end{align*}
+
+\subsubsection{23.73}
+
+\begin{enumerate}[a)]
+  \item $U = \ke \frac{e^2}{d} + \frac{1}{2} k d^2$
+
+  \item
+
+        \begin{align*}
+          \left. \frac{dU}{dd} \right|_{d = d_0} & = 0                           \\
+          -\ke \frac{e^2}{d_0^2} + k d_0         & = 0                           \\
+          d_0                                    & = \sqrt[3]{\ke \frac{e^2}{k}}
+        \end{align*}
+
+  \item
+
+        \begin{align*}
+          k & = \ke \frac{e^2}{d_0^3}                                         \\
+            & = (\num{8.988e9}) \frac{(\num{1.60e-19})^2}{(\num{1.00e-15})^3} \\
+            & = \qty{2.30e17}{N/m}
+        \end{align*}
+
+  \item
+
+        \begin{align*}
+          U & = \ke \frac{e^2}{d_0} + \frac{1}{2} k d_0^2                                                                  \\
+            & = (\num{8.988e9}) \frac{(\num{1.60e-19})^2}{\num{1.00e-15}} + \frac{1}{2} (\num{2.30e17}) (\num{1.00e-15})^2 \\
+            & = \qty{3.45e-13}{J}                                                                                          \\
+            & = \qty{2.16e6}{eV}
+        \end{align*}
+
+  \item
+
+        \begin{align*}
+          2 K                                & = U                                            \\
+          2 \left( \frac{1}{2} m v^2 \right) & = U                                            \\
+          v                                  & = \sqrt{\frac{U}{m}}                           \\
+                                             & = \sqrt{\frac{\num{3.45e-13}}{\num{1.67e-27}}} \\
+                                             & = \qty{1.44e7}{m/s}
+        \end{align*}
+\end{enumerate}
+
+\subsubsection{23.79}
+
+\begin{enumerate}[a)]
+  \item The oil drop experiences an electric force in the positive $y$ direction and a weight force in the negative $y$ direction. If it is at rest then
+
+        \begin{align*}
+          0             & = q E - m g                                       \\
+                        & = q \frac{V_{AB}}{d} - \frac{4}{3} \pi r^3 \rho g \\
+          \Rightarrow q & = \frac{4 \pi}{3} \frac{\rho r^3 g d}{V_{AB}}
+        \end{align*}
+
+  \item At terminal velocity the viscous force equals the drop's weight
+
+        \begin{align*}
+          0             & = 6 \pi \eta r v_t - m g                        \\
+                        & = 6 \pi \eta r v_t - \frac{4}{3} \pi r^3 \rho g \\
+          \Rightarrow r & = \sqrt{\frac{9}{2} \frac{\eta v_t}{\rho g}}
+        \end{align*}
+
+        Substituting this into the equation for $q$
+
+        \begin{align*}
+          q & = \frac{4 \pi}{3} \frac{\rho g d}{V_{AB}} \left( \sqrt{\frac{9}{2} \frac{\eta v_t}{\rho g}} \right)^3 \\
+            & = 18 \pi \frac{d}{V_{AB}} \sqrt{\frac{\eta^3 v_t^3}{2 \rho g}}
+        \end{align*}
+
+  \item
+
+        \begin{align*}
+          q_1 & = \qty{4.79e-19}{C} \\
+          q_2 & = \qty{1.59e-19}{C} \\
+          q_3 & = \qty{8.09e-19}{C} \\
+          q_4 & = \qty{3.23e-19}{C}
+        \end{align*}
+
+  \item
+
+        \begin{align*}
+          n_1 & = 3 \\
+          n_2 & = 1 \\
+          n_3 & = 5 \\
+          n_4 & = 2
+        \end{align*}
+
+  \item $e \approx \qty{1.60e-19}{C}$
 \end{enumerate}
 
 \end{document}
