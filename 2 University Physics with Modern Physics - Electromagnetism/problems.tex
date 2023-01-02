@@ -1893,4 +1893,100 @@ so assembling a sphere of radius $R$ requires energy
   \item $e \approx \qty{1.60e-19}{C}$
 \end{enumerate}
 
+\section{Capacitance and Dielectrics}
+
+\subsection{Capacitors and Capacitance}
+
+\subsubsection{Example 24.1}
+
+\begin{align*}
+  C             & = \epsilon_0 \frac{A}{d}                \\
+  \Rightarrow A & = \frac{C d}{\epsilon_0}                \\
+                & = \frac{(1.0) (0.001)}{\num{8.854e-12}} \\
+                & = \qty{1.13e8}{m^2}
+\end{align*}
+
+\subsubsection{Example 24.2}
+
+\begin{enumerate}[(a)]
+  \item
+
+        \begin{align*}
+          C & = \epsilon_0 \frac{A}{d}                                          \\
+            & = (\qty{8.854e-12}{F/m}) \frac{\qty{2.00}{m^2}}{\qty{0.00500}{m}} \\
+            & = \qty{3.54e-9}{F}
+        \end{align*}
+
+  \item
+
+        \begin{align*}
+          C             & = \frac{Q}{V}                          \\
+          \Rightarrow Q & = C V                                  \\
+                        & = (\qty{3.54e-9}{F}) (\qty{10.0e3}{V}) \\
+                        & = \qty{3.54e-5}{C}
+        \end{align*}
+
+  \item
+
+        \begin{align*}
+          E & = \frac{Q}{\epsilon_0 A}                                            \\
+            & = \frac{\qty{3.54e-5}{C}}{(\qty{8.854e-12}{F/m}) (\qty{2.00}{m^2})} \\
+            & = \qty{2.00e6}{N/C}
+        \end{align*}
+\end{enumerate}
+
+\subsubsection{Example 24.3}
+
+By Gauss's law and symmetry the electric field between the shells is directed radially outward and has magnitude
+
+\begin{align*}
+  \oint \mathbf{E} \cdot d\mathbf{A} & = \frac{Q}{\epsilon_0} \\
+  E 4 \pi r^2                        & = \frac{Q}{\epsilon_0} \\
+  E                                  & = \ke \frac{Q}{r^2}.
+\end{align*}
+
+The potential difference between the shells is
+
+\begin{align*}
+  V_a - V_b & = \int_a^b \mathbf{E} \cdot d\mathbf{l}              \\
+            & = \int_{r_a}^{r_b} \ke \frac{Q}{r^2} \,dr            \\
+            & = \ke Q \left[ -\frac{1}{r} \right]_{r_a}^{r_b}      \\
+            & = \ke Q \left( \frac{1}{r_a} - \frac{1}{r_b} \right) \\
+            & = \ke Q \frac{r_b - r_a}{r_a r_b}.
+\end{align*}
+
+The capacitance is thus
+
+\begin{align*}
+  C & = \frac{Q}{V}                                 \\
+    & = 4 \pi \epsilon_0 \frac{r_a r_b}{r_b - r_a}.
+\end{align*}
+
+\subsubsection{Example 24.4}
+
+By Gauss's law and symmetry, the electric field between the cylinders is directed radially outward and has magnitude
+
+\begin{align*}
+  \oint \mathbf{E} \cdot d\mathbf{A} & = \frac{Q}{\epsilon_0}                          \\
+  E 2 \pi r L                        & = \frac{\lambda L}{\epsilon_0}                  \\
+  E                                  & = \frac{1}{2 \pi \epsilon_0} \frac{\lambda}{r}.
+\end{align*}
+
+The potential difference between the cylinders is thus
+
+\begin{align*}
+  V_a - V_b & = \int_a^b \mathbf{E} \cdot d\mathbf{l}                               \\
+            & = \int_{r_a}^{r_b} \frac{1}{2 \pi \epsilon_0} \frac{\lambda}{r} \,dr  \\
+            & = \frac{1}{2 \pi \epsilon_0} \lambda \left[ \ln r \right]_{r_a}^{r_b} \\
+            & = \frac{1}{2 \pi \epsilon_0} \lambda \ln \frac{r_b}{r_a}
+\end{align*}
+
+and the capacitance per unit length is
+
+\begin{align*}
+  C & = \frac{Q}{V}                                                            \\
+    & = \frac{\lambda}{\frac{1}{2 \pi \epsilon_0} \lambda \ln \frac{r_b}{r_a}} \\
+    & = \frac{2 \pi \epsilon_0}{\ln (r_b / r_a)}.
+\end{align*}
+
 \end{document}
