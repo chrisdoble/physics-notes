@@ -1989,6 +1989,8 @@ and the capacitance per unit length is
     & = \frac{2 \pi \epsilon_0}{\ln (r_b / r_a)}.
 \end{align*}
 
+\subsection{Capacitors in Series and Parallel}
+
 \subsubsection{Example 24.5}
 
 \begin{enumerate}[(a)]
@@ -2018,5 +2020,45 @@ The two capacitors on the right are equivalent to a single capacitor of capacita
 The three capacitors in the middle are then equivalent to a single capacitor of capacitance \[C = \qty{3}{\mu F} + \qty{11}{\mu F} + \qty{4}{\mu F} = \qty{18}{\mu F}.\]
 
 Finally the two remaining capacitors are equivalent to a single capacitor of capacitance \[C = \frac{1}{(1 / (\qty{18}{\mu F})) + (1 / (\qty{9}{\mu F}))} = \qty{6}{\mu F}.\]
+
+\subsection{Energy Storage in Capacitors and Electric-Field Energy}
+
+\subsubsection{Example 24.7}
+
+\begin{enumerate}[(a)]
+  \item \[Q = C V = (\qty{8.0}{\mu F}) (\qty{120}{V}) = \qty{9.6e-4}{C}\]
+
+  \item \[U = \frac{1}{2} Q V = \frac{1}{2} (\qty{8.0}{\mu F}) (\qty{120}{V}) = \qty{5.8e-2}{J}\]
+\end{enumerate}
+
+\subsubsection{Example 24.8}
+
+\begin{enumerate}[(a)]
+  \item
+
+        \begin{align*}
+          U             & = u V                             \\
+                        & = \frac{1}{2} \epsilon_0 E^2 V    \\
+          \Rightarrow E & = \sqrt{\frac{2 U}{\epsilon_0 V}} \\
+                        & = \qty{4.75e5}{N/C}
+        \end{align*}
+
+  \item $100$ times the amount of energy
+\end{enumerate}
+
+\subsubsection{Example 24.9}
+
+\begin{enumerate}[(a)]
+  \item \[U = \frac{Q^2}{2 C} = \frac{1}{2} Q^2 \ke \frac{r_b - r_a}{r_a r_b}\]
+
+  \item The electric field energy density is \[u = \frac{1}{2} \epsilon_0 E^2 = \frac{1}{2} \epsilon_0 \left( \ke \frac{Q}{r^2} \right)^2 = \frac{Q^2}{32 \pi^2 \epsilon_0 r^4}.\] The electric potential energy stored in the capacitor is thus
+
+        \begin{align*}
+          U & = \int u \,dV                                                          \\
+            & = \int_{r_a}^{r_b} \frac{Q^2}{32 \pi^2 \epsilon_0 r^4} 4 \pi r^2 \,dr  \\
+            & = \frac{Q^2}{8 \pi \epsilon_0} \left[ -\frac{1}{r} \right]_{r_a}^{r_b} \\
+            & = \frac{1}{2} Q^2 \ke \frac{r_b - r_a}{r_a r_b}
+        \end{align*}
+\end{enumerate}
 
 \end{document}
