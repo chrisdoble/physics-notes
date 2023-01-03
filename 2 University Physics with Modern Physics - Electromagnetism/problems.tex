@@ -2121,4 +2121,110 @@ and thus the capacitance is
     & = K C_0
 \end{align*}
 
+\subsection{Guided Practice}
+
+\subsubsection{VP24.4.1}
+
+\begin{enumerate}[(a)]
+  \item The capacitance is given by \[C = \epsilon_0 \frac{A}{d} = \qty{6.58e-9}{F}\]
+
+  \item The potential difference is given by \[C = \frac{Q}{V} \Rightarrow V = \frac{Q}{C} = \frac{\sigma A}{C} = \qty{5.85e3}{V}\]
+\end{enumerate}
+
+\subsubsection{VP24.4.4}
+
+\begin{enumerate}[(a)]
+  \item
+
+        \begin{align*}
+          \frac{C}{L}     & = \frac{2 \pi \epsilon_0}{\ln (r_b / r_a)} \\
+          \frac{r_b}{r_a} & = e^{\frac{2 \pi \epsilon_0}{C / L}}       \\
+                          & = 2.24
+        \end{align*}
+
+  \item
+
+        \begin{align*}
+          \frac{C}{L} & = \frac{Q}{L V}       \\
+          V           & = \frac{Q / L}{C / L} \\
+                      & = \qty{125}{V}
+        \end{align*}
+\end{enumerate}
+
+\subsubsection{VP24.9.1}
+
+\begin{enumerate}[(a)]
+  \item \[C_\textrm{eq} = \frac{1}{(1/C_1) + (1/C_2) + (1/C_3)} = \qty{0.625}{\mu F}\]
+
+  \item \[C_\textrm{eq} = C_1 + C_2 + C_2 = \qty{8.50}{\mu F}\]
+
+  \item
+
+        \begin{align*}
+          C_{12}        & = C_1 + C_2 = \qty{3.50}{\mu F}                          \\
+          C_\textrm{eq} & = \frac{1}{(1 / C_{12}) + (1 / C_3)} = \qty{2.06}{\mu F}
+        \end{align*}
+
+  \item
+        \begin{align*}
+          C_{12}        & = \frac{1}{(1 / C_1) + (1 / C_2)} = \qty{0.714}{\mu F} \\
+          C_\textrm{eq} & = C_{12} + C_3 = \qty{5.71}{\mu F}
+        \end{align*}
+\end{enumerate}
+
+\subsubsection{VP24.9.4}
+
+\begin{enumerate}[(a)]
+  \item $\sigma = Q / A = \qty{5.10e-6}{C/m^2}$
+
+  \item $E = \sigma / \epsilon_0 = \qty{5.76e5}{N/C}$
+
+  \item $u = \frac{1}{2} \epsilon_0 E^2 = \qty{1.47}{J/m^3}$
+
+  \item $U = u V = u A d = \qty{5.04e-3}{J}$
+\end{enumerate}
+
+\subsubsection{VP24.11.1}
+
+\begin{enumerate}[(a)]
+  \item $C = \epsilon_0 A / d = \qty{1.36}{n F}$
+
+  \item $C = Q / V \Rightarrow Q = C V = \qty{5.44}{\mu C}$
+
+  \item $K = V_0 / V = 1.60$
+
+  \item $C = C_0 K = \qty{2.18}{n F}$
+
+  \item $Q_i = Q (1 - 1 / K) = \qty{2.04e-6}{C}$
+\end{enumerate}
+
+\subsubsection{24.11.4}
+
+\begin{enumerate}[(a)]
+  \item $U = \frac{1}{2} C V^2 = \qty{6.30}{J}$
+
+  \item $U = \frac{1}{2} K C V^2 = \qty{18.0}{J}$
+\end{enumerate}
+
+\subsection{Bridging Problem}
+
+\begin{enumerate}[(a)]
+  \item The electric field inside a conductor is $0$ so the energy density is also $0$
+
+  \item By Gauss's law and symmetry the electric field at a distance $r$ from the centre of the sphere points radially outwards and has magnitude \[E = \ke \frac{Q}{r^2}\] so the energy density is \[u = \frac{1}{2} \epsilon_0 E^2 = \frac{Q^2}{32 \pi^2 \epsilon_0 r^4}\]
+
+  \item The electric field energy of a shell of thickness $dr$ is \[dU = 4 \pi r^2 u \,dr = \frac{Q^2}{8 \pi \epsilon_0 r^2} \,dr\] so the electric field energy of all space is
+
+        \begin{align*}
+          U & = \int dU                                                           \\
+            & = \int_R^\infty \frac{Q^2}{8 \pi \epsilon_0 r^2} \,dr               \\
+            & = \frac{Q^2}{8 \pi \epsilon_0} \left[ -\frac{1}{r} \right]_R^\infty \\
+            & = \frac{Q^2}{8 \pi \epsilon_0 R}
+        \end{align*}
+
+  \item $Q^2 / 8 \pi \epsilon_0 R$
+
+  \item $U = Q^2 / 2C \Rightarrow C = Q^2 / 2 U = 4 \pi \epsilon_0 R$
+\end{enumerate}
+
 \end{document}
