@@ -2092,4 +2092,33 @@ Finally the two remaining capacitors are equivalent to a single capacitor of cap
   u_\textrm{after}  & = \frac{1}{2} \epsilon E^2 = \qty{1.33e-1}{J/m^3}
 \end{align*}
 
+\subsection{Gauss's Law in Dielectrics}
+
+\subsubsection{Example 24.12}
+
+By Gauss's law and symmetry, the electric field between the shells is
+
+\begin{align*}
+  \oint K \mathbf{E} \cdot d\mathbf{A} & = \frac{Q}{\epsilon_0}          \\
+  K E 4 \pi r^2                        & = \frac{Q}{\epsilon_0}          \\
+  E                                    & = \frac{Q}{4 \pi \epsilon r^2}.
+\end{align*}
+
+The potential difference between the shells is
+
+\begin{align*}
+  V & = \int_a^b \mathbf{E} \cdot d\mathbf{l}                                 \\
+    & = \int_{r_a}^{r_b} \frac{Q}{4 \pi \epsilon r^2} \,dr                    \\
+    & = \frac{Q}{4 \pi \epsilon} \left( \frac{1}{r_a} - \frac{1}{r_b} \right) \\
+    & = \frac{Q (r_b - r_a)}{4 \pi \epsilon r_a r_b}
+\end{align*}
+
+and thus the capacitance is
+
+\begin{align*}
+  C & = \frac{Q}{V}                              \\
+    & = \frac{4 \pi \epsilon r_a r_b}{r_b - r_a} \\
+    & = K C_0
+\end{align*}
+
 \end{document}
