@@ -2227,4 +2227,177 @@ and thus the capacitance is
   \item $U = Q^2 / 2C \Rightarrow C = Q^2 / 2 U = 4 \pi \epsilon_0 R$
 \end{enumerate}
 
+\subsection{Exercises}
+
+\subsubsection{24.1}
+
+\begin{enumerate}[(a)]
+  \item $V = E d = \qty{10}{kV}$
+
+  \item $C = Q / V = \epsilon_0 A / d \Rightarrow A = d Q / \epsilon_0 V = \qty{2.26e-3}{m^3}$
+
+  \item $C = Q / V = \qty{8.00}{pF}$
+\end{enumerate}
+
+\subsubsection{24.11}
+
+\begin{enumerate}[(a)]
+  \item $C = Q / V = \qty{15.0}{pF}$
+
+  \item
+
+        \begin{align*}
+          C                             & = 4 \pi \epsilon_0 \frac{r_a r_b}{r_b - r_a} \\
+          \frac{r_b - r_a}{r_a r_b}     & = \frac{4 \pi \epsilon_0}{C}                 \\
+          \frac{1}{r_a} - \frac{1}{r_b} & = \frac{4 \pi \epsilon_0}{C}                 \\
+          \frac{1}{r_a}                 & = \frac{4 \pi \epsilon_0}{C} + \frac{1}{r_b} \\
+                                        & = \frac{4 \pi \epsilon_0 r_b + C}{C r_b}     \\
+          r_a                           & = \frac{C r_b}{4 \pi \epsilon_0 r_b + C}     \\
+                                        & = \qty{3.08}{cm}
+        \end{align*}
+
+  \item
+
+        \begin{align*}
+          E & = \frac{\sigma}{\epsilon_0}        \\
+            & = \frac{Q}{4 \pi r_a^2 \epsilon_0} \\
+            & = \qty{3.13e4}{N/C}
+        \end{align*}
+\end{enumerate}
+
+\subsubsection{24.13}
+
+\begin{align*}
+  V_2                   & = k V                 \\
+                        & = k (V_1 + V_2)       \\
+  V_2 (1 - k)           & = k V_1               \\
+  \frac{Q}{C_2} (1 - k) & = k \frac{Q}{C_1}     \\
+  C_1                   & = \frac{C_2 k}{1 - k} \\
+                        & = \qty{5.57}{\mu F}
+\end{align*}
+
+\subsubsection{24.15}
+
+\begin{enumerate}[(a)]
+  \item In series
+
+  \item $5000$ cells
+\end{enumerate}
+
+\subsubsection{24.21}
+
+\begin{enumerate}[(a)]
+  \item The equivalent capacitance for the three capacitors in the middle is \[C_\text{middle} = \frac{1}{(1 / \qty{18.0}{nF}) + (1 / \qty{30.0}{nF}) + (1 / \qty{10.0}{nF})} = \qty{5.29}{nF}.\]
+
+        The equivalent capacitance for the remaining three capacitors is \[C_\textrm{equiv} = \qty{7.5}{nF} + \qty{5.29}{nF} + \qty{6.5}{nF} = \qty{19.3}{nF}.\]
+
+  \item $C = Q / V \Rightarrow Q = C V = \qty{483}{nC}$
+
+  \item $C = Q / V \Rightarrow Q = C V = \qty{163}{nC}$
+
+  \item $\qty{25}{V}$
+\end{enumerate}
+
+\subsubsection{24.23}
+
+\[C = \epsilon_0 \frac{A}{d} \Rightarrow A = \frac{C d}{\epsilon_0} = \qty{3.28e3}{m^2}\]
+
+\[u = \frac{\frac{1}{2} C V^2}{A d} = \qty{2.83e-2}{J/m^3}\]
+
+\subsubsection{24.31}
+
+\begin{enumerate}[(a)]
+  \item
+
+        \begin{align*}
+          U_\textrm{before} & = \frac{1}{2} C V^2 = \qty{3.60}{mJ}   \\
+          U_\textrm{after}  & = \frac{1}{2} K C V^2 = \qty{13.5}{mJ}
+        \end{align*}
+
+  \item The energy increased by $\qty{9.9}{mJ}$
+\end{enumerate}
+
+\subsubsection{24.33}
+
+\begin{enumerate}[(a)]
+  \item \[E = E_0 / K \Rightarrow K = E_0 / E = 1.28\] and \[\sigma_i = \sigma (1 - 1 / K) = \epsilon_0 E_0 (1 - 1 / K) = \qty{6.20e-7}{C/m^2}\]
+
+  \item $K = 1.28$
+\end{enumerate}
+
+\subsubsection{24.35}
+
+\begin{align*}
+  Q & = C_\textrm{equiv} V                                                                      \\
+    & = \frac{1}{\frac{1}{K C_1} + \frac{1}{C_2}} V                                             \\
+    & = \frac{K C_1 C_2}{K C_1 + C_2} V                                                         \\
+    & = \frac{K \frac{Q_0}{V / 2} \frac{Q_0}{V / 2}}{K \frac{Q_0}{V / 2} + \frac{Q_0}{V / 2}} V \\
+    & = \frac{K \frac{Q_0}{V / 2}}{K + 1} V                                                     \\
+    & = \frac{2 K Q_0}{V (K + 1)} V                                                             \\
+    & = \frac{2 K Q_0}{K + 1}
+\end{align*}
+
+The charge on $C_1$ increases
+
+\subsubsection{24.37}
+
+At maximum potential difference the charge on the capacitor will be \[Q = C V = \qty{6.88}{\mu C}.\]
+
+The surface charge density will be $\sigma = Q / A$ and the magnitude of the electric field will be $E = \sigma / \epsilon$. If $E$ is to be less than the dielectric strength of the material then
+
+\begin{align*}
+  E_m           & >= E                          \\
+                & >= \frac{\sigma}{\epsilon}    \\
+                & >= \frac{Q}{A K \epsilon_0}   \\
+  \Rightarrow A & >= \frac{Q}{E_m K \epsilon_0} \\
+                & >= \qty{1.35e-2}{m^2}
+\end{align*}
+
+\subsubsection{24.39}
+
+\begin{enumerate}[(a)]
+  \item
+
+        \begin{align*}
+          Q_\textrm{after} - Q_\textrm{before} & = C_\textrm{after} V - C_\textrm{before} V    \\
+                                               & = (K C_\textrm{before} - C_\textrm{before}) V \\
+                                               & = (K - 1) C_\textrm{before} V                 \\
+                                               & = \qty{6.3}{\mu C}
+        \end{align*}
+
+  \item
+
+        \begin{align*}
+          Q_i & = Q (1 - 1 / K)     \\
+              & = K C V (1 - 1 / K) \\
+              & = \qty{6.3}{\mu C}
+        \end{align*}
+
+  \item No change
+\end{enumerate}
+
+\subsubsection{24.41}
+
+\begin{enumerate}[(a)]
+  \item $U = C V^2 / 2 \Rightarrow V = \sqrt{2 U / C} = \qty{10.1}{V}$
+
+  \item $U = K U_0 \Rightarrow K = U / U_0 = 2.25$
+\end{enumerate}
+
+\subsubsection{24.43}
+
+\begin{enumerate}[(a)]
+  \item
+
+        \begin{align*}
+          \oint K \mathbf{E} \cdot d\mathbf{A} & = \frac{Q_\textrm{encl-free}}{\epsilon_0} \\
+          K E A                                & = \frac{\sigma A}{\epsilon_0}             \\
+          E                                    & = \frac{Q}{A K \epsilon_0}
+        \end{align*}
+
+  \item \[V = E d = \frac{Q d}{A K \epsilon_0}\]
+
+  \item \[C = \frac{Q}{V} = K \frac{A \epsilon_0}{d} = K C_0\]
+\end{enumerate}
+
 \end{document}
