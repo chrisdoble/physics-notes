@@ -429,4 +429,32 @@
   \item Kirchhoff's rules can be used to analyse circuits by following these steps \\ \includegraphics[scale=0.337]{kirchhoffs-rules}
 \end{itemize}
 
+\subsection{Electrical Measuring Instruments}
+
+\begin{itemize}
+  \item Many common devices measure current or potential difference with a \textbf{d'Arsonval galvanometer} which reports values via the deflection of a pointer
+
+  \item The maximum deflection is called \textbf{full-scale deflection} and occurs at a particular current $I_\textrm{fs}$
+
+  \item The device also has a resistance $R_c$
+
+  \item A device that measures the current passing through it is called an \textbf{ammeter}
+
+  \item An ideal ammeter would have 0 resistance so it doesn't affect the rest of the circuit, but real ammeters have a small, finite resistance
+
+  \item An ammeter can be adjusted to measure currents larger than its full-scale reading by connecting a resistor in parallel so some current passes through the resistor — this is called a \textbf{shunt resistor} and obeys the relation \[I_\textrm{fs} R_\textrm{c} = (I_\textrm{a} - I_\textrm{fs}) R_\textrm{sh}\] where $I_\textrm{fs}$ is the device's full-scale current, $R_\textrm{c}$ is its coil resistance, $I_\textrm{a}$ is the desired full-scale current, and $R_\textrm{sh}$ is the resistance of the shunt resistor
+
+  \item A device that measures the potential difference between two probes / terminals is called a \textbf{voltmeter}
+
+  \item An ideal voltmeter would have infinite resistance so it doesn't affect the rest of the circuit, but real voltmeters have large, finite resistance
+
+  \item A voltmeter can be adjusted to measure potential differences larger than its full-scale reading by connecting a resistor in series with it so the voltage drops before reaching the voltmeter — this obeys the relation \[V_\textrm{V} = I_\textrm{fs} (R_\textrm{c} + R_\textrm{s})\] where $V_\textrm{V}$ is the desired full-scale voltage, $I_\textrm{fs}$ is the device's full-scale current, $R_\textrm{c}$ is its coil resistance, and $R_\textrm{s}$ is the resistance of the resistor
+
+  \item If you measure the current and voltage across an element simulateneously either the ammeter will be measuring the current across both the element and the voltmeter, or the voltmeter will be measuring the potential difference across both the element and the ammeter — either way you need to correct one of the measurements
+
+  \item A device that measures resistance is called an \textbf{ohmmeter}
+
+  \item A \textbf{potentiometer} is a device that can be used to measure an unknown emf via a known emf and a sliding contact attached to a resistor
+\end{itemize}
+
 \end{document}
