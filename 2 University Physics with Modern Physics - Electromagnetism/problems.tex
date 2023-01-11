@@ -3533,4 +3533,38 @@ Thus the current through the $\qty{6}{\Omega}$ resistor is \[I = \frac{V_{cb}}{R
   \item $q = Q_0 e^{-t / R C} = \qty{9.89e-6}{C}$
 \end{enumerate}
 
+\subsection{Bridging Problem}
+
+\begin{enumerate}[(a)]
+  \item The equivalent capacitance of the two capacitors is \[C_\textrm{eq} = \frac{1}{(1 / C_1) + (1 / C_2)} = \qty{1.44}{\mu F}\] so the energy stored in the capacitors is \[E = \frac{Q^2}{2 C_\textrm{eq}} = \qty{9.39}{J}\]
+
+  \item The equivalent resistance of the resistor and the voltmeter is \[R_\textrm{eq} = \frac{1}{(1 / R_1) + (1 / R_2)} = \qty{646}{\Omega}.\] This is an R-C circuit so the rate of change of the energy stored in the capacitors just after the connection is made is
+
+        \begin{align*}
+          \frac{d E}{d t} & = \frac{d}{dt} \left( \frac{Q^2}{2 C_\textrm{eq}} \right)              \\
+                          & = \frac{2 Q I}{2 C_\textrm{eq}}                                        \\
+                          & = \frac{2 Q (-\frac{Q}{R_\textrm{eq} C_\textrm{eq}})}{2 C_\textrm{eq}} \\
+                          & = -\frac{Q^2}{R_\textrm{eq} C_\textrm{eq}^2}                           \\
+                          & = \qty{-2.02e4}{W}
+        \end{align*}
+
+  \item The energy stored in the capacitors is proportional to $Q^2$ so it will have reduced by a factor of $1 / e$ when the charge has reduced by a factor of $1 / \sqrt{e}$ which happens when
+
+        \begin{align*}
+          e^{-t / R C}   & = \frac{1}{\sqrt{e}}          \\
+          \frac{-t}{R C} & = \ln \frac{1}{\sqrt{e}}      \\
+          t              & = -R C \ln \frac{1}{\sqrt{e}} \\
+                         & = \qty{0.465}{ms}
+        \end{align*}
+
+  \item From part (b)
+
+        \begin{align*}
+          \frac{d E}{d t} & = \frac{q i}{C}                                                  \\
+                          & = \frac{Q_0 e^{-t / R C} \cdot -\frac{Q_0}{R C} e^{-t / R C}}{C} \\
+                          & = -\frac{Q_0^2 e^{-2 t / R C}}{R C^2}                            \\
+                          & = \qty{-7.43}{kW}
+        \end{align*}
+\end{enumerate}
+
 \end{document}
