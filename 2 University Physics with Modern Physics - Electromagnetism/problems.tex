@@ -3338,4 +3338,31 @@ Thus the current through the $\qty{6}{\Omega}$ resistor is \[I = \frac{V_{cb}}{R
 
 \[P = \frac{V^2}{R} = \qty{1.19}{W}\]
 
+\subsection{R-C Circuits}
+
+\subsubsection{Example 26.12}
+
+\begin{enumerate}[(a)]
+  \item $\tau = R C = \qty{10}{s}$
+
+  \item \[\frac{q(46)}{Q_\textrm{f}} = \frac{Q_\textrm{f} (1 - e^{-46 / R C})}{Q_\textrm{f}} = 0.99\]
+
+  \item \[\frac{i(46)}{I_0} = \frac{I_0 e^{-46 / R C}}{I_0} = 0.010\]
+\end{enumerate}
+
+\subsubsection{Example 26.13}
+
+\begin{enumerate}[(a)]
+  \item
+
+        \begin{align*}
+          q              & = Q_0 e^{-t / RC}        \\
+          -\frac{t}{R C} & = \ln \frac{q}{Q_0}      \\
+          t              & = -R C \ln \frac{q}{Q_0} \\
+                         & = \qty{23}{s}
+        \end{align*}
+
+  \item $i(23) = -\frac{Q_0}{R C} e^{-24 / R C} = \qty{-4.54e-8}{A}$
+\end{enumerate}
+
 \end{document}

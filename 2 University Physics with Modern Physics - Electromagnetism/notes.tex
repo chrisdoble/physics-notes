@@ -457,4 +457,16 @@
   \item A \textbf{potentiometer} is a device that can be used to measure an unknown emf via a known emf and a sliding contact attached to a resistor
 \end{itemize}
 
+\subsection{R-C Circuits}
+
+\begin{itemize}
+  \item A circuit that has a resistor and a capacitor in series is called an \textbf{R-C circuit}
+
+  \item When charging the capacitor in an R-C circuit, the charge on the capacitor is given by \[q = C \mathcal{E} (1 - e^{-t / R C}) = Q_\textrm{f} (1 - e^{-t / R C})\] and the current in the circuit is given by \[i = \frac{\mathcal{E}}{R} e^{-t / R C} = I_0 e^{-t / R C}\]
+
+  \item At $t = R C$ the capacitor has reached $1 - 1 / e$ of its final value and the current has decreased to $1 / e$ of its original value — this product $\tau = R C$ is a measure of how quickly the capacitor charges and is called the \textbf{time constant} or the \textbf{relaxation time}
+
+  \item When discharging the capacitor in an R-C circuit, the charge on the capacitor is given by \[q = Q_0 e^{-t / R C}\] and the current in the circuit is given by \[i = -\frac{Q_0}{R C} e^{-t / R C} = I_0 e^{-t / R C}\]
+\end{itemize}
+
 \end{document}
