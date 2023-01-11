@@ -3384,4 +3384,153 @@ Thus the current through the $\qty{6}{\Omega}$ resistor is \[I = \frac{V_{cb}}{R
   \item The total current is $15 + 11 + 0.83 = \qty{27}{A}$ which will trip the circuit breaker
 \end{enumerate}
 
+\subsection{Guided Practice}
+
+\subsubsection{VP26.2.1}
+
+\begin{enumerate}[(a)]
+  \item $R_\textrm{eq} = \qty{7.00}{\Omega}$
+
+  \item $R_\textrm{eq} = \frac{1}{(1 / R_1) + (1 / R_2) + (1 / R_3)} = \qty{0.571}{\Omega}$
+
+  \item $R_\textrm{eq} = R_1 + \frac{1}{(1 / R_2) + (1 / R_3)} = \qty{2.33}{\Omega}$
+
+  \item $R_\textrm{eq} = \frac{1}{(1 / R_1) + (1 / (R_2 + R_3))} = \qty{0.857}{\Omega}$
+\end{enumerate}
+
+\subsubsection{VP26.2.2}
+
+\begin{enumerate}[(a)]
+  \item $I = V / R_\textrm{eq} = V / \frac{1}{(1 / R_1) + (1 / (R_2 + R_3))} = \qty{8.18}{A}$
+
+  \item $I = V / R_1 = \qty{6.00}{A}$
+
+  \item $I = V / (R_2 + R_3) = \qty{2.18}{A}$
+
+  \item $I = V / (R_2 + R_3) = \qty{2.18}{A}$
+\end{enumerate}
+
+\subsubsection{VP26.2.3}
+
+\begin{enumerate}[(a)]
+  \item $P = V I = V^2 / R_\textrm{eq} = V^2 / \frac{1}{(1 / R_1) + (1 / R_2) + (1 / R_3)} = \qty{54.6}{W}$
+
+  \item $P = V I = V^2 / R_1 = \qty{20.6}{W}$
+
+  \item $P = \qty{18.0}{W}$
+
+  \item $P = \qty{16.0}{W}$
+\end{enumerate}
+
+\subsubsection{VP26.2.4}
+
+\begin{enumerate}[(a)]
+  \item $P = V I = V^2 / R = V^2 / (R_1 + \frac{1}{(1 / R_2) + (1 / R_3)}) = \qty{9.84}{W}$
+
+  \item $I = V / R = P / V = \qty{1.09}{A}$, $P = I^2 R = \qty{5.98}{W}$
+
+  \item $V = \mathcal{E} - I R_1 = \qty{3.53}{V}$, $P = V^2 / R = \qty{2.08}{W}$
+
+  \item $P = V^2 / R = \qty{1.78}{W}$
+\end{enumerate}
+
+\subsubsection{VP26.7.1}
+
+\begin{enumerate}[(a)]
+  \item $I = V / R = \qty{1}{A}$
+
+  \item $V_\textrm{ab} = \qty{7}{V}$
+
+  \item $P_{12} = V I = \qty{12}{W}$, $P_4 = V I = \qty{4}{W}$
+\end{enumerate}
+
+\subsubsection{VP26.7.2}
+
+\begin{enumerate}[(a)]
+  \item The current experienced by the resistor is $I = I_1 + I_2 = \qty{1.55}{A}$ so $V_\textrm{ab} = I R = \qty{7.75}{V}$
+
+  \item Using Kirchhoff's loop rule clockwise around the outer loop we find
+
+        \begin{align*}
+          0   & = \mathcal{E}_1 - I_1 r_1 - (I_1 + I_2) R           \\
+          r_1 & = \frac{\mathcal{E}}{I_1} - \frac{I_1 + I_2}{I_1} R \\
+              & = \qty{1.25}{\Omega}
+        \end{align*}
+
+  \item Using Kirchhoff's loop rule clockwise around the right loop we find
+
+        \begin{align*}
+          0   & = \mathcal{E}_2 - I_2 r_2 - (I_1 + I_2) R             \\
+          r_2 & = \frac{\mathcal{E}_2}{I_2} - \frac{I_1 + I_2}{I_2} R \\
+              & = \qty{0.926}{\Omega}
+        \end{align*}
+\end{enumerate}
+
+\subsubsection{VP26.7.3}
+
+\begin{enumerate}[(a)]
+  \item $P = \qty{33.4}{W}$
+
+  \item $P = \qty{18.8}{W}$
+
+  \item $P = \qty{2.09}{W}$
+
+  \item $P = \qty{52.2}{W}$
+
+  \item $P = \qty{25.0}{W}$
+\end{enumerate}
+
+\subsubsection{VP26.13.1}
+
+\begin{enumerate}[(a)]
+  \item $Q_\textrm{f} = C \mathcal{E} = \qty{2.88e-5}{C}$
+
+  \item $I_0 = \mathcal{E} / R = \qty{9e-7}{A}$
+
+  \item $\tau = \qty{32}{s}$
+
+  \item $q(18.0) / Q_\textrm{f} = 1 - e^{-18.0 / \tau} = 0.430$
+
+  \item $i(18.0) / I_0 = e^{-18.0 / \tau} = 0.570$
+\end{enumerate}
+
+\subsubsection{VP26.13.2}
+
+\begin{enumerate}[(a)]
+  \item
+
+        \begin{align*}
+          q & = Q_0 e^{-t / R C}       \\
+          t & = -R C \ln \frac{q}{Q_0} \\
+            & = \qty{11.0}{s}
+        \end{align*}
+
+  \item $i = \qty{-1.37e-7}{A}$
+\end{enumerate}
+
+\subsubsection{VP26.13.3}
+
+\begin{enumerate}[(a)]
+  \item
+
+        \begin{align*}
+          q              & = Q_0 e^{-t / R C}           \\
+          -\frac{t}{R C} & = \ln \frac{q}{Q_0}          \\
+          R              & = -\frac{t}{C \ln (q / Q_0)} \\
+                         & = \qty{1.32}{M\Omega}
+        \end{align*}
+
+  \item $I_0 = -\frac{Q_0}{R C} = \qty{-5.21e-7}{A}$
+
+  \item $i(17.0) = I_0 e^{-t / R C} = \qty{-1.04e-7}{A}$
+\end{enumerate}
+
+\subsubsection{VP26.13.4}
+
+\begin{enumerate}[(a)]
+  \item $q = C \mathcal{E} (1 - e^{-t / R C}) = \qty{6.12e-5}{C}$
+
+  \item $q = Q_0 e^{-t / R C} = \qty{9.89e-6}{C}$
+\end{enumerate}
+
 \end{document}
