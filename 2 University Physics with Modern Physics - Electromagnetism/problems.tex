@@ -3797,4 +3797,199 @@ The heater draws \[I_\textrm{heater} = P_\textrm{header} / V = \qty{12.5}{A}\] a
 
 so the circuit breaker will trip if the hair dryer's $\qty{900}{W}$ mode is used.
 
+\subsection{Problems}
+
+\subsubsection{26.53}
+
+\begin{enumerate}[(a)]
+  \item $C \mathcal{E}^2 / 2$
+
+  \item
+
+        \begin{align*}
+          E & = \int_0^\infty \frac{\mathcal{E}^2}{R} e^{-t / R C} \,dt \\
+            & = \frac{\mathcal{E}^2}{R} [-R C e^{-e / R C}]_0^\infty    \\
+            & = C \mathcal{E}^2
+        \end{align*}
+
+  \item
+
+        \begin{align*}
+          E & = \int_0^\infty \left( \frac{\mathcal{E}}{R} e^{-t / R C} \right)^2 R \,dt      \\
+            & = \int_0^\infty \frac{\mathcal{E}^2}{R} e^{-2 t / R C} \,dt                     \\
+            & = \frac{\mathcal{E}^2}{R} \left[ -\frac{R C}{2} e^{-2 t / R C} \right]_0^\infty \\
+            & = \frac{1}{2} C \mathcal{E}^2
+        \end{align*}
+
+  \item Half is stored in each
+\end{enumerate}
+
+\subsubsection{26.55}
+
+\begin{enumerate}[(a)]
+  \item $I_1 = \qty{-2.29}{A}$
+
+  \item $I_2 = \qty{3.71}{A}$
+
+  \item $I_\textrm{R} = \qty{1.42}{A}$
+\end{enumerate}
+
+\subsubsection{26.57}
+
+\begin{enumerate}[(a)]
+  \item $\qty{0.222}{V}$
+
+  \item $\qty{0.464}{A}$
+\end{enumerate}
+
+\subsubsection{26.63}
+
+\begin{enumerate}[(a)]
+  \item $\qty{109}{V}$, no
+\end{enumerate}
+
+\subsubsection{26.67}
+
+\begin{enumerate}[(a)]
+  \item The current through both branches is \[I = \mathcal{E} / R = \qty{4.00}{A}.\] The potential difference between points $a$ and $b$ is \[V_\textrm{ab} = 3 I - 6 I = -3 I = \qty{-12.0}{V}.\]
+
+  \item $I = \qty{1.71}{A}$
+
+  \item $R = \qty{4.20}{\Omega}$
+\end{enumerate}
+
+\subsubsection{26.69}
+
+\begin{enumerate}[(a)]
+  \item Modelling the device as a capacitor and resistor in parallel, the capacitor has capacitance \[C = K \epsilon_0 \frac{A}{d}\] and the resistor has resistance \[R = \rho \frac{d}{A}\] so the time constant is \[\tau = R C = \epsilon_0 \rho K\]
+
+  \item The capacitor has capacitance \[C = K \epsilon_0 \frac{A}{d} = \qty{0.257}{nF}\] so its charge at $t = 0$ is \[Q_0 = C \mathcal{E} = \qty{1.28}{nC}\]
+
+  \item The resistor has resistance \[R = \rho \frac{d}{A} = \qty{9.30e11}{\Omega}\] so the capacitor will have half of its original charge when
+
+        \begin{align*}
+          q                & = \frac{1}{2} Q_0      \\
+          Q_0 e^{-t / R C} & = \frac{1}{2} Q_0      \\
+          t                & = -R C \ln \frac{1}{2} \\
+                           & = \qty{166}{s}
+        \end{align*}
+
+  \item $i = -\frac{\mathcal{E}}{R} e^{-t / R C} = \qty{-4.68}{pA}$
+\end{enumerate}
+
+\subsubsection{26.71}
+
+\begin{enumerate}[(a)]
+  \item $Q_0 = C \mathcal{E} = \epsilon_0 A \mathcal{E} / d = \qty{11.8}{pC}$
+
+  \item The capacitor's new capacitance is \[C = K \epsilon_0 \frac{A}{d} = \qty{14.2}{pF}\] so the time constant is \[\tau = R C = \qty{142}{ps}.\] The ``new'' capacitor would have the same charge at
+
+        \begin{align*}
+          Q_0           & = C \mathcal{E} (1 - e^{-t / \tau})                      \\
+          e^{-t / \tau} & = 1 - \frac{Q_0}{C \mathcal{E}}                          \\
+          t             & = -\tau \ln \left( 1 - \frac{Q_0}{C \mathcal{E}} \right) \\
+                        & = \qty{12.3}{ps}
+        \end{align*}
+
+        at which point the current would be
+
+        \begin{align*}
+          i & = \frac{\mathcal{E}}{R} e^{-t / \tau} \\
+            & = \qty{0.917}{A}
+        \end{align*}
+
+  \item $E = \frac{Q_0^2}{2 C} = \qty{4.90}{pJ}$
+
+  \item $E = \frac{1}{2} C \mathcal{E}^2 = \qty{710}{pJ}$
+
+  \item
+
+        \begin{align*}
+          E & = \int_{t_0}^\infty \mathcal{E} I \,dt                         \\
+            & = \int_{t_0}^\infty \frac{\mathcal{E}^2}{R} e^{-t / \tau} \,dt \\
+            & = \frac{\mathcal{E}^2}{R} [-\tau e^{-t / \tau}]_{t_0}^\infty   \\
+            & = \frac{\mathcal{E}^2 \tau}{R} e^{-t_0 / \tau}                 \\
+            & = \qty{1300}{pJ}
+        \end{align*}
+
+  \item $E = \qty{590}{pJ}$
+\end{enumerate}
+
+\subsubsection{26.73}
+
+\begin{enumerate}[(a)]
+  \item The equivalent resistance of the two resistors and voltmeter (in $\unit{k \Omega}$) is \[R = 100 + \frac{1}{(1 / 200) + (1 / 50)} = \qty{140}{k \Omega}\] so the current through the circuit is \[I = \frac{V}{R} = \qty{2.86}{mA},\] the voltage drop from $a$ to $b$ is \[V_\textrm{ab} = I R = \qty{286}{V},\] and the voltage drop from $b$ to ground is \[V_\textrm{b} = V - V_\textrm{ab} = \qty{114}{V}\]
+
+  \item The equivalent resistance of the two resistors and voltmeter (in $\unit{k \Omega}$) is \[R = 100 + \frac{1}{(1 / 200) + (1 / 5000)} = \qty{292}{k \Omega}\] so the current through the circuit is \[I = \frac{V}{R} = \qty{1.37}{mA},\] the voltage drop from $a$ to $b$ is \[V_\textrm{ab} = I R = \qty{137}{V},\] and the voltage drop from $b$ to ground is \[V_\textrm{b} = V - V_\textrm{ab} = \qty{263}{V}\]
+
+  \item The equivalent resistance of the two resistors and voltmeter (in $\unit{k \Omega}$) is \[R = 100 + 200 = \qty{300}{k \Omega}\] so the current through the circuit is \[I = \frac{V}{R} = \qty{1.33}{mA},\] the voltage drop from $a$ to $b$ is \[V_\textrm{ab} = I R = \qty{133}{V},\] and the voltage drop from $b$ to ground is \[V_\textrm{b} = V - V_\textrm{ab} = \qty{267}{V}\]
+\end{enumerate}
+
+\subsubsection{26.75}
+
+\begin{enumerate}[(a)]
+  \item $V_\textrm{ab} = \qty{18.0}{V}$
+
+  \item $a$
+
+  \item The current through the switch is \[I = \frac{V}{R} = \qty{2.00}{A}\] so the potential difference between the battery and the $\qty{6.00}{\Omega}$ resistor is \[V_6 = I R = \qty{12.0}{V}\] meaning the potential difference between $b$ and ground is \[V_b = V - V_6 = \qty{6.00}{V}\]
+
+  \item
+
+        \begin{align*}
+          Q_{3\textrm{,before}} & = \qty{54}{\mu C}  \\
+          Q_{3\textrm{,after}}  & = \qty{18}{\mu C}  \\
+          \Delta Q_3            & = \qty{-36}{\mu C} \\
+          Q_{6\textrm{,before}} & = \qty{108}{\mu C} \\
+          Q_{6\textrm{,after}}  & = \qty{72}{\mu C}  \\
+          \Delta Q_6            & = \qty{-36}{\mu C}
+        \end{align*}
+\end{enumerate}
+
+\subsubsection{26.77}
+
+The resistance of the resistor is
+
+\begin{align*}
+  i & = \frac{\mathcal{E}}{R} e^{-0 / \tau} \\
+  R & = \frac{\mathcal{E}}{i}               \\
+    & = \qty{1.7}{M \Omega}
+\end{align*}
+
+so the capacitance of the capacitor is
+
+\[C = \frac{\tau}{R} = \qty{3.1}{\mu F}\]
+
+\subsubsection{26.81}
+
+\begin{enumerate}[(a)]
+  \item $V_\textrm{out} = 21 - 10 V_\textrm{in}$
+
+  \item $\qty{1.35}{V}$
+
+  \item ?
+\end{enumerate}
+
+\subsubsection{26.83}
+
+The total resistance of the network to the right of points $c$ and $d$ is equal to $R_\textrm{T}$ and it is parallel with $R_2$ so the equivalent resistance of the whole network is
+
+\begin{align*}
+  R_\textrm{T}                                                       & = R_1 + \frac{1}{(1 / R_2) + (1 / R_T)} + R_1                     \\
+  R_\textrm{T} \left( \frac{1}{R_2} + \frac{1}{R_\textrm{T}} \right) & = 1 + 2 R_1 \left( \frac{1}{R_2} + \frac{1}{R_\textrm{T}} \right) \\
+  \frac{R_\textrm{T}}{R_2} + 1                                       & = 1 + 2 \frac{R_1}{R_2} + 2 \frac{R_1}{R_\textrm{T}}              \\
+  R_\textrm{T}^2                                                     & = 2 R_1 R_\textrm{T} + 2 R_1 R_2                                  \\
+  R_\textrm{T}^2 - 2 R_1 R_\textrm{T} - 2 R_1 R_2                    & = 0
+\end{align*}
+
+This is a quadratic in $R_\textrm{T}$ with solutions
+
+\begin{align*}
+  R_\textrm{T} & = \frac{2 R_1 \pm \sqrt{(-2 R_1)^2 - 4 (1) (-2 R_1 R_2)}}{2} \\
+               & = \frac{2 R_1 \pm \sqrt{4 R_1^2 + 8 R_1 R_2}}{2}             \\
+               & = R_1 \pm \sqrt{R_1^2 + 2 R_1 R_2}
+\end{align*}
+
+The minus value can be discarded because it would result in a negative resistance, leaving \[R_\textrm{T} = R_1 + \sqrt{R_1^2 + 2 R_1 R_2}\]
+
 \end{document}
