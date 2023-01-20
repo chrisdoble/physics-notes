@@ -3992,4 +3992,108 @@ This is a quadratic in $R_\textrm{T}$ with solutions
 
 The minus value can be discarded because it would result in a negative resistance, leaving \[R_\textrm{T} = R_1 + \sqrt{R_1^2 + 2 R_1 R_2}\]
 
+\section{Magnetic Field and Magnetic Forces}
+
+\subsection{Magnetic Field}
+
+\subsubsection{Example 27.1}
+
+The force is directed in the negative $y$ direction and has magnitude
+
+\begin{align*}
+  F & = q v B \sin \theta \\
+    & = \qty{4.8e-14}{N}
+\end{align*}
+
+\subsection{Magnetic Field Lines and Magnetic Flux}
+
+\subsubsection{Example 27.2}
+
+\begin{align*}
+  \Phi_B        & = \int \mathbf{B} \cdot d \mathbf{A} \\
+                & = B A \cos \theta                    \\
+  \Rightarrow B & = \frac{\Phi_B}{A \cos \theta}       \\
+                & = \qty{6.0}{T}
+\end{align*}
+
+\subsection{Motion of Charged Particles in a Magnetic Field}
+
+\subsubsection{Example 27.3}
+
+\begin{align*}
+  f             & = \frac{|q| B}{2 \pi m} \\
+  \Rightarrow B & = \frac{2 \pi f m}{|q|} \\
+                & = \qty{0.0876}{T}
+\end{align*}
+
+\subsubsection{Example 27.4}
+
+\begin{enumerate}[(a)]
+  \item The force acts in the negative $y$ direction and has magnitude \[F = q v_z B = \qty{1.60e-14}{N}\] so the proton is accelerating in the negative $y$ direction with magnitude \[a = \frac{F}{m} = \qty{9.58e12}{m/s^2}\]
+
+  \item \[R = \frac{m v}{|q| B} = \qty{4.18}{mm}\] \[\omega = \frac{|q| B}{m} = \qty{4.79e7}{rad/s}\] \[v_x T = v_x \frac{2 \pi}{\omega} = \qty{1.97}{cm}\]
+\end{enumerate}
+
+\subsection{Applications of Motion of Charged Particles}
+
+\subsubsection{Example 27.5}
+
+\begin{enumerate}[(a)]
+  \item \[v = \sqrt{\frac{2 e V}{m}} = \qty{7.26e6}{m/s} = 0.024c\]
+
+  \item \[\frac{E}{B} = v \Rightarrow B = \frac{E}{v} = \qty{0.83}{T}\]
+
+  \item The beam will move downward
+\end{enumerate}
+
+\subsubsection{Example 27.6}
+
+\begin{align*}
+  R             & = \frac{m v}{|q| B} \\
+  \Rightarrow B & = \frac{m v}{|q| R} \\
+                & = \qty{0.0818}{T}
+\end{align*}
+
+\subsection{Magnetic Force on a Current-Carrying Conductor}
+
+\begin{enumerate}[(a)]
+  \item The magnetic force is directed upwards and has magnitude \[F = I l B \sin \theta = \qty{42.4}{N}\]
+
+  \item Rotate the rod such that it's perpendicular to the magnetic field, i.e. the current is moving South-East at which point the magnitude of the magnetic force will be \[F = I l B = \qty{60.0}{N}\]
+\end{enumerate}
+
+\subsubsection{Example 27.8}
+
+The total force experienced by the conductor is equal to the vector sum of the force experienced by each of its segments \[\mathbf{F} = \mathbf{F}_1 + \mathbf{F}_2 + \mathbf{F}_3.\]
+
+The first segment is parallel to the magnetic field and thus experiences no magnetic force \[\mathbf{F}_1 = \mathbf{0}.\]
+
+Each infinitesimal part of the second segment experiences a magnetic force directed radially outward. By symmetry the horizontal components of these forces cancel meaning the magnetic force experienced by the second segment is directed in the positive $y$ direction and has magnitude
+
+\begin{align*}
+  F_2 & = I \int_0^\pi R \,d \theta B \sin \theta \\
+      & = I R B [-\cos \theta]_0^\pi              \\
+      & = 2 I R B.
+\end{align*}
+
+The magnetic force experienced by the third segment is directed in the positive $y$ direction and has magnitude \[F_3 = I L B.\]
+
+The total magnetic force experienced by the conductor is thus \[\mathbf{F} = \mathbf{F}_1 + \mathbf{F}_2 + \mathbf{F}_3 = \mathbf{0} + 2 I R B \hat{\mathbf{j}} + I L B \hat{\mathbf{j}} = I B (2 R + L) \hat{\mathbf{j}}.\]
+
+\subsection{Force and Torque on a Current Loop}
+
+\subsubsection{Example 27.9}
+
+\[\mu = N I A = \qty{1.18}{A.m^2}\]
+
+\[\tau = \mu B \sin \phi = \qty{1.41}{N.m}\]
+
+\subsubsection{Example 27.10}
+
+\begin{align*}
+  \Delta U & = U_1 - U_0      \\
+           & = (-\mu B) - (0) \\
+           & = \qty{-1.41}{J}
+\end{align*}
+
 \end{document}
