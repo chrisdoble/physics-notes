@@ -4883,4 +4883,133 @@ c
 
 The resistance of the nerve is \[R = \rho \frac{L}{A} = \rho \frac{L}{\pi (d / 2)^2} = \qty{340}{\Omega}\] so the current in the nerve is \[I = \frac{V}{R} = \qty{294}{\mu A}\] and the maximum magnetic force it can experience is roughly \[F_\textrm{max} = I L B = \qty{5.88e-7}{N}\] which is closest to option a.
 
+\section{Sources of Magnetic Field}
+
+\subsection{Magnetic Field of a Moving Charge}
+
+\subsubsection{Example 28.1}
+
+The upper proton experiences an electric force of \[\mathbf{F_E} = \ke \frac{q^2}{r^2} \hat{\mathbf{j}}\] and a magnetic force of \[\mathbf{F_B} = q \mathbf{v} \times \mathbf{B} = \frac{\mu_0}{4 \pi} \frac{q^2 v^2}{r^2} \hat{\mathbf{j}}\] so \[\frac{F_B}{F_E} = \epsilon_0 \mu_0 v^2 = \frac{v^2}{c^2}\]
+
+\subsection{Magnetic Field of a Current Element}
+
+\subsubsection{Example 28.2}
+
+\begin{enumerate}[(a)]
+  \item
+
+        \begin{align*}
+          \mathbf{B} & = \frac{\mu_0}{4 \pi} \frac{I \,dl (-\hat{\mathbf{i}}) \times \hat{\mathbf{j}}}{r^2} \\
+                     & = -(\qty{8.7e-8}{T}) \hat{\mathbf{k}}
+        \end{align*}
+
+  \item
+
+        \begin{align*}
+          \mathbf{B} & = -\frac{\mu_0}{4 \pi} \frac{I \,dl \sin \theta}{r^2} \hat{\mathbf{k}} \\
+                     & = -(\qty{4.3e-8}{T}) \hat{\mathbf{k}}
+        \end{align*}
+\end{enumerate}
+
+\subsection{Magnetic Field of a Straight Current-Carrying Conductor}
+
+\subsubsection{Example 28.3}
+
+\begin{align*}
+  B & = \frac{\mu_0 I}{2 \pi r} \\
+  r & = \frac{\mu_0 I}{2 \pi B} \\
+    & = \qty{4.0}{mm}
+\end{align*}
+
+\subsubsection{Example 28.4}
+
+\begin{enumerate}[(a)]
+  \item
+
+        \[\mathbf{B}_{P_1} = \frac{\mu_0 I}{2 \pi} \left( \frac{1}{4 d} - \frac{1}{2 d} \right) \hat{\mathbf{j}} = -\frac{\mu_0 I}{8 \pi d} \hat{\mathbf{j}}\]
+
+        \[\mathbf{B}_{P_2} = \frac{\mu_0 I}{\pi d} \hat{\mathbf{j}}\]
+
+        \[\mathbf{B}_{P_3} = \frac{\mu_0 I}{2 \pi} \left( \frac{1}{3 d} - \frac{1}{d} \right) \hat{\mathbf{j}} = -\frac{\mu_0 I}{3 \pi d} \hat{\mathbf{j}}\]
+
+  \item \[\mathbf{B} = \frac{\mu_0 I}{2 \pi} \left( \frac{1}{x + d} - \frac{1}{x - d} \right) \hat{\mathbf{j}} = -\frac{\mu_0 I d}{\pi (x^2 - d^2)} \hat{\mathbf{j}}\]
+\end{enumerate}
+
+\subsection{Force Between Parallel Conductors}
+
+\subsubsection{Example 28.5}
+
+\[\frac{F}{L} = \frac{\mu_0 I^2}{2 \pi r} = \qty{1.0e4}{N/m}\]
+
+\subsection{Magnetic Field of a Circular Current Loop}
+
+\subsubsection{Example 28.6}
+
+\begin{enumerate}[(a)]
+  \item \[B = \frac{\mu_0 I a^2}{2 \left( x^2 + a^2 \right)^{3/2}} = \qty{1.1e-4}{T}\]
+
+  \item
+
+        \begin{align*}
+          \frac{\mu_0 I a^2}{2 \left( x^2 + a^2 \right)^{3/2}} & = \frac{1}{8} \frac{\mu_0 I a^2}{2 \left( (0)^2 + a^2 \right)^{3/2}} \\
+          \left( x^2 + a^2 \right)^{3/2}                       & = 8 a^3                                                              \\
+          x^2 + a^2                                            & = 4 a^2                                                              \\
+          x                                                    & = \pm \sqrt{3} a                                                     \\
+                                                               & = \pm \qty{1.04}{m}
+        \end{align*}
+\end{enumerate}
+
+\setcounter{subsection}{6}
+\subsection{Applications of Ampere's Law}
+
+\subsubsection{Example 28.7}
+
+\begin{align*}
+  \oint \mathbf{B} \cdot d\mathbf{l} & = \mu_0 I                 \\
+  2 \pi r B                          & = \mu_0 I                 \\
+  B                                  & = \frac{\mu_0 I}{2 \pi r}
+\end{align*}
+
+\subsubsection{Example 28.8}
+
+For points inside the conductor
+
+\begin{align*}
+  \oint \mathbf{B} \cdot d\mathbf{l} & = \mu_0 I_\textrm{encl}                \\
+  B (2 \pi r)                        & = \mu_0 I \left( \frac{r}{R} \right)^2 \\
+  B                                  & = \frac{\mu_0 I r}{2 \pi R^2}
+\end{align*}
+
+and for points outside the conductor
+
+\[B = \frac{\mu_0 I}{2 \pi r}\]
+
+\subsubsection{Example 28.9}
+
+\begin{align*}
+  \oint \mathbf{B} \cdot d\mathbf{l} & = \mu_0 I_\textrm{encl} \\
+  B L                                & = \mu_0 I n L           \\
+  B                                  & = \mu_0 I n
+\end{align*}
+
+\subsubsection{Example 28.10}
+
+By the right-hand rule the magnetic field must be directed circumferentially and by symmetry it must be radially symmetrical. The hole of the solenoid contains no current so by Ampere's law the magnitude of the magnetic field must be $0$. Outside the solenoid the net current is $0$ so the magntiude of the magnetic field must also be $0$. Finally, using Ampere's law with an integration path around the radial axis of the solenoid finds
+
+\begin{align*}
+  \oint \mathbf{B} \cdot d\mathbf{l} & = \mu_0 I_\textrm{encl}     \\
+  B (2 \pi r)                        & = \mu_0 N I                 \\
+  B                                  & = \frac{\mu_0 N I}{2 \pi r}
+\end{align*}
+
+\subsection{Magnetic Materials}
+
+\subsubsection{Example 28.12}
+
+\begin{enumerate}[(a)]
+  \item \[M = \frac{\mu_\textrm{total}}{V} \Rightarrow \mu_\textrm{total} = M V = \qty{6}{A.m^2}\]
+
+  \item \[B = \frac{\mu_0 \mu}{2 \pi \left( x^2 + a^2 \right)^{3/2}} = \qty{1e-3}{T} = \qty{1}{G}\]
+\end{enumerate}
+
 \end{document}
