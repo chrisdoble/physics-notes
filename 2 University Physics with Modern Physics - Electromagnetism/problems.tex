@@ -5315,4 +5315,303 @@ The current in the outer wire must be
         \end{enumerate}
 \end{enumerate}
 
+\subsection{Problems}
+
+\subsubsection{28.49}
+
+\begin{enumerate}[(a)]
+  \item $B = \frac{\mu_0}{4 \pi} \left( \frac{q v}{y^2} - \frac{q' v'}{x^2} \right) = \qty{1.00}{\mu T}$ into the page
+
+  \item The magnetic field produced by $q'$ at $q$ has magnitude \[B = \frac{\mu_0 q' v}{4 \pi r^2} = \qty{0.104}{\mu T}\] and is directed into the page so the force exerted on $q$ has magnitude \[F = q v B = \qty{74.9}{nN}\] and is in the $+y$ direction
+\end{enumerate}
+
+\subsubsection{28.51}
+
+\begin{align*}
+  0 & = \frac{\mu_0}{2 \pi} \left( \frac{I_1}{y} - \frac{I_2}{0.8 - y} \right) \\
+    & = I_1 (0.8 - y) - I_2 y                                                  \\
+    & = 0.8 I_1 - (I_1 + I_2) y                                                \\
+  y & = 0.8 \frac{I_1}{I_1 + I_2}                                              \\
+    & = \qty{0.200}{m}
+\end{align*}
+
+\subsubsection{28.53}
+
+\begin{enumerate}[(a)]
+  \item \[F = \frac{\mu_0 I^2 R}{d}\]
+
+  \item \[I = \frac{2 B R}{\mu_0}\] \[F = \frac{\mu_0 R}{d} \left( \frac{2 B R}{\mu_0} \right)^2 = \frac{4 B^2 R^3}{\mu_0 d} = \frac{4 B^2 (A / \pi)^{3/2}}{\mu_0 d}\]
+
+  \item \[B = \sqrt{\frac{\mu_0 d F}{4 (A / \pi)^{3/2}}}\]
+\end{enumerate}
+
+\subsubsection{28.55}
+
+\begin{enumerate}[(a)]
+  \item The electron experiences a magnetic field of magnitude \[B = \frac{\mu_0 I}{2 \pi r} = \qty{0.130}{mT}\] circumferential to the wire so it experiences a magnetic force of magnitude \[F = q v B = \qty{5.20e-18}{N}\] directed away from the wire, resulting in an initial acceleration of magnitude \[a = \frac{F}{m} = \qty{5.71e12}{m/s^2}\] directed away from the wire.
+
+  \item The electric field should be directed away from the wire and have magnitude \[E = \frac{F}{q} = \qty{32.5}{N/C}\]
+
+  \item The electron experiences a gravitational force of $F = m g = \qty{8.92e-30}{N}$ which is significantly smaller than the electric and magnetic forces, so it can be ignored
+\end{enumerate}
+
+\subsubsection{28.59}
+
+\begin{enumerate}[(a)]
+  \item The current must be directed out of the page and have magnitude
+
+        \begin{align*}
+          0   & = \frac{\mu_0}{2 \pi} \left( \frac{I_2}{0.50} - \frac{I_1}{1.5} \right) \\
+          I_2 & = I_1 \frac{0.50}{1.5}                                                  \\
+              & = \qty{2.00}{A}
+        \end{align*}
+
+  \item \[B = \frac{\mu_0}{2 \pi} \left( \frac{I_1}{0.50} - \frac{I_2}{1.5} \right) = \qty{2.13}{\mu T}\] upwards
+\end{enumerate}
+
+\subsubsection{28.61}
+
+Let the angle between the cords and the vertical be $\theta$, the length of the wire be $l$, the magnetic force per unit length be $f$, the mass of the wire per unit length be $\lambda$, the tension per unit length be $t$, and the weight per unit length be $w$.
+
+The distance between the wires is \[r = 2 l \sin \theta.\] They're in equilibrium so they experience no net horizontal force
+
+\begin{align*}
+  f - t \sin \theta                                     & = 0 \\
+  \frac{\mu_0 I^2}{2 \pi r} - t \sin \theta             & = 0 \\
+  \frac{\mu_0 I^2}{4 \pi l \sin \theta} - t \sin \theta & = 0
+\end{align*}
+
+and no net vertical force
+
+\begin{align*}
+  t \cos \theta - w         & = 0                              \\
+  t \cos \theta - \lambda g & = 0                              \\
+  t                         & = \frac{\lambda g}{\cos \theta}.
+\end{align*}
+
+Subsituting this into the equation for horizontal force we find
+
+\begin{align*}
+  \frac{\mu_0 I^2}{4 \pi l \sin \theta} - \lambda g \tan \theta & = 0                                                              \\
+  I                                                             & = \sqrt{\frac{4 \pi \lambda g l \sin \theta \tan \theta}{\mu_0}} \\
+                                                                & = \qty{23.2}{A}.
+\end{align*}
+
+\subsubsection{28.63}
+
+\begin{enumerate}[(a)]
+  \item
+
+        \begin{align*}
+          I_0 & = \int_0^a \int_0^{2\pi} \frac{b}{r} e^{(r - a) / \delta} r \, d \theta \,dr \\
+              & = 2 \pi b \int_0^a e^{(r - a) / \delta} \,dr                                 \\
+              & = 2 \pi b \left[ \delta e^{(r - a) / \delta} \right]_0^a                     \\
+              & = 2 \pi b \delta \left( 1 - e^{-a / \delta} \right)                          \\
+              & = \qty{81.5}{A}
+        \end{align*}
+
+  \item \[B = \frac{\mu_0 I_0}{2 \pi r}\]
+
+  \item
+
+        \begin{align*}
+          I & = \int_0^r \int_0^{2 \pi} \frac{b}{r'} e^{(r' - a) / \delta} r' \,d \theta \,dr' \\
+            & = 2 \pi b \int_0^r e^{(r' - a) / \delta} \,dr'                                   \\
+            & = 2 \pi b \left[ \delta e^{(r' - a) / \delta} \right]_0^r                        \\
+            & = 2 \pi b \delta \left( e^{(r - a) / \delta} - e^{-a / \delta} \right)           \\
+            & = \frac{e^{(r - a) / \delta} - e^{-a / \delta}}{1 - e^{-a / \delta}} I_0         \\
+            & = \frac{e^{r / \delta} - 1}{e^{a / \delta} - 1} I_0
+        \end{align*}
+
+  \item \[B = \frac{\mu_0 I_0}{2 \pi r} \frac{e^{r / \delta} - 1}{e^{a / \delta} - 1}\]
+
+  \item $\qty{0.175}{mT}$, $\qty{0.326}{mT}$, and $\qty{0.163}{mT}$
+\end{enumerate}
+
+\subsubsection{28.65}
+
+\begin{enumerate}[(a)]
+  \item
+
+        \begin{align*}
+          I      & = \int_0^R \int_0^{2 \pi} \alpha r^2 \,d\theta \,dr \\
+                 & = 2 \pi \alpha \left[ \frac{1}{3} r^3 \right]_0^R   \\
+                 & = \frac{2}{3} \pi \alpha R^3                        \\
+          \alpha & = \frac{3 I}{2 \pi R^3}
+        \end{align*}
+
+  \item
+
+        \begin{enumerate}[(i)]
+          \item
+
+                \begin{align*}
+                  B & = \frac{\mu_0}{2 \pi r} \int_0^r \int_0^{2 \pi} \alpha r'^2 \,d \theta \,dr \\
+                    & = \frac{\alpha \mu_0}{r} \left[ \frac{1}{3} r'^3 \right]_0^r                \\
+                    & = \frac{1}{3} \alpha \mu_0 r^2                                              \\
+                    & = \frac{\mu_0 I r^2}{2 \pi R^3}
+                \end{align*}
+
+          \item \[B = \frac{\mu_0 I}{2 \pi r}\]
+        \end{enumerate}
+\end{enumerate}
+
+\subsubsection{28.67}
+
+\begin{enumerate}[(a)]
+  \item
+
+        \begin{align*}
+          I & = \int_0^a \int_0^{2 \pi} \frac{2 I_0}{\pi a^2} \left[ 1 - \left( \frac{r}{a} \right)^2 \right] r \,d \theta \,dr \\
+            & = \frac{4 I_0}{a^2} \left[ \frac{1}{2} r^2 - \frac{r^4}{4 a^2} \right]_0^a                                        \\
+            & = \frac{4 I_0}{a^2} \left( \frac{1}{2} a^2 - \frac{1}{4} a^2 \right)                                              \\
+            & = I_0
+        \end{align*}
+
+  \item \[B = \frac{\mu_0 I_0}{2 \pi r}\]
+
+  \item
+
+        \begin{align*}
+          I & = \int_0^r \int_0^{2 \pi} \frac{2 I_0}{\pi a^2} \left[ 1 - \left( \frac{r'}{a} \right)^2 \right] r' \,d \theta \,dr' \\
+            & = \frac{4 I_0}{a^2} \left[ \frac{1}{2} r'^2 - \frac{r'^4}{4 a^2} \right]_0^r                                         \\
+            & = \frac{4 I_0}{a^2} \left( \frac{1}{2} r^2 - \frac{r^4}{4 a^2} \right)                                               \\
+            & = \frac{I_0 r^2}{a^2} \left( 2 - \frac{r^2}{a^2} \right)
+        \end{align*}
+
+  \item \[B = \frac{\mu_0 I}{2 \pi r} = \frac{\mu_0 I_0 r}{2 \pi a^2} \left( 2 - \frac{r^2}{a^2} \right)\]
+\end{enumerate}
+
+\subsubsection{28.69}
+
+By the right hand rule we find that the magnetic field must only have an $x$ component and be directed in the $-x$ direction when $z < 0$ and $+x$ direction when $z > 0$. Using Ampere's law with a counter-clockwise square integral path in the $x$-$z$ plane straddling the current sheet and with side $L$ finds
+
+\begin{align*}
+  2 B L      & = \mu_0 I L n                                                 \\
+  \mathbf{B} & = \begin{cases}
+                   \frac{1}{2} \mu_0 I n \hat{\mathbf{i}}  & z > 0 \\
+                   -\frac{1}{2} \mu_0 I n \hat{\mathbf{i}} & z < 0
+                 \end{cases}
+\end{align*}
+
+\subsubsection{28.71}
+
+\begin{enumerate}[(a)]
+  \item \[I_\text{encl} = \frac{Q_1}{2 \pi R_1} \omega_1 R_1 = \frac{\omega_1 Q_1}{2 \pi}\]
+
+  \item By the right hand rule the magnetic field must be directed along the axis of the cylinder. Using Ampere's law with a rectangular integral path of height $L$ with one side on the cylinder's axis and another very far outside the cylinder we find that \[B L = \mu_0 \frac{I_\text{encl}}{H} L \Rightarrow \mathbf{B} = \frac{\mu_0 I_\text{encl}}{H} \hat{\mathbf{k}} = \frac{\mu_0 \omega_1 Q_1}{2 \pi H} \hat{\mathbf{k}}\]
+
+  \item \[\tau = \mu B \sin \theta = \frac{1}{4} \omega_2 Q_2 R_2^2 \frac{\mu_0 \omega_1 Q_1}{2 \pi H} \sin \theta = \frac{\mu_0 \omega_1 \omega_2 Q_1 Q_2 R^2}{8 \pi H} \sin \theta\]
+
+  \item The moment of inertia of the disk about its axis is
+
+        \begin{align*}
+          I & = \int_0^{R_2} \int_0^{2 \pi} \frac{M}{\pi R_2^2} r^3 \,d \theta \,dr \\
+            & = \frac{2 M}{R_2^2} \left[ \frac{1}{4} r^4 \right]_0^{R_2}            \\
+            & = \frac{1}{2} M R_2^2
+        \end{align*}
+
+        so the magnitude of its angular momentum about $\boldsymbol{\omega}_2$ is \[L = I \omega_2 = \frac{1}{2} M R_2^2 \omega_2\]
+\end{enumerate}
+
+\subsubsection{28.75}
+
+\begin{enumerate}[(a)]
+  \item $\rho = n q$
+
+  \item $\sigma = n^{2/3} q$
+
+  \item By the right hand rule the magnetic field must be circumferential. Using Ampere's law with an integral path around the circumference of the cylinder finds
+
+        \begin{align*}
+          2 \pi R B  & = \mu_0 I_\text{encl}                               \\
+                     & = \mu_0 \pi R^2 \rho v                              \\
+                     & = \mu_0 \pi R^2 n q v                               \\
+          \mathbf{B} & = \frac{1}{2} \mu_0 R n q v \hat{\boldsymbol{\phi}}
+        \end{align*}
+
+  \item $dI_\text{surface} = R \sigma v \,d \phi = n^{2 / 3} R q v \,d \phi$
+
+  \item $d \mathbf{F} = dI_\text{surface} \mathbf{l} \times \mathbf{B} = -\frac{1}{2} \mu_0 L n^{5 / 3} q^2 R^2 v^2 \,d \phi \,\hat{\mathbf{r}}$
+
+  \item \[F = \mu_0 \pi L n^{5 / 3} q^2 R^2 v^2\] \[p = \frac{F}{2 \pi R L} = \frac{1}{2} \mu_0 n^{5 / 3} q^2 R v^2\]
+
+  \item $p = \qty{19.1}{\mu N/m^2}$
+\end{enumerate}
+
+\subsubsection{28.77}
+
+\begin{enumerate}[(a)]
+  \item
+
+        \begin{align*}
+          dI & = R \,d\theta \sigma \omega r                          \\
+             & = R \,d\theta \frac{Q}{4 \pi R^2} \omega R \sin \theta \\
+             & = \frac{\omega Q}{4 \pi} \sin \theta \,d\theta
+        \end{align*}
+
+  \item
+
+        \begin{align*}
+          d\mu & = A \,dI                                                             \\
+               & = \pi r^2 \frac{\omega Q}{4 \pi} \sin \theta \,d\theta               \\
+               & = \pi (R \sin \theta)^2 \frac{\omega Q}{4 \pi} \sin \theta \,d\theta \\
+               & = \frac{1}{4} \omega Q R^2 \sin^3 \theta \,d\theta
+        \end{align*}
+
+  \item
+
+        \begin{align*}
+          \boldsymbol{\mu} & = \int d\mu \,\hat{\mathbf{k}}                                                                                  \\
+                           & = \int_0^\pi \frac{1}{4} \omega Q R^2 \sin^3 \theta \,d\theta \,\hat{\mathbf{k}}                                \\
+                           & = \frac{1}{4} \omega Q R^2 \left[ \frac{1}{12} (\cos (3 \theta) - 9 \cos \theta) \right]_0^\pi \hat{\mathbf{k}} \\
+                           & = \frac{1}{3} \omega Q R^2
+        \end{align*}
+
+  \item \[L = \frac{2}{3} M R^2 \omega\]
+
+  \item \[\gamma = \frac{Q}{2 m}\]
+
+  \item $g = 1$
+\end{enumerate}
+
+\subsubsection{28.79}
+
+\begin{enumerate}[(a)]
+  \item Assuming the capacitor discharges entirely before the wires move, we can use the wires' change in momentum to determine their initial velocity.
+
+        Rearranging the equation for momentum per unit length we find an expression for $v_0$ \[\frac{p}{L} = \lambda v_0 \Rightarrow v_0 = \frac{1}{\lambda} \frac{p}{L}.\]
+
+        The wire's momentum per unit length is equal to the integral of the repulsive force per unit length over all time
+
+        \begin{align*}
+          v_0 & = \frac{1}{\lambda} \int_0^\infty \frac{F}{L} \,dt                \\
+              & = \frac{1}{\lambda} \int_0^\infty \frac{\mu_0 I^2}{2 \pi d} \,dt.
+        \end{align*}
+
+        The current in a discharging R-C circuit is $Q_0 e^{-t / R C} / R C$ which lets us calculate the initial velocity
+
+        \begin{align*}
+          v_0 & = \frac{1}{\lambda} \int_0^\infty \frac{\mu_0}{2 \pi d} \left( \frac{Q_0}{R C} e^{-t / R C} \right)^2 \,dt \\
+              & = \frac{\mu_0 Q_0^2}{2 \pi d \lambda R^2 C^2} \int_0^\infty e^{-2 t / R C} \,dt                            \\
+              & = \frac{\mu_0 Q_0^2}{2 \pi d \lambda R^2 C^2} \left[ -\frac{R C}{2} e^{-2 t / R C} \right]_0^\infty        \\
+              & = \frac{\mu_0 Q_0^2}{4 \pi d \lambda R C}.
+        \end{align*}
+
+  \item No non-conservative forces act on the wires so energy is conserved and
+
+        \begin{align*}
+          \lambda g h & = \frac{1}{2} \lambda v_0^2 \\
+          h           & = \frac{v_0^2}{2 g}
+        \end{align*}
+\end{enumerate}
+
+\subsubsection{28.81}
+
+b
+
+\subsubsection{28.83}
+
+c
+
 \end{document}
