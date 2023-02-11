@@ -666,4 +666,79 @@
         \end{itemize}
 \end{itemize}
 
+\section{Electromagnetic Induction}
+
+\setcounter{subsection}{1}
+\subsection{Faraday's Law}
+
+\begin{itemize}
+  \item \textbf{Faraday's law} states that the induced emf in a closed loop equals the negative of the time rate change of the magnetic flux through the loop \[\mathcal{E} = -\frac{d \Phi_B}{dt}\]
+
+  \item The direction of induced emf is described by the right hand rule with the thumb in the direction of the area vector — a positive emf is in the direction of the fingers, a negative emf is in the opposite direction
+
+  \item A coil of $N$ loops has $N$ times the magnetic flux and thus experiences $N$ times the induced emf
+\end{itemize}
+
+\subsection{Lenz's Law}
+
+\begin{itemize}
+  \item \textbf{Lenz's law} states that the direction of any magnetic induction effect is such as to oppose the cause of the effect
+
+  \item If the change in flux is due to a changing magnetic field, the magnetic field resulting from the induced emf tries to ``undo'' the original change
+
+  \item If the change in flux is due to changing area of the circuit, the current resulting from the induced emf experiences a magnetic force that tries to ``undo'' the original change
+\end{itemize}
+
+\subsection{Motional Emf}
+
+\begin{itemize}
+  \item Emf generated as a result of the conductor moving is called \textbf{motional emf} and has magnitude \[\mathcal{E} = v B L\] for a straight conductor of length $L$ and \[\mathcal{E} = \oint (\mathbf{v} \times \mathbf{B}) \cdot d\mathbf{l}\] for any conductor where $\mathbf{v}$ is the velocity of the infinitesimal conductor element and $\mathbf{B}$ is the magnetic field at its location
+\end{itemize}
+
+\subsection{Induced Electric Fields}
+
+\begin{itemize}
+  \item A changing magnetic field induces an electric field circumferential around the direction of the change
+
+  \item Unlike electrostatic fields, \textbf{induced electric fields} or \textbf{nonelectrostatic fields} are non-conservative
+
+  \item An alternative form of Faraday's law tells us the nature of the induced electric field \[\oint \mathbf{E} \cdot d \mathbf{l} = -\frac{d \Phi_B}{dt}\]
+
+  \item Faraday's law describes two separate situations
+
+        \begin{itemize}
+          \item When a conductor moves through a static magnetic field, the magnetic force on the conductor's charge carriers induces an emf that opposes the movement
+
+          \item When a magnetic field changes in a static conductor, an electric field is induced and hence an emf that opposes the change in flux
+        \end{itemize}
+\end{itemize}
+
+\subsection{Eddy Currents}
+
+\begin{itemize}
+  \item Induced currents can circulate through the body of a conducting material as opposed to around a well-defined circuit. These are called \textbf{eddy currents}
+\end{itemize}
+
+\subsection{Displacement Current and Maxwell's Equations}
+
+\begin{itemize}
+  \item Ampere's law in the form \[\oint \mathbf{B} \cdot d \mathbf{l} = \mu_0 I_\text{encl}\] breaks in the case of a charging capacitor. If the integration surface is taken to intersect the wire at a higher potential then $I_\text{encl} = i_c$ (the conduction current) but if the integration path is kept the same and the integration surface changed to pass between the plates of the capacitor then $I_\text{encl} = 0$ \\ \includegraphics[scale=0.75]{amperes-law-capacitor}
+
+  \item The generalized form of Ampere's law introduces a \textbf{displacement current} \[i_D = \epsilon_0 \frac{d \Phi_E}{dt}\] to account for the changing electric field between the plates of the capacitor \[\oint \mathbf{B} \cdot d \mathbf{l} = \mu_0 (i_C + i_D)_\text{encl}\] where $i_C$ is the conduction current and $i_D$ is the displacement current
+
+  \item The displacement current actually exists and produces corresponding magnetic fields of its own
+
+  \item \textbf{Maxwell's equations} describe all of the relationships between electric and magnetic fields
+
+        \begin{itemize}
+          \item Gauss's law for $\mathbf{E}$ \[\oint \mathbf{E} \cdot d \mathbf{A} = \frac{Q_\text{encl}}{\epsilon_0}\]
+
+          \item Gauss's law for $\mathbf{B}$ \[\oint \mathbf{B} \cdot d \mathbf{A} = 0\]
+
+          \item Faraday's law \[\oint \mathbf{E} \cdot d \mathbf{l} = -\frac{d \Phi_B}{dt}\]
+
+          \item Generalized Ampere's law \[\oint \mathbf{B} \cdot d \mathbf{l} = \mu_0 (i_C + i_D)_\text{encl} = \mu_0 (i_C + \epsilon_0 \frac{d \Phi_E}{dt})_\text{encl}\]
+        \end{itemize}
+\end{itemize}
+
 \end{document}
