@@ -5998,4 +5998,243 @@ $v = \qty{4.12}{m/s}$
         \end{align*}
 \end{enumerate}
 
+\subsection{Problems}
+
+\subsubsection{29.43}
+
+\begin{enumerate}[(a)]
+  \item $\qty{2.5e5}{C}$
+
+  \item $\qty{65}{A}$
+\end{enumerate}
+
+\subsubsection{29.45}
+
+\begin{enumerate}[(a)]
+  \item \[Q_0 = C V_0 = \qty{2.00}{mC}\] \[i = \frac{Q_0}{R C} e^{-t / RC} = 10 e^{-t / (\num{2.00e-4})} \Rightarrow i(\qty{200}{\mu s}) = \qty{3.7}{A}\]
+
+  \item
+
+        \[\frac{di}{dt} = -\frac{Q_0}{R^2 C^2} e^{-t / R C}\]
+
+        \[\frac{di}{dt}(\qty{200}{\mu s}) = \qty{-18.4}{kA}\]
+
+        \[B = \frac{\mu_0 i}{2 \pi r}\]
+
+        \[d \Phi_B = \frac{\mu_0 b i}{2 \pi r} \,dr\]
+
+        \[\Phi_B = \int_c^{c + a} \frac{\mu_0 b i}{2 \pi r} \,dr = \frac{\mu_0 b i}{2 \pi} \ln \frac{c + a}{c}\]
+
+        \[\mathcal{E} = -\frac{d \Phi_B}{dt} = -\frac{\mu_0 b}{2 \pi} \ln \frac{c + a}{c} \frac{di}{dt}\]
+
+        \[\mathcal{E}(\qty{200}{\mu s}) = \qty{0.809}{mV}\]
+
+        \[I = \mathcal{E} / R = \qty{54}{\mu A}\]
+
+  \item Counterclockwise
+\end{enumerate}
+
+\subsubsection{29.47}
+
+The current in the solenoid is $\qty{3.20}{A}$ at \[3.20 = 0.160t^2 \Rightarrow t = \sqrt{\frac{3.20}{0.160}} = \qty{4.47}{s}\] at which point the current is increasing at a rate of \[\frac{di}{dt} = 0.320 t \Rightarrow \frac{di}{dt}(4.47) = \qty{1.43}{A/s}.\]
+
+The flux through the secondary winding is \[\Phi_B = 5 A B = 5 A \mu_0 n i\] and it's increasing at a rate of \[\frac{d \Phi_B}{dt} = 5 A \mu_0 n \frac{di}{dt}\] meaning the induced emf has magnitude \[\mathcal{E} = \frac{d \Phi_B}{dt} = \qty{16.2}{\mu V}.\]
+
+\subsubsection{29.49}
+
+\begin{enumerate}[(a)]
+  \item
+
+        \begin{enumerate}[(i)]
+          \item
+
+                \[B = \frac{\mu_0 I}{2 \pi r}\]
+
+                \[d \Phi_B = \frac{\mu_0 b I}{2 \pi r} \,dr\]
+
+                \[\Phi_B = \int_r^{r + a} \frac{\mu_ b I}{2 \pi r} \,dr = \frac{\mu_0 b I}{2 \pi} \ln \frac{r + a}{r}\]
+
+                \[\mathcal{E} = -\frac{d \Phi_B}{dt} = \frac{\mu_0 a b I v}{2 \pi r (r + a)}\]
+
+          \item No emf is induced in the top or bottom wires. An upwards emf is induced in the left wire of magnitude \[\mathcal{E}_\text{left} = v B L = v \frac{\mu_0 I}{2 \pi r} b.\] An upwards emf is also induced in the right wire of magnitue \[\mathcal{E}_\text{right} = v B L = v \frac{\mu_0 I}{2 \pi (r + a)} b.\] $\mathcal{E}_\text{left}$ is greater so the emf is clockwise and has magnitude
+
+                \begin{align*}
+                  \mathcal{E} & = \mathcal{E}_\text{left} - \mathcal{E}_\text{right}                     \\
+                              & = v \frac{\mu_0 I}{2 \pi r} b - v \frac{\mu_0 I}{2 \pi (r + a)} b        \\
+                              & = \frac{\mu_0 b I v}{2 \pi} \left( \frac{1}{r} - \frac{1}{r + a} \right) \\
+                              & = \frac{\mu_0 a b I v}{2 \pi r (r + a)}
+                \end{align*}
+        \end{enumerate}
+
+  \item
+
+        \begin{enumerate}[(i)]
+          \item Clockwise
+
+          \item Clockwise
+        \end{enumerate}
+
+  \item
+
+        \begin{enumerate}[(i)]
+          \item $\mathcal{E} = 0$
+
+          \item $\mathcal{E} = 0$
+
+          \item $\mathcal{E} = 0$
+        \end{enumerate}
+\end{enumerate}
+
+\subsubsection{29.51}
+
+\begin{enumerate}[(a)]
+  \item
+
+        \begin{align*}
+          \mathcal{E}_\text{avg} & = \frac{\Delta \Phi_B}{\Delta t}       \\
+                                 & = \frac{0 - \pi (d / 2)^2 B}{\Delta t} \\
+                                 & = -\frac{\pi d^2 B}{4 \Delta t}        \\
+                                 & = -\qty{17.9}{mV}
+        \end{align*}
+
+  \item $a$ to $b$
+\end{enumerate}
+
+\subsubsection{29.53}
+
+The magntic field inside the wire is circumferential and, by Ampere's law, has magnitude
+
+\begin{align*}
+  \oint \mathbf{B} \cdot d \mathbf{l} & = \mu_0 I_0 (r / R)^2           \\
+  B                                   & = \frac{\mu_0 I_0 r}{2 \pi R^2}
+\end{align*}
+
+so the flux through the rectangle is
+
+\begin{align*}
+  \Phi_B & = \int_0^R \frac{\mu_0 I_0 r}{2 \pi R^2} W \,dr                    \\
+         & = \frac{\mu_0 I_0 W}{2 \pi R^2} \left[ \frac{1}{2} r^2 \right]_0^R \\
+         & = \frac{\mu_0 I W}{4 \pi}
+\end{align*}
+
+\subsubsection{29.55}
+
+\begin{enumerate}[(a)]
+  \item \[\mathcal{E} = \int_d^{d + L} v \frac{\mu_0 I}{2 \pi r} \,dr = \frac{\mu_0 I v}{2 \pi} \ln \frac{d + L}{d}\]
+
+  \item $a$
+
+  \item $0$
+\end{enumerate}
+
+\subsubsection{29.57}
+
+\begin{enumerate}[(a)]
+  \item
+
+        \begin{align*}
+          \mathcal{E} & = \int_0^L \omega r B \,dr \\
+                      & = \frac{1}{2} \omega B L^2 \\
+                      & = \qty{0.165}{V}
+        \end{align*}
+
+  \item $\qty{0.165}{V}$
+
+  \item $0$ between the ends, $\qty{41.2}{mV}$ between the centre and an end
+\end{enumerate}
+
+\subsubsection{29.59}
+
+\begin{enumerate}[(a)]
+  \item
+
+        \[\mathcal{E} = \frac{d \Phi_B}{dt} = v L B\]
+
+        \[I = \mathcal{E} / R = \frac{v L B}{R}\]
+
+        \[F = I L B = \frac{v L^2 B^2}{R}\]
+
+  \item
+
+        \begin{align*}
+          F = m \frac{dv}{dt}       & = -\frac{v L^2 B^2}{R}      \\
+          \frac{1}{v} \frac{dv}{dt} & = -\frac{L^2 B^2}{m R}      \\
+          \ln v                     & = -\frac{B^2 L^2}{mR} t + c \\
+          v                         & = A e^{-B^2 L^2 t / m R}
+        \end{align*}
+
+        But $v = v_0$ at $t = 0$ so \[v = v_0 e^{-B^2 L^2 t / m R}.\] Integrating to find $x$ gives \[x = \int v \,dt = -\frac{m R v_0}{B^2 L^2} e^{-B^2 L^2 t / m R} + c\] but $x = 0$ at $t = 0$ so \[x = \frac{m R v_0}{B^2 L^2} \left( 1 - e^{-B^2 L^2 t / m R} \right).\] As $t \rightarrow \infty$ then \[x = \frac{m R v_0}{B^2 L^2}\]
+\end{enumerate}
+
+\subsubsection{29.61}
+
+The changing magnetic field induces a counterclockwise circumferential electric field centred on the axis of the circle with magnitude
+
+\begin{align*}
+  \oint \mathbf{E} \cdot d \mathbf{l} & = \frac{d \Phi_B}{dt}        \\
+  2 \pi r E                           & = \pi r^2 \frac{dB}{dt}      \\
+  E                                   & = \frac{r}{2} \frac{dB}{dt}.
+\end{align*}
+
+Charge $a$ experiences a force to the left of magnitude \[\frac{q r}{2} \frac{dB}{dt}.\]
+
+Charge $b$ experiences an upwards force of the same magnitude. Charge $c$ experiences no force.
+
+\subsubsection{29.63}
+
+The displacement current is \[i_D = \epsilon \frac{d \Phi_E}{dt} = \epsilon (\num{24e3}) t^2\] so \[t = \sqrt{\frac{i_D}{(\num{24e3}) \epsilon}} = \qty{5.0}{s}\]
+
+\subsubsection{29.67}
+
+\begin{enumerate}[(a)]
+  \item \[\mathbf{v} = -2 \pi f r \sin \theta \hat{\mathbf{i}} = -1.26 \sin \theta \hat{\mathbf{i}}\]
+
+  \item \[\mathbf{v} \times \mathbf{B} = -1.26 \sin \theta \hat{\mathbf{j}}\]
+
+  \item \[d \mathbf{l} = r \,d \theta (\cos \theta \hat{\mathbf{j}} - \sin \theta \hat{\mathbf{k}})\]
+
+  \item
+
+        \begin{align*}
+          \mathcal{E} & = \int (\mathbf{v} \times \mathbf{B}) \cdot d \mathbf{l}        \\
+                      & = \int_0^{\pi / 3} -1.26 \sin \theta r \cos \theta \,d \theta   \\
+                      & = -1.26 r \int_0^{\pi / 3} \frac{1}{2} \sin 2 \theta \,d \theta \\
+                      & = -1.26 r \left[ -\frac{1}{4} \cos 2 \theta \right]_0^{\pi / 3} \\
+                      & = \qty{47.3}{mV}
+        \end{align*}
+
+        \[I = \mathcal{E} / R = \qty{4.73}{mA}\]
+
+  \item Upwards
+\end{enumerate}
+
+\subsubsection{29.69}
+
+\begin{enumerate}[(a)]
+  \item $a$ to $b$
+
+  \item The bar reaches terminal velocity when the component of the gravitational force parallel to the rails equals the component of the magnetic force parallel to the rails.
+
+        \begin{align*}
+          m g \sin \theta & = I L B \cos \theta                                                          \\
+                          & = \frac{v B L \sin \left( \frac{\pi}{2} - \theta \right)}{R} L B \cos \theta \\
+                          & = B^2 L^2 v \cos^2 \theta / R                                                \\
+          v               & = \frac{m g R \tan \theta}{B^2 L^2 \cos \theta}
+        \end{align*}
+
+  \item \[I = \frac{\mathcal{E}}{R} = \frac{v B L \cos \theta}{R} = \frac{m g \tan \theta}{B L}\]
+
+  \item \[P = I^2 R = \left( \frac{m g \tan \theta}{B L} \right)^2 R\]
+
+  \item \[P = m g v \sin \theta = \left( \frac{m g \tan \theta}{B L} \right)^2 R\]
+\end{enumerate}
+
+\subsubsection{29.71}
+
+c
+
+\subsubsection{29.73}
+
+a
+
 \end{document}
