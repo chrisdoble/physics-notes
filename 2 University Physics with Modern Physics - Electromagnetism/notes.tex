@@ -741,4 +741,79 @@
         \end{itemize}
 \end{itemize}
 
+\section{Inductance}
+
+\subsection{Mutual Inductance}
+
+\begin{itemize}
+  \item The \textbf{mutual inductance} of two coils is a proportionality constant that determines how much emf is generated in one coil from a changing current in the other coil \[\mathcal{E}_1 = -M \frac{di_2}{dt}\text{ and }\mathcal{E}_2 = -M \frac{di_1}{dt}\]
+
+  \item Providing there isn't a magnetic material with a non-constant relative permeability present the mutual inductance only depends on the geometry of the two coils \[M = \frac{N_2 \Phi_{B2}}{i_1} = \frac{N_1 \Phi_{B1}}{i_2}\] where $N_n$ is the number of turns in coil $n$, $\Phi_{Bn}$ is the magnetic flux through a single loop of coil $n$, and $i_n$ is the current through coil $n$
+
+  \item The SI unit of mutual inductance is the henry \[\qty{1}{H} = \qty{1}{Wb/A}\]
+\end{itemize}
+
+\subsection{Self-inductance and Inductors}
+
+\begin{itemize}
+  \item A current in a single isolated circuit establishes a magnetic field that causes a magnetic flux through the same circuit. This flux changes as the current changes, inducing an emf in the circuit. This \textbf{self-induced emf} opposes the change in current that caused it
+
+  \item The \textbf{self-inductance} of a coil is \[L = \frac{N \Phi_B}{i}\] where $N$ is the number of loops in the coil, $\Phi_B$ is the average magnetic flux through each loop, and $i$ is the current
+
+  \item The magnitude of self-induced emf can be calculated by rearranging the self-inductance
+
+        \begin{align*}
+          \frac{N \Phi_B}{i}      & = L                                         \\
+          N \Phi_B                & = L i                                       \\
+          N \frac{d \Phi_B}{dt}   & = L \frac{di}{dt}                           \\
+          \Rightarrow \mathcal{E} & = -N \frac{d \Phi_B}{dt} = -L \frac{di}{dt}
+        \end{align*}
+
+  \item An \textbf{inductor} or \textbf{choke} is a device designed to have a particular self-inductance
+
+  \item The potential difference between the terminals of an inductor is \[V = L \frac{di}{dt}\]
+\end{itemize}
+
+\subsection{Magnetic-Field Energy}
+
+\begin{itemize}
+  \item The energy stored in an inductor is given be \[U = \frac{1}{2} L I^2\]
+
+  \item The magnetic energy density in vacuum is \[u = \frac{B^2}{2 \mu_0}\] and in a material is \[u = \frac{B^2}{2 \mu}\]
+\end{itemize}
+
+\subsection{The R-L Circuit}
+
+\begin{itemize}
+  \item When an inductor is introduced into a circuit, the voltages, currents, and capacitor charges are in general functions of time rather than constants. However Kirchhoff's rules still apply at each moment in time
+
+  \item An R-L circuit contains a resistor and an inductor in series
+
+  \item After connecting a source of emf to an R-L circuit the current is \[i = \frac{\mathcal{E}}{R} (1 - e^{-(R / L) t})\] and its rate of change is \[\frac{di}{dt} = \frac{\mathcal{E}}{L} e^{-(R / L) t}\]
+
+  \item After disconnecting a source of emf from an R-L circuit the current is \[i = I_0 e^{-(R / L) t}\] and its rate of change is \[\frac{di}{dt} = -\frac{I_0 R}{L} e^{-(R / L) t}\] where $I_0$ is its original current
+
+  \item The \textbf{time constant} of an R-L circuit is the time it takes for the circuit to increase to 63\% of its final current after connecting a source of emf or decrease to 37\% of its original current after disconnecting a source of emf \[\tau = \frac{L}{R}\]
+\end{itemize}
+
+\subsection{The L-C Circuit}
+
+\begin{itemize}
+  \item An L-C circuit contains an inductor and a capacitor in series
+
+  \item The circuit oscillates as in simple harmonic motion, with the capacitor's charge playing the role of elastic/gravitational potential energy and the current through the inductor playing the role of kinetic energy
+
+  \item The charge of the capacitor in an L-C circuit is given by \[q = Q \cos ( \omega t + \phi )\] and thus the current is given by \[i = -\omega Q \cos ( \omega t + \phi )\] where \[\omega = \sqrt{\frac{1}{L C}}\]
+\end{itemize}
+
+\subsection{The L-R-C Series Circuit}
+
+\begin{itemize}
+  \item An L-R-C series circuit is one where an inductor, resistor, and capacitor are in series
+
+  \item The circuit oscillates as in damped harmonic motion
+
+  \item The terms underdamped, critically damped, and overdamped apply the same as they do in mechanical damped harmonic oscillation
+\end{itemize}
+
 \end{document}

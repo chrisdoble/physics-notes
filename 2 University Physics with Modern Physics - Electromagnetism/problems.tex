@@ -6237,4 +6237,129 @@ c
 
 a
 
+\section{Inductance}
+
+\subsection{Mutual Inductance}
+
+\subsubsection{Example 30.1}
+
+\[n = \frac{N_1}{l}\]
+
+\[B = \mu_0 n I = \frac{\mu_0 N_1}{l} I\]
+
+\[\Phi_B = A B = \frac{A \mu_0 N_1 N_2}{l} I\]
+
+\[\mathcal{E} = -\frac{d \Phi_B}{dt} = -\frac{A \mu_0 N_1 N_2}{l} \frac{dI}{dt} \Rightarrow M = \frac{\mu_0 A N_1 N_2}{l}\]
+
+\subsubsection{Example 30.2}
+
+\begin{enumerate}[(a)]
+  \item
+
+        \[i_2 = \qty{6.0}{A}\]
+
+        \[M = \frac{N_1 \Phi_{B1}}{i_2} \Rightarrow \Phi_{B1} = \frac{i_2 M}{N_1} = \qty{0.15}{\mu Wb}\]
+
+  \item \[\mathcal{E}_1 = -M \frac{di_2}{dt} = -\qty{50}{V}\]
+
+\end{enumerate}
+
+\subsection{Self-inductance and Inductors}
+
+\subsubsection{Example 30.3}
+
+The magnetic field inside a toroidal solenoid is \[B = \frac{\mu_0 N i}{2 \pi r}\] so \[\Phi_B = A B = A \frac{\mu_0 N i}{2 \pi r}\] and \[L = \frac{N \Phi_B}{i} = \frac{\mu_0 A N^2}{2 \pi r}\]
+
+\subsubsection{Example 30.4}
+
+\[\frac{di}{dt} = \qty{2.0}{MA/s}\]
+
+\[\mathcal{E} = -L \frac{di}{dt} = \qty{-80}{V}\]
+
+The induced emf will oppose the current
+
+\subsection{Magnetic-Field Energy}
+
+\subsubsection{Example 30.5}
+
+\begin{align*}
+  U & = \frac{1}{2} L I^2 \\
+  L & = \frac{2 U}{I^2}   \\
+    & = \qty{180}{H}
+\end{align*}
+
+\subsection{The R-L Circuit}
+
+\subsubsection{Example 30.6}
+
+\begin{enumerate}[(a)]
+  \item $\mathcal{E} = I R = \qty{6.3}{V}$
+
+  \item
+
+        \begin{align*}
+          i              & = \frac{\mathcal{E}}{R} (1 - e^{-(R / L) t})                  \\
+          e^{-(R / L) t} & = 1 - \frac{i R}{\mathcal{E}}                                 \\
+          -\frac{R}{L} t & = \ln \left( 1 - \frac{i R}{\mathcal{E}} \right)              \\
+          L              & = -\frac{R t}{\ln \left( 1 - \frac{i R}{\mathcal{E}} \right)} \\
+                         & = \qty{69}{mH}
+        \end{align*}
+
+  \item $\tau = L / R = \qty{0.40}{ms}$
+\end{enumerate}
+
+\subsubsection{Example 30.7}
+
+\[i = I_0 e^{-(R / L) 2.3 (L / R)} = I_0 e^{-2.3} = 0.10 I_0\]
+
+\[U = \frac{1}{2} L (0.10 I_0)^2 = 0.010 U_0\]
+
+\subsection{The L-C Circuit}
+
+\subsubsection{Example 30.8}
+
+\begin{enumerate}[(a)]
+  \item
+
+        \[Q = C V = \qty{7.5}{mC}\]
+
+        \[\omega = \sqrt{\frac{1}{L C}} = \qty{2000}{rad/s}\]
+
+        \[f = \frac{\omega}{2 \pi} = \qty{320}{Hz}\]
+
+        \[T = \frac{1}{f} = \qty{3.1}{ms}\]
+
+  \item
+
+        \[i = -\omega Q \sin (\omega t + \phi) = \qty{-10}{A}\]
+
+        \[q = Q \cos (\omega t + \phi) = \qty{-5.5}{mC}\]
+\end{enumerate}
+
+\subsubsection{Example 30.9}
+
+\begin{enumerate}[(a)]
+  \item
+
+        \[U_E = \frac{Q^2}{2 C} = \qty{1.1}{J}\]
+
+        \[U_B = 0\]
+
+  \item
+
+        \[U_E = \qty{0.61}{J}\]
+
+        \[U_B = \qty{0.49}{J}\]
+\end{enumerate}
+
+\subsection{The L-R-C Series Circuit}
+
+\subsubsection{Example 30.10}
+
+\begin{align*}
+  \sqrt{\frac{1}{L C} - \frac{R^2}{4 L^2}} & = \frac{1}{2} \sqrt{\frac{1}{L C}} \\
+  \frac{1}{L C} - \frac{R^2}{4 L^2}        & = \frac{1}{4 L C}                  \\
+  R                                        & = \sqrt{3 \frac{L}{C}}
+\end{align*}
+
 \end{document}
