@@ -6680,4 +6680,269 @@ The induced emf will oppose the current
         \end{align*}
 \end{enumerate}
 
+\subsection{Problems}
+
+\subsubsection{30.43}
+
+\begin{enumerate}[(a)]
+  \item
+
+        \[B(t) = \frac{\mu_0 i(t)}{2 r}\]
+
+        \[\Phi_B(t) = A B(t) = \frac{1}{2} \mu_0 \pi r i(t)\]
+
+        \[L = \frac{\Phi_B}{i} = \frac{1}{2} \mu_0 \pi r = \qty{59}{nH}\]
+
+  \item
+
+        \[\frac{di}{dt} = 2 \pi f I_0 \cos (2 \pi f t)\]
+
+        \[\left( \frac{di}{dt} \right)_\text{max} = 2 \pi f I_0\]
+
+        \[\mathcal{E}_\text{max} = L \left( \frac{di}{dt} \right)_\text{max} = \qty{26.8}{\mu V}\]
+\end{enumerate}
+
+\subsubsection{30.45}
+
+The magnetic energy density is \[u = \frac{B^2}{2 \mu_0} = \qty{6.37e4}{J/m^3}\] so each $\unit{m^3}$ of material could be ejected at \[\frac{1}{2} m v^2 = u \Rightarrow v = \sqrt{\frac{2 u}{m}} = \qty{2.06e4}{m/s}\] which is less than the sun's escape velocity.
+
+\subsubsection{30.47}
+
+\begin{enumerate}[(a)]
+  \item \[U = \frac{1}{2} L I^2 \Rightarrow L = \frac{2 U}{I^2} = \qty{5.00}{H}\]
+
+  \item
+
+        \begin{align*}
+          L & = \frac{\mu_0 A N^2}{l}          \\
+            & = \frac{\mu_0 \pi r^2 (nl)^2}{l} \\
+            & = \mu_0 pi r^2 l n^2             \\
+          l & = \frac{L}{\mu_0 \pi r^2 n^2}    \\
+            & = \qty{31.7}{m}
+        \end{align*}
+\end{enumerate}
+
+\subsubsection{30.49}
+
+In order for the capacitor to store $\qty{0.0160}{J}$ of energy its capacitance must be \[U = \frac{1}{2} C V^2 \Rightarrow C = \frac{2 U}{V^2} = \qty{222}{\mu F}.\]
+
+In order for the L-C circuit's frequency to be $\qty{3500}{Hz}$ the inductor's inductance must be \[f = \frac{\omega}{2 \pi} = \frac{1}{2 \pi \sqrt{L C}} \Rightarrow L = \left( \frac{1}{2 \pi f \sqrt{C}} \right)^2 = \qty{9.31}{\mu H}.\]
+
+\subsubsection{30.51}
+
+\begin{enumerate}[(a)]
+  \item The dipole moment of the spool has magnitude \[\mu = N I A = N I \pi a^2 = \qty{3.93}{A/m^2}.\]
+
+        It experiences a torque from the magnetic field of magnitude \[\tau = \mu B \sin \theta = \qty{5.55}{N.m}.\]
+
+        The spool is at rest after the bar is inserted so it must apply a torque of equal magnitude in the opposite direction \[\tau = a F \Rightarrow F = \frac{\tau}{a} = \qty{111}{N}.\]
+
+  \item The current in the coil before it is short circuited is $I_0 = \qty{1.0}{A}$. It is an R-L circuit with the current given by \[i = I_0 e^{-(R / L) t}.\] The torque from the magnetic field equals $\qty{0.500}{N.m}$ at
+
+        \begin{align*}
+          \tau & = \mu B \sin \theta                                         \\
+               & = N i A B \sin \theta                                       \\
+               & = N I_0 e^{-(R / L) t} \pi a^2 B \sin \theta                \\
+          t    & = -\frac{L}{R} \ln \frac{\tau}{N I_0 \pi a^2 B \sin \theta} \\
+               & = \qty{37.1}{ms}
+        \end{align*}
+
+  \item
+
+        \begin{align*}
+          \tau                     & = \mu B \sin \theta                 \\
+          I \alpha                 & = N I A B \sin \theta               \\
+          \frac{1}{2} M a^2 \alpha & = N I \pi a^2 B \sin \theta         \\
+          \alpha                   & = \frac{2 N I \pi B \sin \theta}{M} \\
+                                   & = \qty{4.00e3}{rad/s^2}
+        \end{align*}
+\end{enumerate}
+
+\subsubsection{30.53}
+
+\begin{enumerate}[(a)]
+  \item
+
+        \begin{align*}
+          Q & = I_\text{avg} \Delta t                                   \\
+            & = \frac{\mathcal{E}_\text{avg} \Delta t}{R}               \\
+            & = \frac{\frac{\Phi_B}{\Delta t} \Delta t}{2 \pi r N \rho} \\
+            & = \frac{N A B}{2 \pi r N \rho}                            \\
+            & = \frac{\pi r^2 B}{2 \pi r \rho}                          \\
+            & = \frac{r B}{2 \rho}                                      \\
+            & = \qty{15.0}{mC}
+        \end{align*}
+
+  \item
+
+        \[L = \frac{\mu_0 A N^2}{l} = \qty{3.55e-4}{H}\]
+
+        \[R = 2 \pi r N \rho = \qty{0.628}{\Omega}\]
+
+        \begin{align*}
+          t & = \frac{\pi}{2 \omega'}                                  \\
+            & = \frac{\pi}{2 \sqrt{\frac{1}{L C} - \frac{R^2}{4 L^2}}} \\
+            & = \qty{9.37e-5}{s}
+        \end{align*}
+
+  \item \[f = \frac{\omega'}{2 \pi} = \qty{2.67}{kHz}\]
+
+  \item \[U = \frac{Q^2}{2 C} = \qty{11.3}{J}\]
+
+  \item
+
+        \begin{align*}
+          \frac{q^2}{2 C}   & = 0.1 \frac{Q^2}{2 C}           \\
+          q                 & = \sqrt{0.1} Q                  \\
+          Q e^{-(R / 2L) t} & = \sqrt{0.1} Q                  \\
+          t                 & = -\frac{2 L}{R} \ln \sqrt{0.1} \\
+                            & = \qty{1.30}{ms}
+        \end{align*}
+\end{enumerate}
+
+\subsubsection{30.55}
+
+\begin{enumerate}[(a)]
+  \item $C = Q / V \Rightarrow V = Q / C = \qty{0.024}{V}$
+
+  \item \[\frac{1}{2} L I^2 = \frac{Q^2}{2 C} \Rightarrow I = \sqrt{\frac{Q^2}{C L}} = \qty{1.55}{mA}\]
+
+  \item $E = \frac{1}{2} L I^2 = \qty{72.1}{nJ}$
+
+  \item
+
+        \[E_B = \frac{1}{2} L (\frac{1}{2} I)^2 = \frac{1}{8} L I^2 = \qty{18.0}{nJ}\]
+
+        \[E_E = \frac{Q^2}{2 C} \Rightarrow Q = \sqrt{2 C E_E} = \qty{5.20}{\mu C}\]
+\end{enumerate}
+
+\subsubsection{30.57}
+
+\begin{enumerate}[(a)]
+  \item $A = \qty{0}{A}$, $V = \qty{20}{V}$
+
+  \item $A = \qty{0.267}{A}$, $V = \qty{0}{V}$
+
+  \item $A = \qty{0.147}{A}$, $V = \qty{8.98}{V}$
+\end{enumerate}
+
+\subsubsection{30.61}
+
+\begin{enumerate}[(a)]
+  \item $V_{av} = \qty{60.0}{V}$
+
+  \item $a$
+
+  \item $V_{cd} = \qty{60.0}{V}$
+
+  \item $c$
+
+  \item
+
+        \[I = \mathcal{E} / R_2 = \qty{2.4}{A}\]
+
+        \[V_{ab} = -I R_1 = \qty{-96.0}{V}\]
+
+  \item $b$
+
+  \item $V_{cd} = \qty{156}{V}$
+
+  \item $d$
+\end{enumerate}
+
+\subsubsection{30.63}
+
+\begin{enumerate}[(a)]
+  \item $i_0 = \qty{0}{A}$, $v_{ac} = \qty{0}{V}$, $v_{cb} = \qty{36.0}{V}$
+
+  \item $i_0 = \qty{0.180}{A}$, $v_{ac} = \qty{9.00}{V}$, $V_{cb} = \qty{27.0}{V}$
+
+  \item
+
+        \[i_0 = \frac{\mathcal{E}}{R_0 + R} (1 - e^{-((R_0 + R) / L) t}) = 0.18 (1 - e^{-50 t})\]
+
+        \[v_{ac} = i_0 R_0 = \frac{\mathcal{E} R_0}{R_0 + R} (1 - e^{-((R_0 + R) / L) t}) = 9 (1 - e^{-50 t})\]
+
+        \begin{align*}
+          v_{cb} & = \mathcal{E} - v_{ac}                                                       \\
+                 & = \mathcal{E} - \frac{\mathcal{E} R_0}{R_0 + R} (1 - e^{-((R_0 + R) / L) t}) \\
+                 & = 36 - 9(1 - e^{-50 t})                                                      \\
+                 & = 27 + 9 e^{-50 t}
+        \end{align*}
+\end{enumerate}
+
+\subsubsection{30.65}
+
+\begin{enumerate}[(a)]
+  \item $A_1 = \qty{0.455}{A}$, $A_2 = \qty{0}{A}$, $A_3 = \qty{0}{A}$, $A_4 = \qty{0.455}{A}$
+
+  \item The equivalent resistance of the three resistors in parallel is $R_\text{eq} = \qty{2.73}{\Omega}$ so $A_1 = \qty{0.585}{A}$ the voltage shared by the three resistors in parallel is $V = \qty{1.6}{V}$ and thus $A_2 = \qty{0.320}{A}$, $A_3 = \qty{0.160}{A}$, and $A_4 = \qty{0.107}{A}$
+\end{enumerate}
+
+\subsubsection{30.69}
+
+\begin{enumerate}[(a)]
+  \item \[\Phi_\text{inner} = \frac{\mu_0 \pi a^2 (N_1 - N_2) I}{\lambda}\]
+
+  \item \[\Phi_\text{outer} = \frac{\mu_0 \pi (b^2 N_1 - a^2 N_2) I}{\lambda}\]
+
+  \item
+
+        \begin{align*}
+          \Phi_\text{total} & = N_1 \Phi_\text{outer} + N_2 \Phi_\text{inner}                                   \\
+                            & = \frac{\mu_0 \pi I}{\lambda} (b^2 N_1^2 - a^2 N_1 N_2 + a^2 N_1 N_2 - a^2 N_2^2) \\
+                            & = \frac{\mu_0 \pi I}{\lambda} (b^2 N_1^2 - a^2 N_2^2)
+        \end{align*}
+
+        \[\frac{d \Phi_\text{total}}{dt} = \frac{\mu_0 \pi}{\lambda} (b^2 N_1^2 - a^2 N_2^2) \frac{dI}{dt}\]
+
+        \[L = \frac{\mu_0 \pi}{\lambda} (b^2 N_1^2 - a^2 N_2^2)\]
+
+  \item \[L = \frac{\mu_0 \pi}{\lambda} (b^2 N_1^2 + 2 a^2 N_1 N_2 + a^2 N_2^2)\]
+
+  \item $L = \qty{10.3}{mH}$
+
+  \item $L = \qty{16.0}{mH}$
+\end{enumerate}
+
+\subsubsection{30.71}
+
+\begin{enumerate}[(a)]
+  \item
+
+        \[i_1 = \frac{\mathcal{E}}{R_1} (1 - e^{-(R_1 / L) t})\]
+
+        \[i_2 = \frac{\mathcal{E}}{R_2} e^{-t / R_2 C}\]
+
+        \[q_2 = C \mathcal{E} (1 - e^{-t / R_2 C})\]
+
+  \item
+
+        \[i_{10} = \qty{0}{A}\]
+
+        \[i_{20} = \qty{9.60}{mA}\]
+
+  \item
+
+        \[i_{1\text{,stable}} = \qty{1.92}{A}\]
+
+        \[i_{2\text{,stable}} = \qty{0}{A}\]
+
+        The time constant of the inductive branch is $\tau = L / R_1 = \qty{0.320}{s}$ and the time constant of the capacitative branch is $\tau = R_2 C = \qty{0.100}{s}$. The circuit will be stable when $t$ is much greater than both of these values so $t \gg \qty{0.320}{s}$.
+
+  \item $t_1 = \qty{1.6}{ms}$
+
+  \item $i_1 = \qty{9.6}{mA}$
+
+  \item $t = \qty{0.291}{s}$
+\end{enumerate}
+
+\subsubsection{30.73}
+
+b
+
+\subsubsection{30.75}
+
+c
+
 \end{document}
