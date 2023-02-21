@@ -7232,4 +7232,204 @@ c
         \end{align*}
 \end{enumerate}
 
+\subsection{Exercises}
+
+\subsubsection{31.1}
+
+$\qty{1.06}{A}$
+
+\subsubsection{31.3}
+
+\begin{enumerate}[(a)]
+  \item $\phi = \ang{90.0}$; lead
+
+  \item $I = V / Z = V / (2 \pi f L) \Rightarrow f = V / (2 \pi I L) = \qty{193}{Hz}$
+\end{enumerate}
+
+\subsubsection{31.5}
+
+\begin{enumerate}[(a)]
+  \item $X_L = 2 \pi f L = \qty{1.51}{k \Omega}$
+
+  \item $L = X_L / (2 \pi f) = \qty{0.239}{H}$
+
+  \item $X_C = 1 / (2 \pi f C) = \qty{497}{\Omega}$
+
+  \item $C = 1 / (2 pi f X_C) = \qty{16.6}{\mu F}$
+\end{enumerate}
+
+\subsubsection{31.7}
+
+\begin{enumerate}[(a)]
+  \item $X_{L,60} = \qty{170}{\Omega}$, $X_{L,600} = \qty{1700}{\Omega}$
+
+  \item $X_{C,60} = \qty{1060}{\Omega}$, $X_{C,600} = \qty{106}{\Omega}$
+
+  \item \[2 \pi f L = \frac{1}{2 \pi f C} \Rightarrow f = \frac{1}{2 \pi \sqrt{C L}} = \qty{150}{Hz}\]
+\end{enumerate}
+
+\subsubsection{31.9}
+
+\begin{enumerate}[(a)]
+  \item $V_L = I \omega L \Rightarrow I = V_L / (\omega L) = \qty{0.139}{A}$ \\ $v_R = I R \cos \omega t = (\qty{12.5}{V}) \cos [(\qty{480}{rad/s}) t]$
+
+  \item $v_R(\qty{2.00}{ms}) = \qty{7.17}{V}$
+\end{enumerate}
+
+\subsubsection{31.11}
+
+\begin{enumerate}[(a)]
+  \item $V_R = I R \Rightarrow I = V_R / R = \qty{25.3}{mA}$, $i = (\qty{25.3}{mA}) \cos [(\qty{720}{rad/s}) t]$
+
+  \item $X_L = \omega L = \qty{180}{\Omega}$
+
+  \item $v_L = I X_L \cos (\omega t + \pi / 2) = (\qty{4.55}{V}) \cos [(\qty{720}{rad/s}) t + \pi / 2]$
+\end{enumerate}
+
+\subsubsection{31.13}
+
+\begin{enumerate}[(a)]
+  \item $Z = \sqrt{R^2 + (X_L - X_C)^2} = \qty{601}{\Omega}$
+
+  \item $I = V / Z = \qty{49.9}{mA}$
+
+  \item $\phi = \arctan \frac{X_L - XC}{R} = \ang{-70.6}$; lag
+
+  \item $V_R = I R = \qty{9.98}{\Omega}$, $V_L = I X_L = \qty{4.99}{V}$, $V_C = I X_C = \qty{33.3}{V}$
+\end{enumerate}
+
+\subsubsection{31.15}
+
+\begin{align*}
+  V & = I Z                                \\
+    & = I \sqrt{R^2 + (X_L - X_C)^2}       \\
+    & = \sqrt{I^2 (R^2 + (X_L - X_C)^2)}   \\
+    & = \sqrt{(I R)^2 + (I X_L - I X_C)^2} \\
+    & = \sqrt{V_R^2 + (V_L - V_C)^2}       \\
+    & = \qty{50.0}{V}
+\end{align*}
+
+\subsubsection{31.17}
+
+\begin{align*}
+  V   & = \sqrt{V_R^2 + (V_L - V_C)^2} \\
+  V_R & = \sqrt{V^2 - (V_L - V_C)^2}   \\
+      & = \qty{202}{V}
+\end{align*}
+
+\begin{align*}
+  \tan \phi & = \frac{X_L - X_C}{R}           \\
+            & = \frac{I (X_L - X_C)}{I R}     \\
+            & = \frac{V_L - V_C}{V_R}         \\
+  \phi      & = \arctan \frac{V_L - V_C}{V_R} \\
+            & = \ang{32.8}
+\end{align*}
+
+\subsubsection{31.19}
+
+\begin{enumerate}[(a)]
+  \item $R = V_\text{rms}^2 / P_\text{avg} = \qty{720}{\Omega}$, $P = V^2 / R = \qty{40.0}{W}$
+
+  \item $I_\text{rms} = P_\text{avg} / V_\text{rms} = \qty{0.167}{A}$
+
+  \item $R = \qty{720}{\Omega}$
+\end{enumerate}
+
+\subsubsection{31.21}
+
+\begin{enumerate}[(a)]
+  \setcounter{enumi}{1}
+  \item
+
+        \[V \cos \phi = I R \Rightarrow I = \frac{V \cos \phi}{R}\]
+
+        \[P_\text{avg} = \frac{1}{2} I^2 R = \frac{1}{2} \left( \frac{V \cos \phi}{R} \right)^2 R \Rightarrow R = \frac{V^2 \cos^2 \phi}{2 P_\text{avg}} = \qty{32.4}{\Omega}\]
+\end{enumerate}
+
+\subsubsection{31.23}
+
+\begin{enumerate}[(a)]
+  \item $\phi = \arctan \frac{X_L - X_C}{R} = \ang{45.8}$, $\cos \phi = 0.697$
+
+  \item $Z = \sqrt{R^2 + (X_L - X_C)^2} = \qty{344}{\Omega}$
+
+  \item $V_\text{rms} = I_\text{rms} Z = \qty{155}{V}$
+
+  \item $P_\text{avg} = V_\text{rms} I_\text{rms} \cos \phi = \qty{48.6}{W}$
+
+  \item $\qty{48.6}{W}$
+
+  \item $\qty{0}{W}$
+
+  \item $\qty{0}{W}$
+\end{enumerate}
+
+\subsubsection{31.25}
+
+\begin{enumerate}[(a)]
+  \item \[\cos \phi = \cos \left( \arctan \frac{X_L - X_C}{R} \right) = 0.302\]
+
+  \item $I = V / Z = \qty{54.4}{mA}$, $P_\text{avg} = \frac{1}{2} V I \cos \phi = \qty{0.370}{W}$
+
+  \item $P_R = \qty{0.370}{W}$, $P_C = \qty{0}{W}$, $P_L = \qty{0}{W}$
+\end{enumerate}
+
+\subsubsection{31.27}
+
+\begin{enumerate}[(a)]
+  \item
+
+        \[f = \frac{1}{2 \pi \sqrt{L C}} = \qty{113}{Hz}\]
+
+        \[I = V / Z = \qty{15.0}{mA}\]
+
+  \item
+
+        \[I = V / Z = \qty{7.60}{mA}\]
+
+        Lag
+\end{enumerate}
+
+\subsubsection{31.29}
+
+\begin{enumerate}[(a)]
+  \item $\omega_0 = 1 / \sqrt{L C} = \qty{6.45e3}{rad/s}$, $V = I Z = \qty{150}{V}$
+
+  \item $V_R = I R = \qty{150}{V}$, $V_L = I X_L = \qty{1.29}{kV}$, $V_C = I X_C = \qty{1.29}{kV}$
+
+  \item $P_\text{avg} = \frac{1}{2} V I \cos \phi = \qty{37.5}{W}$
+\end{enumerate}
+
+\subsubsection{31.31}
+
+\begin{enumerate}[(a)]
+  \item $\omega_0 = 1 / \sqrt{L C} = \qty{8.61e3}{rad/s}$, $\cos \phi = 1.00$
+
+  \item $I = V / R = \qty{1.00}{A}$, $P_\text{avg} = V I \cos \phi / 2 = \qty{75.0}{W}$
+
+  \item $P_\text{avg} = \qty{75.0}{W}$
+\end{enumerate}
+
+\subsubsection{31.33}
+
+\begin{enumerate}[(a)]
+  \item $\omega_0 = 1 / \sqrt{L C} = \qty{945}{rad/s}$
+
+  \item $V = I R \Rightarrow R = V / I = \qty{70.6}{\Omega}$
+
+  \item $V_L = I X_L = \qty{450}{V}$, $V_C = I X_C = \qty{450}{V}$, $V_R = \qty{120}{V}$
+\end{enumerate}
+
+\subsubsection{31.35}
+
+\begin{enumerate}[(a)]
+  \item $N_1 / N_2 = V_1 / V_2 = 10$
+
+  \item $I = V / R = \qty{2.40}{A}$
+
+  \item $P_\text{avg} = V_\text{rms} I_\text{rms} = \qty{28.8}{W}$
+
+  \item $P = V I = V^2 / R \Rightarrow R = V^2 / P = \qty{500}{\Omega}$, $(\qty{5.00}{\Omega}) (10)^2 = \qty{500}{\Omega}$
+\end{enumerate}
+
 \end{document}
