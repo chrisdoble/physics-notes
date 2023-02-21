@@ -820,4 +820,141 @@
 \item The angular frequency of an L-R-C circuit is \[\omega' = \sqrt{\frac{1}{L C} - \frac{R^2}{4 L^2}}\]
 \end{itemize}
 
+\section{Alternating Current}
+
+\subsection{Phasors and Alternating Currents}
+
+\begin{itemize}
+  \item An \textbf{ac source} is any device that supplies a sinusoidally varying voltage \[v = V \cos \omega t\] or current \[i = I \cos \omega t\] where $v$ and $i$ are the instantaneous voltage and current and $V$ and $I$ are the voltage and current amplitude, respectively
+
+  \item In a \textbf{phasor diagram} the value of a quantity that varies sinusoidally with time is represented by the projection onto a horizontal axis of a vector known as a \textbf{phasor} which has length equal to the amplitude of the quantity and constant angular speed $\omega$
+
+  \item The \textbf{rectified average current} is defined such that after any whole number of cycles, the total charge that flows is the same as if the current was constant with a value equal to \[I_\text{rav} = \frac{2}{\pi} I \approx 0.637 I\]
+
+  \item The \textbf{root-mean-square current} is obtained by squaring the current, taking the average value of the squared current, and taking the square root of that average. For ac currents \[I_\text{rms} = \frac{I}{\sqrt{2}}\] and \[V_\text{rms} = \frac{V}{\sqrt{2}}\]
+\end{itemize}
+
+\subsection{Resistance and Reactance}
+
+\begin{itemize}
+  \item \textbf{Reactance} is the opposition presented to alternating current by inductance or capacitance. It is similar to resistance in that it results in a smaller current for the same applied voltage, but it doesn't result in the dissipation of electrical energy as heat.
+
+  \item The amplitude of voltage across a resistor in an ac circuit is \[V_R = I R\] and the instantaneous voltage is \[v_R = i R = (IR) \cos \omega t = V_R \cos \omega t\] so the voltage is in phase with the current
+
+  \item The amplitude of voltage across an inductor in an ac circuit is \[V_L = I \omega L\] and the instantaneous voltage is
+
+        \begin{align*}
+          v_L & = L \frac{di}{dt}                                         \\
+              & = L \frac{d}{dt} (I \cos \omega t)                        \\
+              & = -I \omega L \sin \omega t                               \\
+              & = I \omega L \cos \left( \omega t + \frac{\pi}{2} \right) \\
+              & = V_L \cos \left( \omega t + \frac{\pi}{2} \right)
+        \end{align*}
+
+        so the voltage is out of phase with the current, leading it by $\ang{90}$.
+
+  \item The \textbf{inductive reactance} of an inductor is defined as \[X_L = \omega L\] which lets the amplitude of voltage be written in the same form as that of a resistor \[V_L = I X_L\]
+
+  \item The inductive reactance is a measure of the self-induced emf that opposes any change in current — greater angular frequency $\omega$ or inductance $L$ results in greater opposition
+
+  \item The ampltiude of voltage across a capacitor in an ac circuit is \[V_C = \frac{I}{\omega C}\] and the instantaneous voltage is
+
+        \begin{align*}
+          v_C & = \frac{1}{\omega C} \sin \omega t                                \\
+              & = \frac{1}{\omega C} \cos \left( \omega t - \frac{\pi}{2} \right) \\
+              & = V_C \cos \left( \omega t - \frac{\pi}{2} \right)
+        \end{align*}
+
+        so the voltage is out of phase with the current, lagging it by $90^{\circ}$.
+
+  \item The \textbf{capacitive reactance} of a capacitor is defined as \[X_C = \frac{1}{\omega C}\] which lets the amplitude of voltage be written in the same form as that of a resistor \[V_C = I X_C\]
+
+  \item The capacitive reactance is measure of the voltage produced by the build up of charge on the plates of the capacitor which opposes current — greater angular frequency $\omega$ or capacitance $C$ results in less opposition
+\end{itemize}
+
+\subsection{The L-R-C Series Circuit}
+
+\begin{itemize}
+  \item An L-R-C series circuit is one that contains an inductor, a resistor, and a capacitor in series
+
+  \item In the phasor diagram for such a circuit, the inductor phasor leads the current phasor by $\ang{90}$, the resistor phasor is parallel with it, and the capacitor phasor lags by $\ang{90}$
+
+  \item The instantaneous voltage of any ac circuit is equal to the projection of the vector sum of the components' phasors
+
+  \item The \textbf{impedance} $Z$ of an ac circuit is a measure of its opposition to ac current due to the combined effect of resistance and reactance. It is defined as the ratio of the voltage amplitude to the current amplitude in the circuit \[Z = \frac{V}{I} \Rightarrow V = I Z\]
+
+  \item The impedance of an L-R-C series circuit is \[Z = \sqrt{R^2 + (X_L - X_C)^2} = \sqrt{R^2 + [\omega L - (1 / \omega C)]^2}\]
+
+  \item The phase angle of voltage with respect to current in an L-R-C series circuit is \[\tan \phi = \frac{X_L - X_C}{R} = \frac{\omega L - 1 / \omega C}{R}\]
+
+  \item The equations above are valid if a component is missing from an L-R-C series circuit
+
+        \begin{itemize}
+          \item If the resistor is missing, set $R = 0$
+
+          \item If the inductor is missing, set $L = 0$
+
+          \item If the capacitor is mising, set $C = \infty$
+        \end{itemize}
+
+  \item The above equations deal with ampitudes, but they can be modified to deal with rms values by dividing current and voltage by $\sqrt{2}$
+
+  \item Kirchhoff's rules hold at each instance in an ac circuit
+\end{itemize}
+
+\subsection{Power in Alternating-Current Circuits}
+
+\begin{itemize}
+  \item The instantaneous power delivered to an ac circuit element is \[p = vi\]
+
+  \item The average power delivered to a resistor is \[P_\text{av} = \frac{1}{2} V I = \frac{V}{\sqrt{2}} \frac{I}{\sqrt{2}} = V_\text{rms} I_\text{rms}\]
+
+  \item Because $V_\text{rms} = I_\text{rms} R$, the above can also be expressed as \[P_\text{av} = I_\text{rms}^2 R = \frac{V_\text{rms}^2}{R} = V_\text{rms} I_\text{rms}\]
+
+  \item Because the voltage across an inductor leads the current by $\ang{90}$, half the time the product $v i$ is positive and half the time it's negative and thus the average power delivered to an inductor is $0$
+
+  \item When the voltage across an inductor is positive the magnetic field is being established and when it's negative the magnetic field is collapsing, returning energy back to the circuit
+
+  \item Because the voltage across a capacitor lags the current by $\ang{90}$, half the time the product $v i$ is positive and half the time it's negative and thus the average power delivered to a capacitor is $0$
+
+  \item When the voltage across a capacitor is positive charge is building up on the plates and when it's negative the charge is returning to the circuit
+
+  \item The instantaneous power delivered to a circuit is
+
+        \begin{align*}
+          p & = v i                                                                       \\
+            & = [V \cos (\omega t + \phi)] [I \cos \omega t]                              \\
+            & = [V (\cos \omega t \cos \phi - \sin \omega t \sin \phi)] [I \cos \omega t] \\
+            & = V I \cos \phi \cos^2 \omega t - V I \sin \phi \cos \omega t \sin \omega t
+        \end{align*}
+
+  \item The average value of $\cos^2 \omega t$ over one cycle is $\frac{1}{2}$ and $\cos \omega t \sin \omega t$ is equal to $\frac{1}{2} \sin 2 \omega t$, the average value of which over one cycle is $0$ so \[P_\text{av} = \frac{1}{2} V I \cos \phi = V_\text{rms} I_\text{rms} \cos \phi\]
+
+  \item In other words, the average power delivered to a circuit is equal to $\frac{1}{2} I$ times $V \cos \phi$ which is the projection of the voltage phasor onto the current phasor, i.e. only the component of the voltage that is in phase with the current contributes to power
+
+  \item The factor $\cos \phi$ is called the \textbf{power factor} of the circuit
+
+  \item The power factor of an L-R-C circuit is equal to $R / Z$
+\end{itemize}
+
+\subsection{Resonance in Alternating-Current Circuits}
+
+\begin{itemize}
+  \item As the angular frequency $\omega$ of an ac source increases, $X_C$ decreases and $X_L$ increases. For one value they're equal meaning $Z = \sqrt{R^2 + (X_L - X_C)^2}$ is minimised and $I = V / Z$ is maximised. This behaviour is called \textbf{resonance} and the angular frequency at which $Z$ is minimised and $I$ is maximised is called the \textbf{resonance angular frequency} \[\omega_0 = \frac{1}{\sqrt{L C}}\]
+
+  \item At the resonance angular frequency $V_C = I X_C$ and $V_L = I X_L$ are equal and opposite, meaning $V = V_R$ and all power in the circuit is delivered to the resistor
+\end{itemize}
+
+\subsection{Transformers}
+
+\begin{itemize}
+  \item A \textbf{transformer} uses magnetic induction to change a source voltage. \\ \includegraphics[scale=0.75]{transformer}
+
+  \item The ratio of terminal voltages in a transformer is given by \[\frac{V_2}{V_1} = \frac{N_2}{N_1}\]
+
+  \item If $N_2 > N_1$ then $V_2 > V_1$ and it's called a step-up transformer. If $N_2 < N_1$ then $V_2 < V_1$ and it's called a step down transformer.
+
+  \item The power delivered to both windings is equal \[V_1 I_1 = V_2 I_2\]
+\end{itemize}
+
 \end{document}

@@ -6945,4 +6945,128 @@ b
 
 c
 
+\section{Alternating Current}
+
+\subsection{Phasors and Alternating Currents}
+
+\subsubsection{Example 31.1}
+
+\begin{enumerate}[(a)]
+  \item $0$
+
+  \item \[I_\text{rms} = \sqrt{(i^2)_\text{av}} \Rightarrow (i^2)_\text{av} = I_\text{rms}^2 = \qty{7.3}{A^2}\]
+
+  \item \[I = \sqrt{2} I_\text{rms} = \qty{3.8}{A}\]
+\end{enumerate}
+
+\subsection{Resistance and Reactance}
+
+\subsubsection{Example 31.2}
+
+\begin{enumerate}[(a)]
+  \item
+
+        \[V = I X_L \Rightarrow X_L = V / I = \qty{14.4}{k \Omega}\]
+
+        \[X_L = \omega L \Rightarrow L = X_L / \omega = \qty{1.43}{mH}\]
+
+  \item
+
+        \[I' = V / X_L' = V / (\omega' L) = \qty{25.0}{\mu A}\]
+
+        \[I'' = V / X_L'' = V / (\omega'' L) = \qty{2.50}{mA}\]
+\end{enumerate}
+
+\subsubsection{Example 31.3}
+
+\begin{enumerate}[(a)]
+  \item \[v_R = i R \Rightarrow i = v_R / R = (\qty{6}{mA}) \cos [(\qty{2500}{rad/s}) t]\]
+
+  \item \[X_C = \frac{1}{\omega C} = \qty{80}{\Omega}\]
+
+  \item
+
+        \[V_C = I X_C = \qty{0.48}{V}\]
+
+        \[v_C = (\qty{0.48}{V}) \cos \left( (\qty{2500}{rad/s}) t - \frac{\pi}{2} \right)\]
+\end{enumerate}
+
+\subsection{The L-R-C Series Circuit}
+
+\subsubsection{Example 31.4}
+
+\[X_L = \omega L = \qty{600}{\Omega}\]
+
+\[X_C = 1 / \omega C = \qty{200}{\Omega}\]
+
+\[Z = \sqrt{R^2 + (\omega L - 1 / \omega C)^2} = \qty{500}{\Omega}\]
+
+\[I = V / Z = \qty{0.1}{A}\]
+
+\[\phi = \arctan \left( \frac{\omega L - 1 / \omega C}{R} \right) = \qty{0.927}{rad} = \ang{53.1}\]
+
+\[V_L = I X_L = \qty{60}{V}\]
+
+\[V_R = I R = \qty{30}{V}\]
+
+\[V_C = I X_C = \qty{20}{V}\]
+
+\subsubsection{Example 31.5}
+
+\[i = I \cos \omega t = (\qty{0.10}{A}) \cos ((\qty{10000}{rad/s})t)\]
+
+\[v_L = V_L \cos (\omega t + \pi / 2) = (\qty{60}{V}) \cos ((\qty{10000}{rad/s}) t + \pi / 2)\]
+
+\[v_R = V_R \cos \omega t = (\qty{30}{V}) \cos ((\qty{10000}{rad/s}) t)\]
+
+\[v_C = V_C cos (\omega t - \pi / 2) = (\qty{20}{V}) \cos ((\qty{10000}{rad/s}) - \pi / 2)\]
+
+\[v = V \cos (\omega t + \phi) = (\qty{50}{V}) cos ((\qty{10000}{rad/s}) t + \qty{0.927}{rad})\]
+
+\subsection{Power in Alternating-Current Circuits}
+
+\subsubsection{Example 31.6}
+
+\begin{enumerate}[(a)]
+  \item \[P_\text{av} = V_\text{rms}^2 / R \Rightarrow R = V_\text{rms}^2 / P_\text{av} = \qty{9.6}{\Omega}\]
+
+  \item \[P_\text{av} = I_\text{rms}^2 R \Rightarrow I_\text{rms} = \sqrt{P_\text{av} / R} = \qty{12.5}{A}\]
+
+  \item \[P_\text{max} = 2 V_\textrm{rms} I_\text{rms} = \qty{3000}{W}\]
+\end{enumerate}
+
+\subsubsection{Example 31.7}
+
+\begin{enumerate}[(a)]
+  \item $\cos \phi = \cos \ang{53.1} = 0.60$
+
+  \item $P_\text{av} = \frac{1}{2} V I \cos \phi = \qty{1.5}{W}$ all of which is delivered to the resistor
+\end{enumerate}
+
+\subsection{Resonance in Alternating-Current Circuits}
+
+\subsubsection{Example 31.8}
+
+\begin{enumerate}[(a)]
+  \item $\omega_0 = 1 / \sqrt{L C} = \qty{5.0}{MHz}$ so $f_0 = \qty{800}{kHz}$
+
+  \item $X_L = \omega_0 L = \qty{2.00}{k \Omega}$, $X_C = 1 / \omega_0 C = \qty{2.00}{k \Omega}$, $Z = \qty{500}{\Omega}$
+
+  \item $I_\text{rms} = V_\text{rms} / R = \qty{2.0}{mA}$
+
+  \item $V_{ab} = I_\text{rms} R = \qty{1.0}{V}$, $V_{bc} = I_\text{rms} \omega_0 L = \qty{4.0}{V}$, $V_{cd} = \qty{4.0}{V}$
+\end{enumerate}
+
+\subsection{Transformers}
+
+\subsubsection{Example 31.9}
+
+\begin{enumerate}[(a)]
+  \item \[\frac{N_2}{N_1} = \frac{V_2}{V_1} = 2\]
+
+  \item \[V_1 I_1 = V_2 I_2 = P_2 \Rightarrow I_1 = P_2 / V_1 = \qty{8.00}{A}\]
+
+  \item $V_1 = I_1 R_1 \Rightarrow R_1 = \qty{15}{\Omega}$, $V_2 = I_2 R_2 \Rightarrow R_2 = \qty{60}{\Omega}$
+\end{enumerate}
+
 \end{document}
