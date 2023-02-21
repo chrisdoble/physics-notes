@@ -7069,4 +7069,167 @@ c
   \item $V_1 = I_1 R_1 \Rightarrow R_1 = \qty{15}{\Omega}$, $V_2 = I_2 R_2 \Rightarrow R_2 = \qty{60}{\Omega}$
 \end{enumerate}
 
+\subsection{Guided Practice}
+
+\subsubsection{VP31.3.1}
+
+\begin{enumerate}[(a)]
+  \item $X_L = \omega L = \qty{1.70}{M \Omega}$
+
+  \item $V = I X_L \Rightarrow I = V / X_L = \qty{2.47}{mA}$
+\end{enumerate}
+
+\subsubsection{VP31.3.2}
+
+\begin{enumerate}[(a)]
+  \item $v_R = i R = (\qty{0.3}{V}) \cos [(\qty{1.75e3}{rad/s}) t]$
+
+  \item $X_C = 1 / \omega C = \qty{81.6}{\Omega}$
+
+  \item $v_C = i X_C = (\qty{0.196}{V}) \cos [(\qty{1.75e3}{rad/s}) t - \pi / 2]$
+\end{enumerate}
+
+\subsubsection{VP31.3.3}
+
+\begin{enumerate}[(a)]
+  \item \[R = \frac{1}{2 \pi f C} \Rightarrow f = \frac{1}{2 \pi C R} = \qty{128}{Hz}\]
+
+  \item $V = I R = \qty{0.620}{V}$
+
+  \item When one is at maximum the other is 0
+\end{enumerate}
+
+\subsubsection{VP31.3.4}
+
+\begin{enumerate}[(a)]
+  \item $V = I R \Rightarrow I = V / R = \qty{21.1}{mA}$
+
+  \item $i = I \cos \omega t \Rightarrow i(\qty{3.50}{ms}) = \qty{11.4}{mA}$
+
+  \item $V = \qty{2.45}{V}$
+
+  \item $V = I X_C = I / \omega C \Rightarrow C = I / \omega V = \qty{1.69}{\mu F}$
+\end{enumerate}
+
+\subsubsection{VP31.5.1}
+
+\begin{enumerate}[(a)]
+  \item $X_L = 2 \pi f L = R \Rightarrow f = R / (2 \pi L) = \qty{902}{Hz}$
+
+  \item $Z = \sqrt{R^2 + (\omega L - 1 / \omega C)^2} = \qty{316}{\Omega}$
+
+  \item $V = I Z \Rightarrow I = V / Z = \qty{0.174}{A}$
+
+  \item $\phi = \arctan \frac{X_L - X_C}{R} = \ang{-36.1}$
+
+  \item Lags
+\end{enumerate}
+
+\subsubsection{VP31.5.2}
+
+\begin{enumerate}[(a)]
+  \item $Z = \sqrt{R^2 + (X_L - X_C)^2} \Rightarrow R = \sqrt{Z^2 - (X_L - X_C)^2} = \qty{387}{\Omega}$
+
+  \item $I = V / Z = \qty{42.2}{mA}$
+
+  \item $V_R = I R = \qty{16.3}{V}$
+
+  \item $V_L = I X_L = \qty{1.48}{V}$
+
+  \item $V_C = I X_C = \qty{13.0}{V}$
+\end{enumerate}
+
+\subsubsection{VP31.5.3}
+
+\begin{enumerate}[(a)]
+  \item $\tan \phi = (X_L - X_C) / R \Rightarrow X_L - X_C = R \tan \phi = \qty{17.4}{\Omega}$
+
+  \item \[X_L - X_C = \omega L - \frac{1}{\omega C} \Rightarrow L = \frac{X_L - X_C + \frac{1}{\omega C}}{\omega} = \qty{8.65}{mH}\]
+\end{enumerate}
+
+\subsubsection{VP31.5.4}
+
+\begin{enumerate}[(a)]
+  \item $V_R = I R = \qty{11.4}{V}$, $V_L = I X_L = \qty{6.24}{V}$, $V_C = I X_C = \qty{34.1}{V}$
+
+  \item $v_R = \qty{-8.71}{V}$, $v_L = \qty{-4.03}{V}$, $v_C = \qty{22.0}{V}$
+\end{enumerate}
+
+\subsubsection{VP31.7.1}
+
+\begin{enumerate}[(a)]
+  \item $P_\text{avg} = V_\text{rms} I_\text{rms} = \qty{474}{W}$
+
+  \item $P = \qty{948}{W}$
+
+  \item $R = \qty{30.4}{\Omega}$
+\end{enumerate}
+
+\subsubsection{VP31.7.2}
+
+\begin{enumerate}[(a)]
+  \item $X_L = \qty{107}{\Omega}$, $X_C = \qty{699}{\Omega}$
+
+  \item $\phi = \ang{-65.1}$
+
+  \item $0.421$
+\end{enumerate}
+
+\subsubsection{VP31.7.3}
+
+\begin{enumerate}[(a)]
+  \item $Z = \qty{653}{\Omega}$
+
+  \item $I = \qty{53.6}{mA}$
+
+  \item $P_R = \qty{0.395}{W}$
+\end{enumerate}
+
+\subsubsection{VP31.7.4}
+
+\begin{enumerate}[(a)]
+  \item $X_L = \omega L = \qty{97.5}{\Omega}$, $X_C = 1 / \omega C = \qty{175}{\Omega}$
+
+  \item $\phi = \ang{36.9}$
+\end{enumerate}
+
+\subsection{Bridging Problem}
+
+\begin{enumerate}[(a)]
+  \item The current amplitude takes on its maximum possible value at the resonance angular frequency at which point the voltages of the capacitor and inductor cancel, meaning all the voltage across the resistor is equal to the source voltage and \[I_\text{rms,max} = V_\text{rms} / R = \qty{0.280}{A}.\]
+
+        The current amplitude at any other frequency is \[I_\text{rms} = \frac{V_\text{rms}}{Z} = \frac{V_\text{rms}}{\sqrt{R^2 + (X_L - X_C)^2}} = \frac{V_\text{rms}}{\sqrt{R^2 + (\omega L - 1 / (\omega C))^2}}.\]
+
+        Thus the current amplitude is equal to $\frac{1}{3}$ of its maximum value when
+
+        \begin{align*}
+          \frac{1}{3} I_\text{rms,max}                                                                              & = \frac{V_\text{rms}}{\sqrt{R^2 + (\omega L - 1 / (\omega C))^2}}           \\
+          R^2 + (\omega L - 1 / (\omega C))^2                                                                       & = \left( \frac{3 V_\text{rms}}{I_\text{rms,max}} \right)^2                  \\
+          \omega L - \frac{1}{\omega C}                                                                             & = \pm \sqrt{\left( \frac{3 V_\text{rms}}{I_\text{rms,max}} \right)^2 - R^2} \\
+          \omega^2 L \pm \omega \sqrt{\left( \frac{3 V_\text{rms}}{I_\text{rms,max}} \right)^2 - R^2} - \frac{1}{C} & = 0.
+        \end{align*}
+
+        This is a quadratic equation in $\omega$ with four solutions: $\pm \qty{8.35e4}{rad/s}$, and $\pm \qty{3.19e5}{rad/s}$. Ignoring the negative solutions gives \[\omega = \qty{8.35e4}{rad/s} \text{ or } \qty{3.19e5}{rad/s}.\]
+
+  \item At $\omega = \qty{8.35e4}{rad/s}$
+
+        \begin{align*}
+          I               & = \qty{0.132}{A} \\
+          V_\text{source} & = \qty{49.5}{V}  \\
+          V_C             & = \qty{63.2}{V}  \\
+          V_L             & = \qty{16.5}{V}  \\
+          V_R             & = \qty{16.5}{V}
+        \end{align*}
+
+        At $\omega = \qty{3.19e5}{rad/s}$
+
+        \begin{align*}
+          I               & = \qty{0.132}{A} \\
+          V_\text{source} & = \qty{49.5}{V}  \\
+          V_C             & = \qty{16.5}{V}  \\
+          V_L             & = \qty{63.2}{V}  \\
+          V_R             & = \qty{16.5}{V}
+        \end{align*}
+\end{enumerate}
+
 \end{document}
