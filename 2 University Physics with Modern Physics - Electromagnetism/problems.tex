@@ -7432,4 +7432,278 @@ $\qty{1.06}{A}$
   \item $P = V I = V^2 / R \Rightarrow R = V^2 / P = \qty{500}{\Omega}$, $(\qty{5.00}{\Omega}) (10)^2 = \qty{500}{\Omega}$
 \end{enumerate}
 
+\subsection{Problems}
+
+\subsubsection{31.37}
+
+\begin{align*}
+  \arctan \frac{2 \pi f L}{R} & = \phi                        \\
+  L                           & = \frac{R \tan \phi}{2 \pi f} \\
+                              & = \qty{0.124}{H}
+\end{align*}
+
+\subsubsection{31.39}
+
+\[\omega = \omega_0 = \frac{1}{\sqrt{L C}} = \qty{633}{rad/s}\]
+
+\[V_C = I X_C = \frac{I}{\omega C} \Rightarrow I = \omega C V_C = \qty{0.243}{A}\]
+
+\[V = I R \Rightarrow R = \frac{V}{I} = \qty{230}{\Omega}\]
+
+\subsubsection{31.41}
+
+\[C = \epsilon_0 \frac{A}{d} = \epsilon_0 \frac{s^2}{d} = \qty{2.24}{pF}\]
+
+\[L = \frac{\mu_0 A N^2}{L} = \frac{\mu_0 \pi (d / 2)^2 N^2}{L} = \qty{347}{\mu H}\]
+
+\[\omega_0 = \frac{1}{\sqrt{L C}} = \qty{3.59e7}{rad/s}\]
+
+\subsubsection{31.43}
+
+\begin{enumerate}[(a)]
+  \item Inductor
+
+  \item $L = \qty{0.133}{H}$
+\end{enumerate}
+
+\subsubsection{31.45}
+
+\begin{enumerate}[(a)]
+  \item \[\cos \phi = \cos \left( \arctan \frac{X_L - X_C}{R} \right) = 0.832\]
+\end{enumerate}
+
+\subsubsection{31.47}
+
+\begin{align*}
+  v_\text{out} & = v_R + v_L                                                                                \\
+               & = V_R \cos \omega t + V_L \cos \left( \omega t + \frac{\pi}{2} \right)                     \\
+               & = I R \cos \omega t + I \omega L \cos \left( \omega t + \frac{\pi}{2} \right)              \\
+               & = I \left( R \cos \omega t + \omega L \cos \left( \omega t + \frac{\pi}{2} \right) \right) \\
+               & = I \left( R \cos \omega t - \omega L \sin \omega t \right)
+\end{align*}
+
+but $I = V_s / Z$ so
+
+\begin{align*}
+  v_\text{out} & = \frac{V_s}{Z} (R \cos \omega t - \omega L \sin \omega t)                                                         \\
+               & = \frac{V_s}{Z} \sqrt{R^2 + \omega^2 L^2} \cos \left( \omega t + \arctan \left( \frac{\omega L}{R} \right) \right)
+\end{align*}
+
+meaning \[V_\text{out} = \frac{V_s \sqrt{R^2 + \omega^2 L^2}}{Z}\] and \[\frac{V_\text{out}}{V_s} = \frac{\sqrt{R^2 + \omega^2 L^2}}{\sqrt{R^2 + \left( \omega L - \frac{1}{\omega C} \right)^2}}.\]
+
+\subsubsection{31.49}
+
+\begin{enumerate}[(a)]
+  \item \[I = \frac{V}{Z} = \frac{V}{\sqrt{R^2 + \left( \omega L - \frac{1}{\omega C} \right)^2}}\]
+
+  \item \[P = \frac{1}{2} V I = \frac{1}{2} I^2 R = \frac{V^2 R / 2}{R^2 + \left( \omega L - \frac{1}{\omega C} \right)^2}\]
+
+  \item $I$ is maximised when the denominator is minimised. It is minimised when \[\omega L - \frac{1}{\omega C} = 0 \Rightarrow \omega = \frac{1}{\sqrt{L C}}.\] Ditto for $P$.
+\end{enumerate}
+
+\subsubsection{31.51}
+
+\begin{enumerate}[(a)]
+  \item \[\tan \phi = \frac{X_L - X_C}{R} \Rightarrow X_L = R \tan \phi + X_C = \qty{102}{\Omega}\]
+
+  \item
+
+        \[Z = \sqrt{R^2 + (X_L - X_C)^2} = \qty{306}{\Omega}\]
+
+        \begin{align*}
+          P_\text{avg} & = V_\text{rms} I_\text{rms} \cos \phi     \\
+                       & = I_\text{rms}^2 Z \cos \phi              \\
+          I_\text{rms} & = \sqrt{\frac{P_\text{avg}}{Z \cos \phi}} \\
+                       & = \qty{0.882}{A}
+        \end{align*}
+
+  \item \[V_\text{rms} = I_\text{rms} Z = \qty{270}{V}\]
+\end{enumerate}
+
+\subsubsection{31.53}
+
+\begin{enumerate}[(a)]
+  \item The area of overlap for a single pair of plates is \[A = \frac{\pi a^2}{2 \pi} \theta = \frac{1}{2} a^2 \theta.\] The distance between them is $g / 2$ so their capacitance is \[C = \epsilon_0 \frac{A}{d} = \frac{\epsilon_0 a^2 \theta}{g}.\] The five pairs of plates are in parallel so the total capacitance is \[C_\text{total} = 5 C = \frac{5 \epsilon_0 a^2 \theta}{g}.\]
+
+  \item To receive a signal of $\qty{1180}{kHz}$ the capacitance must be \[2 \pi f = \frac{1}{\sqrt{L C}} \Rightarrow C = \frac{1}{(2 \pi f)^2 L} = \qty{182}{pF}.\] This means the angle of overlap must be \[C = \frac{5 \epsilon_0 a^2 \theta}{g} \Rightarrow \theta = \frac{C g}{5 \epsilon_0 a^2} = \qty{2.28}{rad} = \ang{131}.\]
+
+  \item
+
+        \begin{align*}
+          V_C & = I X_C                                                                          \\
+              & = \frac{I}{\omega C}                                                             \\
+              & = \frac{V}{\omega C Z}                                                           \\
+              & = \frac{V}{\omega C \sqrt{R^2 + \left( \omega L - \frac{1}{\omega C} \right)^2}} \\
+              & = \qty{7.41}{V}
+        \end{align*}
+
+  \item
+
+        \[C = \frac{5 \epsilon_0 a^2 \theta}{g} = \qty{167}{pF}\]
+
+        \[f = \frac{1}{2 \pi \sqrt{L C}} = \qty{1230}{kHz}\]
+
+  \item $V_C = \qty{7.60}{V}$
+\end{enumerate}
+
+\subsubsection{31.55}
+
+\begin{enumerate}[(a)]
+  \item $Z$ is maximised when its denominator is minimised which happens when
+
+        \begin{align*}
+          \frac{1}{X_C} - \frac{1}{X_L} & = 0                    \\
+          \omega C                      & = \frac{1}{\omega L}   \\
+          \omega                        & = \frac{1}{\sqrt{L C}}
+        \end{align*}
+
+  \item $\omega_0 = 1 / \sqrt{L C} = \qty{5770}{rad/s}$
+
+  \item $I = V / Z = V / R = \qty{2.40}{A}$
+
+  \item $I = \qty{2.40}{V}$
+
+  \item $I = V / X_L = \qty{0.139}{A}$
+
+  \item $I = V / X_C = \qty{0.139}{A}$
+\end{enumerate}
+
+\subsubsection{31.57}
+
+\begin{enumerate}[(a)]
+  \item The average power delivered to the circuit will be equal to $\frac{1}{2} V_\text{rms} I_\text{rms}$ when $\cos \phi = \frac{1}{2}$, i.e. $\phi = \ang{60}$. This occurs when
+
+        \begin{align*}
+          \tan \phi                                     & = \frac{X_L - X_C}{R}                     \\
+                                                        & = \frac{\omega L - \frac{1}{\omega C}}{R} \\
+          \omega^2 L - \omega R \tan \phi - \frac{1}{C} & = 0
+        \end{align*}
+
+        This is a quadratic equation in $\omega$ with solutions $\omega = \qty{-2780}{rad/s}$ or $\omega = \qty{28800}{rad/s}$. Ignoring the negative solution we find that $\omega = \qty{28800}{rad/s}$.
+
+  \item $P_C = 0$, $P_L = 0$, $P_R = V_\text{rms} I_\text{rms} / 2 = V I / 4 = V^2 / 4 Z = \qty{0.375}{W}$, $I = \qty{0.100}{A}$
+\end{enumerate}
+
+\subsubsection{31.59}
+
+\begin{enumerate}[(a)]
+  \item $V_C = I X_C \Rightarrow I = V_C / X_C = \qty{0.750}{A}$
+
+  \item $V = I Z \Rightarrow Z = V / I = \qty{160}{\Omega}$
+
+  \item $Z = \sqrt{R^2 + (X_L - X_C)^2} \Rightarrow X_L = X_C \pm \sqrt{Z^2 - R^2} = \qty{341}{\Omega} \text{ or } \qty{619}{\Omega}$
+
+  \item
+
+        \[X_C = \frac{1}{\omega C} \Rightarrow C = \frac{1}{\omega X_C}\]
+
+        \[X_L = \omega L \Rightarrow L = \frac{X_L}{\omega}\]
+
+        \begin{align*}
+          \omega_0                & = \frac{1}{\sqrt{L C}}                      \\
+                                  & = \frac{1}{\sqrt{\frac{X_L}{\omega^2 X_C}}} \\
+                                  & = \omega \sqrt{\frac{X_C}{X_L}}             \\
+          \frac{\omega_0}{\omega} & = \sqrt{\frac{X_C}{X_L}}
+        \end{align*}
+
+        If $\sqrt{X_C / X_L}$ is greater than $1$ the angular frequency is less than the resonance angular frequency. For $X_L = \qty{341}{\Omega}$ it is $1.19$ so that is the answer.
+\end{enumerate}
+
+\subsubsection{31.61}
+
+\begin{enumerate}[(a)]
+  \item $I = V / R$
+
+  \item \[V_C = I X_C = \frac{V}{R \omega_0 C} = \frac{V}{R} \sqrt{\frac{L}{C}}\]
+
+  \item \[V_L = I X_L = \frac{V \omega_0 L}{R} = \frac{V}{R} \sqrt{\frac{L}{C}}\]
+
+  \item \[E_C = \frac{1}{2} C V_C^2 = \frac{1}{2} C \left( \frac{V}{R} \sqrt{\frac{L}{C}} \right)^2 = \frac{1}{2} L \left( \frac{V}{R} \right)^2\]
+
+  \item \[E_L = \frac{1}{2} L I^2 = \frac{1}{2} L \left( \frac{V}{R} \right)^2\]
+\end{enumerate}
+
+\subsubsection{31.65}
+
+\begin{enumerate}[(a)]
+  \item $V_\text{in} = I Z \Rightarrow I = V_\text{in} / Z = V_\text{in} / \sqrt{R^2 + (\omega L)^2}$
+
+  \item $\tan \phi = X_L / R \Rightarrow \phi = \arctan (\omega L / R)$
+
+  \item
+
+        \begin{align*}
+          \frac{V_\text{out}}{V_\text{in}} & = \frac{I X_L}{I Z}                          \\
+                                           & = \frac{\omega L}{\sqrt{R^2 + (\omega L)^2}} \\
+                                           & = \frac{1}{\sqrt{1 + (R / \omega L)^2}}
+        \end{align*}
+
+  \item
+
+        \begin{align*}
+          G                                & = 20 \log_{10} \frac{V_\text{out}}{V_\text{in}}      \\
+                                           & = 20 \log_{10} \frac{1}{\sqrt{1 + (R / \omega L)^2}} \\
+          \frac{1}{10^{G / 20}}            & = \sqrt{1 + (R / \omega L)^2}                        \\
+          \frac{1}{10^{G / 10}}            & = 1 + (R / \omega L)^2                               \\
+          \sqrt{\frac{1}{10^{G / 10}} - 1} & = \frac{R}{\omega L}                                 \\
+          \omega                           & = \frac{R}{L \sqrt{(1 / 10^{G / 10}) - 1}}           \\
+          f_{\text{3db}}                   & = \frac{R}{2 \pi L \sqrt{(1 / 10^{G / 10}) - 1}}     \\
+                                           & = \frac{R}{2.00 \pi L}
+        \end{align*}
+
+  \item \[L = \frac{R}{2.00 \pi f_\text{3db}} = \qty{1.59}{mH}\]
+\end{enumerate}
+
+\subsubsection{31.67}
+
+\begin{enumerate}[(a)]
+  \item
+
+        \begin{align*}
+          p_R & = v_R i                                   \\
+              & = (V_R \cos \omega t) (I \cos \omega t)   \\
+              & = V_R I \cos^2 \omega t                   \\
+              & = \frac{1}{2} V_R I (1 + \cos 2 \omega t)
+        \end{align*}
+
+        The average of $\frac{1}{2} V_R I$ is unchanged and the average of $\frac{1}{2} V_R I \cos 2 \omega t$ is $0$, so the average power into the resistor is $\frac{1}{2} V_R I$.
+
+  \item
+
+        \begin{align*}
+          p_L & = v_L i                                 \\
+              & = (-V_L \sin \omega t)(I \cos \omega t) \\
+              & = -\frac{1}{2} V_L I \sin 2 \omega t
+        \end{align*}
+
+        The average of $\sin 2 \omega t$ is $0$ so the average power into the inductor is $0$.
+
+  \item
+
+        \begin{align*}
+          p_C & = v_C i                                \\
+              & = (V_C \sin \omega t)(I \cos \omega t) \\
+              & = \frac{1}{2} V_C I \sin 2 \omega t
+        \end{align*}
+
+        The average of $\sin 2 \omega t$ is $0$ so the average power into the inductor is $0$.
+
+        \begin{align*}
+          p & = p_R + p_L + p_C                                                       \\
+            & = v_R i + v_L i + v_C i                                                 \\
+            & = (v_R + v_L + v_C) i                                                   \\
+            & = v i                                                                   \\
+            & = V \cos (\omega t + \phi) I \cos \omega t                              \\
+            & = V I \cos \omega t (\cos \omega t \cos \phi - \sin \omega t \sin \phi)
+        \end{align*}
+\end{enumerate}
+
+\subsubsection{31.69}
+
+b
+
+\subsubsection{31.71}
+
+d
+
 \end{document}
