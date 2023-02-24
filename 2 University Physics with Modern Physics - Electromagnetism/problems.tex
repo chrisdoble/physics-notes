@@ -8057,4 +8057,165 @@ $P = \qty{93.8}{W}$
 
 $L = \qty{7.50}{cm}$
 
+\subsection{Problems}
+
+\subsubsection{32.31}
+
+\begin{enumerate}[(a)]
+  \item $E = \qty{0.375}{mJ}$
+
+  \item $p_\text{rad} = I / c = \qty{4.08}{mPa}$
+
+  \item $f = \qty{3.70e14}{Hz}$, $v = c / n = \qty{2.24e8}{m/s}$, $\lambda = \qty{605}{nm}$
+
+  \item $E_\text{max} = \sqrt{2 \mu_0 c I} = \qty{3.04e4}{V/m}$, $B_\text{max} = \qty{1.01e-4}{T}$
+\end{enumerate}
+
+\subsubsection{32.33}
+
+\begin{enumerate}[(a)]
+  \item $I = P / A = \qty{6.02}{nW/m^2}$
+
+  \item $E_\text{max} = \qty{2.13}{mV/m}$, $B_\text{max} = \qty{7.11e-12}{T}$
+
+  \item $F = p A = \qty{1.20e-18}{N}$, no
+\end{enumerate}
+
+\subsubsection{32.35}
+
+\begin{enumerate}[(a)]
+  \item
+
+        \begin{align*}
+          I_\text{surface}     & = \qty{64}{MW/m^2}  \\
+          p_\text{rad,surface} & = \qty{0.21}{Pa}    \\
+          I_\text{R/2}         & = \qty{260}{MW/m^2} \\
+          p_\text{rad,R/2}     & = \qty{0.85}{Pa}
+        \end{align*}
+
+  \item No
+\end{enumerate}
+
+\subsubsection{32.37}
+
+\begin{align*}
+  I \alpha & = \tau                                                                                 \\
+  \alpha   & = \frac{\tau}{I}                                                                       \\
+           & = \frac{\tau_\text{right} + \tau_\text{left}}{I}                                       \\
+           & = \frac{(L / 2) p_\text{rad,reflect} A - (L / 2) p_\text{rad,absorb} A}{2 m (L / 2)^2} \\
+           & = \frac{\frac{2 I}{c} s^2 - \frac{I}{c} s^2}{m L}                                      \\
+           & = \frac{I s^2}{c m L}                                                                  \\
+           & = \frac{\frac{E^2}{2 \mu_0 c} s^2}{c m L}                                              \\
+           & = \frac{E^2 s^2}{2 \mu_0 c^2 m L}                                                      \\
+           & = \qty{3.89e-13}{rad/s^2}
+\end{align*}
+
+\subsubsection{32.39}
+
+\begin{enumerate}[(a)]
+  \item \[\rho = \frac{E}{J} \Rightarrow E = \rho J = \frac{\rho I}{\pi a^2} \text{ in the direction of the current}\]
+
+  \item \[B = \frac{\mu_0 I}{2 \pi a} \text{ circumferential as per the right hand rule}\]
+
+  \item \[\mathbf{S} = \frac{1}{\mu_0} \mathbf{E} \times \mathbf{B} = -\frac{\rho I^2}{2 \pi^2 a^3} \hat{\mathbf{r}}\]
+
+  \item
+
+        \begin{align*}
+          \oint \mathbf{S} \cdot d \mathbf{A} & = \int_0^l \int_0^{2 \pi} \frac{\rho I^2}{2 \pi^2 a^3} a \,d\theta \,dl' \\
+                                              & = \frac{\rho I^2 l}{\pi a^2}                                             \\
+                                              & = I^2 R
+        \end{align*}
+\end{enumerate}
+
+\subsubsection{32.41}
+
+\begin{enumerate}[(a)]
+  \item $\qty{1.36}{m}$
+
+  \item $\qty{10.9}{m}$
+\end{enumerate}
+
+\subsubsection{32.43}
+
+\begin{enumerate}[(a)]
+  \item Assuming the satellites are in a circular orbit, their distance from the centre of the Earth is
+
+        \begin{align*}
+          T & = \frac{2 \pi r^{3 / 2}}{\sqrt{G m_E}}                \\
+          r & = \left( \frac{T \sqrt{G m_E}}{2 \pi} \right)^{2 / 3} \\
+            & = \qty{2.66e7}{m}
+        \end{align*}
+
+        so their altitude is $r' = \qty{2.02e7}{m}$. The intensity of the signal at the surface of the Earth is thus \[I = P / A = \qty{9.75e-15}{W/m^2}.\]
+
+  \item $E = \qty{2.71e-6}{V/m}$, $B = \qty{9.05e-15}{T}$, $t = \qty{67.3}{ms}$
+
+  \item $f = I / c = \qty{3.25e-23}{Pa}$
+
+  \item $\lambda = \qty{0.190}{m}$
+\end{enumerate}
+
+\subsubsection{32.45}
+
+\begin{enumerate}[(a)]
+  \item \[F_\text{grav} = \frac{4 \pi G M R^3 \rho}{3 r^2}\]
+
+  \item
+
+        \[I = \frac{L}{4 \pi r^2}\]
+
+        \[F_\text{rad} = p_\text{rad} A = \frac{L R^2}{4 c r^2}\]
+
+  \item
+
+        \begin{align*}
+          F_\text{grav}                    & = F_\text{rad}                  \\
+          \frac{4 \pi G M R^3 \rho}{3 r^2} & = \frac{L R^2}{4 c r^2}         \\
+          \frac{4 \pi G M R \rho}{3}       & = \frac{L}{4 c}                 \\
+          R                                & = \frac{3 L}{16 \pi c G M \rho} \\
+                                           & = \qty{1.95e-7}{m}              \\
+                                           & = \qty{0.195}{\mu m}
+        \end{align*}
+
+        The answer doesn't depend on the distance of the particle from the sun because both forces are proportional to $1 / r^2$.
+\end{enumerate}
+
+\subsubsection{32.49}
+
+\begin{enumerate}[(a)]
+  \item
+
+        \begin{align*}
+          p_\text{rad} & = e p_\text{rad,absorb} + (1 - e) p_\text{rad,reflect} \\
+                       & = e \frac{I_0}{c} + (1 - e) \frac{2 I_0}{c}            \\
+                       & = \frac{I_0}{c} (e + 2 - 2 e)                          \\
+                       & = \frac{I_0}{c} (2 - e)
+        \end{align*}
+
+  \item \[F_\text{rad} = p_\text{rad} A = \frac{I_\text{sun}}{c} (2 - e) \pi (d / 2)^2 = \qty{3.26e-16}{N}\]
+
+  \item \[\frac{F_\text{rad}}{F_\text{grav}} = 0.553\]
+\end{enumerate}
+
+\subsubsection{32.51}
+
+\begin{enumerate}[(a)]
+  \setcounter{enumi}{1}
+  \item The proton's velocity is \[K = \frac{1}{2} m v^2 \Rightarrow v = \sqrt{\frac{2 K}{m}} = \qty{3.39e7}{m/s}\] and it is undergoing uniform circular motion with radial acceleration \[a = \frac{v^2}{r} = \qty{1.53e15}{m/s^2}\] so \[\frac{dE}{dt} = \qty{1.33e-23}{W}\] which is $(\num{1.39e-11}) K$
+
+  \item The electron's kinetic energy is \[K = \frac{1}{2} m v^2 = \qty{5.23e-16}{J} = \qty{3.27}{keV}\] so it radiates $(\num{2.54e-8}) K$ per second.
+\end{enumerate}
+
+\subsubsection{32.53}
+
+\begin{enumerate}[(a)]
+  \setcounter{enumi}{2}
+  \item $\qty{66.0}{\mu m}$
+\end{enumerate}
+
+\subsubsection{32.55}
+
+d
+
 \end{document}
