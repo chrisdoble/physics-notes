@@ -1,5 +1,6 @@
 \documentclass{article}
 \usepackage{amsmath} % For align*
+\usepackage{amsfonts} % For open face letters
 \usepackage{enumitem} % For customisable list labels
 \usepackage{graphicx} % For images
 \usepackage{siunitx} % For units
@@ -16,5 +17,96 @@
 \maketitle
 
 \tableofcontents
+
+\section{Introduction to Differential Equations}
+
+\subsection{Definitions and Terminology}
+
+\subsubsection{1}
+
+2, linear
+
+\subsubsection{3}
+
+4, linear
+
+\subsubsection{5}
+
+2, nonlinear
+
+\subsubsection{7}
+
+3, linear
+
+\subsubsection{9}
+
+no; yes
+
+\subsubsection{15}
+
+The domain of the function is $x \in [-2, \infty)$.
+
+\[y' = 1 + \frac{2}{\sqrt{x + 2}}\]
+
+The largest interval of definition of the solution is $x \in (-2, \infty)$.
+
+\begin{align*}
+  (y - x) y'                                            & = y - x + 8                  \\
+  (x + 4 \sqrt{x + 2} - x) (1 + \frac{2}{\sqrt{x + 2}}) & = x + 4 \sqrt{x + 2} - x + 8 \\
+  4 \sqrt{x + 2} + 8                                    & = 4 \sqrt{x + 2} + 8
+\end{align*}
+
+\subsubsection{17}
+
+The domain of the function is $x \in \mathbb{R}, x \ne \pm 2$.
+
+\[y' = \frac{2 x}{(4 - x^2)^2}\]
+
+The largest intervals of definition of the solution are $(-\infty, -2)$, $(-2, 2)$, and $(2, \infty)$.
+
+\begin{align*}
+  y'                      & = 2 x y^2                                \\
+  \frac{2 x}{(4 - x^2)^2} & = 2 x \left( \frac{1}{4 - x^2} \right)^2 \\
+                          & = \frac{2x}{(4 - x^2)^2}
+\end{align*}
+
+\subsubsection{19}
+
+\begin{align*}
+  ln \frac{2 X - 1}{X - 1} & = t                       \\
+  2 X - 1                  & = (X - 1) e^t             \\
+  (2 - e^t) X              & = 1 - e^t                 \\
+  X                        & = \frac{e^t - 1}{e^t - 2}
+\end{align*}
+
+The solutions intervals of validity are $(\infty, \ln 2)$ and $(\ln 2, \infty)$.
+
+\begin{align*}
+  \frac{dX}{dt}                                           & = (X - 1) (1 - 2 X)                                                                                   \\
+  \frac{e^t}{e^t - 2} - \frac{e^t (e^t - 1)}{(e^t - 2)^2} & = \left( \frac{e^t - 1}{e^t - 2} - 1 \right) \left( 1 - 2 \frac{e^t - 1}{e^t - 2} \right)             \\
+  \frac{e^t (e^t - 2) - e^t (e^t - 1)}{(e^t - 2)^2}       & = \left( \frac{e^t - 1 - e^t + 2}{e^t - 2} \right) \left( \frac{e^t - 2 - 2 e^t + 2}{e^t - 2} \right) \\
+  \frac{e^{2t} - 2 e^t - e^{2t} + e^t}{(e^t - 2)^2}       & = \left( \frac{1}{e^t - 2} \right) \left( \frac{-e^t}{e^t - 2} \right)                                \\
+  \frac{-e^t}{(e^t - 2)^2}                                & = \frac{-e^t}{(e^t - 2)^2}
+\end{align*}
+
+\subsubsection{31}
+
+$m = -2$
+
+\subsubsection{33}
+
+$m = 2 \text{ or } 3$
+
+\subsubsection{35}
+
+$m = -1 \text{ or } 0$
+
+\subsubsection{37}
+
+$y = 2$
+
+\subsubsection{39}
+
+No constant solutions
 
 \end{document}
