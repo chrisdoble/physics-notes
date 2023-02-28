@@ -413,4 +413,145 @@ No solution
                   & = \frac{\sqrt{x^2 + y^2} - x}{y}
 \end{align*}
 
+\subsection{Chapter in Review}
+
+\subsubsection{1}
+
+\[\frac{d y}{d x} = k y\]
+
+\subsubsection{3}
+
+\[y'' + k^2 y = 0\]
+
+\subsubsection{5}
+
+\[y = c_1 e^x + c_2 x e^x\]
+
+\begin{align*}
+  y' & = c_1 e^x + c_2 e^x + c_2 x e^x \\
+     & = y + c_2 e^x
+\end{align*}
+
+\begin{align*}
+  y'' & = c_1 e^x + c_2 e^x + c_2 e^x + c_2 x e^x \\
+      & = c_1 e^x + 2 c_2 e^x + c_2 x e^x         \\
+      & = y' + c_2 e^x
+\end{align*}
+
+\[y'' - 2 y' + y = 0\]
+
+\subsubsection{7}
+
+a, d
+
+\subsubsection{9}
+
+b
+
+\subsubsection{11}
+
+b
+
+\subsubsection{13}
+
+\[y = c e^x\]
+
+\subsubsection{15}
+
+\[\frac{d y}{d x} = x^2 + y^2\]
+
+\subsubsection{17}
+
+\begin{enumerate}
+  \item $(-\infty, \infty)$
+
+  \item $(-\infty, 0)$ or $(0, \infty)$
+\end{enumerate}
+
+\subsubsection{19}
+
+$x_0 = -1$ and $I = (-\infty, 0)$ or $x_0 = 2$ and $I = (0, \infty)$
+
+\subsubsection{23}
+
+\[y = x \sin x + x \cos x\]
+
+\[y' = \sin x + x \cos x + \cos x - x \sin x\]
+
+\begin{align*}
+  y'' & = \cos x + \cos x - x \sin x - \sin x - \sin x - x \cos x \\
+      & = 2 \cos x - 2 \sin x - x \sin x - x \cos x
+\end{align*}
+
+\begin{align*}
+  y'' + y & = 2 \cos x - 2 \sin x - x \sin x - x \cos x + x \sin x + x \cos x \\
+          & = 2 \cos x - 2 \sin x
+\end{align*}
+
+$I = (-\infty, \infty)$
+
+\subsubsection{25}
+
+\[y = \sin (\ln x)\]
+
+\[y' = \frac{1}{x} \cos (\ln x)\]
+
+\[y'' = -\frac{1}{x^2} \cos (\ln x) - \frac{1}{x^2} \sin (\ln x)\]
+
+\begin{align*}
+  x^2 y'' + x y' + y & = -\cos (\ln x) - \sin (\ln x) + \cos (\ln x) + \sin (\ln x) \\
+                     & = 0
+\end{align*}
+
+$I = (0, \infty)$
+
+\subsubsection{35}
+
+\begin{align*}
+  y(0) = 0 & = c_1 e^{-3 (0)} + c_2 e^{(0)} + 4 (0) \\
+           & = c_1 + c_2                            \\
+  c_1      & = -c_2
+\end{align*}
+
+\begin{align*}
+  y'(0) = 0 & = -3 c_1 e^{-3 (0)} + c_2 e^{(0)} + 4 \\
+            & = -3 c_1 + c_2 + 4                    \\
+  c_2       & = 3 c_1 - 4
+\end{align*}
+
+\[c_1 = -(3 c_1 - 4) \Rightarrow c_1 = 1 \Rightarrow c_2 = -1\]
+
+\[y = e^{-3 x} - e^x + 4 x\]
+
+\subsubsection{37}
+
+\begin{align*}
+  y(1) = -2 & = c_1 e^{-3 (1)} + c_2 e^{(1)} + 4 (1) \\
+            & = c_1 e^{-3} + c_2 e + 4               \\
+  c_1       & = -e^3 (c_2 e + 6)
+\end{align*}
+
+\begin{align*}
+  y'(1) = 4 & = -3 c_1 e^{-3 (1)} + c_2 e^{(1)} + 4 \\
+            & = -3 c_1 e^{-3} + c_2 e + 4           \\
+  c_2 e     & = 3 c_1 e^{-3}
+\end{align*}
+
+\[c_1 = -e^3 (3 c_1 e^{-3} + 6) = -3 c_1 - 6 e^3 \Rightarrow c_1 = -\frac{3}{2} e^3 \Rightarrow c_2 = - \frac{9}{2} e^{-1}\]
+
+\[y = -\frac{3}{2} e^{3 (1 - x)} - \frac{9}{2} e^{x - 1} + 4 x\]
+
+\subsubsection{41}
+
+$y_0 = -3$, $y_1 = 0$
+
+\subsubsection{43}
+
+\begin{align*}
+  \frac{d}{d t} (m v)                                             & = F - m g           \\
+  \frac{d}{d t} (\lambda x \frac{d x}{d t})                       & = F - \lambda x g   \\
+  x \frac{d^2 x}{d t^2} + \left( \frac{d x}{d t} \right)^2 + g x  & = \frac{F}{\lambda} \\
+  x \frac{d^2 x}{d t^2} + \left( \frac{d x}{d t} \right)^2 + 32 x & = 5
+\end{align*}
+
 \end{document}
