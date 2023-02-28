@@ -20,13 +20,13 @@
 \subsection{Definitions and Terminology}
 
 \begin{itemize}
-  \item An equation containing the derivatives of one or more dependent variables, with respect to one or more independent variables, is said to be a \textbf{differential equation}
+\item An equation containing the derivatives of one or more dependent variables, with respect to one or more independent variables, is said to be a \textbf{differential equation} (DE)
 
-  \item An \textbf{ordinary differential equation} (ODE) is a differential equation that contains only ordinary (i.e. non-partial) derivatives of one or more functions with respect to a single independent variable
+\item An \textbf{ordinary DE} (ODE) is a DE that contains only ordinary (i.e. non-partial) derivatives of one or more functions with respect to a single independent variable
 
-  \item A \textbf{partial differential equation} is a differential equation that contains only partial derivatives of one or more functions of two or more independent variables
+\item A \textbf{partial DE} is a DE that contains only partial derivatives of one or more functions of two or more independent variables
 
-  \item The \textbf{order} of a differential equation is the order of the highest derivative in the equation
+\item The \textbf{order} of a DE is the order of the highest derivative in the equation
 
   \item First order ODEs are sometimes written in the \textbf{differential form} \[M(x, y) \,dx + N(x, y) \,dy = 0\]
 
@@ -42,9 +42,9 @@
 
   \item The \textbf{interval of definition}, \textbf{interval of validity}, or the \textbf{domain} of a solution is the interval over which the solution is valid
 
-  \item A solution of a differential equation that is $0$ on an interval $I$ is said to be a \textbf{trivial solution}
+\item A solution of a DE that is $0$ on an interval $I$ is said to be a \textbf{trivial solution}
 
-  \item Because solutions to differential equations must be differentiable over their interval of validity, discontinuities, etc. must be excluded from the interval
+\item Because solutions to DEs must be differentiable over their interval of validity, discontinuities, etc. must be excluded from the interval
 
   \item An \textbf{explicit solution} to an ODE is one where the dependent variable is expressed solely in terms of the independent variable and constants
 
@@ -52,11 +52,11 @@
 
   \item When solving a first-order ODE we usually obtain a solution containing a single arbitrary constant or parameter $c$. A solution containing an arbitrary constant represents a set of solution called a \textbf{one-parameter family of solutions}
 
-  \item When solving an $n$-th order differential equation we usually obtain an \textbf{$n$-parameter family of solutions}
+\item When solving an $n$-th order DE we usually obtain an \textbf{$n$-parameter family of solutions}
 
-  \item A solution of a differential equation that is free from arbitrary parameters is called a \textbf{particular solution}
+\item A solution of a DE that is free from arbitrary parameters is called a \textbf{particular solution}
 
-  \item A \textbf{singular solution} is a solution to a differential equation that isn't a member of a family of solutions
+\item A \textbf{singular solution} is a solution to a DE that isn't a member of a family of solutions
 
   \item A \textbf{system of ODEs} is two or more equations involving the derivatives of two or more unknown functions of a single independent variable. A solution of such a system is a differentiable function for each equation defined on a common interval $I$ that satisfy each equation of the system on that interval
 \end{itemize}
@@ -64,14 +64,14 @@
 \subsection{Initial Value Problems}
 
 \begin{itemize}
-  \item An \textbf{initial value problem} is the problem of solving a differential equation with some given \textbf{initial conditions}, e.g. solve \[\frac{d^n y}{dx^n} = f(x, y, y', \ldots, y^{(n - 1)})\] subject to \[y(x_0) = y_0, \,y'(x_0) = y_1, \,\ldots, \,y^{(n - 1)}(x_0) = y_{n - 1}\]
+\item An \textbf{initial value problem} is the problem of solving a DE with some given \textbf{initial conditions}, e.g. solve \[\frac{d^n y}{dx^n} = f(x, y, y', \ldots, y^{(n - 1)})\] subject to \[y(x_0) = y_0, \,y'(x_0) = y_1, \,\ldots, \,y^{(n - 1)}(x_0) = y_{n - 1}\]
 
   \item The domain of $y = f(x)$ differs depending on how it's considered:
 
         \begin{itemize}
           \item As a function its domain is all real numbers for which it's defined
 
-          \item As a solution of a differential equation its domain is a single interval over which it's defined an differentiable
+\item As a solution of a DE its domain is a single interval over which it's defined an differentiable
 
           \item As a solution of an initial value problem its domain is a single interval over which it's defined, differentiable, and contains the initial conditions
         \end{itemize}
@@ -93,6 +93,40 @@
   \item A simple model of radioactive decay of an amount of substance $A$ is \[\frac{dA}{dt} = k A\] where $k < 0$
 
   \item Newton's empirical law of cooling/warming states that the rate of change of the temperature of a body is proportional to the difference between the temperature of the body and the temperature of the surrounding medium \[\frac{dT}{dt} = k (T - T_m)\]
+\end{itemize}
+
+\section{First-Order Differential Equations}
+
+\subsection{Solution Curves Without a Solution}
+
+\begin{itemize}
+  \item An ODE in which the independent variable doesn't appear is said to be \textbf{autonomous}, e.g. \[\frac{d y}{d x} = f(y)\]
+
+  \item A real number $c$ is a \textbf{critical/equilibrium/stationary point} of an autonomous DE if it is a zero of $f$
+
+  \item If $c$ is a critial point of an autonomous DE, then $y(x) = c$ is a solution
+
+  \item A solution of the form $y(x) = c$ is called an \textbf{equilibrium solution}
+
+  \item We can draw several conclusions about the solutions of an autonomous DE with $n$ critical points and $n + 1$ subregions bounded by the critical points:
+
+        \begin{itemize}
+          \item If $(x_0, y_0)$ is in a subregion, it remains in that subregion for all $x$
+
+          \item By continuity, $f(y) < 0$ or $f(y) > 0$ for all $y$ in a subregion and thus $y(x)$ can't have maximum/minimum points or oscillate
+
+          \item If $y(x)$ is bounded above by a critical point $c_1$, it must approach $y(x) = c_1$ as $x \rightarrow -\infty$ or $x \rightarrow \infty$
+
+          \item If $y(x)$ is bounded above and below by critical points $c_1$ and $c_2$, it must approach $y(x) = c_1$ as $x \rightarrow -\infty$ and $y(x) = c_2$ as $x \rightarrow \infty$ or vice versa
+
+          \item If $y(x)$ is bounded below by a critical point $c_1$, it must approach $y(x) = c_1$ as $x \rightarrow -\infty$ or $x \rightarrow \infty$
+        \end{itemize}
+\end{itemize}
+
+\includegraphics*{attractors-and-repellers.png}
+
+\begin{itemize}
+  \item If $y(x)$ is a solution of an autonomous differential equation $d y / d x = f(y)$, then $y_1(x) = y (x - k)$, where $k$ is a constant, is also a solution
 \end{itemize}
 
 \end{document}
