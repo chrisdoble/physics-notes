@@ -582,4 +582,202 @@ $P_0 < h / k$
 
 \[g - \frac{k}{m} v^2 = 0 \Rightarrow v = \sqrt{\frac{g m}{k}}\]
 
+\subsection{Separable Equations}
+
+\subsubsection{1}
+
+\begin{align*}
+  \frac{d y}{d x} & = \sin 5 x                  \\
+  y               & = -\frac{1}{5} \cos 5 x + c
+\end{align*}
+
+\subsubsection{3}
+
+\begin{align*}
+  d x + e^{3 x} \,d y       & = 0                        \\
+  e^{-3 x} \,d x + \,d y    & = 0                        \\
+  -\frac{1}{3} e^{-3 x} + y & = c                        \\
+  y                         & = \frac{1}{3} e^{-3 x} + c
+\end{align*}
+
+\subsubsection{5}
+
+\begin{align*}
+  x \frac{d y}{d x}     & = 4 y                            \\
+  \frac{1}{4 y} \,d y   & = \frac{1}{x} \,d x              \\
+  \frac{1}{4} \ln |4 y| & = \ln |x| + c                    \\
+  \ln |4 y|             & = 4 \ln |x| + c                  \\
+  4 y                   & = e^{4 \ln |x| + c}              \\
+                        & = c \left( e^{\ln |x|} \right)^4 \\
+  y                     & = c x^4
+\end{align*}
+
+\subsubsection{7}
+
+\begin{align*}
+  \frac{d y}{d x}       & = e^{3 x + 2 y}           \\
+                        & = e^{3 x} e^{2 y}         \\
+  e^{-2 y} \,d y        & = e^{3 x} \,d x           \\
+  -\frac{1}{2} e^{-2 y} & = \frac{1}{3} e^{3 x} + c \\
+  -3 e^{-2 y}           & = 2 e^{3 x} + c           \\
+\end{align*}
+
+\subsubsection{9}
+
+\begin{align*}
+  y \ln x \frac{d x}{d y}                          & = \left( \frac{y + 1}{x} \right)^2  \\
+  x^2 \ln x \,d x                                  & = \frac{(y + 1)^2}{y} \,d y         \\
+  x^3 \left( \frac{\ln x}{3} - \frac{1}{9} \right) & = \frac{1}{2} y (y + 4) + \ln y + c \\
+  \frac{1}{3} x^3 \ln x - \frac{1}{9} x^3          & = \frac{1}{2} y^2 + 2 y + \ln y + c
+\end{align*}
+
+\subsubsection{11}
+
+\begin{align*}
+  \csc y \,d x + \sec^2 x \,d y                                    & = 0                  \\
+  \frac{1}{\sin y} \,d x + \frac{1}{\cos^2 x} \,d y                & = 0                  \\
+  \cos^2 x \,d x + \sin y \,d y                                    & = 0                  \\
+  \frac{1}{2} (1 + \cos 2 x) \,d x + \sin y \,d y                  & = 0                  \\
+  \frac{1}{2} \left( x + \frac{1}{2} \sin 2 x \right) - \cos y + c & = 0                  \\
+  4 \cos y                                                         & = 2 x + \sin 2 x + c
+\end{align*}
+
+\subsubsection{13}
+
+\begin{align*}
+  (e^y +1)^2 e^{-y} \,d x + (e^x + 1)^3 e^{-x} \,d y      & = 0 \\
+  \frac{e^x}{(e^x + 1)^3} \,d x + \frac{e^y}{(e^y + 1)^2} & = 0 \\
+  -\frac{1}{2 (e^x + 1)^2} - \frac{1}{e^y + 1}            & = c \\
+  (e^x + 1)^{-2} + 2(e^y + 1)^{-1}                        & = c
+\end{align*}
+
+\subsubsection{15}
+
+\begin{align*}
+  \frac{d S}{d r}   & = k S       \\
+  \frac{1}{S} \,d S & = k \,d r   \\
+  \ln |S|           & = k r + c   \\
+  S                 & = c e^{k r}
+\end{align*}
+
+\subsubsection{17}
+
+\begin{align*}
+  \frac{d P}{d t}           & = P - P^2                 \\
+  \frac{1}{P (1 - P)} \,d P & = d t                     \\
+  \ln \frac{P}{1 - P}       & = t + c                   \\
+  \frac{P}{1 - P}           & = c e^t                   \\
+  P                         & = c e^t (1 - P)           \\
+  P                         & = \frac{c e^t}{1 + c e^t}
+\end{align*}
+
+\subsubsection{19}
+
+\begin{align*}
+  \frac{d y}{d x}           & = \frac{x y + 3 x - y - 3}{x y - 2 x + 4 y - 8} \\
+                            & = \frac{(x - 1) (y + 3)}{(x + 4) (y - 2)}       \\
+  \frac{y - 2}{y + 3} \,d t & = \frac{x - 1}{x + 4} \,d x                     \\
+  y - 5 \ln |y + 3|         & = x - 5 \ln |x + 4| + c                         \\
+  e^{y - 5 \ln |y + 3|}     & = e^{x - 5 \ln |x + 4| + c}                     \\
+  \frac{e^y}{(y + 3)^5}     & = \frac{c e^x}{(x + 4)^5}                       \\
+  c (x + 4)^5 e^y           & = (y + 3)^5 e^x
+\end{align*}
+
+\subsubsection{21}
+
+\begin{align*}
+  \frac{d y}{d x}          & = x \sqrt{1 - y^2}                        \\
+  (1 - y^2)^{-1 / 2} \,d y & = x \,d x                                 \\
+  \arcsin y                & = \frac{1}{2} x^2 + c                     \\
+  y                        & = \sin \left( \frac{1}{2} x^2 + c \right)
+\end{align*}
+
+\subsubsection{23}
+
+\begin{align*}
+  \frac{d x}{d t}         & = 4 (x^2 + 1)    \\
+  \frac{1}{x^2 + 1} \,d x & = 4 \,d t        \\
+  \arctan x               & = 4 t + c        \\
+  x                       & = \tan (4 t + c)
+\end{align*}
+
+\begin{align*}
+  x \left( \frac{\pi}{4} \right) = 1 & = \tan \left( 4 \left( \frac{\pi}{4} \right) + c \right) \\
+                                     & =\tan (\pi + c)                                          \\
+  c                                  & = \arctan (1) - \pi                                      \\
+                                     & = -\frac{3}{4} \pi
+\end{align*}
+
+\[x = \tan \left( 4 t - \frac{3}{4} \pi \right)\]
+
+\subsubsection{25}
+
+\begin{align*}
+  x^2 \frac{d y}{d x} & = y - x y                                          \\
+                      & = y (1 - x)                                        \\
+  \frac{1}{y} \,d y   & = \left( \frac{1}{x^2} - \frac{1}{x} \right) \,d x \\
+  \ln |y|             & = -\frac{1}{x} - \ln |x| + c                       \\
+  y                   & = e^{-\frac{1}{x} - \ln |x| + c}                   \\
+                      & = \frac{c}{x e^{1 / x}}
+\end{align*}
+
+\begin{align*}
+  y(-1) = -1 & = \frac{c}{(-1) e^{1 / (-1)}} \\
+             & = -c e                        \\
+  c          & = e^{-1}
+\end{align*}
+
+\[y = \frac{1}{x e^{1 + 1 / x}}\]
+
+\subsubsection{29}
+
+\begin{align*}
+  \frac{d y}{d x}                              & = y e^{-x^2}                             \\
+  \frac{1}{y} \frac{d y}{d x}                  & = e^{-x^2}                               \\
+  \int_4^x \frac{1}{y} \frac{d y}{d x'} \,d x' & = \int_4^x e^{-x'^2} \,d x'              \\
+  \left. \ln |y| \right|_4^x                   & = \int_4^x e^{-x'^2} \,d x'              \\
+  \ln |y(x)| - \ln |y(4)|                      & = \int_4^x e^{-x'^2} \,d x'              \\
+  \ln |y(x)|                                   & = \ln |y(4)| + \int_4^x e^{-x'^2} \,d x' \\
+  y(x)                                         & = e^{\int_4^x e^{-x'^2} \,d x'}
+\end{align*}
+
+\subsubsection{31}
+
+\begin{align*}
+  \frac{d y}{d x} & = \frac{2 x + 1}{2 y}    \\
+  2 y \,d y       & = (2 x + 1) \,d x        \\
+  y^2             & = x^2 + x + c            \\
+  y               & = \pm \sqrt{x^2 + x + c}
+\end{align*}
+
+\begin{align*}
+  y(-2) = -1 & = -\sqrt{(-2)^2 + (-2) + c} \\
+             & = -\sqrt{2 + c}             \\
+  c          & = -1
+\end{align*}
+
+\[y = -\sqrt{x^2 + x - 1}\]
+
+\[I = \left( -\infty, -\frac{1 - \sqrt{5}}{2} \right)\]
+
+\subsubsection{33}
+
+\begin{align*}
+  e^y \,d x - e^{-x} \,d y & = 0              \\
+  e^x \,d x - e^{-y} \,d y & = 0              \\
+  e^x + e^{-y}             & = c              \\
+  \ln |e^{-y}|             & = \ln |c - e^x|  \\
+  y                        & = -\ln |c - e^x|
+\end{align*}
+
+\begin{align*}
+  y(0) = 0 & = -\ln |c - e^{(0)}| \\
+  1        & = c - 1              \\
+  c        & = 2
+\end{align*}
+
+\[y = -\ln |2 - e^x|\]
+
+\[I = (-\infty, \ln 2)\]
+
 \end{document}
