@@ -5,6 +5,9 @@
 \usepackage{siunitx} % For units
 \graphicspath{{./images/}}
 
+\DeclareMathOperator{\erf}{erf}
+\DeclareMathOperator{\erfc}{erfc}
+
 \title{Advanced Engineering Mathematics Ordinary Differential Equations Notes}
 \author{Chris Doble}
 \date{February 2022}
@@ -145,6 +148,45 @@
         \end{align*}
 
   \item Care should be taken when dividing by $h(y)$ as it removes constant solutions $y = r$ where $h(r) = 0$
+\end{itemize}
+
+\subsection{Linear Equations}
+
+\begin{itemize}
+  \item A first-order DE of the form \[a_1(x) \frac{d y}{d x} + a_0(x) y = g(x)\] or in standard form \[\frac{d y}{d x} + P(x) y = f(x)\] is said to be a \textbf{linear equation} in the dependent variable $y$
+
+  \item When $g(x) = 0$ or $f(x) = 0$ the linear equation is said to be \textbf{homogeneous} and is solvable via separation of variables, otherwise it is \textbf{nonhomogeneous}
+
+  \item The nonhomogeneous linear equation's solution is the sum of two solutions $y = y_c + y_p$ where $y_c$ is a solution of the associated homogeneous equation \[\frac{d y}{d x} + P(x) y = 0\] and $y_p$ is a particular solution of the nonhomogeneous equation
+
+  \item Nonhomogeneous linear equations can be solved via \textbf{variation of parameters}:
+
+        \begin{enumerate}
+          \item Put it into standard form
+
+          \item Determine the \textbf{integrating factor} $e^{\int P(x) \,d x}$
+
+          \item Multiply by the integrating factor
+
+          \item Recognise that the left hand side of the equation is the derivative of the product of the integrating factor and $y$
+
+          \item Integrate both sides of the equation
+
+          \item Solve for $y$
+        \end{enumerate}
+
+  \item The \textbf{general solution} of a DE is a family of solutions that contains all possible solutions (except singular solutions)
+
+  \item A term $y = f(x)$ in a solution is called a \textbf{transient term} if $f(x) \rightarrow 0$ as $x \rightarrow \infty$
+
+  \item When either $P(x)$ or $f(x)$ is a piecewise-defined function the equation is then referred to as a \textbf{piecewise-linear differential equation} that can be solved by solving each interval in isolation then choosing appropriate constants to ensure the overall solution is continuous
+
+  \item The \textbf{error function} and \textbf{complementary error function} are defined
+
+        \begin{align*}
+          \erf x + \erfc x                                                                                                              & = 1 \\
+          \left( \frac{2}{\sqrt{\pi}} \int_0^x e^{-t^2} \,d t \right) + \left( \frac{2}{\sqrt{\pi}} \int_x^\infty e^{-t^2} \,dt \right) & = 1
+        \end{align*}
 \end{itemize}
 
 \end{document}
