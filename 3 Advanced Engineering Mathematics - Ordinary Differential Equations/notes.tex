@@ -189,4 +189,48 @@
         \end{align*}
 \end{itemize}
 
+\subsection{Exact Equations}
+
+\begin{itemize}
+  \item The \textbf{differential} of a function $z = f(x, y)$ is \[dz = \frac{\partial f}{\partial x} \,d x + \frac{\partial f}{\partial y} \, dy\]
+
+  \item A differential expression $M(x, y) \,d x + N(x, y) \,d y$ is an \textbf{exact differential} in the region $R$ of the $xy$-plane if it corresponds to the differential of some function $f(x, y)$
+
+  \item A first-order DE of the form \[M(x, y) \,d x + N(x, y) \,d y = 0\] is said to be an \textbf{exact equation} if the expression on the left side is an exact differential
+
+  \item A necessary and sufficient condition that $M(x, y) \,d x + N(x, y) \,d y$ be an exact differential is \[\frac{\partial M}{\partial y} = \frac{\partial N}{\partial x}\]
+
+  \item Exact differentials can be solved by
+
+        \begin{enumerate}
+          \item Integrating $M(x, y)$ with respect to $x$ to find an expression for $f(x, y)$
+
+                \begin{align*}
+                  \frac{\partial f}{\partial x} & = M(x, y)                   \\
+                  f(x, y)                       & = \int M(x, y) \,d x + g(y)
+                \end{align*}
+
+          \item Differentiating $f(x, y)$ with respect to $y$ and equating it to $N(x, y)$ to find $g'(y)$
+
+                \begin{align*}
+                  \frac{\partial f}{\partial y} = N(x, y) & = \frac{\partial}{\partial y} \int M(x, y) \,d x + g'(y)   \\
+                  g'(y)                                   & = N(x, y) - \frac{\partial}{\partial y} \int M(x, y) \,d x
+                \end{align*}
+
+          \item Integrating $g'(y)$ with respect to $y$ to find $g(y)$ and substituting it into $f(x, y)$
+
+          \item Equating $f(x, y)$ with an unknown constant $c$
+        \end{enumerate}
+
+  \item $x$ and $y$ can be swapped in the steps above (i.e. you can start by integrating $N(x, y)$ with respect to $y$, etc.)
+
+  \item A nonexact DE $M(x, y) \,d x + N(x, y) \,d y = 0$ can sometimes be transformed into an exact DE by finding an appropriate integrating factor
+
+        \begin{itemize}
+          \item If $(M_y - N_x) / N$ is a function of $x$ alone, then an integrating factor is \[\mu(x) = e^{\int \frac{M_y - N_x}{N} \,d x}\]
+
+          \item If $(N_x - M_y) / M$ is a function of $y$ alone, then an integrating factor is \[\mu(y) = e^{\int \frac{N_x - M_y}{M} \,d y}\]
+        \end{itemize}
+\end{itemize}
+
 \end{document}
