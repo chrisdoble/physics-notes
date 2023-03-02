@@ -233,4 +233,40 @@
         \end{itemize}
 \end{itemize}
 
+\subsection{Solutions by Substitution}
+
+\begin{itemize}
+  \item A function $f(x, y)$ is said to be a \textbf{homogeneous function} of degree $\alpha$ if \[f(t x, t y) = t^\alpha f(x, y)\]
+
+  \item A first-order DE of the form \[M(x, y) \,d x + N(x, y) \,d y = 0\] is said to be \textbf{homogeneous} if both $M$ and $N$ are homogeneous functions of the same degree
+
+  \item To solve a homogeneous first-order DE:
+
+        \begin{enumerate}
+          \item Rewrite it as \[M(x, y) = x^\alpha M(1, u) \text{ and } N(x, y) = x^\alpha N(1, u) \text{ where } u = y / x\] or \[M(x, y) = y^\alpha M(v, 1) \text{ and } N(x, y) = y^\alpha N(v, 1) \text{ where } v = x / y\]
+
+          \item Substitute $y = u x$ and $d y = u \,d x + x \,d u$ or $x = v y$ and $d x = v \,d y + y \,d v$ as appropriate
+
+          \item Solve the resulting first-order separable DE
+
+          \item Substitude $u = y / x$ or $v = x / y$ as appropriate
+        \end{enumerate}
+
+  \item The DE \[\frac{d y}{d x} + P(x) y = f(x) y^n\] where $n$ is any real number is called \textbf{Bernoulli's equation}
+
+  \item For $n = 0$ and $n = 1$ Bernoulli's equation is linear
+
+  \item To solve Bernoulli's equation for $n \ne 0$ and $n \ne 1$:
+
+        \begin{enumerate}
+          \item Substitude $y = u^{1 / (1 - n)}$ and $\frac{d y}{d x} = \frac{d}{dx} (u^{1 / (1 - n)})$
+
+          \item Solve the resulting linear equation
+
+          \item Substitude $u = y^{n - 1}$
+        \end{enumerate}
+
+  \item A DE of the form \[\frac{d y}{d x} = f(A x + B y + C)\] can always be reduced to an equation with separable variables by means of the substitution \[u = A x + B y + C, B \ne 0\]
+\end{itemize}
+
 \end{document}

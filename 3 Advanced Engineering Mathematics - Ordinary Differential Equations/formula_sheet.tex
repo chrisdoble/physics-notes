@@ -13,78 +13,104 @@
 
 \section{First-order ODEs}
 
-\begin{itemize}
-  \item \textbf{Form:} IVP \[\frac{d y}{d x} = f(x, y)\] \[y(x_0) = y_0\] \\ \textbf{Test:} $f(x, y)$ and $\partial f / \partial y$ are continuous over $I$ \\ \textbf{Property:} A unique solution is guaranteed over $I$
-\end{itemize}
+\textbf{Form:} IVP \[\frac{d y}{d x} = f(x, y)\] \[y(x_0) = y_0\] \\ \textbf{Test:} $f(x, y)$ and $\partial f / \partial y$ are continuous over $I$ \\ \textbf{Property:} A unique solution is guaranteed over $I$
 
-\subsection{Separable ODEs}
+\subsection{Separable Equations}
 
-\begin{itemize}
-  \item \textbf{Form:} \[\frac{d y}{d x} = g(x) h(y)\] \\ \textbf{Solution:} Divide by $h(y)$ then integrate with respect to $x$.
+\textbf{Form:} \[\frac{d y}{d x} = g(x) h(y)\] \\ \textbf{Solution:} Divide by $h(y)$ then integrate with respect to $x$.
 
-        \begin{align*}
-          \frac{d y}{d x}                          & = g(x) h(y)      \\
-          \frac{1}{h(y)} \frac{d y}{d x}           & = g(x)           \\
-          \int \frac{1}{h(y)} \frac{d y}{d x} \,dx & = \int g(x) \,dx \\
-          \int \frac{1}{h(y)} \,dy                 & = \int g(x) \,dx \\
-          H(y)                                     & = G(x) + c
-        \end{align*}
-\end{itemize}
+\begin{align*}
+  \frac{d y}{d x}                          & = g(x) h(y)      \\
+  \frac{1}{h(y)} \frac{d y}{d x}           & = g(x)           \\
+  \int \frac{1}{h(y)} \frac{d y}{d x} \,dx & = \int g(x) \,dx \\
+  \int \frac{1}{h(y)} \,dy                 & = \int g(x) \,dx \\
+  H(y)                                     & = G(x) + c
+\end{align*}
 
 \subsection{Linear Equations}
 
-\begin{itemize}
-  \item \textbf{Form:} \[\frac{d y}{d x} + P(x) y = f(x)\] \\ \textbf{Solution:}
+\textbf{Form:} \[\frac{d y}{d x} + P(x) y = f(x)\] \\ \textbf{Solution:}
 
-        \begin{enumerate}
-          \item Determine the integrating factor $e^{\int P(x) \,d x}$
+\begin{enumerate}
+  \item Determine the integrating factor $e^{\int P(x) \,d x}$
 
-          \item Multiply by the integrating factor
+  \item Multiply by the integrating factor
 
-          \item Recognise that the left hand side of the equation is the derivative of the product of the integrating factor and $y$
+  \item Recognise that the left hand side of the equation is the derivative of the product of the integrating factor and $y$
 
-          \item Integrate both sides of the equation
+  \item Integrate both sides of the equation
 
-          \item Solve for $y$
-        \end{enumerate}
-\end{itemize}
+  \item Solve for $y$
+\end{enumerate}
 
-\subsection{Exact equations}
+\subsection{Exact Equations}
 
-\begin{itemize}
-  \item \textbf{Form:} \[z = f(x, y) = c\] \[dz = \frac{\partial f}{\partial x} \,d x + \frac{\partial f}{\partial y} \,d y = M(x, y) \,d x + N(x, y) \,d y = 0\] \\ \textbf{Test:} \[\frac{\partial M}{\partial y} = \frac{\partial N}{\partial x}\] \\ \textbf{Solution:}
+\textbf{Form:} \[z = f(x, y) = c\] \[dz = \frac{\partial f}{\partial x} \,d x + \frac{\partial f}{\partial y} \,d y = M(x, y) \,d x + N(x, y) \,d y = 0\] \\ \textbf{Test:} \[\frac{\partial M}{\partial y} = \frac{\partial N}{\partial x}\] \\ \textbf{Solution:} \begin{enumerate}
+  \item Integrate $M(x, y)$ with respect to $x$ to find an expression for $z = f(x, y)$
 
-        \begin{enumerate}
-          \item Integrate $M(x, y)$ with respect to $x$ to find an expression for $z = f(x, y)$
+        \begin{align*}
+          \frac{\partial f}{\partial x} & = M(x, y)                   \\
+          f(x, y)                       & = \int M(x, y) \,d x + g(y)
+        \end{align*}
 
-                \begin{align*}
-                  \frac{\partial f}{\partial x} & = M(x, y)                   \\
-                  f(x, y)                       & = \int M(x, y) \,d x + g(y)
-                \end{align*}
+  \item Differentiate $f(x, y)$ with respect to $y$ and equate it to $N(x, y)$ to find $g'(y)$
 
-          \item Differentiate $f(x, y)$ with respect to $y$ and equate it to $N(x, y)$ to find $g'(y)$
+        \begin{align*}
+          \frac{\partial f}{\partial y} = N(x, y) & = \frac{\partial}{\partial y} \int M(x, y) \,d x + g'(y)   \\
+          g'(y)                                   & = N(x, y) - \frac{\partial}{\partial y} \int M(x, y) \,d x
+        \end{align*}
 
-                \begin{align*}
-                  \frac{\partial f}{\partial y} = N(x, y) & = \frac{\partial}{\partial y} \int M(x, y) \,d x + g'(y)   \\
-                  g'(y)                                   & = N(x, y) - \frac{\partial}{\partial y} \int M(x, y) \,d x
-                \end{align*}
+  \item Integrate $g'(y)$ with respect to $y$ to find $g(y)$ and substitute it into $f(x, y)$
 
-          \item Integrate $g'(y)$ with respect to $y$ to find $g(y)$ and substitute it into $f(x, y)$
+  \item Equate $f(x, y)$ with an unknown constant $c$
+\end{enumerate} \textbf{Note:} The steps can be performed with $x$ and $y$ reversed, i.e. start by integrating $N(x, y)$ with respect to $y$, etc.
 
-          \item Equate $f(x, y)$ with an unknown constant $c$
-        \end{enumerate}
+\subsection{Exact Equations with Integration Constant}
 
-        \textbf{Note:} The steps can be performed with $x$ and $y$ reversed, i.e. start by integrating $N(x, y)$ with respect to $y$, etc.
+\textbf{Form:} \[M(x, y) \,d x + N(x, y) \,d y = 0\] \\ \textbf{Test:} $(M_y - N_x) / N$ is a function of $x$ alone or $(N_x - M_y) / M$ is a function of $y$ alone \\ \textbf{Solution:}
 
-  \item \textbf{Form:} \[M(x, y) \,d x + N(x, y) \,d y = 0\] \\ \textbf{Test:} $(M_y - N_x) / N$ is a function of $x$ alone or $(N_x - M_y) / M$ is a function of $y$ alone \\ \textbf{Solution:}
+\begin{enumerate}
+  \item Compute the integrating factor \[\mu(x) = e^{\int \frac{M_y - N_x}{N} \,d x}\] or \[\mu(y) = e^{\int \frac{N_x - M_y}{M} \,d y}\] as appropriate
 
-        \begin{enumerate}
-          \item Compute the integrating factor \[\mu(x) = e^{\int \frac{M_y - N_x}{N} \,d x}\] or \[\mu(y) = e^{\int \frac{N_x - M_y}{M} \,d y}\] as appropriate
+  \item Multiple the equation by this factor
 
-          \item Multiple the equation by this factor
+  \item The equation is now exact and can be solved as above
+\end{enumerate}
 
-          \item The equation is now exact and can be solved as above
-        \end{enumerate}
-\end{itemize}
+\subsection{Homogeneous Equations}
+
+\textbf{Form:} \[M(x, y) \,d x + N(x, y) \,d y = 0\] \\ \textbf{Test:} $M$ and $N$ are homogeneous functions of the same degree \\ \textbf{Solution:}
+
+\begin{enumerate}
+  \item Rewrite as \[M(x, y) = x^\alpha M(1, u) \text{ and } N(x, y) = x^\alpha N(1, u) \text{ where } u = y / x\] or \[M(x, y) = y^\alpha M(v, 1) \text{ and } N(x, y) = y^\alpha N(v, 1) \text{ where } v = x / y\]
+
+  \item Substitute $y = u x$ and $d y = u \,d x + x \,d u$ or $x = v y$ and $d x = v \,d y + y \,d v$ as appropriate
+
+  \item Solve the resulting first-order separable DE
+
+  \item Substitude $u = y / x$ or $v = x / y$ as appropriate
+\end{enumerate}
+
+\subsection{Bernoulli's Equation}
+
+\textbf{Form:} \[\frac{d y}{d x} + P(x) y = f(x) y^n\] \\ \textbf{Test:} $n \ne 0$ and $n \ne 1$ \\ \textbf{Solution:}
+
+\begin{enumerate}
+  \item Substitude $y = u^{1 / (1 - n)}$ and $\frac{d y}{d x} = \frac{d}{dx} (u^{1 / (1 - n)})$
+
+  \item Solve the resulting linear equation
+
+  \item Substitude $u = y^{n - 1}$
+\end{enumerate}
+
+\subsection{Reduction to Separation of Variables}
+
+\textbf{Form:} \[\frac{d y}{d x} = f(A x + B y + C), B \ne 0\] \\ \textbf{Solution:} \begin{enumerate}
+  \item Substitute \[A x + B y + C = u\]
+
+  \item Solve the resulting separable equation
+
+  \item Substitute \[u = A x + B y + C\]
+\end{enumerate}
 
 \end{document}
