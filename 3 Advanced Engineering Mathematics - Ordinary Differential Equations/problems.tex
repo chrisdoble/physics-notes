@@ -1193,4 +1193,252 @@ Not exact
   \item $v = \qty{12.7}{ft/s}$
 \end{enumerate}
 
+\subsection{Solutions by Substitution}
+
+\subsubsection{1}
+
+\begin{align*}
+  (x - y) \,d x + x \,d y                 & = 0               \\
+  (x - u x) \,d x + x (u \,d x + x \,d u) & = 0               \\
+  x \,d x + x^2 \,d u                     & = 0               \\
+  x^{-1} \,d x + d u                      & = 0               \\
+  \ln |x| + u                             & = c               \\
+  \ln |x| + \frac{y}{x}                   & = c               \\
+  y                                       & = c x - x \ln |x|
+\end{align*}
+
+\subsubsection{3}
+
+\begin{align*}
+  x \,dx + (y - 2 x) \,dy                                            & = 0             \\
+  v y (v \,dy + y \,dv) + (y - 2 v y) \,dy                           & = 0             \\
+  (v^2 y + y - 2 v y) \,dy + v y^2 \,dv                              & = 0             \\
+  y (v^2 - 2 v + 1) \,dy + v y^2 \,dv                                & = 0             \\
+  (v - 1)^2 \,dy + v y \,dv                                          & = 0             \\
+  \frac{1}{y} \,dy + \frac{v}{(v - 1)^2} \,dv                        & = 0             \\
+  \ln |y| + \frac{1}{1 - v} + \ln |v - 1|                            & = c             \\
+  \ln |y| + \frac{1}{1 - x / y} + \ln \left| \frac{x}{y} - 1 \right| & = c             \\
+  \ln |x - y| + \frac{y}{y - x}                                      & = c             \\
+  (y - x) \ln |x - y| + y                                            & = c (y - x)     \\
+  (x - y) \ln |x - y|                                                & = y + c (x - y)
+\end{align*}
+
+\subsubsection{5}
+
+\begin{align*}
+  (y^2 + y x) \,dx - x^2 \,dy                    & = 0                     \\
+  ((u x)^2 + u x^2) \,dx - x^2 (u \,dx + x \,du) & = 0                     \\
+  u^2 x^2 \,dx - x^3 \,du                        & = 0                     \\
+  \frac{1}{x} \,dx - \frac{1}{u^2} \,du          & = 0                     \\
+  \ln |x| + \frac{1}{u}                          & = c                     \\
+  \ln |x| + \frac{x}{y}                          & = c                     \\
+  y                                              & = \frac{x}{c - \ln |x|}
+\end{align*}
+
+\subsubsection{7}
+
+\begin{align*}
+  \frac{dy}{dx}                                   & = \frac{y - x}{y + x} \\
+  (y + x) \,dy + (x - y) \,dx                     & = 0                   \\
+  (u x + x) (u \,dx + x \,du) + (x - u x) \,dx    & = 0                   \\
+  (u^2 x + x) \,dx + (u x^2 + x^2) \,du           & = 0                   \\
+  x (u^2 + 1) \,dx + x^2 (u + 1) \,du             & = 0                   \\
+  \frac{1}{x} \,dx + \frac{u + 1}{u^2 + 1} \,du   & = 0                   \\
+  \ln |x| + \frac{1}{2} \ln |u^2 + 1| + \arctan u & = c                   \\
+  \ln |x^2 + y^2| + 2 \arctan \frac{y}{x}         & = c
+\end{align*}
+
+\subsubsection{9}
+
+\begin{align*}
+  -y \,dx + (x + \sqrt{x y}) \,dy                        & = 0                 \\
+  -u x \,dx + (x + \sqrt{u x^2}) (u \,dx + x \,du)       & = 0                 \\
+  u \sqrt{u x^2} \,dx + (x^2 + x \sqrt{u x^2}) \,du      & = 0                 \\
+  u^{3 / 2} x \,dx + x^2 (1 + \sqrt{u}) \,du             & = 0                 \\
+  \frac{1}{x} \,dx + \frac{1 + \sqrt{u}}{u^{3 / 2}} \,du & = 0                 \\
+  \frac{1}{x} \,dx + (u^{-3 / 2} + u^{-1}) \,du          & = 0                 \\
+  \ln |x| - 2 u^{-1 / 2} + \ln |u|                       & = c                 \\
+  \ln |x| - 2 (y / x)^{-1 / 2} + \ln |y / x|             & = c                 \\
+  \ln |y| - 2 \sqrt{\frac{x}{y}}                         & = c                 \\
+  4 \frac{x}{y}                                          & = (\ln |y| - c)^2   \\
+  4 x                                                    & = y (\ln |y| - c)^2
+\end{align*}
+
+\subsubsection{11}
+
+\begin{align*}
+  x y^2 \frac{dy}{dx}                                & = y^3 - x^3 \\
+  x y^2 \,dy + (x^3 - y^3) \,dx                      & = 0         \\
+  x (u x)^2 (u \,dx + x \,du) + (x^3 - (u x)^3) \,dx & = 0         \\
+  x^3 \,dx + u^2 x^4 \,du                            & = 0         \\
+  x^{-1} \,dx + u^2 \,du                             & = 0         \\
+  \ln |x| + \frac{1}{3} u^3                          & = c         \\
+  \ln |x| + \frac{1}{3} \left( \frac{y}{x} \right)^3 & = c
+\end{align*}
+
+\[\ln |1| + \frac{1}{3} \left( \frac{2}{1} \right)^3 = c \Rightarrow c = \frac{8}{3} + \ln 1\]
+
+\begin{align*}
+  \ln |x| + \frac{1}{3} \left( \frac{y}{x} \right)^3 & = \frac{8}{3} \\
+  y^3 + 3 x^3 \ln |x|                                & = 8 x^3
+\end{align*}
+
+\subsubsection{13}
+
+\begin{align*}
+  (x + y e^{y / x}) \,dx - x e^{y / x} \,dy    & = 0 \\
+  (x + u x e^u) \,dx - x e^u (u \,dx + x \,du) & = 0 \\
+  x \,dx - x^2 e^u \,du                        & = 0 \\
+  x^{-1} \,dx - e^u \,du                       & = 0 \\
+  \ln |x| - e^u                                & = c \\
+  \ln |x| - e^{y / x}                          & = c
+\end{align*}
+
+\[\ln |1| - e^{0 / 1} = c \Rightarrow c = -1\]
+
+\[\ln |x| = e^{y / x} - 1\]
+
+\subsubsection{15}
+
+\begin{align*}
+  x \frac{dy}{dx} + y      & = \frac{1}{y^2} \\
+  \frac{dy}{dx} + x^{-1} y & = x^{-1} y^{-2}
+\end{align*}
+
+\[u = y^{1 - n} = y^3 \Rightarrow y = u^{1 / 3} \Rightarrow \frac{dy}{dx} = \frac{1}{3} u^{-2 / 3} \frac{du}{dx}\]
+
+\begin{align*}
+  \frac{1}{3} u^{-2 / 3} \frac{du}{dx} + x^{-1} u^{1 / 3} & = x^{-1} u^{-2 / 3} \\
+  \frac{du}{dx} + 3 x^{-1} u                              & = 3 x^{-1}          \\
+  e^{3 \ln |x|} \frac{du}{dx} + 3 x^{-1} e^{3 \ln |x|} u  & = 3 x^2             \\
+  \frac{d}{dx} (x^3 u)                                    & = 3 x^2             \\
+  x^3 u                                                   & = x^3 + c           \\
+  y^3                                                     & = 1 + c x^{-3}
+\end{align*}
+
+\subsubsection{17}
+
+\begin{align*}
+  \frac{dy}{dx}     & = y (x y^3 - 1) \\
+  \frac{dy}{dx} + y & = x y^4
+\end{align*}
+
+\[u = y^{1 - n} = y^{-3} \Rightarrow y = u^{-1 / 3} \Rightarrow \frac{dy}{dx} = -\frac{1}{3} u^{-4 / 3} \frac{du}{dx}\]
+
+\begin{align*}
+  -\frac{1}{3} u^{-4 / 3} \frac{du}{dx} + u^{-1/3} & = x u^{-4 / 3}                          \\
+  \frac{du}{dx} - 3 u                              & = -3 x                                  \\
+  e^{-3 x} \frac{du}{dx} - 3 e^{-3 x} u            & = -3 e^{-3 x} x                         \\
+  \frac{d}{dt} (e^{-3 x} u)                        & = -3 e^{-3 x} x                         \\
+  e^{-3 x} u                                       & = e^{-3 x} x + \frac{1}{3} e^{-3 x} + c \\
+  u                                                & = x + \frac{1}{3} + c e^{3 x}           \\
+  y^{-3}                                           & = x + \frac{1}{3} + c e^{3 x}           \\
+\end{align*}
+
+\subsubsection{21}
+
+\begin{align*}
+  x^2 \frac{dy}{dx} - 2 x y  & = 3 y^4        \\
+  \frac{dy}{dx} - 2 x^{-1} y & = 3 x^{-2} y^4
+\end{align*}
+
+\[u = y^{1 - n} = y^{-3} \Rightarrow y = u^{-1 / 3} \Rightarrow \frac{dy}{dx} = -\frac{1}{3} u ^{-4 / 3} \frac{du}{dx}\]
+
+\begin{align*}
+  -\frac{1}{3} u^{-4 / 3} \frac{du}{dx} - 2 x^{-1} u^{-1 / 3} & = 3 x^{-2} u^{-4 / 3}            \\
+  \frac{du}{dx} + 6 x^{-1} u                                  & = -9 x^{-2}                      \\
+  e^{6 \ln |x|} \frac{du}{dx} + 6 x^{-1} e^{6 \ln |x|} u      & = -9 e^{6 \ln |x|} x^{-2}        \\
+  \frac{d}{dx} (x^6 u)                                        & = -9 x^4                         \\
+  x^6 u                                                       & = -\frac{9}{5} x^5 + c           \\
+  u                                                           & = -\frac{9}{5} x^{-1} + c x^{-6} \\
+  y^{-3}                                                      & = -\frac{9}{5} x^{-1} + c x^{-6}
+\end{align*}
+
+\[\left( \frac{1}{2} \right)^{-3} = -\frac{9}{5} (1)^{-1} + c (1)^{-6} \Rightarrow c = \frac{49}{5}\]
+
+\[y^{-3} = -\frac{9}{5} x^{-1} + \frac{49}{5} x^{-6}\]
+
+\subsubsection{23}
+
+Let $u = x + y + 1$ so $\frac{du}{dx} = 1 + \frac{dy}{dx}$ and
+
+\begin{align*}
+  \frac{du}{dx} - 1      & = u^2                   \\
+  \frac{1}{u^2 + 1} \,du & = dx                    \\
+  \arctan u              & = x + c                 \\
+  \arctan (x + y + 1)    & = x + c                 \\
+  x + y + 1              & = \tan (x + c)          \\
+  y                      & = -x - 1 + \tan (x + c)
+\end{align*}
+
+\subsubsection{25}
+
+Let $u = x + y$ so $\frac{du}{dx} = 1 + \frac{dy}{dx}$ and
+
+\begin{align*}
+  \frac{du}{dx} - 1                    & = \tan^2 u  \\
+  \frac{1}{1 + \tan^2 u} \,du          & = dx        \\
+  \frac{1}{2} (u + \sin u \cos u)      & = x + c     \\
+  x + y + \sin (x + y) \cos (x + y)    & = 2 (x + c) \\
+  x + y + \frac{1}{2} \sin (2 (x + y)) & = 2 (x + c) \\
+  2 x + 2 y + \sin (2 (x + y))         & = 4 (x + c) \\
+  2 y - 2 x + \sin (2 (x + y))         & = c
+\end{align*}
+
+\subsubsection{35}
+
+\begin{enumerate}
+  \item Let $y = y_1 + u$ so $\frac{dy}{dx} = \frac{dy_1}{dx} + \frac{du}{dx}$ but $\frac{dy_1}{dx} = P(x) + Q(x) y_1 + R(x) y_1^2$ so
+
+        \begin{align*}
+          \frac{dy}{dx}                                & = P(x) + Q(x) y + R(x) y^2                 \\
+          P(x) + Q(x) y_1 + R(x) y_1^2 + \frac{du}{dx} & = P(x) + Q(x) (y_1 + u) + R(x) (y_1 + u)^2 \\
+          \frac{du}{dx}                                & = Q(x) u + R(x) (2 y_1 u + u^2)            \\
+          \frac{du}{dx} - (Q(x) + 2 R(x) y_1) u        & = R(x) u^2
+        \end{align*}
+
+  \item
+
+        Let $y = 2 x^{-1} + u$ so $\frac{dy}{dx} = -2 x^{-2} + \frac{du}{dx}$ and
+
+        \begin{align*}
+          -\frac{2}{x^2} + \frac{du}{dx} & = -\frac{4}{x^2} - \frac{1}{x} \left( \frac{2}{x} + u \right) + \left( \frac{2}{x} + u \right)^2    \\
+          \frac{du}{dx}                  & = \frac{2}{x^2} - \frac{4}{x^2} - \frac{2}{x^2} - \frac{u}{x} + \frac{4}{x^2} + \frac{4 u}{x} + u^2 \\
+          \frac{du}{dx} - \frac{3}{x} u  & = u^2
+        \end{align*}
+
+        Let $v = u^{1 - n} = u^{-1}$ so $u = v^{-1}$ and $\frac{du}{dx} = -v^{-2} \frac{dv}{dx}$
+
+        \begin{align*}
+          -v^{-2} \frac{dv}{dx} - \frac{3}{x} v^{-1}                & = v^{-2}                                                      \\
+          \frac{dv}{dx} + \frac{3}{x} v                             & = -1                                                          \\
+          e^{3 \ln |x|} \frac{dv}{dx} + \frac{3}{x} e^{3 \ln |x|} v & = -e^{3 \ln |x|}                                              \\
+          \frac{d}{dt} (x^3 v)                                      & = -x^3                                                        \\
+          x^3 v                                                     & = -\frac{1}{4} x^4 + c                                        \\
+          \frac{1}{y - y_1}                                         & = -\frac{1}{4} x + c x^{-3}                                   \\
+          y                                                         & = y_1 + \left( -\frac{1}{4} x + c x^{-3} \right)^{-1}         \\
+                                                                    & = \frac{2}{x} + \left( -\frac{1}{4} x + c x^{-3} \right)^{-1}
+        \end{align*}
+\end{enumerate}
+
+\subsubsection{37}
+
+\begin{align*}
+  \frac{dP}{dt}       & = P (a - b P) \\
+  \frac{dP}{dt} - a P & = - b P^2
+\end{align*}
+
+Let $u = P^{1 - n} = P^{-1}$ so $P = u^{-1}$ and $\frac{dP}{dt} = -u^{-2} \frac{du}{dt}$
+
+\begin{align*}
+  -u^{-2} \frac{du}{dt} - a u^{-1}    & = -b u^{-2}                \\
+  \frac{du}{dt} + a u                 & = b                        \\
+  e^{a t} \frac{du}{dt} + a e^{a t} u & = b e^{a t}                \\
+  \frac{d}{dt} (e^{a t} u)            & = b e^{a t}                \\
+  e^{a t} u                           & = \frac{b}{a} e^{a t} + c  \\
+  P^{-1}                              & = \frac{b}{a} + c e^{-a t} \\
+                                      & = \frac{b + c e^{-a t}}{a} \\
+  P                                   & = \frac{a}{b + c e^{-a t}}
+\end{align*}
+
 \end{document}
