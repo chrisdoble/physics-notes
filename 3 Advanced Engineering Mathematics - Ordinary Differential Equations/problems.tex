@@ -1441,4 +1441,22 @@ Let $u = P^{1 - n} = P^{-1}$ so $P = u^{-1}$ and $\frac{dP}{dt} = -u^{-2} \frac{
   P                                   & = \frac{a}{b + c e^{-a t}}
 \end{align*}
 
+\subsection{A Numerical Method}
+
+\subsubsection{1}
+
+\begin{align*}
+  x_0 & = 1   & y_0 & = 5                            \\
+  x_1 & = 1.1 & y_1 & = y_0 + h f(x_0, y_0) = 3.8000 \\
+  x_2 & = 1.2 & y_2 & = y_1 + h f(x_1, y_1) = 2.9800 \\
+\end{align*}
+
+\begin{align*}
+  x_0 & = 1    & y_0 & = 5                            \\
+  x_1 & = 1.05 & y_1 & = y_0 + h f(x_0, y_0) = 4.4000 \\
+  x_2 & = 1.1  & y_2 & = y_1 + h f(x_1, y_1) = 3.8950 \\
+  x_3 & = 1.15 & y_3 & = y_2 + h f(x_2, y_2) = 3.4708 \\
+  x_4 & = 1.2  & y_4 & = y_3 + h f(x_3, y_3) = 3.1152
+\end{align*}
+
 \end{document}
