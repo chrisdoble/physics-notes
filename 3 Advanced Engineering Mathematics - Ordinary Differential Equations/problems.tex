@@ -1459,4 +1459,152 @@ Let $u = P^{1 - n} = P^{-1}$ so $P = u^{-1}$ and $\frac{dP}{dt} = -u^{-2} \frac{
   x_4 & = 1.2  & y_4 & = y_3 + h f(x_3, y_3) = 3.1152
 \end{align*}
 
+\subsection{Linear Models}
+
+\subsubsection{1}
+
+\[P(t) = P_0 e^{k t}\]
+
+\[P(5) = 2 P_0 = P_0 e^{5 k} \Rightarrow k = \frac{\ln 2}{5} = 0.139\]
+
+\[P(t) = P_0 e^{0.139 t}\]
+
+\[3 P_0 = P_0 e^{0.139 t} \Rightarrow t = \qty{7.9}{years}\]
+
+\[4 P_0 = P_0 e^{0.139 t} \Rightarrow t = \qty{10}{years}\]
+
+\subsubsection{5}
+
+\[A(t) = A_0 e^{k t}\]
+
+\[A(3.3) = \frac{1}{2} A_0 = A_0 e^{3.3 k} \Rightarrow k = -0.21\]
+
+\[0.1 A_0 = A_0 e^{-0.21 t} \Rightarrow t = \qty{11}{hours}\]
+
+\subsubsection{9}
+
+\[\frac{dI}{dt} = k I \Rightarrow I(t) = c e^{k t}\]
+
+\[I(3) = 0.25 I_0 = I_0 e^{3 k} \Rightarrow k = -0.462\]
+
+\[I(15) = I_0 e^{-0.462 (15)} = 0.001 I_0\]
+
+\subsubsection{11}
+
+\[0.145 A_0 = A_0 e^{-0.00012097 t} \Rightarrow t = \qty{15963}{years}\]
+
+\subsubsection{13}
+
+\begin{align*}
+  \frac{dT}{dt}                   & = k (T - T_m)     \\
+  \frac{1}{T - T_m} \frac{dT}{dt} & = k               \\
+  \ln (T - T_m)                   & = k t + c         \\
+  T - T_m                         & = c e^{k t}       \\
+  T                               & = T_m + c e^{k t} \\
+                                  & = 10 + 60 e^{k t}
+\end{align*}
+
+\[T(0.5) = 50 = 10 + 60 e^{0.5 k} \Rightarrow k = -0.811\]
+
+\[T(1) = 36.7\]
+
+\[15 = 10 + 60 e^{-0.811 t} \Rightarrow t = \qty{3.06}{min}\]
+
+\subsubsection{21}
+
+\begin{align*}
+  \frac{dA}{dt}                & = 4 - \frac{A}{50}    \\
+  \frac{dA}{dt} + \frac{A}{50} & = 4                   \\
+  \frac{d}{dt} (e^{t / 50} A)  & = 4 e^{t / 50}        \\
+  e^{t / 50} A                 & = 200 e^{t / 50} + c  \\
+  A                            & = 200 + c e^{-t / 50}
+\end{align*}
+
+\[A(0) = 30 = 200 + c e^{-(0) / 50} \Rightarrow c = -170\]
+
+\[A(t) = 200 - 170 e^{-t / 50}\]
+
+\subsubsection{25}
+
+\[V(t) = 500 - 5 t\]
+
+\begin{align*}
+  \frac{dA}{dt}                                                                          & = 10 - \frac{10}{500 - 5 t} A     \\
+  \frac{dA}{dt} + \frac{10}{500 - 5 t} A                                                 & = 10                              \\
+  \frac{dA}{dt} - 2 \frac{-5}{500 - 5 t} A                                               & = 10                              \\
+  e^{-2 \ln (500 - 5 t)} \frac{dA}{dt} - 2 \frac{-5}{500 - 5 t} e^{-2 \ln (500 - 5 t)} A & = e^{-2 \ln (500 - 5 t)} 10       \\
+  \frac{d}{dt} (A (500 - 5 t)^{-2})                                                      & = 10 (500 - 5 t)^{-2}             \\
+  A (500 - 5 t)^{-2}                                                                     & = \frac{2}{500 - 5 t} + c         \\
+  A                                                                                      & = 2 (500 - 5 t) + c (500 - 5 t)^2 \\
+                                                                                         & = 1000 - 10 t + c (500 - 5 t)^2
+\end{align*}
+
+\[A(0) = 0 \Rightarrow c = -0.004\]
+
+\[A(t) = 1000 - 10 t - 0.004 (500 - 5 t)^2 = 1000 - 10 t - \frac{1}{10} (100 - t)^2\]
+
+The tank is empty at $t = 100$
+
+\subsubsection{29}
+
+\[i(t) = \frac{3}{5} - \frac{3}{5} e^{-500 t}\]
+
+$i \rightarrow \frac{3}{5}$ as $t \rightarrow \infty$
+
+\subsubsection{33}
+
+\[i(t) = \begin{cases}
+    60 (1 - e^{-t / 10}), & 0 \le t \le 20 \\
+    383 e^{-t / 10},      & t > 20
+  \end{cases}\]
+
+\subsubsection{35}
+
+\begin{enumerate}
+  \item
+
+        \begin{align*}
+          m \frac{dv}{dt}               & = m g - k v                      \\
+          \frac{dv}{dt} + \frac{k}{m} v & = g                              \\
+          \frac{d}{dt} (e^{k t / m} v)  & = e^{k t / m} g                  \\
+          e^{k t / m} v                 & = \frac{g m}{k} e^{k t / m} + c  \\
+          v                             & = \frac{g m}{k} + c e^{-k t / m}
+        \end{align*}
+
+        \[v(0) = v_0 = \frac{g m}{k} + c e^{-k (0) / m} \Rightarrow c = v_0 - \frac{g m}{k}\]
+
+        \[v(t) = \frac{g m}{k} + \left( v_0 - \frac{g m}{k} \right) e^{-k t / m}\]
+
+  \item \[v_t = \frac{g m}{k}\]
+
+  \item
+
+        \[s(t) = \frac{g m}{k} t - \frac{m}{k} \left( v_0 - \frac{g m}{k} \right) e^{-k t / m} + c\]
+
+        \[s(0) = 0 = -\frac{m}{k} \left( v_0 - \frac{g m}{k} \right) + c \Rightarrow c = \frac{m}{k} \left( v_0 - \frac{g m}{k} \right)\]
+
+        \begin{align*}
+          s(t) & = \frac{m}{k} \left( g t - \left( v_0 + \frac{g m}{k} \right) e^{-k t / m} + v_0 - \frac{g m}{k} \right) \\
+               & = \frac{m}{k} \left( g t + \left( v_0 - \frac{g m}{k} \right) \left( 1 - e^{-k t / m} \right) \right)
+        \end{align*}
+\end{enumerate}
+
+\subsubsection{41}
+
+\begin{enumerate}
+  \item
+
+        \begin{align*}
+          \frac{dP}{dt} & = k_1 P - k_2 P       \\
+                        & = (k_1 - k_2) P       \\
+          P             & = c e^{(k_1 - k_2) t}
+        \end{align*}
+\end{enumerate}
+
+\subsubsection{43}
+
+\begin{enumerate}
+  \item $x = r / k$
+\end{enumerate}
+
 \end{document}
