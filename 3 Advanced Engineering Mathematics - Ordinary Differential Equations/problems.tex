@@ -1754,4 +1754,162 @@ $\qty{29.3}{g}$; $\qty{60}{g}$; $\qty{0}{g}$; $\qty{30}{g}$
         \end{align*}
 \end{enumerate}
 
+\subsection{Modeling with Systems of First-Order DEs}
+
+\subsubsection{1}
+
+\begin{align*}
+  \frac{dx}{dt} & = -\lambda_1 x         \\
+  \ln |x|       & = -\lambda_1 t + c_1   \\
+  x             & = c_1 e^{-\lambda_1 t}
+\end{align*}
+
+\[x(0) = x_0 = c_1 e^{-\lambda_1 (0)} \Rightarrow c_1 = x_0\]
+
+\[x = x_0 e^{-\lambda_1 t}\]
+
+\begin{align*}
+  \frac{dy}{dt}                    & = \lambda_1 x - \lambda_2 y                                                           \\
+                                   & = \lambda_1 x_0 e^{-\lambda_1 t} - \lambda_2 y                                        \\
+  \frac{dy}{dt} + \lambda_2 y      & = \lambda_1 x_0 e^{-\lambda_1 t}                                                      \\
+  \frac{d}{dt} (e^{\lambda_2 t} y) & = \lambda_1 x_0 e^{(\lambda_2 - \lambda_1) t}                                         \\
+  e^{\lambda_2 t} y                & = \frac{\lambda_1}{\lambda_2 - \lambda_1} x_0 e^{(\lambda_2 - \lambda_1) t} + c_2     \\
+  y                                & = \frac{\lambda_1}{\lambda_2 - \lambda_1} x_0 e^{-\lambda_1 t} + c_2 e^{-\lambda_2 t}
+\end{align*}
+
+\[y(0) = 0 = \frac{\lambda_1}{\lambda_2 - \lambda_1} x_0 e^{-\lambda_1 (0)} + c_2 e^{-\lambda_2 (0)} \Rightarrow c_2 = -\frac{\lambda_1}{\lambda_2 - \lambda_1} x_0\]
+
+\[y = \frac{\lambda_1}{\lambda_2 - \lambda_1} x_0 (e^{-\lambda_1 t} - e^{-\lambda_2 t})\]
+
+\begin{align*}
+  \frac{dz}{dt} & = \lambda_2 y                                                                                                                                \\
+                & = \frac{\lambda_1 \lambda_2}{\lambda_2 - \lambda_1} x_0 (e^{-\lambda_1 t} - e^{-\lambda_2 t})                                                \\
+  z             & = \frac{\lambda_1 \lambda_2}{\lambda_2 - \lambda_1} x_0 (-\frac{1}{\lambda_1} e^{-\lambda_1 t} + \frac{1}{\lambda_2} e^{-\lambda_2 t}) + c_3 \\
+                & = \frac{\lambda_1 e^{-\lambda_2 t} - \lambda_2 e^{-\lambda_1 t}}{\lambda_2 - \lambda_1} x_0 + c_3
+\end{align*}
+
+\begin{align*}
+  z(0) = 0 & = \frac{\lambda_1 e^{-\lambda_2 (0)} - \lambda_2 e^{-\lambda_1 (0)}}{\lambda_2 - \lambda_1} x_0 + c_3 \\
+           & = \frac{\lambda_1 - \lambda_2}{\lambda_2 - \lambda_1} x_0 + c_3                                       \\
+  c_3      & = x_0
+\end{align*}
+
+\[z = \frac{\lambda_1 (e^{-\lambda_2 t} - 1) + \lambda_2 (1 - e^{-\lambda_1 t})}{\lambda_2 - \lambda_1} x_0\]
+
+\subsubsection{3}
+
+$\qty{5}{days}$, $\qty{20}{days}$, $\qty{147}{days}$
+
+\subsubsection{5}
+
+\begin{enumerate}
+  \item
+
+        \begin{align*}
+          \frac{dP}{dt} & = -(\lambda_A + \lambda_C) P       \\
+          P             & = c e^{-(\lambda_A + \lambda_C) t}
+        \end{align*}
+
+        \[P(0) = P_0 = c e^{-(\lambda_A + \lambda_C) (0)} \Rightarrow c = P_0\]
+
+        \[P = P_0 e^{-(\lambda_A + \lambda_C) t}\]
+
+  \item \[\frac{1}{2} P_0 = P_0 e^{-(\lambda_A + \lambda_C) t} \Rightarrow t = \frac{\ln 1 / 2}{-(\lambda_A + \lambda_C)} = \qty{1.25e9}{years}\]
+
+  \item
+
+        \begin{align*}
+          \frac{dA}{dt} & = \lambda_A P                                                                     \\
+                        & = \lambda_A P_0 e^{-(\lambda_A + \lambda_C) t}                                    \\
+          A             & = -\frac{\lambda_A}{\lambda_A + \lambda_C} P_0 e^{-(\lambda_A + \lambda_C) t} + c
+        \end{align*}
+
+        \[A(0) = 0 = -\frac{\lambda_A}{\lambda_A + \lambda_C} P_0 e^{-(\lambda_A + \lambda_C) (0)} + c \Rightarrow c = \frac{\lambda_A}{\lambda_A + \lambda_C} P_0\]
+
+        \[A = \frac{\lambda_A}{\lambda_A + \lambda_C} P_0 (1 - e^{-(\lambda_A + \lambda_C) t})\]
+
+        \begin{align*}
+          \frac{dC}{dt} & = \lambda_C P                                                                     \\
+                        & = \lambda_C P_0 e^{-(\lambda_A + \lambda_C) t}                                    \\
+          C             & = -\frac{\lambda_C}{\lambda_A + \lambda_C} P_0 e^{-(\lambda_A + \lambda_C) t} + c
+        \end{align*}
+
+        \[C(0) = 0 = -\frac{\lambda_C}{\lambda_A + \lambda_C} P_0 e^{-(\lambda_A + \lambda_C) (0)} + c \Rightarrow c = \frac{\lambda_C}{\lambda_A + \lambda_C} P_0\]
+
+        \[C = \frac{\lambda_C}{\lambda_A + \lambda_C} P_0 (1 - e^{-(\lambda_A + \lambda_C) t})\]
+
+  \item
+
+        \[\frac{\lambda_A}{\lambda_A + \lambda_C} = 10.5\%\]
+
+        \[\frac{\lambda_C}{\lambda_A + \lambda_C} = 89.5\%\]
+\end{enumerate}
+
+\subsubsection{7}
+
+\[\frac{dx_1}{dt} = 6 - \frac{2}{25} x_1 + \frac{1}{50} x_2\]
+
+\[\frac{dx_2}{dt} = \frac{2}{25} x_1 - \frac{2}{25} x_2\]
+
+\subsubsection{9}
+
+\begin{enumerate}
+  \item
+
+        \[V_1 = 100 + t\]
+
+        \[V_2 = 100 - t\]
+
+        \[\frac{dx_1}{dt} = \frac{3}{100 - t} x_2 - \frac{2}{100 + t} x_1\]
+
+        \[\frac{dx_2}{dt} = \frac{2}{100 + t} x_1 - \frac{3}{100 - t} x_2\]
+
+  \item
+
+        \[\frac{dx_1}{dt} = -\frac{dx_2}{dt}\]
+
+        This makes sense because it's a closed system. Salt is moving from tank B to tank A.
+
+        \[x_1 = c - x_2\]
+
+        \[x_1(0) = c - x_2(0) \Rightarrow 100 = c - 50 \Rightarrow c = 150\]
+
+        \begin{align*}
+          \frac{dx_2}{dt}                                                            & = \frac{2}{100 + t} (150 - x_2) - \frac{3}{100 - t} x_2               \\
+                                                                                     & = \frac{300}{100 + t} - \frac{2}{100 + t} x_2 - \frac{3}{100 - t} x_2 \\
+          \frac{dx_2}{dt} + \left( \frac{2}{100 + t} + \frac{3}{100 - t} \right) x_2 & = \frac{300}{100 + t}                                                 \\
+          \frac{d}{dt} (e^{2 \ln |100 + t| - 3 ln |100 - t|} x_2)                    & = \frac{300}{100 + t} e^{2 \ln |100 + t| - 3 ln |100 - t|}            \\
+          \frac{d}{dt} \left( \frac{(100 + t)^2}{(100 - t)^3} x_2 \right)            & = \frac{300 (100 + t)}{(100 - t)^3}                                   \\
+                                                                                     & = \frac{30000}{(100 - t)^3} + \frac{300 t}{(100 - t)^3}               \\
+          \frac{(100 + t)^2}{(100 - t)^3} x_2                                        & = \frac{15000}{(100 - t)^2} + \frac{300 (t - 50)}{(100 - t)^2} + c
+        \end{align*}
+
+        \begin{align*}
+          x_2         & = \frac{(100 - t)^3}{(100 + t)^2} \left( \frac{15000}{(100 - t)^2} + \frac{300 (t - 50)}{(100 - t)^2} + c \right) \\
+          x_2(0) = 50 & = \frac{100^3}{100^2} \left( \frac{15000}{100^2} + \frac{300 (-50)}{100^2} + c \right)                            \\
+                      & = 100 c                                                                                                           \\
+          c           & = \frac{1}{2}
+        \end{align*}
+
+        \[x_2(30) = \qty{47.4}{lb}\]
+\end{enumerate}
+
+\subsubsection{15}
+
+\[i_1 = i_2 + i_3\]
+
+\begin{align*}
+  i_1 R_1 + \frac{di_2}{dt} L_1 + i_2 R_2         & = E(t) \\
+  (i_2 + i_3) R_1 + \frac{di_2}{dt} L_1 + i_2 R_2 & = E(t) \\
+\end{align*}
+
+\begin{align*}
+  i_1 R_1 + \frac{di_3}{dt} L_2 + i_3 R_3         & = E(t) \\
+  (i_2 + i_3) R_1 + \frac{di_3}{dt} L_2 + i_3 R_3 & = E(t)
+\end{align*}
+
+\subsubsection{17}
+
+$i(0) = i_0$, $s(0) = n - i_0$, $r(0) = 0$; It's consistent because no one leaves the community
+
 \end{document}
