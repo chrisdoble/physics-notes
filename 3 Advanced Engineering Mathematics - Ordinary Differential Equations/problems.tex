@@ -7,6 +7,7 @@
 \graphicspath{{./images/}}
 
 \DeclareMathOperator{\arctanh}{arctanh}
+\DeclareMathOperator{\csch}{csch}
 \DeclareMathOperator{\sech}{sech}
 
 \setlist[enumerate, 1]{label={(\alph*)}}
@@ -2240,5 +2241,256 @@ $\frac{dy}{dx} = -x^n$ is semi-stable for even $n$, stable for odd $n$
   \frac{dy}{dx} & = -\frac{1}{c_1 e^x - 1}      \\
   y             & = x - \ln (1 - c_1 e^x) + c_2
 \end{align*}
+
+\section{Higher-Order Differential Equations}
+
+\subsection{Theory of Linear Equations}
+
+\subsubsection{1}
+
+\begin{align*}
+  y & = c_1 e^x + c_2 e^{-x}       \\
+  0 & = c_1 e^{(0)} + c_2 e^{-(0)} \\
+    & = c_1 + c_2
+\end{align*}
+
+\begin{align*}
+  y' & = c_1 e^x - c_2 e^{-x}       \\
+  1  & = c_1 e^{(0)} - c_2 e^{-(0)} \\
+     & = c_1 - c_2
+\end{align*}
+
+\[c_2 = c_1 - 1 \Rightarrow 0 = c_1 + c_1 - 1 \Rightarrow c_1 = \frac{1}{2}, c_2 = -\frac{1}{2}\]
+
+\[y = \frac{1}{2} (e^x - x^{-x})\]
+
+\subsubsection{3}
+
+\begin{align*}
+  y & = c_1 x + c_2 x \ln x       \\
+  3 & = c_1 (1) + c_2 (1) \ln (1) \\
+    & = c_1
+\end{align*}
+
+\begin{align*}
+  y'  & = 3 + c_2 (1 + \ln x)   \\
+  -1  & = 3 + c_2 (1 + \ln (1)) \\
+  c_2 & = -4
+\end{align*}
+
+\[y = 3 x - 4 x \ln x\]
+
+\subsubsection{9}
+
+$(-\infty, 2)$
+
+\subsubsection{11}
+
+\begin{enumerate}
+  \item
+
+        \begin{align*}
+          y & = c_1 e^x + c_2 e^{-x}       \\
+          0 & = c_1 e^{(0)} + c_2 e^{-(0)} \\
+            & = c_1 + c_2
+        \end{align*}
+
+        \begin{align*}
+          1   & = c_1 e^{(1)} + c_2 e^{-(1)} \\
+              & = c_1 e + c_2 e^{-1}         \\
+              & = c_1 e - c_1 e^{-1}         \\
+              & = c_1 (e - e^{-1})           \\
+          c_1 & = \frac{1}{e - e^{-1}}       \\
+          c_2 & = -\frac{1}{e - e^{-1}}
+        \end{align*}
+
+        \[y = \frac{e^x - e^{-x}}{e - e^{-1}}\]
+
+  \item
+
+        \begin{align*}
+          y & = c_3 \cosh x + c_4 \sinh x \\
+          0 & = c_3 \cosh 0 + c_4 \sinh 0 \\
+            & = c_3
+        \end{align*}
+
+        \begin{align*}
+          y   & = c_4 \sinh x \\
+          1   & = c_4 \sinh 1 \\
+          c_4 & = \csch 1
+        \end{align*}
+
+        \[y = (\csch 1) \sinh x\]
+
+  \item
+
+        \[(\csch 1) \sinh x = \frac{2}{e - e^{-1}} \frac{e^x - e^{-x}}{2} = \frac{e^x - e^{-x}}{e - e^{-1}}\]
+
+\end{enumerate}
+
+\subsubsection{13}
+
+\begin{enumerate}
+  \item
+
+        \begin{align*}
+          y & = c_1 e^x \cos x + c_2 e^x \sin x             \\
+          1 & = c_1 e^{(0)} \cos (0) + c_2 e^{(0)} \sin (0) \\
+            & = c_1
+        \end{align*}
+
+        \begin{align*}
+          y'  & = e^x \cos x - e^x \sin x + c_2 e^x \sin x + c_2 e^x \cos x                                         \\
+          0   & = e^{(\pi)} \cos (\pi) - e^{(\pi)} \sin (\pi) + c_2 e^{(\pi)} \sin (\pi) + c_2 e^{(\pi)} \cos (\pi) \\
+              & = -e^\pi - c_2 e^\pi                                                                                \\
+          c_2 & = -1
+        \end{align*}
+
+        \[y = e^x \cos x - e^x \sin x\]
+
+  \item
+
+        \begin{align*}
+          y & = c_1 e^x \cos x + c_2 e^x \sin x             \\
+          1 & = c_1 e^{(0)} \cos (0) + c_2 e^{(0)} \sin (0) \\
+            & = c_1
+        \end{align*}
+
+        \begin{align*}
+          y  & = c_1 e^x \cos x + c_2 e^x \sin x                 \\
+          -1 & = e^{(\pi)} \cos (\pi) + c_2 e^{(\pi)} \sin (\pi) \\
+             & = -e^\pi
+        \end{align*}
+
+        No solution
+
+  \item
+
+        \[c_1 = 1\]
+
+        \begin{align*}
+          y   & = c_1 e^x \cos x + c_2 e^x \sin x                                                                       \\
+          1   & = e^{(\pi / 2)} \cos \left( \frac{\pi}{2} \right) + c_2 e^{(\pi / 2)} \sin \left( \frac{\pi}{2} \right) \\
+              & = c_2 e^{\pi / 2}                                                                                       \\
+          c_2 & = e^{-\pi / 2}
+        \end{align*}
+
+        \[y = e^x \cos x + e^{x - \pi / 2} \sin x\]
+
+  \item
+
+        \begin{align*}
+          y & = c_1 e^x \cos x + c_2 e^x \sin x             \\
+          0 & = c_1 e^{(0)} \cos (0) + c_2 e^{(0)} \sin (0) \\
+            & = c_1 e                                       \\
+            & = c_1
+        \end{align*}
+
+        \begin{align*}
+          y & = c_1 e^x \cos x + c_2 e^x \sin x \\
+          0 & = c_2 e^{(\pi)} \sin (\pi)
+        \end{align*}
+
+        \[y = c_2 e^x \sin x\]
+\end{enumerate}
+
+\subsubsection{15}
+
+Dependent
+
+\subsubsection{17}
+
+Dependent
+
+\subsubsection{19}
+
+Dependent
+
+\subsubsection{21}
+
+Independent
+
+\subsubsection{23}
+
+\[y'' - y' - 12y = 9e^{-3x} + 3e^{-3x} - 12e^{-3x} = 0\]
+
+\[y'' - y' - 12y = 16e^{4x} - 4e^{4x} - 12e^{4x} = 0\]
+
+Both functions are solutions of the differential equation and are linearly independent, so they form a fundamental set of solutions.
+
+\[y = c_1 e^{-3x} + c_2 e^{4x}\]
+
+\subsubsection{25}
+
+\begin{align*}
+  y'' - 2y' + 5y & = e^x \cos 2x -2e^x \sin 2x -2e^x \sin 2x -4e^x \cos 2x \\
+                 & \qquad - 2(e^x \cos 2x -2e^x \sin 2x) + 5e^x \cos 2x    \\
+                 & = 0
+\end{align*}
+
+\begin{align*}
+  y'' - 2y' + 5y & = e^x \sin 2x + 2e^x \cos 2x + 2e^x \cos 2x - 4e^x \sin 2x \\
+                 & \qquad - 2(e^x \sin 2x + 2e^x \cos 2x) + 5e^x \sin 2x      \\
+                 & = 0
+\end{align*}
+
+\begin{align*}
+  W(e^x \cos 2x, e^x \sin 2x) & = \begin{vmatrix}
+                                    e^x \cos 2x                & e^x \sin 2x                \\
+                                    e^x \cos 2x - 2e^x \sin 2x & e^x \sin 2x + 2e^x \cos 2x
+                                  \end{vmatrix}                \\
+                              & = e^x \cos 2x (e^x \sin 2x + 2e^x \cos 2x)                               \\
+                              & \qquad - e^x \sin 2x (e^x \cos 2x - 2e^x \sin 2x)                        \\
+                              & = e^{2x} (\sin 2x \cos 2x + 2 \cos^2 2x - \sin 2x \cos 2x + 2 \sin^2 2x) \\
+                              & = 2e^{2x}
+\end{align*}
+
+Both functions are solutions to the differential equation and the Wronskian does not equal $0$ for all $x$ in the interval.
+
+\[y = c_1 e^x \cos 2x + c_2 e^x \sin 2x\]
+
+\subsubsection{27}
+
+\begin{align*}
+  x^2 y'' - 6xy' + 12y & = x^2 (6x) - 6x (3x^2) + 12 (x^3) \\
+                       & = 6x^3 - 18x^3 + 12x^3            \\
+                       & = 0
+\end{align*}
+
+\begin{align*}
+  x^2 y'' - 6xy' + 12y & = x^2 (12x^2) - 6x (4x^3) + 12 (x^4) \\
+                       & = 12x^4 - 24x^4 + 12x^4              \\
+                       & = 0
+\end{align*}
+
+\begin{align*}
+  W(x^3, x^4) & = \begin{vmatrix}
+                    x^3  & x^4  \\
+                    3x^2 & 4x^3
+                  \end{vmatrix}              \\
+              & = (x^3) (4x^3) - (x^4) (3x^2) \\
+              & = 4x^6 - 3x^6                 \\
+              & = x^6
+\end{align*}
+
+Both functions are solutions to the differential equation and, because $0$ isn't included in the interval, the Wronskian does not equal $0$ for all $x$ in the interval.
+
+\[y = c_1 x^3 + c_2 x^4\]
+
+\subsubsection{35}
+
+\begin{enumerate}
+  \item
+
+        \[y'' - 6y' + 5y = 12e^{2x} - 6(6e^{2x}) + 5(3e^{2x}) = -9e^{2x}\]
+
+        \[y'' - 6y' + 5y = 2 - 6(2x + 3) + 5(x^2 + 3x) = 5x^2 + 3x - 16\]
+
+  \item
+
+        \[y = 3e^{2x} + x^2 + 3x\]
+
+        \[y = -\frac{1}{9}(3e^{2x}) - 2(x^2 + 3x) = -\frac{1}{3} e^{2x} - 2(x^2 + 3x)\]
+\end{enumerate}
 
 \end{document}
