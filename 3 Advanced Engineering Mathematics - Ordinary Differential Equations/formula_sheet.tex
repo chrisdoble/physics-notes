@@ -123,4 +123,43 @@
   \item Substitude $u = y - y_1$
 \end{enumerate}
 
+\section{Higher-order ODEs}
+
+\subsection{Initial Value Problems}
+
+\textbf{Form:} $n$-th order IVP \[a_n(x) \frac{d^ny}{dx^n} + a_{n - 1}(x) \frac{d^{n - 1}y}{dx_{n - 1}} + \cdots + a_1(x) \frac{dy}{dx} + a_0(x) y = g(x)\] subject to \[y(x_0) = y_0, \,y'(x_0) = y_1, \,\ldots, \,y^{(n - 1)}(x_0) = y_{n - 1}\] \\ \textbf{Test:} $a_n(x)$, $a_{n - 1}(x)$, $\ldots$, $a_0(x)$, and $g(x)$ are continuous on an interval $I$ and $a_n(x) \ne 0$ for every $x$ in $I$ \\ \textbf{Property:} A unique solution exists for every $x = x_0$ in $I$
+
+\subsection{Linear Independence}
+
+\textbf{Form:} A set of functions $f_1$, $f_2$, $\ldots$, $f_n$ \\ \textbf{Test:} The Wronskian $W(f_1, f_2, \ldots, f_n) \ne 0$ for every $x$ in an interval $I$ where \[W(f_1, f_2, \ldots, f_n) = \begin{vmatrix}
+    f_1           & f_2           & \cdots & f_n           \\
+    f_1'          & f_2'          & \cdots & f_n'          \\
+    \vdots        & \vdots        &        & \vdots        \\
+    f_1^{(n - 1)} & f_2^{(n - 1)} & \cdots & f_n^{(n - 1)}
+  \end{vmatrix}\] \\ \textbf{Property:} The functions are linearly independent in $I$
+
+\subsection{Homogeneous Linear $n$th-Order Equations}
+
+The general solution is of the form \[y = c_1 y_1 + c_2 y_2 + \cdots + c_n y_n\] where $c_i$ are arbitrary constants and $y_i$ are a fundamental set of solutions (i.e. a set of $n$ linearly independent solutions).
+
+\subsection{Nonhomogeneous Linear $n$th-Order Equations}
+
+The general solution is of the form \[y = y_c + y_p = c_1 y_1(x) + c_2 y_2(x) + \cdots + c_n y_n(x) + y_p(x)\] where $y_c$ is the complementary function (i.e. the general solution of the associated homogeneous equation) and $y_p$ is a particular solution.
+
+\subsection{Reduction of Order}
+
+\textbf{Form:} A homogeneous linear second-order dirrerential equation \[y'' + P(x) y' + Q(x) y = 0\] \\ \textbf{Test:} A non-trivial solution $y_1(x)$ is known \\ \textbf{Solution:} \begin{enumerate}
+  \item Recognise that the ratio of two linearly independent functions isn't constant, i.e. \[u(x) = \frac{y_1(x)}{y_2(x)} \text{ or } y_2(x) = u(x) y_1(x)\]
+
+  \item Substitute $y_2(x) = u(x) y_1(x)$ into the DE — this will result in a DE involving only $u''$ and $u'$ which can be treated as a linear first-order DE in $u' = w$
+
+  \item Solve for $w$
+
+  \item Substitute $w = u'$
+
+  \item Integrate to find $u$
+
+  \item Multiply by $y_1$ to find $y_2$
+\end{enumerate} or equivalently \[y_2 = y_1(x) \int \frac{e^{-\int P(x) \,dx}}{y_1^2(x)} \,dx\]
+
 \end{document}

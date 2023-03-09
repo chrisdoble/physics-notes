@@ -335,4 +335,26 @@
   \item The superposition for nonhomogeneous linear $n$th-order differential equations states that if $y_{p_1}$, $y_{p_2}$, $\ldots$, $y_{p_k}$ are $k$ particular solutions of a nonhomogeneous lienar $n$th-order differential equation on an interval $I$ corresponding, in turn, to $k$ distinct functions $g_1$, $g_2$, $\ldots$, $g_k$, then \[y_p(x) = y_{p_1}(x) + y_{p_2}(x) + \cdots + y_{p_k}(x)\] is a particular solution of \[a_n(x) y^{(n)} + a_{n - 1}(x) y^{(n - 1)} + \cdots + a_0(x) y = g_1(x) + g_2(x) + \cdots + g_k(x)\]
 \end{itemize}
 
+\subsection{Reduction of Order}
+
+\begin{itemize}
+  \item The \textbf{reduction of order} method requires knowledge of one non-trivial solution and comprises the following steps:
+
+        \begin{enumerate}
+          \item Recognise that the ratio of two linearly independent functions isn't constant, i.e. \[u(x) = \frac{y_1(x)}{y_2(x)} \text{ or } y_2(x) = u(x) y_1(x)\]
+
+          \item Substitute $y_2(x) = u(x) y_1(x)$ into the DE — this will result in a DE involving only $u''$ and $u'$ which can be treated as a linear first-order DE in $u' = w$
+
+          \item Solve for $w$
+
+          \item Substitute $w = u'$
+
+          \item Integrate to find $u$
+
+          \item Multiply by $y_1$ to find $y_2$
+        \end{enumerate}
+
+  \item A formula for the above on a DE in standard form \[y'' + P(x) y' + Q(x) y = 0\] is \[y_2 = y_1(x) \int \frac{e^{-\int P(x) \,dx}}{y_1^2(x)} \,dx\]
+\end{itemize}
+
 \end{document}
