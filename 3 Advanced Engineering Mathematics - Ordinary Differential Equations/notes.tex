@@ -357,4 +357,20 @@
   \item A formula for the above on a DE in standard form \[y'' + P(x) y' + Q(x) y = 0\] is \[y_2 = y_1(x) \int \frac{e^{-\int P(x) \,dx}}{y_1^2(x)} \,dx\]
 \end{itemize}
 
+\subsection{Homogeneous Linear Equations with Constant Coefficients}
+
+\begin{itemize}
+  \item All solutions to homogenous linear DEs \[a_n y^{(n)} + a_{n - 1} y^{(n - 1)} + \cdots + a_1 y' + a_0 y = 0\] where $a_i$ are real constants and $a_n \ne 0$ are either exponential functions or constructed from exponential functions
+
+  \item Substituting a solution $y = e^{mx}$ we find \[e^{mx} (a_n m^n + a_{n - 1} m^{n - 1} + \cdots + a_1 m + a_0) = 0\] where the term in brackets is called the \textbf{auxiliary equation} of the DE
+
+  \item Thus, the solution $y = e^{mx}$ is valid if $m$ is a root of the auxiliary equation
+
+  \item Real roots correspond to solutions of the form \[y = c e^{mx}\]
+
+  \item Complex roots $\alpha \pm i \beta$ correspond to solutions of the form \[y_1 = c_1 e^{\alpha x} \cos \beta x \text{ and } y_2 = c_2 e^{\alpha x} \sin \beta x\]
+
+  \item A root $m$ of multiplicity $k$ corresponds to the solutions \[e^{m x}, \: x e^{mx}, \: x^2 e^{mx}, \: \ldots, \: x^{k - 1} e^{mx}\]
+\end{itemize}
+
 \end{document}
