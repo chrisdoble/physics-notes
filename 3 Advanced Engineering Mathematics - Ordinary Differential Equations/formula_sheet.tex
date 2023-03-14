@@ -234,4 +234,39 @@ The general solution is of the form \[y = y_c + y_p = c_1 y_1(x) + c_2 y_2(x) + 
   \item Integrate each $u_i'$ to find $u_i$
 \end{enumerate}
 
+\subsection{Cauchy-Euler Equations}
+
+\textbf{Form:} \[a_n x^n \frac{d^n y}{dx^n} + a_{n - 1} x^{n - 1} \frac{d^{n - 1} y}{dx^{n - 1}} + \cdots + a_1 x \frac{dy}{dx} + a_0 y = g(x)\] \\ \textbf{Solution:} \begin{itemize}
+  \item If the equation is homogeneous:
+
+        \begin{enumerate}
+          \item Assume the equation has a solution of the form $y = x^m$, giving
+
+                \begin{align*}
+                  a_n x^n \frac{d^n y}{dx^n} & = a_n x^n m (m - 1) (m - 2) \cdots (m - n + 1) x^{m - n} \\
+                                             & = a_n m (m - 1) (m - 2) \cdots (m - n + 1) x^m
+                \end{align*}
+
+                and the equation then becomes \[f(m) x^m = 0\] where $f(m)$ is a polynomial in $m$ known as the auxiliary or characteristic equation, the roots of which form the general solution
+
+          \item Solve the auxiliary equation where
+
+                \begin{itemize}
+                  \item A real root $m$ corresponds to a solution \[y = c x^m\]
+
+                  \item Complex roots $\alpha \pm i \beta$ correspond to solutions \[x^\alpha (c_1 \cos (\beta \ln x) + c_2 \sin (\beta \ln x))\]
+
+                  \item A root $m$ of multiplicity $k$ corresponds to solutions \[x^m, \: x^m \ln x, \: x^m (\ln x)^2\, \:\ldots, \: x^m (\ln x)^{k - 1}\]
+                \end{itemize}
+        \end{enumerate}
+
+  \item If the equation is nonhomogeneous:
+
+        \begin{enumerate}
+          \item Solve the associated homogeneous equation
+
+          \item Find a particular solution via variation of parameters
+        \end{enumerate}
+\end{itemize}
+
 \end{document}
