@@ -4167,4 +4167,140 @@ Both functions are solutions to the differential equation and, because $0$ isn't
 
 \[T = \frac{2}{5} T_0 (r + r^{-1})\]
 
+\subsection{Nonlinear Equations}
+
+\subsubsection{3}
+
+\begin{align*}
+  y'' + (y')^2 + 1     & = 0                          \\
+  u' + u^2 + 1         & = 0                          \\
+  u'                   & = -(u^2 + 1)                 \\
+  \frac{1}{u^2 + 1} u' & = -1                         \\
+  \arctan u            & = c - x                      \\
+  u                    & = \tan (c - x)               \\
+  y'                   & = \tan (c - x)               \\
+  y                    & = \ln (\cos (c_1 - x)) + c_2
+\end{align*}
+
+\subsubsection{5}
+
+\begin{align*}
+  x^2 y'' + (y')^2 & = 0                                                       \\
+  x^2 u' + u^2     & = 0                                                       \\
+  u^{-2} u'        & = -x^{-2}                                                 \\
+  -u^{-1}          & = x^{-1} + c                                              \\
+  u                & = -\frac{x}{cx + 1}                                       \\
+  y                & = \frac{1}{c_1^2} \ln (c_1 x + 1) - \frac{1}{c_1} x + c_2
+\end{align*}
+
+\subsubsection{7}
+
+\begin{align*}
+  y y'' + (y')^2 + 1                     & = 0                     \\
+  y u u' + u^2 + 1                       & = 0                     \\
+  \frac{u}{u^2 + 1} u'                   & = -y^{-1}               \\
+  \frac{1}{2} \ln |u^2 + 1|              & = -\ln |y| + c_1        \\
+  \sqrt{u^2 + 1}                         & = c_1 y^{-1}            \\
+  u^2 + 1                                & = c_1 y^{-2}            \\
+  y'                                     & = \sqrt{c_1 y^{-2} - 1} \\
+  \frac{1}{\sqrt{c_1 y^{-2} - 1}} y'     & = 1                     \\
+  -y \sqrt{\frac{c_1}{y^2} - 1}          & = x + c_2               \\
+  y^2 \left( \frac{c_1}{y^2} - 1 \right) & = (x + c_2)^2           \\
+  c_1 - y^2                              & = (x + c_2)^2           \\
+  y^2                                    & = c_1 - (x + c_2)^2
+\end{align*}
+
+\subsubsection{9}
+
+\begin{align*}
+  y'' + 2y (y')^3         & = 0                   \\
+  u u' + 2yu^3            & = 0                   \\
+  u^{-2} u'               & = -2y                 \\
+  -u^{-1}                 & = -y^2 + c_1          \\
+  u                       & = \frac{1}{y^2 + c_1} \\
+  (y^2 + c_1) y'          & = 1                   \\
+  \frac{1}{3} y^3 + c_1 y & = x + c_2
+\end{align*}
+
+\subsubsection{11}
+
+\begin{align*}
+  y'' + yy'                        & = 0                                                                \\
+  uu' + yu                         & = 0                                                                \\
+  u'                               & = -y                                                               \\
+  u                                & = -\frac{1}{2} y^2 + c_1                                           \\
+  \frac{-2}{y^2 + c_1} y'          & = 1                                                                \\
+  -\frac{2 \arctan (y / c_1)}{c_1} & = x + c_2                                                          \\
+  \arctan (y / c_1)                & = -\frac{c_1}{2} (x + c_2)                                         \\
+                                   & = c_2 - \frac{c_1}{2} x                                            \\
+  y                                & = c_1 \tan \left( c_2 - \frac{c_1}{2} x \right)                    \\
+  y(0) = 1                         & = c_1 \tan \left( c_2 - \frac{c_1}{2} (0) \right)                  \\
+                                   & = c_1 \tan c_2                                                     \\
+  y'(0) = -1                       & = -\frac{1}{2} c_1^2 \sec^2 \left( c_2 - \frac{c_1 (0)}{2} \right) \\
+                                   & = -\frac{1}{2} c_1^2 \sec^2 c_2                                    \\
+  -1                               & = -\frac{1}{2} \left( \frac{1}{\tan c_2} \right)^2 \sec^2 c_2      \\
+                                   & = -\frac{1}{2} \frac{\cos^2 c_2}{\sin^2 c_2} \frac{1}{\cos^2 c_2}  \\
+  2                                & = \frac{1}{\sin^2 c_2}                                             \\
+  c_2                              & = \arcsin \frac{1}{\sqrt{2}}                                       \\
+                                   & = \frac{\pi}{4}                                                    \\
+  c_1                              & = 1                                                                \\
+  y                                & = \tan \left( \frac{\pi}{4} - \frac{1}{2} x \right)
+\end{align*}
+
+\subsubsection{13}
+
+\begin{align*}
+  x y''         & = y' + (y')^3 \\
+  x u'          & = u + u^3     \\
+  u' - x^{-1} u & = x^{-1} u^3
+\end{align*}
+
+Let $u = v^{-1 / 2}$ and $u' = -\frac{1}{2} v^{-3 / 2} v'$
+
+\begin{align*}
+  -\frac{1}{2} v^{-3 / 2} v' - x^{-1} v^{-1 / 2} & = x^{-1} v^{-3 / 2}                        \\
+  v' + 2 x^{-1} v                                & = -2 x^{-1}                                \\
+  e^{2 \ln |x|} v' + 2 x^{-1} e^{2 \ln |x|} v    & = -2 x^{-1} e^{2 \ln |x|}                  \\
+  \frac{d}{dx} (x^2 v)                           & = -2x                                      \\
+  x^2 v                                          & = -x^2 + c_1                               \\
+  u^{-2}                                         & = c_1 x^{-2} - 1                           \\
+  y'                                             & = \frac{1}{\sqrt{c_1 x^{-2} - 1}}          \\
+  y                                              & = c_2 - x \sqrt{c_1 x^{-2} - 1}            \\
+                                                 & = c_2 - \sqrt{c_1 - x^2}                   \\
+                                                 & = c_2 - \frac{1}{c_1} \sqrt{1 - c_1^2 x^2}
+\end{align*}
+
+\subsubsection{15}
+
+\[y(x) = y(0) + \frac{y'(0)}{1!} x + \frac{y''(0)}{2!} x^2 + \frac{y'''(0)}{3!} x^3 + \frac{y^{(4)}(0)}{4!} x^4 + \frac{y^{(5)}(0)}{5!} x^5 + \cdots\]
+
+\[y'' = x + y^2\]
+
+\begin{align*}
+  y(0)       & = 1                          \\
+  y'(0)      & = 1                          \\
+  y''(0)     & = (0) + (1)^2 = 1            \\
+  y'''       & = 1 + 2 y y'                 \\
+  y'''(0)    & = 1 + 2 (1) (1) = 3          \\
+  y^{(4)}    & = 2 y'^2 + 2 y y''           \\
+  y^{(4)}(0) & = 2 (1)^2 + 2 (1) (1) = 4    \\
+  y^{(5)}    & = 6 y' y'' + 2 y y'''        \\
+  y^{(5)}(0) & = 6 (1) (1) + 2 (1) (3) = 12
+\end{align*}
+
+\[y(x) = 1 + x + \frac{1}{2} x^2 + \frac{1}{2} x^3 + \frac{1}{6} x^4 + \frac{1}{10} x^5\]
+
+\subsubsection{19}
+
+\begin{align*}
+  \frac{y''}{[1 + (y')^2]^{3 / 2}} & = 1                        \\
+  \frac{y'}{\sqrt{(y')^2 + 1}}     & = x                        \\
+  y'                               & = x \sqrt{(y')^2 + 1}      \\
+  (y')^2                           & = x^2 ((y')^2 + 1)         \\
+  (1 - x^2) (y')^2                 & = x^2                      \\
+  (y')^2                           & = \frac{x^2}{1 - x^2}      \\
+  y'                               & = \frac{x}{\sqrt{1 - x^2}} \\
+  y                                & = -\sqrt{1 - x^2}
+\end{align*}
+
 \end{document}
