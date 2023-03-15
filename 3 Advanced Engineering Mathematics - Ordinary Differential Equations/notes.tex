@@ -478,4 +478,32 @@
         \end{enumerate}
 \end{itemize}
 
+\subsection{Nonlinear Equations}
+
+\begin{itemize}
+  \item The superposition principle does not hold for nonlinear equations
+
+  \item Nonlinear second order DEs of the form $F(x, y', y'') = 0$ where $y$ is missing can sometimes be solved by:
+
+        \begin{enumerate}
+          \item Substitute $u = y'$ (and thus $u' = y''$)
+
+          \item Solve the resulting DE for $u$
+
+          \item Integrate to find $y$
+        \end{enumerate}
+
+  \item Nonlinear second order DEs of the form $F(y, y', y'') = 0$ where $x$ is missing can sometimes by solved by:
+
+        \begin{enumerate}
+          \item Substitute $u = y'$ and \[y'' = \frac{du}{dy} \frac{dy}{dx} = u \frac{du}{dy}\]
+
+          \item Solve the resulting DE for $u$
+
+          \item Integrate to find $y$
+        \end{enumerate}
+
+  \item Nonlinear initial-value problems can sometimes be solved by substituting the initial conditions into a Taylor series centred at $x_0$. The initial conditions can also be substituted into subsequent derivatives to add further terms to the series
+\end{itemize}
+
 \end{document}

@@ -138,15 +138,17 @@
     f_1^{(n - 1)} & f_2^{(n - 1)} & \cdots & f_n^{(n - 1)}
   \end{vmatrix}\] \\ \textbf{Property:} The functions are linearly independent in $I$
 
-\subsection{Homogeneous Linear $n$th-Order Equations}
+\subsection{Linear Equations}
+
+\subsubsection{Homogeneous Linear $n$th-Order Equations}
 
 The general solution is of the form \[y = c_1 y_1 + c_2 y_2 + \cdots + c_n y_n\] where $c_i$ are arbitrary constants and $y_i$ are a fundamental set of solutions (i.e. a set of $n$ linearly independent solutions).
 
-\subsection{Nonhomogeneous Linear $n$th-Order Equations}
+\subsubsection{Nonhomogeneous Linear $n$th-Order Equations}
 
 The general solution is of the form \[y = y_c + y_p = c_1 y_1(x) + c_2 y_2(x) + \cdots + c_n y_n(x) + y_p(x)\] where $y_c$ is the complementary function (i.e. the general solution of the associated homogeneous equation) and $y_p$ is a particular solution.
 
-\subsection{Reduction of Order}
+\subsubsection{Reduction of Order}
 
 \textbf{Form:} \[y'' + P(x) y' + Q(x) y = 0\] \\ \textbf{Test:} A non-trivial solution $y_1(x)$ is known \\ \textbf{Solution:} \begin{enumerate}
   \item Recognise that the ratio of two linearly independent functions isn't constant, i.e. \[u(x) = \frac{y_1(x)}{y_2(x)} \text{ or } y_2(x) = u(x) y_1(x)\]
@@ -162,7 +164,7 @@ The general solution is of the form \[y = y_c + y_p = c_1 y_1(x) + c_2 y_2(x) + 
   \item Multiply by $y_1$ to find $y_2$
 \end{enumerate} or equivalently \[y_2 = y_1(x) \int \frac{e^{-\int P(x) \,dx}}{y_1^2(x)} \,dx\]
 
-\subsection{Homogeneous Linear Equations with Constant Coefficients}
+\subsubsection{Homogeneous Linear Equations with Constant Coefficients}
 
 \textbf{Form:} \[a_n y^{(n)} + a_{n - 1} y^{(n - 1)} + \cdots + a_1 y' + a_0 y = 0\] \\ \textbf{Solution:} \begin{enumerate}
   \item Assume the equation has a solution of the form $y = e^{mx}$, giving \[a_n m^n e^{mx} + a_{n - 1} m^{n - 1} e^{mx} + \cdots + a_1 m e^{mx} + a_0 e^{mx} = 0\]
@@ -180,7 +182,7 @@ The general solution is of the form \[y = y_c + y_p = c_1 y_1(x) + c_2 y_2(x) + 
         \end{itemize}
 \end{enumerate}
 
-\subsection{Method of Undetermined Coefficients}
+\subsubsection{Method of Undetermined Coefficients}
 
 \textbf{Form:} A nonhomogeneous linear DE where the input function ($g(x)$) is comprised of constants, polynomials, exponentials $e^{\alpha x}$, sines, and cosines \\ \textbf{Solution}: \begin{enumerate}
   \item Solve the associated homogeneous equation
@@ -194,7 +196,7 @@ The general solution is of the form \[y = y_c + y_p = c_1 y_1(x) + c_2 y_2(x) + 
   \item Solve for the unknown constants
 \end{enumerate}
 
-\subsection{Variation of Parameters}
+\subsubsection{Variation of Parameters}
 
 \textbf{Form:} A nonhomogeneous linear DE \\ \textbf{Solution:} \begin{enumerate}
   \item Solve the homogeneous equation to find the complementary function
@@ -234,7 +236,7 @@ The general solution is of the form \[y = y_c + y_p = c_1 y_1(x) + c_2 y_2(x) + 
   \item Integrate each $u_i'$ to find $u_i$
 \end{enumerate}
 
-\subsection{Cauchy-Euler Equations}
+\subsubsection{Cauchy-Euler Equations}
 
 \textbf{Form:} \[a_n x^n \frac{d^n y}{dx^n} + a_{n - 1} x^{n - 1} \frac{d^{n - 1} y}{dx^{n - 1}} + \cdots + a_1 x \frac{dy}{dx} + a_0 y = g(x)\] \\ \textbf{Solution:} \begin{itemize}
   \item If the equation is homogeneous:
@@ -268,5 +270,31 @@ The general solution is of the form \[y = y_c + y_p = c_1 y_1(x) + c_2 y_2(x) + 
           \item Find a particular solution via variation of parameters
         \end{enumerate}
 \end{itemize}
+
+\subsection{Nonlinear Equations}
+
+\subsubsection{Reducation of Order}
+
+\textbf{Form:} Nonlinear second-order DE \[F(x, y', y'') = 0\] i.e. $y$ is missing \\ \textbf{Solution:} \begin{enumerate}
+  \item Substitute $u = y'$ (and thus $u' = y''$)
+
+  \item Solve the resulting DE for $u$
+
+  \item Integrate to find $y$
+\end{enumerate} \textbf{Form:} Nonlinear second-order DE \[F(y, y', y'') = 0\] i.e. $x$ is missing \\ \textbf{Solution:} \begin{enumerate}
+  \item Substitute $u = y'$ and \[y'' = \frac{du}{dy} \frac{dy}{dx} = u \frac{du}{dy}\]
+
+  \item Solve the resulting DE for $u$
+
+  \item Integrate to find $y$
+\end{enumerate}
+
+\subsubsection{Taylor Series}
+
+\textbf{Form:} Nonlinear initial value problem \\ \textbf{Solution:} \begin{enumerate}
+  \item Substitute the initial conditions into a Taylor series centred at $x_0$
+
+  \item Take further derivatives of the equation and substitute the initial conditions in to find additional terms for the Taylor series
+\end{enumerate}
 
 \end{document}
