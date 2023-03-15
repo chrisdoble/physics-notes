@@ -3,6 +3,15 @@
 \usepackage{enumitem} % For customisable list labels
 \usepackage{siunitx} % For units
 
+% To allow 5 levels of nested lists
+\setlistdepth{5}
+\setlist[itemize,1]{label=$\bullet$}
+\setlist[itemize,2]{label=$\bullet$}
+\setlist[itemize,3]{label=$\bullet$}
+\setlist[itemize,4]{label=$\bullet$}
+\setlist[itemize,5]{label=$\bullet$}
+\renewlist{itemize}{itemize}{5}
+
 \title{Advanced Engineering Mathematics Ordinary Differential Equations Formula Sheet}
 \author{Chris Doble}
 \date{February 2022}
@@ -10,6 +19,126 @@
 \begin{document}
 
 \tableofcontents
+
+\section{Flow Chart}
+
+\begin{itemize}
+  \item Ordinary
+
+        \begin{itemize}
+          \item First order
+
+                \begin{itemize}
+                  \item Linear
+
+                        \begin{itemize}
+                          \item Homogeneous
+
+                                \begin{itemize}
+                                  \item Separation of variables
+                                \end{itemize}
+
+                          \item Nonhomogeneous
+
+                                \begin{itemize}
+                                  \item Bernoulli
+
+                                  \item Exact
+
+                                  \item Exact with integration constant
+
+                                  \item Homogeneous substitution
+
+                                  \item Reduction to separation of variables
+
+                                  \item Riccati
+
+                                  \item Variation of parameters
+                                \end{itemize}
+                        \end{itemize}
+
+                  \item Nonlinear
+
+                        \begin{itemize}
+                          \item Separable
+
+                                \begin{itemize}
+                                  \item Separation of variables
+                                \end{itemize}
+                        \end{itemize}
+                \end{itemize}
+
+          \item Second order
+
+                \begin{itemize}
+                  \item Linear
+
+                        \begin{itemize}
+                          \item Homogeneous
+
+                                \begin{itemize}
+                                  \item Auxiliary/characteristic equation
+
+                                  \item Cauchy/Euler
+
+                                  \item Reduction of order
+                                \end{itemize}
+
+                          \item Nonhomogeneous
+
+                                \begin{itemize}
+                                  \item Cauchy/Euler
+
+                                  \item Undetermined coefficients
+
+                                  \item Variation of parameters
+                                \end{itemize}
+                        \end{itemize}
+
+                  \item Nonlinear
+
+                        \begin{itemize}
+                          \item Reduction of order
+
+                          \item Taylor series
+                        \end{itemize}
+                \end{itemize}
+
+          \item Higher order
+
+                \begin{itemize}
+                  \item Linear
+
+                        \begin{itemize}
+                          \item Homogeneous
+
+                                \begin{itemize}
+                                  \item Auxiliary/characteristic equation
+
+                                  \item Cauchy/Euler
+                                \end{itemize}
+
+                          \item Nonhomogeneous
+
+                                \begin{itemize}
+                                  \item Cauchy/Euler
+
+                                  \item Undetermined coefficients
+
+                                  \item Variation of parameters
+                                \end{itemize}
+                        \end{itemize}
+
+                  \item Nonlinear
+
+                        \begin{itemize}
+                          \item Taylor series
+                        \end{itemize}
+                \end{itemize}
+        \end{itemize}
+
+  \item Partial
+\end{itemize}
 
 \section{First-order ODEs}
 
