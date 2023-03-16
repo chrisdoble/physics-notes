@@ -4303,4 +4303,549 @@ Let $u = v^{-1 / 2}$ and $u' = -\frac{1}{2} v^{-3 / 2} v'$
   y                                & = -\sqrt{1 - x^2}
 \end{align*}
 
+\subsection{Linear Models: Initial-Value Problems}
+
+\subsection{1}
+
+\[T = \frac{2 \pi}{\omega} = 2 \pi \sqrt{\frac{m}{k}} = \frac{\sqrt{2} \pi}{8}\]
+
+\subsection{3}
+
+\[W = m g \Rightarrow m = W / g = \frac{3}{4}\]
+
+\[W = kx \Rightarrow k = W / x = 72\]
+
+\begin{align*}
+  m \frac{d^2 x}{d t^2}               & = -kx \\
+  \frac{d^2 x}{d t^2} + \frac{k}{m} x & = 0   \\
+  m^2 + \frac{k}{m}                   & = 0   \\
+  m^2 + \omega^2                      & = 0   \\
+  (m + i \omega) (m - i \omega)       & = 0
+\end{align*}
+
+\[x = c_1 \cos \omega t + c_2 \sin \omega t\]
+
+\begin{align*}
+  x(0) = -\frac{1}{4} & = c_1 \cos \omega (0) + c_2 \sin \omega (0)             \\
+                      & = c_1                                                   \\
+  x'(0) = 0           & = 3 \omega \sin \omega (0) + c_2 \omega \cos \omega (0) \\
+                      & = c_2
+\end{align*}
+
+\[x = -\frac{1}{4} \cos 4 \sqrt{6} t\]
+
+\subsection{9}
+
+\begin{enumerate}
+  \item
+
+        \begin{align*}
+          x(0) = \frac{1}{2}  & = c_1 \cos \omega (0) + c_2 \sin \omega (0)                        \\
+                              & = c_1                                                              \\
+          x'(0) = \frac{3}{2} & = -\frac{1}{2} \omega \sin \omega (0) + c_2 \omega \cos \omega (0) \\
+                              & = c_2 \omega                                                       \\
+          c_2                 & = \frac{3}{2} \sqrt{\frac{m}{k}}                                   \\
+                              & = \frac{3}{4}
+        \end{align*}
+
+        \[x = \frac{1}{2} \cos 2t + \frac{3}{4} \sin 2t\]
+
+  \item
+
+        \begin{align*}
+          A         & = \sqrt{c_1^2 + c_2^2}                                               \\
+                    & = \sqrt{\left( \frac{1}{2} \right)^2 + \left( \frac{3}{4} \right)^2} \\
+                    & = \sqrt{\frac{1}{4} + \frac{9}{16}}                                  \\
+                    & = \sqrt{\frac{4}{16} + \frac{9}{16}}                                 \\
+                    & = \sqrt{\frac{13}{16}}                                               \\
+                    & = \frac{\sqrt{13}}{4}                                                \\
+          \tan \phi & = \frac{c_1}{c_2}                                                    \\
+          \phi      & = \arctan \frac{1}{2} \frac{4}{3}                                    \\
+                    & = \arctan \frac{2}{3}                                                \\
+                    & = 0.558
+        \end{align*}
+
+        \[x = \frac{\sqrt{13}}{4} \sin(2t + 0.558)\]
+
+  \item
+
+        \begin{align*}
+          \tan \phi & = \frac{c_2}{c_1}         \\
+                    & = \frac{3}{4} \frac{2}{1} \\
+                    & = \frac{3}{2}             \\
+          \phi      & = \arctan \frac{3}{2}     \\
+                    & = 0.983
+        \end{align*}
+
+        \[x = \frac{\sqrt{13}}{4} \cos(2t - 0.983)\]
+\end{enumerate}
+
+\subsection{13}
+
+\[W = k_1 x_1 \Rightarrow k_1 = \frac{W}{x_1} = 40\]
+
+\[W = k_2 x_2 \Rightarrow k_2 = \frac{W}{x_2} = 120\]
+
+\[k_\text{eff} = k_1 + k_2 = 160\]
+
+\begin{align*}
+  x(0) = 0  & = c_1 \cos \omega (0) + c_2 \sin \omega (0) \\
+            & = c_2                                       \\
+  x'(0) = 2 & = c_2 \omega \cos \omega (0)                \\
+            & = c_2 \omega                                \\
+  c_2       & = 2 \sqrt{\frac{m}{k_\text{eff}}}           \\
+            & = 2 \sqrt{\frac{5}{1280}}                   \\
+            & = \frac{1}{8}
+\end{align*}
+
+\[x = \frac{1}{8} \sin 16 t\]
+
+\subsection{15}
+
+\[k_\text{eff} = \frac{k_1 k_2}{k_1 + k_2} = 30\]
+
+\begin{align*}
+  x'(0) = 2 & = c_2 \omega \cos \omega (0)      \\
+            & = c_2 \omega                      \\
+  c_2       & = 2 \sqrt{\frac{m}{k_\text{eff}}} \\
+            & = \frac{1}{2 \sqrt{3}}
+\end{align*}
+
+\[x = \frac{\sqrt{3}}{6} \sin 4 \sqrt{3} t\]
+
+\subsection{17}
+
+\[k_\text{eff} = 2k\]
+
+The spring is twice as rigid
+
+\subsection{21}
+
+\begin{enumerate}
+  \item Above
+
+  \item Upward
+\end{enumerate}
+
+\subsection{23}
+
+\begin{enumerate}
+  \item Below
+
+  \item Upward
+\end{enumerate}
+
+\subsection{25}
+
+\begin{align*}
+  m x''                                                                                         & = -k x - x' \\
+  x'' + \frac{1}{m} x' + \frac{k}{m} x                                                          & = 0         \\
+  x'' + 2 \lambda x' + \omega^2 x                                                               & = 0         \\
+  r^2 + 2 \lambda r + \omega^2                                                                  & = 0         \\
+  (r - (-\lambda + \sqrt{\lambda^2 - \omega^2})) (r - (-\lambda - \sqrt{\lambda^2 - \omega^2})) & = 0
+\end{align*}
+
+\begin{align*}
+  2 \lambda                   & = \frac{1}{m}    \\
+  \lambda                     & = \frac{1}{2m}   \\
+                              & = \frac{g}{2 W}  \\
+                              & = 4              \\
+  \omega^2                    & = \frac{k}{m}    \\
+                              & = \frac{g k}{W}  \\
+                              & = 16             \\
+  \sqrt{\lambda^2 - \omega^2} & = \sqrt{16 - 16} \\
+                              & = 0
+\end{align*}
+
+\[x = c_1 e^{-4t} + c_2 t e^{-4t}\]
+
+\begin{align*}
+  x(0) = -1 & = c_1 e^{-4 (0)} + c_2 (0) e^{-4 (0)}                \\
+            & = c_1                                                \\
+  x'(0) = 8 & = 4 e^{-4 (0)} + c_2 (e^{-4 (0)} - 4 (0) e^{-4 (0)}) \\
+            & = 4 + c_2                                            \\
+  c_2       & = 4
+\end{align*}
+
+\[x = -e^{-4t} + 4 t e^{-4t}\]
+
+\begin{align*}
+  0 & = -e^{-4t} + 4te^{-4t} \\
+    & = -1 + 4t              \\
+  t & = \frac{1}{4}
+\end{align*}
+
+\begin{align*}
+  x'                               & = 0           \\
+  4e^{-4t} + 4e^{-4x} - 16te^{-4t} & = 0           \\
+  4 + 4 - 16t                      & = 0           \\
+  t                                & = \frac{1}{2}
+\end{align*}
+
+\[x \left( \frac{1}{2} \right) = -e^{-4 (1 / 2)} + 4 \left( \frac{1}{2} \right) e^{-4 (1/2)} = e^{-2}\]
+
+\subsection{29}
+
+\begin{enumerate}
+  \item
+
+        \begin{align*}
+          k                           & = W / x = 2            \\
+          m                           & = W / g = 0.1          \\
+          \lambda                     & = \frac{\beta}{2m} = 2 \\
+          \omega^2                    & = \frac{k}{m} = 20     \\
+          \sqrt{\lambda^2 - \omega^2} & = \sqrt{4 - 20} = 4 i
+        \end{align*}
+
+        \[x = c_1 e^{-2 t} \cos 4 t + c_2 e^{-2 t} \sin 4 t\]
+
+        \begin{align*}
+          x(0) = -1 & = c_1 e^{-2 (0)} \cos 4 (0) + c_2 e^{-2 (0)} \sin 4 (0)                           \\
+                    & = c_1                                                                             \\
+          x'(0) = 0 & = 2 e^{-2 (0)} \cos 4 (0) + 4 e^{-2 (0)} \sin 4 (0) - 2 c_2 e^{-2 (0)} \sin 4 (0) \\
+                    & \qquad + 4 c_2 e^{-2 (0)} \cos 4 (0)                                              \\
+                    & = 2 + 4 c_2                                                                       \\
+          c_2       & = -\frac{1}{2}
+        \end{align*}
+
+        \[x = -e^{-2t} \cos 4t - \frac{1}{2} e^{-2t} \sin 4t\]
+
+  \item
+
+        \begin{align*}
+          A         & = \sqrt{c_1^2 + c_2^2}                        \\
+                    & = \frac{\sqrt{5}}{2}                          \\
+          \tan \phi & = \frac{c_1}{c_2}                             \\
+                    & = 2                                           \\
+          \phi      & = \arctan 2                                   \\
+                    & = 4.25                                        \\
+          x         & = \frac{\sqrt{5}}{2} e^{-2t} \sin (4t + 4.25)
+        \end{align*}
+
+  \item
+
+        \begin{align*}
+          \frac{\sqrt{5}}{2} e^{-2t} \sin (4t + 4.25) & = 0     \\
+          4t + 4.25                                   & = 3 \pi \\
+          t                                           & = 1.29
+        \end{align*}
+\end{enumerate}
+
+\subsection{31}
+
+\begin{align*}
+  k                    & = W / x                                   \\
+                       & = 5                                       \\
+  m                    & = W / g                                   \\
+                       & = \frac{5}{16}                            \\
+  \lambda              & = \frac{\beta}{2m}                        \\
+                       & = \frac{8}{5} \beta                       \\
+  \omega^2             & = \frac{k}{m}                             \\
+                       & = 16                                      \\
+  \lambda^2 - \omega^2 & = \left( \frac{8}{5} \beta \right)^2 - 16 \\
+                       & = \frac{64}{25} \beta^2 - 16
+\end{align*}
+
+\begin{enumerate}
+  \item
+
+        \begin{align*}
+          \lambda^2 - \omega^2       & > 0           \\
+          \frac{64}{25} \beta^2 - 16 & > 0           \\
+          \beta                      & > \frac{5}{2}
+        \end{align*}
+
+  \item \[\beta = \frac{5}{2}\]
+
+  \item \[\beta < \frac{5}{2}\]
+\end{enumerate}
+
+\subsection{33}
+
+\begin{align*}
+  \beta                       & = \frac{1}{2}                     \\
+  k                           & = W / x = 6                       \\
+  m                           & = W / g = \frac{1}{2}             \\
+  \lambda                     & = \frac{\beta}{2 m} = \frac{1}{2} \\
+  \omega^2                    & = \frac{k}{m} = 12                \\
+  \sqrt{\lambda^2 - \omega^2} & = \sqrt{\frac{1}{4} - 12}         \\
+                              & = \sqrt{-\frac{47}{4}}            \\
+                              & = \frac{\sqrt{47}}{2} i
+\end{align*}
+
+\begin{align*}
+  m x''                                                                                         & = -k x - \beta x' + f(t) \\
+  m x'' + \beta x' + k x                                                                        & = f(t)                   \\
+  x'' + 2 \lambda x' + \omega^2 x                                                               & = \frac{1}{m} f(t)       \\
+  r^2 + 2 \lambda r + \omega^2                                                                  & = 0                      \\
+  (r - (-\lambda + \sqrt{\lambda^2 - \omega^2})) (r - (-\lambda - \sqrt{\lambda^2 - \omega^2})) & = 0
+\end{align*}
+
+\[x_c = c_1 e^{-t / 2} \cos \frac{\sqrt{47}}{2} t + c_2 e^{-t / 2} \sin \frac{\sqrt{47}}{2} t\]
+
+\[x'' + x' + 12x = 20 \cos 3t\]
+
+\begin{align*}
+  x_p   & = A \cos 3t + B \sin 3t      \\
+  x_p'  & = -3 A \sin 3t + 3 B \cos 3t \\
+  x_p'' & = -9 A \cos 3t - 9 B \sin 3t
+\end{align*}
+
+\begin{align*}
+  20 \cos 3t & = -9 A \cos 3t - 9 B \sin 3t - 3 A \sin 3t + 3 B \cos 3t \\
+             & \qquad + 12 (A \cos 3t + B \sin 3t)                      \\
+             & = 3 (A + B) \cos 3t + 3 (B - A) \sin 3t
+\end{align*}
+
+\begin{align*}
+  20 & = 3 (A + B)    \\
+  0  & = 3 (B - A)    \\
+  20 & = 6 B          \\
+  B  & = \frac{10}{3} \\
+  A  & = \frac{10}{3}
+\end{align*}
+
+\begin{align*}
+  x & = x_c + x_p                                                                                                                           \\
+    & = c_1 e^{-t / 2} \cos \frac{\sqrt{47}}{2} t + c_2 e^{-t / 2} \sin \frac{\sqrt{47}}{2} t + \frac{10}{3} \cos 3t + \frac{10}{3} \sin 3t
+\end{align*}
+
+\begin{align*}
+  x(0) = 2  & = c_1 e^{-(0) / 2} \cos \frac{\sqrt{47}}{2} (0) + c_2 e^{-(0) / 2} \sin \frac{47}{2} (0) + \frac{10}{3} \cos 3 (0)                     \\
+            & \qquad + \frac{10}{3} \sin 3 (0)                                                                                                       \\
+            & = c_1 + \frac{10}{3}                                                                                                                   \\
+  c_1       & = -\frac{4}{3}                                                                                                                         \\
+  x'(0) = 0 & = \frac{2}{3} e^{-(0) / 2} \cos \frac{\sqrt{47}}{2} (0) + \frac{2 \sqrt{47}}{3} e^{-(0) / 2} \sin \frac{\sqrt{47}}{2} (0)              \\
+            & \qquad - \frac{1}{2} c_2 e^{-(0) / 2} \sin \frac{\sqrt{47}}{2} (0) + \frac{\sqrt{47}}{2} c_2 e^{-(0) / 2} \cos \frac{\sqrt{47}}{2} (0) \\
+            & \qquad - 10 \sin 3 (0) + 10 \cos 3 (0)                                                                                                 \\
+            & = \frac{2}{3} + \frac{\sqrt{47}}{2} c_2 + 10                                                                                           \\
+  c_2       & = -\frac{64}{3 \sqrt{47}}
+\end{align*}
+
+\[x = e^{-t / 2} \left( -\frac{4}{3} \cos \frac{\sqrt{47}}{2} t - \frac{64}{3 \sqrt{47}} \sin \frac{\sqrt{47}}{2} t \right) + \frac{10}{3} (\cos 3t + \sin 3t)\]
+
+\subsection{35}
+
+\begin{align*}
+  m                           & = 1                    \\
+  k                           & = W / x = m g / x = 16 \\
+  \beta                       & = 8                    \\
+  \lambda                     & = \beta / 2 m = 4      \\
+  \omega^2                    & = k / m = 16           \\
+  \sqrt{\lambda^2 - \omega^2} & = 0
+\end{align*}
+
+\[x'' + 8 x' + 16 x = 8 \sin 4t\]
+
+\[x_c = c_1 e^{-4t} + c_2 t e^{-4t}\]
+
+\begin{align*}
+  x_p       & = A \cos 4t + B \sin 4t                                         \\
+  x_p'      & = -4 A \sin 4t + 4 B \cos 4t                                    \\
+  x_p''     & = -16 A \cos 4t - 16 B \sin 4t                                  \\
+  8 \sin 4t & = -16 A \cos 4t - 16 B \sin 4t + 8 (-4 A \sin 4t + 4 B \cos 4t) \\
+            & \qquad + 16 (A \cos 4t + B \sin 4t)                             \\
+            & = 32 B \cos 4t - 32 A \sin 4t                                   \\
+  A         & = -\frac{1}{4}                                                  \\
+  B         & = 0
+\end{align*}
+
+\[x = c_1 e^{-4t} + c_2 t e^{-4t} - \frac{1}{4} \cos 4t\]
+
+\begin{align*}
+  x(0) = 0  & = c_1 e^{-4 (0)} + c_2 (0) e^{-4 (0)} - \frac{1}{4} \cos 4 (0)     \\
+            & = c_1 - \frac{1}{4}                                                \\
+  c_1       & = \frac{1}{4}                                                      \\
+  x'(0) = 0 & = -e^{-4 (0)} + c_2 e^{-4 (0)} - 4 c_2 (0) e^{-4 (0)} + \sin 4 (0) \\
+            & = -1 + c_2                                                         \\
+  c_2       & = 1
+\end{align*}
+
+\[x = \frac{1}{4} e^{-4t} + t e^{-4t} - \frac{1}{4} \cos 4t\]
+
+\subsection{37}
+
+\begin{align*}
+  m & = 2  \\
+  k & = 32
+\end{align*}
+
+\begin{align*}
+  2 x'' + 32 x & = 68 e^{-2t} \cos 4t \\
+  x'' + 16 x   & = 34 e^{-2t} \cos 4t
+\end{align*}
+
+\begin{align*}
+  x'' + 16 x        & = 0 \\
+  (r + 4i) (r - 4i) & = 0
+\end{align*}
+
+\[x_c = c_1 \cos 4t + c_2 \sin 4t\]
+
+\begin{align*}
+  x_p   & = A e^{-2t} \cos 4t + B e^{-2t} \sin 4t                                                         \\
+  x_p'  & = -2 A e^{-2t} \cos 4t - 4 A e^{-2t} \sin 4t - 2 B e^{-2t} \sin 4t + 4 B e^{-2t} \cos 4t        \\
+  x_p'' & = 4 A e^{-2t} \cos 4t + 8 A e^{-2t} \sin 4t + 8 A e^{-2t} \sin 4t - 16 A e^{-2t} \cos 4t        \\
+        & \qquad + 4 B e^{-2t} \sin 4t - 8 B e^{-2t} \cos 4t - 8 B e^{-2t} \cos 4t - 16 B e^{-2t} \sin 4t \\
+        & = (-12A - 16B) e^{-2t} \cos 4t + (16A - 12B) e^{-2t} \sin 4t
+\end{align*}
+
+\begin{align*}
+  34 e^{-2t} \cos 4t & = (-12A - 16B) e^{-2t} \cos 4t + (16A - 12B) e^{-2t} \sin 4t \\
+                     & \qquad + 16 (A e^{-2t} \cos 4t + B e^{-2t} \sin 4t)          \\
+                     & = (4A - 16B) e^{-2t} \cos 4t + (16A + 4B) e^{-2t} \sin 4t
+\end{align*}
+
+\begin{align*}
+  34 & = 4A - 16B    \\
+  0  & = 16A + 4B    \\
+  34 & = 68A         \\
+  A  & = \frac{1}{2} \\
+  B  & = -2
+\end{align*}
+
+\[x = c_1 \cos 4t + c_2 \sin 4t + e^{-2t} \left( \frac{1}{2} \cos 4t - 2 \sin 4t \right)\]
+
+\begin{align*}
+  x(0) = 0  & = c_1 \cos 4 (0) + c_2 \sin 4 (0) + e^{-2 (0)} \left( \frac{1}{2} \cos 4 (0) - 2 \sin 4 (0) \right) \\
+            & = c_1 + \frac{1}{2}                                                                                 \\
+  c_1       & = -\frac{1}{2}                                                                                      \\
+  x'(0) = 0 & = 2 \sin 4 (0) + 4 c_2 \cos 4 (0) - e^{-2 (0)} \cos 4 (0) - 2 e^{-2 (0)} \sin 4 (0)                 \\
+            & \qquad + 4 e^{-2 (0)} \sin 4 (0) - 8 e^{-2 (0)} \cos 4 (0)                                          \\
+            & = 4 c_2 - 1 - 8                                                                                     \\
+  c_2       & = \frac{9}{4}
+\end{align*}
+
+\[x = -\frac{1}{2} \cos 4t + \frac{9}{4} \sin 4t + e^{-2t} \left( \frac{1}{2} \cos 4t - 2 \sin 4t \right)\]
+
+\subsection{39}
+
+\begin{enumerate}
+  \item
+
+        \begin{align*}
+          m x'' + \beta x' + k x                   & = k h           \\
+          x'' + \frac{\beta}{m} x' + \frac{k}{m} x & = \frac{k}{m} h \\
+          x'' + 2 \lambda x' + \omega^2 x          & = \omega^2 h
+        \end{align*}
+
+  \item
+
+        \[x'' + 4 x' + 8 x = 40 \cos t\]
+
+        \begin{align*}
+          r^2 + 4 r + 8                   & = 0 \\
+          (r - (-2 + 2i)) (r - (-2 - 2i)) & = 0
+        \end{align*}
+
+        \[x_c = c_1 e^{-2t} \cos 2t + c_2 e^{-2t} \sin 2t\]
+
+        \begin{align*}
+          x_p   & = A \cos t + B \sin t  \\
+          x_p'  & = -A \sin t + B \cos t \\
+          x_p'' & = -A \cos t - B \sin t
+        \end{align*}
+
+        \begin{align*}
+          40 \cos t & = -A \cos t - B \sin t + 4 (-A \sin t + B \cos t) + 8 (A \cos t + B \sin t) \\
+                    & = (7 A + 4 B) \cos t + (7 B - 4 A) \sin t
+        \end{align*}
+
+        \begin{align*}
+          40  & = 7 A + 4 B     \\
+          0   & = -4 A + 7 B    \\
+          160 & = 65 B          \\
+          B   & = \frac{32}{13} \\
+          A   & = \frac{56}{13}
+        \end{align*}
+
+        \[x = c_1 e^{-2t} \cos 2t + c_2 e^{-2t} \sin 2t + \frac{56}{13} \cos t + \frac{32}{13} \sin t\]
+
+        \begin{align*}
+          x(0) = 0  & = c_1 e^{-2 (0)} \cos 2 (0) + c_2 e^{-2 (0)} \sin 2 (0) + \frac{56}{13} \cos (0) + \frac{32}{13} \sin (0)   \\
+                    & = c_1 + \frac{56}{13}                                                                                       \\
+          c_1       & = -\frac{56}{13}                                                                                            \\
+          x'(0) = 0 & = \frac{112}{13} e^{-2 (0)} \cos 2 (0) + \frac{112}{13} e^{-2 (0)} \sin 2 (0) - 2 c_2 e^{-2 (0)} \sin 2 (0) \\
+                    & \qquad + 2 c_2 e^{-2 (0)} \cos 2 (0) - \frac{56}{13} \sin (0) + \frac{32}{13} \cos (0)                      \\
+                    & = \frac{112}{13} + 2 c_2 + \frac{32}{13}                                                                    \\
+          c_2       & = -\frac{72}{13}
+        \end{align*}
+
+        \[x = e^{-2t} \left( -\frac{56}{13} \cos 2t - \frac{72}{13} \sin 2t \right) + \frac{56}{13} \cos t + \frac{32}{13} \sin t\]
+\end{enumerate}
+
+\subsection{41}
+
+\[x'' + 4 x = -5 \sin 2t + 3 \cos 2t\]
+
+\begin{align*}
+  x'' + 4 x         & = 0                         \\
+  (r + 2i) (r - 2i) & = 0                         \\
+  x_c               & = c_1 \cos 2t + c_2 \sin 2t
+\end{align*}
+
+\begin{align*}
+  x_p                    & = A t \cos 2t + B t \sin 2t                                              \\
+  x_p'                   & = A \cos 2t - 2 A t \sin 2t + B \sin 2t + 2 B t \cos 2t                  \\
+  x_p''                  & = -2 A \sin 2t - 2 A \sin 2t - 4 A t \cos 2t + 2 B \cos 2t + 2 B \cos 2t \\
+                         & \qquad - 4 B t \sin 2t                                                   \\
+                         & = -4 A \sin 2t - 4 A t \cos 2t + 4 B \cos 2t - 4 B t \sin 2t             \\
+  -5 \sin 2t + 3 \cos 2t & = -4 A \sin 2t - 4 A t \cos 2t + 4 B \cos 2t - 4 B t \sin 2t             \\
+                         & \qquad + 4 (A t \cos 2t + B t \sin 2t)                                   \\
+                         & = -4 A \sin 2t + 4 B \cos 2t
+\end{align*}
+
+\begin{align*}
+  -5 & = -4 A \Rightarrow A = \frac{5}{4} \\
+  3  & = 4 B \Rightarrow B = \frac{3}{4}
+\end{align*}
+
+\[x = c_1 \cos 2t + c_2 \sin 2t + \frac{5}{4} t \cos 2t + \frac{3}{4} t \sin 2t\]
+
+\begin{align*}
+  x(0) = -1 & = c_1 \cos 2 (0) + c_2 \sin 2 (0) + \frac{5}{4} (0) \cos 2 (0) + \frac{3}{4} (0) \sin 2 (0)                      \\
+            & = c_1                                                                                                            \\
+  x'(0) = 1 & = 2 \sin 2 (0) + 2 c_2 \cos 2 (0) + \frac{5}{4} \cos 2 (0) - \frac{5}{2} (0) \sin 2 (0) + \frac{3}{4} \sin 2 (0) \\
+            & \qquad + \frac{3}{2} (0) \cos 2 (0)                                                                              \\
+            & = 2 c_2 + \frac{5}{4}                                                                                            \\
+  c_2       & = -\frac{1}{8}
+\end{align*}
+
+\[x = -\cos 2t - \frac{1}{8} \sin 2t + \frac{5}{4} t \cos 2t + \frac{3}{4} t \sin 2t\]
+
+\subsection{49}
+
+\begin{align*}
+  0.05 q'' + 2 q' + 100 q             & = 0 \\
+  q'' + 40 q' + 2000 q                & = 0 \\
+  r^2 + 40 r + 2000                   & = 0 \\
+  (r - (-20 + 40i)) (r - (-20 - 40i)) & = 0
+\end{align*}
+
+\[q = c_1 e^{-20t} \cos 40t + c_2 e^{-20t} \sin 40t\]
+
+\begin{align*}
+  q(0) = 5  & = c_1 e^{-20 (0)} \cos 40 (0) + c_2 e^{-20 (0)} \sin 40 (0)                                   \\
+            & = c_1                                                                                         \\
+  q'(0) = 0 & = -100 e^{-20 (0)} \cos 40 (0) - 200 e^{-20 (0)} \sin 40 (0) - 20 c_2 e^{-20 (0)} \sin 40 (0) \\
+            & \qquad + 40 c_2 e^{-20 (0)} \cos 40 (0)                                                       \\
+            & = -100 + 40 c_2                                                                               \\
+  c_2       & = \frac{5}{2}
+\end{align*}
+
+\[q = e^{-20 t} (5 \cos 40 t + \frac{5}{2} \sin 40 t)\]
+
+\[q(0.01) = \qty{4.57}{C}\]
+
+\begin{align*}
+  e^{-20 t} (5 \cos 40 t + \frac{5}{2} \sin 40 t) & = 0                                           \\
+  5 \cos 40 t + \frac{5}{2} \sin 40 t             & = 0                                           \\
+  2 \cos 40 t + \sin 40 t                         & = 0                                           \\
+  \sqrt{5} \cos (40 t + \arctan (-1 / 2))         & = 0                                           \\
+  40 t + \arctan (-1 / 2)                         & = \arccos 0                                   \\
+  40 t                                            & = \arccos 0 - \arctan (-1 / 2)                \\
+  t                                               & = \frac{1}{40} (\arccos 0 - \arctan (-1 / 2)) \\
+                                                  & = \qty{0.0509}{s}
+\end{align*}
+
 \end{document}
