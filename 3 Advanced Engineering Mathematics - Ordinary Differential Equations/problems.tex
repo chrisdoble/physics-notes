@@ -5067,4 +5067,216 @@ $L / 4$, $2 L / 4$, and $3 L / 4$
 
 \[u = \frac{u_0 - u_1}{b - a} \frac{a b}{r} + \frac{b u_1 - a u_0}{b - a}\]
 
+\subsection{Green's Functions}
+
+\subsubsection{1}
+
+\begin{align*}
+  y'' - 16y       & = 0                                                  \\
+  m^2 - 16        & = 0                                                  \\
+  (m + 4) (m - 4) & = 0                                                  \\
+  y_1             & = e^{-4x}                                            \\
+  y_2             & = e^{4x}                                             \\
+  W(t)            & = y_1(t) y_2'(t) - y_1'(t) y_2(t)                    \\
+                  & = 8                                                  \\
+  G(x, t)         & = \frac{y_1(t) y_2(x) - y_1(x) y_2(t)}{W(t)}         \\
+                  & = \frac{e^{4(x - t)} - e^{-4(x - t)}}{8}             \\
+                  & = \frac{1}{4} \sinh 4 (x - t)                        \\
+  y_p(x)          & = \int_{x_0}^x G(x, t) f(t) \,dt                     \\
+                  & = \int_{x_0}^x \frac{1}{4} \sinh 4 (x - t) f(t) \,dt
+\end{align*}
+
+\subsubsection{3}
+
+\begin{align*}
+  y'' + 2y' + y & = 0                                                 \\
+  m^2 + 2m + 1  & = 0                                                 \\
+  (m + 1)^2     & = 0                                                 \\
+  y_1           & = e^{-x}                                            \\
+  y_2           & = x e^{-x}                                          \\
+  W(t)          & = e^{-t} (e^{-t} - t e^{-t}) + t e^{-2t}            \\
+                & = e^{-2t}                                           \\
+  G(x, t)       & = \frac{y_1(t) y_2(x) - y_1(x) y_2(t)}{W(t)}        \\
+                & = \frac{e^{-t} x e^{-x} - e^{-x} t e^{-t}}{e^{-2t}} \\
+                & = x e^{t - x} - t e^{t - x}                         \\
+                & = (x - t) e^{t - x}                                 \\
+  y_p(x)        & = \int_{x_0}^x G(x, t) f(t) \,dt                    \\
+                & = \int_{x_0}^x (x - t) e^{t - x} f(t) \,dt
+\end{align*}
+
+\subsubsection{5}
+
+\begin{align*}
+  y'' + 9y          & = 0                                                   \\
+  m^2 + 9           & = 0                                                   \\
+  (m + 3i) (m - 3i) & = 0                                                   \\
+  y_1               & = \cos 3x                                             \\
+  y_2               & = \sin 3x                                             \\
+  W(t)              & = 3 \cos^2 3x + 3 \sin^2 3x                           \\
+                    & = 3                                                   \\
+  G(x, t)           & = \frac{y_1(t) y_2(x) - y_1(x) y_2(t)}{W(t)}          \\
+                    & = \frac{(\cos 3t) \sin 3x - (\cos 3x) \sin 3t}{3}     \\
+                    & = \frac{1}{3} \sin 3 (x - t)                          \\
+  y_p(x)            & = \int_{x_0}^x G(x, t) f(t) \,dt                      \\
+                    & = \int_{x_0}^x \frac{1}{3} (\sin 3 (x - t)) f(t) \,dt
+\end{align*}
+
+\subsubsection{7}
+
+\[y = c_1 e^{-4x} + c_2 e^{4x} + \int_{x_0}^x \frac{1}{4} \sinh 4 (x - t) t e^{-2t} \,dt\]
+
+\subsubsection{9}
+
+\[y = c_1 e^{-x} + c_2 x e^{-x} + \int_{x_0}^x (x - t) e^{t - x} e^{-t} \,dt\]
+
+\subsubsection{11}
+
+\[y = c_1 \cos 3x + c_2 \sin 3x + \int_{x_0}^x \frac{1}{3} (\sin 3 (x - t)) (t + \sin t) \,dt\]
+
+\subsubsection{13}
+
+\begin{align*}
+  y'' - 4y        & = 0                                                        \\
+  m^2 - 4         & = 0                                                        \\
+  (m + 2) (m - 2) & = 0                                                        \\
+  y_1             & = e^{-2x}                                                  \\
+  y_2             & = e^{2x}                                                   \\
+  y_h             & = c_1 e^{-2x} + c_2 e^{2x}                                 \\
+  0               & = c_1 e^{-2 (0)} + c_2 e^{2 (0)}                           \\
+                  & = c_1 + c_2                                                \\
+  0               & = -2 c_1 e^{-2 (0)} + 2 c_2 e^{2 (0)}                      \\
+                  & = -2 c_1 + 2 c_2                                           \\
+  c_1             & = 0                                                        \\
+  c_2             & = 0                                                        \\
+  W(t)            & = 4                                                        \\
+  G(x, t)         & = \frac{y_1(t) y_2(x) - y_1(x) y_2(t)}{W(t)}               \\
+                  & = \frac{1}{2} \sinh 2 (x - t)                              \\
+  y_p             & = \int_{x_0}^x G(x, t) f(t) \,dt                           \\
+                  & = \int_0^x \frac{1}{2} (\sinh 2 (x - t)) e^{2t} \,dt       \\
+                  & = \frac{1}{2} \int_0^x \frac{e^{2x} - e^{4t - 2x}}{2} \,dt \\
+                  & = \frac{1}{4} x e^{2x} - \frac{1}{8} \sinh 2x              \\
+  y               & = y_h + y_p                                                \\
+                  & = \frac{1}{4} x e^{2x} - \frac{1}{8} \sinh 2x
+\end{align*}
+
+\subsubsection{15}
+
+\begin{align*}
+  y'' - 10y' + 25y & = 0                                            \\
+  m^2 - 10m + 25   & = 0                                            \\
+  (m - 5)^2        & = 0                                            \\
+  y_1              & = e^{5x}                                       \\
+  y_2              & = x e^{5x}                                     \\
+  y_h              & = c_1 e^{5x} + c_2 x e^{5x}                    \\
+  0                & = c_1 e^{5 (0)} + c_2 (0) e^{5 (0)}            \\
+                   & = c_1                                          \\
+  0                & = c_2 e^{5 (0)} + 5 c_2 (0) e^{5 (0)}          \\
+                   & = c_2                                          \\
+  y_h              & = 0                                            \\
+  W(t)             & = e^{10x}                                      \\
+  G(x, t)          & = \frac{y_1(t) y_2(x) - y_1(x) y_2(t)}{W(t)}   \\
+                   & = (x - t) e^{5 (x - t)}                        \\
+  y_p              & = \int_{0}^x G(x, t) f(t) \,dt                 \\
+                   & = \int_{0}^x (x - t) e^{5 (x - t)} e^{5t} \,dt \\
+                   & = \int_{0}^x (x - t) e^{5x} \,dt               \\
+                   & = \frac{1}{2} x^2 e^{5x}                       \\
+  y                & = y_h + y_p                                    \\
+                   & = y_p
+\end{align*}
+
+\subsubsection{19}
+
+\begin{align*}
+  y'' - 4y & = 0                                                                                             \\
+  y_h      & = c_1 e^{-2x} + c_2 e^{2x}                                                                      \\
+  1        & = c_1 e^{-2 (0)} + c_2 e^{2 (0)}                                                                \\
+           & = c_1 + c_2                                                                                     \\
+  -4       & = -2 c_1 e^{-2 (0)} + 2 c_2 e^{2 (0)}                                                           \\
+           & = -2 c_1 + 2 c_2                                                                                \\
+           & = -2 c_1 + 2 (1 - c_1)                                                                          \\
+           & = -4 c_1 + 2                                                                                    \\
+  c_1      & = \frac{3}{2}                                                                                   \\
+  c_2      & = -\frac{1}{2}                                                                                  \\
+  y_h      & = \frac{3}{2} e^{-2x} - \frac{1}{2} e^{2x}                                                      \\
+  y        & = y_h + y_p                                                                                     \\
+           & = \frac{3}{2} e^{-2x} - \frac{1}{2} e^{2x} + \frac{1}{4} x e^{2x} - \frac{e^{2x} - e^{-2x}}{16} \\
+           & = \frac{25}{16} e^{-2x} - \frac{9}{16} e^{2x} + \frac{1}{4} x e^{2x}
+\end{align*}
+
+\subsubsection{21}
+
+\begin{align*}
+  y_h & = c_1 e^{5x} + c_2 x e^{5x}                          \\
+  -1  & = c_1 e^{5 (0)} + c_2 (0) e^{5 (0)}                  \\
+      & = c_1                                                \\
+  1   & = -5 e^{5 (0)} + c_2 e^{5 (0)} + 5 c_2 (0) e^{5 (0)} \\
+      & = -5 + c_2                                           \\
+  c_2 & = 6                                                  \\
+  y_h & = -e^{5x} + 6 x e^{5x}                               \\
+  y   & = y_h + y_p                                          \\
+      & = -e^{5x} + 6 x e^{5x} + \frac{1}{2} x^2 e^{5x}
+\end{align*}
+
+\subsubsection{31}
+
+\begin{align*}
+  y'' - y         & = 0                                                                \\
+  m^2 - 1         & = 0                                                                \\
+  (m + 1) (m - 1) & = 0                                                                \\
+  y_1             & = e^{-x}                                                           \\
+  y_2             & = e^x                                                              \\
+  y_h             & = c_1 e^{-x} + c_2 e^x                                             \\
+  8               & = c_1 e^{-(0)} + c_2 e^{(0)}                                       \\
+                  & = c_1 + c_2                                                        \\
+  2               & = -c_1 e^{-(0)} + c_2 e^{(0)}                                      \\
+                  & = -c_1 + c_2                                                       \\
+                  & = -c_1 + (8 - c_1)                                                 \\
+  c_1             & = 3                                                                \\
+  c_2             & = 5                                                                \\
+  y_h             & = 3 e^{-x} + 5 e^x                                                 \\
+  y_p             & = \begin{cases}
+                        \int_0^x -\sinh (x - t) \,dt & \text{ for } x < 0   \\
+                        \int_0^x \sinh (x - t) \,dt  & \text{ for } x \ge 0
+                      \end{cases}              \\
+                  & = \begin{cases}
+                        1 - \cosh x   & \text{ for } x < 0   \\
+                        (\cosh x) - 1 & \text{ for } x \ge 0
+                      \end{cases}                             \\
+  y               & = \begin{cases}
+                        \frac{5}{2} e^{-x} + \frac{9}{2} e^x + 1  & \text{ for } x < 0   \\
+                        \frac{7}{2} e^{-x} + \frac{11}{2} e^x - 1 & \text{ for } x \ge 0
+                      \end{cases}
+\end{align*}
+
+\subsubsection{35}
+
+\begin{align*}
+  y''     & = 0                                                           \\
+  y_c     & = c_1 + c_2 x                                                 \\
+  y_1     & = x                                                           \\
+  y_2     & = x - 1                                                       \\
+  W(t)    & = \begin{vmatrix}
+                x & x - 1 \\
+                1 & 1
+              \end{vmatrix}                                              \\
+          & = x - (x - 1)                                                 \\
+          & = 1                                                           \\
+  G(x, t) & = \begin{cases}
+                t (x - 1) & 0 \le t \le x \\
+                x (t - 1) & x \le t \le 1
+              \end{cases}                                   \\
+  y_p(x)  & = \int_a^b G(x, t) f(t) \,dt                                  \\
+          & = \int_0^x t (x - 1) f(t) \,dt + \int_x^1 x (t - 1) f(t) \,dt \\
+          & = (x - 1) \int_0^x t f(t) \,dt + x \int_x^1 (t - 1) f(t) \,dt
+\end{align*}
+
+\subsubsection{37}
+
+\begin{align*}
+  y & = (x - 1) \int_0^x t \,dt + x \int_x^1 (t - 1) \,dt                                \\
+    & = \frac{1}{2} (x - 1) x^2 + x \left( \frac{1}{2} - 1 - \frac{1}{2} x^2 + x \right) \\
+    & = \frac{1}{2} x^2 - \frac{1}{2} x^2 + \frac{1}{2} x - x - \frac{1}{2} x^2 + x^2    \\
+    & = \frac{1}{2} x (x - 1)
+\end{align*}
+
 \end{document}
