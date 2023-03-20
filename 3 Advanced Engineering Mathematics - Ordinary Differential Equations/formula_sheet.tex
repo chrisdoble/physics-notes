@@ -89,6 +89,8 @@
                                 \begin{itemize}
                                   \item Cauchy/Euler
 
+                                  \item Green's function
+
                                   \item Undetermined coefficients
 
                                   \item Variation of parameters
@@ -305,7 +307,7 @@ The general solution is of the form \[y = y_c + y_p = c_1 y_1(x) + c_2 y_2(x) + 
         \begin{itemize}
           \item A real root $m$ corresponds to a solution \[y = ce^{mx}\]
 
-\item Complex roots $\alpha \pm i \beta$ correspond to solutions \[y = e^{\alpha x} (c_1 \cos \beta x + c_2 \sin \beta x)\]
+          \item Complex roots $\alpha \pm i \beta$ correspond to solutions \[y = e^{\alpha x} (c_1 \cos \beta x + c_2 \sin \beta x)\]
 
           \item A root $m$ of multiplicity $k$ corresponds to the solutions \[e^{mx}, \: x e^{mx}, \: x^2 e^{mx}, \: \ldots, \: x^{k - 1} x^{mx}\]
         \end{itemize}
@@ -399,6 +401,35 @@ The general solution is of the form \[y = y_c + y_p = c_1 y_1(x) + c_2 y_2(x) + 
           \item Find a particular solution via variation of parameters
         \end{enumerate}
 \end{itemize}
+
+\subsubsection{Green's Functions for IVPs}
+
+\textbf{Form:} The IVP \[y'' + P(x) y' + Q(x) = f(x)\] subject to $y(x_0) = y_0$ and $y'(x_0) = y_1$ \\ \textbf{Solution:} \begin{enumerate}
+  \item Solve the homogeneous equation with nonhomogeneous conditions \[y'' + P(x) y' + Q(x) y = 0, \: y(x_0) = y_0, \: y'(x_0) = y_1\] giving the solution $y_h$ and the fundamental set of solutions $y_1$ and $y_2$
+
+  \item Solve the nonhomogeneous equation with homogeneous conditions \[y'' + P(x) y' + Q(x) y = f(x), \: y(x_0) = 0, \: y'(x_0) = 0\] using the formula \[y_p(x) = \int_{x_0}^x G(x, t) f(t) \,dt\] where $G(x, t)$ is the Green's function for the differential equation \[G(x, t) = \frac{y_1(t) y_2(x) - y_1(x) y_2(t)}{W(t)}\] and $W(t)$ is the Wronskian \[W(t) = \begin{vmatrix}
+            y_1(t)  & y_2(t)  \\
+            y_1'(t) & y_2'(t)
+          \end{vmatrix}\]
+
+  \item The solution is $y = y_h + y_p$
+\end{enumerate}
+
+\subsubsection{Green's Functions for BVPs}
+
+\textbf{Form:} The BVP \[y'' + P(x) y' + Q(x) y = f(x)\] subject to \[A_1 y(a) + B_1 y(a) = 0\] and \[A_2 y(b) + B_2 y(b) = 0\] \\ \textbf{Solution:} \begin{enumerate}
+  \item Solve the associated homogeneous equation to find the fundamental set of solution $y_1$ and $y_2$ valid on $[a, b]$
+
+  \item Ensure $y_1$ and $y_2$ satisfy the boundary conditions \[A_1 y_1(a) + B_1 y_1(a) = 0\] and \[A_2 y_2(b) + B_2 y_2(b) = 0\]
+
+  \item Then a particular solution is \[y_p(x) = \int_a^b G(x, t) f(t) \,dt\] where $G(x, t)$ is the Green's function for the differential equation \[G(x, y) = \begin{cases}
+            \frac{y_1(t) y_2(x)}{W(t)} & a \le t \le x \\
+            \frac{y_1(x) y_2(t)}{W(t)} & x \le t \le b
+          \end{cases}\] and $W(t)$ is the Wronskian \[W(t) = \begin{vmatrix}
+            y_1(t)  & y_2(t)  \\
+            y_1'(t) & y_2'(t)
+          \end{vmatrix}\]
+\end{enumerate}
 
 \subsection{Nonlinear Equations}
 

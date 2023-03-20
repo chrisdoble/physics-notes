@@ -506,4 +506,36 @@
   \item Nonlinear initial-value problems can sometimes be solved by substituting the initial conditions into a Taylor series centred at $x_0$. The initial conditions can also be substituted into subsequent derivatives to add further terms to the series
 \end{itemize}
 
+\setcounter{subsection}{9}
+\subsection{Green's Functions}
+
+\begin{itemize}
+  \item Green's functions are useful because they allow you to express the solution of a DE in terms of the input function $g(x)$, making it easy to see how different input functions change the solution
+\end{itemize}
+
+\subsubsection{Initial-Value Problems}
+
+\begin{itemize}
+  \item The solution of a second-order IVP \[y'' + P(x) y' + Q(x) y = f(x), \: y(x_0) = y_0, \: y'(x_0) = y_1\] can be expressed as \[y = y_h + y_p\] where $y_h$ is the solution to the associated homogeneous equation with nonhomogeneous initial conditions \[y'' + P(x) y' + Q(x) y' = 0, \: y(x_0) = y_0, \: y'(x_0) = y_1\] and $y_p$ is the solution to the nonhomogeneous equation with homogeneous initial conditions \[y'' + P(x) y' + y = f(x), \: y(x_0) = 0, \: y'(x_0) = 0\]
+
+  \item If $P(x)$ and $Q(x)$ are constant $y_h$ can be found via the auxiliary / characteristic equation
+
+  \item If $y_1$ and $y_2$ form a fundamental set of solutions to the associated homogeneous equation, then $y_p$ is given by \[y_p(x) = \int_{x_0}^x G(x, t) f(t) \,dt\] where $G(x, y)$ is the Green's function for the differential equation \[G(x, t) = \frac{y_1(t) y_2(x) - y_1(x) y_2(t)}{W(t)}\] and $W(t)$ is the Wronskian \[W(t) = \begin{vmatrix}
+            y_1(t)  & y_2(t)  \\
+            y_1'(t) & y_2'(t)
+          \end{vmatrix}\]
+\end{itemize}
+
+\subsubsection{Boundary Value Problems}
+
+\begin{itemize}
+  \item If $y_1$ and $y_2$ are linearly independent solutions of \[y'' + P(x) y' + Q(x) = 0\] on $[a, b]$ and satisfy the boundary conditions \[A_1 y_1(a) + B_1 y_1(a) = 0\] and \[A_2 y_2(b) + B_2 y_2(b) = 0\] then the BVP \[y'' + P(x) y' + Q(x) y = f(x)\] subject to the same boundary conditions has a particular solution \[y_p(x) = \int_a^b G(x, t) f(t) \,dt\] where $G(x, t)$ is the Green's function for the differential equation \[G(x, y) = \begin{cases}
+            \frac{y_1(t) y_2(x)}{W(t)} & a \le t \le x \\
+            \frac{y_1(x) y_2(t)}{W(t)} & x \le t \le b
+          \end{cases}\] and $W(t)$ is the Wronskian \[W(t) = \begin{vmatrix}
+            y_1(t)  & y_2(t)  \\
+            y_1'(t) & y_2'(t)
+          \end{vmatrix}\]
+\end{itemize}
+
 \end{document}
