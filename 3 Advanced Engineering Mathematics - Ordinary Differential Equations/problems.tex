@@ -5279,4 +5279,73 @@ $L / 4$, $2 L / 4$, and $3 L / 4$
     & = \frac{1}{2} x (x - 1)
 \end{align*}
 
+\subsection{Nonlinear Models}
+
+\subsubsection{7}
+
+\begin{align*}
+  x'' + x e^{0.01x} & = 0 \\
+  x'' + x           & = 0
+\end{align*}
+
+\subsubsection{15}
+
+\begin{enumerate}
+  \item
+
+        \begin{align*}
+          x x'' + (x')^2 + 32x & = 160 \\
+          32k                  & = 160 \\
+          k                    & = 5
+        \end{align*}
+
+  \item Because there would be $\qty{5}{lb}$ of rope in the air which equals the upwards force
+
+  \item $v = \sqrt{160} = 4 \sqrt{10} = \qty{12.65}{ft/s}$
+\end{enumerate}
+
+\subsubsection{17}
+
+\begin{enumerate}
+  \item
+
+        \begin{align*}
+          \theta_1'' + \frac{g}{l} \theta_1 & = 0                                                   \\
+          \theta_1'' + \omega_1^2 \theta_1  & = 0                                                   \\
+          (m - \omega_1 i) (m + \omega_1 i) & = 0                                                   \\
+          \theta_{1c}                       & = c_1 \cos \omega_1 t + c_2 \sin \omega_1 t           \\
+          \theta_0                          & = c_1 \cos \omega_1 (0) + c_2 \sin \omega_1 (0)       \\
+                                            & = c_1                                                 \\
+          0                                 & = -\theta_0 \sin \omega_1 (0) + c_2 \cos \omega_1 (0) \\
+                                            & = c_2                                                 \\
+          \theta_1                          & = \theta_0 \cos \omega_1 t
+        \end{align*}
+
+  \item
+
+        \begin{align*}
+          \theta_0 \cos \omega_1 T & = 0                                \\
+          \omega_1 T               & = \arccos 0                        \\
+          T                        & = \frac{\arccos 0}{\omega_1}       \\
+                                   & = \frac{\pi}{2} \sqrt{\frac{l}{g}}
+        \end{align*}
+
+  \item
+
+        \begin{align*}
+          \theta_2                                                                                & = c_3 \cos \omega_2 t + c_4 \sin \omega_2 t                                                                                     \\
+          0                                                                                       & = c_3 \cos \sqrt{\frac{4g}{l}} \frac{\pi}{2} \sqrt{\frac{l}{g}} + c_4 \sin \sqrt{\frac{4g}{l}} \frac{\pi}{2} \sqrt{\frac{l}{g}} \\
+                                                                                                  & = c_3 \cos \pi + c_4 \sin \pi                                                                                                   \\
+                                                                                                  & = -c_3                                                                                                                          \\
+          \theta_1'                                                                               & = -\omega_1 \theta_0 \sin \omega_1 t                                                                                            \\
+          l \theta_1'(T)                                                                          & = \frac{l}{4} \theta_2'(T)                                                                                                      \\
+          -l \omega_1 \theta_0 \sin \omega_1 T                                                    & = \frac{l}{4} c_4 \omega_2 \cos \omega_2 T                                                                                      \\
+          -l \sqrt{\frac{g}{l}} \theta_0 \sin \sqrt{\frac{g}{l}} \frac{\pi}{2} \sqrt{\frac{l}{g}} & = \frac{l}{4} c_4 \sqrt{\frac{4g}{l}} \cos \sqrt{\frac{4g}{l}} \frac{\pi}{2} \sqrt{\frac{l}{g}}                                 \\
+          -\theta_0 \sin \frac{\pi}{2}                                                            & = \frac{1}{2} c_4 \cos \pi                                                                                                      \\
+          -\theta_0                                                                               & = -\frac{1}{2} c_4                                                                                                              \\
+          c_4                                                                                     & = 2 \theta_0                                                                                                                    \\
+          \theta_2                                                                                & = 2 \theta_0 \sin 2 \sqrt{\frac{g}{l}} t
+        \end{align*}
+\end{enumerate}
+
 \end{document}
