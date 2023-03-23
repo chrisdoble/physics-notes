@@ -549,4 +549,22 @@
   \item Once you have an equation for each dependent variable it's important to substitute them back into the original differential equation to determine the constraints on the parameters — not all of them can be chosen arbitrarily
 \end{itemize}
 
+\section{The Laplace Transform}
+
+\subsection{Definition of the Laplace Transform}
+
+\begin{itemize}
+  \item If a function $f(t)$ is defined for $t \ge 0$ and the limit \[\int_0^\infty K(s, t) f(t) \,dt = \lim_{b \rightarrow \infty} \int_0^b K(s, t) f(t) \,dt\] exist, the integral is said to \textbf{exist} or be \textbf{convergent}, otherwise it does not exist or is \textbf{divergent}
+
+  \item If a function $f(t)$ is defined for $t \ge 0$ then the limit \[\mathcal{L} (f(t)) = \int_0^\infty e^{-s t} f(t) \,dt\] is called the \textbf{Laplace transform} of $f$ providing the integral converges
+
+  \item $\mathcal{L}$ is a linear transform, i.e. \[\mathcal{L}\{\alpha f(t) + \beta g(t)\} = \alpha \mathcal{L}\{f(t)\} + \beta \mathcal{L}\{g(t)\}\]
+
+  \item A function is said to be \textbf{piecewise continuous} on $[0, \infty)$ if, in any interval defined by $0 \le a \le t \le b$, there are at most a finite number of points $t_k$, $k = 1, 2, \ldots, n$ $(t_{k - 1} < t_k)$, at which $f$ has finite discontinuities and is continuous on each open interval defined by $t_{k - 1} < t < t_k$
+
+  \item A function is said to be of \textbf{exponential order} if there exists constants $c$, $M > 0$, and $T > 0$ such that $|f(t)| \le M e^{c t}$ for all $t > T$
+
+  \item If $f(t)$ is piecewise continuous on the interval $[0, \infty)$ and of exponential order, then $\mathcal{L} \{f(t)\}$ exists for $s > c$
+\end{itemize}
+
 \end{document}
