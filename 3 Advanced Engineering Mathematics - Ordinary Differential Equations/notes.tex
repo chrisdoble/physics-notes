@@ -567,4 +567,22 @@
   \item If $f(t)$ is piecewise continuous on the interval $[0, \infty)$ and of exponential order, then $\mathcal{L} \{f(t)\}$ exists for $s > c$
 \end{itemize}
 
+\subsection{The Inverse Transform and Transforms of Derivatives}
+
+\begin{itemize}
+  \item $\mathcal{L}^{-1}$ is a linear transform, i.e. \[\mathcal{L}^{-1}\{\alpha F(s) + \beta G(s)\} = \alpha \mathcal{L}^{-1}\{F(s)\} + \beta \mathcal{L}^{-1}\{G(s)\}\]
+
+  \item If $f$, $f'$, $\ldots$, $f^{(n - 1)}$ are continuous on $[0, \infty)$, are of exponential order, and $f^{(n)}$ is piecewise continuous on $[0, \infty)$, then \[\mathcal{L}\{f^{(n)}(t)\} = s^n F(s) - s^{n - 1} f(0) - s^{n - 2} f'(0) - \cdots - f^{(n - 1)}(0)\] where $F(s) = \mathcal{L}\{f(t)\}$
+
+  \item The Laplace transform can be used to solve linear IVPs:
+
+        \begin{enumerate}
+          \item Take the Laplace transform of the DE, resulting in an algebraic equation in $F(s) = \mathcal{L}\{f(s)\}$ where $f(s)$ is the goal
+
+          \item Solve the equation for $F(s)$
+
+          \item Apply the inverse Laplace transform to find $f(s)$
+        \end{enumerate}
+\end{itemize}
+
 \end{document}
