@@ -6629,4 +6629,216 @@ a
                                       & \qquad + \frac{25}{4} \cos (4 (t - 5)) \mathcal{U}(t - 5)
 \end{align*}
 
+\subsection{Additional Operational Properties}
+
+\subsubsection{1}
+
+\[\frac{1}{(s + 10)^2}\]
+
+\subsubsection{3}
+
+\[\frac{s^2 - 4}{(s^2 + 4)^2}\]
+
+\subsubsection{5}
+
+\[\frac{2 s}{(s^2 - 1)^2}\]
+
+\subsubsection{7}
+
+\[\frac{12 (s - 2)}{((s - 2)^2 + 36)^2}\]
+
+\subsubsection{9}
+
+\begin{align*}
+  y' + y               & = t \sin t                                                                               \\
+  s Y(s) - y(0) + Y(s) & = \frac{2 s}{(s^2 + 1)^2}                                                                \\
+  Y(s)                 & = \frac{2 s}{(s + 1) (s^2 + 1)^2}                                                        \\
+                       & = \frac{1}{s + 1} \frac{2 s}{(s^2 + 1)^2}                                                \\
+  y(t)                 & = \int_0^t \tau e^{-(t - \tau)} \sin \tau \,d\tau                                        \\
+                       & = -\frac{1}{2} e^{-t} + \frac{1}{2} t \sin t - \frac{1}{2} t \cos t + \frac{1}{2} \cos t
+\end{align*}
+
+\subsubsection{11}
+
+\begin{align*}
+  y'' + 9 y                          & = \cos 3 t                                                          \\
+  s^2 Y(s) - s y(0) - y'(0) + 9 Y(s) & = \frac{s}{s^2 + 9}                                                 \\
+  (s^2 + 9) Y(s)                     & = 5 + 2 s + \frac{s}{s^2 + 9}                                       \\
+  Y(s)                               & = \frac{5}{s^2 + 9} + \frac{2 s}{s^2 + 9} + \frac{s}{(s^2 + 9)^2}   \\
+  y(t)                               & = \frac{5}{3} \sin 3 t + 2 \cos 3 t                                 \\
+                                     & \qquad + \int_0^t \frac{1}{3} \sin 3 \tau \cos 3 (t - \tau) \,d\tau \\
+                                     & = \frac{5}{3} \sin 3 t + 2 \cos 3 t + \frac{1}{6} t \sin 3 t
+\end{align*}
+
+\subsubsection{13}
+
+\begin{align*}
+  y'' + 16 y                          & = \cos 4 t - \cos 4 t \mathcal{U} (t - \pi)                                       \\
+  s^2 Y(s) - s y(0) - y'(0) + 16 Y(s) & = \frac{s}{s^2 + 16} - e^{-\pi s} \mathcal{L}\{\cos (4 (t + \pi))\}               \\
+  (s^2 + 16) Y(s)                     & = 1 + \frac{s}{s^2 + 16} - \frac{e^{-\pi s} s}{s^2 + 16}                          \\
+  Y(s)                                & = \frac{1}{s^2 + 16} + \frac{s}{(s^2 + 16)^2} - \frac{e^{-\pi s} s}{(s^2 + 16)^2} \\
+  y(t)                                & = \frac{1}{4} \sin 4 t + \frac{1}{8} t \sin 4 t                                   \\
+                                      & \qquad - \frac{1}{8} (t - \pi) \sin 4 (t - \pi) \mathcal{U}(t - \pi)
+\end{align*}
+
+\subsubsection{17}
+
+\begin{align*}
+  t y'' - y'                                                 & = 2 t^2                         \\
+  -\frac{d}{d s} (s^2 Y(s) - s y(0) - y'(0)) - s Y(s) + y(0) & = \frac{4}{s^3}                 \\
+  -(2 s Y(s) + s^2 Y'(s)) - s Y(s)                           & = \frac{4}{s^3}                 \\
+  -s Y'(s) - 3 Y(s)                                          & = \frac{4}{s^4}                 \\
+  -m - 3                                                     & = 0                             \\
+  m                                                          & = -3                            \\
+  Y_c                                                        & = c s^{-3}                      \\
+  Y_p                                                        & = \frac{4}{s^4}                 \\
+  Y(s)                                                       & = \frac{c}{s^3} + \frac{4}{s^4} \\
+  y(t)                                                       & = c t^2 + \frac{2}{3} t^3
+\end{align*}
+
+\subsubsection{19}
+
+\begin{align*}
+  f * g                & = \int_0^t 12 (t - \tau) \tau^2 \,d\tau                           \\
+                       & = 12 \int_0^t (t \tau^2 - \tau^3) \,d\tau                         \\
+                       & = 12 \left[ \frac{1}{3} t \tau^3 - \frac{1}{4} \tau^4 \right]_0^t \\
+                       & = 4 t^4 - 3 t^4                                                   \\
+                       & = t^4                                                             \\
+  \mathcal{L}\{f * g\} & = \frac{24}{s^5}
+\end{align*}
+
+\subsubsection{21}
+
+\begin{align*}
+  f * g                & = \int_0^t e^{-\tau} e^{t - \tau} \,d\tau \\
+                       & = \int_0^t e^{t - 2 \tau} \,d\tau         \\
+                       & = -\frac{1}{2} [e^{t - 2 \tau}]_0^t       \\
+                       & = -\frac{1}{2} (e^{-t} - e^{t})           \\
+                       & = \sinh t                                 \\
+  \mathcal{L}\{f * g\} & = \frac{1}{s^2 - 1}
+\end{align*}
+
+\subsubsection{23}
+
+\[\frac{6}{s^5}\]
+
+\subsubsection{25}
+
+\[\frac{1}{s + 1} \frac{s - 1}{(s - 1)^2 + 1}\]
+
+\subsubsection{27}
+
+\[\frac{1}{s (s - 1)}\]
+
+\subsubsection{29}
+
+\[\frac{1}{s} \frac{s + 1}{(s + 1)^2 + 1}\]
+
+\subsubsection{31}
+
+\[\frac{1}{s^2} \frac{1}{s - 1}\]
+
+\subsubsection{33}
+
+\begin{align*}
+  \mathcal{L} \left\{ t \int_0^t \sin \tau \,d\tau \right\} & = -\frac{d}{d s} \frac{\mathcal{L}\{\sin t\}}{s} \\
+                                                            & = -\frac{d}{d s} \frac{1}{s^3 + s}               \\
+                                                            & = \frac{3 s^2 + 1}{(s^3 + s)^2}                  \\
+                                                            & = \frac{3 s^2 + 1}{s^2 (s^2 + 1)^2}
+\end{align*}
+
+\subsubsection{35}
+
+\[\int_0^t e^\tau \,d\tau = e^t - 1\]
+
+\subsubsection{36}
+
+\[\int_0^t (e^\tau - 1) \,d\tau = e^t - t - 1\]
+
+\subsubsection{37}
+
+\[\int_0^t (e^\tau - \tau - 1) \,d\tau = e^t - \frac{1}{2} t^2 - t - 1\]
+
+\subsubsection{41}
+
+\begin{align*}
+  f(t) + \int_0^t (t - \tau) f(\tau) \,d\tau & = t                 \\
+  F(s) + \frac{1}{s^2} F(s)                  & = \frac{1}{s^2}     \\
+  \left( \frac{s^2 + 1}{s^2} \right) F(s)    & = \frac{1}{s^2}     \\
+  F(s)                                       & = \frac{1}{s^2 + 1} \\
+  f(t)                                       & = \sin t
+\end{align*}
+
+\subsubsection{43}
+
+\begin{align*}
+  f(t)                     & = t e^t + \int_0^t \tau f(t - \tau) \,d\tau                                                                                                                            \\
+  F(s)                     & = \frac{1}{(s - 1)^2} + \frac{F(s)}{s^2}                                                                                                                               \\
+  \frac{s^2 - 1}{s^2} F(s) & = \frac{1}{(s - 1)^2}                                                                                                                                                  \\
+  F(s)                     & = \frac{s^2}{(s^2 - 1) (s - 1)^2}                                                                                                                                      \\
+                           & = -\frac{1}{8 (s + 1)} + \frac{1}{8 (s - 1)} + \frac{3}{4 (s - 1)^2} + \frac{1}{2 (s - 1)^3}                                                                           \\
+                           & = -\frac{1}{8 (s + 1)} + \frac{1}{8 (s - 1)} - \frac{3}{4} \frac{d}{d s} \left( \frac{1}{s - 1} \right) + \frac{1}{4} \frac{d^2}{d s^2} \left( \frac{1}{s - 1} \right) \\
+  f(t)                     & = -\frac{1}{8} e^{-t} + \frac{1}{8} e^t + \frac{3}{4} t e^t + \frac{1}{4} t^2 e^t
+\end{align*}
+
+\subsubsection{45}
+
+\begin{align*}
+  f(t) + \int_0^t f(\tau) \,d\tau & = 1               \\
+  F(s) + \frac{F(s)}{s}           & = \frac{1}{s}     \\
+  \frac{s + 1}{s} F(s)            & = \frac{1}{s}     \\
+  F(s)                            & = \frac{1}{s + 1} \\
+  f(t)                            & = e^{-t}
+\end{align*}
+
+\subsubsection{47}
+
+\begin{align*}
+  f(t)                      & = 1 + t - \frac{8}{3} \int_0^t (\tau - t)^3 f(\tau) \,d\tau                                                       \\
+  F(s)                      & = \frac{1}{s} + \frac{1}{s^2} + \frac{16}{s^4} F(s)                                                               \\
+  \frac{s^4 - 16}{s^4} F(s) & = \frac{1}{s} + \frac{1}{s^2}                                                                                     \\
+  F(s)                      & = \frac{s^3}{s^4 - 16} + \frac{s^2}{s^4 - 16}                                                                     \\
+                            & = \frac{s}{2 (s^2 + 4)} + \frac{1}{4 (s - 2)} + \frac{1}{4 (s + 2)} + \frac{1}{2 (s^2 + 4)} - \frac{1}{8 (s + 2)} \\
+                            & \qquad + \frac{8}{(s - 2)}                                                                                        \\
+  f(t)                      & = \frac{1}{2} \cos 2 t + \frac{1}{4} \sin 2 t + \frac{3}{8} e^{2 t} + \frac{1}{8} e^{-2 t}
+\end{align*}
+
+\subsubsection{49}
+
+\begin{align*}
+  y'(t)                  & = 1 - \sin t - \int_0^t y(\tau) \,d\tau            \\
+  s Y(s) - y(0)          & = \frac{1}{s} - \frac{1}{s^2 + 1} - \frac{Y(s)}{s} \\
+  \frac{s^2 + 1}{s} Y(s) & = \frac{1}{s} - \frac{1}{s^2 + 1}                  \\
+  Y(s)                   & = \frac{1}{s^2 + 1} - \frac{s}{(s^2 + 1)^2}        \\
+  y(t)                   & = \sin t - \frac{1}{2} t \sin t
+\end{align*}
+
+\subsubsection{55}
+
+\begin{align*}
+  \mathcal{L}\{f(t)\} & = \frac{1}{1 - e^{-2 a s}} \left( \int_0^a e^{-s t} \,dt - \int_a^{2 a} e^{-s t} \,dt \right)                                   \\
+                      & = \frac{1}{1 - e^{-2 a s}} \left( \left[ \frac{1}{s} e^{-s t} \right]_a^{2 a} - \left[ \frac{1}{s} e^{-s t} \right]_0^a \right) \\
+                      & = \frac{1}{s (1 - e^{-2 a s})} (e^{-2 a s} - 2 e^{-a s} + 1)                                                                    \\
+                      & = \frac{(1 - e^{-a s})^2}{s (1 + e^{-a s}) (1 - e^{-a s})}                                                                      \\
+                      & = \frac{1 - e^{-a s}}{s (1 + e^{-a s})}
+\end{align*}
+
+\subsubsection{57}
+
+\begin{align*}
+  \mathcal{L}\{f(t)\} & = \frac{1}{1 - e^{-b s}} \int_0^b e^{-s t} \frac{a}{b} t \,dt                                           \\
+                      & = \frac{a}{b (1 - e^{-b s})} \frac{1 - e^{-b s} (b s + 1)}{s^2}                                         \\
+                      & = \frac{a}{b} \frac{1}{1 - e^{-b s}} \left( \frac{1 - e^{-b s}}{s^2} - \frac{b s e^{-b s}}{s^2} \right) \\
+                      & = \frac{a}{s} \left( \frac{1}{b s} - \frac{1}{e^{b s} - 1} \right)                                      \\
+\end{align*}
+
+\subsubsection{59}
+
+\begin{align*}
+  \mathcal{L}\{f(t)\} & = \frac{1}{1 - e^{-\pi s}} \int_0^\pi e^{-s t} \sin t \,dt \\
+                      & = \frac{1}{1 - e^{-\pi s}} \frac{e^{-\pi s} + 1}{s^2 + 1}  \\
+                      & = \frac{e^{\pi s} + 1}{e^{\pi s} - 1} \frac{1}{s^2 + 1}    \\
+                      & = \frac{\coth \pi s / 2}{s^2 + 1}
+\end{align*}
+
 \end{document}

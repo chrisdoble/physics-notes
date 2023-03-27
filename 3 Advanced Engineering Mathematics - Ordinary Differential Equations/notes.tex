@@ -605,7 +605,7 @@
 \begin{itemize}
   \item If $F(s) = \mathcal{L}\{f(t)\}$ and $n = 1, 2, 3, \ldots$, then \[\mathcal{L}\{t^n f(t)\} = (-1)^n \frac{d^n}{d s^n} F(s)\]
 
-  \item If functions $f$ and $g$ are piecewise continuous on the interval $[0, \infty)$ then the \textbf{convolution} of $f$ and $g$, denoted $f * g$, is a function defined by the integral \[f * g = \int_0^t f(\tau) g(t - \tau) \,dt\]
+\item If functions $f$ and $g$ are piecewise continuous on the interval $[0, \infty)$ then the \textbf{convolution} of $f$ and $g$, denoted $f * g$, is a function defined by the integral \[f * g = \int_0^t f(\tau) g(t - \tau) \,d\tau\]
 
   \item The \textbf{convolution theorem} states that if $f$ and $g$ are piecewise continuous on $[0, \infty)$ and of exponential order, then \[\mathcal{L}\{f * g\} = \mathcal{L}\{f(t)\} \mathcal{L}\{g(t)\} = F(s) G(s)\] and \[\mathcal{L}^{-1}\{F(s) G(s)\} = f * g\]
 
@@ -615,7 +615,7 @@
 
   \item An \textbf{integro-differential equation} is an equation that involves both integrals and derivatives of a function
 
-  \item If $f(t)$ is piecewise continuous on $[0, \infty)$, of exponential order, and periodic with period $T$, then \[\mathcal{L}\{f(t)\} = \frac{1}{1 - e^{-s t}} \int_0^T e^{-s t} f(t) \,dt\]
+\item If $f(t)$ is piecewise continuous on $[0, \infty)$, of exponential order, and periodic with period $T$, then \[\mathcal{L}\{f(t)\} = \frac{1}{1 - e^{-s T}} \int_0^T e^{-s t} f(t) \,dt\]
 \end{itemize}
 
 \end{document}
