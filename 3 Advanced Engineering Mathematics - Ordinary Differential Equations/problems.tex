@@ -6841,4 +6841,80 @@ a
                       & = \frac{\coth \pi s / 2}{s^2 + 1}
 \end{align*}
 
+\subsection{The Dirac Delta Function}
+
+\subsubsection{1}
+
+\begin{align*}
+  y' - 3 y        & = \delta (t - 2)                   \\
+  s Y(s) - 3 Y(s) & = e^{-2 s}                         \\
+  Y(s)            & = \frac{e^{-2 s}}{s - 3}           \\
+  y(t)            & = e^{3 (t - 2)} \mathcal{U}(t - 2)
+\end{align*}
+
+\subsubsection{3}
+
+\begin{align*}
+  y'' + y                          & = \delta(t - 2 \pi)                                \\
+  s^2 Y(s) - s y(0) - y'(0) + Y(S) & = e^{-2 \pi s}                                     \\
+  (s^2 + 1) Y(s)                   & = 1 + e^{-2 \pi s}                                 \\
+  Y(s)                             & = \frac{1}{s^2 + 1} + \frac{e^{-2 \pi s}}{s^2 + 1} \\
+  y(t)                             & = \sin t + \sin t \mathcal{U} (t - 2 \pi)
+\end{align*}
+
+\subsubsection{5}
+
+\begin{align*}
+  y'' + y                          & = \delta (t - \pi / 2) + \delta (t - 3 \pi / 2)                        \\
+  s^2 Y(s) - s y(0) - y'(0) + Y(s) & = e^{-\pi s / 2} + e^{-3 \pi s / 2}                                    \\
+  Y(s)                             & = \frac{e^{-\pi s / 2}}{s^2 + 1} + \frac{e^{-3 \pi s / 2}}{s^2 + 1}    \\
+                                   & = \sin t \mathcal{U}(t - \pi / 2) + \sin t \mathcal{U}(t - 3 \pi / 2)  \\
+                                   & = -\cos t \mathcal{U}(t - \pi / 2) + \cos t \mathcal{U}(t - 3 \pi / 2)
+\end{align*}
+
+\subsubsection{7}
+
+\begin{align*}
+  y'' + 2 y'                                    & = \delta(t - 1)                                                                       \\
+  s^2 Y(s) - s y(0) - y'(0) + 2 [s Y(s) - y(0)] & = e^{-s}                                                                              \\
+  (s^2 + 2 s) Y(s)                              & = 1 + e^{-s}                                                                          \\
+  Y(s)                                          & = \frac{1}{s (s + 2)} + \frac{e^{-s}}{s (s + 2)}                                      \\
+                                                & = \frac{1}{2 s} - \frac{1}{2 (s + 2)} + \frac{e^{-s}}{2 s} - \frac{e^{-s}}{2 (s + 2)} \\
+  y(t)                                          & = \frac{1}{2} - \frac{1}{2} e^{-2 t} + \frac{1}{2} \mathcal{U}(t - 1)                 \\
+                                                & \qquad - \frac{1}{2} e^{-2 (t - 1)} \mathcal{U}(t - 1)
+\end{align*}
+
+\subsubsection{9}
+
+\begin{align*}
+  y'' + 4 y' + 5 y             & = \delta(t - 2 \pi)                                \\
+  s^2 Y(s) + 4 s Y(s) + 5 Y(s) & = e^{-2 \pi s}                                     \\
+  Y(s)                         & = \frac{e^{-2 \pi s}}{s^2 + 4 s + 5}               \\
+                               & = \frac{e^{-2 \pi s}}{(s + 2)^2 + 1}               \\
+                               & = e^{-2 (t - 2 \pi)} \sin t \mathcal{U}(t - 2 \pi)
+\end{align*}
+
+\subsubsection{11}
+
+\begin{align*}
+  y'' + 4 y' + 13 y                       & = \delta(t - \pi) + \delta(t - 3 \pi)                                              \\
+  s^2 Y(s) - s + 4 [s Y(s) - 1] + 13 Y(s) & = e^{-\pi s} + e^{-3 \pi s}                                                        \\
+  ((s + 2)^2 + 9) Y(s)                    & = 4 + s + e^{-\pi s} + e^{-3 \pi s}                                                \\
+  Y(s)                                    & = \frac{4}{(s + 2)^2 + 9} + \frac{s}{(s + 2)^2 + 9}                                \\
+                                          & \qquad + \frac{e^{-\pi s}}{(s + 2)^2 + 9} + \frac{e^{-3 \pi s}}{(s + 2)^2 + 9}     \\
+  y(t)                                    & = \frac{2}{3} e^{-2 t} \sin 3 t + e^{-2 t} \cos 3 t                                \\
+                                          & \qquad + \frac{1}{3} e^{-2 (t - \pi)} \sin 3 (t - \pi) \mathcal{U} (t - \pi)       \\
+                                          & \qquad + \frac{1}{3} e^{-2 (t - 3 \pi)} \sin 3 (t - 3 \pi) \mathcal{U} (t - 3 \pi)
+\end{align*}
+
+\subsubsection{13}
+
+\begin{align*}
+  y'' + y                          & = \sum_{k = 1}^\infty \delta(t - k \pi)                                \\
+  s^2 Y(s) - s y(0) - y'(0) + Y(s) & = \sum_{k = 1}^\infty e^{-k \pi s}                                     \\
+  (s^2 + 1) Y(s)                   & = 1 + \sum_{k = 1}^\infty e^{-k \pi s}                                 \\
+  Y(s)                             & = \frac{1}{s^2 + 1} + \sum_{k = 1}^\infty \frac{e^{-k \pi s}}{s^2 + 1} \\
+  y(t)                             & = \sin t + \sin t \sum_{k = 1}^\infty (-1)^k \mathcal{U}(t - k \pi)
+\end{align*}
+
 \end{document}
