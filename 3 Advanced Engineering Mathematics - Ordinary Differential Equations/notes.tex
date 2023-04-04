@@ -635,4 +635,32 @@
   \item For $t_0 > 0$ \[\mathcal{L}\{\delta(t - t_0)\} = e^{-s t_0}\]
 \end{itemize}
 
+\section{Series Solutions of Linear Differential Equations}
+
+\subsection{Solutions about Ordinary Points}
+
+\begin{itemize}
+  \item A \textbf{power series} is an infinite series of the form \[\sum_{n = 0}^\infty a_n (x - c)^n = a_0 + a_1 (x - c) + a_2 (x - c)^2 + \ldots\]
+
+  \item A point $x_0$ is said to be an \textbf{ordinary point} of the differential equation \[y'' + P(x) y' + Q(x) y = 0\] if both $P(x)$ and $Q(x)$ are analytic at $x_0$. A point that is not an ordinary point is said to be a \textbf{singular point} of the equation.
+
+  \item If $x = x_0$ is an ordinary point of the differential equation above, we can always find two linearly independent solutions in the form of a power series centred at $x_0$. Such a solution is said to be a \textbf{solution about the ordinary point $x_0$}
+
+  \item A series solution converges at least on some interval $|x - x_0| < R$ where $R$ is the distance from $x_0$ to the closest singular point
+
+  \item A series solution can be found for a homogeneous linear second-order differential equation by
+
+        \begin{enumerate}
+          \item Assume the solution is of the form \[y = \sum_{n = 0}^\infty c_n x^n\] and thus \[y' = \sum_{n = 1}^\infty c_n n x^{n - 1}\] and \[y'' = \sum_{n = 2}^\infty c_n n (n - 1) x^{n - 2}\]
+
+          \item Substitute the assumed solution into the DE
+
+          \item Group the summations
+
+          \item Find a recurrence relation for the coefficients which will result in all coefficients being expressed in terms of $c_0$ or $c_1$
+
+          \item Group terms by $c_0$ and $c_1$, giving \[y(x) = c_0 y_1(x) + c_1 y_2(x)\] where $y_1(x)$ and $y_2(x)$ are the two linearly independent solutions
+        \end{enumerate}
+\end{itemize}
+
 \end{document}

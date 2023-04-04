@@ -48,6 +48,8 @@
                                   \item Exact with integration constant
 
                                   \item Homogeneous substitution
+                                  
+\item Laplace transform
 
                                   \item Reduction to separation of variables
 
@@ -81,6 +83,10 @@
 
                                   \item Cauchy/Euler
 
+\item Laplace transform
+
+\item Method of undetermined series coefficients (series solution)
+
                                   \item Reduction of order
                                 \end{itemize}
 
@@ -90,6 +96,8 @@
                                   \item Cauchy/Euler
 
                                   \item Green's function
+
+\item Laplace transform
 
                                   \item Undetermined coefficients
 
@@ -118,12 +126,16 @@
                                   \item Auxiliary/characteristic equation
 
                                   \item Cauchy/Euler
+
+\item Laplace transform
                                 \end{itemize}
 
                           \item Nonhomogeneous
 
                                 \begin{itemize}
                                   \item Cauchy/Euler
+
+\item Laplace transform
 
                                   \item Undetermined coefficients
 
@@ -433,6 +445,20 @@ The general solution is of the form \[y = y_c + y_p = c_1 y_1(x) + c_2 y_2(x) + 
             y_1(t)  & y_2(t)  \\
             y_1'(t) & y_2'(t)
           \end{vmatrix}\]
+\end{enumerate}
+
+\subsubsection{Series Solutions to Homogeneous Second-Order Equations}
+
+\textbf{Form:} Homogeneous linear second-order DE \[y'' + P(x) y' + Q(x) y = 0\] where $P(x)$ and $Q(x)$ are analytic at $x = x_0$ \\ \textbf{Solution:} \begin{enumerate}
+  \item Assume the solution is of the form \[y = \sum_{n = 0}^\infty c_n x^n\] and thus \[y' = \sum_{n = 1}^\infty c_n n x^{n - 1}\] and \[y'' = \sum_{n = 2}^\infty c_n n (n - 1) x^{n - 2}\]
+
+  \item Substitute the assumed solution into the DE
+
+  \item Group the summations
+
+  \item Find a recurrence relation for the coefficients which will result in all coefficients being expressed in terms of $c_0$ or $c_1$
+
+  \item Group terms by $c_0$ and $c_1$, giving \[y(x) = c_0 y_1(x) + c_1 y_2(x)\] where $y_1(x)$ and $y_2(x)$ are the two linearly independent solutions
 \end{enumerate}
 
 \subsection{Nonlinear Equations}
