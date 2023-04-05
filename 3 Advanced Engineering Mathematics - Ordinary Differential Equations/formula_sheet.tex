@@ -48,8 +48,8 @@
                                   \item Exact with integration constant
 
                                   \item Homogeneous substitution
-                                  
-\item Laplace transform
+
+                                  \item Laplace transform
 
                                   \item Reduction to separation of variables
 
@@ -83,9 +83,11 @@
 
                                   \item Cauchy/Euler
 
-\item Laplace transform
+                                  \item Laplace transform
 
-\item Method of undetermined series coefficients (series solution)
+                                  \item Method of Frobenius
+
+                                  \item Method of undetermined series coefficients (series solution)
 
                                   \item Reduction of order
                                 \end{itemize}
@@ -97,7 +99,7 @@
 
                                   \item Green's function
 
-\item Laplace transform
+                                  \item Laplace transform
 
                                   \item Undetermined coefficients
 
@@ -127,7 +129,7 @@
 
                                   \item Cauchy/Euler
 
-\item Laplace transform
+                                  \item Laplace transform
                                 \end{itemize}
 
                           \item Nonhomogeneous
@@ -135,7 +137,7 @@
                                 \begin{itemize}
                                   \item Cauchy/Euler
 
-\item Laplace transform
+                                  \item Laplace transform
 
                                   \item Undetermined coefficients
 
@@ -434,11 +436,11 @@ The general solution is of the form \[y = y_c + y_p = c_1 y_1(x) + c_2 y_2(x) + 
 
   \item Ensure $y_1$ and $y_2$ satisfy the boundary conditions \[A_1 y_1(a) + B_1 y_1(a) = 0\] and \[A_2 y_2(b) + B_2 y_2(b) = 0\]
 
-\begin{itemize}
-  \item It's important that $y_1$ satisfies the starting boundary condition and $y_2$ satisfies the ending!
-\end{itemize}
+        \begin{itemize}
+          \item It's important that $y_1$ satisfies the starting boundary condition and $y_2$ satisfies the ending!
+        \end{itemize}
 
-\item Then a particular solution is \[y_p(x) = \int_a^b G(x, t) f(t) \,dt\] where $G(x, t)$ is the Green's function for the differential equation \[G(x, t) = \begin{cases}
+  \item Then a particular solution is \[y_p(x) = \int_a^b G(x, t) f(t) \,dt\] where $G(x, t)$ is the Green's function for the differential equation \[G(x, t) = \begin{cases}
             \frac{y_1(t) y_2(x)}{W(t)} & a \le t \le x \\
             \frac{y_1(x) y_2(t)}{W(t)} & x \le t \le b
           \end{cases}\] and $W(t)$ is the Wronskian \[W(t) = \begin{vmatrix}
@@ -459,6 +461,22 @@ The general solution is of the form \[y = y_c + y_p = c_1 y_1(x) + c_2 y_2(x) + 
   \item Find a recurrence relation for the coefficients which will result in all coefficients being expressed in terms of $c_0$ or $c_1$
 
   \item Group terms by $c_0$ and $c_1$, giving \[y(x) = c_0 y_1(x) + c_1 y_2(x)\] where $y_1(x)$ and $y_2(x)$ are the two linearly independent solutions
+\end{enumerate}
+
+\subsubsection{Method of Frobenius}
+
+\textbf{Form:} \[y'' + P(x) y' + Q(x) y' = 0\] where $x = x_0$ is a regular singular point \\ \textbf{Solution:} \begin{enumerate}
+  \item Assume the solution is of the form \[y = \sum_{n = 0}^\infty c_n (x - x_0)^{n + r}\] where $x = x_0$ is a regular singular point and thus \[y' = \sum_{n = 0}^\infty (n + r) c_n x^{n + r - 1}\] and \[y'' = \sum_{n = 0}^\infty (n + r) (n + r - 1) c_n x^{n + r - 2}\]
+
+  \item Substitute the assumed solution into the DE
+
+  \item Group the summations
+
+  \item Solve the indicial equation to determine the value(s) of $r$
+
+  \item Solve the recurrence relation(s) given by the value(s) of $r$ to determine constants
+
+  \item Use the constants to determine the solution(s)
 \end{enumerate}
 
 \subsection{Nonlinear Equations}

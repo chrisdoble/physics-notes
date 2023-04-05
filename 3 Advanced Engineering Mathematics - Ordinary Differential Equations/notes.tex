@@ -663,4 +663,44 @@
         \end{enumerate}
 \end{itemize}
 
+\subsection{Solutions about Singular Points}
+
+\begin{itemize}
+  \item A singular point $x_0$ is said to be a \textbf{regular singular point} of the differential equation \[y'' + P(x) y' + Q(x) y = 0\] if the functions $p(x) = (x - x_0) P(x)$ and $q(x) = (x - x_0)^2 Q(x)$ are both analytic at $x_0$. A singular point that is not regular is said to be an \textbf{irregular singular point} of the equation.
+
+  \item This, if $x - x_0$ appears at most to the first power in the denominator of $P(x)$ and at most to the second power of the denominator of $Q(x)$, then $x = x_0$ is a regular singular point
+
+  \item \textbf{Frobenius' theorem} states that if $x = x_0$ is a regular singular point of the differential equation \[a_2(x) y'' + a_1(x) y' + a_0(x) y = 0\] then there exists at least one nonzero  solution of the form \[y = \sum_{n = 0}^\infty c_n (x - x_0)^{n + r}\] where $r$ is a constant to be determined
+
+  \item When applying Frobenius' theorem, $r$ can be determined by equating the total coefficient of the lowest power of $x$ to $0$ and solving for $r$. This coefficient is called the \textbf{indicial equation} and its solutions the \textbf{indicial roots} or \textbf{exponents}
+
+  \item Frobenius' theorem can be applied like so:
+
+        \begin{enumerate}
+          \item Assume the solution is of the form \[y = \sum_{n = 0}^\infty c_n (x - x_0)^{n + r}\] where $x = x_0$ is a regular singular point and thus \[y' = \sum_{n = 0}^\infty (n + r) c_n x^{n + r - 1}\] and \[y'' = \sum_{n = 0}^\infty (n + r) (n + r - 1) c_n x^{n + r - 2}\]
+
+          \item Substitute the assumed solution into the DE
+
+          \item Group the summations
+
+          \item Solve the indicial equation to determine the value(s) of $r$
+
+          \item Solve the recurrence relation(s) given by the value(s) of $r$ to determine constants
+
+          \item Use the constants to determine the solution(s)
+        \end{enumerate}
+
+  \item Assuming the indicial roots are real and $r_1 > r_2$, there are three cases to consider:
+
+        \begin{enumerate}
+          \item If $r_1$ and $r_2$ are distinct and don't differ by an integer, then there exist two linearly independent solutions of the form \[y_1(x) = \sum_{n = 0}^\infty c_n x^{n + r_1}\] and \[y_2(x) = \sum_{n = 0}^\infty b_n x^{n + r_2}\]
+
+          \item If $r_1 - r_2 = N$ where $N$ is a positive integer, then there exist two linearly independent solutions of the form \[y_1(x) = \sum_{n = 0}^\infty c_n x^{n + r_1}, \: c_0 \ne 0\] and \[y_2(x) = C y_1(x) \ln x + \sum_{n = 0}^\infty b_n x^{n + r_2}, \: b_0 \ne 0\] where $C$ is a constant that may be zero
+
+          \item If $r_1 = r_2$, then there exist two linearly independent solutions of the form \[y_1(x) = \sum_{n = 0}^\infty c_n x^{n + r_1}, \: c_0 \ne 0\] and \[y_2(x) = y_1(x) \ln x + \sum_{n = 0}^\infty b_n x^{n + r_2}\]
+        \end{enumerate}
+
+  \item In cases 2 and 3 above it may not be possible to find a second solution. Instead a second solution can be found using the first solution and reduction of order \[y_2(x) = y_1(x) \int \frac{e^{-\int P(x) \,dx}}{y_1^2(x)} \,dx\]
+\end{itemize}
+
 \end{document}
