@@ -703,4 +703,34 @@
   \item In cases 2 and 3 above it may not be possible to find a second solution. Instead a second solution can be found using the first solution and reduction of order \[y_2(x) = y_1(x) \int \frac{e^{-\int P(x) \,dx}}{y_1^2(x)} \,dx\]
 \end{itemize}
 
+\subsection{Special Functions}
+
+\begin{itemize}
+  \item The equation \[x^2 y'' + x y' + (x^2 - \nu^2) y = 0\] is called \textbf{Bessel's equation of order $\boldsymbol{\nu}$} where $nu \ge 0$
+
+  \item The equation \[(1 - x^2) y'' - 2 x y' + n (n + 1) y = 0\] is called \textbf{Legendre's equation of order $\boldsymbol{n}$} where $n$ is a nonnegative integer
+\end{itemize}
+
+\subsubsection{Bessel Functions}
+
+\begin{itemize}
+  \item The indicial roots are $r_1 = \nu$ and $r_2 = -\nu$
+
+  \item $\Gamma(x)$ is the gamma function and it has the property that \[\Gamma(1 + \alpha) = \alpha \Gamma(\alpha)\]
+
+  \item The first solution is \[J_\nu(x) = \sum_{n = 0}^\infty \frac{(-1)^n}{n! \Gamma(1 + \nu + n)} \left( \frac{x}{2} \right)^{2 n + \nu}\] and it converges on $[0, \infty)$ if $\nu \ge 0$
+
+  \item The second solution is \[J_{-\nu}(x) = \sum_{n = 0}^\infty \frac{(-1)^n}{n! \Gamma(1 - \nu + n)} \left( \frac{x}{2} \right)^{2 n - \nu}\] and, depending on the value of $\nu$, may contain negative powers of $x$ and thus it converges on the interval $(0, \infty)$
+
+  \item These solutions are known as \textbf{Bessel functions of the first kind} of order $\nu$ and $-\nu$
+
+  \item The general solution to a Bessel equation of order $\nu$ is \[y = c_1 J_\nu(x) + c_2 J_{-\nu}(x), \,v \ne \text{integer}\]
+
+  \item The function \[Y_\nu(x) = \frac{\cos \nu \pi J_\nu(x) - J_{-\nu}(x)}{\sin \nu \pi}\] is called the \textbf{Bessel function of the second kind} of order $\nu$
+
+  \item A general solution to a Bessel function of order $\nu$ is \[y = c_1 J_\nu(x) + c_2 Y_\nu(x)\]
+
+  \item Sometimes it's possible to transform a DE into a Bessel function via a change of variable, e.g. by substituting $t = \alpha x$ in the \textbf{parametric Bessel function of order $\boldsymbol{\nu}$} \[x^2 y'' + x y' + (\alpha^2 x^2 - \nu^2) y = 0\] it can be transformed into \[t^2 \frac{d^2 y}{d t^2} + t \frac{d y}{d t} + (t^2 - \nu^2) y = 0\] which has the general solution \[y = c_1 J_\nu(t) + c_2 Y_\nu(t)\] or \[y = c_1 J_\nu(\alpha x) + c_2 Y_\nu(\alpha x)\]
+\end{itemize}
+
 \end{document}
