@@ -733,4 +733,30 @@
   \item Sometimes it's possible to transform a DE into a Bessel function via a change of variable, e.g. by substituting $t = \alpha x$ in the \textbf{parametric Bessel function of order $\boldsymbol{\nu}$} \[x^2 y'' + x y' + (\alpha^2 x^2 - \nu^2) y = 0\] it can be transformed into \[t^2 \frac{d^2 y}{d t^2} + t \frac{d y}{d t} + (t^2 - \nu^2) y = 0\] which has the general solution \[y = c_1 J_\nu(t) + c_2 Y_\nu(t)\] or \[y = c_1 J_\nu(\alpha x) + c_2 Y_\nu(\alpha x)\]
 \end{itemize}
 
+\section{Numerical Solutions of Ordinary Differential Equations}
+
+\subsection{Euler Methods and Error Analysis}
+
+\begin{itemize}
+  \item \textbf{Round-off error} occurs when calculators or computers round off numbers to fit within the limits of what they can represent
+
+  \item If we assume that $y_n$ is accurate, then the difference between the computed and actual values of $y_{n + 1}$ is called the \textbf{local truncation error}, \textbf{formula error}, or \textbf{discretization error}
+
+  \item The upper bound on the absolute error of the local truncation error for Euler's formula is \[M \frac{h^2}{2!}\] where \[M = \max_{x_n < x < x_{n + 1}} |y''(x)|\]
+
+  \item The local truncation error for Euler's method is $O(h^2)$
+
+  \item If $e(h)$ denotes the error in a numerical calculation depending on $h$, then $e(h)$ is said to be $O(h^n)$ if there is a constant $C$ and a positive integer $n$ such that $|e(h)| \le C h^n$
+
+  \item If $y_n$ isn't necessarily accurate, i.e. it contains its own local truncation error, the difference between the computer and actual values of $y_{n + 1}$ is called the \textbf{global truncation error} (this may be greater than the local truncation error as its affected by the truncation errors of previous values)
+
+  \item The global truncation error for Euler's method is $O(h)$
+
+  \item If a method for the numerical solution of a differential equation has local truncation error $O(h^{\alpha + 1})$ then the global truncation error is $O(h^\alpha)$
+
+  \item The \textbf{improved Euler's method} uses an average of the gradients at the original point and the point predicted by Euler's method \[y_{n + 1} = y_n + h \frac{f(x_n, y_n) + f(x_n, y^*_{n + 1})}{2}\] where \[y^*_{n + 1} = y_n + h f(x_n, y_n)\]
+
+  \item The local truncation error for the improved Euler's method is $O(h^3)$ and the global truncation error is $O(h^2)$
+\end{itemize}
+
 \end{document}
