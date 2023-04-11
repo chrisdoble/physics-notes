@@ -759,4 +759,24 @@
   \item The local truncation error for the improved Euler's method is $O(h^3)$ and the global truncation error is $O(h^2)$
 \end{itemize}
 
+\subsection{Runge-Kutta Methods}
+
+\begin{itemize}
+  \item Runge-Kutta methods are methods for obtaining approximate solutions to first-order initial value problems
+
+  \item There are Runge-Kutta methods of different orders
+
+  \item Each Runge-Kutta method is a weighted average of slopes over the interval $x_n < x < x_{n + 1}$ \[y_{n + 1} = y_n + h (w_1 k_1 + w_2 k_2+ \cdots + w_m k_m)\] where $m$ is the order of the method
+
+  \item Euler's method is said to be a first-order Runge-Kutta method
+
+  \item The improved Euler's method is said to be a second-order Runge-Kutta method
+
+  \item The local truncation error for RK4 is $y^{(5)}(c)/5!$ or $O(h^5)$ and the global truncation error is $O(h^4)$
+
+  \item Numerical methods that use a variable step size are called \textbf{adaptive methods}
+
+  \item One of the more popular adaptive methods is the \textbf{Runge-Kutta-\\Fehlberg method} or the RKF45 method
+\end{itemize}
+
 \end{document}
