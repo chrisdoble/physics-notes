@@ -239,4 +239,154 @@ and the angular frequency of system (c) $\omega_c$ is
         \end{align*}
 \end{enumerate}
 
+\section{The Damped Harmonic Oscillator}
+
+\subsection{}
+
+\begin{align*}
+  \left( \frac{\gamma}{2} \right)^2 & = \omega_0^2                   \\
+  \frac{b}{2 m}                     & = \sqrt{\frac{k}{m}}           \\
+  b                                 & = 2 m \sqrt{\frac{k}{m}}       \\
+                                    & = 2 m \sqrt{\frac{m g / x}{m}} \\
+                                    & = 2 m \sqrt{\frac{g}{x}}       \\
+                                    & = \qty{64}{kg / s}
+\end{align*}
+
+\subsection{}
+
+\begin{align*}
+  \frac{A_{n + 1}}{A_n} & = 0.90                             \\
+  e^{-2.5 \gamma / 2}   & = 0.90                             \\
+  e^{2.5 \gamma / 2}    & = \frac{1}{0.90}                   \\
+  \frac{2.5 \gamma}{2}  & = \ln \frac{1}{0.90}               \\
+  \gamma                & = \frac{2}{2.5} \ln \frac{1}{0.90} \\
+                        & = \qty{8.43e-2}{s^{-1}}            \\
+  F                     & = -b v                             \\
+                        & = -(\num{4.21e-2}) v
+\end{align*}
+
+\subsection{}
+
+After 10 cycles the amplitude has decreased by a factor of $5 / 3$. The energy of the system is proportional to the amplitude squared, so
+
+\begin{align*}
+  E(300)         & = E(0) e^{-300 / \tau}            \\
+  e^{300 / \tau} & = \frac{E(0)}{E(300)}             \\
+  \tau           & = \frac{300}{\ln [E(0) / E(300)]} \\
+                 & = \frac{300}{\ln \frac{25}{9}}    \\
+                 & = \qty{294}{s}                    \\
+  Q              & = \omega_0 \tau                   \\
+                 & = \frac{2 \pi \tau}{T}            \\
+                 & = 61.5
+\end{align*}
+
+\subsection{}
+
+\begin{align*}
+  \frac{E(10 T)}{E_0} & = \frac{E_0 e^{-\gamma 10 T}}{E_0} \\
+  \frac{1}{2}         & = e^{-\gamma 10 T}                 \\
+  \frac{E(50 T)}{E_0} & = \frac{E_0 e^{-\gamma 50 T}}{E_0} \\
+                      & = (e^{-\gamma 10 T})^5             \\
+                      & = \left( \frac{1}{2} \right)^5     \\
+                      & = \frac{1}{32}
+\end{align*}
+
+\subsection{}
+
+\begin{enumerate}
+  \item
+
+        \begin{align*}
+          Q_{0.01}      & = 310               \\
+          \omega_{0.01} & = \qty{3.14}{rad/s} \\
+          Q_{0.30}      & = 10.5              \\
+          \omega_{0.30} & = \qty{3.14}{rad/s} \\
+          Q_{1.00}      & = 3.14              \\
+          \omega_{1.00} & = \qty{3.10}{rad/s}
+        \end{align*}
+
+        \setcounter{enumi}{2}
+  \item
+
+        \begin{align*}
+          \gamma^2 / 4 & = \pi^2                                                  \\
+          \gamma       & = 2 \pi                                                  \\
+          x            & = A e^{-\pi t} + B t e^{-\pi t}                          \\
+          A            & = \qty{10}{mm}                                           \\
+          v            & = -10 \pi e^{-\pi t} + B e^{-\pi t} - \pi B t e^{-\pi t} \\
+          0            & = -10 \pi + B                                            \\
+          B            & = 10 \pi                                                 \\
+          x            & = 10 e^{-\pi t} + 10 \pi t e^{-\pi t}
+        \end{align*}
+\end{enumerate}
+
+\subsection{}
+
+\begin{align*}
+  \frac{\omega}{\omega_0} & = \frac{\omega_0 \sqrt{1 - 1 / 4 Q^2}}{\omega_0} \\
+                          & = \sqrt{1 - 1 / 4 Q^2}                           \\
+                          & = 1 - \frac{1 / 4 Q^2}{2} + \cdots               \\
+                          & \approx 1 - \frac{Q^2}{8}
+\end{align*}
+
+\subsection{}
+
+The amplitude of each pendulum decreases over time by a factor of
+
+\begin{align*}
+  \exp \left( -\frac{\gamma t}{2} \right) & = \exp \left( -\frac{b t}{2 m} \right)                              \\
+                                          & = \exp \left( -\frac{b t}{2 \cdot \frac{4}{3} \pi r^3 \rho} \right) \\
+                                          & = \exp \left( -\frac{3 b t}{8 \pi r^3 \rho} \right)                 \\
+                                          & = \exp \left( -\frac{3 b t}{8 \pi r^3} \right)^{1 / \rho}.
+\end{align*}
+
+After 10 minutes the amplitude of oscillation of the aluminium pendulum has decreased to half of its initial value
+
+\begin{align*}
+  \exp \left( -\frac{225 b}{\pi r^3} \right)^{1 / \rho_a} & = \frac{1}{2}                         \\
+  \exp \left( -\frac{225 b}{\pi r^3} \right)              & = \left( \frac{1}{2} \right)^{\rho_a}
+\end{align*}
+
+so the brass pendulum's amplitude of oscillation has decreased by a factor of
+
+\begin{align*}
+  \exp \left( -\frac{225 b}{\pi r^3} \right)^{1 / \rho_b} & = \left( \frac{1}{2} \right)^{\rho_a / \rho_b} \\
+                                                          & = 0.802
+\end{align*}
+
+\subsection{}
+
+\begin{enumerate}
+  \item
+
+        \begin{align*}
+          x & = A \sin \omega t                                                                                                   \\
+          v & = \omega A \cos \omega t                                                                                            \\
+          a & = -\omega^2 A \sin \omega t                                                                                         \\
+          E & = \int_0^T \frac{K e^2 a^2}{c^3} \,dt                                                                               \\
+            & = \int_0^T \frac{K e^2 \omega^4 A^2 \sin^2 \omega t}{c^3} \,dt                                                      \\
+            & = \frac{K e^2 \omega^4 A^2}{c^3} \int_0^{2 \pi / \omega} \sin^2 \omega t \,dt                                       \\
+            & = \frac{K e^2 \omega^4 A^2}{c^3} \left[ \frac{t}{2} - \frac{1}{4 \omega} \sin 2 \omega t \right]_0^{2 \pi / \omega} \\
+            & = \frac{K e^2 \omega^3 A^2 \pi}{c^3}
+        \end{align*}
+
+  \item
+
+        \begin{align*}
+          Q & = \frac{\frac{1}{2} m \omega^2 A^2}{\frac{K e^2 \omega^3 A^2 \pi}{2 \pi c^3}} \\
+            & = \frac{c^3 m}{e^2 K \omega}
+        \end{align*}
+
+  \item
+
+        \begin{align*}
+          \tau & = \frac{1}{\gamma}                                         \\
+               & = \frac{Q}{\omega}                                         \\
+               & = \frac{c^3 m}{e^2 K \omega^2}                             \\
+               & = \frac{c^3 m}{e^2 K \left( 2 \pi (c / \lambda) \right)^2} \\
+               & = \frac{\lambda^2 c m}{4 \pi^2 e^2 K}                      \\
+               & \approx \qty{1.13e-8}{s}
+        \end{align*}
+\end{enumerate}
+
 \end{document}
