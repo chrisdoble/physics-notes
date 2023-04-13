@@ -35,4 +35,69 @@
   \item The equation of motion for a system described by the energy equation above is \[\frac{d^2 x}{d t^2} = -\frac{\beta}{\alpha} x\]
 \end{itemize}
 
+\section{The Damped Harmonic Oscillator}
+
+\begin{itemize}
+  \item The equation of motion of a damped harmonic oscillator is
+
+        \begin{align*}
+          F = m a                                                     & = -k x - b v \\
+          m \frac{d^2 x}{d t^2} + b \frac{d x}{d t} + k x             & = 0          \\
+          \frac{d^2 x}{d t^2} + \gamma \frac{d x}{d t} + \omega_0^2 x & = 0
+        \end{align*}
+
+        where $\gamma = b / m$ and $\omega_0^2 = k / m$
+
+  \item $\omega_0$ is known as the \textbf{natural frequency of oscillation}, i.e. the oscillation frequency if there were no damping
+
+  \item \textbf{Light damping / underdamped}
+
+        \begin{itemize}
+          \item The motion is still oscillatory but the amplitude decreases expontentially
+
+          \item This occurs when $\gamma^2 / 4 < \omega_0^2$
+
+          \item The general solution is \[x = A_0 e^{-\gamma t / 2} \cos (\omega t + \phi)\] where $A_0$ is the initial amplitude
+
+          \item Successive maxima decrease by the same fractional amount \[\frac{A_n}{A_{n + 1}} = e^{\gamma T / 2}\]
+
+          \item The natural logarithm of $A_n / A_{n + 1}$ is called the \textbf{logarithmic decrement} \[\ln \left( \frac{A_n}{A_{n + 1}} \right) = \frac{\gamma T}{2}\]
+        \end{itemize}
+
+  \item \textbf{Heavy damping / overdamped}
+
+        \begin{itemize}
+          \item The motion is not oscillatory and returns sluggishly to the equilibrium position
+
+          \item This occurs when $\gamma^2 / 4 > \omega_0^2$
+
+          \item The general solution is
+
+                \begin{align*}
+                  x & = e^{-\gamma t / 2} [A e^{\alpha t} + B e^{-\alpha t}]           \\
+                    & = A e^{(\alpha - \gamma / 2) t} + B e^{-(\alpha + \gamma / 2) t}
+                \end{align*}
+
+                where $\alpha = \sqrt{\gamma^2 / 4 - \omega_0^2}$
+        \end{itemize}
+
+  \item \textbf{Critical damping}
+
+        \begin{itemize}
+          \item The motion is not oscillatory and returns as quickly as possible to the equilibrium position
+
+          \item This occurs when $\gamma^2 / 4 = \omega_0^2$
+
+          \item The general solution is \[x = A e^{-\gamma t / 2} + B t e^{-\gamma t / 2}\]
+        \end{itemize}
+
+  \item The total energy of an underdamped system decreases over time \[E = E_0 e^{-\gamma t}\] where $E_0$ is the initial energy of the system
+
+  \item The \textbf{decay time} or \textbf{time constant} of the system $\tau = 1 / \gamma$ is the time it takes for its energy to decrease by a factor of $e$
+
+  \item The \textbf{quality factor} of a harmonic oscillator is a dimensionless value that gives a measure of the degree of damping \[Q = \frac{\omega_0}{\gamma}\] where large values indicate little damping and small values indicate more damping
+
+  \item The quality factor can also be used as a measure of the energy lost per cycle $2 \pi / Q$ or the energy lost per radian $1 / Q$
+\end{itemize}
+
 \end{document}
