@@ -100,4 +100,84 @@
 \item The quality factor can also be used as a measure of fraction of energy lost (i.e. $\Delta E / E$) per cycle $2 \pi / Q$ or per radian $1 / Q$
 \end{itemize}
 
+\section{Forced Oscillations}
+
+\begin{itemize}
+  \item The equation of motion for an undamped forced harmonic oscillator is \[m \frac{d^2 x}{d t^2} + k x = F_0 \cos \omega t\] the general solution of which is \[x = A(\omega) \cos (\omega t - \delta)\] where \[A(\omega) = \frac{F_0}{k (1 - \omega^2 / \omega_0^2)} \text{ and } \delta = 0\] for $\omega < \omega_0$ and \[A(\omega) = -\frac{F_0}{k (1 - \omega^2 / \omega_0^2)} \text{ and } \delta = \pi\] for $\omega > \omega_0$
+
+  \item From the above it can be seen that:
+
+        \begin{itemize}
+          \item $A(\omega) \rightarrow F_0 / k$ as $\omega \rightarrow 0$
+
+          \item $A(\omega) \rightarrow \infty$ as $\omega \rightarrow \omega_0$
+
+          \item $A(\omega) \rightarrow 0$ as $\omega \rightarrow \infty$
+        \end{itemize}
+
+  \item The equation of motion for a damped forced harmonic oscillator is \[\frac{d^2 x}{d t^2} + \gamma \frac{d x}{d t} + \omega_0^2 x = \frac{F_0}{m} \cos \omega t\] where $\gamma = b / m$ and $\omega_0^2 = k / m$ the general solution of which is \[x = A(\omega) \cos (\omega t - \delta)\] where \[A(\omega) = \frac{F_0}{m [(\omega_0^2 - \omega^2)^2 + \omega^2 \gamma^2]^{1 / 2}}\] and \[\delta = \arctan \frac{\omega \gamma}{\omega_0^2 - \omega^2}\]
+
+  \item From the above it can be seen that:
+
+        \begin{itemize}
+          \item $A(\omega) \rightarrow F_0 / k$ as $\omega \rightarrow 0$
+
+          \item $A(\omega) \rightarrow F_0 \omega_0 / k \gamma$ as $\omega \rightarrow \omega_0$
+
+          \item $A(\omega) \rightarrow 0$ as $\omega \rightarrow \infty$
+        \end{itemize}
+
+  \item $A(\omega)$ is maximised when its denominator is minimised, leading to \[\omega_\text{max} = \omega_0 (1 - \gamma^2 / 2 \omega_0^2)^{1 / 2}\] and thus \[A_\text{max} = \frac{F_0 \omega_0 / \gamma}{k (1 - \gamma^2 / 4 \omega_0^2)^{1 / 2}}\]
+
+  \item The power absorbed by a damped oscillator to sustain its motion is exactly equal to the rate at which the energy is dissipated, i.e.
+
+        \begin{align*}
+          P(t) & = b v(t) \times v(t)                      \\
+               & = b [v(t)]^2                              \\
+               & = v [v_0(t)]^2 \sin^2 (\omega t - \delta)
+        \end{align*}
+
+  \item The average power absorbed over one cycle is \[\overline{P}(\omega) = \frac{b[v_0(\omega)]^2}{2} = \frac{\omega^2 F_0^2 \gamma}{2 m [(\omega_0^2 - \omega^2)^2 + \omega^2 \gamma^2]}\]
+
+  \item From the above it can be seen that:
+
+        \begin{itemize}
+          \item $\overline{P}(\omega) \rightarrow 0$ as $\omega \rightarrow 0$
+
+          \item $\overline{P}(\omega) \rightarrow F_0^2 / 2 m \gamma$ as $\omega \rightarrow \omega_0$
+
+          \item $\overline{P}(\omega) \rightarrow 0$ as $\omega \rightarrow \infty$
+        \end{itemize}
+
+  \item The \textbf{power resonance curve} of an oscillating system graphs the average power absorbed by the system over a cycle to the driving frequency
+
+  \item The \textbf{full width at half height} of a power resonance curve is the width of the curve at height $P_\text{max} / 2$, is a measure of the sharpness of the system's response to an applied force, and is equal to $\omega_\text{fwhh} = \gamma = \omega_0 / Q$
+
+  \item From the above it can be seen that \[Q = \frac{\omega_0}{\gamma} = \frac{\omega_0}{\omega_\text{fwhh}}\]
+
+  \item A resonance circuit can be used to amplify AC signals around a particular frequency by the $Q$-factor of the circuit — this makes them useful in radio receivers to tune a specific frequency
+
+  \item When a driving force is first applied to a system, the system will be inclined to oscillate at its natural frequency $\omega_0$. The behaviour of the system is described by the sum of two oscillations, one at frequency $\omega_0$ and the other at $\omega$. Eventually the $\omega_0$ oscillations die out leaving the system in its \textbf{steady state} condition. The initial behaviour is reffered to as its \textbf{transient response}.
+
+  \item The equation of motion for damped forced oscillations is the second-order nonhomogeneous linear differential equation \[\frac{d^2 x}{d t^2} + \gamma \frac{d x}{d t} + \omega_0^2 x = \frac{F_0}{m} \cos \omega t.\] The oscillations at frequency $\omega_0$ present only during the transient response are described by the complementary function of this equation, i.e. a fundamental set of solutions of the associated homogeneous differential equation, and the oscillations at frequency $\omega$ are described by a particular solution of this equation.
+
+  \item If $z = x + y i$, the \textbf{complex conjugate} of $z$ is $z^* = x - y i$
+
+  \item The product of a complex number with its conjugate is $z z^* = z^2 + y^2$
+
+  \item The \textbf{modulus} of a complex number is defined as $|z| = \sqrt{z z^*} = \sqrt{x^2 + y^2}$
+
+  \item Division of complex numbers can be performed like so \[\frac{z_1}{z_2} = \frac{z_1 z_2^*}{z_2 z_2^*} = \frac{(x_1 + i y_1) (x_2 - i y_2)}{x_2^2 + y_2^2} = \frac{(x_1 x_2 + y_1 y_2) + i (x_2 y_1 - x_1 y_2)}{x_2^2 + y_2^2}\]
+
+  \item An \textbf{Argand diagram} is two-dimensional graph where the $x$-axis is used as the real axis and the $y$-axis is used as the imaginary axis
+
+  \item Using \textbf{Euler's formula} \[e^{i x} = \cos x + i \sin x\] a complex number can be represented as \[z = x + i y = r (\cos \theta + i \sin \theta) = z e^{i \theta}\] where $r$ is the modulus $|z|$ and $\theta$ is the angle of $z$ from the positive $x$-axis known as its \textbf{argument}
+
+  \item Multiplication of complex numbers is equivalent to rotation and scaling in the complex plane \[r_1 e^{i \theta} \times r_2 e^{i \phi} = r_1 r_2 e^{i (\theta + \phi)}\]
+
+  \item Phasor diagrams can be represented on the complex plane with phasors as complex numbers $z = A e^{i (\omega t + \phi)}$ and their projection onto the $x$-axis as their real components
+
+  \item Differentiation with respect to time of a complex phasor is equivalent to multiplication by $i \omega$
+\end{itemize}
+
 \end{document}
