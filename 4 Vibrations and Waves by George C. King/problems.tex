@@ -6,6 +6,9 @@
 \usepackage{siunitx} % For units
 \graphicspath{{./images/}}
 
+\renewcommand{\Im}{\operatorname{Im}}
+\renewcommand{\Re}{\operatorname{Re}}
+
 \setlist[enumerate, 1]{label={(\alph*)}}
 \setlist[enumerate, 2]{label={(\roman*)}}
 
@@ -388,5 +391,297 @@ so the brass pendulum's amplitude of oscillation has decreased by a factor of
                & \approx \qty{1.13e-8}{s}
         \end{align*}
 \end{enumerate}
+
+\section{Forced Oscillations}
+
+\subsection{}
+
+\begin{align*}
+  A(\qty{2}{rad / s})      & = \qty{1.3e-2}{m} \\
+  \delta(\qty{2}{rad/s})   & = \ang{0.58}      \\
+  A(\qty{20}{rad / s})     & = \qty{0.13}{m}   \\
+  \delta(\qty{20}{rad/s})  & = \ang{90}        \\
+  A(\qty{100}{rad / s})    & = \qty{5.2e-4}{m} \\
+  \delta(\qty{100}{rad/s}) & = \ang{179}       \\
+\end{align*}
+
+\subsection{}
+
+\begin{align*}
+  A(\omega) & = \frac{a \omega_0 / \omega}{\sqrt{(\omega_0 / \omega - \omega / \omega_0)^2 + 1 / Q^2}} \\
+            & = \frac{a u}{\sqrt{(u - 1 / u)^2 + 1 / Q^2}}                                             \\
+            & = \frac{a}{\sqrt{(1 - 1 / u^2)^2 + 1 / u^2 Q^2}}
+\end{align*}
+
+$A(\omega)$ is maximised when the denominator is minimised which occurs when
+
+\begin{align*}
+  \frac{d}{d u} ((1 - u^{-2})^2 + Q^{-2} u^{-2}) & = 0                                  \\
+  2 (1 - u^{-2}) 2 u^{-3} - 2 Q^{-2} u^{-3}      & = 0                                  \\
+  4 (1 - u^{-2}) - 2 Q^{-2}                      & = 0                                  \\
+  \frac{4 Q^2 - 2}{Q^2}                          & = \frac{4}{u^2}                      \\
+  \frac{Q^2}{4 Q^2 - 2}                          & = \frac{u^2}{4}                      \\
+  \frac{4 Q^2}{4 Q^2 - 2}                        & = u^2                                \\
+  \frac{1}{1 - 1 / 2 Q^2}                        & = u^2                                \\
+  \frac{1}{\sqrt{1 - 1 / 2 Q^2}}                 & = \frac{\omega_0}{\omega_\text{max}} \\
+  \omega_\text{max}                              & = \omega_0 \sqrt{1 - 1 / 2 Q^2}
+\end{align*}
+
+at which point the amplitude will be
+
+\begin{align*}
+  A_\text{max} & = \frac{a \omega_0 / \omega_0 \sqrt{1 - 1 / 2 Q^2}}{\sqrt{\left( \frac{\omega_0}{\omega_0 \sqrt{1 - 1 / 2 Q^2}} - \frac{\omega_0 \sqrt{1 - 1 / 2 Q^2}}{\omega_0} \right)^2 + 1 / Q^2}} \\
+               & = \frac{a / \sqrt{1 - 1 / 2 Q^2}}{\sqrt{\left( \frac{1}{\sqrt{1 - 1 / 2 Q^2}} - \sqrt{1 - 1 / 2 Q^2} \right)^2 + 1 / Q^2}}                                                             \\
+               & = \frac{a / \sqrt{1 - 1 / 2 Q^2}}{\sqrt{\left( \frac{1 - 1 + 1 / 2 Q^2}{\sqrt{1 - 1 / 2 Q^2}} \right)^2 + 1 / Q^2}}                                                                    \\
+               & = \frac{a / \sqrt{1 - 1 / 2 Q^2}}{\sqrt{\frac{1}{4 Q^4 (1 - 1 / 2 Q^2)} + 1 / Q^2}}                                                                                                    \\
+               & = \frac{a / \sqrt{1 - 1 / 2 Q^2}}{\sqrt{\frac{1 + 4 Q^2 (1 - 1 / 2 Q^2)}{4 Q^2 (1 - 1 / 2 Q^2)}}}                                                                                      \\
+               & = \frac{a}{\sqrt{1 - 1 / 2 Q^2}} \sqrt{\frac{4 Q^2 (1 - 1 / 2 Q^2)}{1 + 4 Q^2 (1 - 1 / 2 Q^2)}}                                                                                        \\
+               & = a \sqrt{\frac{4 Q^2}{1 + 4 Q^2 (1 - 1 / 2 Q^2)}}                                                                                                                                     \\
+               & = a Q \sqrt{\frac{4}{4 (1 - 1 / 2 Q^2) + 1 / Q^2}}                                                                                                                                     \\
+               & = \frac{a Q}{\sqrt{1 - 1 / 2 Q^2 + 1 / 4 Q^2}}                                                                                                                                         \\
+               & = \frac{a Q}{\sqrt{1 - 1 / 4 Q^2}}
+\end{align*}
+
+\subsection{}
+
+\begin{enumerate}
+  \item
+
+        \begin{align*}
+          \frac{\omega_0 - \omega_\text{max}}{\omega_0} & = 1 - \sqrt{1 - 1 / 2 Q^2}   \\
+                                                        & \approx \qty{0.25}{\percent}
+        \end{align*}
+
+  \item
+
+        \begin{align*}
+          \frac{A_\text{max} - A_0}{A_0} & = \frac{1}{\sqrt{1 - 1 / 4 Q^2}} - 1 \\
+                                         & \approx \qty{0.13}{\percent}
+        \end{align*}
+\end{enumerate}
+
+\subsection{}
+
+\begin{align*}
+  \overline{P}_\text{max} & = \frac{F_0^2}{2 m \gamma}                                                       \\
+                          & = \qty{50}{W}                                                                    \\
+  \overline{P}(\omega)    & = \frac{F_0^2}{2 m \omega_0 Q [4 (\Delta \omega / \omega_0)^2 + 1 / Q^2]}        \\
+                          & = \frac{\overline{P}_\text{max}}{Q^2 [4 (\Delta \omega / \omega_0)^2 + 1 / Q^2]} \\
+                          & = \frac{50}{625 [4 (\Delta \omega / 100)^2 + 1 / 625]}                           \\
+                          & = \frac{50}{\frac{1}{4} \Delta \omega^2 + 1}
+\end{align*}
+
+\subsection{}
+
+\begin{enumerate}
+  \item \[\frac{\omega_0}{2 \pi} = \frac{1}{2 \pi \sqrt{L C}} \approx \qty{398}{Hz}\]
+
+  \item \[I = \frac{V_0}{R} = \frac{15}{75} = \qty{0.2}{A}\]
+\end{enumerate}
+
+\subsection{}
+
+\[i^i = (e^{i \pi / 2})^i = e^{-\pi / 2} = 0.208\]
+
+\subsection{}
+
+\begin{align*}
+  z               & = A e^{i (\omega t + \phi)}                 \\
+  x               & = \Re z                                     \\
+                  & = A \cos (\omega t + \phi)                  \\
+  \frac{d z}{d t} & = i \omega A e^{i (\omega t + \phi)}        \\
+  \frac{d x}{ dt} & = \Re \frac{d z}{d t}                       \\
+                  & = -\omega A \sin (\omega t + \phi)          \\
+                  & = \omega A \cos (\omega t + \phi + \pi / 2)
+\end{align*}
+
+$\frac{d x}{d t}$ is in advance of $x$ by $\ang{90}$
+
+\subsection{}
+
+\begin{enumerate}
+  \item
+        \begin{align*}
+          m \frac{d^2 x}{d t^2} + b \frac{d x}{d t} + m g \frac{x - \xi}{l}             & = 0                                   \\
+          m \frac{d^2 x}{d t^2} + b \frac{d x}{d t} + m \frac{g}{l} x                   & = m \frac{g}{l} a \cos \omega t       \\
+          m \frac{d^2 x}{d t^2} + b \frac{d x}{d t} + m \omega_0^2 x                    & = m \omega_0^2 a \cos \omega t        \\
+          \Re \left( m \frac{d^2 z}{d t^2} + b \frac{d z}{d t} + m \omega_0^2 z \right) & = \Re (m \omega_0^2 a e^{i \omega t})
+        \end{align*}
+
+  \item
+
+        % z = A e^{i (\omega t - \delta)}
+
+        \begin{align*}
+          m \frac{d^2}{d t^2} (A e^{i (\omega t - \delta)}) + b \frac{d}{d t} (A e^{i (\omega t - \delta)}) + m \omega_0^2 A e^{i (\omega t - \delta)} & = m \omega_0^2 a e^{i \omega t} \\
+          -m \omega^2 A e^{i (\omega t - \delta)} + i \omega b A e^{i (\omega t - \delta)} + m \omega_0^2 A e^{i (\omega t - \delta)}                  & = m \omega_0^2 a e^{i \omega t} \\
+          -m \omega^2 A + i \omega b A + m \omega_0^2 A                                                                                                & = m \omega_0^2 a e^{i \delta}   \\ \\
+          -m \omega^2 A + m \omega_0^2 A                                                                                                               & = m \omega_0^2 a \cos \delta    \\
+          -\omega^2 A + \omega_0^2 A                                                                                                                   & = \omega_0^2 a \cos \delta      \\
+          \frac{\omega_0^2 - \omega^2}{\omega_0^2 a} A                                                                                                 & = \cos \delta                   \\ \\
+          \omega b A                                                                                                                                   & = m \omega_0^2 a \sin \delta    \\
+          \frac{\omega b}{m \omega_0^2 a} A                                                                                                            & = \sin \delta                   \\ \\
+          \frac{\omega b}{m (\omega_0^2 - \omega^2)}                                                                                                   & = \tan \delta                   \\
+          \frac{\omega \gamma}{\omega_0^2 - \omega^2}                                                                                                  & = \tan \delta
+        \end{align*}
+
+        \begin{align*}
+          A & = \frac{\omega_0^2 a \cos \delta}{\omega_0^2 - \omega^2}                                                                        \\
+            & = \frac{\omega_0^2 a}{\omega_0^2 - \omega^2} \frac{\omega_0^2 - \omega^2}{\sqrt{(\omega_0^2 - \omega^2)^2 + \omega^2 \gamma^2}} \\
+            & = \frac{a \omega_0^2}{\sqrt{(\omega_0^2 - \omega^2)^2 + \omega^2 \gamma^2}}
+        \end{align*}
+\end{enumerate}
+
+\subsection{}
+
+\begin{enumerate}
+  \item
+
+        \begin{align*}
+          A(t_{75})               & = A_0 e^{-\gamma t_{75} / 2}                     \\
+          \frac{A(t_{75})}{A_0}   & = e^{-\gamma t_{75} / 2}                         \\
+          \ln \frac{A_0 / e}{A_0} & = -\frac{\gamma t_{75}}{2}                       \\
+          -1                      & = -\frac{\gamma t_{75}}{2}                       \\
+          \frac{2}{t_{75}}        & = \gamma                                         \\ \\
+          Q                       & = \frac{\omega_0}{\gamma}                        \\
+                                  & = \frac{75 \cdot 2 \pi}{t_{75}} \frac{t_{75}}{2} \\
+                                  & = 75 \pi
+        \end{align*}
+
+  \item
+
+        \begin{align*}
+          A(\omega_0) & = a \frac{\omega_0^2}{\sqrt{(\omega_0^2  - \omega_0^2)^2 + \omega_0^2 \gamma^2}} \\
+                      & = a \frac{\omega_0^2}{\sqrt{\omega_0^2 \gamma^2}}                                \\
+                      & = a \frac{\omega_0}{\gamma}                                                      \\
+                      & = a Q                                                                            \\
+                      & = (\qty{0.5}{mm}) 75 \pi                                                         \\
+                      & = \qty{0.12}{m}
+        \end{align*}
+
+  \item
+
+        \begin{align*}
+          \frac{a Q}{2}                & = a \frac{\omega_0^2}{\sqrt{(\omega_0^2 - \omega^2)^2 + \omega^2 \gamma^2}}               \\
+                                       & \approx a \frac{\omega_0^2}{\sqrt{(2 \omega_0 (-\Delta \omega))^2 + \omega_0^2 \gamma^2}} \\
+          \frac{2 \omega_0^2}{Q}       & = \sqrt{4 \omega_0^2 \Delta \omega^2 + \omega_0^2 \gamma^2}                               \\
+          \frac{4 \omega_0^4}{Q^2}     & = 4 \omega_0^2 \Delta \omega^2 + \omega_0^2 \gamma^2                                      \\
+          4 \omega_0^2 \Delta \omega^2 & = \frac{4 \omega_0^4}{(\omega_0 / \gamma)^2} - \omega_0^2 \gamma^2                        \\
+          (2 \Delta \omega)^2          & = 4 \gamma^2 - \gamma^2                                                                   \\
+          2 \Delta \omega              & = \gamma \sqrt{3}                                                                         \\
+                                       & = \frac{\omega_0}{Q} \sqrt{3}                                                             \\
+                                       & = \frac{\sqrt{g / l}}{Q} \sqrt{3}                                                         \\
+                                       & = \qty{0.019}{rad/s}
+        \end{align*}
+\end{enumerate}
+
+\subsection{}
+
+\begin{enumerate}
+  \item
+
+        \begin{enumerate}
+          \item
+
+                \begin{align*}
+                  K & = \frac{1}{2} m v^2                                                 \\
+                    & = \frac{1}{2} m \left( -\omega A \sin (\omega t - \delta) \right)^2 \\
+                    & = \frac{1}{2} m \omega^2 A^2 \sin^2 (\omega t - \delta)
+                \end{align*}
+
+          \item
+
+                \begin{align*}
+                  U & = \frac{1}{2} k x^2                            \\
+                    & = \frac{1}{2} k (A \cos (\omega t - \delta))^2 \\
+                    & = \frac{1}{2} k A^2 \cos^2 (\omega t - \delta)
+                \end{align*}
+
+          \item
+
+                \begin{align*}
+                  E & = \frac{1}{2} m \omega^2 A^2 \sin^2 (\omega t - \delta) + \frac{1}{2} k A^2 \cos^2 (\omega t - \delta) \\
+                    & = \frac{1}{2} m A^2 [\omega^2 \sin^2 (\omega t - \delta) + \omega_0^2 \cos^2 (\omega t - \delta)]
+                \end{align*}
+        \end{enumerate}
+
+  \item
+
+        \begin{align*}
+          0      & = \frac{d E}{d t}                                                                                                                                   \\
+                 & = \frac{1}{2} m A^2 [2 \omega^3 \sin (\omega t - \delta) \cos (\omega t - \delta) - 2 \omega_0^3 \cos (\omega t - \delta) \sin (\omega t - \delta)] \\
+                 & = \frac{1}{2} m A^2 \sin (2 (\omega t - \delta)) (\omega^3 - \omega_0^3)                                                                            \\
+          \omega & = \omega_0                                                                                                                                          \\ \\
+          E      & = \frac{1}{2} m A^2 [\omega_0^2 \sin^2 (\omega_0 t - \delta) + \omega_0^2 \cos^2 (\omega_0 t - \delta)]                                             \\
+                 & = \frac{1}{2} m A^2 \omega_0^2
+        \end{align*}
+
+  \item
+
+        \begin{align*}
+          \overline{K}                      & = \frac{1}{T} \int_{t_0}^{t_0 + T} \frac{1}{2} m \omega^2 A^2 \sin^2 (\omega t - \delta) \,dt                                                                      \\
+                                            & = \frac{m \omega^2 A^2}{2 T} \int_{t_0}^{t_0 + T} \sin^2 (\omega t - \delta) \,dt                                                                                  \\
+                                            & = \frac{m \omega^2 A^2}{4}                                                                                                                                         \\
+          \overline{E}                      & = \frac{1}{T} \int_{t_0}^{t_0 + T} \frac{1}{2} m A^2 [\omega^2 \sin^2 (\omega t - \delta) + \omega_0^2 \cos^2 (\omega t - \delta)] \,dt                            \\
+                                            & = \frac{m A^2}{2 T} \left( \int_{t_0}^{t_0 + T} \omega^2 \sin^2 (\omega t - \delta) \,dt + \int_{t_0}^{t_0 + T} \omega_0^2 \cos^2 (\omega t - \delta) \,dt \right) \\
+                                            & = \frac{m A^2}{4} (\omega^2 + \omega_0^2)                                                                                                                          \\
+          \frac{\overline{K}}{\overline{E}} & = \frac{m \omega^2 A^2}{4} \frac{4}{m A^2 (\omega^2 + \omega_0^2)}                                                                                                 \\
+                                            & = \frac{\omega^2}{\omega^2 + \omega_0^2}                                                                                                                           \\
+                                            & = \frac{1}{1 + (\omega_0 / \omega)^2}
+        \end{align*}
+
+  \item
+
+        \begin{align*}
+          \overline{E} & = \overline{K} + \overline{U}                                                                                               \\
+                       & = \frac{m \omega^2 A^2}{4} + \frac{k A^2}{4}                                                                                \\
+                       & = \frac{1}{4} m A^2 (\omega^2 + \omega_0^2)                                                                                 \\
+                       & = \frac{1}{4} m (\omega^2 + \omega_0^2) \left( \frac{F_0}{m \sqrt{(\omega_0^2 - \omega^2)^2 + \omega^2 \gamma^2}} \right)^2 \\
+                       & = \frac{1}{4} m (\omega^2 + \omega_0^2) \frac{F_0^2}{m^2 [(\omega_0^2 - \omega^2)^2 + \omega^2 \gamma^2]}                   \\
+                       & = \frac{F_0^2 (\omega_0^2 + \omega^2)}{4 m [(\omega_0^2 - \omega^2)^2 + \omega^2 b^2 / m^2]}
+        \end{align*}
+\end{enumerate}
+
+\subsection{}
+
+\begin{enumerate}
+  \item
+
+        \begin{align*}
+          x & = A \cos \omega t                                             \\
+          v & = -\omega A \sin \omega t                                     \\
+          W & = \int_0^T b v^2 \,dt                                         \\
+            & = b \int_0^{2 \pi / \omega} \omega^2 A^2 \sin^2 \omega t \,dt \\
+            & = \pi b \omega A^2
+        \end{align*}
+
+  \item
+
+        \begin{align*}
+          \frac{W}{E} & = \frac{\pi b \omega A^2}{\frac{1}{2} m \omega^2 A^2} \\
+                      & = \frac{2 \pi b}{m \omega}
+        \end{align*}
+
+  \item
+
+        \begin{align*}
+          \frac{W}{E} & = \frac{2 \pi b}{m \omega_0}    \\
+                      & = \frac{2 \pi \gamma}{\omega_0} \\
+                      & = \frac{2 \pi}{Q}
+        \end{align*}
+\end{enumerate}
+
+\subsection{}
+
+Let $T'$ be the number of seconds in 8 days and $T = 2 \pi \sqrt{l / g}$ by the period of the pendulum, then
+
+\begin{align*}
+  Q & = 2 \pi \frac{\text{stored energy}}{\text{energy dissipated/cycle}}                                     \\
+    & = 2 \pi \frac{1}{2} m_1 \omega^2 A^2 \frac{\text{cycles in 8 days}}{\text{energy dissipated in 8 days}} \\
+    & = \pi m_1 \frac{g}{l} A^2 \frac{T' / T}{m_2 g h}                                                        \\
+    & = \frac{\pi m_1 A^2 T'}{m_2 l h T}                                                                      \\
+    & = \frac{m_1 A^2 \cdot 8 \cdot 24 \cdot 60 \cdot 60}{2 m_2 l h \sqrt{l / g}}                             \\
+    & \approx 70
+\end{align*}
 
 \end{document}
