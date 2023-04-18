@@ -684,4 +684,404 @@ Let $T'$ be the number of seconds in 8 days and $T = 2 \pi \sqrt{l / g}$ by the 
     & \approx 70
 \end{align*}
 
+\section{Coupled Oscillators}
+
+\subsection{}
+
+\begin{enumerate}
+  \item
+
+        \begin{align*}
+          \omega_1 & = \sqrt{\frac{g}{l}}                 \\
+                   & = \qty{5.7}{rad/s}                   \\
+          \omega_2 & = \sqrt{\frac{g}{l} + \frac{2 k}{m}} \\
+                   & = \qty{6.0}{rad/s}
+        \end{align*}
+
+  \item The oscillation of the first pendulum is described by the equation \[x_a = A \cos \frac{(\omega_2 - \omega_1) t}{2} \cos \frac{(\omega_2 + \omega_1) t}{2},\] the amplitude of which temporarily becomes $0$ at \[\frac{(\omega_2 - \omega_1) t}{2} = \frac{\pi}{2} \Rightarrow t = \frac{\pi}{\omega_2 - \omega_1} = \qty{11.6}{s}.\]
+\end{enumerate}
+
+\subsection{}
+
+\begin{enumerate}
+  \item
+
+        \begin{align*}
+          \qty{5.0}{mm} & = \frac{1}{2} (C_1 + C_2) \\
+          \qty{5.0}{mm} & = \frac{1}{2} (C_1 - C_2) \\
+          \qty{10}{mm}  & = C_1                     \\
+          \qty{0.0}{mm} & = C_2
+        \end{align*}
+
+  \item
+
+        \begin{enumerate}
+          \item
+
+                \begin{align*}
+                  \qty{5.0}{mm}  & = \frac{1}{2} (C_1 + C_2) \\
+                  \qty{-5.0}{mm} & = \frac{1}{2} (C_1 - C_2) \\
+                  \qty{0.0}{mm}  & = C_1                     \\
+                  \qty{10}{mm}   & = C_2
+                \end{align*}
+
+          \item
+
+                \begin{align*}
+                  \qty{10}{mm} & = \frac{1}{2} (C_1 + C_2) \\
+                  \qty{0}{mm}  & = \frac{1}{2} (C_1 - C_2) \\
+                  \qty{10}{mm} & = C_1                     \\
+                  \qty{10}{mm} & = C_2
+                \end{align*}
+
+          \item
+
+                \begin{align*}
+                  \qty{10}{mm}  & = \frac{1}{2} (C_1 + C_2) \\
+                  \qty{5.0}{mm} & = \frac{1}{2} (C_1 - C_2) \\
+                  \qty{15}{mm}  & = C_1                     \\
+                  \qty{5.0}{mm} & = C_2
+                \end{align*}
+        \end{enumerate}
+\end{enumerate}
+
+\subsection{}
+
+\begin{align*}
+  m \frac{d^2 x_a}{d t^2}         & = k x_b - 2 k x_a      \\
+  m \frac{d^2 x_b}{d t^2}         & = k x_a - 2 k x_b      \\ \\
+  m \frac{d^2 (x_a + x_b)}{d t^2} & = -k (x_a + x_b)       \\
+  m \frac{d^2 q_1}{d t^2}         & = -k q_1               \\
+  \omega_1                        & = \sqrt{\frac{k}{m}}   \\ \\
+  m \frac{d^2 (x_a - x_b)}{d t^2} & = -3 k (x_a - x_b)     \\
+  m \frac{d^2 q_2}{d t^2}         & = -3 k q_2             \\
+  \omega_2                        & = \sqrt{\frac{3 k}{m}}
+\end{align*}
+
+\subsection{}
+
+\begin{enumerate}
+  \item
+
+        \begin{align*}
+          E_a & = \frac{1}{2} m \omega^2 A^2                                                                                \\
+              & = \frac{1}{2} m A^2 \left( \frac{\omega_2 + \omega_1}{2} \right)^2 \cos^2 \frac{(\omega_2 - \omega_1) t}{2} \\
+          E_b & = \frac{1}{2} m \omega^2 A^2                                                                                \\
+              & = \frac{1}{2} m \left( \frac{\omega_2 + \omega_1}{2} \right)^2 A^2 \sin^2 \frac{(\omega_2 - \omega_1) t}{2}
+        \end{align*}
+
+  \item
+
+        \begin{align*}
+          \frac{(\omega_2 - \omega_1) T}{2} & = \pi                               \\
+          T                                 & = \frac{2 \pi}{\omega_2 - \omega_1} \\
+          \omega                            & = \frac{2 \pi}{T}                   \\
+                                            & = \omega_2 - \omega_1
+        \end{align*}
+\end{enumerate}
+
+\subsection{}
+
+\begin{enumerate}
+  \item
+
+        \begin{align*}
+          m \frac{d^2 x_1}{d t^2}                                     & = -2 m g \frac{x_1}{l} + m g \frac{x_2 - x_1}{l} \\
+          \frac{d^2 x_1}{d t^2} + \frac{3 g}{l} x_1 - \frac{g}{l} x_2 & = 0                                              \\ \\
+          m \frac{d^2 x_2}{d t^2}                                     & = -m g \frac{x_2 - x_1}{l}                       \\
+          \frac{d^2 x_2}{d t^2} - \frac{g}{l} x_1 + \frac{g}{l} x_2   & = 0
+        \end{align*}
+
+  \item
+
+        \begin{align*}
+          -\omega^2 A \cos \omega t + \frac{3 g}{l} A \cos \omega t - \frac{g}{l} B \cos \omega t   & = 0                                       \\
+          A \left( \frac{3 g}{l} - \omega^2 \right)                                                 & = B \left( \frac{g}{l} \right)            \\ \\
+          -\omega^2 B \cos \omega t - \frac{g}{l} A \cos \omega t + \frac{g}{l} B \cos \omega t     & = 0                                       \\
+          A \left( \frac{g}{l} \right)                                                              & = B \left( \frac{g}{l} - \omega^2 \right) \\ \\
+          \frac{3 g / l - \omega^2}{g / l}                                                          & = \frac{g / l}{g / l - \omega^2}          \\
+          \left( \frac{3 g}{l} - \omega^2 \right) \left( \frac{g}{l} - \omega^2 \right)             & = \left( \frac{g}{l} \right)^2            \\
+          3 \left( \frac{g}{l} \right)^2 - \frac{3 g}{l} \omega^2 - \frac{g}{l} \omega^2 + \omega^4 & = \left( \frac{g}{l} \right)^2            \\
+          (\omega^2)^2 - \frac{4 g}{l} \omega^2 + 2 \left( \frac{g}{l} \right)^2                    & = 0                                       \\
+        \end{align*}
+
+        \begin{align*}
+          \omega^2 & = \frac{\frac{4 g}{l} \pm \sqrt{\frac{16 g^2}{l^2} - 8 \left( \frac{g}{l} \right)^2}}{2} \\
+                   & = (2 \pm \sqrt{2}) \frac{g}{l}                                                           \\
+          \omega   & = \sqrt{(2 \pm \sqrt{2}) \frac{g}{l}}
+        \end{align*}
+
+        \begin{align*}
+          \frac{A}{B} & = \frac{g / l}{3 g / l - \omega^2}               \\
+                      & = \frac{g}{3 g - l \omega^2}                     \\
+                      & = \frac{g}{3 g - l (2 \pm \sqrt{2}) \frac{g}{l}} \\
+                      & = \frac{1}{3 - (2 \pm \sqrt{2})}                 \\
+                      & = \frac{1}{1 \pm \sqrt{2}}
+        \end{align*}
+
+  \item
+
+        \begin{align*}
+          T & = \frac{2 \pi}{\omega}                              \\
+            & = \frac{2 \pi}{\sqrt{(2 \pm \sqrt{2}) \frac{g}{l}}} \\
+            & = \qty{1.09}{s} \text{ or } \qty{2.62}{s}
+        \end{align*}
+\end{enumerate}
+
+\subsection{}
+
+\begin{enumerate}
+  \setcounter{enumi}{1}
+  \item
+
+        \begin{align*}
+          m \frac{d^2 x_1}{d t^2}                                                    & = k (x_2 - x_1)                  \\
+          \frac{d^2 x_1}{d t^2} + \omega_1^2 x_1 - \omega_1^2 x_2                    & = 0                              \\ \\
+          M \frac{d^2 x_2}{d t^2}                                                    & = -k (x_2 - x_1) + k (x_3 - x_2) \\
+                                                                                     & = k x_1 - 2 k x_2 + k x_3        \\
+          \frac{d^2 x_2}{d t^2} - \omega_2^2 x_1 + 2 \omega_2^2 x_2 - \omega_2^2 x_3 & = 0                              \\ \\
+          m \frac{d^2 x_3}{d t^2}                                                    & = -k (x_3 - x_2)                 \\
+          \frac{d^2 x_3}{d t^2} - \omega_1^2 x_2 + \omega_1^2 x_3                    & = 0
+        \end{align*}
+
+  \item
+
+        \begin{align*}
+          x_1 & = A \cos \omega t \\
+          x_2 & = B \cos \omega t \\
+          x_3 & = C \cos \omega t
+        \end{align*}
+
+        \begin{align*}
+          -\omega^2 A \cos \omega t + \omega_1^2 A \cos \omega t - \omega_1^2 B \cos \omega t                                & = 0                           \\
+          A (\omega_1^2 - \omega^2)                                                                                          & = B (\omega_1^2)              \\ \\
+          -\omega^2 B \cos \omega t - \omega_2^2 A \cos \omega t + 2 \omega_2^2 B \cos \omega t - \omega_2^2 C \cos \omega t & = 0                           \\
+          (A + C) (\omega_2^2)                                                                                               & = B (2 \omega_2^2 - \omega^2) \\ \\
+          -\omega^2 C \cos \omega t - \omega_1^2 B \cos \omega t + \omega_1^2 C \cos \omega t                                & = 0                           \\
+          C (\omega_1^2 - \omega^2)                                                                                          & = B (\omega_1^2)              \\ \\
+          (A + C)(\omega_1^2 - \omega^2)                                                                                     & = B (2 \omega_1^2)
+        \end{align*}
+
+        \begin{align*}
+          \frac{\omega_2^2}{\omega_1^2 - \omega^2} & = \frac{2 \omega_2^2 - \omega^2}{2 \omega_1^2}                                     \\
+          2 \omega_1^2 \omega_2^2                  & = (2 \omega_2^2 - \omega^2)(\omega_1^2 - \omega^2)                                 \\
+                                                   & = 2 \omega_1^2 \omega_2^2 - 2 \omega_2^2 \omega^2 - \omega_1^2 \omega^2 + \omega^4 \\
+          0                                        & = (\omega^2)^2 - (\omega_1^2 + 2 \omega_2^2) \omega^2                              \\
+                                                   & = \omega^2 - \omega_1^2 - 2 \omega_2^2                                             \\
+          \omega^2                                 & = \omega_1^2 + 2 \omega_2^2                                                        \\
+                                                   & = \frac{k}{m} + 2 \frac{k}{M}                                                      \\
+          \omega                                   & = \sqrt{\frac{k (M + 2 m)}{M m}}
+        \end{align*}
+
+  \item
+
+        \begin{align*}
+          \frac{\sqrt{\frac{k (M + 2 m)}{M m}}}{\sqrt{\frac{k}{m}}} & = \sqrt{\frac{M + 2 m}{M}} \\
+                                                                    & = \sqrt{1 + 2 m / M}       \\
+                                                                    & = \sqrt{1 + 16 / 6}        \\
+                                                                    & \approx 1.91
+        \end{align*}
+\end{enumerate}
+
+\subsection{}
+
+\begin{enumerate}
+  \item Let $x_1$ be the top mass's displacement from equilibrium and $x_2$ be the bottom mass's, then the equations of motion are
+
+        \begin{align*}
+          3 m \frac{d^2 x_1}{d t^2}                                       & = -4 k x_1 + k (x_2 - x_1) \\
+                                                                          & = -5 k x_1 + k x_2         \\
+          \frac{d^2 x_1}{d t^2} + \frac{5 k}{3 m} x_1 - \frac{k}{3 m} x_2 & = 0                        \\ \\
+          m \frac{d^2 x_2}{d t^2}                                         & = -k (x_2 - x_1)           \\
+                                                                          & = k x_1 - k x_2            \\
+          \frac{d^2 x_2}{d t^2} - \frac{k}{m} x_1 + \frac{k}{m} x_2       & = 0
+        \end{align*}
+
+        Assuming solutions of the form $x_1 = A \cos \omega t$ and $x_2 = B \cos \omega t$ and substituting into the above gives
+
+        \begin{align*}
+          -\omega^2 A \cos \omega t + \frac{5 k}{3 m} A \cos \omega t - \frac{k}{3 m} B \cos \omega t & = 0                                       \\
+          A \left( \frac{5 k}{3 m} - \omega^2 \right)                                                 & = B \left( \frac{k}{3 m} \right)          \\ \\
+          -\omega^2 B \cos \omega t - \frac{k}{m} A \cos \omega t + \frac{k}{m} B \cos \omega t       & = 0                                       \\
+          A \left( \frac{k}{m} \right)                                                                & = B \left( \frac{k}{m} - \omega^2 \right) \\ \\
+        \end{align*}
+
+        \begin{align*}
+          \frac{\frac{5 k}{3 m} - \omega^2}{\frac{k}{m}}                                                        & = \frac{\frac{k}{3 m}}{\frac{k}{m} - \omega^2} \\
+          \left( \frac{5 k}{3 m} - \omega^2 \right) \left( \frac{k}{m} - \omega^2 \right)                       & = \frac{1}{3} \left( \frac{k}{m} \right)^2     \\
+          \frac{5}{3} \left( \frac{k}{m} \right)^2 - \frac{5 k}{3 m} \omega^2 - \frac{k}{m} \omega^2 + \omega^4 & = \frac{1}{3} \left( \frac{k}{m} \right)^2     \\
+          (\omega^2)^2 - \frac{8}{3} \frac{k}{m} \omega^2 + \frac{4}{3} \left( \frac{k}{m} \right)^2            & = 0
+        \end{align*}
+
+        \begin{align*}
+          \omega^2 & = \frac{\frac{8}{3} \frac{k}{m} \pm \sqrt{\left( \frac{8}{3} \frac{k}{m} \right)^2 - \frac{16}{3} \left( \frac{k}{m} \right)^2}}{2}  \\
+                   & = \frac{\frac{8}{3} \frac{k}{m} \pm \sqrt{\frac{64}{9} \left( \frac{k}{m} \right)^2 - \frac{16}{3} \left( \frac{k}{m} \right)^2}}{2} \\
+                   & = \frac{\frac{8}{3} \frac{k}{m} \pm \sqrt{\frac{16}{9} \left( \frac{k}{m} \right)^2}}{2}                                             \\
+                   & = \frac{\frac{8}{3} \frac{k}{m} \pm \frac{4}{3} \frac{k}{m}}{2}                                                                      \\
+                   & = \left( \frac{4}{3} \pm \frac{2}{3} \right) \frac{k}{m}                                                                             \\
+          \omega   & = \sqrt{\frac{2 k}{3 m}} \text{ or } \sqrt{\frac{2 k}{m}}
+        \end{align*}
+
+  \item
+
+        \begin{align*}
+          A \left( \frac{k}{m} \right) & = B \left( \frac{k}{m} - \omega^2 \right)        \\ \\
+          A \left( \frac{k}{m} \right) & = B \left( \frac{k}{m} - \frac{2 k}{3 m} \right) \\
+                                       & = B \left( \frac{k}{3 m} \right)                 \\
+          A                            & = \frac{1}{3} B                                  \\ \\
+          A \left( \frac{k}{m} \right) & = B \left( \frac{k}{m} - \frac{2 k}{m} \right)   \\
+                                       & = B \left( -\frac{k}{m} \right)                  \\
+          A                            & = -B
+        \end{align*}
+
+        So the first normal mode is
+
+        \begin{align*}
+          x_1 & = A \cos \sqrt{\frac{2 k}{3 m}} t   \\
+          x_2 & = 3 A \cos \sqrt{\frac{2 k}{3 m}} t
+        \end{align*}
+
+        where the masses oscillate in phase and the lower mass has an amplitude 3 times greater than the upper mass.
+
+        The second normal mode is
+
+        \begin{align*}
+          x_1 & = A \cos \sqrt{\frac{2 k}{m}} t  \\
+          x_2 & = -A \cos \sqrt{\frac{2 k}{m}} t
+        \end{align*}
+
+        where the masses oscillate $\ang{180}$ out of phase with equal amplitude.
+\end{enumerate}
+
+\subsection{}
+
+There are 5 normal modes in the transverse direction.
+
+\subsection{}
+
+\begin{enumerate}
+  \item
+
+        \begin{align*}
+          M \frac{d^2 x_1}{d t^2} + (k_1 + k_2) x_1 - k_2 x_2 & = F_0 \cos \omega t \\
+          m \frac{d^2 x_2}{d t^2} - k_2 x_1 + k_2 x_2         & = 0
+        \end{align*}
+
+  \item
+
+        \begin{align*}
+          -M \omega^2 A \cos \omega t + (k_1 + k_2) A \cos \omega t - k_2 B \cos \omega t               & = F_0 \cos \omega t                      \\
+          A (k_1 + k_2 - M \omega^2)                                                                    & = B k_2 + F_0                            \\ \\
+          -m \omega^2 B \cos \omega t - k_2 A \cos \omega t + k_2 B \cos \omega t                       & = 0                                      \\
+          A k_2                                                                                         & = B (k_2 - m \omega^2)                   \\ \\
+          B                                                                                             & = A \frac{k_2}{k_2 - m \omega^2}         \\
+          A (k_1 + k_2 - M \omega^2)                                                                    & = A \frac{k_2^2}{k_2 - m \omega^2} + F_0 \\
+          A \left( k_1 + k_2 - M \omega^2 - \frac{k_2^2}{k_2 - m \omega^2} \right)                      & = F_0                                    \\
+          A \left( \frac{(k_1 + k_2 - M \omega^2) (k_2 - m \omega^2) - k_2^2}{k_2 - m \omega^2} \right) & = F_0                                    \\
+          \frac{F_0 (k_2 - m \omega^2)}{(k_1 + k_2 - M \omega^2) (k_2 - m \omega^2) - k_2^2}            & = A
+        \end{align*}
+
+        \begin{align*}
+          A                                                                              & = \frac{B k_2 + F_0}{k_1 + k_2 - M \omega^2}                              \\
+          B                                                                              & = \frac{B k_2 + F_0}{k_1 + k_2 - M \omega^2} \frac{k_2}{k_2 - m \omega^2} \\
+                                                                                         & = \frac{B k_2^2 + F_0 k_2}{(k_1 + k_2 - M \omega^2) (k_2 - m \omega^2)}   \\
+          B \left( 1 - \frac{k_2^2}{(k_1 + k_2 - M \omega^2) (k_2 - m \omega^2)} \right) & = \frac{F_0 k_2}{(k_1 + k_2 - M \omega^2) (k_2 - m \omega^2)}             \\
+          B [(k_1 + k_2 - M \omega^2) (k_2 - m \omega^2) - k_2^2]                        & = F_0 k_2                                                                 \\
+          \frac{F_0 k_2}{(k_1 + k_2 - M \omega^2) (k_2 - m \omega^2) - k_2^2}            & = B
+        \end{align*}
+
+  \item
+
+        \begin{align*}
+          A & = \frac{F_0 \left( k_2 - m \frac{k_1}{M} \right)}{\left( k_1 + k_2 - M \frac{k_1}{M} \right) \left( k_2 - m \frac{k_1}{M} \right) - k_2^2} \\
+            & = \frac{F_0 \left( k_2 - \frac{k_2}{k_1} k_1 \right)}{\left( k_1 + k_2 - k_1 \right) \left( k_2 - \frac{k_2}{k_1} k_1 \right) - k_2^2}     \\
+            & = 0
+        \end{align*}
+\end{enumerate}
+
+\subsection{}
+
+\begin{enumerate}
+  \item
+
+        \begin{align*}
+          m \frac{d^2 x_1}{d t^2}                           & = -k x_1 + k (x_2 - x_1)         \\
+          m \frac{d^2 x_1}{d t^2} + 2 k x_1 - k x_2         & = 0                              \\ \\
+          m \frac{d^2 x_2}{d t^2}                           & = -k (x_2 - x_1) + k (x_3 - x_2) \\
+          m \frac{d^2 x_2}{d t^2} - k x_1 + 2 k x_2 - k x_3 & = 0                              \\ \\
+          m \frac{d^2 x_3}{d t^2}                           & = -k (x_3 - x_2) - k x_3         \\
+          m \frac{d^2 x_3}{d t^2} - k x_2 + 2 k x_3         & = 0
+        \end{align*}
+
+        \begin{align*}
+          -m \omega^2 A \cos \omega t + 2 k A \cos \omega t - k B \cos \omega t                     & = 0                    \\
+          A (2k - m \omega^2)                                                                       & = B (k)                \\ \\
+          -m \omega^2 B \cos \omega t - k A \cos \omega t + 2 k B \cos \omega t - k C \cos \omega t & = 0                    \\
+          (A + C) (k)                                                                               & = B (2 k - m \omega^2) \\ \\
+          -m \omega^2 C \cos \omega t - k B \cos \omega t + 2 k C \cos \omega t                     & = 0                    \\
+          C (2 k - m \omega^2)                                                                      & = B (k)                \\ \\
+          (A + C) (2 k - m \omega^2)                                                                & = B (2 k)
+        \end{align*}
+
+        \begin{align*}
+          \frac{k}{2 k - m \omega^2}                                             & = \frac{2 k - m \omega^2}{2 k}                                                                        \\
+          (2 k - m \omega^2)^2                                                   & = 2 k^2                                                                                               \\
+          4 k^2 - 4 k m \omega^2 + m^2 \omega^4                                  & = 2 k ^2                                                                                              \\
+          (\omega^2)^2 - 4 \frac{k}{m} \omega^2 + 2 \left( \frac{k}{m} \right)^2 & = 0                                                                                                   \\
+          \omega^2                                                               & = \frac{4 \frac{k}{m} \pm \sqrt{\left( 4 \frac{k}{m} \right)^2 - 8 \left( \frac{k}{m} \right)^2}}{2}  \\
+                                                                                 & = \frac{4 \frac{k}{m} \pm \sqrt{16 \left( \frac{k}{m} \right)^2 - 8 \left( \frac{k}{m} \right)^2}}{2} \\
+          \omega                                                                 & = \sqrt{(2 \pm \sqrt{2}) \frac{k}{m}}
+        \end{align*}
+
+  \item
+
+        \begin{enumerate}
+          \item For $\omega = \sqrt{\frac{2 k}{m}}$
+
+                \begin{align*}
+                  A \left( 2 k - m \frac{2 k}{m} \right) & = B (k) \\
+                  0                                      & = B (k)
+                \end{align*}
+
+                so $B = 0$ and
+
+                \begin{align*}
+                  (A + C) (k) & = 0  \\
+                  A           & = -C
+                \end{align*}
+
+          \item For $\omega = \sqrt{(2 + \sqrt{2}) \frac{k}{m}}$
+
+                \begin{align*}
+                  A \left( 2 k - m (2 + \sqrt{2}) \frac{k}{m} \right) & = B (k)                 \\
+                  A (2 k - 2 k - \sqrt{2} k)                          & = B (k)                 \\
+                  A                                                   & = -\frac{1}{\sqrt{2}} B
+                \end{align*}
+
+                and
+
+                \begin{align*}
+                  C \left( 2 k - m (2 + \sqrt{2}) \frac{k}{m} \right) & = B (k)                 \\
+                  C (2 k - 2 k - \sqrt{2} k)                          & = B (k)                 \\
+                  C                                                   & = -\frac{1}{\sqrt{2}} B \\
+                                                                      & = A
+                \end{align*}
+
+          \item For $\omega = \sqrt{(2 - \sqrt{2}) \frac{k}{m}}$
+
+                \begin{align*}
+                  A \left( 2 k - m (2 - \sqrt{2}) \frac{k}{m} \right) & = B (k)                \\
+                  A                                                   & = \frac{1}{\sqrt{2}} B
+                \end{align*}
+
+                and
+
+                \begin{align*}
+                  C \left(2 k - m (2 - \sqrt{2}) \frac{k}{m} \right) & = B (k)                \\
+                  C                                                  & = \frac{1}{\sqrt{2}} B \\
+                                                                     & = A
+                \end{align*}
+        \end{enumerate}
+\end{enumerate}
+
 \end{document}
