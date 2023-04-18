@@ -180,4 +180,52 @@
   \item Differentiation with respect to time of a complex phasor is equivalent to multiplication by $i \omega$
 \end{itemize}
 
+\section{Coupled Oscillators}
+
+\begin{itemize}
+  \item Systems of two or more coupled oscillators can oscillate in multiple ways called \textbf{normal modes}, each with its own frequency called the \textbf{normal frequency}
+
+  \item In a normal mode, each oscillator oscillates at the same frequency
+
+  \item Without damping, once a system is in a normal mode it stays there
+
+  \item The equations of motion of a system of coupled oscillators are a system of differential equations and thus the movements of the oscillators are described by a linear combination of the solutions of that system
+
+  \item Those equations of motion are often intertwined and involve multiple variables, e.g. the positions of two pendulums $x_1$ and $x_2$. It's possible to introduce new variables called \textbf{normal coordinates} that result in independent solutions in one variable, e.g. $q_1 = x_a + x_b$ and $q_2 = x_a - x_b$
+
+  \item Energy never flows from one normal mode to another
+
+  \item In general it's difficult to determine the normal modes of the system a priori. A more general approach is to take advantage of the knowledge that in a normal mode all oscillators will oscillate at the same frequency and:
+
+        \begin{enumerate}
+          \item assume solutions of the form $A \cos \omega t$, $B \cos \omega t$, etc.,
+
+          \item subtitute them into the equations of motion, and
+
+          \item rearrange to remove the constants $A$, $B$, etc. and solve for $\omega$
+        \end{enumerate}
+
+  \item There are as many normal modes as there are degrees of freedom in the system, e.g. two coupled oscillators moving in one dimension have 2 normal modes, three coupled oscillators moving on two dimensions have 6 normal modes, etc.
+
+  \item Coupled oscillators experience large amplitude oscillations when the driving frequency is close to the normal frequency
+
+  \item The motion of driven coupled oscillators may be solved in a similar fashion to their free moving counterparts:
+
+        \begin{enumerate}
+          \item Determine the equations of motion for the oscillators
+
+          \item Combine the equations in such a way that the normal coordinates are evident
+
+          \item Conver the equations to use normal coordinates
+
+          \item Solve the resulting second-order nonhomogeneous linear differential equations by assuming solutions of the form $C_1 \cos \omega_1 t$, etc.
+
+          \item Convert the solutions back from normal coordinates
+        \end{enumerate}
+
+  \item Oscillations that occur along the line connecting oscillators are called \textbf{longitudinal oscillations}
+
+  \item Oscillations that occur perpendicular to the line connecting oscillators are called \textbf{transverse oscillations}
+\end{itemize}
+
 \end{document}
