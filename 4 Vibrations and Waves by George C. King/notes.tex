@@ -228,4 +228,54 @@
   \item Oscillations that occur perpendicular to the line connecting oscillators are called \textbf{transverse oscillations}
 \end{itemize}
 
+\section{Travelling Waves}
+
+\begin{itemize}
+  \item The equation of a wave moving at velocity $v$ in the positive $x$ direction is of the form \[y(x, t) = f(x - v t)\]
+
+  \item The equation of a wave moving at velocity $v$ in the negative $x$ direction is of the form \[y(x, t) = g(x + v t)\]
+
+  \item The general form of any transverse wave motion can be written as \[y = f(x - v t) + g(x + v t)\]
+
+  \item The \textbf{wavelength} $\lambda$ of a wave is the length of one complete pattern of the wave, e.g. between two maxima
+
+  \item When the displacements of a wave lie in a single plane, e.g. the $x$-$y$ plane, it is said to be \textbf{linearly polarised}
+
+  \item The frequency $f$, wavelength $\lambda$, and velocity $v$ of a wave are related by the expression \[f \lambda = v\]
+
+  \item The frequency $f$ and period $T$ of a wave are related by the expression \[f = \frac{1}{T}\]
+
+  \item The \textbf{wavenumber} of a wave \[k = \frac{2 \pi}{\lambda}\] is a measure of radians per unit distance
+
+  \item The \textbf{wave equation} in one dimension is \[\frac{\partial^2 \psi}{\partial t^2} = v^2 \frac{\partial^2 \psi}{\partial x^2}\] and its general solution is \[\psi = f(x - v t) + g(x - v t)\]
+
+  \item An intuition for the wave equation is ``the acceleration experienced by a point on the wave at a particular time is a constant multiple of the curvature of the wave at that point''
+
+  \item The velocity of a wave in a taut string $v$ is \[v = \sqrt{\frac{T}{\mu}}\] where $T$ is the tension in the string and $\mu$ is its mass per unit length
+
+  \item The total kinetic and potential energies contained within one wavelength of a sinusoidal wave \[y = A \sin (k x - \omega t)\] are equal and have the value \[\frac{1}{4} \mu \omega^2 A^2 \lambda\] meaning the total energy is \[\frac{1}{2} \mu \omega^2 A^2 \lambda\]
+
+  \item The power of a sinusoidal wave, i.e. the energy carried by the wave past a point per unit time, is \[P = \frac{1}{2} \mu \omega^2 A^2 v\]
+
+  \item When a wave encounters a discontinuity, some fraction of the wave is transmitted and the remaining fraction is reflected
+
+  \item The \textbf{incident wave} is the original wave
+
+  \item On either side of a discontinuity, the displacement and the gradient must be the same at all times
+
+  \item The ratio of the transmitted amplitude to the incident amplitude is \[\frac{A_2}{A_1} = \frac{2 k_1}{k_1 + k_1} = \frac{2 \sqrt{\mu_1}}{\sqrt{\mu_1} + \sqrt{\mu_2}} = T_{12}\] where $k_n$ is the wave number of each medium, $\mu_n$ is the mass per unit length of each medium, and $T_{12}$ is called the \textbf{transmission coefficient of amplitude}
+
+  \item The transmission coefficient of amplitude is a positive value in the range $(0, 2)$, i.e. the transmitted wave is always in phase with the incident wave
+
+  \item The ratio of the reflected amplitude to the incident amplitude is \[\frac{B_1}{A_1} = \frac{k_1 - k_2}{k_1 + k_2} = \frac{\sqrt{\mu_1} - \sqrt{\mu_2}}{\sqrt{\mu_1} + \sqrt{\mu_2}} = R_{12}\] where $R_{12}$ is called the \textbf{reflection coefficient of amplitude}
+
+  \item The reflection coefficient of amplitude is a value in the range $(-1, 1)$, i.e. if $\mu_1 > \mu_2$ the reflected wave will be in phase with the incident wave and if $\mu_1 < \mu_2$ it will be $\ang{90}$ out of phase
+
+  \item The wave equation in two dimensions is \[\frac{\partial^2 \psi}{\partial t^2} = v^2 \left( \frac{\partial^2 \psi}{\partial x^2} + \frac{\partial^2 \psi}{\partial y^2} \right)\]
+
+  \item For a sinusoidal wave travelling in two dimensions, the solution to the wave equation is \[z(x, y, t) = A \cos (k_1 x + k_2 y - \omega t)\] which is a planar wave with velocity \[v = \frac{\omega}{\sqrt{k_1^2 + k_2^2}} = \frac{\omega}{k}\] and angle from the positive $x$-axis $\phi$ where \[\tan \phi = -\frac{k_1}{k_2}\]
+
+  \item The wave equation for two-dimensional waves of circular symmetry is \[\frac{\partial^2 z}{\partial r^2} + \frac{1}{r} \frac{\partial z}{\partial r} = \frac{1}{v^2} \frac{\partial^2 z}{\partial t^2}\] and its solutions involve Bessel functions but for large $r$ it can be simplified to \[\frac{\partial^2 z}{\partial r^2} = \frac{1}{v^2} \frac{\partial^2 z}{\partial t^2}\] which has the same form as the one-dimensional wave equation with solutions of the form \[z(r, t) = A \cos (k r - \omega t)\]
+\end{itemize}
+
 \end{document}
