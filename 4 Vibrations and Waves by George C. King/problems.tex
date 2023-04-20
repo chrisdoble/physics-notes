@@ -1084,4 +1084,370 @@ There are 5 normal modes in the transverse direction.
         \end{enumerate}
 \end{enumerate}
 
+\section{Travelling Waves}
+
+\subsection{}
+
+\begin{align*}
+  y       & = A \cos \left( \frac{2 \pi}{\lambda} x + 2 \pi f t \right) \\
+          & = 15 \cos (0.25 x + 75 t)                                   \\
+  A       & = \qty{15}{mm}                                              \\
+  \lambda & = \qty{25}{mm}                                              \\
+  f       & = \qty{12}{Hz}                                              \\
+  v       & = \qty{30}{cm/s}
+\end{align*}
+
+The wave is travelling in the negative $x$ direction
+
+\subsection{}
+
+\begin{align*}
+  A & = \qty{0.15}{m}                                           \\
+  f & = \qty{10}{Hz}                                            \\
+  v & = \qty{50}{m/s}                                           \\
+  y & = A \cos \left( \frac{2 \pi}{v / f} x - 2 \pi f t \right) \\
+    & = 0.15 \cos (1.3 x - 63 t)
+\end{align*}
+
+\subsection{}
+
+\begin{enumerate}
+  \item
+
+        \begin{enumerate}
+          \item
+
+                \begin{align*}
+                  y                                       & = A \sin 2 \pi f (t - x / v)                                                        \\
+                  \frac{\partial y}{\partial t}           & = 2 \pi f A \cos 2 \pi f (t - x / v)                                                \\
+                  \frac{\partial^2 y}{\partial t^2}       & = -(2 \pi f)^2 A \sin 2 \pi f (t - x / v)                                           \\
+                  \frac{\partial y}{\partial x}           & = -\frac{2 \pi f}{v} A \cos 2 \pi f (t - x / v)                                     \\
+                  \frac{\partial^2 y}{\partial x^2}       & = -\left( \frac{2 \pi f}{v} \right)^2 A \sin 2 \pi f (t - x / v)                    \\
+                  -(2 \pi f)^2 A \sin 2 \pi f (t - x / v) & = v^2 \left( -\left( \frac{2 \pi f}{v} \right)^2 A \sin 2 \pi f (t - x / v) \right)
+                \end{align*}
+
+          \item
+
+                \begin{align*}
+                  y                                                                                & = A \sin \frac{2 \pi}{\lambda} (x + v t)                                                            \\
+                  \frac{\partial y}{\partial t}                                                    & = \frac{2 \pi v}{\lambda} A \cos \frac{2 \pi}{\lambda} (x + v t)                                    \\
+                  \frac{\partial^2 y}{\partial t^2}                                                & = -\left( \frac{2 \pi v}{\lambda} \right)^2 A \sin \frac{2 \pi}{\lambda} (x + v t)                  \\
+                  \frac{\partial y}{\partial x}                                                    & = \frac{2 \pi}{\lambda} A \cos \frac{2 \pi}{\lambda} (x + v t)                                      \\
+                  \frac{\partial^2 y}{\partial x^2}                                                & = -\left( \frac{2 \pi}{\lambda} \right)^2 A \sin \frac{2 \pi}{\lambda} (x + v t)                    \\
+                  -\left( \frac{2 \pi v}{\lambda} \right)^2 A \sin \frac{2 \pi}{\lambda} (x + v t) & = v^2 \left( -\left( \frac{2 \pi}{\lambda} \right)^2 A \sin \frac{2 \pi}{\lambda} (x + v t) \right)
+                \end{align*}
+
+          \item
+
+                \begin{align*}
+                  y                                                                                             & = A \sin 2 \pi (x / \lambda - t / T)                                                                                     \\
+                  \frac{\partial y}{\partial t}                                                                 & = -\frac{2 \pi}{T} A \cos 2 \pi (x / \lambda - t / T)                                                                    \\
+                  \frac{\partial^2 y}{\partial t^2}                                                             & = -\left( \frac{2 \pi}{T} \right)^2 A \sin 2 \pi (x / \lambda - t / T)                                                   \\
+                  \frac{\partial y}{\partial x}                                                                 & = \frac{2 \pi}{\lambda} A \cos 2 \pi (x / \lambda - t / T)                                                               \\
+                  \frac{\partial^2 y}{\partial x^2}                                                             & = -\left( \frac{2 \pi}{\lambda} \right)^2 A \sin 2 \pi (x / \lambda - t / T)                                             \\
+                  -\left( \frac{2 \pi}{T} \right)^2 A \sin 2 \pi \left( \frac{x}{\lambda} - \frac{t}{T} \right) & = v^2 \left( -\left( \frac{2 \pi}{\lambda} \right)^2 A \sin 2 \pi \left( \frac{x}{\lambda} - \frac{t}{T} \right) \right) \\
+                  \frac{1}{T^2}                                                                                 & = \frac{v^2}{\lambda^2}                                                                                                  \\
+                  f^2                                                                                           & = f^2
+                \end{align*}
+
+          \item
+
+                \begin{align*}
+                  y                                  & = A e^{i (\omega t + k x)}                         \\
+                  \frac{\partial y}{\partial t}      & = i \omega A e^{i (\omega t + k x)}                \\
+                  \frac{\partial^2 y}{\partial t^2}  & = -\omega^2 A e^{i (\omega t + k x)}               \\
+                  \frac{\partial y}{\partial x}      & = i k A e^{i (\omega t + k x)}                     \\
+                  \frac{\partial^2 y}{\partial x^2}  & = -k^2 A e^{i (\omega t + k x)}                    \\
+                  -\omega^2 A e^{i (\omega t + k x)} & = v^2 \left( -k^2 A e^{i (\omega t + k x)} \right) \\
+                  \omega^2                           & = v^2 k^2                                          \\
+                  (2 \pi f)^2                        & = v^2 \left( \frac{2 \pi}{\lambda} \right)^2       \\
+                  f^2                                & = \left( \frac{v}{\lambda} \right)^2               \\
+                                                     & = f^2
+                \end{align*}
+
+          \item
+
+                \begin{align*}
+                  y                                 & = A \cos (\omega_1 t - k_1 x) + B \cos (\omega_2 t - k_2 x)                        \\
+                  \frac{\partial y}{\partial t}     & = -\omega_1 A \sin (\omega_1 t - k_1 x) - \omega_2 B \sin (\omega_2 t - k_2 x)     \\
+                  \frac{\partial^2 y}{\partial t^2} & = -\omega_1^2 A \cos (\omega_1 t - k_1 x) - \omega_2^2 B \cos (\omega_1 t - k_2 x) \\
+                  \frac{\partial y}{\partial x}     & = k_1 A \sin (\omega_1 t - k_1 x) + k_2 B \sin (\omega_2 t - k_2 x)                \\
+                  \frac{\partial^2 y}{\partial x^2} & = -k_1^2 A \cos (\omega_1 t - k_1 x) - k_2^2 B \cos (\omega_2 t - k_2 x)           \\
+                  \omega_1^2 A + \omega_2^2 B       & = v^2 \left( k_1^2 A + k_2^2 B \right)                                             \\
+                  \omega_1^2 A + \omega_2 ^2 B      & = \omega_1^2 A + \omega_2^2 B
+                \end{align*}
+        \end{enumerate}
+
+  \item
+
+        \begin{align*}
+          \psi                                 & = A \sin (k_1 x + k_2 y + k_3 z - \omega t)           \\
+          \frac{\partial^2 \psi}{\partial t^2} & = -\omega^2 A \sin (k_1 x + k_2 y + k_3 z - \omega t) \\
+          \frac{\partial^2 \psi}{\partial x^2} & = -k_1^2 A \sin (k_1 x + k_2 y + k_3 z - \omega t)    \\
+          \frac{\partial^2 \psi}{\partial y^2} & = -k_2^2 A \sin (k_1 x + k_2 y + k_3 z - \omega t)    \\
+          \frac{\partial^2 \psi}{\partial z^2} & = -k_3^2 A \sin (k_1 x + k_2 y + k_3 z - \omega t)    \\
+          -\frac{\omega^2}{v^2}                & = -k_1^2 - k_2^2 - k_3^2                              \\
+          v                                    & = \frac{\omega}{\sqrt{k_1^2 + k_2^2 + k_3^2}}
+        \end{align*}
+\end{enumerate}
+
+\subsection{}
+
+\begin{enumerate}
+  \item No difference
+
+  \item $\ang{180}$ out of phase
+\end{enumerate}
+
+\subsection{}
+
+\begin{align*}
+  y(x, t)                       & = A \exp -\frac{(x^2 - v t)^2}{a^2}                       \\
+  y(x + \delta x, t + \delta t) & = A \exp -\frac{(x + \delta x - v (t + \delta t))^2}{a^2} \\
+                                & = A \exp -\frac{(x - v t)^2}{a^2}
+\end{align*}
+
+\subsection{}
+
+\begin{enumerate}
+  \item
+
+        \begin{enumerate}
+          \item $f = c / \lambda = \qty{200}{kHz}$
+
+          \item $f = \qty{6e14}{Hz}$
+
+          \item $f = \qty{3e18}{Hz}$
+
+          \item $f = c / \lambda = c / (2 \pi / k) = c k / (2 \pi) = \qty{1e8}{Hz}$
+
+          \item $f = \qty{69}{kHz}$
+        \end{enumerate}
+
+  \item
+
+        \begin{align*}
+          \lambda_{20}  & = \qty{17}{m}   \\
+          \lambda_{15}  & = \qty{2.3}{cm} \\
+          \lambda_{440} & = \qty{78}{cm}
+        \end{align*}
+\end{enumerate}
+
+\subsection{}
+
+\begin{enumerate}
+  \item
+
+        \begin{align*}
+          \unit{m/s} & = \sqrt{\unit{N.m/kg}}   \\
+                     & = \sqrt{kg.(m/s^2).m/kg} \\
+                     & = \sqrt{\unit{(m/s)^2}}  \\
+                     & = \unit{m/s}
+        \end{align*}
+
+  \item The string with the smallest mass / the thinnest string, i.e. the high E string
+\end{enumerate}
+
+\subsection{}
+
+\begin{enumerate}
+  \item
+
+        \begin{enumerate}
+          \item
+
+                \begin{align*}
+                  L & = \qty{25}{m}          \\
+                  m & = \qty{100}{g}         \\
+                  T & = \qty{10}{N}          \\
+                  f & = \qty{25}{Hz}         \\
+                  A & = \qty{15}{mm}         \\
+                  v & = \sqrt{\frac{T}{\mu}} \\
+                    & = \qty{50}{m/s}
+                \end{align*}
+
+          \item
+
+                \begin{align*}
+                  y             & = A \sin \left( \frac{2 \pi}{f} x - 2 \pi f t \right)          \\
+                  y'            & = -2 \pi f A \cos \left( \frac{2 \pi}{f} x - 2 \pi f t \right) \\
+                  y'_\text{max} & = 2 \pi f A                                                    \\
+                                & = \qty{2.4}{m/s}
+                \end{align*}
+        \end{enumerate}
+
+  \item
+
+        \begin{align*}
+          L & = \qty{0.75}{m}                \\
+          m & = \qty{125}{g}                 \\
+          T & = \qty{2.5}{N}                 \\
+          v & = \sqrt{\frac{S}{\sigma}}      \\
+            & = \sqrt{\frac{T / L}{m / L^2}} \\
+            & = \sqrt{\frac{L T}{m}}         \\
+            & = \qty{3.9}{m/s}
+        \end{align*}
+\end{enumerate}
+
+% 2 / 4
+
+\subsection{}
+
+\begin{enumerate}
+  \item
+
+        \begin{align*}
+          T(y) & = \mu y g                    \\
+          v    & = \sqrt{\frac{T}{\mu}}       \\
+               & = \sqrt{\frac{\mu y g}{\mu}} \\
+               & = \sqrt{y g}
+        \end{align*}
+
+  \item
+
+        \begin{align*}
+          t & = 2 \int_0^L \frac{1}{v} \,dy          \\
+            & = 2 \int_0^L \frac{1}{\sqrt{g y}} \,dy \\
+            & = \frac{2}{\sqrt{g}} [2 \sqrt{y}]_0^L  \\
+            & = 4 \sqrt{\frac{L}{g}}                 \\
+            & = \qty{2.0}{s}
+        \end{align*}
+\end{enumerate}
+
+\subsection{}
+
+\begin{enumerate}
+  \item
+
+        \begin{align*}
+          \mu & = \qty{30}{g/m}                                        \\
+          T   & = \qty{12}{N}                                          \\
+          f   & = \qty{150}{Hz}                                        \\
+          A   & = \qty{1.5}{cm}                                        \\
+          P   & = \frac{1}{2} \mu \omega^2 A^2 v                       \\
+              & = \frac{1}{2} \mu (2 \pi f)^2 A^2 \sqrt{\frac{T}{\mu}} \\
+              & = \qty{60}{W}
+        \end{align*}
+
+  \item
+
+        \begin{enumerate}
+          \item $P = \qty{240}{W}$
+
+          \item $P = \qty{15}{W}$
+        \end{enumerate}
+\end{enumerate}
+
+\subsection{}
+
+\begin{enumerate}
+  \item
+
+        \begin{align*}
+          I_1 & = \frac{k}{r_1^2}                      \\
+          I_2 & = \frac{k}{r_2^2}                      \\
+              & = I_1 \left( \frac{r_1}{r_2} \right)^2
+        \end{align*}
+
+  \item
+
+        \begin{align*}
+          I_1 & = \qty{25}{W/m^2}            \\
+          r_1 & = \qty{1.0}{m}               \\
+          I_2 & = \qty{1.0}{W/m^2}           \\
+          r_2 & = \sqrt{\frac{I_1}{I_2}} r_1 \\
+              & = \qty{5.0}{m}
+        \end{align*}
+\end{enumerate}
+
+\subsection{}
+
+\[P_\text{earth} \approx \qty{1.5}{kW}\]
+
+\[P_\text{jupiter} \approx \qty{57}{W}\]
+
+\subsection{}
+
+\begin{enumerate}
+  \item
+
+        \begin{align*}
+          \mu_1                  & = \qty{1.0}{g/cm}                                        \\
+          \mu_2                  & = \qty{4.0}{g/cm}                                        \\
+          A_1                    & = \qty{3.0}{cm}                                          \\
+          \lambda_1              & = \qty{25}{cm}                                           \\
+          v_1                    & = \sqrt{\frac{T}{\mu_1}}                                 \\
+          f \lambda_1            & = \sqrt{\frac{T}{\mu_1}}                                 \\
+          \lambda_1 \sqrt{\mu_1} & = \frac{\sqrt{T}}{f}                                     \\
+          \lambda_1 \sqrt{\mu_1} & = \lambda_2 \sqrt{\mu_2}                                 \\
+          \lambda_2              & = \lambda_1 \sqrt{\frac{\mu_1}{\mu_2}}                   \\
+                                 & = \qty{12.5}{cm}                                         \\
+          A_2                    & = A_1 \frac{2 \sqrt{\mu_1}}{\sqrt{\mu_1} + \sqrt{\mu_2}} \\
+                                 & = \qty{2.0}{cm}
+        \end{align*}
+
+  \item
+
+        \begin{align*}
+          B_1 & = A_1 \frac{\sqrt{\mu_1} - \sqrt{\mu_2}}{\sqrt{\mu_1} + \sqrt{\mu_2}} \\
+              & = \qty{-1}{cm}
+        \end{align*}
+
+        $1 / 9$ of the power is reflected
+\end{enumerate}
+
+\subsection{}
+
+\begin{enumerate}
+  \item The refractive index and wave number are directly proportional, so
+
+        \begin{align*}
+          B_1 & = A_1 \frac{k_1 - n k_1}{k_1 + n k_1} \\
+              & = A_1 \frac{1 - n}{1 + n}             \\
+              & = -0.2 A_1
+        \end{align*}
+
+        Intensity is proportional to amplitude squared, so $0.04$ of the incident light intensity is reflected.
+
+  \item
+
+        \begin{align*}
+          n_1       & = 1.39                \\
+          \lambda_1 & = \qty{550}{nm}       \\
+          f         & = \frac{c}{\lambda}   \\
+                    & = \qty{5.5e14}{Hz}    \\
+          n_2       & = 1.5                 \\
+          \lambda_2 & = \frac{v}{f}         \\
+                    & = \frac{c}{f n}       \\
+                    & = \qty{392}{nm}       \\
+          L         & = \frac{\lambda_2}{4} \\
+                    & = \qty{98}{nm}
+        \end{align*}
+
+  \item \[2 \pi \times \frac{2 L}{\lambda_2} = 2 \pi \Rightarrow L = \frac{\lambda_2}{2} = \qty{198}{nm}\]
+\end{enumerate}
+
+\subsection{}
+
+\begin{enumerate}
+  \item
+
+        \begin{align*}
+          m \frac{\partial^2 y_r}{\partial t^2} & = - T \sin \theta_1 - T \sin \theta_2                                               \\
+          \frac{\partial^2 y_r}{\partial t^2}   & = -\frac{T}{m} \left[ \frac{y_r - y_{r - 1}}{a} + \frac{y_r - y_{r + 1}}{a} \right] \\
+                                                & = \frac{T}{m} \left[ \frac{y_{r + 1} - y_r}{a} - \frac{y_r - y_{r - 1}}{a} \right]
+        \end{align*}
+
+  \item
+
+        \begin{align*}
+          \frac{\partial^2 y_r}{\partial t^2} & = \frac{T}{\delta x m} [y(x + \delta x) - 2 y(x) + y(x - \delta x)]                                                                                                                                       \\
+                                              & = \frac{T}{\delta x m} \left[ y(x) + \delta x \frac{\partial y}{\partial x} + \frac{1}{2} (\delta x)^2 \frac{\partial^2 y}{\partial x^2} - 2 y(x) + y(x) - \delta x \frac{\partial y}{\partial x} \right. \\
+                                              & \qquad \left. + \frac{1}{2} (\delta x)^2 \frac{\partial^2 y}{\partial x^2} \right]                                                                                                                        \\
+                                              & = \frac{T}{\delta x m} \left[ (\delta x)^2 \frac{\partial^2 y}{\partial x^2} \right]                                                                                                                      \\
+                                              & = \frac{T}{m / \delta x} \frac{\partial^2 y}{\partial x^2}                                                                                                                                                \\
+                                              & = \frac{T}{\mu} \frac{\partial^2 y}{\partial x^2}
+        \end{align*}
+\end{enumerate}
+
 \end{document}
