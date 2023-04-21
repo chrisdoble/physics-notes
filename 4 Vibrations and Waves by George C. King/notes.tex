@@ -278,4 +278,40 @@
   \item The wave equation for two-dimensional waves of circular symmetry is \[\frac{\partial^2 z}{\partial r^2} + \frac{1}{r} \frac{\partial z}{\partial r} = \frac{1}{v^2} \frac{\partial^2 z}{\partial t^2}\] and its solutions involve Bessel functions but for large $r$ it can be simplified to \[\frac{\partial^2 z}{\partial r^2} = \frac{1}{v^2} \frac{\partial^2 z}{\partial t^2}\] which has the same form as the one-dimensional wave equation with solutions of the form \[z(r, t) = A \cos (k r - \omega t)\]
 \end{itemize}
 
+\section{Standing Waves}
+
+\begin{itemize}
+  \item In a standing wave, a \textbf{node} is a point whose displacement is $0$ at all times and an \textbf{antinode} is a point taht experiences that maximum displacement
+
+  \item In a standing wave, each individual particle undergoes SHM about its equilibrium position but different particules have different amplitudes
+
+  \item The general equation for a standing wave on a string is \[y_n(x, t) = A_n \sin \left( \frac{n \pi}{L} x \right) \cos \omega_n t\] where \[\omega_n = \frac{n \pi v}{L}\] and $n = 1, \,2, \,3, \,\ldots$ corresponds to a different standing wave pattern or \textbf{mode}
+
+  \item The first normal mode can also be called the \textbf{fundamental mode}
+
+  \item The period of a standing wave is \[T = \frac{2 \pi}{\omega_n} = \frac{2 L}{n v}\]
+
+  \item The wavelength of a standing wave is \[\lambda_n = \frac{2 L}{n}\]
+
+  \item The wavenumber of a standing wave is \[k_n = \frac{n \pi}{L}\]
+
+  \item Using the definition of the wavenumber of a standing wave, the general equation can be rewritten \[y_n(x, t) = A_n \sin k_n x \cos \omega t\]
+
+  \item A standing wave is a superposition of two travelling waves of equal frequency and amplitude travelling in opposite directions
+
+  \item The total energy of a string vibrating in the $n$-th mode is \[E_n = \frac{1}{4} \mu L A_n^2 \omega_n^2\]
+
+  \item Standing waves are the normal modes of a vibrating string
+
+  \item The superposition principle states that if $y_1(x, t)$ and $y_2(x, t)$ are both solutions to the wave equation, then so is $c_1 y_1(x, t) + c_2 y_2(x, t)$
+
+  \item In general, the motion of a vibrating string can be expressed as a superposition of normal modes of the string, i.e. \[y(x, t) = \sum_n y_n(x, t) = \sum_n A_n \sin \left( \frac{n \pi}{L} x \right) \cos \omega_n t\]
+
+  \item Any function $f(x)$ where $f(0) = f(L) = 0$ can be written as a superposition of sine waves \[f(x) = \sum_n A_n \sin \left( \frac{n \pi}{L} x \right)\] where \[A_n = \frac{2}{L} \int_0^L dx \sin \left( \frac{n \pi}{L} x \right) f(x), \,n = 1, \,2, \,\ldots\]
+
+  \item This works because $\sin \frac{m \pi}{L} x$ and $\sin \frac{n \pi}{L} x$ are orthogonal when $m \ne n$, i.e. \[\int_0^L dx \sin \left( \frac{m \pi}{L} x \right) \sin \left( \frac{n \pi}{L} x \right) = 0, \,m \ne n\] but \[\int_0^L dx \sin^2 \left( \frac{n \pi}{L} x \right) = \frac{L}{2}\] so integrating the product of $\sin \left( \frac{n \pi}{L} x \right)$ and $f(x)$ in $A_n$ effectively ``picks out'' the amplitude of the $n$-th normal mode
+
+  \item The total energy of a vibrating string expressed as a superposition of normal modes is given by \[E = \sum_n E_n = \sum_n \frac{1}{4} \mu L A_n^2 \omega_n^2 = \frac{1}{4} \mu L \sum_n A_n^2 \omega_n^2\]
+\end{itemize}
+
 \end{document}
