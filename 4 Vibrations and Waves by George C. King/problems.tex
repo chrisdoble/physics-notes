@@ -1826,4 +1826,121 @@ It's a square wave
   \item \[E_1 = \frac{h^2}{8 L^2 m} = \qty{1.52e-18}{J} \approx \qty{10}{eV}\]
 \end{enumerate}
 
+\section{Interference and Diffraction of Waves}
+
+\subsection{}
+
+\begin{enumerate}
+  \item
+
+        \begin{align*}
+          L        & = \qty{1.0}{m}         \\
+          a        & = \qty{0.30}{mm}       \\
+          \Delta x & = \frac{\lambda L}{a}  \\
+          \lambda  & = \frac{a \Delta x}{L} \\
+                   & = \qty{540}{nm}
+        \end{align*}
+
+  \item
+
+        \begin{align*}
+          \lambda & = \qty{633}{nm}  \\
+          a       & = \qty{0.50}{mm} \\
+          L       & = \qty{1.5}{m}
+        \end{align*}
+
+        \begin{enumerate}
+          \item \[4 \frac{\lambda L}{a} = \qty{7.7}{mm}\]
+
+          \item
+
+                \begin{align*}
+                  \left( n + \frac{1}{2} \right) \frac{\lambda L}{a} - \left( -n - \frac{1}{2} \right) \frac{\lambda L}{a} & = (2 n + 1) \frac{\lambda L}{a} \\
+                                                                                                                           & = \qty{9.7}{mm}
+                \end{align*}
+        \end{enumerate}
+\end{enumerate}
+
+\subsection{}
+
+\[\Delta \theta' = \frac{\Delta \theta}{n} = 0.03\]
+
+\subsection{}
+
+The original 15th bright fringe occurs at a distance $d = 15 \frac{\lambda L}{a}$ from the middle of the slits. The light passing through the covered slit travels an additional optical distance of $(n - 1) t$ where $n$ is the refractive index of the material and $t$ is its thickness. The light passing through the other slit travels an additional distance of $a \sin \theta = a \frac{d}{L}$. The additional distances must be equal so
+
+\begin{align*}
+  (n - 1) t & = a \frac{d}{L}            \\
+  t         & = \frac{a d}{L (n - 1)}    \\
+            & = \frac{15 \lambda}{n - 1} \\
+            & = \qty{12.5}{\mu m}
+\end{align*}
+
+\subsection{}
+
+\begin{enumerate}
+  \item $\theta \approx \frac{w}{l} = \frac{\qty{1.4e6}{km}}{\qty{1.5e8}{km}} = \qty{9.33e-3}{rad}$
+
+  \item $\theta \ll \frac{2 \lambda}{a} = \qty{1.47e-3}{rad}$
+\end{enumerate}
+
+\subsection{}
+
+\begin{align*}
+  d                    & = \qty{0.06}{mm}       \\
+  \theta               & = 15 \frac{\lambda}{a} \\
+  \theta               & = \frac{\lambda}{d}    \\
+  15 \frac{\lambda}{a} & = \frac{\lambda}{d}    \\
+  a                    & = 15 d                 \\
+                       & = \qty{0.9}{mm}
+\end{align*}
+
+\subsection{}
+
+\begin{align*}
+  I(\theta)   & = I_0 \cos^2 (k a \sin \theta / 2)        \\
+  1           & = \cos^2 (k a \sin \theta / 2)            \\
+  n \pi       & = ka \sin \theta / 2                      \\
+              & = \frac{2 \pi}{\lambda} a \sin \theta / 2 \\
+  \sin \theta & = \frac{n \lambda}{a}
+\end{align*}
+
+In the first quadrant $0 \le \sin \theta \le 1$ so $0 \le \frac{n \lambda}{a} \le 1$ which allows $n = 0, \,1, \,2, \,3, \text{ and } 4$ meaning there are 16 maxima.
+
+\subsection{}
+
+\begin{enumerate}
+  \item $\lambda = 2 \frac{1.0}{4001} = \qty{500}{nm}$
+
+  \item Let $\lambda_1 = \qty{589.0}{nm}$ and $\lambda_2 = \qty{589.6}{nm}$. The number of maximums observed in the first wavelength is equal to $2 x / \lambda_1$ and the number of maximums observed in the second wavelength is $2 x / \lambda_2$.
+
+        \begin{align*}
+          \frac{2 x}{\lambda_1}                                        & = \frac{2 x}{\lambda_2} + 1                             \\
+          2 x \left( \frac{1}{\lambda_1} - \frac{1}{\lambda_2} \right) & = 1                                                     \\
+          2 x \frac{\lambda_2 - \lambda_1}{\lambda_1 \lambda_2}        & = 1                                                     \\
+          x                                                            & = \frac{\lambda_1 \lambda_2}{2 (\lambda_2 - \lambda_1)} \\
+                                                                       & = \qty{2.89e-4}{m}
+        \end{align*}
+\end{enumerate}
+
+\subsection{}
+
+Light that passes through the gas cell experiences an additional optical distance of $l (n - 1)$ where $l$ is the length of the gas cell and $n$ is the refractive index of air at atmospheric pressure. This is equivalent to moving the mirror the same distance meaning
+
+\begin{align*}
+  \frac{l (n - 1)}{\lambda / 2} & = 90                       \\
+  \frac{2 l (n - 1)}{\lambda}   & = 90                       \\
+  n - 1                         & = \frac{45 \lambda}{l}     \\
+  n                             & = 1 + \frac{45 \lambda}{l} \\
+                                & = 1.00036
+\end{align*}
+
+\setcounter{subsection}{9}
+\subsection{}
+
+\begin{enumerate}
+  \setcounter{enumi}{1}
+  \item $\theta = 1.22 \frac{\lambda}{d} = \qty{2.8e-7}{rad} = \ang{0.000016}$
+\end{enumerate}
+
 \end{document}
