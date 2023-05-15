@@ -1943,4 +1943,176 @@ Light that passes through the gas cell experiences an additional optical distanc
   \item $\theta = 1.22 \frac{\lambda}{d} = \qty{2.8e-7}{rad} = \ang{0.000016}$
 \end{enumerate}
 
+\section{The Dispersion of Waves}
+
+\subsection{}
+
+\begin{align*}
+  \lambda_1                             & = \qty{766.49110}{nm}                                           \\
+  2 \pi f                               & = \frac{\omega_2 - \omega_1}{2}                                 \\
+                                        & = \frac{k_2 c - k_1 c}{2}                                       \\
+                                        & = \frac{\frac{2 \pi}{\lambda_2} - \frac{2 \pi}{\lambda_1}}{2} c \\
+  f                                     & = \frac{\lambda_1 - \lambda_2}{2 \lambda_1 \lambda_2} c         \\
+  2 \lambda_1 \lambda_2 f               & = (\lambda_1 - \lambda_2) c                                     \\
+  2 \lambda_1 \lambda_2 f + \lambda_2 c & = \lambda_1 c                                                   \\
+  \lambda_2 (2 \lambda_1 f + c)         & = \lambda_1 c                                                   \\
+  \lambda_2                             & = \frac{\lambda_1 c}{2 \lambda_1 f + c}                         \\
+                                        & = \qty{766.48929}{nm}
+\end{align*}
+
+\setcounter{subsection}{3}
+\subsection{}
+
+\begin{enumerate}
+  \item
+
+        \begin{enumerate}
+          \item
+
+                \begin{align*}
+                  v_g & = v - \lambda \frac{d v}{d \lambda}                               \\
+                      & = \frac{c}{\lambda} - \lambda \left( -\frac{c}{\lambda^2} \right) \\
+                      & = 2 \frac{c}{\lambda}                                             \\
+                      & = 2 v
+                \end{align*}
+
+          \item
+
+                \begin{align*}
+                  v_g & = v - \lambda \frac{d v}{d \lambda}                                                                  \\
+                      & = \frac{\alpha}{\sqrt{\lambda}} - \lambda \left( -\frac{1}{2} \frac{\alpha}{\lambda^{3 / 2}} \right) \\
+                      & = \frac{3}{2} \frac{\alpha}{\sqrt{\lambda}}                                                          \\
+                      & = \frac{3}{2} v
+                \end{align*}
+        \end{enumerate}
+
+  \item
+
+        \begin{align*}
+          \omega & = c k                  \\
+          v      & = \frac{\omega}{k}     \\
+                 & = c                    \\
+          v_g    & = \frac{d \omega}{d k} \\
+                 & = c
+        \end{align*}
+
+  \item
+
+        \begin{align*}
+          \frac{c^2}{v^2}          & = 1 - \frac{\omega_0^2}{\omega^2} \\
+          \frac{\omega^2}{v^2} c^2 & = \omega^2 - \omega_0^2           \\
+          \omega^2                 & = \omega_0^2 + c^2 k^2
+        \end{align*}
+\end{enumerate}
+
+\subsection{}
+
+\begin{enumerate}
+  \item
+
+        \begin{enumerate}
+          \item
+
+                \begin{align*}
+                  v & = \sqrt{\frac{g}{k} + \frac{S k}{\rho}}                         \\
+                    & = \sqrt{\frac{g \lambda}{2 \pi} + \frac{2 \pi S}{\lambda \rho}} \\
+                    & = \qty{12.5}{m/s}
+                \end{align*}
+
+          \item \[v_g = \frac{1}{2} v = \qty{6.25}{m/s}\]
+        \end{enumerate}
+
+  \item
+
+        \begin{align*}
+          v                     & = \sqrt{\frac{g}{k} + \frac{S k}{\rho}}                         \\
+          \frac{d v}{d k}       & = \frac{1}{2 v} \left( -\frac{g}{k^2} + \frac{S}{\rho} \right)  \\
+          0                     & = \frac{S}{\rho} - \frac{g}{k^2}                                \\
+          k                     & = \sqrt{\frac{g \rho}{S}}                                       \\
+          \frac{2 \pi}{\lambda} & = \sqrt{\frac{g \rho}{S}}                                       \\
+          \lambda               & = 2 \pi \sqrt{\frac{S}{g \rho}}                                 \\
+                                & = \qty{1.70}{cm}                                                \\
+          v                     & = \sqrt{\frac{g \lambda}{2 \pi} + \frac{2 \pi S}{\lambda \rho}} \\
+                                & = \qty{0.23}{m/s}
+        \end{align*}
+\end{enumerate}
+
+\subsection{}
+
+\begin{enumerate}
+  \item
+
+        \begin{align*}
+          f           & = \qty{1.35}{kHz}                                                                                          \\
+          \lambda     & = \qty{0.5}{mm}                                                                                            \\
+          \omega^2    & = g k + \frac{S k^3}{\rho}                                                                                 \\
+          (2 \pi f)^2 & = g \frac{2 \pi}{\lambda} + \frac{S \left( \frac{2 \pi}{\lambda} \right)^3}{\rho}                          \\
+          S           & = \frac{\rho}{\left( \frac{2 \pi}{\lambda} \right)^3} \left( (2 \pi f)^2 - g \frac{2 \pi}{\lambda} \right) \\
+                      & = \frac{\lambda^3 \rho}{8 \pi^3} \left( 4 \pi^2 f^2 - g \frac{2 \pi}{\lambda} \right)                      \\
+                      & = \qty{0.492}{N/m}
+        \end{align*}
+
+  \item \[v_g = \frac{3}{2} \sqrt{\frac{S k}{\rho}} = \qty{1.0}{m/s}\]
+\end{enumerate}
+
+\subsection{}
+
+\begin{enumerate}
+  \item
+
+        \begin{align*}
+          n = \frac{c}{v}       & = A + B / \lambda^2                                                                     \\
+          v                     & = \frac{c}{A + B / \lambda^2}                                                           \\
+          \frac{d v}{d \lambda} & = \frac{d}{d \lambda} (c (A + B \lambda^{-2})^{-1})                                     \\
+                                & = c (-1) (A + B \lambda^{-2})^{-2} (-2) B \lambda^{-3}                                  \\
+                                & = \frac{2 c B / \lambda^3}{(A + B / \lambda^2)^2}                                       \\
+          v_g                   & = v - \lambda \frac{d v}{d \lambda}                                                     \\
+                                & = \frac{c}{A + B / \lambda^2} - \lambda \frac{2 c B / \lambda^3}{(A + B / \lambda^2)^2} \\
+                                & = \frac{c (A + B / \lambda^2) - 2 c B / \lambda^2}{(A + B / \lambda^2)^2}               \\
+                                & = c \frac{A - B / \lambda^2}{(A + B / \lambda^2)^2}                                     \\
+          \frac{v_g}{v}         & = c \frac{A - B / \lambda^2}{(A + B / \lambda^2)^2} \frac{A + B / \lambda^2}{c}         \\
+                                & = \frac{A - B / \lambda^2}{A + B / \lambda^2}
+        \end{align*}
+
+  \item \[\frac{v_g}{v} = 0.871\]
+\end{enumerate}
+
+\subsection{}
+
+\begin{enumerate}
+  \item
+
+        \begin{align*}
+          y                                 & = A \cos (\omega t - k x)                                                       \\
+          \frac{\partial y}{\partial t}     & = -A \omega \sin (\omega t - k x)                                               \\
+          \frac{\partial^2 y}{\partial t^2} & = -A \omega^2 \cos (\omega t - k x)                                             \\
+          \frac{\partial y}{\partial x}     & = A k \sin (\omega t - k x)                                                     \\
+          \frac{\partial^2 y}{\partial x^2} & = -A k^2 \cos (\omega t - k x)                                                  \\
+          -A \omega^2 \cos (\omega t - k x) & = \frac{T}{\mu} (-A k^2 \cos (\omega t - k x)) - \alpha A \cos (\omega t - k x) \\
+                                            & = -A \left( \frac{T}{\mu} k^2 + \alpha \right) \cos (\omega t - k x)
+        \end{align*}
+
+  \item \[\omega_\text{min} = \sqrt{\alpha}\]
+
+  \item
+
+        \begin{align*}
+          v     & = \frac{\omega}{k}                                               \\
+          v_g   & = \frac{d \omega}{d k}                                           \\
+                & = \frac{d}{d k} \left( \sqrt{\frac{T}{\mu} k^2 + \alpha} \right) \\
+                & = \frac{1}{2 \omega} 2 \frac{T}{\mu} k                           \\
+                & = \frac{T}{\mu} \frac{k}{\omega}                                 \\
+          v v_g & = \frac{T}{\mu}
+        \end{align*}
+\end{enumerate}
+
+\subsection{}
+
+\begin{align*}
+  \Delta t \Delta \omega & \approx 2 \pi                  \\
+  \Delta \omega          & \approx \frac{2 \pi}{\Delta t} \\
+                         & \approx \qty{1.26e8}{rad/s}    \\
+  \Delta f               & \approx \qty{20}{MHz}
+\end{align*}
+
 \end{document}
