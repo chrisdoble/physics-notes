@@ -22,4 +22,118 @@
 
 \tableofcontents
 
+\section{Periodic motions}
+
+\setcounter{subsection}{3}
+\subsection{}
+
+\begin{enumerate}
+  \item
+
+        \begin{align*}
+          z   & = A e^{j \theta}              \\
+          d z & = j A e^{j \theta} \,d \theta \\
+              & = j z \,d \theta
+        \end{align*}
+
+        The motion of the point is always perpendicular to its position.
+
+  \item
+
+        \begin{align*}
+          |2 + j \sqrt{3}|        & = \sqrt{2^2 + \sqrt{3}^2}     \\
+                                  & = \sqrt{7}                    \\
+          \arg (2 + j \sqrt{3})   & = \arctan \frac{\sqrt{3}}{2}  \\
+                                  & = \ang{41}                    \\ \\
+          (2 - j \sqrt{3})^2      & = 4 - j 4 \sqrt{3} - 3        \\
+                                  & = 1 - j 4 \sqrt{3}            \\
+          |1 - j 4 \sqrt{3}|      & = \sqrt{1^2 + (4 \sqrt{3})^2} \\
+                                  & = 7                           \\
+          \arg (1 - j 4 \sqrt{3}) & = -\arctan 4 \sqrt{3}
+        \end{align*}
+\end{enumerate}
+
+\setcounter{subsection}{8}
+\subsection{}
+
+\begin{align*}
+  \cos \theta + j \sin \theta               & = e^{j \theta}            \\
+  \cos \frac{\pi}{2} + j \sin \frac{\pi}{2} & = e^{j \frac{\pi}{2}}     \\
+  j                                         & = e^{j \frac{\pi}{2}}     \\
+  j^j                                       & = (e^{j \frac{\pi}{2}})^j \\
+                                            & = e^{-\frac{\pi}{2}}      \\
+                                            & \approx 0.208
+\end{align*}
+
+Yes, I would be willing to pay 20 cents because I could sell it to the mathematician and gain 0.8 cents.
+
+\subsection{}
+
+\begin{align*}
+  y                   & = A \cos k x + B \sin k x             \\
+  \frac{d y}{d x}     & = -A k \sin k x + B k \cos k x        \\
+  \frac{d^2 y}{d x^2} & = -A k^2 \cos k x - B k^2 \sin k x    \\
+                      & = -k^2 y                              \\ \\
+  C                   & = \sqrt{A^2 + B^2}                    \\
+  \alpha              & = \arctan \left( -\frac{B}{A} \right) \\
+  y                   & = C \cos (k x + \alpha)               \\
+                      & = C \Re [e^{j (k x + \alpha)}]        \\
+                      & = Re[(C e^{j \alpha}) e^{j k x}]
+\end{align*}
+
+\subsection{}
+
+\begin{enumerate}
+  \item
+
+        \begin{align*}
+          x      & = A \cos (\omega t + \alpha) \\
+          A      & = \qty{5}{cm}                \\
+          f      & = \qty{1}{Hz}                \\
+          \omega & = 2 \pi f                    \\
+                 & = 2 \pi \,\unit{rad/s}       \\
+          \alpha & = \pm \frac{\pi}{2}
+        \end{align*}
+
+  \item
+
+        \begin{align*}
+          x \left( \frac{8}{3} \right)                   & = 5 \cos \left( 2 \pi \frac{8}{3} + \alpha \right) \\
+                                                         & = \pm \qty{4.33}{cm}                               \\
+          \frac{d x}{d t}                                & = -A \omega \sin (\omega t + \alpha)               \\
+          \frac{d x}{d t} \left( \frac{8}{3} \right)     & = \pm \qty{15.7}{cm/s}                             \\
+          \frac{d^2 x}{d t^2}                            & = -A \omega^2 \cos (\omega t + \alpha)             \\
+          \frac{d^2 x}{d t^2} \left( \frac{8}{3} \right) & = \mp \qty{171}{cm/s^2}
+        \end{align*}
+\end{enumerate}
+
+\subsection{}
+
+\begin{enumerate}
+  \item
+
+        \begin{align*}
+          v        & = \qty{50}{cm/s}                                                      \\
+          T        & = \qty{6}{s}                                                          \\
+          \theta_0 & = \ang{30}                                                            \\
+          c        & = \qty{300}{cm}                                                       \\
+          A        & = \frac{c}{2 \pi}                                                     \\
+                   & = \frac{150}{\pi} \,\unit{cm}                                         \\
+          \omega   & = \frac{2 \pi}{T}                                                     \\
+                   & = \frac{\pi}{3} \,\unit{rad/s}                                        \\
+          \alpha   & = \frac{\pi}{6} \,\unit{rad}                                          \\
+          x        & = \frac{150}{\pi} \cos \left( \frac{\pi}{3} t + \frac{\pi}{6} \right)
+        \end{align*}
+
+  \item
+
+        \begin{align*}
+          x(\qty{2}{s})                    & = \qty{-41.3}{cm}                                                       \\
+          \frac{d x}{d t}                  & = -50 \sin \left( \frac{\pi}{3} t + \frac{\pi}{6} \right)               \\
+          \frac{d x}{d t} (\qty{2}{s})     & = \qty{-25}{cm/s}                                                       \\
+          \frac{d^2 x}{d t^2}              & = -\frac{50 \pi}{3} \cos \left( \frac{\pi}{3} t + \frac{\pi}{6} \right) \\
+          \frac{d^2 x}{d t^2} (\qty{2}{s}) & = \qty{45}{cm/s^2}
+        \end{align*}
+\end{enumerate}
+
 \end{document}
