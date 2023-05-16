@@ -136,4 +136,76 @@ Yes, I would be willing to pay 20 cents because I could sell it to the mathemati
         \end{align*}
 \end{enumerate}
 
+\section{The superposition of periodic motions}
+
+\subsection{}
+
+\begin{enumerate}
+  \item
+
+        \begin{align*}
+          z & = \sin \omega t + \cos \omega t                          \\
+            & = \sqrt{2} \cos \left( \omega t - \frac{\pi}{4} \right)  \\
+            & = \sqrt{2} e^{j \left( \omega t - \frac{\pi}{4} \right)}
+        \end{align*}
+
+  \item
+
+        \begin{align*}
+          z & = \cos (\omega t - \pi / 3) - \cos \omega t                                           \\
+            & = \cos \omega t \cos \frac{\pi}{3} + \sin \omega t \sin \frac{\pi}{3} - \cos \omega t \\
+            & = -\frac{1}{2} \cos \omega t + \frac{\sqrt{3}}{2} \sin \omega t                       \\
+            & = \cos (\omega t + 2 \pi / 3)                                                         \\
+            & = e^{j (\omega t + 2 \pi / 3)}
+        \end{align*}
+
+  \item
+
+        \begin{align*}
+          z & = 3 \cos \omega t + 2 \sin \omega t          \\
+            & = \sqrt{13} \cos (\omega t + \arctan -2 / 3) \\
+        \end{align*}
+
+  \item
+
+        \begin{align*}
+          z & = \sin \omega t - 2 \cos (\omega t - \pi / 4) + \cos \omega t                                 \\
+            & = \sin \omega t - 2 (\cos \omega t \cos \pi / 4 + \sin \omega t \sin \pi / 4) + \cos \omega t \\
+            & = \sin \omega t - \sqrt{2} \cos \omega t - \sqrt{2} \sin \omega t + \cos \omega t             \\
+            & = (1 - \sqrt{2}) \cos \omega t + (1 - \sqrt{2}) \sin \omega t                                 \\
+            & = (1 - \sqrt{2}) \sqrt{2} \cos (\omega t - \pi / 4)                                           \\
+            & = (\sqrt{2} - 2) \cos (\omega t - \pi / 4)                                                    \\
+            & = (2 - \sqrt{2}) \cos (\omega t + 3 \pi / 4)
+        \end{align*}
+\end{enumerate}
+
+\subsection{}
+
+\begin{align*}
+  x      & = A_1 \cos \omega t + A_2 \cos (\omega t + \alpha_1) + A_3 \cos (\omega t + \alpha_1 + \alpha_2)                               \\
+         & = A_1 \cos \omega t + A_2 (\cos \omega t \cos \alpha_1 - \sin \omega t \sin \alpha_1)                                          \\
+         & \qquad + A_3 (\cos \omega t \cos (\alpha_1 + \alpha_2) - \sin \omega t \sin (\alpha_1 + \alpha_2))                             \\
+         & = (A_1 + A_2 \cos \alpha_1 + A_3 \cos (\alpha_1 + \alpha_2)) \cos \omega t                                                     \\
+         & \qquad - (A_2 \sin \alpha_1 + A_3 \sin (\alpha_1 + \alpha_2)) \sin \omega t                                                    \\
+  A      & = \sqrt{(A_1 + A_2 \cos \alpha_1 + A_3 \cos (\alpha_1 + \alpha_2))^2 + (A_2 \sin \alpha_1 + A_3 \sin (\alpha_1 + \alpha_2))^2} \\
+         & \approx \qty{0.52}{mm}                                                                                                         \\
+  \alpha & = \arctan \frac{A_2 \sin \alpha_1 + A_3 \sin (\alpha_1 + \alpha_2)}{A_1 + A_2 \cos \alpha_1 + A_3 \cos (\alpha_1 + \alpha_2)}  \\
+         & \approx \qty{0.59}{rad}                                                                                                        \\
+         & \approx \ang{34}
+\end{align*}
+
+\subsection{}
+
+The equation of motion is \[x = 2 A \cos \left( \frac{12 \pi - 10 \pi}{2} t \right) \cos \left( \frac{12 \pi + 10 \pi}{2} t \right)\] with the variation in amplitude given by the term \[2 A \cos \pi t\] so the beat period is $\qty{1}{s}$.
+
+\subsection{}
+
+\begin{enumerate}
+  \item \[\omega = 2 \pi, \unit{rad/s} \Rightarrow f = \qty{1}{Hz}\]
+
+  \item \[\omega = \frac{25 \pi}{2} \,\unit{rad/s} \Rightarrow f = \frac{25}{4} \,\unit{Hz}\]
+
+  \item \[\omega = \frac{3 + \pi}{2} \,\unit{rad/s} \Rightarrow f = \frac{3 + \pi}{4 \pi} \,\unit{Hz}\]
+\end{enumerate}
+
 \end{document}
