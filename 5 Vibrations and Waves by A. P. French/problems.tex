@@ -1312,4 +1312,216 @@ The equation of motion is \[x = 2 A \cos \left( \frac{12 \pi - 10 \pi}{2} t \rig
         \end{align*}
 \end{enumerate}
 
+\section{Normal modes of continuous systems. Fourier analysis}
+
+\subsection{}
+
+\begin{enumerate}
+  \item \[f_1 = \frac{1}{2 L} \sqrt{\frac{T}{\mu}} = \qty{10}{Hz}\]
+
+  \item $5 f_1$ ($\qty{50}{Hz}$) and multiples thereof
+\end{enumerate}
+
+\subsection{}
+
+\begin{align*}
+  f_1      & = \frac{1}{2 L} \sqrt{\frac{T}{\mu}}                                 \\
+           & = \frac{1}{2 L} \sqrt{\frac{L T}{M}}                                 \\
+           & = \sqrt{\frac{T}{4 L M}}                                             \\
+  f_2      & = 2 f_1                                                              \\
+  f_3      & = 3 f_1                                                              \\ \\
+  \omega_0 & = 2 \sqrt{\frac{3 T}{L M}}                                           \\
+  \omega_n & = 4 \sqrt{\frac{3 T}{L M}} \sin \frac{n \pi}{8}                      \\
+  f_n'     & = \frac{2}{\pi} \sqrt{\frac{3 T}{L M}} \sin \frac{n \pi}{8}          \\
+  f_1'     & = \frac{2}{\pi} \sqrt{\frac{3 T}{L M}} \frac{\sqrt{2 - \sqrt{2}}}{2} \\
+           & = \frac{2 \sqrt{3 (2 - \sqrt{2})}}{\pi} \sqrt{\frac{T}{4 L M}}       \\
+           & \approx 0.84 f_1                                                     \\
+  f_2      & = \frac{2 \sqrt{6}}{\pi} \sqrt{\frac{T}{4 L M}}                      \\
+           & \approx 1.56 f_1                                                     \\
+  f_3      & = \frac{2 \sqrt{3 (2 + \sqrt{2})}}{\pi} \sqrt{\frac{T}{4 L M}}       \\
+           & \approx 2.04 f_1
+\end{align*}
+
+\setcounter{subsection}{4}
+\subsection{}
+
+\begin{align*}
+  \omega & = 2 \pi f                          \\
+         & = 2 \pi \frac{v}{\lambda}          \\
+         & = 2 \pi \frac{\sqrt{T / \mu}}{2 L} \\
+         & = \pi \frac{\sqrt{L T / m}}{L}     \\
+         & = \pi \sqrt{\frac{T}{L m}}
+\end{align*}
+
+\subsection{}
+
+\begin{enumerate}
+  \item
+
+        \begin{align*}
+          \xi(x, t)                 & = A \sin \left( \frac{\omega x}{v} \right) \cos \omega t \\ \\
+          \cos \frac{\omega L}{2 v} & = 0                                                      \\
+          \frac{\omega L}{2 v}      & = \left( n - \frac{1}{2} \right) \pi                     \\
+          \omega_n                  & = \left( n - \frac{1}{2} \right) \pi \frac{2 v}{L}       \\
+                                    & = \frac{(2 n - 1) \pi}{L} \sqrt{\frac{Y}{\rho}}
+        \end{align*}
+
+  \item
+
+        \begin{align*}
+          \lambda_n & = \frac{v}{f_n}                     \\
+                    & = \frac{2 \pi v}{\omega_n}          \\
+                    & = 2 \pi v \frac{L}{(2 n - 1) \pi v} \\
+                    & = \frac{2 L}{2 n - 1}
+        \end{align*}
+
+  \item The nodes are at $x = 0$ and at each multiple of a half wavelength, i.e. \[\frac{L}{2 n - 1}\]
+\end{enumerate}
+
+\setcounter{subsection}{8}
+\subsection{}
+
+\begin{enumerate}
+  \setcounter{enumi}{1}
+  \item
+
+        \begin{align*}
+          \xi(x, t)               & = A_1 \sin \frac{\pi x}{L} \cos 100 \pi t + A_2 \sin \frac{2 \pi x}{L} \cos 200 \pi t \\
+          \xi_\text{max}(L / 4)   & = A_1 \frac{\sqrt{2}}{2} \cos 100 \pi t_1 + A_2 \cos 200 \pi t_1                      \\
+          \xi_\text{max}(L / 2)   & = A_1 \cos 100 \pi t_2                                                                \\
+          \xi_\text{max}(3 L / 4) & = A_1 \frac{\sqrt{2}}{2} \cos 100 \pi t_3 - A_2 \cos 200 \pi t_3                      \\ \\
+          A_1                     & = \xi_\text{max}(L / 2)                                                               \\
+                                  & = \qty{10}{\mu m}                                                                     \\ \\
+          \xi_\text{max}(L / 4)   & = A_1 \frac{\sqrt{2}}{2} + A_2                                                        \\
+                                  & = \xi_\text{max}(L / 2) \frac{\sqrt{2}}{2} + A_2                                      \\
+          A_2                     & = \xi_\text{max}(L / 4) - \xi_\text{max}(L / 2) \frac{\sqrt{2}}{2}                    \\
+                                  & = (\qty{10}{\mu m}) - (\qty{10}{\mu m}) \frac{\sqrt{2}}{2}                            \\
+                                  & = (\qty{10}{\m m}) \left( 1 - \frac{\sqrt{2}}{2} \right)                              \\
+                                  & \approx \qty{2.93}{\mu m}
+        \end{align*}
+\end{enumerate}
+
+\subsection{}
+
+\begin{enumerate}
+  \item \[f_n = \frac{n c}{2 L}\]
+
+  \item
+
+        \begin{enumerate}
+          \item
+
+                \begin{align*}
+                  n_\text{min}                    & = \frac{2 f_\text{min} L}{c} \\
+                                                  & = \num{4999990}              \\
+                  n_\text{max}                    & = \frac{2 f_\text{max} L}{c} \\
+                                                  & = \num{5000010}              \\
+                  n_\text{max} - n_\text{min} + 1 & = 21
+                \end{align*}
+
+          \item
+
+                \begin{align*}
+                  n_\text{max} - n_\text{min}                             & < 2                                     \\
+                  \frac{2 f_\text{max} L}{c} - \frac{2 f_\text{min} L}{c} & < 2                                     \\
+                  L                                                       & < \frac{c}{f_\text{max} - f_\text{min}} \\
+                                                                          & = \qty{15}{cm}
+                \end{align*}
+        \end{enumerate}
+\end{enumerate}
+
+\subsection{}
+
+\begin{enumerate}
+  \item
+
+        \begin{align*}
+          y_n(x, t)  & = A_n \sin \frac{n \pi x}{L} \sin \left( \frac{n \pi}{L} \sqrt{\frac{L T}{M}} t \right)                                      \\
+          y_n'(x, t) & = A_n \frac{n \pi}{L} \sqrt{\frac{L T}{M}} \sin \frac{n \pi x}{L} \cos \left( \frac{n \pi}{L} \sqrt{\frac{L T}{M}} t \right) \\
+          y_n'(x, 0) & = A_n \frac{n \pi}{L} \sqrt{\frac{L T}{M}} \sin \frac{n \pi x}{L}                                                            \\
+          dE         & = \frac{1}{2} y'_n(x, 0)^2 \,dm                                                                                              \\
+                     & = \frac{1}{2} \left( A_n \frac{n \pi}{L} \sqrt{\frac{L T}{M}} \sin \frac{n \pi x}{L} \right)^2 \frac{M}{L} \,dx              \\
+          E          & = \int dE                                                                                                                    \\
+                     & = \frac{1}{2} \left( A_n \frac{n \pi}{L} \sqrt{\frac{L T}{M}} \right)^2 \frac{M}{L} \int_0^L \sin^2 \frac{n \pi x}{L} \,dx   \\
+                     & = \frac{A_n^2 n^2 \pi^2 T}{2 L^2} \left[ \frac{x}{2} - \frac{L}{4 n \pi} \sin \frac{2 n \pi x}{L} \right]_0^L                \\
+                     & = \frac{A_n^2 n^2 \pi^2 T}{4 L}
+        \end{align*}
+
+  \item
+
+        \begin{align*}
+          E & = \frac{A_1^2 1^2 \pi^2 T}{4 L} + \frac{A_3^2 3^2 \pi^2 T}{4 L} \\
+            & = \frac{\pi^2 T}{4 L} (A_1^2 + 9 A_3^2)
+        \end{align*}
+\end{enumerate}
+
+\subsection{}
+
+\begin{enumerate}
+  \item
+
+        \begin{align*}
+          W & = \int_0^h 2 T \sin \theta \,dy                    \\
+            & = 2 T \int_0^h \frac{y}{L / 2} \,dy                \\
+            & = \frac{4 T}{L} \int_0^h y \,dy                    \\
+            & = \frac{4 T}{L} \left[ \frac{1}{2} y^2 \right]_0^h \\
+            & = \frac{2 h^2 T}{L}
+        \end{align*}
+
+  \item
+
+        \begin{align*}
+          T & = \frac{2 \pi}{\omega}   \\
+            & = \frac{2 L}{v}          \\
+            & = 2 \sqrt{\frac{L M}{T}}
+        \end{align*}
+\end{enumerate}
+
+\setcounter{subsection}{13}
+\subsection{}
+
+\begin{enumerate}
+  \item
+
+        \begin{align*}
+          y(x) & = A x (L - x)                                                                                                                                                                                  \\
+          B_n  & = \frac{4 A L^2}{\pi^3 n^3} (1 - \cos (\pi n))                                                                                                                                                 \\
+               & = \begin{cases}
+                     0                         & \text{ even } n \\
+                     \frac{8 A L^2}{\pi^3 n^3} & \text{ odd } n
+                   \end{cases}                                                                                                                                                  \\
+          y(x) & = \sum_{n=1}^\infty A_n \sin \left( \frac{n \pi x}{L} \right)                                                                                                                                  \\
+               & = \frac{8 A L^2}{\pi^3} \left[ \sin \left( \frac{\pi x}{L} \right) + \frac{1}{27} \sin \left( \frac{3 \pi x}{L} \right) + \frac{1}{225} \sin \left( \frac{5 \pi x}{L} \right) + \cdots \right]
+        \end{align*}
+
+  \item
+
+        \begin{align*}
+          y(x) & = A \sin \frac{\pi x}{L}                                                  \\
+          B_n  & = \frac{2}{L} \int_0^L A \sin \frac{\pi x}{L} \sin \frac{n \pi x}{L} \,dx \\
+               & = \begin{cases}
+                     A & n = 1   \\
+                     0 & n \ne 1
+                   \end{cases}                                                            \\
+          y(x) & = A \sin \frac{\pi x}{L}
+        \end{align*}
+
+  \item
+
+        \begin{align*}
+          y(x) & = \begin{cases}
+                     A \sin \frac{2 \pi x}{L} & 0 \le x \le \frac{L}{2} \\
+                     0                        & \frac{L}{2} \le x \le L
+                   \end{cases}                              \\
+          B_n  & = \frac{2}{L} \int_0^L y(x) \sin \frac{n \pi x}{L} \,dx                           \\
+               & = \frac{2}{L} \int_0^{L / 2} A \sin \frac{2 \pi x}{L} \sin \frac{n \pi x}{L} \,dx \\
+               & = \frac{4 A \sin \frac{n \pi}{2}}{\pi (4 - n^2)}                                  \\
+               & = \begin{cases}
+                     \frac{A}{2}                                  & n = 2          \\
+                     0                                            & \text{even } n \\
+                     (-1)^{(n - 1) / 2} \frac{4 A}{\pi (4 - n^2)} & \text{odd } n
+                   \end{cases}
+        \end{align*}
+\end{enumerate}
+
 \end{document}
