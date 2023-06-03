@@ -81,7 +81,7 @@
 
 \begin{itemize}
   \item A property of a normal mode is that all objects oscillate at the same frequency
-\end{itemize}`'
+\end{itemize}
 
 \section{Normal modes of continuous systems. Fourier analysis}
 
@@ -97,6 +97,45 @@
 \item The process of determining the coefficients of a Fourier series is called \textbf{harmonic analysis}
 
 \item One way to think of orthogonal functions is as vectors of infinite dimension. Two $n$-dimensional vectors $\mathbf{a}$ and $\mathbf{b}$ are orthogonal if their scalar product is $0$, i.e. \[\mathbf{a} \cdot \mathbf{b} = 0 \text{ if } \sum_0^n a_n b_n = 0.\] If two functions $f(x)$ and $g(x)$ are considered vectors of infinite dimension then the expression is similar \[\int_0^L f(x) g(x) \,dx = 0 \text{ is approximately } \sum_{n = 0}^\infty f(x_n) g(x_n) = 0\]
+\end{itemize}
+
+\section{Progressive waves}
+
+\begin{itemize}
+  \item A normal mode of vibration of a stretched string can be described as the superposition of two sine waves, identical to one another, traveling in opposite directions
+
+        \begin{align*}
+          y_n(x, t) & = A \sin \left( \frac{n \pi x}{L} \right) \cos \omega_n t                                                                                  \\
+                    & = \frac{1}{2} A_n \left[ \sin \left( \frac{n \pi x}{L} - \omega_n t \right) + \sin \left( \frac{n \pi x}{L} + \omega_n t \right) \right]   \\
+                    & = \frac{1}{2} A_n \left[ \sin \left( \frac{2 \pi}{\lambda} (x - v t) \right) + \sin \left( \frac{2 \pi}{\lambda} (x + v t) \right) \right]
+        \end{align*}
+
+  \item In reality the wave velocity $v$ is typically a function of the frequency $f$ / the wavelength $\lambda$
+
+  \item When deriving the wave equation it's possible to deal only with first derivatives, i.e.
+
+        \begin{align*}
+          y(x, t)                       & = A \sin \left[ \frac{2 \pi}{\lambda} (x - v t) \right]                          \\
+          \frac{\partial y}{\partial x} & = \frac{2 \pi}{\lambda} A \cos \left[ \frac{2 \pi}{\lambda} (x - v t) \right]    \\
+          \frac{\partial y}{\partial t} & = -\frac{2 \pi v}{\lambda} A \cos \left[ \frac{2 \pi}{\lambda} (x - v t) \right] \\
+          \frac{\partial y}{\partial x} & = -\frac{1}{v} \frac{\partial y}{\partial t}
+        \end{align*}
+
+        however this only applies to waves travelling in the positive $x$ direction. By taking the second derivative we arrive at a relation that also applies to waves travelling in he negative $x$ direction \[\frac{\partial^2 y}{\partial x^2} = \frac{1}{v^2} \frac{\partial^2 y}{\partial t^2}\]
+
+  \item If a function $y(t)$ is even with respect to its midpoint in time, i.e. $y(-t) = +y(t)$, then it can be represented by a Fourier series of cosine functions alone. If it is odd, i.e. $y(-t) = -y(t)$ then it can be represented by sine functions alone. Otherwise its Fourier series contains both sine and cosine functions.
+
+  \item In performing the frequency analysis of a short pulse of a particular frequency $f$, we find that the longer the pulse the better it is represented by a single sinusoidal wave of frequency $f$ — the width of its frequency spectrum narrows. Inversely, as the pulse shortens the width of its frequency spectrum broadens.
+
+  \item \textbf{Cut-off} is the inability of a dispersive medium to transmit waves above (or possibly below) a certain critical frequency. The rate at which waves above the maximum frequency attenuate is proportional to the frequency.
+
+  \item Energy per unit length is also known as energy density
+
+  \item The kinetic energy per unit length of a sinusoidal wave on a stretched string given by $y(x, t) = f(x \pm vt) = f(z)$ is \[\frac{d K}{d x} = \frac{1}{2} \mu \left( \frac{\partial y}{\partial t} \right)^2 = \frac{1}{2} \mu v^2 [f'(z)]^2\] and the potential energy per unit length is \[\frac{d U}{d x} = \frac{1}{2} T \left( \frac{\partial y}{\partial x} \right)^2 = \frac{1}{2} T [f'(z)]^2.\] Given that \[v = \sqrt{\frac{T}{\mu}} \Rightarrow \mu v^2 = T\] these values are equal.
+
+  \item The total energy in a wavelength of a sinusoidal wave on a stretched string is given by \[E = \frac{1}{2} (\lambda \mu) \mu_0^2\] where \[\mu_0 = 2 \pi f A.\] This is also the amount of work that must be done on the string to establish that wavelength
+
+  \item The rate at which work is done on a stretched string to establish a sinusoidal wave is \[P = \frac{1}{2} \mu \mu_0^2 v\] which is the amount of energy in the wave per unit length $\frac{1}{2} \mu \mu_0^2$ times the velocity at which the wave propagates $v$
 \end{itemize}
 
 \end{document}

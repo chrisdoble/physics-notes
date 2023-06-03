@@ -1524,4 +1524,305 @@ The equation of motion is \[x = 2 A \cos \left( \frac{12 \pi - 10 \pi}{2} t \rig
         \end{align*}
 \end{enumerate}
 
+\section{Progressive waves}
+
+\setcounter{subsection}{1}
+\subsection{}
+
+\begin{enumerate}
+  \item
+
+        \begin{align*}
+          y                     & = 0.3 \sin \pi (0.5 x - 50 t) \\
+          A                     & = \qty{0.3}{cm}               \\ \\
+          \frac{2 \pi}{\lambda} & = \frac{\pi}{2}               \\
+          \lambda               & = \qty{4}{cm}                 \\ \\
+          k                     & = \frac{1}{4} \,\unit{rad/cm} \\ \\
+          2 \pi f               & = 50 \pi                      \\
+          f                     & = \qty{25}{Hz}                \\ \\
+          T                     & = \frac{1}{25} \,\unit{s}     \\
+          v                     & = f \lambda                   \\
+                                & = \qty{1}{m/s}
+        \end{align*}
+
+  \item
+
+        \begin{align*}
+          \frac{\partial y}{\partial t}                           & = -15 \pi \cos \pi (0.5 s - 50 t) \\
+          \left. \frac{\partial y}{\partial t} \right|_\text{max} & = 15 \pi \,\unit{cm/s}
+        \end{align*}
+\end{enumerate}
+
+\subsection{}
+
+\[\xi = 0.003 \sin 10 \pi \left( \frac{x}{3000} + t \right)\]
+
+\subsection{}
+
+\begin{enumerate}
+  \item
+
+        \begin{align*}
+          f             & = \qty{20}{Hz}               \\
+          v             & = \qty{80}{m/s}              \\
+          \lambda       & = \frac{v}{f}                \\
+                        & = \qty{4}{m}                 \\
+          k             & = \frac{1}{\lambda}          \\
+                        & = \frac{1}{4} \,\unit{rad/m} \\
+          \frac{\pi}{6} & = 2 \pi k x                  \\
+          x             & = \frac{1}{12 k}             \\
+                        & = \frac{1}{3} \,\unit{m}
+        \end{align*}
+
+  \item \[\omega \Delta t = 2 \pi f \Delta t = \ang{72}\]
+\end{enumerate}
+
+\subsection{}
+
+\begin{enumerate}
+  \item
+
+        \begin{align*}
+          \mu & = \qty{0.1}{kg/m}       \\
+          F   & = \qty{50}{N}           \\
+          A   & = \qty{0.02}{m}         \\
+          T   & = \qty{0.1}{s}          \\
+          v   & = \sqrt{\frac{F}{\mu}}  \\
+              & \approx \qty{22.4}{m/s}
+        \end{align*}
+
+  \item \[\lambda = \frac{v}{f} = v T = \qty{2.24}{m}\]
+
+  \item \[y(x, t) = 0.02 \sin \left( 2.81 x - 20 \pi t + \frac{1}{6} \pi \right)\]
+\end{enumerate}
+
+\subsection{}
+
+\begin{enumerate}
+  \item
+
+        \begin{align*}
+          \frac{L}{v}                      & = \qty{0.1}{s}      \\
+          \frac{L}{\sqrt{T / \mu}}         & = \qty{0.1}{s}      \\
+          L \sqrt{\frac{\mu}{100 g L \mu}} & = \qty{0.1}{s}      \\
+          \sqrt{\frac{L}{100 g}}           & = \qty{0.1}{s}      \\
+          L                                & = g (\qty{1}{s^2})  \\
+                                           & \approx \qty{10}{m}
+        \end{align*}
+
+  \item \[y(x, t) = A \sin \left( \frac{3 \pi}{L} x \right) \cos 30 \pi t\]
+\end{enumerate}
+
+\subsection{}
+
+\begin{align*}
+  y(x, t)                                                                         & = 0.02 \sin \pi (x - v t)     \\
+                                                                                  & = 0.02 \sin \pi (x - 100 t)   \\
+  y(5, 0.1)                                                                       & = \qty{0}{cm}                 \\
+  \frac{\partial y}{\partial t}                                                   & = -2 \pi \cos \pi (x - 100 t) \\
+  \left. \frac{\partial y}{\partial t} \right|_{x = \qty{5}{m}, t = \qty{0.1}{s}} & = \qty{6.28}{m/s}
+\end{align*}
+
+\subsection{}
+
+\begin{enumerate}
+  \item \[f = \frac{3}{2} \,\unit{Hz}\]
+
+  \item
+
+        For a wave moving in the positive $x$ direction:
+
+        \begin{align*}
+          -\frac{2 \pi}{\lambda} x_2 & = -2 n \pi + \frac{\pi}{8}                         \\
+                                     & = \frac{-16 n \pi + \pi}{8}                        \\
+          \lambda                    & = \frac{16}{16 n - 1}, \,n = 1, \,2, \,3, \,\ldots
+        \end{align*}
+
+        For a wave moving in the negative $x$ direction:
+
+        \begin{align*}
+          \frac{2 \pi}{\lambda} & = 2 n \pi + \frac{\pi}{8}                          \\
+                                & = \frac{16 n \pi + \pi}{8}                         \\
+          \lambda               & = \frac{16}{16 n + 1}, \,n = 0, \,1, \,2, \,\ldots
+        \end{align*}
+
+  \item
+
+        \begin{align*}
+          v_+ & = f \lambda                                                        \\
+              & = \frac{3}{2} \frac{16}{16 n - 1}                                  \\
+              & = \frac{24}{16 n - 1}                                              \\
+              & = \frac{8}{5} \,\unit{m/s}, \,\frac{24}{31} \,\unit{m/s}, \,\ldots \\
+          v_- & = -f \lambda                                                       \\
+              & = -\frac{3}{2} \frac{16}{16 n + 1}                                 \\
+              & = -\frac{24}{16 n + 1}                                             \\
+              & = -24 \,\unit{m/s}, \,-\frac{24}{17}, \unit{m/s}, \,\ldots
+        \end{align*}
+
+  \item We can't tell
+\end{enumerate}
+
+\setcounter{subsection}{11}
+\subsection{}
+
+\begin{enumerate}
+  \setcounter{enumi}{1}
+  \item \[v_\text{max} \approx \qty{4}{m/s}\]
+
+  \item
+
+        \begin{align*}
+          v   & = \sqrt{\frac{T}{\mu}}     \\
+              & = \sqrt{\frac{T}{m / L}}   \\
+              & = \sqrt{\frac{L T}{m}}     \\
+          v^2 & = \frac{L T}{m}            \\
+          T   & = \frac{m v^2}{L}          \\
+              & = \frac{2 \cdot 40^2}{100} \\
+              & = \qty{32}{N}
+        \end{align*}
+
+  \item \[y(x, t) = 0.2 \sin \left( 16 \pi t + \frac{2 \pi}{5} x \right)\]
+\end{enumerate}
+
+\subsection{}
+
+\begin{enumerate}
+  \setcounter{enumi}{1}
+  \item $v = \frac{u}{2} \,\unit{m/s}$ in the positive $x$ direction
+
+  \item
+
+        \begin{align*}
+          y(x, t)                                              & = \frac{b^3}{b^2 + (2 x - u t)^2}                     \\
+          \frac{\partial y}{\partial t}                        & = \frac{2 b^3 u (2 x - u t)}{(b^2 + (2 x - u t)^2)^2} \\
+          \left. \frac{\partial y}{\partial t} \right|_{t = 0} & = \frac{4 b^3 u x}{(b^2 + 4x^2)^2}
+        \end{align*}
+\end{enumerate}
+
+\setcounter{subsection}{15}
+\subsection{}
+
+\begin{enumerate}
+  \item
+
+        \begin{align*}
+          \mu & = \frac{m}{L}          \\
+              & = \qty{4e-4}{kg/m}     \\
+          T   & = m g                  \\
+              & = \qty{100}{N}         \\
+          v   & = \sqrt{\frac{T}{\mu}} \\
+              & = \qty{500}{m/s}
+        \end{align*}
+
+        The horizontal portion of the string corresponds to the time when the switch was completely closed. It is $\qty{40}{cm}$ long meaning the switch was closed for \[\frac{\qty{0.4}{m}}{\qty{500}{m/s}} = \qty{0.8e-4}{s}\]
+
+        \setcounter{enumi}{2}
+  \item The portion of the string corresponding to the opening of the contact has a steeper slope meaning it was moving faster. It moved $\qty{5}{mm}$ over $\frac{\qty{0.2}{m}}{\qty{500}{m/s}} = \qty{4e-4}{s}$ meaning its speed was $\frac{\qty{0.005}{m}}{\qty{4e-4}{s}} = \qty{12.5}{m/s}$
+
+  \item If the contact started moving at $t = 0$ then the photo was taken at $\frac{\qty{1}{m}}{\qty{500}{m/s}} = \qty{2e-3}{s}$
+\end{enumerate}
+
+\subsection{}
+
+\begin{enumerate}
+  \item
+
+        \begin{align*}
+          y & = A \sin (5 x - 10 t) + A \sin (4 x - 9 t)                                                                                             \\
+            & = 2 A \cos \pi \left[ \left( \frac{5}{2 \pi} - \frac{4}{2 \pi} \right) x - \left( \frac{10}{2 \pi} - \frac{9}{2 \pi} \right) t \right] \\
+            & \qquad \times \sin 2 \pi \left[ \frac{\frac{5}{2 \pi} + \frac{4}{2 \pi}}{2} x - \frac{\frac{10}{2 \pi} + \frac{9}{2 \pi}}{2} t \right] \\
+            & = 2 A \cos \left( \frac{x}{2} - \frac{t}{2} \right) \sin \left( \frac{9}{2} x - \frac{19}{2} t \right)
+        \end{align*}
+
+  \item
+
+        \begin{align*}
+          2 \pi f               & = \frac{1}{2}                 \\
+          f                     & = \frac{1}{4 \pi} \,\unit{Hz} \\ \\
+          \frac{2 \pi}{\lambda} & = \frac{1}{2}                 \\
+          \lambda               & = 4 \pi \,\unit{m}            \\ \\
+          v                     & = f \lambda                   \\
+                                & = \qty{1}{m/s}
+        \end{align*}
+
+  \item
+
+        \begin{align*}
+          \frac{2 \pi}{\lambda} & = \frac{1}{2}      \\
+          \frac{\lambda}{2}     & = 2 \pi \,\unit{m}
+        \end{align*}
+\end{enumerate}
+
+\subsection{}
+
+\begin{enumerate}
+  \item
+
+        \begin{align*}
+          v_p                   & = \sqrt{\frac{2 \pi S}{\rho \lambda}}                                                   \\
+          \frac{f}{k}           & = \sqrt{\frac{2 \pi k S}{\rho}}                                                         \\
+          f                     & = \sqrt{\frac{2 \pi k^3 S}{\rho}}                                                       \\
+          v_g = \frac{d f}{d k} & = \frac{1}{2} \left( \frac{2 \pi k^3 S}{\rho} \right)^{-1 / 2} \frac{6 \pi k^2 S}{\rho} \\
+                                & = \frac{3}{2 \sqrt{k}} \sqrt{\frac{2 \pi k^2 S}{\rho}}                                  \\
+                                & = \frac{3}{2} v_p
+        \end{align*}
+
+  \item The group moves faster than the individual waves within the group. Waves will appear and disappear at the edges of the group.
+
+  \item
+
+        \begin{align*}
+          \frac{2 \pi}{\lambda} & = \pi \left( \frac{1}{\lambda_1} - \frac{1}{\lambda_2} \right) \\
+                                & = \frac{\pi (\lambda_2 - \lambda_1)}{\lambda_1 \lambda_2}      \\
+          \frac{\lambda}{2}     & = \frac{\lambda_1 \lambda_2}{\lambda_2 - \lambda_1}            \\
+                                & \approx \qty{50}{cm}
+        \end{align*}
+\end{enumerate}
+
+\setcounter{subsection}{19}
+\subsection{}
+
+\begin{enumerate}
+  \item
+
+        \begin{align*}
+          K        & = \frac{1}{2} \rho A l \left( \frac{d y}{d t} \right)^2 \\
+          U        & = g \rho A y^2                                          \\
+          \omega^2 & = \frac{2 g \rho A}{\rho A l}                           \\
+                   & = \frac{2 g}{l}                                         \\ \\
+          T        & = \frac{1}{f}                                           \\
+                   & = \frac{2 \pi}{\omega}                                  \\
+                   & = 2 \pi \sqrt{\frac{l}{2 g}}                            \\
+                   & = \pi \sqrt{\frac{2 l}{g}}
+        \end{align*}
+
+  \item
+
+        \begin{align*}
+          v & = f \lambda                                    \\
+            & = \frac{\lambda}{T}                            \\
+            & = \frac{\lambda}{\pi \sqrt{\lambda / g}}       \\
+            & = \frac{\lambda}{\pi} \sqrt{\frac{g}{\lambda}} \\
+            & = \frac{\sqrt{g \lambda}}{\pi}
+        \end{align*}
+
+  \item
+
+        \begin{align*}
+          v(\lambda)      & = \sqrt{\frac{g \lambda}{2 \pi}} \\
+          v(\qty{500}{m}) & \approx \qty{28.2}{m/s}
+        \end{align*}
+\end{enumerate}
+
+\subsection{}
+
+\begin{enumerate}
+  \item
+
+        \begin{align*}
+          \lambda_n & = \frac{2 (N + 1) l}{n}                   \\
+          \omega_n  & = 2 \omega_0 \sin \frac{n \pi}{2 (N + 1)}
+        \end{align*}
+\end{enumerate}
+
 \end{document}
