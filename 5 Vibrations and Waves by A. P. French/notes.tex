@@ -138,4 +138,60 @@
   \item The rate at which work is done on a stretched string to establish a sinusoidal wave is \[P = \frac{1}{2} \mu \mu_0^2 v\] which is the amount of energy in the wave per unit length $\frac{1}{2} \mu \mu_0^2$ times the velocity at which the wave propagates $v$
 \end{itemize}
 
+\section{Boundary effects and interference}
+
+\begin{itemize}
+  \item When a travelling wave reaches a fixed end, a wave of opposite displacement is reflected back to the source
+
+  \item When a travelling wave reaches a free end, a wave of the same displacement is reflected back to the source
+
+  \item Reflection can be considered the superposition of the travelling wave and a corresponding ``virtual'' travelling wave that is initially past the end of the string and travelling in the opposite direction
+
+  \item If a pulse of the form $f_1(t - x / v_1)$ is moving along a stretched string of linear density $\mu_1$ connected to a string of linear density $\mu_2$, the displacements of the strings can be represented as
+
+        \begin{align*}
+          y_1(x, t) & = f_1 \left( t - \frac{x}{v_1} \right) + g_1 \left( t + \frac{x}{v_1} \right) \text{ and} \\
+          y_2(x, t) & = f_2 \left( t - \frac{x}{v_2} \right).
+        \end{align*}
+
+        Where
+
+        \begin{align*}
+          g_1 \left( t + \frac{-x}{v_1} \right)          & = \frac{v_2 - v_1}{v_2 + v_1} f_1 \left( t - \frac{x}{v_1} \right) \text{ and} \\
+          f_2 \left( t - \frac{v_2 x / v_1}{v_2} \right) & = \frac{2 v_2}{v_2 + v_1} f_1 \left( t - \frac{x}{v_1} \right)
+        \end{align*}
+
+        i.e. the reflected pulse $g_1$ moves in the negative $x$ direction at the same speed as $f_1$ and its amplitude is scaled by a factor of $\frac{v_2 - v_1}{v_2 + v_1}$ (which may be negative) whereas the transmitted pulse $f_2$ is scaled horizontally, moves in the positive $x$ direction at a different speed, and its amplitude is scaled by a factor of $\frac{2 v_2}{v_2 + v_1}$
+
+  \item Electrical impedance has both a magnitude and phase so it can be represented as a complex quantity. These impedances can then be added to calculate the impedance of a circuit.
+
+  \item The \textbf{mechanical impedance} of a physical system is defined as the ratio of the driving force to the associated velocity of displacement
+
+  \item The mechanical impedance of a stretched string is \[Z = \frac{T}{v}\] where $v$ is the velocity at which waves propagate along the string
+
+  \item The \textbf{characteristic impedance} of a stretched string is \[Z = \sqrt{T \mu}\]
+
+  \item A stretched string can only carry transverse waves
+
+  \item A long spring can carry both transverse and longitudinal waves
+
+  \item A column of gas or liquid has no elastic resistance to change of shape, only density, and thus can only carry longitudinal waves unless gravity or surface tension provide an elastic restoring force
+
+  \item Three-dimensional objects may have two polarizations of transverse waves — perpendicular to one another and the direction of travel. They may also have different wave speeds.
+
+  \item A given interface may behave differently between longitudinal and transverse waves. For example, in a tank of water with smooth vertical walls the walls will act as a rigid boundary for longitudinal waves but completely free for transverse waves. If standing waves are set up the wall will act as a node for longitudinal waves and an antinode for transverse waves.
+
+  \item The angle of a reflected wave equals the angle of incidence
+
+  \item \textbf{Snell's law} relates the angles of incidence and refraction of two waves to the refractive index or wave speed of the two mediums \[\frac{\sin \theta_1}{\sin \theta_2} = \frac{n_2}{n_1} = \frac{v_1}{v_2}\]
+
+  \item The \textbf{Doppler effect} is the apparent change in frequency or wavelength of a wave in relation to an observer moving relative to the wave source
+
+  \item If a wave source is moving in a straight line at speed $v$ and the waves have speed $u$ then the wavefronts emitted in the direction of motion will be closer together and have effective wavelength \[\lambda_\text{min} = \lambda_0 \left( 1 - \frac{u}{v} \right)\] while those emitted $\ang{180}$ from the direction of motion will be further apart and have effective wavelength \[\lambda_\text{max} = \lambda_0 \left( 1 + \frac{u}{v} \right)\]
+
+  \item More generally, if the observer is at an angle $\theta$ to the direction of motion of the wave source, the effective wavelength will be \[\lambda(\theta) = \lambda_0 \left( 1 - \frac{u \cos \theta}{v} \right)\]
+
+  \item Interference patterns resulting from multiple slits (a \textbf{diffraction grating}) are more complicated. Let a diffraction grating contain $N$ slits with a distance between neighboring slits $d$ and the amplitude of the resulting wave be measured at a point $P$. If $P$ is at an angle $\theta$ from the first slit, the difference in path length between the slits is $d \sin \theta$. This means the phase difference between waves originating from the slits is $k d \sin \theta = 2 \pi d \sin \theta / \lambda$. This results in an amplitude at $P$ of \[A = A_0 \frac{\sin N \delta / 2}{\sin \delta / 2}.\] This results in a single \textbf{principal maxima} at $\delta = 2n \pi$ for $n = 0, \,1, \,\ldots$, zeroes at $\delta = 2 n \pi / N$ for $n = 1, \,2, \,\ldots$, and \textbf{subsidiary maxima} between these zeroes.
+\end{itemize}
+
 \end{document}

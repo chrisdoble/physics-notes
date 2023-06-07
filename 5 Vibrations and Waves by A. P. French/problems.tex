@@ -1825,4 +1825,211 @@ The equation of motion is \[x = 2 A \cos \left( \frac{12 \pi - 10 \pi}{2} t \rig
         \end{align*}
 \end{enumerate}
 
+\section{Boundary effects and interference}
+
+\subsection{}
+
+\begin{align*}
+  \frac{A_{r,0}}{A}      & = 1                                                                                                             \\
+  \frac{A_{r,0.25}}{A}   & = \frac{v_2 - v_1}{v_2 + v_1}                                                                                   \\
+                         & = \frac{\sqrt{\frac{T}{\mu_2}} - \sqrt{\frac{T}{\mu_1}}}{\sqrt{\frac{T}{\mu_2}} + \sqrt{\frac{T}{\mu_1}}}       \\
+                         & = \frac{\frac{1}{\sqrt{\mu_2}} - \frac{1}{\sqrt{\mu_1}}}{\frac{1}{\sqrt{\mu_1}} + \frac{1}{\sqrt{\mu_1}}}       \\
+                         & = \frac{\sqrt{\mu_1} - \sqrt{\mu_2}}{\sqrt{\mu_1 \mu_2}} \frac{\sqrt{\mu_1 \mu_2}}{\sqrt{\mu_1} + \sqrt{\mu_2}} \\
+                         & = \frac{\sqrt{\mu_1} - \sqrt{\mu_2}}{\sqrt{\mu_1} + \sqrt{\mu_2}}                                               \\
+                         & = \frac{1 - \sqrt{\frac{\mu_2}{\mu_1}}}{1 + \sqrt{\frac{\mu_2}{\mu_1}}}                                         \\
+                         & = \frac{1 - \frac{1}{2}}{1 + \frac{1}{2}}                                                                       \\
+                         & = \frac{1}{2} \frac{2}{3}                                                                                       \\
+                         & = \frac{1}{3}                                                                                                   \\
+  \frac{A_{r,1}}{A}      & = 0                                                                                                             \\
+  \frac{A_{r,4}}{A}      & = \frac{1 - 2}{1 + 2}                                                                                           \\
+                         & = -\frac{1}{3}                                                                                                  \\
+  \frac{A_{r,\infty}}{A} & = -1
+\end{align*}
+
+\begin{align*}
+  \frac{A_{t,0}}{A}      & = \frac{2 v_2}{v_1 + v_2}                                                          \\
+                         & = \frac{2 \sqrt{\frac{T}{\mu_2}}}{\sqrt{\frac{T}{\mu_1}} + \sqrt{\frac{T}{\mu_2}}} \\
+                         & = \frac{2 \frac{1}{\sqrt{\mu_2}}}{\frac{1}{\sqrt{\mu_1}} + \frac{1}{\sqrt{\mu_2}}} \\
+                         & = \frac{2}{\sqrt{\mu_2}} \frac{\sqrt{\mu_1 \mu_2}}{\sqrt{\mu_1} + \sqrt{\mu_2}}    \\
+                         & = \frac{2 \sqrt{\mu_1}}{\sqrt{\mu_1} + \sqrt{\mu_2}}                               \\
+                         & = \frac{2}{1 + \sqrt{\frac{\mu_2}{\mu_1}}}                                         \\
+                         & = 2                                                                                \\
+  \frac{A_{t,0.25}}{A}   & = \frac{2}{1 + \frac{1}{2}}                                                        \\
+                         & = \frac{4}{3}                                                                      \\
+  \frac{A_{t,1}}{A}      & = 1                                                                                \\
+  \frac{A_{t,4}}{A}      & = \frac{2}{3}                                                                      \\
+  \frac{A_{t,\infty}}{A} & = 0
+\end{align*}
+
+\setcounter{subsection}{2}
+\subsection{}
+
+\begin{align*}
+  P               & = I V_X                                                        \\
+                  & = I^2 X                                                        \\
+                  & = \left( \frac{V}{R + X} \right)^2 X                           \\
+  \frac{d P}{d X} & = \left( \frac{V}{R + X} \right)^2 - \frac{2 V^2 X}{(R + X)^3} \\
+                  & = \frac{V^2 (R + X) - 2 V^2 X}{(R + X)^3}                      \\
+                  & = \frac{V^2 (R - X)}{(R + X)^3}                                \\
+  0               & = \frac{V^2 (R - X)}{(R + X)^3}                                \\
+  X               & = R
+\end{align*}
+
+\subsection{}
+
+\begin{align*}
+  Z_C     & = \frac{1}{j \omega C}                                                                                                                            \\
+  Z_L     & = j \omega L                                                                                                                                      \\
+  Z_R     & = R                                                                                                                                               \\
+  Z       & = Z_C + Z_L + Z_R                                                                                                                                 \\
+          & = R + \left( L \omega - \frac{1}{C \omega} \right) j                                                                                              \\
+          & = \sqrt{R^2 + \left( L \omega - \frac{1}{C \omega} \right)^2} e^{j \arctan \frac{L \omega - 1 / C \omega}{R}}                                     \\
+  I       & = \frac{V}{Z}                                                                                                                                     \\
+          & = \frac{V_0 e^{j \omega t}}{|Z| e^{j \arg Z}}                                                                                                     \\
+          & = \frac{V_0}{|Z|} e^{j (\omega t - \arg Z)}                                                                                                       \\
+  P_R     & = I^2 R                                                                                                                                           \\
+          & = \frac{R V_0^2}{|Z|^2} e^{j 2 (\omega t - \arg Z)}                                                                                               \\
+  \Re P_R & = \frac{R V_0^2}{R^2 + \left( L \omega - \frac{1}{C \omega} \right)^2} \cos 2 \left[ \omega t - \arctan \frac{L \omega - 1 / C \omega}{R} \right]
+\end{align*}
+
+Power dissipation is maximised when
+
+\begin{align*}
+  L \omega - \frac{1}{C \omega} & = 0                    \\
+  L \omega                      & = \frac{1}{C \omega}   \\
+  C L \omega^2                  & = 1                    \\
+  \omega                        & = \frac{1}{\sqrt{C L}}
+\end{align*}
+
+\subsection{}
+
+\begin{enumerate}
+  \item
+
+        \begin{align*}
+          y_1(x, t)                                 & = f_1 \left( t - \frac{x}{v_1} \right) + g_1 \left( t + \frac{x}{v_1} \right) \\
+          y_2(x, t)                                 & = f_2 \left( t - \frac{x}{v_2} \right)                                        \\ \\
+          y_1(0, t)                                 & = y_2(0, t)                                                                   \\
+          f_1(t) + g_1(t)                           & = f_2(t)                                                                      \\ \\
+          K_1 \frac{\partial y_1}{\partial x}(0, t) & = K_2 \frac{\partial y_2}{\partial x}(0, t)                                   \\
+          \rho_1 v_1 (f_1'(t) - g_1'(t))            & = \rho_2 v_2 f_2'(t)                                                          \\
+          \rho_1 v_1 (f_1(t) - g_1(t))              & = \rho_2 v_2 f_2(t)                                                           \\ \\
+          \rho_1 v_1 (f_1(t) + f_1(t) - f_2(t))     & = \rho_2 v_2 f_2(t)                                                           \\
+          2 \rho_1 v_1 f_1(t)                       & = (\rho_1 v_1 + \rho_2 v_2) f_2(t)                                            \\
+          f_2(t)                                    & = \frac{2 \rho_1 v_1}{\rho_1 v_1 + \rho_2 v_2} f_1(t)                         \\
+                                                    & \approx \num{5.85e-4} f_1(t)
+        \end{align*}
+
+  \item
+
+        \begin{align*}
+          \frac{E_2}{E_1} & = \frac{\frac{1}{2} \frac{v_2}{f} \rho_2 (2 \pi f A_2)^2}{\frac{1}{2} \frac{v_1}{f} \rho_1 (2 \pi f A_1)^2} \\
+                          & = \frac{A_2^2 \rho_2 v_2}{A_1^2 \rho_1 v_1}                                                                 \\
+                          & = \frac{(\num{5.85e-4} A_1)^2 \rho_2 v_2}{A_1^2 \rho_1 v_1}                                                 \\
+                          & = (\num{5.85e-4})^2 \frac{\rho_2 v_2}{\rho_1 v_1}                                                           \\
+                          & \approx \num{1.17e-3}
+        \end{align*}
+\end{enumerate}
+
+\setcounter{subsection}{6}
+\subsection{}
+
+\begin{enumerate}
+  \item
+
+        \begin{align*}
+          v               & = \sqrt{\frac{\gamma R T(z)}{M}}                                              \\
+          \frac{d v}{d z} & = \frac{1}{2} \sqrt{\frac{\gamma R}{M T(z)}} T'(z)                            \\
+          R               & = \frac{v}{d v / d z}                                                         \\
+                          & = \frac{\sqrt{\gamma R T(z) / M}}{\frac{1}{2} T'(z) \sqrt{\gamma R / M T(z)}} \\
+                          & = \frac{2 T(z)}{T'(z)}
+        \end{align*}
+\end{enumerate}
+
+\subsection{}
+
+\begin{enumerate}
+  \item
+
+        \begin{align*}
+          f_\text{max} - f_\text{min} & = \frac{f}{1 - \frac{u}{v}} - \frac{f}{1 + \frac{u}{v}} \\
+                                      & \approx \qty{315}{Hz}
+        \end{align*}
+\end{enumerate}
+
+\subsection{}
+
+\begin{align*}
+  \lambda_\text{max} - \lambda_\text{min} & = \lambda_0 \left( 1 + \frac{u}{v} - 1 + \frac{u}{v} \right)      \\
+                                          & = \frac{2 \lambda_0 u}{v}                                         \\
+  u                                       & = \frac{v (\lambda_\text{max} - \lambda_\text{min})}{2 \lambda_0} \\
+                                          & = \qty{1000}{m/s}                                                 \\
+  u                                       & = \sqrt{\frac{3 K T}{M}}                                          \\
+  T                                       & = \frac{M u^2}{3 K}                                               \\
+                                          & \approx \qty{920}{K}
+\end{align*}
+
+\setcounter{subsection}{12}
+\subsection{}
+
+\begin{enumerate}
+  \item
+
+        \begin{align*}
+          t_R - t_S                                           & = \frac{\sqrt{h^2 + (u t_S)^2}}{v} \\
+          v (t_R - t_S)                                       & = \sqrt{h^2 + (u t_S)^2}           \\
+          v^2 (t_R - t_S)^2                                   & = h^2 + (u t_S)^2                  \\
+          v^2 (t_R^2 - 2 t_R t_S + t_S^2)                     & = h^2 + (u t_S)^2                  \\
+          (v^2 - u^2) t_S^2 - 2 t_R v^2 t_S + t_R^2 v^2 - h^2 & = 0
+        \end{align*}
+
+        \begin{align*}
+          t_S                                    & = \frac{2 t_R v^2 \pm \sqrt{4 t_R^2 v^4 - 4 (v^2 - u^2) (t_R^2 v^2 - h^2)}}{2 (v^2 - u^2)}                                     \\
+                                                 & = \frac{t_R \pm \sqrt{t_R^2 - \left( 1 - \frac{u^2}{v^2} \right) \left( t_R^2 - \frac{h^2}{v^2} \right)}}{1 - \frac{u^2}{v^2}} \\
+          \left( 1 - \frac{u^2}{v^2} \right) t_S & = t_R \pm \sqrt{t_R^2 - \left( 1 - \frac{u^2}{v^2} \right) \left( t_R^2 - \frac{h^2}{v^2} \right)}                             \\
+                                                 & = t_R \pm \sqrt{t_R^2 - \left( t_R^2 - \frac{h^2}{v^2} - t_R^2 \frac{u^2}{v^2} + \frac{h^2 u^2}{v^4} \right)}                  \\
+                                                 & = t_R \pm \frac{1}{v} \sqrt{h^2 \left( 1 - \frac{u^2}{v^2} \right) + u^2 t_R^2}
+        \end{align*}
+
+  \item
+
+        \begin{align*}
+          \cos \theta & = \frac{u t_S}{\sqrt{h^2 + (u t_S)^2}}                             \\
+          f(t_S)      & = \frac{f_0}{1 - \frac{u \cos \theta}{v}}                          \\
+                      & = \frac{f_0}{1 - \frac{u}{v} \frac{u t_S}{\sqrt{h^2 + (u t_S)^2}}}
+        \end{align*}
+
+  \item
+
+        When the source is far away the $h^2$ term can be dropped giving
+
+        \begin{align*}
+          f_\text{max}                                & = \frac{f_0}{1 - \frac{u}{v}}                                       \\
+          f_\text{max} \left( 1 - \frac{u}{v} \right) & = f_0                                                               \\
+          f_\text{min}                                & = \frac{f_0}{1 + \frac{u}{v}}                                       \\
+          f_\text{min} \left( 1 + \frac{u}{v} \right) & = f_0                                                               \\
+          f_\text{max} \left( 1 - \frac{u}{v} \right) & = f_\text{min} \left( 1 + \frac{u}{v} \right)                       \\
+          f_\text{max} (v - u)                        & = f_\text{min} (v + u)                                              \\
+          (f_\text{min} + f_\text{max}) u             & = (f_\text{max} - f_\text{min}) v                                   \\
+          u                                           & = \frac{f_\text{max} - f_\text{min}}{f_\text{max} + f_\text{min}} v \\
+                                                      & \approx \qty{34.3}{m/s}
+        \end{align*}
+
+        \begin{align*}
+          f_\text{max}                                                     & = \frac{f_0}{1 + \frac{u^2 t_{S,\text{max}}}{v \sqrt{h^2 + (u t_{S,\text{max}})^2}}}                            \\
+                                                                           & = \frac{f_0}{1 - \frac{2353}{v \sqrt{h^2 + 4706}}}                                                              \\
+          f_\text{max} \left( 1 - \frac{2353}{v \sqrt{h^2 + 4706}} \right) & = f_0                                                                                                           \\
+          f_\text{min}                                                     & = \frac{f_0}{1 + \frac{u^2 t_{S,\text{min}}}{v \sqrt{h^2 + (u t_{S,\text{min}})^2}}}                            \\
+                                                                           & = \frac{f_0}{1 + \frac{2353}{v \sqrt{h^2 + 4706}}}                                                              \\
+          f_\text{min} \left( 1 + \frac{2353}{v \sqrt{h^2 + 4706}} \right) & = f_0                                                                                                           \\
+          f_\text{max} \left( 1 - \frac{2353}{v \sqrt{h^2 + 4706}} \right) & = f_\text{min} \left( 1 + \frac{2353}{v \sqrt{h^2 + 4706}} \right)                                              \\
+          f_\text{max} \left( \sqrt{h^2 + 4706} - \frac{2353}{v} \right)   & = f_\text{min} \left( \sqrt{h^2 + 4706} + \frac{2353}{v} \right)                                                \\
+          (f_\text{max} - f_\text{min}) \sqrt{h^2 - 4706}                  & = (f_\text{max} + f_\text{min}) \frac{2353}{v}                                                                  \\
+          \sqrt{h^2 - 4706}                                                & = \frac{f_\text{max} + f_\text{min}}{f_\text{max} - f_\text{min}} \frac{2353}{v}                                \\
+          h^2                                                              & = 4706 + \left( \frac{f_\text{max} + f_\text{min}}{f_\text{max} - f_\text{min}} \frac{2353}{v} \right)^2        \\
+          h                                                                & = \sqrt{4706 + \left( \frac{f_\text{max} + f_\text{min}}{f_\text{max} - f_\text{min}} \frac{2353}{v} \right)^2} \\
+                                                                           & \approx \qty{350}{m}
+        \end{align*}
+\end{enumerate}
+
 \end{document}
