@@ -19,4 +19,139 @@
 
 \tableofcontents
 
+\section{Vectors}
+
+\subsection{Vectors in 2-Space}
+
+\subsubsection{}
+
+\begin{enumerate}
+  \item $3 \mathbf{a} = 6 \mathbf{i} + 12 \mathbf{j}$
+
+  \item $\mathbf{a} + \mathbf{b} = \mathbf{i} + 8 \mathbf{j}$
+
+  \item $\mathbf{a} - \mathbf{b} = 3 \mathbf{i}$
+
+  \item $||\mathbf{a} + \mathbf{b}|| = \sqrt{1 + 8^2} = \sqrt{65}$
+
+  \item $||\mathbf{a} - \mathbf{b}|| = 3$
+\end{enumerate}
+
+\setcounter{subsubsection}{8}
+\subsubsection{}
+
+\begin{enumerate}
+  \item $4 \mathbf{a} - 2 \mathbf{b} = \langle 6, -14 \rangle$
+
+  \item $-3 \mathbf{a} - 5 \mathbf{b} = \langle 2, 4 \rangle$
+\end{enumerate}
+
+\setcounter{subsubsection}{14}
+\subsubsection{}
+
+$\overrightarrow{P_1 P_2} = \langle 2, 5 \rangle$
+
+\setcounter{subsubsection}{18}
+\subsubsection{}
+
+$(1, 18)$
+
+\setcounter{subsubsection}{20}
+\subsubsection{}
+
+\begin{enumerate}
+  \item Yes
+
+  \item Yes
+
+  \item Yes
+
+  \item No
+
+  \item Yes
+
+  \item Yes
+\end{enumerate}
+
+\setcounter{subsubsection}{24}
+\subsubsection{}
+
+\begin{enumerate}
+  \item $\frac{\mathbf{a}}{||\mathbf{a}||} = \frac{\langle 2, 2 \rangle}{\sqrt{2^2 + 2^2}} = \frac{1}{2 \sqrt{2}} \langle 2, 2 \rangle = \langle \frac{1}{\sqrt{2}}, \frac{1}{\sqrt{2}} \rangle$
+
+  \item $\langle -\frac{1}{\sqrt{2}}, -\frac{1}{\sqrt{2}} \rangle$
+\end{enumerate}
+
+\setcounter{subsubsection}{30}
+\subsubsection{}
+
+$2 \frac{\mathbf{a}}{||\mathbf{a}||} = 2 \frac{\langle 3, 7 \rangle}{\sqrt{3^2 + 7^2}} = \frac{2}{\sqrt{58}} \langle 3, 7 \rangle = \langle \frac{6}{\sqrt{58}}, \frac{14}{\sqrt{58}} \rangle$
+
+\setcounter{subsubsection}{36}
+\subsubsection{}
+
+$\mathbf{x} = -(\mathbf{a} + \mathbf{b})$
+
+\setcounter{subsubsection}{40}
+\subsubsection{}
+
+\begin{align*}
+  \mathbf{a} & = 2 \mathbf{i} + 3 \mathbf{j}                                                                                     \\
+  \mathbf{b} & = \mathbf{i} + \mathbf{j}                                                                                         \\
+  \mathbf{c} & = \mathbf{i} - \mathbf{j}                                                                                         \\ \\
+  \mathbf{i} & = \frac{1}{2} (\mathbf{b} + \mathbf{c})                                                                           \\
+  \mathbf{j} & = \frac{1}{2} (\mathbf{b} - \mathbf{c})                                                                           \\
+  \mathbf{a} & = 2 \left( \frac{1}{2} (\mathbf{b} + \mathbf{c}) \right) + 3 \left( \frac{1}{2} (\mathbf{b} - \mathbf{c}) \right) \\
+             & = \mathbf{b} + \mathbf{c} + \frac{3}{2} \mathbf{b} - \frac{3}{2} \mathbf{c}                                       \\
+             & = \frac{5}{2} \mathbf{b} - \frac{1}{2} \mathbf{c}
+\end{align*}
+
+\setcounter{subsubsection}{42}
+\subsubsection{}
+
+\begin{align*}
+  y          & = \frac{1}{4} x^2 + 1                                        \\
+  y(2)       & = 2                                                          \\
+  y'         & = \frac{1}{2} x                                              \\
+  y'(2)      & = 1                                                          \\
+  \mathbf{v} & = \pm \langle \frac{1}{\sqrt{2}}, \frac{1}{\sqrt{2}} \rangle
+\end{align*}
+
+\setcounter{subsubsection}{44}
+\subsubsection{}
+
+\begin{enumerate}
+  \item
+
+        \begin{align*}
+          \mathbf{F}_n                & = \mathbf{F} \cos \theta         \\
+          \mathbf{F}_g                & = \mathbf{F} \sin \theta         \\
+          ||\mathbf{F}_f||            & = \mu ||\mathbf{F}_n||           \\
+          ||-\mathbf{F}_g||           & = \mu ||\mathbf{F}_n||           \\
+          ||-\mathbf{F} \sin \theta|| & = \mu ||\mathbf{F} \cos \theta|| \\
+          ||\mathbf{F}|| \sin \theta  & = \mu ||\mathbf{F}|| \cos \theta \\
+          \tan \theta                 & = \mu
+        \end{align*}
+
+  \item $\theta = \arctan \mu \approx \ang{31}$
+\end{enumerate}
+
+\setcounter{subsubsection}{46}
+\subsubsection{}
+
+\begin{align*}
+  F_x        & = \frac{q Q}{4 \pi \epsilon_0} \int_{-a}^a \frac{L \,dy}{2 a (L^2 + y^2)^{3 / 2}}  \\
+             & = \frac{L q Q}{8 \pi \epsilon_0} \int_{-a}^a (L^2 + y^2)^{-3 / 2} \,dy             \\
+             & = \frac{L q Q}{8 \pi \epsilon_0} \frac{2 a}{L^2 \sqrt{a^2 + L^2}}                  \\
+             & = \frac{a q Q}{4 \pi \epsilon_0 L \sqrt{a^2 + L^2}}                                \\
+  F_y        & = -\frac{q Q}{4 \pi \epsilon_0} \int_{-a}^a \frac{y \,dy}{2 a (L^2 + y^2)^{3 / 2}} \\
+             & = 0                                                                                \\
+  \mathbf{F} & = \langle \frac{1}{4 \pi \epsilon_0} \frac{q Q}{L \sqrt{a^2 + L^2}}, 0 \rangle
+\end{align*}
+
+\setcounter{subsubsection}{48}
+\subsubsection{}
+
+Let the three sides of the triangle be vectors $\mathbf{a}$, $\mathbf{b}$, and $\mathbf{c}$. The triangle is closed so it must be the case that \[\mathbf{a} + \mathbf{b} + \mathbf{c} = 0.\] This gives \[\mathbf{c} = -(\mathbf{a} + \mathbf{b}).\] The vector from the midpoint of side $\mathbf{a}$ to the midpoint of side $\mathbf{b}$ is \[\left( \mathbf{a} + \frac{1}{2} \mathbf{b} \right) - \frac{1}{2} \mathbf{a} = \frac{1}{2} (\mathbf{a} + \mathbf{b})\] which is parallel with $\mathbf{c}$ and half its length.
+
 \end{document}
