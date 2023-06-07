@@ -32,4 +32,33 @@
   \item In $\mathbb{R}^3$ the octant in which all coordinates are positive is known as the \textbf{first octant}. There is no agreement for naming the other seven octants.
 \end{itemize}
 
+\subsection{Dot Product}
+
+\begin{itemize}
+  \item The \textbf{dot product} is also known as the \textbf{inner product} or the \textbf{scalar product} and is denoted $\mathbf{a} \cdot \mathbf{b}$
+
+  \item Two non-zero vectors are orthogonal iff their dot product is $0$
+
+  \item The zero vector is considered orthogonal to all vectors
+
+  \item The angles $\alpha$, $\beta$, and $\gamma$ between a vector and the unit vectors $\mathbf{i}$, $\mathbf{j}$, and $\mathbf{k}$, respectively are called the \textbf{direction angles} of the vector
+
+  \item The cosines of a vectors direction angles (the \textbf{direction cosines}) can be calculated as
+
+        \begin{align*}
+          \cos \alpha & = \frac{\mathbf{a} \cdot \mathbf{i}}{||\mathbf{a}|| ||\mathbf{i}||} \\
+                      & = \frac{a_1}{||\mathbf{a}||}                                        \\
+          \cos \beta  & = \frac{\mathbf{a} \cdot \mathbf{j}}{||\mathbf{a}|| ||\mathbf{j}||} \\
+                      & = \frac{a_2}{||\mathbf{a}||}                                        \\
+          \cos \gamma & = \frac{\mathbf{a} \cdot \mathbf{k}}{||\mathbf{a}|| ||\mathbf{k}||} \\
+                      & = \frac{a_3}{||\mathbf{a}||}
+        \end{align*}
+
+        Equivalently, these can be calculated as the components of the unit vector $\mathbf{a} / ||\mathbf{a}||$.
+
+  \item To find the component of a vector $\mathbf{a}$ in the direction of a vector $\mathbf{b}$ \[\text{comp}_\mathbf{b} \mathbf{a} = ||\mathbf{a}|| \cos \theta = \frac{\mathbf{a} \cdot \mathbf{b}}{||\mathbf{b}||}\]
+
+  \item To project a vector $\mathbf{a}$ onto a vector $\mathbf{b}$ \[\text{proj}_\mathbf{b} \mathbf{a} = (\text{comp}_\mathbf{b} \mathbf{a}) \frac{\mathbf{b}}{||\mathbf{b}||} = \left( \frac{\mathbf{a} \cdot \mathbf{b}}{\mathbf{b} \cdot \mathbf{b}} \right) \mathbf{b}\]
+\end{itemize}
+
 \end{document}
