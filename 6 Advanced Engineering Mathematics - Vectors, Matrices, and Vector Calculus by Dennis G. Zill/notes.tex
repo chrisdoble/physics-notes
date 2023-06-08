@@ -81,4 +81,28 @@
   \item $\mathbf{a} \cdot (\mathbf{b} \times \mathbf{c}) = 0$ iff $\mathbf{a}$, $\mathbf{b}$, and $\mathbf{c}$ are coplanar
 \end{itemize}
 
+\subsection{Lines and Planes in 3-Space}
+
+\begin{itemize}
+  \item There is a unique line between any two points $\mathbf{r_1}$ and $\mathbf{r_2}$ in 3-space. The equation for that line is \[\mathbf{r} = \mathbf{r_1} + t (\mathbf{r_2} - \mathbf{r_1}) = \mathbf{r_1} + t \mathbf{a}\] where $t$ is called a \textbf{parameter}, the nonzero vector $\mathbf{a}$ is called a \textbf{direction vector}, and its components are called \textbf{direction numbers}.
+
+  \item Equating the components of the equation above we find \begin{align*}
+          x & = r_1 + t a_1  \\
+          y & = r_2 + t a_2  \\
+          z & = r_3 + t a_3.
+        \end{align*} These are the \textbf{parametric equations} for the line through $\mathbf{r_1}$ and $\mathbf{r_2}$.
+
+  \item By solving the parametric equations for $t$ and equating the results we find the \textbf{symmetric equations} for the line \[t = \frac{x - r_1}{a_1} = \frac{y - r_2}{a_2} = \frac{z - r_3}{a_3}.\]
+
+  \item Given a point $P_1$ and a vector $\mathbf{n}$, there exists only one plane containing $P_1$ with $\mathbf{n}$ normal. The vector from $P_1$ to another point $P$ on that plane will be perpendicular to $\mathbf{n}$, so the equation for the plane is \[\mathbf{n} \cdot (\mathbf{r} - \mathbf{r}_1) = 0\] where $\mathbf{r} = \overrightarrow{O P}$ and $\mathbf{r_1} = \overrightarrow{O P_1}$. If \[\mathbf{n} = a \hat{\mathbf{i}} + b \hat{\mathbf{j}} + c \hat{\mathbf{k}}\] the cartesian form of this equation is \[a (x - x_1) + b (y - y_1) + c (z - z_1) = 0\] and is called the \textbf{point-normal form}.
+
+  \item The graph of any equation $a x + b y + c z + d = 0$, where $a$, $b$, and $c$ are not all zero, is a plane with the normal vector $\mathbf{n} = a \hat{\mathbf{i}} + b \hat{\mathbf{j}} + c \hat{\mathbf{k}}$.
+
+  \item Given three noncollinear points, a normal vector can be found by forming two vectors from two pairs of points and take their cross product.
+
+  \item A line and a plane that aren't parellel intersect at a single point.
+
+  \item Two planes that aren't parallel must intersect in a line.
+\end{itemize}
+
 \end{document}
