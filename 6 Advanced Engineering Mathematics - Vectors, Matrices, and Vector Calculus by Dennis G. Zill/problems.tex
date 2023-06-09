@@ -760,4 +760,132 @@ $f(x)$ is undefined at $x = -3$ and $x = -1$.
              & = \sqrt{\pi}
 \end{align*}
 
+\subsection{Gram–Schmidt Orthogonalization Process}
+
+\subsubsection{}
+
+\begin{align*}
+  \langle \frac{12}{13}, \frac{5}{13} \rangle \cdot \langle \frac{5}{13}, -\frac{12}{13} \rangle & = 0                                                                                                                                                   \\
+  \sqrt{\left( \frac{12}{13} \right)^2 + \left( \frac{5}{13} \right)^2}                          & = 1                                                                                                                                                   \\
+  \mathbf{u}                                                                                     & = \left( \langle 4, 2 \rangle \cdot \langle \frac{12}{13}, \frac{5}{13} \rangle \right) \langle \frac{12}{13}, \frac{5}{13} \rangle                   \\
+                                                                                                 & \qquad + \left( \langle 4, 2 \rangle \cdot \langle \frac{5}{13}, -\frac{12}{13} \rangle \right) \langle \frac{5}{13}, -\frac{12}{13} \rangle          \\
+                                                                                                 & = \left( \frac{58}{13} \right) \langle \frac{12}{13}, \frac{5}{13} \rangle - \left( \frac{4}{13} \right) \langle \frac{5}{13}, -\frac{12}{13} \rangle
+\end{align*}
+
+\setcounter{subsubsection}{2}
+\subsubsection{}
+
+\begin{align*}
+  \langle 1, 0, 1 \rangle \cdot \langle 0, 1, 0 \rangle  & = 0                                                                                                                                                                                          \\
+  \langle 1, 0, 1 \rangle \cdot \langle -1, 0, 1 \rangle & = 0                                                                                                                                                                                          \\
+  \langle 0, 1, 0 \rangle \cdot \langle -1, 0, 1 \rangle & = 0                                                                                                                                                                                          \\
+  B'                                                     & = \{\langle \frac{1}{\sqrt{2}}, 0, \frac{1}{\sqrt{2}} \rangle, \langle 0, 1, 0 \rangle, \langle -\frac{1}{\sqrt{2}}, 0, \frac{1}{\sqrt{2}} \rangle\}                                         \\
+  \mathbf{u}                                             & = -\frac{3}{\sqrt{2}} \langle \frac{1}{\sqrt{2}}, 0, \frac{1}{\sqrt{2}} \rangle + 7 \langle 0, 1, 0 \rangle - \frac{23}{\sqrt{2}} \langle -\frac{1}{\sqrt{2}}, 0, \frac{1}{\sqrt{2}} \rangle
+\end{align*}
+
+\setcounter{subsubsection}{4}
+\subsubsection{}
+
+\begin{enumerate}
+  \item
+
+        \begin{align*}
+          B            & = \{ \langle -3, 2 \rangle, \langle -1, -1 \rangle \}                                                                                                                        \\
+          \mathbf{v}_1 & = \mathbf{u}_1                                                                                                                                                               \\
+                       & = \langle -3, 2 \rangle                                                                                                                                                      \\
+          \mathbf{v}_2 & = \mathbf{u}_2 - \text{proj}_{\mathbf{v}_1} \mathbf{u}_2                                                                                                                     \\
+                       & = \langle -1, -1 \rangle - \left( \frac{\langle -1, -1 \rangle \cdot \langle -3, 2 \rangle}{\langle -3, 2 \rangle \cdot \langle -3, 2 \rangle} \right) \langle -3, 2 \rangle \\
+                       & = \langle -1, -1 \rangle - \frac{1}{13} \langle -3, 2 \rangle                                                                                                                \\
+                       & = \langle -\frac{10}{13}, -\frac{15}{13} \rangle                                                                                                                             \\
+          \mathbf{w}_1 & = \langle -\frac{3}{\sqrt{13}}, \frac{2}{\sqrt{13}} \rangle                                                                                                                  \\
+          \mathbf{w}_2 & = \sqrt{\frac{169}{325}} \langle -\frac{10}{13}, -\frac{15}{13} \rangle                                                                                                      \\
+                       & = \frac{\sqrt{13}}{5} \langle -\frac{10}{13}, -\frac{15}{13} \rangle                                                                                                         \\
+                       & = \langle -\frac{2}{\sqrt{13}}, -\frac{3}{\sqrt{13}} \rangle
+        \end{align*}
+\end{enumerate}
+
+\setcounter{subsubsection}{8}
+\subsubsection{}
+
+\begin{align*}
+  B            & = \{ \langle 1, 1, 0 \rangle, \langle 1, 2, 2 \rangle, \langle 2, 2, 1 \rangle \}                                                                                                                                                                       \\
+  \mathbf{v}_1 & = \langle 1, 1, 0 \rangle                                                                                                                                                                                                                               \\
+  \mathbf{v}_2 & = \mathbf{u}_2 - \text{proj}_{\mathbf{v}_1} \mathbf{u}_2                                                                                                                                                                                                \\
+               & = \langle 1, 2, 2 \rangle - \left( \frac{\langle 1, 2, 2 \rangle \cdot \langle 1, 1, 0 \rangle}{\langle 1, 1, 0 \rangle \cdot \langle 1, 1, 0 \rangle} \right) \langle 1, 1, 0 \rangle                                                                  \\
+               & = \langle 1, 2, 2 \rangle - \frac{3}{2} \langle 1, 1, 0 \rangle                                                                                                                                                                                         \\
+               & = \langle -\frac{1}{2}, \frac{1}{2}, 2 \rangle                                                                                                                                                                                                          \\
+  \mathbf{v}_3 & = \mathbf{u}_3 - \text{proj}_{\mathbf{v}_1} \mathbf{u}_3 - \text{proj}_{\mathbf{v}_2} \mathbf{u}_3                                                                                                                                                      \\
+               & = \langle 2, 2, 1 \rangle - \left( \frac{\langle 2, 2, 1 \rangle \cdot \langle 1, 1, 0 \rangle}{\langle 1, 1, 0 \rangle \cdot \langle 1, 1, 0 \rangle} \right) \langle 1, 1, 0 \rangle                                                                  \\
+               & \qquad - \left( \frac{\langle 2, 2, 1 \rangle \cdot \langle -\frac{1}{2}, \frac{1}{2}, 2 \rangle}{\langle -\frac{1}{2}, \frac{1}{2}, 2 \rangle \cdot \langle -\frac{1}{2}, \frac{1}{2}, 2 \rangle} \right) \langle -\frac{1}{2}, \frac{1}{2}, 2 \rangle \\
+               & = \langle 2, 2, 1 \rangle - 2 \langle 1, 1, 0 \rangle - \frac{4}{9} \langle -\frac{1}{2}, \frac{1}{2}, 2 \rangle                                                                                                                                        \\
+               & = \langle \frac{2}{9}, -\frac{2}{9}, \frac{1}{9} \rangle                                                                                                                                                                                                \\
+  \mathbf{w}_1 & = \langle \frac{1}{\sqrt{2}}, \frac{1}{\sqrt{2}}, 0 \rangle                                                                                                                                                                                             \\
+  \mathbf{w}_2 & = \langle -\frac{1}{3 \sqrt{2}}, \frac{1}{3 \sqrt{2}}, \frac{4}{3 \sqrt{2}} \rangle \\
+  \mathbf{w}_3 &= 3 \langle \frac{2}{9}, -\frac{2}{9}, \frac{1}{9} \rangle \\
+  &= \langle \frac{2}{3}, -\frac{2}{3}, \frac{1}{3} \rangle
+\end{align*}
+
+\setcounter{subsubsection}{16}
+\subsubsection{}
+
+\begin{align*}
+  B &= \{1, x, x^2\} \\
+  \mathbf{v}_1 &= \mathbf{u}_1 \\
+  &= 1 \\
+  \mathbf{v}_2 &= \mathbf{u}_2 - \text{proj}_{\mathbf{v}_1} \mathbf{u}_2 \\
+  &= \mathbf{u}_2 - \left( \frac{\mathbf{u}_2 \cdot \mathbf{v}_1}{\mathbf{v}_1 \cdot \mathbf{v}_1} \right) \mathbf{v}_1 \\
+  &= x - \frac{\int_{-1}^1 x \,dx}{\int_{-1}^1 dx} \\
+  &= x - \frac{\left[ \frac{1}{2} x^2 \right]_{-1}^1}{2} \\
+  &= x \\
+  \mathbf{v}_3 &= \mathbf{u}_3 - \text{proj}_{\mathbf{v}_1} \mathbf{u}_3 - \text{proj}_{\mathbf{v}_2} \mathbf{u}_3 \\
+  &= \mathbf{u}_3 - \left( \frac{\mathbf{u}_3 \cdot \mathbf{v}_1}{\mathbf{v}_1 \cdot \mathbf{v}_1} \right) \mathbf{v}_1 - \left( \frac{\mathbf{u}_3 \cdot \mathbf{v}_2}{\mathbf{v}_2 \cdot \mathbf{v}_2} \right) \mathbf{v}_2 \\
+  &= x^2 - \frac{\int_{-1}^1 x^2 \,dx}{\int_{-1}^1 dx} - \frac{\int_{-1}^1 x^3 \,dx}{\int_{-1}^1 x^2 \,dx} x \\
+  &= x^2 - \frac{\left[ \frac{1}{3} x^3 \right]_{-1}^1}{2} - \frac{\left[ \frac{1}{4} x^4 \right]_{-1}^1}{\left[ \frac{1}{3} x^3 \right]_{-1}^1} x \\
+  &= x^2 - \frac{1}{3}
+\end{align*}
+
+\setcounter{subsubsection}{18}
+\subsubsection{}
+
+\begin{align*}
+  ||\mathbf{v}_1||^2 &= \int_{-1}^1 \,dx \\
+  &= 2 \\
+  \mathbf{w}_1 &= \frac{1}{\sqrt{2}} \\
+  ||\mathbf{v}_2||^2 &= \int_{-1}^1 x^2 \,dx \\
+  &= \left[ \frac{1}{3} x^3 \right]_{-1}^1 \\
+  &= \frac{2}{3} \\
+  \mathbf{w}_2 &= \frac{3}{\sqrt{6}} x \\
+  ||\mathbf{v}_3||^2 &= \int_{-1}^1 \left( x^2 - \frac{1}{3} \right)^2 \,dx \\
+  &= \int_{-1}^1 \left( x^4 - \frac{2}{3} x^2 + \frac{1}{9} \right) \,dx \\
+  &= \left[ \frac{1}{5} x^5 - \frac{2}{9} x^3 + \frac{1}{9} x \right]_{-1}^1 \\
+  &= \frac{1}{5} - \frac{2}{9} + \frac{1}{9} + \frac{1}{5} - \frac{2}{9} + \frac{1}{9} \\
+  &= \frac{2}{5} - \frac{2}{9} \\
+  &= \frac{8}{45} \\
+  \mathbf{w}_3 &= \sqrt{\frac{45}{8}} \left( x^2 - \frac{1}{3} \right) \\
+  &= \frac{5}{2 \sqrt{10}} \left( 3 x^2 - 1 \right)
+\end{align*}
+
+\setcounter{subsubsection}{20}
+\subsubsection{}
+
+\begin{align*}
+  (\mathbf{p}, \mathbf{w}_1) &= \int_{-1}^1 \frac{1}{\sqrt{2}} (9 x^2 - 6 x + 5) \,dx \\
+  &= \frac{1}{\sqrt{2}} \left[ 3 x^3 - 3 x^2 + 5 x \right]_{-1}^1 \\
+  &= \frac{1}{\sqrt{2}} (3 - 3 + 5 + 3 + 3 + 5) \\
+  &= \frac{16}{\sqrt{2}} \\
+  (\mathbf{p}, \mathbf{w}_2) &= \int_{-1}^1 \frac{3}{\sqrt{6}} x (9 x^2 - 6 x + 5) \,dx \\
+  &= \frac{3}{\sqrt{6}} \left[ \frac{9}{4} x^4 - 2 x^3 + \frac{5}{2} x^2 \right]_{-1}^1 \\
+  &= \frac{3}{\sqrt{6}} \left( \frac{9}{4} - 2 + \frac{5}{2} - \frac{9}{4} - 2 - \frac{5}{2} \right) \\
+  &= \frac{3}{\sqrt{6}} \left( \frac{9}{4} - \frac{8}{4} + \frac{10}{4} - \frac{9}{4} - \frac{8}{4} - \frac{10}{4} \right) \\
+  &= -\frac{12}{\sqrt{6}} \\
+  (\mathbf{p}, \mathbf{w}_3) &= \int_{-1}^1 \frac{5}{2 \sqrt{10}} (3 x^2 - 1) (9 x^2 - 6 x + 5) \,dx \\
+  &= \frac{5}{2 \sqrt{10}} \int_{-1}^1 (27 x^4 - 18 x^3 + 6 x^2 + 6 x - 5) \,dx \\
+  &= \frac{5}{2 \sqrt{10}} \left[ \frac{27}{5} x^5 - \frac{9}{2} x^4 + 2 x^3 + 3 x^2 - 5 x \right]_{-1}^1 \\
+  &= \frac{5}{2 \sqrt{10}} \left( \frac{27}{5} - \frac{9}{2} + 2 + 3 - 5 + \frac{27}{5} + \frac{9}{2} + 2 - 3 - 5 \right) \\
+  &= \frac{5}{2 \sqrt{10}} \left( \frac{54}{10} - \frac{45}{10} + \frac{20}{10} + \frac{30}{10} - \frac{50}{10} + \frac{54}{10} + \frac{45}{10} + \frac{20}{10} - \frac{30}{10} - \frac{50}{10} \right) \\
+  &= \frac{5}{2 \sqrt{10}} \frac{48}{10} \\
+  &= \frac{12}{\sqrt{10}} \\
+  \mathbf{p} &= \frac{16}{\sqrt{2}} \mathbf{w}_1 - \frac{12}{\sqrt{6}} \mathbf{w}_2 + \frac{12}{\sqrt{10}} \mathbf{w}_3 \\
+\end{align*}
+
 \end{document}

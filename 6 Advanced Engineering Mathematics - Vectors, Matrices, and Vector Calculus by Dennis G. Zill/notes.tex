@@ -139,4 +139,26 @@
   \item If $V = \Span(S)$ then $S$ is said to be a \textbf{spanning set} for the vector space $V$ or that $S$ \textbf{spans} $V$.
 \end{itemize}
 
+\subsection{Gram–Schmidt Orthogonalization Process}
+
+\begin{itemize}
+  \item An \textbf{orthonormal basis} is a basis whose vectors are mutually orthogonal and are unit vectors.
+
+  \item If $B = \{\mathbf{w}_1, \mathbf{w}_2, \ldots, \mathbf{w}_n\}$ is an orthonormal basis for $\mathbb{R}^n$ then an arbitrary vector $\mathbf{u}$ can be expressed as \[\mathbf{u} = (\mathbf{u} \cdot \mathbf{w}_1) \mathbf{w}_1 + (\mathbf{u} \cdot \mathbf{w}_2) \mathbf{w}_2 + \cdots + (\mathbf{u} \cdot \mathbf{w}_n) \mathbf{w}_n\]
+
+  \item The \textbf{Gram-Schmidt Orthogonalization Process} is a process for converting any basis of a vector space into an orthonormal basis. First the basis vectors are made orthogonal to each other, then they are normalized. More specifically, to convert a basis $B = \{\mathbf{u}_1, \mathbf{u}_2, \ldots, \mathbf{u}_n\}$ into an orthogonal basis $B' = \{\mathbf{v}_1, \mathbf{v}_2, \ldots, \mathbf{v}_n\}$
+
+        \begin{enumerate}
+          \item Let $\mathbf{v}_1 = \mathbf{u}_1$
+
+          \item Let $\mathbf{v}_2 = \mathbf{u}_2 - \text{proj}_{\mathbf{v}_1} \mathbf{u}_2$
+
+          \item \ldots
+
+          \item Let $\mathbf{v}_n = \mathbf{u}_n - \text{proj}_{\mathbf{v}_1} \mathbf{u}_n - \text{proj}_{\mathbf{v}_2} \mathbf{u}_n - \cdots - \text{proj}_{\mathbf{v}_{n - 1}} \mathbf{u}_n$
+        \end{enumerate}
+
+        and to convert $B'$ into an orthonormal basis $B'' = \{\mathbf{w}_1, \mathbf{w}_2, \ldots, \mathbf{w}_n\}$, normalize each $\mathbf{v}_i$, $i = 1, 2, \ldots, n$.
+\end{itemize}
+
 \end{document}
