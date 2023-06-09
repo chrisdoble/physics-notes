@@ -6,6 +6,8 @@
 \usepackage{siunitx} % For units
 \graphicspath{{./images/}}
 
+\newcommand{\Span}{\operatorname{Span}}
+
 \title{Advanced Engineering Mathematics Vectors, Matrices, and Vector Calculus by Dennis G. Zill Notes}
 \author{Chris Doble}
 \date{June 2023}
@@ -103,6 +105,38 @@
   \item A line and a plane that aren't parellel intersect at a single point.
 
   \item Two planes that aren't parallel must intersect in a line.
+\end{itemize}
+
+\subsection{Vector Spaces}
+
+\begin{itemize}
+  \item The length of a vector is called its \textbf{norm}
+
+  \item The process of multipying a vector by the reciprocal of its norm is called \textbf{normalizing} the vector
+
+  \item Two nonzero vectors $\mathbf{a}$ and $\mathbf{b}$ in $\mathbb{R}^n$ are said to be orthogonal if $\mathbf{a} \cdot \mathbf{b} = 0$
+\end{itemize}
+
+\includegraphics[scale=0.443]{vector-space}
+
+\begin{itemize}
+  \item If a subset $W$ of a vector space $V$ is itself a vector space under the operations of vector addition and scalar multiplication defined on $V$, then $W$ is called a \textbf{subspace} of $V$
+
+  \item Every vector space has at least two subspaces: itself and the zero subspace $\{\mathbf{0}\}$
+
+  \item A set of vectors $\{\mathbf{x_1}, \mathbf{x_2}, \ldots, \mathbf{x_n}\}$ is said to be \textbf{linearly independent} if the only constants satisfying the equation \[k_1 \mathbf{x_1} + k_2 \mathbf{x_2} + \cdots + k_n \mathbf{x_n} = \mathbf{0}\] are $k_1 = k_2 = \cdots = k_n = 0$. If the set of vectors is not linearly independent it is said to be \textbf{linearly dependent}.
+
+  \item If a set of vectors $B = \{\mathbf{x}_1, \mathbf{x}_2, \ldots, \mathbf{x}_n\}$ in a vector space $V$ is linearly independent and every vector in $V$ can be expressed as a linear combination of vectors in $B$ then $B$ is said to be a \textbf{basis} for $V$.
+
+  \item The number of vectors in a basis $B$ for a vector space $V$ is said to be the \textbf{dimension} of the space.
+
+  \item If the basis of a vector space contains a finite number of vectors, then the space is \textbf{finite dimensional}; otherwise it is \textbf{infinite dimensional}.
+
+  \item If $S$ denotes any set of vectors $\{\mathbf{x}_1, \mathbf{x}_2, \ldots, \mathbf{x}_n\}$ in a vector space $V$, then the set of all linear combinations of the vectors in $S$ \[c_1 \mathbf{x}_1 + c_2 \mathbf{x}_2 + \cdots + c_n \mathbf{x}_n\] is called the \textbf{span} of the vectors and is denoted $\Span(S)$.
+
+  \item $\Span(S)$ is a subspace of $V$ and is said to be a subspace spanned by its vectors $\mathbf{x}_1, \mathbf{x}_2, \ldots, \mathbf{x}_n$.
+
+  \item If $V = \Span(S)$ then $S$ is said to be a \textbf{spanning set} for the vector space $V$ or that $S$ \textbf{spans} $V$.
 \end{itemize}
 
 \end{document}
