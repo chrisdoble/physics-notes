@@ -161,4 +161,67 @@
         and to convert $B'$ into an orthonormal basis $B'' = \{\mathbf{w}_1, \mathbf{w}_2, \ldots, \mathbf{w}_n\}$, normalize each $\mathbf{v}_i$, $i = 1, 2, \ldots, n$.
 \end{itemize}
 
+\section{Matrices}
+
+\subsection{Matrix Algebra}
+
+\begin{itemize}
+  \item Vectors can be written as horizontal or vertical arrays of numbers
+
+  \item A \textbf{matrix} is any rectangular array of numbers or functions \[\begin{pmatrix}
+            a_{11} & a_{12} & \cdots & a_{1n} \\
+            a_{21} & a_{22} & \cdots & a_{2n} \\
+            \vdots &        &        & \vdots \\
+            a_{m1} & a_{m2} & \cdots & a_{mn}
+          \end{pmatrix}\]
+
+  \item The numbers or functions in the array are called the \textbf{elements} or \textbf{entries} of the matrix
+
+  \item If a matrix has $m$ rows and $n$ columns we say that its \textbf{size} is $m$ by $n$ or $m \times n$
+
+  \item An $n \times n$ matrix is called a \textbf{square} matrix of \textbf{order $n$}
+
+  \item The entry in the $i$th row and the $j$th column of an $m \times n$ matrix $\mathbf{A}$ is written $a_{ij}$
+
+  \item An $m \times 1$ matrix \[\begin{pmatrix}
+            a_1    \\
+            a_2    \\
+            \vdots \\
+            a_n
+          \end{pmatrix}\] is called a \textbf{column vector}
+
+  \item A $1 \times n$ matrix \[\begin{pmatrix}
+            a_1 & a_2 & \cdots & a_n
+          \end{pmatrix}\] is called a \textbf{row vector}
+\end{itemize}
+
+\includegraphics[scale=0.443]{matrix-multiplication}
+
+\begin{itemize}
+  \item Matrix multiplication is associative, i.e. $\mathbf{A} (\mathbf{B} \mathbf{C}) = (\mathbf{A} \mathbf{B}) \mathbf{C}$
+
+  \item Matrix multiplication is distributive, i.e. $\mathbf{A} (\mathbf{B} + \mathbf{C}) = \mathbf{A} \mathbf{B} + \mathbf{A} \mathbf{C}$ and $(\mathbf{B} + \mathbf{C}) \mathbf{A} = \mathbf{B} \mathbf{A} + \mathbf{C} \mathbf{A}$
+
+  \item The \textbf{transpose} of an $m \times n$ matrix $\mathbf{A}$ is an $n \times m$ matrix $\mathbf{A}^T$ \[\begin{pmatrix}
+            a_{11} & a_{21} & \cdots & a_{m1} \\
+            a_{12} & a_{22} & \cdots & a_{m2} \\
+            \vdots &        &        & \vdots \\
+            a_{1n} & a_{2n} & \cdots & a_{mn}
+          \end{pmatrix}\] i.e. the matrix is flipped along the main diagonal
+\end{itemize}
+
+\includegraphics[scale=0.443]{transpose-properties}
+
+\begin{itemize}
+  \item A matrix that consists of all zero entries is called a \textbf{zero matrix}
+
+  \item A square matrix is said to be a \textbf{triangular matrix} if all of its entries above or below the main diagonal are zeroes. More specifically they are called \textbf{lower triangular} and \textbf{upper triangular} matrices, respectively.
+
+  \item A square matrix is called a \textbf{diagonal matrix} if all entries not on the main diagonal are 0.
+
+  \item A square matrix whose entries on the main diagonal are all equal is called a \textbf{scalar matrix}
+
+  \item A square matrix that has the property $\mathbf{A} = \mathbf{A}^T$ is called a \textbf{symmetric matrix}
+\end{itemize}
+
 \end{document}
