@@ -7,6 +7,11 @@
 \graphicspath{{./images/}}
 
 \newcommand{\Span}{\operatorname{Span}}
+\newenvironment{amatrix}[1]{%
+  \left(\begin{array}{@{}*{#1}{c}|c@{}}
+    }{%
+  \end{array}\right)
+}
 
 \title{Advanced Engineering Mathematics Vectors, Matrices, and Vector Calculus by Dennis G. Zill Notes}
 \author{Chris Doble}
@@ -222,6 +227,62 @@
   \item A square matrix whose entries on the main diagonal are all equal is called a \textbf{scalar matrix}
 
   \item A square matrix that has the property $\mathbf{A} = \mathbf{A}^T$ is called a \textbf{symmetric matrix}
+\end{itemize}
+
+\subsection{Systems of Linear Algebraic Equations}
+
+\begin{itemize}
+  \item In a linear system
+
+        \begin{align*}
+          a_{11} x_1 + a_{12} x_2 + \cdots + a_{1n} x_n & = b_1 \\
+          a_{21} x_1 + a_{22} x_2 + \cdots + a_{2n} x_n & = b_2 \\
+          \vdots                                                \\
+          a_{m1} x_1 + a_{m2} x_2 + \cdots + a_{mn} x_n & = b_n \\
+        \end{align*}
+
+        the values $a_{ij}$ are called the \textbf{coefficients} and the values $b_n$ are called the \textbf{constants}
+
+  \item If all the constants are zero the system is said to be \textbf{homogeneous}, otherwise it is \textbf{nonhomogeneous}
+
+  \item A linear system is said to be \textbf{consistent} if it has at least one solution, otherwise it's \textbf{inconsistent}
+
+  \item A linear system can be transformed into an equivalent system (i.e. one that has the same solutions) via three elementary operations:
+
+        \begin{enumerate}
+          \item Multiply an equation by a nonzero constant
+
+          \item Interchange the positions of equations in the system
+
+          \item Add a multiple of one equation to any other equation
+        \end{enumerate}
+
+  \item A linear system can be represented by an \textbf{augmented matrix}, e.g. \[\begin{amatrix}{2}
+            a_{11} & a_{12} & b_1 \\
+            a_{21} & a_{22} & b_2
+          \end{amatrix}\]
+
+  \item We say that two matrices are \textbf{row equivalent} if one can be obtained from the other via a series of elementary row operations
+
+  \item \textbf{Gaussian elimination} is the process of applying elementary row operations to a matrix to put it into \textbf{row-echelon form} where:
+
+        \begin{enumerate}
+          \item The first nonzero entry in a row is a 1
+
+          \item In subsequent rows, the first 1 entry appears to the right of the 1 entry in earlier rows
+
+          \item Rows consisting of all zeroes are at the bottom of the matrix
+        \end{enumerate}
+
+  \item \textbf{Gauss-Jordan elimination} is the same as Gaussian elimination with an additional constraint that puts the matrix into \textbf{reduced row-echelon form} where a column containing a first entry 1 has zeroes everywhere else
+
+  \item A homogeneous linear system always has a trivial solution where all variables are equal to zero and will have an infinite number of nontrivial solutions if the number of equations $m$ is less than the number of variables $n$, i.e. $m < n$
+
+  \item If $\mathbf{X}_1$ is a solution to $\mathbf{A} \mathbf{X} = \mathbf{0}$, then so is $c \mathbf{X}_1$ for any constant $c$
+
+  \item If $\mathbf{X}_1$ and $\mathbf{X}_2$ are solutions of $\mathbf{A} \mathbf{X} = \mathbf{0}$, then so is $\mathbf{X}_1 + \mathbf{X}_2$
+
+  \item If a linear system contains more equations than variables it is said to be \textbf{overdetermined}; if it contains fewer equations than variables it is said to be \textbf{underdetermined}
 \end{itemize}
 
 \end{document}
