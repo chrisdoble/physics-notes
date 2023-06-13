@@ -6,6 +6,7 @@
 \usepackage{siunitx} % For units
 \graphicspath{{./images/}}
 
+\newcommand{\rank}{\operatorname{rank}}
 \newcommand{\Span}{\operatorname{Span}}
 \newenvironment{amatrix}[1]{%
   \left(\begin{array}{@{}*{#1}{c}|c@{}}
@@ -283,6 +284,22 @@
   \item If $\mathbf{X}_1$ and $\mathbf{X}_2$ are solutions of $\mathbf{A} \mathbf{X} = \mathbf{0}$, then so is $\mathbf{X}_1 + \mathbf{X}_2$
 
   \item If a linear system contains more equations than variables it is said to be \textbf{overdetermined}; if it contains fewer equations than variables it is said to be \textbf{underdetermined}
+\end{itemize}
+
+\subsection{Rank of a Matrix}
+
+\begin{itemize}
+  \item The \textbf{rank} of a matrix $\mathbf{A}$ denoted $\rank(\mathbf{A})$ is the number of linearly independent row vectors in $\mathbf{A}$
+
+  \item The row vectors of an $m \times n$ matrix $\mathbf{A}$ span a subspace of $\mathbb{R}^n$. This is called the \textbf{row space} of $\mathbf{A}$. The set of linearly independent row vectors in $\mathbf{A}$ are a basis for that subspace
+\end{itemize}
+
+\includegraphics[scale=0.443]{rank-by-row-reduction}
+
+\begin{itemize}
+  \item A linear system of equations $\mathbf{A} \mathbf{X} = \mathbf{B}$ is consistent iff the rank of the coefficient matrix $\mathbf{A}$ is equal to the rank of the augmented matrix of the system $(\mathbf{A} | \mathbf{B})$
+
+  \item Suppose a linear system $\mathbf{A} \mathbf{X} = \mathbf{B}$ with $m$ equations and $n$ variables is consistent. If $\rank(\mathbf{A}) = r$ then the solution of the system contains $n - r$ variables
 \end{itemize}
 
 \end{document}

@@ -6,6 +6,7 @@
 \usepackage{siunitx} % For units
 \graphicspath{{./images/}}
 
+\newcommand{\rank}{\operatorname{rank}}
 \newenvironment{amatrix}[1]{%
   \left(\begin{array}{@{}*{#1}{c}|c@{}}
     }{%
@@ -1407,5 +1408,146 @@ $\begin{pmatrix}
     0 & 0 & 1 & -1
   \end{amatrix}                   \\
 \end{align*}
+
+\subsection{Rank of a Matrix}
+
+\subsubsection{}
+
+\begin{align*}
+  \begin{pmatrix}
+    3 & -1 \\
+    1 & 3  \\
+  \end{pmatrix}   \\
+  \begin{pmatrix}
+    1 & -\frac{1}{3} \\
+    1 & 3            \\
+  \end{pmatrix} \\
+  \begin{pmatrix}
+    1 & -\frac{1}{3} \\
+    0 & \frac{10}{3} \\
+  \end{pmatrix} \\
+\end{align*}
+
+Rank 2
+
+\setcounter{subsubsection}{2}
+\subsubsection{}
+
+\begin{align*}
+  \begin{pmatrix}
+    2  & 1            & 3            \\
+    6  & 3            & 9            \\
+    -1 & -\frac{1}{2} & -\frac{3}{2}
+  \end{pmatrix} \\
+  \begin{pmatrix}
+    1  & \frac{1}{2}  & \frac{3}{2}  \\
+    6  & 3            & 9            \\
+    -1 & -\frac{1}{2} & -\frac{3}{2}
+  \end{pmatrix} \\
+  \begin{pmatrix}
+    1 & \frac{1}{2} & \frac{3}{2} \\
+    0 & 0           & 0           \\
+    0 & 0           & 0
+  \end{pmatrix}    \\
+\end{align*}
+
+Rank 1
+
+\setcounter{subsubsection}{4}
+\subsubsection{}
+
+\begin{align*}
+  \begin{pmatrix}
+    1 & 1 & 1 \\
+    1 & 0 & 4 \\
+    1 & 4 & 1
+  \end{pmatrix} \\
+  \begin{pmatrix}
+    1 & 1  & 1 \\
+    0 & -1 & 3 \\
+    0 & 3  & 0
+  \end{pmatrix} \\
+  \begin{pmatrix}
+    1 & 1 & 1  \\
+    0 & 1 & -3 \\
+    0 & 3 & 0
+  \end{pmatrix} \\
+  \begin{pmatrix}
+    1 & 1 & 1  \\
+    0 & 1 & -3 \\
+    0 & 0 & 9
+  \end{pmatrix} \\
+  \begin{pmatrix}
+    1 & 1 & 1  \\
+    0 & 1 & -3 \\
+    0 & 0 & 1
+  \end{pmatrix} \\
+\end{align*}
+
+Rank 3
+
+\setcounter{subsubsection}{6}
+\subsubsection{}
+
+\begin{align*}
+  \begin{pmatrix}
+    1 & -2 \\
+    3 & -6 \\
+    7 & -1 \\
+    4 & 5
+  \end{pmatrix} \\
+  \begin{pmatrix}
+    1 & -2 \\
+    0 & 13 \\
+    0 & 13 \\
+    0 & 0
+  \end{pmatrix} \\
+  \begin{pmatrix}
+    1 & -2 \\
+    0 & 13 \\
+    0 & 0  \\
+    0 & 0
+  \end{pmatrix} \\
+\end{align*}
+
+Rank 2
+
+\setcounter{subsubsection}{10}
+\subsubsection{}
+
+\begin{align*}
+  \begin{pmatrix}
+    1 & 2  & 3 \\
+    1 & 0  & 1 \\
+    1 & -1 & 5
+  \end{pmatrix} \\
+  \begin{pmatrix}
+    1 & 2  & 3  \\
+    0 & -2 & -2 \\
+    0 & -3 & 2
+  \end{pmatrix} \\
+  \begin{pmatrix}
+    1 & 2  & 3 \\
+    0 & 1  & 1 \\
+    0 & -3 & 2
+  \end{pmatrix} \\
+  \begin{pmatrix}
+    1 & 2 & 3 \\
+    0 & 1 & 1 \\
+    0 & 0 & 5
+  \end{pmatrix} \\
+\end{align*}
+
+Linearly independent
+
+\setcounter{subsubsection}{14}
+\subsubsection{}
+
+5
+
+\setcounter{subsubsection}{16}
+\subsubsection{}
+
+$\rank(\mathbf{A}) = 2$
 
 \end{document}
