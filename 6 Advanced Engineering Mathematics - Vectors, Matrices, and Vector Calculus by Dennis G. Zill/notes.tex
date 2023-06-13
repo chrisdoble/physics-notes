@@ -302,4 +302,43 @@
   \item Suppose a linear system $\mathbf{A} \mathbf{X} = \mathbf{B}$ with $m$ equations and $n$ variables is consistent. If $\rank(\mathbf{A}) = r$ then the solution of the system contains $n - r$ variables
 \end{itemize}
 
+\subsection{Determinants}
+
+\begin{itemize}
+  \item Suppose $\mathbf{A}$ is an $n \times n$ matrix. Associated with $\mathbf{A}$ is a number called the \textbf{determinant of $\mathbf{A}$} and is denoted by \[\det \mathbf{A} = \begin{vmatrix}
+            a_{11} & a_{12} & \cdots & a_{1n} \\
+            a_{21} & a_{22} & \cdots & a_{2n} \\
+            \vdots &        &        & \vdots \\
+            a_{n1} & a_{n2} & \cdots & a_{nn}
+          \end{vmatrix}\]
+
+  \item A determinant of an $n \times n$ matrix is called a \textbf{determinant of order $n$}
+
+  \item The determinant of a $1 \times 1$ matrix is the element of the matrix
+
+  \item Each element in an $n \times n$ matrix has an associated \textbf{cofactor} defined as \[a_{ij} = (-1)^{i + j} M_{ij}\] where $M_{ij}$ is the determinant of the $(n - 1) \times (n - 1)$ matrix produced by deleting row $i$ and column $j$ from $\mathbf{A}$
+
+  \item The determinant of an arbitrary $n \times n$ matrix $\mathbf{A}$ can be calculated by choosing an arbitrary row or column and summing the products of each element in that column/row with their cofactors, e.g. if we choose the first row of a $3 \times 3$ matrix then
+
+        \begin{align*}
+          \begin{vmatrix}
+            a_{11} & a_{12} & a_{13} \\
+            a_{21} & a_{22} & a_{23} \\
+            a_{31} & a_{32} & a_{33}
+          \end{vmatrix} & = a_{11} M_{11} + a_{12} M_{12} + a_{13} M_{13}                                                        \\
+                                      & = a_{11} \begin{vmatrix}
+                                                   a_{22} & a_{23} \\
+                                                   a_{32} & a_{33}
+                                                 \end{vmatrix} - a_{12} \begin{vmatrix}
+                                                                          a_{21} & a_{23} \\
+                                                                          a_{31} & a_{33}
+                                                                        \end{vmatrix} + a_{13} \begin{vmatrix}
+                                                                                                 a_{21} & a_{22} \\
+                                                                                                 a_{31} & a_{32}
+                                                                                               \end{vmatrix}                   \\
+                                      & = a_{11} (a_{22} |a_{33}| - a_{23} |a_{32}|) - a_{12} (a_{21} |a_{33} - a_{23} |a_{31}|) \\
+                                      & \qquad + a_{13} (a_{21} |a_{32}| - a_{22} |a_{31}|)
+        \end{align*}
+\end{itemize}
+
 \end{document}
