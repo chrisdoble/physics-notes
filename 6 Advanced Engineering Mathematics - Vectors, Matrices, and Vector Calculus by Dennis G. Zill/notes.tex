@@ -444,4 +444,16 @@
   \item The eigenvalues of a triangular matrix are the entries along the main diagonal.
 \end{itemize}
 
+\subsection{Powers of Matrices}
+
+\begin{itemize}
+  \item Any $n \times n$ matrix $\mathbf{A}$ satisfies its own characteristic equation, i.e. $\lambda$ can be replaced with $\mathbf{A}$ in the characteristic equation.
+
+  \item This gives us an expression for $\mathbf{A}^n$ as a linear combination \[\mathbf{A}^n = c_0 \mathbf{I} + c_1 \mathbf{A} + c_2 \mathbf{A}^2 + \cdots + c_{n - 1} \mathbf{A}^{n - 1}.\] If we multiply this expression by $\mathbf{A}$ we get an expression for $\mathbf{A}^{n + 1}$ and we can replace the $\mathbf{A}^n$ term with the original expression. This can be repeated an arbitrary number of times to find expressions for any power of $\mathbf{A}$.
+
+  \item The constants of the linear combination can be determined by substituting the matrix's eigenvalues into the characteristic equation, resulting in a linear system where the constants are the variables. Solving the system determines the constants.
+
+  \item If $\mathbf{A}$ is a nonsingular matrix, the fact that it satisfies its own characteristic equation can be used to determine its inverse. This can be achieved by replacing $\lambda$ with $\mathbf{A}$ in its characteristic equation, solving for $\mathbf{I}$, and multiplying both sides by $\mathbf{A}^{-1}$. This results in an expression for $\mathbf{A}^{-1}$ as a linear combination of powers of $\mathbf{A}$.
+\end{itemize}
+
 \end{document}
