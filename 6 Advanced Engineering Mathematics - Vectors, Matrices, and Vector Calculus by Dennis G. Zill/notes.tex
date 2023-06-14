@@ -405,4 +405,19 @@
   \item A homogeneous system of linear equations $\mathbf{A} \mathbf{X} = \mathbf{0}$ has only the trivial solution iff $\mathbf{A}$ is nonsingular and an infinite number of solutions iff it is singular
 \end{itemize}
 
+\subsection{Cramer’s Rule}
+
+\begin{itemize}
+  \item If $\mathbf{A}$ is the coefficient matrix of a linear system and $\det \mathbf{A} \ne 0$, then the solution of the system is given by
+
+        \begin{align*}
+          x_1 & = \frac{\det \mathbf{A}_1}{\det \mathbf{A}} \\
+          x_2 & = \frac{\det \mathbf{A}_2}{\det \mathbf{A}} \\
+          \vdots                                            \\
+          x_n & = \frac{\det \mathbf{A}_n}{\det \mathbf{A}}
+        \end{align*}
+
+        where $\mathbf{A}_n$ is the matrix obtained by replacing column $n$ of $\mathbf{A}$ with the constants of the system.
+\end{itemize}
+
 \end{document}

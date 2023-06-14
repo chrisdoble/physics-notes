@@ -2073,4 +2073,70 @@ $-105$
 
 Only trivial solution
 
+\subsection{Cramer’s Rule}
+
+\subsubsection{}
+
+\begin{align*}
+  \mathbf{A}        & = \begin{pmatrix}
+                          -3 & 1  \\
+                          2  & -4
+                        \end{pmatrix} \\
+  \mathbf{B}        & = \begin{pmatrix}
+                          3 \\
+                          -6
+                        \end{pmatrix} \\
+  \det \mathbf{A}   & = 10             \\
+  \det \mathbf{A}_1 & = -6             \\
+  \det \mathbf{A}_2 & = 12             \\
+  x_1               & = -\frac{3}{5}   \\
+  x_2               & = \frac{6}{5}
+\end{align*}
+
+\setcounter{subsubsection}{10}
+\subsubsection{}
+
+\begin{align*}
+  \mathbf{A}        & = \begin{pmatrix}
+                          2 - k & k     \\
+                          k     & 3 - k
+                        \end{pmatrix}           \\
+  \mathbf{B}        & = \begin{pmatrix}
+                          4 \\
+                          3
+                        \end{pmatrix}           \\
+  \det \mathbf{A}   & = (2 - k) (3 - k) - k^2    \\
+                    & = 6 - 5 k                  \\
+  \det \mathbf{A}_1 & = 4 (3 - k) - 3 k          \\
+                    & = 12 - 7 k                 \\
+  \det \mathbf{A}_2 & = 3 (2 - k) - 4 k          \\
+                    & = 6 - 7 k                  \\
+  x_1               & = \frac{12 - 7 k}{6 - 5 k} \\
+  x_2               & = \frac{6 - 7 k}{6 - 5 k}
+\end{align*}
+
+The system is inconsistent when $k = \frac{6}{5}$
+
+\setcounter{subsubsection}{12}
+\subsubsection{}
+
+\begin{align*}
+  \mathbf{A}        & = \begin{pmatrix}
+                          \cos \ang{25} & -\cos \ang{15} \\
+                          \sin \ang{25} & \sin \ang{15}
+                        \end{pmatrix}                            \\
+  \mathbf{B}        & = \begin{pmatrix}
+                          0 \\
+                          300
+                        \end{pmatrix}                                            \\
+  \det \mathbf{A}   & = \cos \ang{25} \sin \ang{15} + \cos \ang{15} \sin \ang{25} \\
+                    & = \sin \ang{40}                                             \\
+  \det \mathbf{A}_1 & = 300 \cos \ang{15}                                         \\
+  \det \mathbf{A}_2 & = 300 \cos \ang{25}                                         \\
+  T_1               & = \frac{300 \cos \ang{15}}{\sin \ang{40}}                   \\
+                    & \approx \qty{451}{lb}                                       \\
+  T_2               & = \frac{300 \cos \ang{25}}{\sin \ang{40}}                   \\
+                    & \approx \qty{423}{lb}
+\end{align*}
+
 \end{document}
