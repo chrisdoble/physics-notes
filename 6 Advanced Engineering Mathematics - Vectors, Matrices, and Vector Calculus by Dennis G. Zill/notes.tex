@@ -6,6 +6,7 @@
 \usepackage{siunitx} % For units
 \graphicspath{{./images/}}
 
+\newcommand{\adj}{\operatorname{adj}}
 \newcommand{\rank}{\operatorname{rank}}
 \newcommand{\Span}{\operatorname{Span}}
 \newenvironment{amatrix}[1]{%
@@ -361,6 +362,47 @@
   \item The determinant of a triangular matrix is the product of the entries along the main diagonal
 
   \item Sometimes it's faster to calculate a matrix's determinant by reducing it to row-echelon form and multiplying the elements along the main diagonal than performing cofactor expansion
+
+\item Multiplying the entries of a row/column with the cofactors of another row/colum and summing the results always equals zero
+\end{itemize}
+
+\subsection{Inverse of a Matrix}
+
+\begin{itemize}
+  \item Given an $n \times n$ matrix $\mathbf{A}$, if there exists another $n \times n$ matrix $\mathbf{B}$ such that $\mathbf{A} \mathbf{B} = \mathbf{B} \mathbf{A} = \mathbf{I}$ then $\mathbf{A}$ is said to be \textbf{nonsingular} or \textbf{invertible} and $\mathbf{B}$ is said to be the unique \textbf{inverse} of $\mathbf{A}$, i.e. $\mathbf{B} = \mathbf{A}^{-1}$
+
+  \item Some $n \times n$ matrices don't have an inverse and are called \textbf{singular}
+
+  \item The \textbf{adjoint} of an $n \times n$ matrix $\mathbf{A}$ is the transpose of the matrix of cofactors corresponding to the entries of $\mathbf{A}$ \[\adj \mathbf{A} = \begin{pmatrix}
+            C_{11} & C_{12} & \ldots & C_{1n} \\
+            C_{21} & C_{22} & \ldots & C_{2n} \\
+            \vdots &        &        & \vdots \\
+            C_{n1} & C_{n2} & \ldots & C_{nn}
+          \end{pmatrix}^T = \begin{pmatrix}
+            C_{11} & C_{21} & \ldots & C_{n1} \\
+            C_{12} & C_{22} & \ldots & C_{n2} \\
+            \vdots &        &        & \vdots \\
+            C_{1n} & C_{2n} & \cdots & C_{nn}
+          \end{pmatrix}\]
+
+  \item If $\mathbf{A}$ is an $n \times n$ matrix and $\det \mathbf{A} \ne 0$ then \[\mathbf{A}^{-1} = \left( \frac{1}{\det \mathbf{A}} \right) \adj \mathbf{A}\]
+
+  \item From the above, the inverse of a $2 \times 2$ matrix $\mathbf{A}$ is \[\mathbf{A}^{-1} = \frac{1}{\det \mathbf{A}} \begin{pmatrix}
+            a_{22}  & -a_{12} \\
+            -a_{21} & a_{11}
+          \end{pmatrix}\]
+
+  \item An $n \times n$ matrix $\mathbf{A}$ is nonsingular (has an inverse) if $\det \mathbf{A} \ne 0$
+\end{itemize}
+
+\includegraphics[scale=0.443]{row-operations-inverse}
+
+\begin{itemize}
+\item Inverse matrices can be used to solve linear systems. If $\mathbf{A} \mathbf{X} = \mathbf{B}$ and $\mathbf{A}$ is invertible, then \[\mathbf{A}^{-1} \mathbf{A} \mathbf{X} = \mathbf{A}^{-1} \mathbf{B} \Rightarrow \mathbf{X} = \mathbf{A}^{-1} \mathbf{B}\]
+
+\item When $\det \mathbf{A} \ne 0$ the solution of the system $\mathbf{A} \mathbf{X} = \mathbf{B}$ is unique
+
+\item A homogeneous system of linear equations $\mathbf{A} \mathbf{X} = \mathbf{0}$ has only the trivial solution iff $\mathbf{A}$ is nonsingular and an infinite number of solutions iff it is singular
 \end{itemize}
 
 \end{document}
