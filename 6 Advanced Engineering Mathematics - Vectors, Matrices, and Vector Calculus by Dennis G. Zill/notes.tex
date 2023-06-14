@@ -420,4 +420,28 @@
         where $\mathbf{A}_n$ is the matrix obtained by replacing column $n$ of $\mathbf{A}$ with the constants of the system.
 \end{itemize}
 
+\subsection{The Eigenvalue Problem}
+
+\begin{itemize}
+  \item If $\mathbf{A}$ is an $n \times n$ matrix, a number $\lambda$ is said to be an \textbf{eigenvalue} of $\mathbf{A}$ if there exists a nonzero solution vector $\mathbf{K}$ of the linear system $\mathbf{A} \mathbf{K} = \lambda \mathbf{K}$. The solution vector $\mathbf{K}$ is said to be an \textbf{eigenvector} corresponding to the eigenvalue $\lambda$.
+
+  \item Rearranging the equation above we find \[(\mathbf{A} - \lambda \mathbf{I}) \mathbf{K} = \mathbf{0}\] which only has nontrivial solutions if $\det (\mathbf{A} - \lambda \mathbf{I}) = 0$.
+
+  \item Calculating $\det (\mathbf{A} - \lambda \mathbf{I})$ results in an $n$-th degree polynomial in $\lambda$ called the \textbf{characteristic equation} of $\mathbf{A}$, the solutions to which are its eigenvalues.
+
+  \item The eigenvector associated with a particular eigenvalue can be found by applying Gauss-Jordan elimination to the augmented matrix $(\mathbf{A} - \lambda \mathbf{I} | \mathbf{0})$.
+
+  \item A nonzero constant multiple of an eigenvector is another eigenvector.
+
+  \item If $\lambda$ is a complex eigenvalue of a matrix, then its conjugate $\lambda*$ is also an eigenvalue. If $\mathbf{K}$ is an eigenvector corresponding to $\lambda$ then its conjugate $\mathbf{K}*$ is an eigenvector corresponding to $\lambda*$.
+
+  \item $\lambda = 0$ is an eigenvalue of a matrix iff the matrix isn't invertible
+
+  \item The determinant of a matrix is the product of its eigenvalues
+
+  \item If $\lambda$ is an eigenvalue of a matrix $\mathbf{A}$ with eigenvector $\mathbf{K}$, then $1 / \lambda$ is an eigenvalue of $\mathbf{A}^{-1}$ with the same eigenvector.
+
+  \item The eigenvalues of a triangular matrix are the entries along the main diagonal.
+\end{itemize}
+
 \end{document}
