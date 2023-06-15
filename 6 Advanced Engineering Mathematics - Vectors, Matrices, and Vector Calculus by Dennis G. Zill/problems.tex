@@ -6,6 +6,7 @@
 \usepackage{siunitx} % For units
 \graphicspath{{./images/}}
 
+\newcommand{\proj}{\operatorname{proj}}
 \newcommand{\rank}{\operatorname{rank}}
 \newenvironment{amatrix}[1]{%
   \left(\begin{array}{@{}*{#1}{c}|c@{}}
@@ -2485,5 +2486,162 @@ Nonsingular
                                                -\frac{1}{10} & \frac{1}{5}
                                              \end{pmatrix}
 \end{align*}
+
+\subsection{Orthogonal Matrices}
+
+\setcounter{subsubsection}{4}
+\subsubsection{}
+
+Orthogonal
+
+\setcounter{subsubsection}{6}
+\subsubsection{}
+
+Orthogonal
+
+\setcounter{subsubsection}{8}
+\subsubsection{}
+
+Not orthogonal
+
+\setcounter{subsubsection}{10}
+\subsubsection{}
+
+\begin{align*}
+  \mathbf{A}                             & = \begin{pmatrix}
+                                               1 & 9 \\
+                                               9 & 1
+                                             \end{pmatrix}                 \\
+  \det (\mathbf{A} - \lambda \mathbf{I}) & = (1 - \lambda)^2 - 81           \\
+                                         & = \lambda^2 - 2 \lambda + 1 - 81 \\
+                                         & = \lambda^2 - 2 \lambda - 80     \\
+                                         & = (\lambda - 10) (\lambda + 8)
+\end{align*}
+
+\[\begin{pmatrix}
+    9 & 9 \\
+    9 & 9
+  \end{pmatrix}\]
+
+\[\mathbf{X}_1 = \begin{pmatrix}
+    1 \\
+    -1
+  \end{pmatrix}\]
+
+\[\begin{pmatrix}
+    -9 & 9  \\
+    9  & -9
+  \end{pmatrix}\]
+
+\[\mathbf{X}_2 = \begin{pmatrix}
+    1 \\
+    1
+  \end{pmatrix}\]
+
+\[\begin{pmatrix}
+    \frac{1}{\sqrt{2}}  & \frac{1}{\sqrt{2}} \\
+    -\frac{1}{\sqrt{2}} & \frac{1}{\sqrt{2}}
+  \end{pmatrix}\]
+
+\setcounter{subsubsection}{12}
+\subsubsection{}
+
+\begin{align*}
+  \mathbf{A}                             & = \begin{pmatrix}
+                                               1 & 3 \\
+                                               3 & 9
+                                             \end{pmatrix}                          \\
+  \det (\mathbf{A} - \lambda \mathbf{I}) & = (1 - \lambda) (9 - \lambda) - 9         \\
+                                         & = 9 - \lambda - 9 \lambda + \lambda^2 - 9 \\
+                                         & = \lambda^2 - 10 \lambda                  \\
+                                         & = \lambda (\lambda - 10)
+\end{align*}
+
+\[\begin{pmatrix}
+    1 & 3 \\
+    3 & 9
+  \end{pmatrix}\]
+
+\[\mathbf{X}_1 = \begin{pmatrix}
+    3 \\
+    -1
+  \end{pmatrix}\]
+
+\[\begin{pmatrix}
+    -9 & 3  \\
+    3  & -1
+  \end{pmatrix}\]
+
+\[\mathbf{X}_2 = \begin{pmatrix}
+    1 \\
+    3
+  \end{pmatrix}\]
+
+\[\begin{pmatrix}
+    \frac{3}{\sqrt{10}}  & \frac{1}{\sqrt{10}} \\
+    -\frac{1}{\sqrt{10}} & \frac{3}{\sqrt{10}}
+  \end{pmatrix}\]
+
+\setcounter{subsubsection}{18}
+\subsubsection{}
+
+\begin{align*}
+  \frac{3}{5} a + \frac{4}{5} b & = 0              \\
+  3 a                           & = -4 b           \\
+  a                             & = -\frac{4}{3} b \\
+  a                             & = -\frac{4}{5}   \\
+  b                             & = \frac{3}{5}
+\end{align*}
+
+\setcounter{subsubsection}{20}
+\subsubsection{}
+
+\begin{enumerate}
+  \setcounter{enumi}{1}
+  \item $\lambda_1 = -2, \lambda_2 = -2, \lambda_3 = 4$
+
+  \item
+
+        \begin{align*}
+          \mathbf{W}_1   & = \begin{pmatrix}
+                               \frac{1}{\sqrt{2}}  \\
+                               -\frac{1}{\sqrt{2}} \\
+                               0
+                             \end{pmatrix}                                           \\
+          \mathbf{V}_2   & = \mathbf{K}_2 - (\mathbf{K}_2 \cdot \mathbf{W}_1) \mathbf{W}_1               \\
+                         & = \begin{pmatrix}
+                               1 \\
+                               0 \\
+                               -1
+                             \end{pmatrix} - \frac{1}{\sqrt{2}} \begin{pmatrix}
+                                                                  \frac{1}{\sqrt{2}}  \\
+                                                                  -\frac{1}{\sqrt{2}} \\
+                                                                  0
+                                                                \end{pmatrix}        \\
+                         & = \begin{pmatrix}
+                               \frac{1}{2} \\
+                               \frac{1}{2} \\
+                               -1
+                             \end{pmatrix}                                                              \\
+          |\mathbf{V}_2| & = \sqrt{\left( \frac{1}{2} \right)^2 + \left( \frac{1}{2} \right)^2 + (-1)^2} \\
+                         & = \sqrt{\frac{3}{2}}                                                          \\
+          \mathbf{W}_2   & = \sqrt{\frac{2}{3}} \begin{pmatrix}
+                                                  \frac{1}{2} \\
+                                                  \frac{1}{2} \\
+                                                  -1
+                                                \end{pmatrix}                                           \\
+                         & = \begin{pmatrix}
+                               \frac{1}{\sqrt{6}} \\
+                               \frac{1}{\sqrt{6}} \\
+                               -\sqrt{\frac{2}{3}}
+                             \end{pmatrix}
+        \end{align*}
+
+        \[\begin{pmatrix}
+            \frac{1}{\sqrt{2}}  & \frac{1}{\sqrt{6}}  & \frac{1}{\sqrt{3}} \\
+            -\frac{1}{\sqrt{2}} & \frac{1}{\sqrt{6}}  & \frac{1}{\sqrt{3}} \\
+            0                   & -\sqrt{\frac{2}{3}} & \frac{1}{\sqrt{3}}
+          \end{pmatrix}\]
+\end{enumerate}
 
 \end{document}
