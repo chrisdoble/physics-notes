@@ -502,4 +502,36 @@
   \item The \textbf{inverse power method} is a way to find the eigenvalue with smallest absolute value. If $\mathbf{A}$ is nonsingular then the eigenvalues of $\mathbf{A}^{-1}$ are the reciprocals of the eigenvalues of $\mathbf{A}$. This means the eigenvalue of $\mathbf{A}$ with smallest absolute value is the dominant eigenvalue of $\mathbf{A}^{-1}$ and can be found via power iteration.
 \end{itemize}
 
+\subsection{Diagonalization}
+
+\begin{itemize}
+  \item If an $n \times n$ nonsingular matrix $\mathbf{P}$ can be found so that $\mathbf{P}^{-1} \mathbf{A} \mathbf{P} = \mathbf{D}$ is a diagonal matrix, then we say that the $n \times n$ matrix $\mathbf{A}$ can be \textbf{diagonalised}, or is \textbf{diagonalisable}, and that \textbf{$\mathbf{P}$ diagonalises $\mathbf{A}$}.
+
+  \item An $n \times n$ matrix $\mathbf{A}$ is diagonalisable iff $\mathbf{A}$ has $n$ linearly independent eigenvectors $\mathbf{K}_1, \mathbf{K}_2, \ldots, \mathbf{K}_n$. If we let $\mathbf{P} = \begin{pmatrix}
+            \mathbf{K}_1 & \mathbf{K}_2 & \cdots & \mathbf{K}_n
+          \end{pmatrix}$ then
+
+        \begin{align*}
+          \mathbf{A P} & = \begin{pmatrix}
+                             \mathbf{A K_1} & \mathbf{A K_2} & \cdots & \mathbf{A K_n}
+                           \end{pmatrix}                         \\
+                       & = \begin{pmatrix}
+                             \lambda_1 \mathbf{K}_1 & \lambda_2 \mathbf{K}_2 & \cdots & \lambda_n \mathbf{K}_n
+                           \end{pmatrix} \\
+                       & = \begin{pmatrix}
+                             \mathbf{K}_1 & \mathbf{K}_2 & \cdots & \mathbf{K}_n
+                           \end{pmatrix} \begin{pmatrix}
+                                           \lambda_1 & 0         & \cdots & 0         \\
+                                           0         & \lambda_2 & \cdots & 0         \\
+                                           \vdots    &           & \ddots & \vdots    \\
+                                           0         & 0         & \cdots & \lambda_n
+                                         \end{pmatrix}                          \\
+                       & = \mathbf{P} \mathbf{D}
+        \end{align*}
+
+  \item If an $n \times n$ matrix $\mathbf{A}$ has $n$ distinct eigenvalues, it is diagonalisable. If it has fewer than $n$ distinct eigenvalues it may still be diagonalisable.
+
+  \item Symmetric matrices with real entries are always diagonalisable.
+\end{itemize}
+
 \end{document}
