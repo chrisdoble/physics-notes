@@ -470,4 +470,36 @@
   \item If an $n \times n$ matrix $\mathbf{A}$ has $n$ distinct eigenvalues, an orthogonal matrix can be formed by normalizing its eigenvectors and using them as column vectors in a new matrix.
 \end{itemize}
 
+\subsection{Approximation of Eigenvalues}
+
+\begin{itemize}
+  \item Let $\lambda_1, \lambda_2, \ldots, \lambda_n$ denote the eigenvalues of an $n \times n$ matrix $\mathbf{A}$. The eigenvalue $\lambda_k$ is said to be the \textbf{dominant eigenvalue} of $\mathbf{A}$ if \[|\lambda_k| > |\lambda_i|, i = 1, 2, \ldots, n, i \ne k.\] An eigenvector corresponding to $\lambda_k$ is called the \textbf{dominant eigenvector} of $\mathbf{A}$.
+
+  \item \textbf{Power iteration} is a method for approximating the dominant eigenvector of an $n \times n$ matrix $\mathbf{A}$.
+
+        \begin{enumerate}
+          \item Choose an arbitrary starting vector $\mathbf{X}_0$
+
+          \item An approximation of the dominant eigenvector is $\mathbf{X}_m = \mathbf{A}^m \mathbf{X}_0$
+
+          \item An approximation of the dominant eigenvalue is \[\lambda \approx \frac{\mathbf{A} \mathbf{X}_m \cdot \mathbf{X}_m}{\mathbf{X}_m \cdot \mathbf{X}_m}\]
+        \end{enumerate}
+
+  \item If $\mathbf{X}_m$ is computed via repeated multiplications of $\mathbf{A}$ rather than computing $\mathbf{A}^m$ in advance the entries of the intermediary vectors can become quite large and pose problems for computers. This can be avoided by normalising or scaling down the vectors after each iteration.
+
+  \item The \textbf{method of deflation} is a way to find nondominant eigenvalues of an $n \times n$ symmetric matrix $\mathbf{A}$ that has eigenvalues \\ $|\lambda_1| > |\lambda_2| > |\lambda_3| \ge \cdots \ge |\lambda_n|$.
+
+        \begin{enumerate}
+          \item Compute the dominant eigenvalue $\lambda_1$ and normalised eigenvector $\mathbf{K}_1$ of the matrix using power iteration.
+
+          \item Compute the matrix $\mathbf{B} = \mathbf{A} - \lambda_1 \mathbf{K}_1 \mathbf{K}_1^T$ which has eigenvalues \\ $0, \lambda_2, \lambda_3, \cdots, \lambda_n$
+
+          \item Apply power iteration to find $\lambda_2$ and $\mathbf{K}_2$
+
+          \item Repeat steps 2 and 3 to compute subsequent eigenvalues
+        \end{enumerate}
+
+  \item The \textbf{inverse power method} is a way to find the eigenvalue with smallest absolute value. If $\mathbf{A}$ is nonsingular then the eigenvalues of $\mathbf{A}^{-1}$ are the reciprocals of the eigenvalues of $\mathbf{A}$. This means the eigenvalue of $\mathbf{A}$ with smallest absolute value is the dominant eigenvalue of $\mathbf{A}^{-1}$ and can be found via power iteration.
+\end{itemize}
+
 \end{document}
