@@ -534,4 +534,53 @@
   \item Symmetric matrices with real entries are always diagonalisable.
 \end{itemize}
 
+\subsection{LU-Factorisation}
+
+\begin{itemize}
+  \item If an $n \times n$ matrix $\mathbf{A}$ can be written as a product $\mathbf{A = L U}$ where $\mathbf{L}$ and $\mathbf{U}$ are lower and upper triangular matrices, respectively, then we say that $\mathbf{A = L U}$ is an \textbf{LU-factorisation} of $\mathbf{A}$.
+
+  \item An $n \times n$ matrix $\mathbf{A}$ can have several LU-factorisations
+
+  \item \textbf{Doolittle's method} is a method of performing LU-factorisation.
+
+        \begin{enumerate}
+          \item Assume the diagonal entries of $\mathbf{L}$ are $1$, i.e. $l_{ii} = 1, i = 1, 2, \ldots, n$
+
+          \item Multiply $\mathbf{L}$ and $\mathbf{U}$ (with placeholder entries)
+
+          \item Equate the resulting entries with those of the original matrix — this gives $n^2$ equations, but each equation only uses variables determined in previous equations allowing the system to be solved
+        \end{enumerate}
+
+  \item An alternative algorithm for Doolittle's method is
+
+        \begin{enumerate}
+          \item Perform elementary row operations on $\mathbf{A}$ until you have an upper triangular matrix $\mathbf{U}$
+
+          \item Each time you add a $c$ times row $i$ to row $j$, record the $-c$ in the $j$-th row and $i$-th column of an identity matrix
+
+          \item The matrix from step 2 is $\mathbf{L}$
+        \end{enumerate}
+
+  \item Given a linear system $\mathbf{A X = B}$, if $\mathbf{A}$ has an LU-factorisation the system can be solved as follows:
+
+        \begin{enumerate}
+          \item Rewrite the system $\mathbf{L U X} = B$
+
+          \item Let $\mathbf{U X = Y}$ where \[\mathbf{Y} = \begin{pmatrix}
+                    y_1    \\
+                    y_2    \\
+                    \vdots \\
+                    y_n
+                  \end{pmatrix}\]
+
+          \item Solve $\mathbf{L Y = B}$ via forward substitution, i.e. find $y_1$, use that to find $y_2$, etc.
+
+          \item Substitute the values of $y_n$ into $\mathbf{U X = Y}$ and solve via back substitution, i.e. find $x_n$, use that to find $x_{n - 1}$, etc.
+        \end{enumerate}
+
+  \item If a matrix $\mathbf{A}$ has an LU-factorisation $\mathbf{A = L U}$ then the determinant of $\mathbf{A}$ can be calculated as $\det \mathbf{A} = \det \mathbf{L} \cdot \det \mathbf{L}$ which is simply the product of the diagonal entries of $\mathbf{L}$ and $\mathbf{U}$
+
+  \item If row interchanges are required to arrive at $\mathbf{U}$ then an LU-factorisation doesn't exist
+\end{itemize}
+
 \end{document}
