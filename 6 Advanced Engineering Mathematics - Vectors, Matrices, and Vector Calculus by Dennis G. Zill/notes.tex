@@ -589,4 +589,28 @@
   \item If you define a mapping between a set of characters allowed in messages and a list of integers, messages can be represented as an $n \times m$ matrix, a nonsingular $n \times n$ matrix $\mathbf{A}$ can be used as an encryption key, and its inverse $\mathbf{A}^{-1}$ can be used as a decryption key.
 \end{itemize}
 
+\section{Vector Calculus}
+
+\subsection{Vector Functions}
+
+\begin{itemize}
+  \item A curve $C$ in the $xy$-plane is a set of ordered pairs $(x, y)$. We say $C$ is a \textbf{parametric curve} if the $x$- and $y$-coordinates of a point on the curve are defined by a pair of functions $x = f(t)$ and $y = g(t)$ that are continuous on some interval $a \le t \le b$.
+
+  \item If $\mathbf{r}(t) = \langle f(t), g(t), h(t) \rangle$, then $\mathbf{r}'(t) = \langle f'(t), g'(t), h'(t) \rangle$.
+
+  \item If $\mathbf{r}$ is a differentiable vector function and $s = u(t)$ is a differentiable scalar function, then the derivative of $\mathbf{r}(s)$ with respect to $t$ is \[\frac{d \mathbf{r}}{d t} = \frac{d \mathbf{r}}{d s} \frac{d s}{d t} = \mathbf{r}'(s) u'(t).\]
+\end{itemize}
+
+\includegraphics[scale=0.443]{vector-differentiation}
+
+\begin{itemize}
+  \item Because the cross product of two vectors isn't commutative, the order in which $\mathbf{r}_1$ and $\mathbf{r}_2$ appear above is important.
+
+  \item The indefinite integral of a vector function is defined as \[\int \mathbf{r}(t) \,dt = \langle \int f(t) \,dt, \int g(t) \,dt, \int h(t) \,dt \rangle = \mathbf{R}(t) + \mathbf{c}\]
+
+  \item The definite integral of a vector function is defined as \[\int_a^b \mathbf{r}(t) \,dt = \langle \int_a^b f(t) \,dt, \int_a^b g(t) \,dt, \int_a^b h(t) \,dt \rangle = \mathbf{R}\]
+
+  \item The length of the curve traced out by a vector function from $t = a$ to $t = b$ is \[s = \int_a^b \sqrt{f'(t)^2 + g'(t)^2 + h'(t)^2} \,dt = \int_a^b ||\mathbf{r}'(t)|| \,dt\]
+\end{itemize}
+
 \end{document}

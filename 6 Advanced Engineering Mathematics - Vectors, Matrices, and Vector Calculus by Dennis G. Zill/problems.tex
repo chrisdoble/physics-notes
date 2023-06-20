@@ -3830,4 +3830,167 @@ The matrix is nonsingular so the system only has the trivial solution.
                                     \end{pmatrix}
 \end{align*}
 
+\section{Vector Calculus}
+
+\subsection{Vector Functions}
+
+\setcounter{subsubsection}{10}
+\subsubsection{}
+
+\begin{align*}
+  x          & = t                           \\
+  y          & = t                           \\
+  z          & = 2 t^2                       \\
+  \mathbf{r} & = \langle t, t, 2 t^2 \rangle
+\end{align*}
+
+\setcounter{subsubsection}{12}
+\subsubsection{}
+
+\begin{align*}
+  x                & = 3 \cos t                                       \\
+  z                & = 9 - 9 \cos^2 t                                 \\
+                   & = 9 (1 - \cos^2 t)                               \\
+                   & = 9 \sin^2 t                                     \\
+  9 \cos^2 t + y^2 & = 9                                              \\
+  y^2              & = 9 \sin^2 t                                     \\
+  y                & = 3 \sin t                                       \\
+  \mathbf{r}       & = \langle 3 \cos t, 3 \sin t, 9 \sin^2 t \rangle
+\end{align*}
+
+\setcounter{subsubsection}{14}
+\subsubsection{}
+
+\begin{align*}
+  \mathbf{r}(t)                          & = \langle \frac{\sin 2 t}{t}, (t - 2)^5, t \ln t \rangle \\
+  \lim_{t \rightarrow 0^+} \mathbf{r}(t) & = \langle 2, -32, 0 \rangle
+\end{align*}
+
+\setcounter{subsubsection}{16}
+\subsubsection{}
+
+\begin{align*}
+  \mathbf{r}(t)   & = \langle \ln t, 1, 0 \rangle          \\
+  \mathbf{r}'(t)  & = \langle \frac{1}{t}, 0, 0 \rangle    \\
+  \mathbf{r}''(t) & = \langle -\frac{1}{t^2}, 0, 0 \rangle
+\end{align*}
+
+\setcounter{subsubsection}{18}
+\subsubsection{}
+
+\begin{align*}
+  \mathbf{r}(t)   & = \langle t e^{2 t}, t^3, 4 t^2 - t \rangle             \\
+  \mathbf{r}'(t)  & = \langle e^{2 t} + 2 t e^{2 t}, 3 t^2, 8 t - 1 \rangle \\
+  \mathbf{r}''(t) & = \langle 4 e^{2 t} + 4 t e^{2 t}, 6 t, 8 \rangle
+\end{align*}
+
+\setcounter{subsubsection}{24}
+\subsubsection{}
+
+\begin{align*}
+  x & = 2 + t             \\
+  y & = 2 + 2 t           \\
+  z & = \frac{8}{3} + 4 t
+\end{align*}
+
+\setcounter{subsubsection}{26}
+\subsubsection{}
+
+\[\frac{d}{d t} [\mathbf{r}(t) \times \mathbf{r}'(t)] = \mathbf{r}(t) \times \mathbf{r}''(t)\]
+
+\setcounter{subsubsection}{28}
+\subsubsection{}
+
+\begin{align*}
+  \frac{d}{d t} [\mathbf{r}(t) \cdot (\mathbf{r}'(t) \times \mathbf{r}''(t))] & = \mathbf{r}(t) \cdot \frac{d}{d t} (\mathbf{r}'(t) \times \mathbf{r}''(t)) \\
+                                                                              & = \mathbf{r}(t) \cdot (\mathbf{r}'(t) \times \mathbf{r}'''(t))
+\end{align*}
+
+\setcounter{subsubsection}{30}
+\subsubsection{}
+
+\[\frac{d}{d t} \left[ \mathbf{r}_1(2 t) + \mathbf{r}_2 \left( \frac{1}{t} \right) \right] = 2 \mathbf{r}_1'(2 t) - \frac{1}{t^2} \mathbf{r}_2' \left( \frac{1}{t} \right)\]
+
+\setcounter{subsubsection}{32}
+\subsubsection{}
+
+\[\int_{-1}^2 \langle t, 3 t^2, 4 t^3 \rangle \,dt = \langle \frac{3}{2}, 9, 15 \rangle\]
+
+\setcounter{subsubsection}{34}
+\subsubsection{}
+
+\[\int \langle t e^t, -e^{-2 t}, t e^{t^2} \rangle \,dt = \langle e^t (t - 1), \frac{1}{2} e^{-2 t}, \frac{1}{2} e^{t^2} \rangle + \mathbf{c}\]
+
+\setcounter{subsubsection}{36}
+\subsubsection{}
+
+\begin{align*}
+  \mathbf{r}(t) & = \langle 6 t, 3 t^2, t^3 \rangle + \mathbf{c} \\
+  \mathbf{r}(0) & = \mathbf{r}_0                                 \\
+  \mathbf{c}    & = \mathbf{r}_0                                 \\
+  \mathbf{r}(t) & = \langle 6 t + 1, 3 t^2 - 2, t^3 + 1 \rangle
+\end{align*}
+
+\setcounter{subsubsection}{38}
+\subsubsection{}
+
+\begin{align*}
+  \mathbf{r}'(t) & = \langle 6 (t^2 - 1), 7 - 6 \sqrt{t}, 2 (t - 1) \rangle                                                                \\
+  \mathbf{r}(t)  & = \langle 6 \left( \frac{1}{3} t^3 - t + 1 \right), 7 t - 4 t^{3 / 2} - 3, 2 \left( \frac{1}{2} t^2 - t \right) \rangle
+\end{align*}
+
+\setcounter{subsubsection}{40}
+\subsubsection{}
+
+\begin{align*}
+  \mathbf{r}'(t) & = \langle -a \sin t, a \cos t, c \rangle                       \\
+  s              & = \int_0^{2 \pi} ||\mathbf{r}'(t)|| \,dt                       \\
+                 & = \int_0^{2 \pi} \sqrt{a^2 \sin^2 t + a^2 \cos^2 t + c^2} \,dt \\
+                 & = \int_0^{2 \pi} \sqrt{a^2 + c^2} \,dt                         \\
+                 & = 2 \pi \sqrt{a^2 + c^2}
+\end{align*}
+
+\setcounter{subsubsection}{42}
+\subsubsection{}
+
+\begin{align*}
+  \mathbf{r}'(t) & = \langle e^t (\cos 2 t - 2 \sin 2 t), e^t (\sin 2 t + 2 \cos 2 t), e^t \rangle                          \\
+  s              & = \int_0^{3 \pi} ||\mathbf{r}'(t)|| \,dt                                                                 \\
+                 & = \int_0^{3 \pi} \sqrt{(e^t (\cos 2 t - 2 \sin 2 t))^2 + (e^t (\sin 2 t + 2 \cos 2 t))^2 + (e^t)^2} \,dt \\
+                 & = \int_0^{3 \pi} e^t \sqrt{(\cos 2 t - 2 \sin 2 t)^2 + (\sin 2 t + 2 \cos 2 t)^2 + 1} \,dt               \\
+                 & = \int_0^{3 \pi} e^t \sqrt{5 \cos^2 2 t + 5 \sin^2 2 t + 1} \,dt                                         \\
+                 & = \sqrt{6} \int_0^{3 \pi} e^t \,dt                                                                       \\
+                 & = \sqrt{6} (e^{3 \pi} - 1)
+\end{align*}
+
+\setcounter{subsubsection}{44}
+\subsubsection{}
+
+\begin{align*}
+  \mathbf{r}(t)      & = \langle a \cos t, a \sin t \rangle                     \\
+  \mathbf{r}'(t)     & = \langle -a \sin t, a \cos t \rangle                    \\
+  ||\mathbf{r}'(t)|| & = \sqrt{a^2 \sin^2 t + a^2 \cos^2 t}                     \\
+                     & = a                                                      \\
+  s                  & = \int_0^t a \,du                                        \\
+                     & = a t                                                    \\
+  t                  & = \frac{s}{a}                                            \\
+  \mathbf{r}(s)      & = \langle a \cos \frac{s}{a}, a \sin \frac{s}{a} \rangle \\
+  \mathbf{r}'(s)     & = \langle -\sin \frac{s}{a}, \cos \frac{s}{a} \rangle    \\
+  ||\mathbf{r}'(s)|| & = \sqrt{\sin^2 \frac{s}{a} + \cos^2 \frac{s}{a}}         \\
+                     & = 1
+\end{align*}
+
+\setcounter{subsubsection}{46}
+\subsubsection{}
+
+\begin{align*}
+  ||\mathbf{r}(t)||                                                                      & = c \\
+  \sqrt{f(t)^2 + g(t)^2 + h(t)^2}                                                        & = c \\
+  \frac{1}{\sqrt{f(t)^2 + g(t)^2 + h(t)^2}} (2 f(t) f'(t) + 2 g(t) g'(t) + 2 h(t) h'(t)) & = 0 \\
+  \frac{2 (f(t) f'(t) + g(t) g'(t) + h(t) h'(t))}{||\mathbf{r}(t)||}                     & = 0 \\
+  \mathbf{r}(t) \cdot \mathbf{r}'(t)                                                     & = 0
+\end{align*}
+
+Either $||\mathbf{r}'(t)|| = 0$ or they're perpendicular.
+
 \end{document}
