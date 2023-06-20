@@ -3993,4 +3993,145 @@ The matrix is nonsingular so the system only has the trivial solution.
 
 Either $||\mathbf{r}'(t)|| = 0$ or they're perpendicular.
 
+\subsection{Motion on a Curve}
+
+\subsubsection{}
+
+\begin{align*}
+  \mathbf{r}(t)      & = \langle t^2, \frac{1}{4} t^4, 0 \rangle \\
+  \mathbf{r}'(t)     & = \langle 2 t, t^3, 0 \rangle             \\
+  ||\mathbf{r}'(1)|| & = ||\langle 2, 1, 0 \rangle||             \\
+                     & = \sqrt{2^2 + 1^2 + 0^2}                  \\
+                     & = \sqrt{5}
+\end{align*}
+
+\setcounter{subsubsection}{8}
+\subsubsection{}
+
+\begin{align*}
+  \mathbf{r}(t)   & = \langle t^2, t^3 - 2 t, t^2 - 5 t \rangle \\
+  z               & = 0                                         \\
+  t^2 - 5 t       & = 0                                         \\
+  t (t - 5)       & = 0                                         \\
+  t_1             & = 0                                         \\
+  t_2             & = 5                                         \\
+  \mathbf{r}(0)   & = \langle 0, 0, 0 \rangle                   \\
+  \mathbf{r}(5)   & = \langle 25, 115, 0 \rangle                \\
+  \mathbf{r}'(t)  & = \langle 2 t, 3 t^2 - 2, 2 t - 5 \rangle   \\
+  \mathbf{r}'(0)  & = \langle 0, -2, -5 \rangle                 \\
+  \mathbf{r}'(5)  & = \langle 10, 73, 5 \rangle                 \\
+  \mathbf{r}''(t) & = \langle 2, 6 t, 2 \rangle                 \\
+  \mathbf{r}''(0) & = \langle 2, 0, 2 \rangle                   \\
+  \mathbf{r}''(5) & = \langle 2, 30, 2 \rangle
+\end{align*}
+
+\setcounter{subsubsection}{10}
+\subsubsection{}
+
+\begin{enumerate}
+  \item
+
+        \begin{align*}
+          \mathbf{r}''(t) & = \langle 0, -g \rangle                                     \\
+          \mathbf{r}'(t)  & = \langle 240 \sqrt{3}, 240 - g t \rangle                   \\
+          \mathbf{r}(t)   & = \langle 240 \sqrt{3} t, 240 t - \frac{1}{2} g t^2 \rangle \\
+          x(t)            & = 240 \sqrt{3} t                                            \\
+          y(t)            & = 240 t - \frac{1}{2} g t^2                                 \\
+                          & = 240 t - 16 t^2
+        \end{align*}
+
+  \item
+
+        \begin{align*}
+          240 - 32 t                    & = 0                                                   \\
+          t                             & = \frac{15}{2}                                        \\
+          y \left( \frac{15}{2} \right) & = 240 \frac{15}{2} - 16 \left( \frac{15}{2} \right)^2 \\
+                                        & = 1800 - 900                                          \\
+                                        & = \qty{900}{ft}
+        \end{align*}
+
+  \item
+
+        \begin{align*}
+          y(t)           & = 0                    \\
+          240 t - 16 t^2 & = 0                    \\
+          t (240 - 16 t) & = 0                    \\
+          t_1            & = 0                    \\
+          t_2            & = 15                   \\
+          x(15)          & = 240 \sqrt{3} (15)    \\
+                         & = 3600 \sqrt{3}        \\
+                         & \approx \qty{6235}{ft}
+        \end{align*}
+
+  \item
+
+        \begin{align*}
+          ||\mathbf{v}(15)|| & = \sqrt{(240 \sqrt{3})^2 + (240 - 32 (15))^2} \\
+                             & = \qty{480}{ft/s}
+        \end{align*}
+\end{enumerate}
+
+\setcounter{subsubsection}{22}
+\subsubsection{}
+
+\begin{align*}
+  \mathbf{r}(t) & = \langle r_0 \cos \omega t, r_0 \sin \omega t \rangle                     \\
+  \mathbf{v}(t) & = \langle -\omega r_0 \sin \omega t, \omega r_0 \cos \omega t \rangle      \\
+  v             & = ||\mathbf{v}(t)||                                                        \\
+                & = \sqrt{(-\omega r_0 \sin \omega t)^2 + (\omega r_0 \cos \omega t)^2}      \\
+                & = \omega r_0                                                               \\
+  \mathbf{a}(t) & = \langle -\omega^2 r_0 \cos \omega t, -\omega^2 r_0 \sin \omega t \rangle \\
+                & = -\omega^2 \mathbf{r}(t)                                                  \\
+  a             & = ||\mathbf{a}(t)||                                                        \\
+                & = ||-\omega^2 \mathbf{r}(t)||                                              \\
+                & = \omega^2 r_0                                                             \\
+                & = \frac{v^2}{r_0}
+\end{align*}
+
+\setcounter{subsubsection}{24}
+\subsubsection{}
+
+\begin{align*}
+  m' g & = m g - m a                            \\
+  m'   & = m \left( 1 - \frac{v^2}{g r} \right) \\
+       & \approx \qty{191.3}{lb}
+\end{align*}
+
+\setcounter{subsubsection}{26}
+\subsubsection{}
+
+\begin{align*}
+  \mathbf{v}(t)                   & = \langle 6 t^2 x, -4 t y^2, 2 t (z + 1) \rangle                        \\ \\
+  \frac{d x}{d t}                 & = 6 t^2 x                                                               \\
+  \frac{1}{x} \frac{d x}{d t}     & = 6 t^2                                                                 \\
+  \ln x                           & = 2 t^3 + c_1                                                           \\
+  x                               & = c_1 e^{2 t^3}                                                         \\ \\
+  \frac{d y}{d t}                 & = -4 t y^2                                                              \\
+  \frac{1}{y^2} \frac{d y}{d t}   & = -4 t                                                                  \\
+  -\frac{1}{y}                    & = -2 t^2 + c_2                                                          \\
+  y                               & = \frac{1}{2 t^2 + c_2}                                                 \\ \\
+  \frac{d z}{d t}                 & = 2 t (z + 1)                                                           \\
+  \frac{1}{z + 1} \frac{d z}{d t} & = 2 t                                                                   \\
+  \ln (z + 1)                     & = t^2 + c_3                                                             \\
+  z + 1                           & = c_3 e^{t^2}                                                           \\
+  z                               & = c_3 e^{t^2} - 1                                                       \\ \\
+  \mathbf{r}(t)                   & = \langle c_1 e^{2 t^3}, \frac{1}{2 t^2 + c_2}, c_3 e^{t^2} - 1 \rangle
+\end{align*}
+
+\setcounter{subsubsection}{28}
+\subsubsection{}
+
+\begin{enumerate}
+  \item
+
+        \begin{align*}
+          \boldsymbol{\tau} & = \mathbf{r \times F}                                                      \\
+                            & = \mathbf{r} \times \left( -k \frac{M m}{r^2} \frac{\mathbf{r}}{r} \right) \\
+                            & = -\frac{k M m}{r^3} (\mathbf{r \times r})                                 \\
+                            & = \mathbf{0}
+        \end{align*}
+
+  \item Torque is the derivative of angular momentum with respect to time. If there's no torque angular momentum doesn't change.
+\end{enumerate}
+
 \end{document}
