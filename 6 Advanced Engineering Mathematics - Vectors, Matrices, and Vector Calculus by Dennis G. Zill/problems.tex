@@ -4134,4 +4134,116 @@ Either $||\mathbf{r}'(t)|| = 0$ or they're perpendicular.
   \item Torque is the derivative of angular momentum with respect to time. If there's no torque angular momentum doesn't change.
 \end{enumerate}
 
+\subsection{Curvature and Components of Acceleration}
+
+\subsubsection{}
+
+\begin{align*}
+  \mathbf{r}(t)      & = \langle t \cos t - \sin t, t \sin t + \cos t, t^2 \rangle \\
+  \mathbf{r}'(t)     & = \langle -t \sin t, t \cos t, 2 t \rangle                  \\
+  ||\mathbf{r}'(t)|| & = \sqrt{(-t \sin t)^2 + (t \cos t)^2 + (2 t)^2}             \\
+                     & = t \sqrt{\sin^2 t + \cos^2 t + 4}                          \\
+                     & = \sqrt{5} t                                                \\
+  \mathbf{T}         & = \frac{\mathbf{r}'(t)}{||\mathbf{r}'(t)||}                 \\
+                     & = \frac{1}{\sqrt{5}} \langle -\sin t, \cos t, 2 \rangle
+\end{align*}
+
+\setcounter{subsubsection}{2}
+\subsubsection{}
+
+\begin{align*}
+  \mathbf{r}(t)                                      & = \langle a \cos t, a \sin t, c t \rangle                                                                                \\
+  \mathbf{r}'(t)                                     & = \langle -a \sin t, a \cos t, c \rangle                                                                                 \\
+  ||\mathbf{r}'(t)||                                 & = \sqrt{(-a \sin t)^2 + (a \cos t)^2 + (c)^2}                                                                            \\
+                                                     & = \sqrt{a^2 + c^2}                                                                                                       \\
+  \mathbf{T}(t)                                      & = \frac{\mathbf{r}'(t)}{||\mathbf{r}'(t)||}                                                                              \\
+                                                     & = \frac{1}{\sqrt{a^2 + c^2}} \langle -a \sin t, a \cos t, c \rangle                                                      \\
+  \frac{d \mathbf{T}}{d t}                           & = \frac{1}{\sqrt{a^2 + c^2}} \langle -a \cos t, -a \sin t, 0 \rangle                                                     \\
+  \left|\left|\frac{d \mathbf{T}}{d t}\right|\right| & = \frac{a}{\sqrt{a^2 + c^2}}                                                                                             \\
+  \mathbf{N}                                         & = \frac{d \mathbf{T} / d t}{||d \mathbf{T} / d t||}                                                                      \\
+                                                     & = \langle -\cos t, -\sin t, 0 \rangle                                                                                    \\
+  \mathbf{B}(t)                                      & = \mathbf{T}(t) \times \mathbf{N}(t)                                                                                     \\
+                                                     & = -\frac{1}{\sqrt{a^2 + c^2}} \begin{vmatrix}
+                                                                                       \hat{\mathbf{i}} & \hat{\mathbf{j}} & \hat{\mathbf{k}} \\
+                                                                                       -a \sin t        & a \cos t         & c                \\
+                                                                                       \cos t           & \sin t           & 0
+                                                                                     \end{vmatrix} \\
+                                                     & = \frac{1}{\sqrt{a^2 + c^2}} \langle c \sin t, -c \cos t, a \rangle                                                      \\
+  \kappa                                             & = \frac{||\mathbf{T}'(t)||}{||\mathbf{r}'(t)||}                                                                          \\
+                                                     & = \frac{a}{a^2 + c^2}
+\end{align*}
+
+\setcounter{subsubsection}{4}
+\subsubsection{}
+
+\begin{align*}
+  \mathbf{r}(t)       & = \langle 2 \cos t, 2 \sin t, 3 t \rangle                                                                                                                                           \\
+  \mathbf{r}(\pi / 4) & = \langle \sqrt{2}, \sqrt{2}, \frac{3 \pi}{4} \rangle                                                                                                                               \\
+  \mathbf{B}(t)       & = \frac{1}{\sqrt{13}} \langle 3 \sin t, -3 \cos t, 2 \rangle                                                                                                                        \\
+  \mathbf{B}(\pi / 4) & = \frac{1}{\sqrt{13}} \langle \frac{3}{\sqrt{2}}, -\frac{3}{\sqrt{2}}, 2 \rangle                                                                                                    \\ \\
+  0                   & = \mathbf{n} \cdot (\mathbf{r} - \mathbf{r}_0)                                                                                                                                      \\
+                      & = \mathbf{B}(\pi / 4) \cdot (\mathbf{r} - \mathbf{r}(\pi / 4))                                                                                                                      \\
+                      & = \frac{1}{\sqrt{13}} \langle \frac{3}{\sqrt{2}}, -\frac{3}{\sqrt{2}}, 2 \rangle \cdot \left( \langle x, y, z \rangle - \langle \sqrt{2}, \sqrt{2}, \frac{3 \pi}{4} \rangle \right) \\
+                      & = \frac{1}{\sqrt{13}} \langle \frac{3}{\sqrt{2}}, -\frac{3}{\sqrt{2}}, 2 \rangle \cdot \langle x - \sqrt{2}, y - \sqrt{2}, z - \frac{3 \pi}{4} \rangle                              \\
+                      & = \frac{3}{\sqrt{26}} (x - \sqrt{2}) - \frac{3}{\sqrt{26}} (y - \sqrt{2}) + \frac{2}{\sqrt{13}} \left( z - \frac{3 \pi}{4} \right)                                                  \\
+                      & = \frac{3}{\sqrt{2}} x - 3 - \frac{3}{\sqrt{2}} y + 3 + 2 z - \frac{3 \pi}{2}                                                                                                       \\
+  \frac{3 \pi}{2}     & = \frac{3}{\sqrt{2}} x - \frac{3}{\sqrt{2}} y + 2 z                                                                                                                                 \\
+  3 \pi               & = 3 \sqrt{2} x - 3 \sqrt{2} y + 4 z
+\end{align*}
+
+\setcounter{subsubsection}{6}
+\subsubsection{}
+
+\begin{align*}
+  \mathbf{r}(t)                         & = \langle 1, t, t^2 \rangle                                                                  \\
+  \mathbf{r}'(t)                        & = \langle 0, 1, 2 t \rangle                                                                  \\
+  ||\mathbf{r}'(t)||                    & = \sqrt{1 + 4 t^2}                                                                           \\
+  \mathbf{r}''(t)                       & = \langle 0, 0, 2 \rangle                                                                    \\
+  a_T                                   & = \frac{\mathbf{r}'(t) \cdot \mathbf{r}''(t)}{||\mathbf{r}'(t)||}                            \\
+                                        & = \frac{4 t}{\sqrt{1 + 4 t^2}}                                                               \\
+  \mathbf{r}'(t) \times \mathbf{r}''(t) & = \begin{vmatrix}
+                                              \hat{\mathbf{i}} & \hat{\mathbf{j}} & \hat{\mathbf{k}} \\
+                                              0                & 1                & 2 t              \\
+                                              0                & 0                & 2
+                                            \end{vmatrix} \\
+                                        & = \langle 2, 0, 0 \rangle                                                                    \\
+  a_N                                   & = \frac{||\mathbf{r}'(t) \times \mathbf{r}''(t)||}{||\mathbf{r}'(t)||}                       \\
+                                        & = \frac{2}{\sqrt{1 + 4 t^2}}
+\end{align*}
+
+\setcounter{subsubsection}{16}
+\subsubsection{}
+
+\begin{align*}
+  \mathbf{r}(t)                             & = \langle a \cos t, b \sin t, c t \rangle                                                                  \\
+  \mathbf{r}'(t)                            & = \langle -a \sin t, b \cos t, c \rangle                                                                   \\
+  ||\mathbf{r}'(t)||                        & = \sqrt{(-a \sin t)^2 + (b \cos t)^2 + (c)^2}                                                              \\
+                                            & = \sqrt{a^2 \sin^2 t + b^2 \cos^2 t + c^2}                                                                 \\
+  \mathbf{r}''(t)                           & = \langle -a \cos t, -b \sin t, 0 \rangle                                                                  \\
+  \mathbf{r}'(t) \times \mathbf{r}''(t)     & = \begin{vmatrix}
+                                                  \hat{\mathbf{i}} & \hat{\mathbf{j}} & \hat{\mathbf{k}} \\
+                                                  -a \sin t        & b \cos t         & c                \\
+                                                  -a \cos t        & -b \sin t        & 0
+                                                \end{vmatrix}               \\
+                                            & = \langle b c \sin t, -a c \cos t, a b \rangle                                                             \\
+  ||\mathbf{r}'(t) \times \mathbf{r}''(t)|| & = \sqrt{(b c \sin t)^2 + (-a c \cos t)^2 + (a b)^2}                                                        \\
+                                            & = \sqrt{b^2 c^2 \sin^2 t + a^2 c^2 \cos^2 t + a^2 b^2}                                                     \\
+  \kappa                                    & = \frac{||\mathbf{r}'(t) \times \mathbf{r}''(t)}{||\mathbf{r}'(t)||^3}                                     \\
+                                            & = \frac{\sqrt{b^2 c^2 \sin^2 t + a^2 c^2 \cos^2 t + a^2 b^2}}{(a^2 \sin^2 t + b^2 \cos^2 t + c^2)^{3 / 2}}
+\end{align*}
+
+\setcounter{subsubsection}{22}
+\subsubsection{}
+
+\begin{align*}
+  y         & = x^2                           \\
+  \kappa    & = \frac{2}{(1 + 4 x^2)^{3 / 2}} \\
+  \rho      & = \frac{1}{\kappa}              \\
+            & = \frac{(1 + 4 x^2)^{3 / 2}}{2} \\
+  \kappa(0) & = 2                             \\
+  \kappa(1) & = \frac{2}{5 \sqrt{5}}
+\end{align*}
+
+The curve is sharper at $(0, 0)$.
+
 \end{document}

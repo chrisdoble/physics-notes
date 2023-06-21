@@ -613,4 +613,51 @@
   \item The length of the curve traced out by a vector function from $t = a$ to $t = b$ is \[s = \int_a^b \sqrt{f'(t)^2 + g'(t)^2 + h'(t)^2} \,dt = \int_a^b ||\mathbf{r}'(t)|| \,dt\]
 \end{itemize}
 
+\setcounter{subsection}{2}
+\subsection{Curvature and Components of Acceleration}
+
+\begin{itemize}
+  \item As $\mathbf{r}'(t)$ is always tangential to the curve a unit tangent vector is given by \[\mathbf{T}(t) = \frac{\mathbf{r}'(t)}{||\mathbf{r}'(t)||}\]
+
+  \item The \textbf{curvature} of a point on a curve is given by \[\kappa = \left|\left|\frac{d \mathbf{T}}{ds}\right|\right|\] where $s$ is the arc length parameter or \[\kappa = \frac{||\mathbf{T}'(t)||}{||\mathbf{r}'(t)||}\]
+
+  \item By differentiating \begin{align*}
+          \mathbf{T} \cdot \mathbf{T}                                                           & = 1 \\
+          \mathbf{T} \cdot \frac{d \mathbf{T}}{d t} + \frac{d \mathbf{T}}{d t} \cdot \mathbf{T} & = 0 \\
+          2 \mathbf{T} \cdot \frac{d \mathbf{T}}{d t}                                           & = 0 \\
+          \mathbf{T} \cdot \frac{d \mathbf{T}}{d t}                                             & = 0
+        \end{align*}
+
+        we find that $\mathbf{T}$ and $\frac{d \mathbf{T}}{d t}$ are orthogonal.
+
+  \item If $\left|\left|\frac{d \mathbf{T}}{d t}\right|\right| \ne 0$ the vector \[\mathbf{N} = \frac{d \mathbf{T} / d t}{||d \mathbf{T} / d t||}\] is a unit normal to the curve and is called the \textbf{principal normal}.
+
+  \item Since $\kappa = \frac{||d \mathbf{T} / d t||}{v}$, $d \mathbf{T} / d t = \kappa v \mathbf{N}$ and \begin{align*}
+          \mathbf{a}(t) & = \frac{d}{d t} \mathbf{v}(t)                             \\
+                        & = \frac{d}{d t} v \mathbf{T}                              \\
+                        & = v \frac{d \mathbf{T}}{d t} + \frac{d v}{d t} \mathbf{T} \\
+                        & = \kappa v^2 \mathbf{N} + \frac{d v}{d t} \mathbf{T}      \\
+                        & = a_N \mathbf{N} + a_T \mathbf{T}
+        \end{align*}
+
+        where $a_N$ and $a_T$ are the normal and tangential components of acceleration, respectively.
+
+  \item The unit vector defined by \[\mathbf{B}(t) = \mathbf{T}(t) \times \mathbf{N}(t)\] is called the \textbf{binormal}.
+
+  \item The three unit vectors $\mathbf{T}$, $\mathbf{N}$, and $\mathbf{B}$ form a right-handed set of mutually orthogonal vectors called the \textbf{moving trihedral}. When used as a coordinate system they're called the \textbf{TNB-frame}.
+
+  \item The plane of $\mathbf{T}$ and $\mathbf{N}$ is called the \textbf{osculating plane}.
+
+  \item The plane of $\mathbf{N}$ and $\mathbf{B}$ is called the \textbf{normal plane}.
+
+  \item The plane of $\mathbf{T}$ and $\mathbf{B}$ is called the \textbf{rectifying plane}.
+
+  \item Explicit formulas for the tangential and normal components of acceleration are given by \begin{align*}
+          a_T & = \frac{\mathbf{r}'(t) \cdot \mathbf{r}''(t)}{||\mathbf{r}'(t)||}      \\
+          a_N & = \frac{||\mathbf{r}'(t) \times \mathbf{r}''(t)||}{||\mathbf{r}'(t)||}
+        \end{align*} and since $a_N = \kappa v^2$ \[\kappa = \frac{||\mathbf{r}'(t) \times \mathbf{r}''(t)||}{||\mathbf{r}'(t)||^3}\]
+
+  \item The reciprocal of curvature $\rho = \frac{1}{\kappa}$ is called the \textbf{radius of curvature} and represents the radius of the circle that best ``fits'' the curve there.
+\end{itemize}
+
 \end{document}
