@@ -4317,4 +4317,112 @@ The curve is sharper at $(0, 0)$.
                   & \approx \qty{5.31}{cm^2/s}
 \end{align*}
 
+\subsection{Directional Derivative}
+
+\subsubsection{}
+
+\[\nabla f = \langle 2 x - 3 x^2 y^2, -2 x^3 y + 4 y^3 \rangle\]
+
+\setcounter{subsubsection}{2}
+\subsubsection{}
+
+\[\nabla F = \langle \frac{y^2}{z^3}, \frac{2 x y}{z^3}, -\frac{3 x y^2}{z^4} \rangle\]
+
+\setcounter{subsubsection}{4}
+\subsubsection{}
+
+\begin{align*}
+  \nabla f        & = \langle 2 x, -8 y \rangle \\
+  \nabla f (2, 4) & = \langle 4, -32 \rangle
+\end{align*}
+
+\setcounter{subsubsection}{6}
+\subsubsection{}
+
+\begin{align*}
+  \nabla F                 & = \langle 2 x z^2 \sin 4 y, 4 x^2 z^2 \cos 4 y, 2 x^2 z \sin 4 y \rangle \\
+  \nabla F(-2, \pi / 3, 1) & = \langle 2 \sqrt{3}, -8, -4 \sqrt{3} \rangle
+\end{align*}
+
+\setcounter{subsubsection}{8}
+\subsubsection{}
+
+\begin{align*}
+  D_\mathbf{u} f & = \langle 2 x, 2 y \rangle \cdot \langle \frac{\sqrt{3}}{2}, \frac{1}{2} \rangle \\
+                 & = \sqrt{3} x + y
+\end{align*}
+
+\setcounter{subsubsection}{10}
+\subsubsection{}
+
+\begin{align*}
+  D_\mathbf{u} f        & = \langle 15 x^2 y^6, 30 x^3 y^5 \rangle \cdot \langle \frac{\sqrt{3}}{2}, \frac{1}{2} \rangle \\
+                        & = \frac{15 \sqrt{3}}{2} x^2 y^6 + 15 x^3 y^5                                                   \\
+  D_\mathbf{u} f(-1, 1) & = \frac{15 \sqrt{3}}{2} - 15                                                                   \\
+                        & = 15 \left( \frac{\sqrt{3}}{2} - 1 \right)                                                     \\
+                        & = \frac{15}{2} (\sqrt{3} - 2)
+\end{align*}
+
+\setcounter{subsubsection}{20}
+\subsubsection{}
+
+\begin{align*}
+  \mathbf{u}               & = \frac{\langle -4, -1 \rangle}{||\langle -4, -1 \rangle||}                                              \\
+                           & = \langle -\frac{4}{\sqrt{17}}, -\frac{1}{\sqrt{17}} \rangle                                             \\
+  D_\mathbf{u} f           & = \langle 2 (x - y), -2 (x - y) \rangle \cdot \langle -\frac{4}{\sqrt{17}}, -\frac{1}{\sqrt{17}} \rangle \\
+                           & = \frac{2}{\sqrt{17}} (-4 (x - y) + (x - y))                                                             \\
+                           & = \frac{6}{\sqrt{17}} (y - x)                                                                            \\
+  D_\textbf{u} f (4, 2, 4) & = \frac{6}{\sqrt{17}} (2 - 4)                                                                            \\
+                           & = -\frac{12}{\sqrt{17}}
+\end{align*}
+
+\setcounter{subsubsection}{22}
+\subsubsection{}
+
+\begin{align*}
+  \nabla f               & = \langle 2 e^{2 x} \sin y, e^{2 x} \cos y \rangle \\
+  \nabla f (0, \pi / 4)  & = \langle \sqrt{2}, \frac{1}{\sqrt{2}} \rangle     \\
+  \sqrt{2 + \frac{1}{2}} & = \sqrt{\frac{5}{2}}
+\end{align*}
+
+\setcounter{subsubsection}{26}
+\subsubsection{}
+
+\begin{align*}
+  \nabla f                                   & = \langle 2 x \sec^2 (x^2 + y^2), 2 y \sec^2 (x^2 + y^2) \rangle                                                                                                          \\
+  -\nabla f (\sqrt{\pi / 6}, \sqrt{\pi / 6}) & = -\langle 2 \sqrt{\frac{\pi}{6}} \sec^2 \left( \frac{\pi}{6} + \frac{\pi}{6} \right), 2 \sqrt{\frac{\pi}{6}} \sec^2 \left( \frac{\pi}{6} + \frac{\pi}{6} \right) \rangle \\
+                                             & = -8 \sqrt{\frac{\pi}{6}} \langle 1, 1 \rangle
+\end{align*}
+
+\setcounter{subsubsection}{32}
+\subsubsection{}
+
+\begin{enumerate}
+  \item \[\mathbf{u}_0 = \frac{\langle 3, -4 \rangle}{||\langle 3, -4 \rangle||} = \langle \frac{3}{5}, -\frac{4}{5} \rangle\]
+
+  \item \[\mathbf{u}_\text{max} = \frac{\langle 4, 3 \rangle}{||\langle 4, 3 \rangle||} = \langle \frac{4}{5}, \frac{3}{5} \rangle\]
+
+  \item \[\mathbf{u}_\text{min} = \langle -\frac{4}{5}, -\frac{3}{5} \rangle\]
+\end{enumerate}
+
+\setcounter{subsubsection}{36}
+\subsubsection{}
+
+\begin{align*}
+  \nabla f   & = \langle 3 x^2 - 12, 2 y - 10 \rangle \\ \\
+  3 x^2 - 12 & = 0                                    \\
+  x^2        & = 4                                    \\
+  x          & = \pm 2                                \\ \\
+  2 y - 10   & = 0                                    \\
+  y          & = 5
+\end{align*}
+
+\setcounter{subsubsection}{42}
+\subsubsection{}
+
+\begin{align*}
+  \nabla f & = \langle 3 x^2 + y^3 + y e^{x y}, -2 y^2 + 3 x y^2 + x e^{x y} \rangle \\
+  f        & = x^3 + x y^3 + e^{x y} - \frac{2}{3} y^3
+\end{align*}
+
 \end{document}
