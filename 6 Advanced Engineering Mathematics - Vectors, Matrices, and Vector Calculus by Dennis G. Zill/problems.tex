@@ -4569,4 +4569,201 @@ The curve is sharper at $(0, 0)$.
 
 If $\mathbf{F}$ where the curl of another vector field then $\nabla \cdot \mathbf{F}$ would be $0$ but it's not.
 
+\subsection{Line Integrals}
+
+\subsubsection{}
+
+\begin{align*}
+  G(x, y)             & = 2 x y                                                                                                                   \\
+  x                   & = 5 \cos t                                                                                                                \\
+  y                   & = 5 \sin t                                                                                                                \\
+  \int_C G(x, y) \,dx & = \int_0^{\pi / 4} 2 (5 \cos t) (5 \sin t) (-5 \sin t) \,dt                                                               \\
+                      & = -250 \int_0^{\pi / 4} \cos t \sin^2 t \,dt                                                                              \\
+                      & = -125 \int_0^{\pi / 4} (\cos t - \cos t \cos 2 t) \,dt                                                                   \\
+                      & = -125 \int_0^{\pi / 4} \left[ \cos t - \frac{1}{2} (\cos t + \cos 3 t) \right] \,dt                                      \\
+                      & = -125 \left[ \sin t - \frac{1}{2} \left( \sin t + \frac{1}{3} \sin 3 t \right) \right]_0^{\pi / 4}                       \\
+                      & = -125 \left[ \frac{1}{\sqrt{2}} - \frac{1}{2} \left( \frac{1}{\sqrt{2}} + \frac{1}{3} \frac{1}{\sqrt{2}} \right) \right] \\
+                      & = -125 \left( \frac{1}{\sqrt{2}} - \frac{4}{6 \sqrt{2}} \right)                                                           \\
+                      & = -\frac{125}{3 \sqrt{2}}
+\end{align*}
+
+\begin{align*}
+  \int_C G(x, y) \,dy & = \int_0^{\pi / 4} 2 (5 \cos t) (5 \sin t) (5 \cos t) \,dt                                                                                                                  \\
+                      & = 250 \int_0^{\pi / 4} \cos^2 t \sin t \,dt                                                                                                                                 \\
+                      & = 125 \int_0^{\pi / 4} (\sin t + \cos 2 t \sin t) \,dt                                                                                                                      \\
+                      & = 125 \int_0^{\pi / 4} \left[ \sin t + \frac{1}{2} (\sin 3 t - \sin t) \right] \,dt                                                                                         \\
+                      & = 125 \left[ -\cos t + \frac{1}{2} \left( -\frac{1}{3} \cos 3 t + \cos t \right) \right]_0^{\pi / 4}                                                                        \\
+                      & = 125 \left[ -\frac{1}{\sqrt{2}} + \frac{1}{2} \left( \frac{1}{3} \frac{1}{\sqrt{2}} + \frac{1}{\sqrt{2}} \right) + 1 - \frac{1}{2} \left( -\frac{1}{3} + 1 \right) \right] \\
+                      & = 125 \left[ -\frac{1}{\sqrt{2}} + \frac{4}{6 \sqrt{2}} + 1 + \frac{1}{6} - \frac{1}{2} \right]                                                                             \\
+                      & = 125 \left[ \frac{2}{3} - \frac{2}{6 \sqrt{2}} \right]                                                                                                                     \\
+                      & = 125 \left[ \frac{4}{6} - \frac{\sqrt{2}}{6} \right]                                                                                                                       \\
+                      & = \frac{125}{6} (4 - \sqrt{2})
+\end{align*}
+
+\begin{align*}
+  \int_C G(x, y) \,ds & = \int_0^{\pi / 4} 2 (5 \cos t) (5 \sin t) \sqrt{[-5 \sin t]^2 + [5 \cos t]^2} \,dt \\
+                      & = 50 \int_0^{\pi / 4} \cos t \sin t \sqrt{25 \sin^2 t + 25 \cos^2 t} \,dt           \\
+                      & = 250 \int_0^{\pi / 4} \cos t \sin t \,dt                                           \\
+                      & = 125 \int_0^{\pi / 4} \sin 2 t \,dt                                                \\
+                      & = 125 \left[ -\frac{1}{2} \cos 2 t \right]_0^{\pi / 4}                              \\
+                      & = \frac{125}{2}
+\end{align*}
+
+\setcounter{subsubsection}{4}
+\subsubsection{}
+
+\begin{align*}
+  G(x, y, z)             & = z                                                      \\
+  x                      & = \cos t                                                 \\
+  y                      & = \sin t                                                 \\
+  z                      & = t                                                      \\
+  \int_C G(x, y, z) \,dx & = \int_0^{\pi / 2} (t) (-\sin t) \,dt                    \\
+                         & = [t \cos t - \sin t]_0^{\pi / 2}                        \\
+                         & = -1                                                     \\ \\
+  \int_C G(x, y, z) \,dy & = \int_0^{\pi / 2} (t) (\cos t) \,dt                     \\
+                         & = [t \sin t + \cos t]_0^{\pi / 2}                        \\
+                         & = \frac{\pi}{2} - 1                                      \\ \\
+  \int_C G(x, y, z) \,dz & = \int_0^{\pi / 2} t \,dt                                \\
+                         & = \left[ \frac{1}{2} t^2 \right]_0^{\pi / 2}             \\
+                         & = \frac{\pi^2}{8}                                        \\ \\
+  \int_C G(x, y, z) \,ds & = \int_0^{\pi / 2} t \sqrt{\sin^2 t + \cos^2 t + 1} \,dt \\
+                         & = \sqrt{2} \left[ \frac{1}{2} t^2 \right]_0^{\pi / 2}    \\
+                         & = \frac{\sqrt{2} \pi^2}{8}
+\end{align*}
+
+\setcounter{subsubsection}{6}
+\subsubsection{}
+
+\begin{align*}
+  \int_C (2 x + y) \,dx + x y \,dy & = \int_{-1}^2 (2 x + x + 3) \,dx + x (x + 3) \,dx                           \\
+                                   & = \int_{-1}^2 (x^2 + 6 x + 3) \,dx                                          \\
+                                   & = \left[ \frac{1}{3} x^3 + 3 x^2 + 3x \right]_{-1}^2                        \\
+                                   & = \left( \frac{8}{3} + 12 + 6 \right) - \left( -\frac{1}{3} + 3 - 3 \right) \\
+                                   & = 21
+\end{align*}
+
+\setcounter{subsubsection}{8}
+\subsubsection{}
+
+\begin{align*}
+  \int_C (2 x + y) \,dx + x y \,dy & = \int_{-1}^2 (2 x + 2) \,dx + \int_2^5 2 y \,dy \\
+                                   & = [x^2 + 2 x]_{-1}^2 + [y^2]_2^5                 \\
+                                   & = (4 + 4) - (1 - 2) + (25) - (4)                 \\
+                                   & = 30
+\end{align*}
+
+\setcounter{subsubsection}{10}
+\subsubsection{}
+
+\begin{align*}
+  \int_0^1 x^2 \,dx + x (2 x) \,dx & = \int_0^1 3 x^2 \,dx \\
+                                   & = [x^3]_0^1           \\
+                                   & = 1
+\end{align*}
+
+\setcounter{subsubsection}{12}
+\subsubsection{}
+
+\[\int_0^1 dx = 1\]
+
+\setcounter{subsubsection}{18}
+\subsubsection{}
+
+\begin{align*}
+  \int_{-2}^2 x^2 \,dx                                                                 & = \left[ \frac{1}{3} x^3 \right]_{-2}^2                              \\
+                                                                                       & = \frac{16}{3}                                                       \\
+  \int_2^{-2} (x^2 + 4 - x^2) \,dx - 2 x \sqrt{4 - x^2} \frac{-x}{\sqrt{4 - x^2}} \,dx & = \int_2^{-2} (2 x^2 + 4) \,dx                                       \\
+                                                                                       & = \left[ \frac{2}{3} x^3 + 4 x \right]_2^{-2}                        \\
+                                                                                       & = \left( -\frac{16}{3} - 8 \right) - \left( \frac{16}{3} + 8 \right) \\
+                                                                                       & = -\frac{32}{3} - 16                                                 \\
+                                                                                       & = -\frac{80}{3}                                                      \\ \\
+  \oint (x^2 + y^2) \,dx - 2 x y \,dy                                                  & = -\frac{64}{3}
+\end{align*}
+
+\setcounter{subsubsection}{20}
+\subsubsection{}
+
+\begin{align*}
+  % Bottom
+  \int_{-1}^1 -x^2 \,dx             & = \left[ -\frac{1}{3} x^3 \right]_{-1}^1 \\
+                                    & = -\frac{2}{3}                           \\ \\
+  % Right
+  \int_{-1}^1 -y^2 \,dy             & = \left[ -\frac{1}{3} y^3 \right]_{-1}^1 \\
+                                    & = -\frac{2}{3}                           \\ \\
+  % Top
+  \int_1^{-1} x^2 \,dx              & = \left[ \frac{1}{3} x^3 \right]_1^{-1}  \\
+                                    & = -\frac{2}{3}                           \\ \\
+  % Left
+  \int_1^{-1} y^2 \,dy              & = \left[ \frac{1}{3} y^3 \right]_1^{-1}  \\
+                                    & = -\frac{2}{3}                           \\ \\
+  \oint_C x^2 y^3 \,dx - x y^2 \,dy & = -\frac{8}{3}
+\end{align*}
+
+\setcounter{subsubsection}{28}
+\subsubsection{}
+
+\begin{align*}
+  \mathbf{r}'(t)                       & = \langle -2 e^{-2 t}, e^t \rangle                                                              \\
+  \int_C \mathbf{F} \cdot d \mathbf{r} & = \int_0^{\ln 2} \langle e^{3 t}, -e^{-3 t} \rangle \cdot \langle -2 e^{-2 t}, e^t \rangle \,dt \\
+                                       & = \int_0^{\ln 2} (-2 e^t - e^{-2 t}) \,dt                                                       \\
+                                       & = \left[ -2 e^t + \frac{1}{2} e^{-2 t} \right]_0^{\ln 2}                                        \\
+                                       & = -4 + \frac{1}{8} + 2 - \frac{1}{2}                                                            \\
+                                       & = -\frac{19}{8}
+\end{align*}
+
+\setcounter{subsubsection}{30}
+\subsubsection{}
+
+\begin{align*}
+  \int_C \mathbf{F} \cdot d \mathbf{r} & = \int_1^e \langle \ln x, x \rangle \cdot \langle 1, \frac{1}{x} \rangle \,dx \\
+                                       & = \int_1^e (\ln x + 1) \,dx                                                   \\
+                                       & = [x (\ln x - 1) + x]_1^e                                                     \\
+                                       & = e
+\end{align*}
+
+\setcounter{subsubsection}{34}
+\subsubsection{}
+
+\begin{align*}
+  \mathbf{r}(t)                        & = \langle 3 \cos \theta, 3 \sin \theta \rangle                   \\
+  \mathbf{r}'(t)                       & = \langle -3 \sin \theta, 3 \cos \theta \rangle                  \\
+  \int_C \mathbf{F} \cdot d \mathbf{r} & = \int_0^{2 \pi} (-3 a \sin \theta + 3 b \cos \theta) \,d \theta \\
+                                       & = [3 a \cos \theta + 3 b \sin \theta]_0^{2 \pi}                  \\
+                                       & = 0
+\end{align*}
+
+\setcounter{subsubsection}{39}
+\subsubsection{}
+
+\begin{align*}
+  \rho(x, y) & = k x                                                \\
+  m          & = \int_C \rho(x, y) \,ds                             \\
+             & = \int_0^\pi k x \sqrt{[-\sin t]^2 +[\cos t]^2} \,dt \\
+             & = k \int_0^\pi (1 + \cos t) \,dt                     \\
+             & = k [t + \sin t]_0^\pi                               \\
+             & = k \pi
+\end{align*}
+
+\setcounter{subsubsection}{40}
+\subsubsection{}
+
+\begin{align*}
+  M_y          & = \int_C x \rho(x, y) \,ds                                                \\
+               & = \int_0^\pi k (1 + \cos t)^2 \sqrt{[-\sin t]^2 + [\cos t]^2} \,dt        \\
+               & = k \int_0^\pi (1 + \cos t)^2 \,dt                                        \\
+               & = k \left[ \frac{1}{4} (6 t + 8 \sin t + \sin 2 t) \right]_0^\pi          \\
+               & = \frac{3}{2} k \pi                                                       \\ \\
+  \overline{x} & = \frac{M_y}{m}                                                           \\
+               & = \frac{3}{2}                                                             \\ \\
+  M_x          & = \int_C y \rho(x, y) \,ds                                                \\
+               & = \int_0^\pi (\sin t) k (1 + \cos t) \sqrt{[-\sin t]^2 + [\cos t]^2} \,dt \\
+               & = k \int_0^\pi (\sin t + \cos t \sin t) \,dt                              \\
+               & = k \int_0^\pi \left( \sin t + \frac{1}{2} \sin 2 t \right) \,dt          \\
+               & = k \left[ -\cos t - \frac{1}{4} \cos 2 t \right]_0^\pi                   \\
+               & = k \left( 1 - \frac{1}{4} + 1 + \frac{1}{4} \right)                      \\
+               & = 2 k                                                                     \\ \\
+  \overline{y} & = \frac{M_x}{m}                                                           \\
+               & = \frac{2}{\pi}
+\end{align*}
+
 \end{document}

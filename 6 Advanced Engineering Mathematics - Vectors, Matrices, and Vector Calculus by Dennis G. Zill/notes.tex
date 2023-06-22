@@ -717,4 +717,24 @@
   \item If $\mathbf{F}$ is a vector function with continuous second partial derivatives then \[\nabla \cdot (\nabla \times \mathbf{F}) = 0.\]
 \end{itemize}
 
+\subsection{Line Integrals}
+
+\begin{itemize}
+  \item The line integral of a function $G(x, y)$ over a curve $C$ defined parametrically by $x = f(t)$ and $y = g(t)$ is defined as \begin{align*}
+          \int_C G(x, y) \,dx & = \int_a^b G(f(t), g(t)) f'(t) \,dt                        \\
+          \int_C G(x, y) \,dy & = \int_a^b G(f(t), g(t)) g'(t) \,dt                        \\
+          \int_C G(x, y) \,ds & = \int_a^b G(f(t), g(t)) \sqrt{[f'(t)]^2 + [g'(t)]^2} \,dt
+        \end{align*} where $a$ and $b$ are the values of $t$ at which the curve starts and ends, respectively.
+
+  \item If the curve is defined by an explicit function $y = f(x)$ the integrals become \begin{align*}
+          \int_C G(x, y) \,dx & = \int_a^b G(x, f(x)) \,dx                      \\
+          \int_C G(x, y) \,dy & = \int_a^b G(x, f(x)) f'(x) \,dx                \\
+          \int_C G(x, y) \,ds & = \int_a^b G(x, f(x)) \sqrt{1 + [f'(x)]^2} \,dx
+        \end{align*}
+
+  \item A line integral along a piecewise smooth curve $C$ is defined as the sum of the integrals over the smooth segments that comprise $C$.
+
+  \item The integral of a vector function $\mathbf{F}(x, y) = \langle P(x, y), Q(x, y)\rangle$ over a curve $C$ described by $\mathbf{r}(t) = \langle f(t), g(t) \rangle$ can be denoted \[\int_C \mathbf{F} \cdot d \mathbf{r} = \int_C P \,dx + Q \,dy.\]
+\end{itemize}
+
 \end{document}
