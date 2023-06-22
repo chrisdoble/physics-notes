@@ -4425,4 +4425,118 @@ The curve is sharper at $(0, 0)$.
   f        & = x^3 + x y^3 + e^{x y} - \frac{2}{3} y^3
 \end{align*}
 
+\subsection{Tangent Planes and Normal Lines}
+
+\setcounter{subsubsection}{12}
+\subsubsection{}
+
+\begin{align*}
+  F(x, y, z) & = z - x^2 - y^2                 \\
+  \nabla F   & = \langle -2 x, -2 y, 1 \rangle \\
+  \langle -4, -1, 17 \rangle
+\end{align*}
+
+\setcounter{subsubsection}{14}
+\subsubsection{}
+
+\begin{align*}
+  x^2 + y^2 + z^2                                                                     & = 9                             \\
+  F(x, y, z)                                                                          & = x^2 + y^2 + z^2               \\
+  \nabla F                                                                            & = \langle 2 x, 2 y, 2 z \rangle \\
+  \nabla F(-2, 2, 1)                                                                  & = \langle -4, 4, 2 \rangle      \\
+  \mathbf{n} \cdot (\mathbf{r} - \mathbf{r}_0)                                        & = 0                             \\
+  \langle -4, 4, 2 \rangle \cdot (\langle x, y, z \rangle - \langle -2, 2, 1 \rangle) & = 0                             \\
+  -4 (x + 2) + 4 (y - 2) + 2 (z - 1)                                                  & = 0                             \\
+  -4 x - 8 + 4 y - 8 + 2 z - 2                                                        & = 0                             \\
+  -2 x + 2 y + z                                                                      & = 9
+\end{align*}
+
+\setcounter{subsubsection}{16}
+\subsubsection{}
+
+\begin{align*}
+  x^2 - y^2 - 3 z^2                   & = 5                               \\
+  F(x, y, z)                          & = x^2 - y^2 - 3 z^2               \\
+  \nabla F                            & = \langle 2 x, -2 y, -6 z \rangle \\
+  \nabla F(6, 2, 3)                   & = \langle 12, -4, -18 \rangle     \\
+  12 (x - 6) - 4 (y - 2) - 18 (z - 3) & = 0                               \\
+  12 x - 72 - 4 y + 8 - 18 z + 54     & = 0                               \\
+  6 x - 2 y - 9 z                     & = 5
+\end{align*}
+
+\setcounter{subsubsection}{20}
+\subsubsection{}
+
+\begin{align*}
+  z                                         & = \cos (2 x + y)                                                                                                                          \\
+  F(x, y, z)                                & = \cos (2 x + y) - z                                                                                                                      \\
+  \nabla F                                  & = \langle -2 \sin (2 x + y), -\sin (2 x + y), -1 \rangle                                                                                  \\
+  \nabla F(\pi / 2, \pi / 4, -1 / \sqrt{2}) & = \langle \sqrt{2}, 1 / \sqrt{2}, -1 \rangle                                                                                              \\
+  0                                         & = \sqrt{2} \left( x - \frac{\pi}{2} \right) + \frac{1}{\sqrt{2}} \left( y - \frac{\pi}{4} \right) - \left( z + \frac{1}{\sqrt{2}} \right) \\
+                                            & = \sqrt{2} x - \frac{1}{\sqrt{2}} \pi + \frac{1}{\sqrt{2}} y - \frac{1}{\sqrt{2}} \frac{\pi}{4} - z - \frac{1}{\sqrt{2}}                  \\
+                                            & = 2 x - \pi + y - \frac{\pi}{4} - \sqrt{2} z - 1                                                                                          \\
+  1 + \frac{5 \pi}{4}                       & = 2 x + y - \sqrt{2} z
+\end{align*}
+
+\setcounter{subsubsection}{24}
+\subsubsection{}
+
+\begin{align*}
+  x^2 + y^2 + z^2               & = 7                              \\
+  F(x, y, z)                    & = x^2 + y^2 + z^2                \\
+  \nabla F                      & = \langle 2 x, 2 y, 2 z \rangle  \\
+  \langle 2 x, 2 y, 2 z \rangle & = k \langle 2, 4, 6 \rangle      \\
+  x^2 + (2 x)^2 + (3 x)^2       & = 7                              \\
+  x^2 + 4 x^2 + 9 x^2           & = 7                              \\
+  14 x^2                        & = 7                              \\
+  x^2                           & = \frac{1}{2}                    \\
+  x                             & = \pm \frac{1}{\sqrt{2}}         \\
+  \langle \frac{1}{\sqrt{2}}, \sqrt{2}, \frac{3}{\sqrt{2}} \rangle \\
+  \langle -\frac{1}{\sqrt{2}}, -\sqrt{2}, -\frac{3}{\sqrt{2}} \rangle
+\end{align*}
+
+\setcounter{subsubsection}{26}
+\subsubsection{}
+
+\begin{align*}
+  x^2 + 4 x + y^2 + z^2 - 2 z & = 11                                    \\
+  F(x, y, z)                  & = x^2 + 4 x + y^2 + z^2 - 2 z           \\
+  \nabla F                    & = \langle 2 x + 4, 2 y, 2 z - 2 \rangle \\ \\
+  2 x + 4                     & = 0                                     \\
+  x                           & = -2                                    \\ \\
+  2 y                         & = 0                                     \\
+  y                           & = 0                                     \\ \\
+  2 z - 2                     & \ne 0                                   \\
+  z                           & \ne 1                                   \\ \\
+  (-2)^2 + 4 (-2) + z^2 - 2 z & = 11                                    \\
+  4 - 8 + z^2 - 2 z           & = 11                                    \\
+  z^2 - 2 z - 15              & = 0                                     \\
+  (z - 5) (z + 3)             & = 0                                     \\
+  (-2, 0, -3)                                                           \\
+  (-2, 0, 5)
+\end{align*}
+
+\setcounter{subsubsection}{32}
+\subsubsection{}
+
+\begin{align*}
+  x^2 + 2 y^2 + z^2  & = 4                                          \\
+  F(x, y, z)         & = x^2 + 2 y^2 + z^2                          \\
+  \nabla F           & = \langle 2 x, 4 y, 2 z \rangle              \\
+  \nabla F(1, -1, 1) & = \langle 2, -4, 2 \rangle                   \\
+  \mathbf{n}(t)      & = \langle 1 + 2 t, -1 - 4 t, 1 + 2 t \rangle
+\end{align*}
+
+\setcounter{subsubsection}{34}
+\subsubsection{}
+
+\begin{align*}
+  z                                                   & = 4 x^2 + 9 y^2 + 1                                           \\
+  F(x, y, z)                                          & = 4 x^2 + 9 y^2 - z + 1                                       \\
+  \nabla F                                            & = \langle 8 x, 18 y, -1 \rangle                               \\
+  \nabla F \left( \frac{1}{2}, \frac{1}{3}, 3 \right) & = \langle 4, 6, -1 \rangle                                    \\
+  \mathbf{n}(t)                                       & = \langle \frac{1}{2} + 4 t, \frac{1}{3} + 6 t, 3 - t \rangle \\
+  \frac{x - \frac{1}{2}}{4} = \frac{y - \frac{1}{3}}{6} = 3 - z
+\end{align*}
+
 \end{document}
