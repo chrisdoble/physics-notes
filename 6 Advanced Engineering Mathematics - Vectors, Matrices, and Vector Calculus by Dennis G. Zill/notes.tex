@@ -737,4 +737,42 @@
   \item The integral of a vector function $\mathbf{F}(x, y) = \langle P(x, y), Q(x, y)\rangle$ over a curve $C$ described by $\mathbf{r}(t) = \langle f(t), g(t) \rangle$ can be denoted \[\int_C \mathbf{F} \cdot d \mathbf{r} = \int_C P \,dx + Q \,dy.\]
 \end{itemize}
 
+\subsection{Independence of the Path}
+
+\begin{itemize}
+  \item A vector function $\mathbf{F}$ in 2- or 3-space is said to be \textbf{conservative} if $\mathbf{F}$ can be written as the gradient of a scalar function $\phi$. The function $\phi$ is called a \textbf{potential function} for $\mathbf{F}$.
+\end{itemize}
+
+\includegraphics[scale=0.443]{fundamental-theorem-of-line-integrals}
+
+\begin{itemize}
+  \item A region is said to be \textbf{connected} if every pair of points $A$ and $B$ in the region can be joined by a piecewise-smooth curve that lies entirely in the region.
+
+  \item A region is said to be \textbf{simply connected} if it is connected and every simple closed curve $C$ lying entirely within the region can be shrunk to a point without leaving the region. That is, the region contains no holes.
+
+  \item A region is said to be \textbf{open} if it contains no boundary points.
+
+  \item In an open and connected region $R$, $\int_C \mathbf{F} \cdot d \mathbf{r}$ is independent of the path $C$ iff the vector field $\mathbf{F}$ is conservative in $R$.
+\end{itemize}
+
+\includegraphics[scale=0.443]{test-for-a-conservative-field}
+
+\begin{itemize}
+  \item \textbf{Partial integration} is the integration counterpart to partial differentiation.
+
+  \item The potential function $\phi(x, y)$ associated with a vector field $\mathbf{F}(x, y) = \langle P(x, y), Q(x, y) \rangle$ can be found by:
+
+        \begin{enumerate}
+          \item Partially integrate $P(x, y)$ with respect to $x$ to find an expression for $\phi(x, y)$ with a constant of integration $g(y)$.
+
+          \item Take the partial derivative of the above with respect to $y$.
+
+          \item Equate the result with $Q(x, y)$ to determine $g'(y)$.
+
+          \item Integrate $g'(y)$ with respect to $y$ to find $g(y)$.
+
+          \item Substitute $g(y)$ into $\phi(x, y)$.
+        \end{enumerate}
+\end{itemize}
+
 \end{document}

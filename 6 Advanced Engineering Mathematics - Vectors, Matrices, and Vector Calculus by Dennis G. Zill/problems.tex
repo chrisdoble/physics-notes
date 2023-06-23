@@ -4766,4 +4766,128 @@ If $\mathbf{F}$ where the curl of another vector field then $\nabla \cdot \mathb
                & = \frac{2}{\pi}
 \end{align*}
 
+\subsection{Independence of the Path}
+
+\subsubsection{}
+
+\begin{align*}
+  \phi                    & = \frac{1}{3} x^3 + g(y)            \\
+  g'(y)                   & = y^2                               \\
+  \phi                    & = \frac{1}{3} x^3 + \frac{1}{3} y^3 \\
+  \phi(2, 2) - \phi(0, 0) & = \frac{16}{3}
+\end{align*}
+
+\setcounter{subsubsection}{2}
+\subsubsection{}
+
+\begin{align*}
+  \phi                    & = \frac{1}{2} x^2 + 2 x y + g(y)                                                 \\
+  2 x + g'(y)             & = 2 x - y                                                                        \\
+  g'(y)                   & = -y                                                                             \\
+  g(y)                    & = -\frac{1}{2} y^2                                                               \\
+  \phi                    & = \frac{1}{2} x^2 + 2 x y - \frac{1}{2} y^2                                      \\
+  \phi(3, 2) - \phi(1, 0) & = \left( \frac{1}{2} 9 + 12 - \frac{1}{2} 4 \right) - \left( \frac{1}{2} \right) \\
+                          & = 14
+\end{align*}
+
+\setcounter{subsubsection}{10}
+\subsubsection{}
+
+\begin{align*}
+  \frac{\partial P}{\partial y} & = 12 x^3 y^2           \\
+  \frac{\partial Q}{\partial x} & = 12 x^3 y^2           \\
+  \phi                          & = x^4 y^3 + 3 x + g(y) \\
+  3 x^4 y^2 + g'(y)             & = 3 x^4 y^2 + 1        \\
+  g'(y)                         & = 1                    \\
+  g(y)                          & = y                    \\
+  \phi                          & = x^4 y^3 + 3 x + y
+\end{align*}
+
+\setcounter{subsubsection}{12}
+\subsubsection{}
+
+\begin{align*}
+  \frac{\partial P}{\partial y} & = 2 y \cos x y^2 - 2 x y^3 \sin x y^2  \\
+  \frac{\partial Q}{\partial x} & = -2 y \sin x y^2 - 2 x y^3 \cos x y^2
+\end{align*}
+
+Not conservative
+
+\setcounter{subsubsection}{14}
+\subsubsection{}
+
+\begin{align*}
+  \frac{\partial P}{\partial y} & = 1                                       \\
+  \frac{\partial Q}{\partial x} & = 1                                       \\
+  \phi                          & = \frac{1}{4} x^4 + x y + g(y)            \\
+  x + g'(y)                     & = x + y^3                                 \\
+  g'(y)                         & = y^3                                     \\
+  g(y)                          & = \frac{1}{4} y^4                         \\
+  \phi                          & = \frac{1}{4} x^4 + x y + \frac{1}{4} y^4
+\end{align*}
+
+\setcounter{subsubsection}{16}
+\subsubsection{}
+
+\begin{align*}
+  \phi                    & = x^2 + e^{-y} x + g(y)  \\
+  -e^{-y} x + g'(y)       & = 4 y - x e^{-y}         \\
+  g'(y)                   & = 4 y                    \\
+  g(y)                    & = 2 y^2                  \\
+  \phi                    & = x^2 + e^{-y} x + 2 y^2 \\
+  \phi(1, 1) - \phi(0, 0) & = (1 + e^{-1} + 2) - (0) \\
+                          & = 3 + e^{-1}
+\end{align*}
+
+\setcounter{subsubsection}{18}
+\subsubsection{}
+
+\begin{align*}
+  \phi                          & = x y z + g(y, z) \\
+  x z + g'(y, z)                & = x z             \\
+  \phi                          & = x y z           \\
+  \phi(2, 4, 8) - \phi(1, 1, 1) & = 63
+\end{align*}
+
+\setcounter{subsubsection}{20}
+\subsubsection{}
+
+\begin{align*}
+  \phi                                & = x^2 \sin y + x e^{3 z} + g(y, z)                                      \\
+  x^2 \cos y + g'(y, z)               & = x^2 \cos y                                                            \\
+  g'(y, z)                            & = 0                                                                     \\
+  \phi                                & = x^2 \sin y + x e^{3 z} + g(z)                                         \\
+  3 x e^{3 z} + g'(z)                 & = 3 x e^{3 z} + 5                                                       \\
+  g'(z)                               & = 5                                                                     \\
+  g(z)                                & = 5 z                                                                   \\
+  \phi                                & = x^2 \sin y + x e^{3 z} + 5 z                                          \\
+  \phi(2, \pi / 2, 1) - \phi(1, 0, 0) & = \left( (2)^2 \sin \frac{\pi}{2} + (2) e^{3 (1)} + 5 (1) \right) - (1) \\
+                                      & = 8 + 2 e^3
+\end{align*}
+
+\setcounter{subsubsection}{24}
+\subsubsection{}
+
+\begin{align*}
+  \phi                            & = x y + y z \cos x + g(y, z) \\
+  x + z \cos x + g'(y, z)         & = x + z \cos x               \\
+  g'(y, z)                        & = 0                          \\
+  g'(y, z)                        & = h(z)                       \\
+  y \cos x + h'(z)                & = y \cos z                   \\
+  h'(z)                           & = 0                          \\
+  \phi                            & = x y + y z \cos x           \\
+  \phi(\pi, 1, 4) - \phi(0, 4, 0) & = \pi - 4
+\end{align*}
+
+\setcounter{subsubsection}{26}
+\subsubsection{}
+
+\begin{align*}
+  P    & = -G m_1 m_2 \frac{x}{(x^2 + y^2 + z^3)^{3 / 2}} \\
+  Q    & = -G m_1 m_2 \frac{y}{(x^2 + y^2 + z^3)^{3 / 2}} \\
+  R    & = -G m_1 m_2 \frac{z}{(x^2 + y^2 + z^3)^{3 / 2}} \\
+  \phi & = \frac{G m_1 m_2}{\sqrt{x^2 + y^2 + z^2}}       \\
+       & = \frac{G m_1 m_2}{||\mathbf{r}||}
+\end{align*}
+
 \end{document}
