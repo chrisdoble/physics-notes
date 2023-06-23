@@ -4974,4 +4974,40 @@ Not conservative
                                                  & = \frac{1}{18} (2 \sqrt{2} - 1)
 \end{align*}
 
+\subsection{Double Integrals in Polar Coordinates}
+
+\subsubsection{}
+
+\begin{align*}
+  \int_0^{2 \pi} \int_0^{3 + 3 \sin \theta} r \,dr \,d\theta & = \int_0^{2 \pi} \left[ \frac{1}{2} r^2 \right]_0^{3 + 3 \sin \theta} \,d\theta                                                  \\
+                                                             & = \frac{1}{2} \int_0^{2 \pi} (3 + 3 \sin \theta)^2 \,d\theta                                                                     \\
+                                                             & = \frac{1}{2} \int_0^{2 \pi} (9 + 18 \sin \theta + 9 \sin^2 \theta) \,d\theta                                                    \\
+                                                             & = \frac{1}{2} \int_0^{2 \pi} \left[ 9 + 18 \sin \theta + \frac{9}{2} (1 - \cos 2 \theta) \right] \,d\theta                       \\
+                                                             & = \frac{1}{2} \left[ 9 \theta - 18 \cos \theta + \frac{9}{2} \left( \theta - \frac{1}{2} \sin 2 \theta \right) \right]_0^{2 \pi} \\
+                                                             & = \frac{1}{2} [(18 \pi - 18 + 9 \pi) - (-18)]                                                                                    \\
+                                                             & = \frac{1}{2} 27 \pi
+\end{align*}
+
+\setcounter{subsubsection}{4}
+\subsubsection{}
+
+\begin{align*}
+  4 \int_{-\pi / 6}^{\pi / 6} \int_0^{5 \cos 3 \theta} r \,dr \,d\theta & = 2 \int_{-\pi / 6}^{\pi / 6} [r^2]_0^{5 \cos 3 \theta} \,d\theta                \\
+                                                                        & = 50 \int_{-\pi / 6}^{\pi / 6} \cos^2 3 \theta \,d\theta                         \\
+                                                                        & = 25 \int_{-\pi / 6}^{\pi / 6} (1 + \cos 6 \theta) \,d\theta                     \\
+                                                                        & = 25 \left[ \theta + \frac{1}{6} \sin 6 \theta \right]_{-\pi / 6}^{\pi / 6}      \\
+                                                                        & = 25 \left[ \left( \frac{\pi}{6} \right) - \left( -\frac{\pi}{6} \right) \right] \\
+                                                                        & = \frac{25 \pi}{3}
+\end{align*}
+
+\setcounter{subsubsection}{24}
+\subsubsection{}
+
+\begin{align*}
+  \int_{-3}^3 \int_0^{\sqrt{9 - x^2}} \sqrt{x^2 + y^2} \,dy \,dx & = \int_0^\pi \int_0^3 r^2 \,dr \,d\theta                  \\
+                                                                 & = \int_0^\pi \left[ \frac{1}{3} r^3 \right]_0^3 \,d\theta \\
+                                                                 & = 9 \int_0^\pi \,d\theta                                  \\
+                                                                 & = 9 \pi
+\end{align*}
+
 \end{document}
