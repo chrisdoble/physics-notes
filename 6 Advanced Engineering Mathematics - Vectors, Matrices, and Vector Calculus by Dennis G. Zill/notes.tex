@@ -803,4 +803,12 @@
   \item An integral in cartesian coordinates can be converted to polar coordinates \[\iint_R f(x, y) \,dA = \int_\alpha^\beta \int_{g_1(\theta)}^{g_2(\theta)} f(r \cos \theta, r \sin \theta) r \,dr \,d \theta\] providing $R$ can be described by the region bounded by $\alpha \le \theta \le \beta$ and $g_1(\theta) \le r \le g_2(\theta)$.
 \end{itemize}
 
+\subsection{Green’s Theorem}
+
+\begin{itemize}
+  \item The \textbf{positive direction} around a simple closed curve $C$ is the direction you must travel in order to keep the region bounded by $C$ to the left.
+
+  \item \textbf{Green's theorem} states that if $C$ is a piecewise-smooth simple closed curve bounding a simply connected region $R$ and $P$, $Q$, $\partial P / \partial y$ and $\partial Q / \partial x$ are continuous on $R$, then \[\oint_C P \,dx + Q \,dy = \iint_R \left( \frac{\partial Q}{\partial x} - \frac{\partial P}{\partial y} \right) \,dA.\]
+\end{itemize}
+
 \end{document}
