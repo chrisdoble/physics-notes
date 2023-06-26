@@ -2608,7 +2608,7 @@ Not orthogonal
                                \frac{1}{\sqrt{2}}  \\
                                -\frac{1}{\sqrt{2}} \\
                                0
-                             \end{pmatrix}                                           \\
+                             \end{pmatrix}                                          \\
           \mathbf{V}_2   & = \mathbf{K}_2 - (\mathbf{K}_2 \cdot \mathbf{W}_1) \mathbf{W}_1               \\
                          & = \begin{pmatrix}
                                1 \\
@@ -2618,7 +2618,7 @@ Not orthogonal
                                                                   \frac{1}{\sqrt{2}}  \\
                                                                   -\frac{1}{\sqrt{2}} \\
                                                                   0
-                                                                \end{pmatrix}        \\
+                                                                \end{pmatrix}       \\
                          & = \begin{pmatrix}
                                \frac{1}{2} \\
                                \frac{1}{2} \\
@@ -2726,7 +2726,7 @@ Not orthogonal
   \mathbf{K}_1              & = \begin{pmatrix}
                                   \frac{1}{\sqrt{5}} \\
                                   \frac{2}{\sqrt{5}}
-                                \end{pmatrix}                    \\
+                                \end{pmatrix}                  \\
   \mathbf{B}                & = \mathbf{A} - \lambda_1 \mathbf{K}_1 \mathbf{K}_1^T \\
                             & = \begin{pmatrix}
                                   \frac{8}{5}  & -\frac{4}{5} \\
@@ -4152,24 +4152,24 @@ Either $||\mathbf{r}'(t)|| = 0$ or they're perpendicular.
 \subsubsection{}
 
 \begin{align*}
-  \mathbf{r}(t)                                      & = \langle a \cos t, a \sin t, c t \rangle                                                                                \\
-  \mathbf{r}'(t)                                     & = \langle -a \sin t, a \cos t, c \rangle                                                                                 \\
-  ||\mathbf{r}'(t)||                                 & = \sqrt{(-a \sin t)^2 + (a \cos t)^2 + (c)^2}                                                                            \\
-                                                     & = \sqrt{a^2 + c^2}                                                                                                       \\
-  \mathbf{T}(t)                                      & = \frac{\mathbf{r}'(t)}{||\mathbf{r}'(t)||}                                                                              \\
-                                                     & = \frac{1}{\sqrt{a^2 + c^2}} \langle -a \sin t, a \cos t, c \rangle                                                      \\
-  \frac{d \mathbf{T}}{d t}                           & = \frac{1}{\sqrt{a^2 + c^2}} \langle -a \cos t, -a \sin t, 0 \rangle                                                     \\
-  \left|\left|\frac{d \mathbf{T}}{d t}\right|\right| & = \frac{a}{\sqrt{a^2 + c^2}}                                                                                             \\
-  \mathbf{N}                                         & = \frac{d \mathbf{T} / d t}{||d \mathbf{T} / d t||}                                                                      \\
-                                                     & = \langle -\cos t, -\sin t, 0 \rangle                                                                                    \\
-  \mathbf{B}(t)                                      & = \mathbf{T}(t) \times \mathbf{N}(t)                                                                                     \\
+  \mathbf{r}(t)                                      & = \langle a \cos t, a \sin t, c t \rangle                                                                                      \\
+  \mathbf{r}'(t)                                     & = \langle -a \sin t, a \cos t, c \rangle                                                                                       \\
+  ||\mathbf{r}'(t)||                                 & = \sqrt{(-a \sin t)^2 + (a \cos t)^2 + (c)^2}                                                                                  \\
+                                                     & = \sqrt{a^2 + c^2}                                                                                                             \\
+  \mathbf{T}(t)                                      & = \frac{\mathbf{r}'(t)}{||\mathbf{r}'(t)||}                                                                                    \\
+                                                     & = \frac{1}{\sqrt{a^2 + c^2}} \langle -a \sin t, a \cos t, c \rangle                                                            \\
+  \frac{d \mathbf{T}}{d t}                           & = \frac{1}{\sqrt{a^2 + c^2}} \langle -a \cos t, -a \sin t, 0 \rangle                                                           \\
+  \left|\left|\frac{d \mathbf{T}}{d t}\right|\right| & = \frac{a}{\sqrt{a^2 + c^2}}                                                                                                   \\
+  \mathbf{N}                                         & = \frac{d \mathbf{T} / d t}{||d \mathbf{T} / d t||}                                                                            \\
+                                                     & = \langle -\cos t, -\sin t, 0 \rangle                                                                                          \\
+  \mathbf{B}(t)                                      & = \mathbf{T}(t) \times \mathbf{N}(t)                                                                                           \\
                                                      & = -\frac{1}{\sqrt{a^2 + c^2}} \begin{vmatrix}
                                                                                        \hat{\mathbf{i}} & \hat{\mathbf{j}} & \hat{\mathbf{k}} \\
                                                                                        -a \sin t        & a \cos t         & c                \\
                                                                                        \cos t           & \sin t           & 0
                                                                                      \end{vmatrix} \\
-                                                     & = \frac{1}{\sqrt{a^2 + c^2}} \langle c \sin t, -c \cos t, a \rangle                                                      \\
-  \kappa                                             & = \frac{||\mathbf{T}'(t)||}{||\mathbf{r}'(t)||}                                                                          \\
+                                                     & = \frac{1}{\sqrt{a^2 + c^2}} \langle c \sin t, -c \cos t, a \rangle                                                            \\
+  \kappa                                             & = \frac{||\mathbf{T}'(t)||}{||\mathbf{r}'(t)||}                                                                                \\
                                                      & = \frac{a}{a^2 + c^2}
 \end{align*}
 
@@ -4195,19 +4195,19 @@ Either $||\mathbf{r}'(t)|| = 0$ or they're perpendicular.
 \subsubsection{}
 
 \begin{align*}
-  \mathbf{r}(t)                         & = \langle 1, t, t^2 \rangle                                                                  \\
-  \mathbf{r}'(t)                        & = \langle 0, 1, 2 t \rangle                                                                  \\
-  ||\mathbf{r}'(t)||                    & = \sqrt{1 + 4 t^2}                                                                           \\
-  \mathbf{r}''(t)                       & = \langle 0, 0, 2 \rangle                                                                    \\
-  a_T                                   & = \frac{\mathbf{r}'(t) \cdot \mathbf{r}''(t)}{||\mathbf{r}'(t)||}                            \\
-                                        & = \frac{4 t}{\sqrt{1 + 4 t^2}}                                                               \\
+  \mathbf{r}(t)                         & = \langle 1, t, t^2 \rangle                                                                        \\
+  \mathbf{r}'(t)                        & = \langle 0, 1, 2 t \rangle                                                                        \\
+  ||\mathbf{r}'(t)||                    & = \sqrt{1 + 4 t^2}                                                                                 \\
+  \mathbf{r}''(t)                       & = \langle 0, 0, 2 \rangle                                                                          \\
+  a_T                                   & = \frac{\mathbf{r}'(t) \cdot \mathbf{r}''(t)}{||\mathbf{r}'(t)||}                                  \\
+                                        & = \frac{4 t}{\sqrt{1 + 4 t^2}}                                                                     \\
   \mathbf{r}'(t) \times \mathbf{r}''(t) & = \begin{vmatrix}
                                               \hat{\mathbf{i}} & \hat{\mathbf{j}} & \hat{\mathbf{k}} \\
                                               0                & 1                & 2 t              \\
                                               0                & 0                & 2
                                             \end{vmatrix} \\
-                                        & = \langle 2, 0, 0 \rangle                                                                    \\
-  a_N                                   & = \frac{||\mathbf{r}'(t) \times \mathbf{r}''(t)||}{||\mathbf{r}'(t)||}                       \\
+                                        & = \langle 2, 0, 0 \rangle                                                                          \\
+  a_N                                   & = \frac{||\mathbf{r}'(t) \times \mathbf{r}''(t)||}{||\mathbf{r}'(t)||}                             \\
                                         & = \frac{2}{\sqrt{1 + 4 t^2}}
 \end{align*}
 
@@ -4224,7 +4224,7 @@ Either $||\mathbf{r}'(t)|| = 0$ or they're perpendicular.
                                                   \hat{\mathbf{i}} & \hat{\mathbf{j}} & \hat{\mathbf{k}} \\
                                                   -a \sin t        & b \cos t         & c                \\
                                                   -a \cos t        & -b \sin t        & 0
-                                                \end{vmatrix}               \\
+                                                \end{vmatrix}         \\
                                             & = \langle b c \sin t, -a c \cos t, a b \rangle                                                             \\
   ||\mathbf{r}'(t) \times \mathbf{r}''(t)|| & = \sqrt{(b c \sin t)^2 + (-a c \cos t)^2 + (a b)^2}                                                        \\
                                             & = \sqrt{b^2 c^2 \sin^2 t + a^2 c^2 \cos^2 t + a^2 b^2}                                                     \\
@@ -4563,8 +4563,8 @@ The curve is sharper at $(0, 0)$.
 \subsubsection{}
 
 \begin{align*}
-\nabla \cdot \mathbf{F} & = 2 x y z  - 2 x y z + 1 \\
-                         & = 1
+  \nabla \cdot \mathbf{F} & = 2 x y z  - 2 x y z + 1 \\
+                          & = 1
 \end{align*}
 
 If $\mathbf{F}$ where the curl of another vector field then $\nabla \cdot \mathbf{F}$ would be $0$ but it's not.
@@ -5136,6 +5136,197 @@ Not conservative
                          & = \int_0^{2 \pi} r^2 \,d\theta                                                                   \\
                          & = \int_0^{2 \pi} (1 + \cos \theta)^2 \,d\theta                                                   \\
                          & = 3 \pi
+\end{align*}
+
+\subsection{Surface Integrals}
+
+\subsubsection{}
+
+\begin{align*}
+  2 x + 3 y + 4 z & = 12                                                                                                                     \\
+  z               & = 3 - \frac{1}{2} x - \frac{3}{4} y                                                                                      \\
+  y               & = 4 - \frac{2}{3} x                                                                                                      \\
+  A               & = \iint_S dS                                                                                                             \\
+                  & = \int_0^6 \int_0^{4 - \frac{2}{3} x} \sqrt{1 + \left[ -\frac{1}{2} \right]^2 + \left[ -\frac{3}{4} \right]^2} \,dy \,dx \\
+                  & = \frac{\sqrt{29}}{4} \int_0^6 \left( 4 - \frac{2}{3} x \right) \,dx                                                     \\
+                  & = \frac{\sqrt{29}}{4} \left[ 4 x - \frac{1}{3} x^2 \right]_0^6                                                           \\
+                  & = 3 \sqrt{29}
+\end{align*}
+
+\setcounter{subsubsection}{2}
+\subsubsection{}
+
+\begin{align*}
+  x^2 + z^2 & = 16                                                                                 \\
+  z         & = \sqrt{16 - x^2}                                                                    \\
+  A         & = \int_0^2 \int_0^5 \sqrt{1 + \left[ -\frac{x}{\sqrt{16 - x^2}} \right]^2} \,dy \,dx \\
+            & = 5 \int_0^2 \sqrt{1 + \frac{x^2}{16 - x^2}} \,dx                                    \\
+            & = 5 \int_0^2 \sqrt{\frac{16}{16 - x^2}} \,dx                                         \\
+            & = 20 \int_0^2 \frac{1}{\sqrt{16 - x^2}} \,dx                                         \\
+            & = 20 \left[ \arcsin \frac{x}{4} \right]_0^2                                          \\
+            & = \frac{10}{3} \pi
+\end{align*}
+
+\setcounter{subsubsection}{14}
+\subsubsection{}
+
+\begin{align*}
+  \iint_S G(x, y, z) \,dS & = \int_0^{\sqrt{2}} \int_0^4 x \sqrt{1 + [-2 x]^2} \,dy \,dx     \\
+                          & = \int_0^{\sqrt{2}} \int_0^4 x \sqrt{1 + 4 x^2} \,dy \,dx        \\
+                          & = 4 \int_0^{\sqrt{2}} x \sqrt{1 + 4 x^2} \,dx                    \\
+                          & = 4 \left[ \frac{1}{12} (4 x^2 + 1)^{3 / 2} \right]_0^{\sqrt{2}} \\
+                          & = \frac{26}{3}
+\end{align*}
+
+\setcounter{subsubsection}{16}
+\subsubsection{}
+
+\begin{align*}
+  \iint_S G(x, y, z) \,dS & = 2 \int_0^{\sqrt{1 - x^2}} \int_{-1}^1 x z^3 \sqrt{1 + \left[ \frac{x}{\sqrt{x^2 + y^2}} \right]^2 + \left[ \frac{y}{\sqrt{x^2 + y^2}} \right]^2} \,dA \\
+                          & = 2 \sqrt{2} \int_0^{\sqrt{1 - x^2}} \int_{-1}^1 x (x^2 + y^2)^{3 / 2} \,dx \,dy                                                                        \\
+                          & = 2 \sqrt{2} \int_0^{\sqrt{1 - x^2}} \left[ \frac{1}{5} (x^2 + y^2)^{5 / 2} \right]_{-1}^1 \,dy                                                         \\
+                          & = 0
+\end{align*}
+
+\setcounter{subsubsection}{18}
+\subsubsection{}
+
+\begin{align*}
+  x^2 + y^2 + z^2 & = 36                    \\
+  z               & = \sqrt{36 - x^2 - y^2} \\
+\end{align*}
+
+\begin{align*}
+  \iint_R (x^2 + y^2) z \sqrt{1 + \left[ -\frac{x}{\sqrt{36 - x^2 - y^2}} \right]^2 + \left[ -\frac{y}{\sqrt{36 - x^2 - y^2}} \right]^2} \,dA \\
+  \int_0^6 \int_0^{\pi / 2} r^2 \sqrt{36 - r^2} \sqrt{1 + \frac{r^2}{36 - r^2}} r \,d\theta \,dr                                              \\
+  6 \int_0^6 \int_0^{\pi / 2} r^3 \,d\theta \,dr                                                                                              \\
+  3 \pi \int_0^6 r^3 \,dr                                                                                                                     \\
+  3 \pi \left[ \frac{1}{4} r^4 \right]_0^6                                                                                                    \\
+  972 \pi
+\end{align*}
+
+\setcounter{subsubsection}{24}
+\subsubsection{}
+
+\begin{align*}
+  x + 2 y + 3 z                & = 6                                                                                                                                             \\
+  y                            & = 3 - \frac{1}{2} x - \frac{3}{2} z                                                                                                             \\
+  0                            & = 3 - \frac{1}{2} x - \frac{3}{2} z                                                                                                             \\
+  \frac{3}{2} z                & = 3 - \frac{1}{2} x                                                                                                                             \\
+  z                            & = 2 - \frac{1}{3} x                                                                                                                             \\
+  0                            & = 2 - \frac{1}{3} x                                                                                                                             \\
+  x                            & = 6                                                                                                                                             \\
+  \iint_S (3 z^2 + 4 y z) \,dS & = \int_0^6 \int_0^{2 - \frac{1}{3} x} (3 z^2 + 4 y z) \sqrt{1 + \left[ -\frac{1}{2} \right]^2 + \left[ -\frac{3}{2} \right]^2} \,dz \,dx        \\
+                               & = \frac{\sqrt{14}}{2} \int_0^6 \int_0^{2 - \frac{1}{3} x} \left[ 3 z^2 + 4 \left( 3 - \frac{1}{2} x - \frac{3}{2} z \right) z \right] \,dz \,dx \\
+                               & = \frac{\sqrt{14}}{2} \int_0^6 \int_0^{2 - \frac{1}{3} x} \left( -3 z^2 - 2 x z + 12 z \right) \,dz \,dx                                        \\
+                               & = \frac{\sqrt{14}}{2} \int_0^6 [-z^3 - x z^2 + 6 z^2]_0^{2 - \frac{1}{3} x} \,dx                                                                \\
+                               & = \frac{\sqrt{14}}{2} \int_0^6 \left[ -\left( 2 - \frac{1}{3} x \right)^3 + (6 - x) \left( 2 - \frac{1}{3} x \right)^2 \right] \,dx             \\
+                               & = \frac{\sqrt{14}}{2} \int_0^6 \left( -\frac{2}{27} x^3 + \frac{4}{3} x^2 - 8 x + 16 \right) \,dx                                               \\
+                               & = \frac{\sqrt{14}}{2} \left[ -\frac{1}{54} x^4 + \frac{4}{9} x^3 - 4 x^2 + 16 x \right]_0^6                                                     \\
+                               & = 12 \sqrt{14}
+\end{align*}
+
+\setcounter{subsubsection}{26}
+\subsubsection{}
+
+\begin{align*}
+  x + y + z          & = 1                                                                  \\
+  z                  & = 1 - x - y                                                          \\ \\
+  0                  & = 1 - x - y                                                          \\
+  y                  & = 1 - x                                                              \\ \\
+  \iint_S k x^2 \,dS & = \int_0^1 \int_0^{1 - x} k x^2 \sqrt{1 + [-1]^2 + [-1]^2} \,dy \,dx \\
+                     & = \sqrt{3} k \int_0^1 (x^2 - x^3) \,dx                               \\
+                     & = \sqrt{3} k \left[ \frac{1}{3} x^3 - \frac{1}{4} x^4 \right]_0^1    \\
+                     & = \frac{\sqrt{3}}{12} k
+\end{align*}
+
+\setcounter{subsubsection}{28}
+\subsubsection{}
+
+\begin{align*}
+  \mathbf{F}                                 & = \langle x, 2 z, y \rangle                                                                                              \\
+  g(x, y, z)                                 & = y^2 + z^2 - 4                                                                                                          \\
+  \nabla g                                   & = \langle 0, 2 y, 2 z \rangle                                                                                            \\
+  ||\nabla g||                               & = \sqrt{4 y^2 + 4 z^2}                                                                                                   \\
+                                             & = 2 \sqrt{y^2 + z^2}                                                                                                     \\
+                                             & = 4                                                                                                                      \\
+  \mathbf{n}                                 & = \frac{\nabla g}{||\nabla g||}                                                                                          \\
+                                             & = \langle 0, \frac{y}{2}, \frac{z}{2} \rangle                                                                            \\
+  z                                          & = \sqrt{4 - y^2}                                                                                                         \\
+  \iint_S (\mathbf{F} \cdot \mathbf{n}) \,dS & = \int_0^3 \int_0^2 \left( y z + \frac{1}{2} y z \right) \sqrt{1 + \left[ -\frac{y}{\sqrt{4 - y^2}} \right]^2} \,dy \,dx \\
+                                             & = \int_0^3 \int_0^2 \frac{3}{2} y z \sqrt{1 + \frac{y^2}{4 - y^2}} \,dy \,dx                                             \\
+                                             & = \int_0^3 \int_0^2 \frac{3}{2} y z \sqrt{\frac{4}{4 - y^2}} \,dy \,dx                                                   \\
+                                             & = 3 \int_0^3 \int_0^2 y \,dy \,dx                                                                                        \\
+                                             & = 3 \int_0^3 \left[ \frac{1}{2} y^2 \right]_0^2 \,dx                                                                     \\
+                                             & = 6 \int_0^3 \,dx                                                                                                        \\
+                                             & = 18
+\end{align*}
+
+\setcounter{subsubsection}{30}
+\subsubsection{}
+
+\begin{align*}
+  \mathbf{F}                                 & = \langle x, y, z \rangle                                                                                                            \\
+  g(x, y, z)                                 & = 5 - x^2 - y^2 - z                                                                                                                  \\
+  \nabla g                                   & = \langle -2 x, -2 y, -1 \rangle                                                                                                     \\
+  ||\nabla g||                               & = \sqrt{4 x^2 + 4 y^2 + 1}                                                                                                           \\
+  \mathbf{n}                                 & = \langle -2 x, -2 y, -1 \rangle / \sqrt{4 x^2 + 4 y^2 + 1}                                                                          \\
+  z                                          & = 5 - x^2 - y^2                                                                                                                      \\
+  0                                          & = 5 - x^2 - y^2                                                                                                                      \\
+  y^2                                        & = 5 - x^2                                                                                                                            \\
+  \mathbf{F} \cdot \mathbf{n}                & = \frac{-2 x^2 - 2 y^2 - z}{\sqrt{4 x^2 + 4 y^2 + 1}}                                                                                \\
+  y                                          & = \sqrt{5 - x^2}                                                                                                                     \\
+  \iint_S (\mathbf{F} \cdot \mathbf{n}) \,dS & = 2 \int_{-2}^2 \int_0^{\sqrt{4 - x^2}} \frac{-2 x^2 - 2 y^2 - z}{\sqrt{4 x^2 + 4 y^2 + 1}} \sqrt{1 + [-2 x]^2 + [-2 y]^2} \,dy \,dx \\
+                                             & = 2 \int_{-2}^2 \int_0^{\sqrt{4 - x^2}} [-2 x^2 - 2 y^2 - (5 - x^2 - y^2)] \,dy \,dx                                                 \\
+                                             & = 2 \int_{-2}^2 \int_0^{\sqrt{4 - x^2}} (-x^2 - y^2 - 5) \,dy \,dx                                                                   \\
+                                             & = 2 \int_{-2}^2 \left[ -\frac{1}{3} y^3 - (x^2 + 5) y \right]_0^{\sqrt{4 - x^2}} \,dx                                                \\
+                                             & = 2 \int_{-2}^2 \left( -\frac{1}{3} (4 - x^2)^{3 / 2} - (x^2 + 5) \sqrt{4 - x^2} \right) \,dx                                        \\
+                                             & = -28 \pi
+\end{align*}
+
+\setcounter{subsubsection}{34}
+\subsubsection{}
+
+\begin{align*}
+  \mathbf{F}                                   & = \langle y^2, x^2, 5 z \rangle                                                                                              \\
+  \iint_{S_1} \mathbf{F} \cdot \mathbf{n} \,dS & = 5 \pi                                                                                                                      \\
+  z                                            & = x^2 +y^2                                                                                                                   \\
+  g(x, y, z)                                   & = x^2 + y^2 - z                                                                                                              \\
+  \nabla g                                     & = \langle 2 x, 2 y, -1 \rangle                                                                                               \\
+  ||\nabla g||                                 & = \sqrt{4 x^2 + 4 y^2 + 1}                                                                                                   \\
+  \mathbf{n}                                   & = \frac{\langle 2 x, 2 y, -1 \rangle}{\sqrt{4 x^2 + 4 y^2 + 1}}                                                              \\
+  \iint_{S_2} \mathbf{F} \cdot \mathbf{n} \,dS & = \iint_R \frac{2 x y^2 + 2 x^2 y - 5 z}{\sqrt{4 x^2 + 4 y^2 + 1}} \sqrt{1 + [2 x]^2 + [2 y]^2} \,dA                         \\
+                                               & = \int_{-1}^1 \int_{-\sqrt{1 - x^2}}^{\sqrt{1 - x^2}} [2 x y^2 + 2 x^2 y - 5 (x^2 + y^2)] \,dy \,dx                          \\
+                                               & = \int_{-1}^1 \int_{-\sqrt{1 - x^2}}^{\sqrt{1 - x^2}} (2 x y^2 + 2 x^2 y - 5 x^2 - 5 y^2) \,dy \,dx                          \\
+                                               & = \int_{-1}^1 \left[ \frac{2}{3} x y^3 + x^2 y^2 - 5 x^2 y - \frac{5}{3} y^3 \right]_{-\sqrt{1 - x^2}}^{\sqrt{1 - x^2}} \,dx \\
+                                               & = \int_{-1}^1 \left[ 2 \left( \frac{2}{3} x - \frac{5}{3} \right) (1 - x^2)^{3 / 2} - 10 x^2 \sqrt{1 - x^2} \right] \,dx     \\
+                                               & = -\frac{5}{2} \pi                                                                                                           \\
+  \iint_S \mathbf{F} \cdot \mathbf{n} \,dS     & = 5 \pi - \frac{5}{2} \pi                                                                                                    \\
+                                               & = \frac{5}{2} \pi
+\end{align*}
+
+\setcounter{subsubsection}{36}
+\subsubsection{}
+
+\begin{align*}
+  T(x, y, z)                               & = x^2 + y^2 + z^2                                                \\
+                                           & = r^2                                                            \\
+  \mathbf{F}                               & = -\nabla T                                                      \\
+                                           & = \langle -2 r, 0, 0 \rangle                                     \\
+  \iint_R \mathbf{F} \cdot \mathbf{n} \,dA & = \int_0^{2 \pi} \int_0^\pi -2 a^3 \sin \theta \,d\theta \,d\phi \\
+                                           & = -4 \pi a^3 \int_0^\pi \sin \theta \,d\theta                    \\
+                                           & = -4 \pi a^3 [-\cos \theta]_0^\pi                                \\
+                                           & = -8 \pi a^3
+\end{align*}
+
+\setcounter{subsubsection}{38}
+\subsubsection{}
+
+\begin{align*}
+  \mathbf{E}                               & = \frac{k q}{r^2} \hat{\mathbf{r}}                                            \\
+  \iint_S \mathbf{E} \cdot \mathbf{n} \,dA & = \int_0^{2 \pi} \int_0^\pi \frac{k q}{a^2} a^2 \sin \theta \,d\theta \,d\phi \\
+                                           & = 2 \pi k q [-\cos \theta]_0^\pi                                              \\
+                                           & = 4 \pi k q
 \end{align*}
 
 \end{document}

@@ -811,4 +811,22 @@
   \item \textbf{Green's theorem} states that if $C$ is a piecewise-smooth simple closed curve bounding a simply connected region $R$ and $P$, $Q$, $\partial P / \partial y$ and $\partial Q / \partial x$ are continuous on $R$, then \[\oint_C P \,dx + Q \,dy = \iint_R \left( \frac{\partial Q}{\partial x} - \frac{\partial P}{\partial y} \right) \,dA.\]
 \end{itemize}
 
+\subsection{Surface Integrals}
+
+\begin{itemize}
+  \item The area of a function $f$ over a surface $R$ is given by \[A = \iint_R \,dS = \iint_R \sqrt{1 + [f_x(x, y)]^2 + [f_y(x, y)]^2} \,dA\] where $dS$ is known as the \textbf{differential of the surface area} and $dA$ is known as the \textbf{differential of the area}.
+
+  \item The \textbf{suface integral} of a function $G(x, y, z)$ over a surface $S$ is given by \[\iint_S G(x, y, z) \,dS = \iint_R G(x, y, z) \sqrt{1 + [f_x(x, y)]^2 + [f_y(x, y)]^2} \,dA.\]
+
+  \item If the surface is expressed in the form $x = f(y, z)$ or $y = g(x, z)$ instead of $z = h(x, y)$, the above integral can be modified to use different partial derivatives.
+
+  \item A surface is said to be \textbf{orientable} if there exists a continuous unit normal vector function defined at each point on the surface. A Möbius strip is not orientable, for example.
+
+  \item An open surface has an \textbf{upward orientation} when the unit normals are directed upward and a \textbf{downward orientation} when they're downward.
+
+  \item A closed surface has an \textbf{inward orientation} when the unit normals are directed inward and a \textbf{outward orientation} when they're outward.
+
+  \item If a surface is piecewise defined we take the surface integral to be the sum of the surface integrals of the various pieces.
+\end{itemize}
+
 \end{document}
