@@ -827,6 +827,24 @@
   \item A closed surface has an \textbf{inward orientation} when the unit normals are directed inward and a \textbf{outward orientation} when they're outward.
 
   \item If a surface is piecewise defined we take the surface integral to be the sum of the surface integrals of the various pieces.
+
+\item If a smooth surface $S$ is defined by $g(x, y, z) = 0$ then the unit normal is \[\mathbf{n} = \frac{\nabla g}{||\nabla g||}.\]
+
+\item If a smooth surface $S$ is defined by $z = f(x, y)$ then either $g(x, y, z) = z - f(x, y)$ or $g(x, y, z) = f(x, y) - z$ depending on the orientation of $S$.
+\end{itemize}
+
+\subsection{Stokes' Theorem}
+
+\begin{itemize}
+  \item Green's theorem in two dimensions can be written in vector form as \[\oint \mathbf{F} \cdot d \mathbf{r} = \oint \mathbf{F} \cdot \mathbf{T} \,ds = \iint_R (\nabla \times \mathbf{F}) \cdot \mathbf{k} \,dA.\]
+
+  \item The positive direction of a boundary curve around a surface is the direction such that the surface is kept on your left and your ``head'' points in the direction of the orientation of the surface. Alternatively you can use the right hand rule: point the thumb in the direction of the surface orientation and the fingers curl around in the positive direction.
+\end{itemize}
+
+\includegraphics[scale=0.443]{stokes-theorem}
+
+\begin{itemize}
+\item A vector field is conservative if its curl is $0$.
 \end{itemize}
 
 \end{document}
