@@ -5460,4 +5460,288 @@ Not conservative
                                         & = \frac{81}{4} \pi
 \end{align*}
 
+\subsection{Triple Integrals}
+
+\subsubsection{}
+
+\begin{align*}
+  \int_2^4 \int_{-2}^2 \int_{-1}^1 (x + y + z) \,dx \,dy \,dz & = \int_2^4 \int_{-2}^2 \left[ \frac{1}{2} x^2 + (y + z) x \right]_{-1}^1 \\
+                                                              & = \int_2^4 \int_{-2}^2 (2 y + 2 z) \,dy \,dz                             \\
+                                                              & = \int_2^4 [y^2 + 2 z y]_{-2}^2 \,dz                                     \\
+                                                              & = \int_2^4 8 z \,dz                                                      \\
+                                                              & = [4 z^2]_2^4                                                            \\
+                                                              & = 48
+\end{align*}
+
+\setcounter{subsubsection}{8}
+\subsubsection{}
+
+\begin{align*}
+  \iiint_D z \,dV & = \int_0^5 \int_1^3 \int_y^{y + 2} z \,dx \,dy \,dz \\
+                  & = \int_0^5 \int_1^3 2 z \,dy \,dz                   \\
+                  & = \int_0^5 4 z \,dz                                 \\
+                  & = [2 z^2]_0^5                                       \\
+                  & = 50
+\end{align*}
+
+\setcounter{subsubsection}{10}
+\subsubsection{}
+
+\begin{align*}
+  \int_0^2 \int_0^{4 - 2 y} \int_{x + 2 y}^4 F(x, y, z) \,dz \,dx \,dy \\
+  \int_0^4 \int_0^{z / 2} \int_0^{z - 2 y} F(x, y, z) \,dx \,dy \,dz   \\
+  \int_0^2 \int_{2 y}^4 \int_0^{z - 2 y} F(x, y, z) \,dx \,dz \,dy     \\
+  \int_0^4 \int_0^z \int_0^{(z - x) / 2} F(x, y, z) \,dy \,dx \,dz     \\
+  \int_0^4 \int_x^4 \int_0^{(z - x) / 2} F(x, y, z) \,dy \,dz \,dx     \\
+  \int_0^4 \int_0^{2 - x / 2} \int_{x + 2 y}^4 F(x, y, z) \,dz \,dy \,dx
+\end{align*}
+
+\setcounter{subsubsection}{12}
+\subsubsection{}
+
+\begin{enumerate}
+  \item \[\int_0^2 \int_{x^3}^8 \int_0^4 dz \,dy \,dx\]
+
+  \item \[\int_0^8 \int_0^4 \int_0^{\sqrt[3]{y}} dx \,dz \,dy\]
+
+  \item \[\int_0^4 \int_0^2 \int_{x^3}^8 dy \,dx \,dz\]
+\end{enumerate}
+
+\setcounter{subsubsection}{20}
+\subsubsection{}
+
+\begin{align*}
+  \int_0^3 \int_{-\sqrt{2}}^{\sqrt{2}} \int_{y^2}^{4 - y^2} dx \,dy \,dz & = \int_0^3 \int_{-\sqrt{2}}^{\sqrt{2}} (4 - 2 y^2) \,dy \,dz                                                                          \\
+                                                                         & = \int_0^3 \left[ 4 y - \frac{2}{3} y^3 \right]_{-\sqrt{2}}^{\sqrt{2}} \,dz                                                           \\
+                                                                         & = \int_0^3 \left[ \left( 4 \sqrt{2} - \frac{2}{3} 2^{3 / 2} \right) - \left( -4 \sqrt{2} + \frac{2}{3} 2^{3 / 2} \right) \right] \,dz \\
+                                                                         & = \int_0^3 \left( 8 \sqrt{2} - \frac{4}{3} 2^{3 / 2} \right) \,dz                                                                     \\
+                                                                         & = \frac{16}{3} \sqrt{2} \int_0^3 \,dz                                                                                                 \\
+                                                                         & = 16 \sqrt{2}
+\end{align*}
+
+\setcounter{subsubsection}{24}
+\subsubsection{}
+
+\begin{align*}
+  m       & = \int_0^4 \int_0^2 \int_{x^3}^8 k z \,dy \,dx \,dz                      \\
+          & = \int_0^4 k z \int_0^2 (8 - x^3) \,dx \,dz                              \\
+          & = \int_0^4 k z \left[ 8 x - \frac{1}{4} x^4 \right]_0^2 \,dz             \\
+          & = 12 k \int_0^4 z \,dz                                                   \\
+          & = 12 k \left[ \frac{1}{2} z^2 \right]_0^4                                \\
+          & = 96 k                                                                   \\
+  M_{x y} & = \int_0^4 \int_0^2 \int_{x^3}^8 k z^2 \,dy \,dx \,dz                    \\
+          & = k \int_0^4 z^2 \int_0^2 (8 - x^3) \,dx \,dz                            \\
+          & = k \int_0^4 z^2 \left[ 8 x - \frac{1}{4} x^4 \right]_0^2 \,dz           \\
+          & = 12 k \int_0^4 z^2 \,dz                                                 \\
+          & = 12 k \left[ \frac{1}{3} z^3 \right]_0^4                                \\
+          & = 256 k                                                                  \\
+  M_{x z} & = \int_0^4 \int_0^2 \int_{x^3}^8 k y z \,dy \,dx \,dz                    \\
+          & = k \int_0^4 z \int_0^2 \left[ \frac{1}{2} y^2 \right]_{x^3}^8 \,dx \,dz \\
+          & = \frac{k}{2} \int_0^4 z \int_0^2 (64 - x^6) \,dx \,dz                   \\
+          & = \frac{k}{2} \int_0^4 z \left[ 64 x - \frac{1}{7} x^7 \right]_0^2 \,dz  \\
+          & = \frac{384}{7} k \int_0^4 z \,dz                                        \\
+          & = \frac{384}{7} k \left[ \frac{1}{2} z^2 \right]_0^4                     \\
+          & = \frac{3072}{7} k
+\end{align*}
+
+\begin{align*}
+  M_{y z}      & = \int_0^4 \int_0^2 \int_{x^3}^8 k x z \,dy \,dx \,dz          \\
+               & = k \int_0^4 z \int_0^2 x (8 - x^3) \,dx \,dz                  \\
+               & = k \int_0^4 z \left[ 4 x^2 - \frac{1}{5} x^5 \right]_0^2 \,dz \\
+               & = \frac{48}{5} k \int_0^4 z \,dz                               \\
+               & = \frac{48}{5} k \left[ \frac{1}{2} z^2 \right]_0^4            \\
+               & = \frac{384}{5} k                                              \\
+  \overline{x} & = \frac{M_{y z}}{m}                                            \\
+               & = \frac{384 k / 5}{96 k}                                       \\
+               & = \frac{4}{5}                                                  \\
+  \overline{y} & = \frac{M_{x z}}{m}                                            \\
+               & = \frac{3072 k / 7}{96 k}                                      \\
+               & = \frac{32}{7}                                                 \\
+  \overline{z} & = \frac{M_{x y}}{m}                                            \\
+               & = \frac{256 k}{96 k}                                           \\
+               & = \frac{8}{3}
+\end{align*}
+
+\setcounter{subsubsection}{28}
+\subsubsection{}
+
+\begin{align*}
+  m & = \iiint \rho \,dV                                                                                      \\
+    & = \int_{-1}^1 \int_{2 y + 2}^{8 - y} \int_{-\sqrt{1 - y^2}}^{\sqrt{1 - y^2}} (x + y + 4) \,dx \,dz \,dy
+\end{align*}
+
+\setcounter{subsubsection}{34}
+\subsubsection{}
+
+\[\left( 10 \cos \frac{3 \pi}{4}, 10 \sin \frac{3 \pi}{4}, 5 \right) = \left( -5 \sqrt{2}, 5 \sqrt{2}, 5 \right)\]
+
+\setcounter{subsubsection}{38}
+\subsubsection{}
+
+\[\left( \sqrt{2}, -\frac{\pi}{4}, -9 \right)\]
+
+\setcounter{subsubsection}{42}
+\subsubsection{}
+
+\[r^2 + z^2 = 25\]
+
+\setcounter{subsubsection}{44}
+\subsubsection{}
+
+\[r^2 - z^2 = 1\]
+
+\setcounter{subsubsection}{46}
+\subsubsection{}
+
+\[z = x^2 + y^2\]
+
+\setcounter{subsubsection}{48}
+\subsubsection{}
+
+\[x = 5\]
+
+\setcounter{subsubsection}{50}
+\subsubsection{}
+
+\begin{align*}
+  r^2       & = 4                                                                    \\
+  r^2 + z^2 & = 16                                                                   \\
+  z         & = 0                                                                    \\
+  \iiint dV & = \int_0^{2 \pi} \int_0^2 \int_0^{\sqrt{16 - r^2}} r dz \,dr \,d\theta \\
+            & = 2 \pi \int_0^2 r \sqrt{16 - r^2} \,dr
+\end{align*}
+
+Let $u = 16 - r^2$ so $d u = -2 r \,dr$
+
+\begin{align*}
+  -\pi \int_{16}^{12} \sqrt{u} \,du & = -\pi \left[ \frac{2}{3} u^{3 / 2} \right]_{16}^{12} \\
+                                    & = -\frac{2}{3} \pi (12^{3 / 2} - 16^{3 / 2})          \\
+                                    & = \frac{2}{3} \pi (64 - 8 \cdot 3^{3 / 2})
+\end{align*}
+
+\setcounter{subsubsection}{52}
+\subsubsection{}
+
+\begin{align*}
+  z         & = r^2                                                      \\
+  r^2       & = 25                                                       \\
+  z         & = 0                                                        \\
+  \iiint dV & = \int_0^{2 \pi} \int_0^5 \int_0^{r^2} r dz \,dr \,d\theta \\
+            & = 2 \pi \int_0^5 r^3 \,dr                                  \\
+            & = 2 \pi \left[ \frac{1}{4} r^4 \right]_0^5                 \\
+            & = \frac{625}{2} \pi
+\end{align*}
+
+\setcounter{subsubsection}{58}
+\subsubsection{}
+
+\begin{enumerate}
+  \item
+
+        \begin{align*}
+          (\rho \sin \phi \cos \theta, \rho \sin \phi \sin \theta, \rho \cos \phi)                                                                            \\
+          \left( \frac{2}{3} \sin \frac{\pi}{2} \cos \frac{\pi}{6}, \frac{2}{3} \sin \frac{\pi}{2} \sin \frac{\pi}{6}, \frac{2}{3} \cos \frac{\pi}{2} \right) \\
+          \left( \frac{\sqrt{3}}{3}, \frac{1}{3}, 0 \right)
+        \end{align*}
+
+  \item
+
+        \begin{align*}
+          \left( \rho \sin \phi, \theta, \rho \cos \phi \right)                                        \\
+          \left( \frac{2}{3} \sin \frac{\pi}{2}, \frac{\pi}{6}, \frac{2}{3} \cos \frac{\pi}{2} \right) \\
+          \left( \frac{2}{3}, \frac{\pi}{6}, 0 \right)
+        \end{align*}
+\end{enumerate}
+
+\setcounter{subsubsection}{62}
+\subsubsection{}
+
+\begin{align*}
+  \left( \sqrt{x^2 + y^2 + z^2}, \arccos \frac{z}{\sqrt{x^2 + y^2 + z^2}}, \arctan \frac{y}{x} \right) \\
+  \left( \sqrt{50}, \frac{\pi}{2}, -\frac{3 \pi}{4} \right)
+\end{align*}
+
+\setcounter{subsubsection}{66}
+\subsubsection{}
+
+\[\rho = 8\]
+
+\setcounter{subsubsection}{68}
+\subsubsection{}
+
+\begin{align*}
+  (\rho \cos \phi)^2 & = 3 (\rho \sin \phi \cos \theta)^2 + 3 (\rho \sin \phi \sin \theta)^2     \\
+  \rho^2 \cos^2 \phi & = 3 \rho^2 \sin^2 \phi \cos^2 \theta + 3 \rho^2 \sin^2 \phi \sin^2 \theta \\
+  \cos^2 \phi        & = 3 sin^2 \phi (\cos^2 \theta + \sin^2 \theta)                            \\
+  \cos^2 \phi        & = 3 \sin^2 \phi                                                           \\
+  \tan \phi          & = \frac{1}{\sqrt{3}}                                                      \\
+  \phi               & = \pm \frac{\pi}{6}
+\end{align*}
+
+\setcounter{subsubsection}{70}
+\subsubsection{}
+
+\[x^2 + y^2 + z^2 = 100\]
+
+\setcounter{subsubsection}{72}
+\subsubsection{}
+
+\[z = 2\]
+
+\setcounter{subsubsection}{74}
+\subsubsection{}
+
+\begin{align*}
+  \rho \cos \phi & = \sqrt{(\rho \sin \phi \cos \theta)^2 + (\rho \sin \phi \sin \theta)^2}        \\
+  \cos \phi      & = \sin \phi                                                                     \\
+  \phi           & = \frac{\pi}{4}                                                                 \\ \\
+  \rho           & = 3                                                                             \\ \\
+  \iiint dV      & = \int_0^{2 \pi} \int_0^{\pi / 4} \int_0^3 r^2 \sin \phi \,dr \,d\phi \,d\theta \\
+                 & = 2 \pi \int_0^{\pi / 4} \sin \phi \left[ \frac{1}{3} r^3 \right]_0^3 \,d\phi   \\
+                 & = 18 \pi \int_0^{\pi / 4} \sin \phi \,d\phi                                     \\
+                 & = 18 \pi [-\cos \phi]_0^{\pi / 4}                                               \\
+                 & = 18 \pi \left( 1 - \frac{1}{\sqrt{2}} \right)                                  \\
+                 & = 9 \pi (2 - \sqrt{2})
+\end{align*}
+
+\setcounter{subsubsection}{76}
+\subsubsection{}
+
+\begin{align*}
+  \phi           & = \frac{\pi}{6}                                                                                      \\
+  \rho \cos \phi & = 2                                                                                                  \\
+  \iiint dV      & = \int_0^{\pi / 2} \int_0^{\pi / 6} \int_0^{2 \sec \phi} \rho^2 \sin \phi \,d\rho \,d\phi \,d\theta  \\
+                 & = \frac{\pi}{2} \int_0^{\pi / 6} \sin \phi \left[ \frac{1}{3} \rho^3 \right]_0^{2 \sec \phi} \,d\phi \\
+                 & = \frac{4}{3} \pi \int_0^{\pi / 6} \sec^2 \phi \tan \phi \,d\phi
+\end{align*}
+
+Let $u = \tan \phi$ so $du = \sec^2 \phi \,d\phi$
+
+\begin{align*}
+  \frac{4}{3} \pi \int_0^{1 / \sqrt{3}} u \,du & = \frac{4}{3} \pi \left[ \frac{1}{2} u^2 \right]_0^{1 / \sqrt{3}} \\
+                                               & = \frac{2}{9} \pi
+\end{align*}
+
+\setcounter{subsubsection}{80}
+\subsubsection{}
+
+\begin{align*}
+  % rho lower
+  \rho \cos \phi & = 4                                                                                                     \\
+  \rho           & = 4 \sec \phi                                                                                           \\ \\
+  % rho upper
+  \rho           & = 5                                                                                                     \\ \\
+  % phi upper
+  5 \cos \phi    & = 4                                                                                                     \\
+  \phi           & = \arccos \frac{4}{5}                                                                                   \\ \\
+  \iiint dV      & = \int_0^{2 \pi} \int_0^{\arccos 4 / 5} \int_{4 \sec \phi}^5 k \rho \sin \phi \,d\rho \,d\phi \,d\theta \\
+                 & = 2 \pi k \int_0^{\arccos 4 / 5} \sin \phi \left[ \frac{1}{2} \rho^2 \right]_{4 \sec \phi}^5 \,d\phi    \\
+                 & = \pi k \int_0^{\arccos 4 / 5} \sin \phi (25 - 16 \sec^2 \phi) \,d\phi                                  \\
+                 & = \pi k \int_0^{\arccos 4 / 5} (25 \sin \phi - 16 \sec \phi \tan \phi) \,d\phi                          \\
+                 & = \pi k [-25 \cos \phi - 16 \sec \phi]_0^{\arccos 4 / 5}                                                \\
+                 & = \pi k \left[ \left( -25 \frac{4}{5} - 16 \frac{5}{4} \right) - (-25 - 16) \right]                     \\
+                 & = \pi k \left( -20 - 20 + 25 + 16 \right)                                                               \\
+                 & = \pi k
+\end{align*}
+
 \end{document}
