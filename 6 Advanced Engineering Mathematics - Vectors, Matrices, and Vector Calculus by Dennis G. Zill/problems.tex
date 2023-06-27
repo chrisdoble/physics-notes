@@ -5744,4 +5744,75 @@ Let $u = \tan \phi$ so $du = \sec^2 \phi \,d\phi$
                  & = \pi k
 \end{align*}
 
+\subsection{Divergence Theorem}
+
+\subsubsection{}
+
+\begin{align*}
+  \mathbf{F}                                 & = \langle x y, y z, x z \rangle                                                       \\
+  % Top
+  \int_0^1 \int_0^1 x (1) \,dx \,dy          & = \frac{1}{2}                                                                         \\
+  % Left
+  \int_0^1 \int_0^1 -(0) z \,dx \,dz         & = 0                                                                                   \\
+  % Right
+  \int_0^1 \int_0^1 -(1) z \,dx \,dz         & = \frac{1}{2}                                                                         \\
+  % Front
+  \int_0^1 \int_0^1 (1) y \,dy \,dz          & = \frac{1}{2}                                                                         \\
+  % Back
+  \int_0^1 \int_0^1 -(0) y \,dy \,dz         & = 0                                                                                   \\
+  % Bottom
+  \int_0^1 \int_0^1 -x (0) \,dx \,dy         & = 0                                                                                   \\
+  \iint_S (\mathbf{F} \cdot \mathbf{n}) \,dS & = \frac{3}{2}                                                                         \\
+  \nabla \cdot \mathbf{F}                    & = x + y + z                                                                           \\
+  \iiint_D (\nabla \cdot \mathbf{F}) \,dV    & = \int_0^1 \int_0^1 \int_0^1 (x + y + z) \,dx \,dy \,dz                               \\
+                                             & = \int_0^1 \int_0^1 \left[ \frac{1}{2} x^2 + (y + z) x \right]_0^1 \,dy \,dz          \\
+                                             & = \int_0^1 \int_0^1 \left( \frac{1}{2} + y + z \right) \,dy \,dz                      \\
+                                             & = \int_0^1 \left[ \frac{1}{2} y^2 + \left( \frac{1}{2} + z \right) y \right]_0^1 \,dz \\
+                                             & = \int_0^1 (1 + z) \,dz                                                               \\
+                                             & = \left[ z + \frac{1}{2} z^2 \right]_0^1                                              \\
+                                             & = \frac{3}{2}
+\end{align*}
+
+\setcounter{subsubsection}{2}
+\subsubsection{}
+
+\begin{align*}
+  \mathbf{F}                                 & = \langle x^3, y^3, z^3 \rangle                                             \\
+  \nabla \cdot \mathbf{F}                    & = 3 x^2 + 3 y^2 + 3 z^2                                                     \\
+                                             & = 3 r^2                                                                     \\
+  \iint_S (\mathbf{F} \cdot \mathbf{n}) \,dS & = \iiint_D (\nabla \cdot \mathbf{F}) \,dV                                   \\
+                                             & = \int_0^{2 \pi} \int_0^\pi \int_0^a 3 r^4 \sin \phi \,dr \,d\phi \,d\theta \\
+                                             & = 6 \pi \int_0^\pi \sin \phi \left[ \frac{1}{5} r^5 \right]_0^a \,d\phi     \\
+                                             & = \frac{6}{5} a^5 \pi \int_0^\pi \sin \phi \,d\phi                          \\
+                                             & = \frac{6}{5} a^5 \pi [-\cos \phi]_0^\pi                                    \\
+                                             & = \frac{12}{5} a^5 \pi
+\end{align*}
+
+\setcounter{subsubsection}{4}
+\subsubsection{}
+
+\begin{align*}
+  \mathbf{F}                                 & = \langle y^2, x z^3, (z - 1)^2 \rangle                            \\
+  \nabla \cdot \mathbf{F}                    & = 2 z - 2                                                          \\
+  \iint_S (\mathbf{F} \cdot \mathbf{n}) \,dS & = \iiint_D (\nabla \cdot \mathbf{F}) \,dV                          \\
+                                             & = \int_1^5 \int_0^{2 \pi} \int_0^4 (2 z - 2) r \,dr \,d\theta \,dz \\
+                                             & = 2 \pi \int_1^5 (2 z - 2) \left[ \frac{1}{2} r^2 \right]_0^4 \,dz \\
+                                             & = 16 \pi [z^2 - 2 z]_1^5                                           \\
+                                             & = 16 \pi [(25 - 10) - (1 - 2)]                                     \\
+                                             & = 256 \pi
+\end{align*}
+
+\setcounter{subsubsection}{8}
+\subsubsection{}
+
+\begin{align*}
+  \mathbf{F}                                 & = \frac{\langle x, y, z \rangle}{x^2 + y^2 + z^2}                     \\
+  \nabla \cdot \mathbf{F}                    & = \frac{1}{x^2 + y^2 + z^2}                                           \\
+                                             & = \frac{1}{r^2}                                                       \\
+  \iint_S (\mathbf{F} \cdot \mathbf{n}) \,dS & = \iiint_D (\nabla \cdot \mathbf{F}) \,dV                             \\
+                                             & = \int_0^{2 \pi} \int_0^\pi \int_a^b \sin \phi \,dr \,d\phi \,d\theta \\
+                                             & = 2 \pi (b - a) [-\cos \phi]_0^\pi                                    \\
+                                             & = 4 \pi (b - a)
+\end{align*}
+
 \end{document}
