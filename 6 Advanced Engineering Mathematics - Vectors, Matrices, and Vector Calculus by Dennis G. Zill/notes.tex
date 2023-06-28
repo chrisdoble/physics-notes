@@ -865,4 +865,19 @@
   \item The divergence of a vector field is equal to its flux per unit volume.
 \end{itemize}
 
+\subsection{Change of Variables in Multiple Integrals}
+
+\begin{itemize}
+  \item It's possible to change variables in an integral, e.g. from cartesian to polar coordinates with equations like $x = f(r, \theta)$ and $y = g(r, \theta)$. These equations define a \textbf{transformation} or a \textbf{mapping} from the $r\theta$-plane to the $xy$-plane.
+
+  \item A point $(x_0, y_0)$ in the $xy$-plane determined from $x_0 = f(r_0, \theta_0)$ and $y_0 = g(r_0, \theta_0)$ is said to be an \textbf{image} of $(r_0, \theta_0)$.
+
+  \item If $F$ is continuous on $R$ then \[\iint_R F(x, y) \,dA = \iint_S F(f(u, v), g(u, v)) \left|\frac{\partial (x, y)}{\partial (u, v)}\right| \,dA'\] where $x = f(u, v)$ and $y = g(u, v)$ are a transformation from $uv$-space to $xy$-space and $\left| \frac{\partial (x, y)}{\partial (u, v)} \right|$ is the \textbf{Jacobian determinant} \[\frac{\partial (x, y)}{\partial (u, v)} = \begin{vmatrix}
+            \frac{\partial x}{\partial u} & \frac{\partial x}{\partial v} \\
+            \frac{\partial y}{\partial u} & \frac{\partial y}{\partial v}
+          \end{vmatrix}.\]
+
+  \item Each transformation has a corresponding inverse transformation whose Jacobian obeys \[\frac{\partial (x, y)}{\partial (u, v)} \frac{\partial (u, v)}{\partial (x, y)} = 1.\]
+\end{itemize}
+
 \end{document}
