@@ -1,0 +1,197 @@
+\documentclass{article}
+\usepackage{amsmath} % For align*
+\usepackage{amsfonts} % For open face letters
+\usepackage{enumitem} % For customisable list labels
+\usepackage{graphicx} % For images
+\usepackage{siunitx} % For units
+\graphicspath{{./images/}}
+
+\setlist[enumerate, 1]{label={(\alph*)}}
+\setlist[enumerate, 2]{label={(\roman*)}}
+
+\title{University Physics with Modern Physics - Modern Physics by Young and Freedman Problems}
+\author{Chris Doble}
+\date{June 2023}
+
+\begin{document}
+
+\maketitle
+
+\tableofcontents
+
+\setcounter{section}{16}
+\section{Temperature and Heat}
+
+\subsection{Guided Practice}
+
+\subsubsection{}
+
+\begin{enumerate}
+  \item
+
+        \begin{align*}
+          \Delta L & = \alpha L_0 \Delta T           \\
+          \alpha   & = \frac{\Delta L}{L_0 \Delta T} \\
+                   & = \qty{2.0e-5}{K^{-1}}
+        \end{align*}
+
+  \item
+
+        \begin{align*}
+          \Delta L & = \alpha L_0 \Delta T \\
+                   & = \qty{-0.27}{mm}
+        \end{align*}
+\end{enumerate}
+
+\subsubsection{}
+
+\begin{align*}
+  \Delta V_C              & = \beta V_{C0} \Delta T      \\
+                          & = (\num{5.1e-5}) (250) (-70) \\
+                          & = -\qty{0.893}{cm^3}         \\
+  \Delta V_E              & = \beta V_{E0} \Delta T      \\
+                          & = (\qty{75e-5}) (250) (-70)  \\
+                          & = -\qty{13.1}{cm^3}          \\
+  \Delta V_C - \Delta V_E & = \qty{12.2}{cm^3}           \\
+                          & = \qty{12.2}{mL}
+\end{align*}
+
+\subsubsection{}
+
+\begin{align*}
+  \frac{\Delta L}{L_0}            & = \alpha \Delta T                                    \\
+  Y                               & = \frac{F / A}{\Delta L / L_0}                       \\
+  \frac{\Delta L}{L_0}            & = \frac{F}{A Y}                                      \\
+  \alpha \Delta T + \frac{F}{A Y} & = 0                                                  \\
+  \frac{F}{A Y}                   & = -\alpha \Delta T                                   \\
+  F                               & = -\alpha A Y \Delta T                               \\
+                                  & = -(\num{2.0e-5}) (\pi 0.005^2) (\num{9.0e10}) (-12) \\
+                                  & = \qty{1.70e3}{N}
+\end{align*}
+
+Tensile
+
+\subsubsection{}
+
+\begin{align*}
+  \Delta L                  & = \alpha_A L_A \Delta T + \alpha_B L_B \Delta T                                       \\
+  \frac{\Delta L}{\Delta T} & = \alpha_A L_A + \alpha_B (L - L_A)                                                   \\
+                            & = (\alpha_A - \alpha_B) L_A + \alpha_B L                                              \\
+  L_A                       & = \frac{1}{\alpha_A - \alpha_B} \left( \frac{\Delta L}{\Delta T} - \alpha_B L \right)
+\end{align*}
+
+\subsubsection{}
+
+\begin{align*}
+  0      & = m_{Al} c_{Al} \Delta T_{Al} + m_W c_W \Delta T_W \\
+         & = m_{Al} c_{Al} (T - T_{Al}) + m_W c_W (T - T_W)   \\
+  m_{Al} & = -\frac{m_W c_W (T - T_W)}{c_{Al} (T - T_{Al})}   \\
+         & = \qty{0.20}{kg}
+\end{align*}
+
+\subsubsection{}
+
+\begin{align*}
+  0 & = m_I L_f + m_C c_C \Delta T \\
+    & = m_I L_f - m_C c_C T        \\
+  T & = \frac{m_I L_f}{m_C c_C}    \\
+    & = \qty{14.0}{\degree C}
+\end{align*}
+
+\subsubsection{}
+
+\begin{align*}
+  0   & = m_I L_F + m_I c_I \Delta T_I + m_E c_E \Delta T_E \\
+      & = m_I (L_F + c_I \Delta T_I) + m_E c_E \Delta T_E   \\
+  m_I & = -\frac{m_E c_E \Delta T_E}{L_F + c_I \Delta T_I}  \\
+      & = \qty{0.176}{kg}
+\end{align*}
+
+\subsubsection{}
+
+Cooling the silver to $\qty{0}{\degree C}$ would take \[Q = m c \Delta T = \qty{92137.5}{J}\] whereas melting all of the ice would take \[Q = m L_f = \qty{83500}{J}\] so all of the ice will melt.
+
+\begin{align*}
+  0 & = m_{Ag} c_{Ag} \Delta T_{Ag} + m_I L_f + m_I c_I \Delta T_I + m_I c_W \Delta T_W \\
+    & = m_{Ag} c_{Ag} (T - T_{Ag}) + m_I L_F - m_I c_I T_I + m_I c_W T                  \\
+    & = (m_{Ag} c_{Ag} + m_I c_W) T - m_{Ag} c_{Ag} T_{Ag} + m_I L_F - m_I c_I T_I      \\
+  T & = \frac{m_{Ag} c_{Ag} T_{Ag} + m_I c_I T_I - m_I L_F}{m_{Ag} c_{Ag} + m_I c_W}    \\
+    & = \qty{3.31}{\degree C}
+\end{align*}
+
+\subsubsection{}
+
+\begin{enumerate}
+  \item
+
+        \begin{align*}
+          H & = k A \frac{T_H - T_C}{L}   \\
+          k & = \frac{H L}{A (T_H - T_C)} \\
+            & = \qty{0.754}{W/(m.K)}
+        \end{align*}
+
+  \item \[H = k A \frac{T_H - T_C}{L} = \qty{733}{W}\]
+\end{enumerate}
+
+\subsubsection{}
+
+\begin{enumerate}
+  \item
+
+        \begin{align*}
+          L      & = \qty{0.250}{m}          \\
+          A      & = \qty{2.00e-4}{m^2}      \\
+          k_B    & = \qty{109.0}{W/(m.K)}    \\
+          k_{Pb} & = \qty{34.7}{W/(m.K)}     \\
+          T      & = \qty{185}{\degree C}    \\
+          H      & = \qty{6.00}{W}           \\ \\
+          H      & = k_B A \frac{T_H - T}{L} \\
+          T_H    & = \frac{H L}{k_B A} + T   \\
+                 & = \qty{254}{\degree C}
+        \end{align*}
+
+  \item
+
+        \begin{align*}
+          H   & = k_{Pb} A \frac{T - T_C}{L} \\
+          T_C & = T - \frac{H L}{k_{Pb} A}   \\
+              & = \qty{-31.1}{\degree C}
+        \end{align*}
+\end{enumerate}
+
+\subsubsection{}
+
+\begin{align*}
+  H         & = 4 \pi (k r_E)^2 e \sigma T^4                      \\
+  (k r_E)^2 & = \frac{H}{4 \pi e \sigma T^4}                      \\
+  k         & = \frac{1}{r_E} \sqrt{\frac{H}{4 \pi e \sigma T^4}} \\
+            & = 1.70
+\end{align*}
+
+\subsubsection{}
+
+\begin{enumerate}
+  \item
+
+        \begin{align*}
+          H                  & = A e \sigma T^4                \\
+                             & = \pi r^2 \sigma T^4            \\
+          H                  & = k A \frac{T_H - T_C}{L}       \\
+                             & = k \pi r^2 \frac{T_H - T_C}{L} \\
+          \pi r^2 \sigma T^4 & = k \pi r^2 \frac{T_H - T_C}{L} \\
+          T_H                & = \frac{L \sigma T^4}{k} + T_C  \\
+                             & = \qty{14.26}{K}
+        \end{align*}
+
+  \item
+
+        \begin{align*}
+          H                  & = m L_f                          \\
+          \pi r^2 \sigma T^4 & = m L_f                          \\
+          m                  & = \frac{\pi r^2 \sigma T^4}{L_f} \\
+                             & = \qty{1.19e-4}{kg/s}            \\
+                             & = \qty{0.427}{kg/h}
+        \end{align*}
+\end{enumerate}
+
+\end{document}
