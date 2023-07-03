@@ -125,4 +125,106 @@
   \item An object that is a good absorber must also be a good emitter. An ideal radiator with $e = 1$ is also an ideal absorber, absorbing all the raditation that hits it. Such a surface is called an \textbf{ideal black body} or a \textbf{blackbody}.
 \end{itemize}
 
+\section{Thermal Properties of Matter}
+
+\subsection{Equations of State}
+
+\begin{itemize}
+  \item Quantities such as pressure, volume, temperature, and amount of substance are called \textbf{state variables}.
+
+  \item An equation that relates state variables is called an \textbf{equation of state}.
+
+  \item Molar mass (i.e. the mass of one mole of a substance) is sometimes called \textbf{molecular weight}.
+
+  \item The \textbf{ideal gas equation} relates the absolute pressure $p$, volume $V$, number of moles $n$, and absolute temperature (in Kelvin) $T$ \[p V = n R T\] or \[p V = \frac{m_\text{total}}{M} RT\] where $R$ is the gas constant \[R = \qty{8.314}{J/(mol.K)}.\]
+
+  \item If the amount of a gas is contant, i.e. $n R$ is constant, then \[\frac{p_1 V_1}{T_1} = \frac{p_2 V_2}{T_2} = \text{constant}.\]
+
+  \item \textbf{Standard temperature and pressure} (STP) is defined as $\qty{0}{\degree C}$ and $\qty{1}{atm}$.
+
+  \item The \textbf{van der Waals} equation extends the ideal gas law to account for the effects of interactions between gas molecules and their finite size \[\left( p + \frac{a n^2}{V^2} \right) (V - n b) = n r T\] where $a$ and $b$ are constants that vary between gases, $a$ depends on the strength of attractive forces between the molecules, and $b$ depends on the volume of the molecules.
+
+  \item A $p V$-diagram is a two-dimensional diagram plotting pressure as a function of volume. Each line, called an \textbf{isotherm}, describes the relationship between pressure and volume at a particular temperature.
+
+  \item In the $p V$-diagrams of non-ideal gases, isotherms can have flat areas. These represent periods where the gas is condensing into a liquid.
+
+  \item The area under a $p V$-curve represents the work done by the system during a volume change.
+\end{itemize}
+
+\subsection{Molecular Properties of Matter}
+
+\begin{itemize}
+  \item The force between molecules in a gas varies with $r$.
+
+  \item An ideal gas is one whose molecules exert no attractive forces on each other and thus have no potential energy.
+
+  \item The number of molecules in a mole is given by \textbf{Avagadro's number} \[N_A = \num{6.02214076e23} \,\text{molecules}/\text{mol}.\]
+\end{itemize}
+
+\subsection{Kinetic-Molecular Model of an Ideal Gas}
+
+\begin{itemize}
+  \item The average translational kinetic energy of an ideal gas is \[K_\text{tr} = \frac{3}{2} n R T.\]
+
+  \item The \textbf{Boltzmann constant} is \[k = \frac{R}{N_A} = \num{1.381e-23} \,\text{J}/(\text{molecule K}).\]
+
+  \item The average translational kinetic energy of a gas molecule is \[\frac{1}{2} m (v^2)_\text{av} = \frac{3}{2} kT\] and thus the \textbf{root-mean-square speed} of a gas molecule is \[v_\text{rms} = \sqrt{(v^2)_\text{av}} = \sqrt{\frac{3 k T}{m}} = \sqrt{\frac{3 R T}{M}}\] where $m$ is the mass of a molecule and $M$ is the molar mass.
+
+  \item The average distance travelled by a particle between collisions is called the \textbf{mean free path} \[\lambda = \frac{V}{4 \pi \sqrt{2} r^2 N} = \frac{k T}{4 \pi \sqrt{2} r^2 p}\] where $V$ is the volume of the gas, $r$ is the radius of a gas molecule, $N$ is the number of molecules in the gas, $T$ is its temperature, and $p$ is its volume.
+\end{itemize}
+
+\subsection{Heat Capacities}
+
+\begin{itemize}
+  \item The \textbf{molar heat capacity at constant volume} of a particular gas is determined by its \textbf{degrees of freedom}, i.e. the number of ways in which it can store kinetic energy.
+
+        \begin{itemize}
+          \item Monatomic gases have three degrees of freedom: one for each translational axis.
+
+          \item Diatomic gases have five degrees of freedom: one for each translational axis and two for rotational axes (the third is excluded because it's not affected by collisions).
+
+          \item Polyatomic gases have more than five degrees.
+        \end{itemize}
+
+  \item The \textbf{principle of equipartition of energy} states that each degree of freedom contributes $\frac{1}{2} k T$ to the molar heat capacity at constant volume, i.e. for monatomic gases $C_V = \frac{3}{2} k T$, for diatomic $C_V = \frac{5}{2} k T$, etc.
+
+  \item Vibrational energy can also contribute to the molar heat capacity at constant volume, but for most diatomic molecules this isn't the case.
+
+  \item Molar heat capacity at constant volume is temperature dependent, with rotational and vibrational degrees of freedom only coming in to play at higher temperatures.
+
+  \item Crystalline solids, i.e. solids whose atoms are arranged in a three-\\dimensional matrix, have six degrees of freedom: three translational and three from the potential energy of intermolecular forces. This results in the \textbf{rule of Dulong and Petit} which states that the molar heat capacity at constant volume of an ideal monatomic solid is \[V_C = 3 R.\]
+\end{itemize}
+
+\subsection{Molecular Speeds}
+
+\begin{itemize}
+  \item In regards to the speeds of molecules in a gas, a \textbf{distribution function} $f(v)$ gives the probability per unit speed of finding a particle with a speed near $v$. That is, the area under the curve between $f(v_1)$ and $f(v_2)$ gives the probability of finding a particle with speed in that range.
+
+  \item The \textbf{Maxwell-Boltzmann distribution} is a particular distribution\\function \[f(v) = 4 \pi \left( \frac{m}{2 \pi k T} \right)^{3 / 2} v^2 e^{-m v^2 / 2 k T}\] where $m$ is the mass of a molecule, $T$ is the absolute temperature of the gas, and $v$ is the molecular speed.
+
+  \item The peak of the curve and thus the most probable speed occurs at \[v_\text{mp} = \sqrt{\frac{2 k T}{m}}.\]
+
+  \item The average speed is \[v_\text{av} = \sqrt{\frac{8 k T}{\pi m}}.\]
+
+  \item The rms speed is \[v_\text{rms} = \sqrt{\frac{3 k T}{m}}.\]
+\end{itemize}
+
+\subsection{Phases of Matter}
+
+\begin{itemize}
+  \item A \textbf{$p T$ phase diagram} is a two-dimensional graph with pressure $p$ on the vertical axis and temperature $T$ on the horizontal axis. The plane is separated into three distinct regions: one for each phase of the material (solid, liquid, and gas).
+
+  \item The borders between regions represent points of \textbf{phase equilibrium} where both phases can coexist at the same pressure and temperature.
+
+  \item The \textbf{fusion curve} separates the solid and liquid regions.
+
+  \item The \textbf{vaporisation curve} separates the liquid and gas regions.
+
+  \item The \textbf{sublimation curve} separates the solid and gas regions.
+
+  \item The three curves meet at the \textbf{triple point} — the only conditions under which all three phases can coexist.
+
+  \item The vaporisation curve ends at the \textbf{critical point}. As the pressure and temperature of a substance approaches those of its critical point the physical differences between the liquid and gas phases decrease. At the critical point there are no differences and a substance whose pressure or temperature is gradually decreased won't undergo a phase transition — instead its properties will continuously change from those of a gas to those of a liquid or vice versa.
+\end{itemize}
+
 \end{document}
