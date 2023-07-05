@@ -229,4 +229,100 @@
   \item The vaporisation curve ends at the \textbf{critical point}. As the pressure and temperature of a substance approaches those of its critical point the physical differences between the liquid and gas phases decrease. At the critical point there are no differences and a substance whose pressure or temperature is gradually decreased won't undergo a phase transition — instead its properties will continuously change from those of a gas to those of a liquid or vice versa.
 \end{itemize}
 
+\section{The First Law of Thermodynamics}
+
+\subsection{Thermodynamic Systems}
+
+\begin{itemize}
+  \item A \textbf{thermodynamic system} is any collection of objects that is convenient to regard as a unit, and that may have the potential to exchange energy with its surroundings.
+
+  \item A process in which there are changes in the state of a thermodynamic system is called a \textbf{thermodynamic process}.
+
+  \item In a termodynamic process, $Q$ represents the heat added to the system (increasing its energy) and $W$ represents work done by the system on its surroundings (decreasing its energy). Both quantities may be negative in which case they represent heat being removed from the system (decreasing its energy) and the surroundings doing work on the system (increasing its energy), respectively.
+\end{itemize}
+
+\subsection{Work Done During Volume Changes}
+
+\begin{itemize}
+  \item The work done during a volume change is \[W = \int_{V_1}^{V_2} p \,dV\] where $V_1$ is the initial volume, $V_2$ is the final volume, and $p$ is the pressure.
+
+  \item In the above equation $p$ is often a function of $V$, in which case the integral represents the area under the graph of $p = p(V)$. This is the area under the curve of a $p V$-diagram.
+
+  \item When volume increases, work is positive. When volume decreases, work is negative.
+\end{itemize}
+
+\subsection{Paths Between Thermodynamic States}
+
+\begin{itemize}
+  \item When a thermodynamic system changes from an initial state to a final state it passes through a series of intermediate states. This series of states is called a \textbf{path}.
+
+  \item There are an infinite number of paths between any given initial and final states, but the amount of work done by the system on its surroundings can differ between paths.
+
+  \item The uncontrolled expansion of a gas into vacuum is called \textbf{free expansion}. The gas does no work as it expands so its temperature doesn't change.
+\end{itemize}
+
+\subsection{Internal Energy and the First Law of Thermodynamics}
+
+\begin{itemize}
+  \item The \textbf{internal energy} $U$ of a system is the sum of the kinetic energies of all its constituent particles, plus the sum of the potential energies of interactions between these particles.
+
+  \item The \textbf{first law of thermodynamics} states \[\Delta U = Q - W\] where $\Delta U$ is the change in internal energy of a thermodynamic system, $Q$ is the heat added to the system, and $W$ is the work done by the system on its surroundings.
+
+  \item The change in internal energy of a thermodynamic system depends only on its initial and final states, not on the path taken.
+
+  \item A \textbf{cyclic process} is on that starts and ends in the same state. In that case $\Delta U = 0$ and thus $Q = W$: if a net amount of work was done by the system during this process, an equal amount of energy must have flowed into the system as heat $Q$.
+
+  \item In an \textbf{isolated system} that does no work and experiences no heat flow, $Q = W = 0$ and thus $\Delta U = 0$. This means that the inernal energy of an isolated system is constant.
+
+  \item In a cyclic process, the total work is positive if the process moves clockwise around the $p V$-diagram and negative if it moves counterclockwise.
+
+  \item The first law of thermodynamics can also be expressed using infinitesimals \[d U = d Q - d W = d Q - p \,d V.\]
+\end{itemize}
+
+\subsection{Kinds of Thermodynamic Processes}
+
+\begin{itemize}
+  \item An \textbf{adiabatic process} is one with no heat transfer into or out of the system, i.e. $Q = 0$. This can be achieved by thermally insulating the system or performing the process so quickly that no heat transfer can occur. The path followed by an adiabatic process on a $p V$-diagram is called an \textbf{adiabat}.
+
+  \item An \textbf{isochoric process} is one where the volume of the system doesn't change, i.e. $W = 0$. The path followed by an icochoric process on a $p V$-diagram is called an \textbf{isochor}.
+
+  \item An \textbf{isobaric process} is one where the pressure of the system doesn't change, i.e. $W = p (V_2 - V_1)$. The path followed by an isobaric process on a $p V$-diagram is called an \textbf{isobar}.
+
+  \item An \textbf{isothermal process} is one where the temperature of the system doesn't change. Any heat flowing into or out of the system must occur slowly enough to maintain thermal equilibrium. The path followed by an isothermal process on a $p V$-diagram is called an \textbf{isotherm}.
+\end{itemize}
+
+\subsection{Internal Energy of an Ideal Gas}
+
+\begin{itemize}
+  \item The internal energy of an ideal gas depends only on its temperature, not on its pressure or volume.
+\end{itemize}
+
+\subsection{Heat Capacities of an Ideal Gas}
+
+\begin{itemize}
+  \item Gases have two molar heat capacities: one at constant volume $C_V$, and one at constant pressure $C_P$.
+
+  \item When heating a gas at constant pressure, the gas must do work on the container to increase its volume (otherwise pressure would increase). This means not all of the heat is used to increase the temperature of the gas. Thus, the amount of heat required to raise the temperature of a gas at constant pressure is greater than a gas at constant volume, i.e. $C_P > C_V$.
+
+  \item For ideal gases \[C_P = C_V + R.\]
+
+  \item The \textbf{ratio of heat capacities} of a substance is denoted \[\gamma = \frac{C_P}{C_V}.\]
+
+  \item Because the internal energy of an ideal gas depends only on its temperature, not on its pressure or volume, if $\Delta U = n C_V \Delta T$ is valid for one type of process (an isochoric or constant volume process), it must be valid for all other processes.
+\end{itemize}
+
+\subsection{Adiabatic Processes for an Ideal Gas}
+
+\begin{itemize}
+  \item An adiabatic expansion results in a drop in temperature and an adiabatic compression results in a rise in temperature.
+
+  \item For an adiabatic process \begin{align*}
+          T_1 V_1^{\gamma - 1} & = T_2 V_2^{\gamma - 1}                     \\ \\
+          p_1 V_1^\gamma       & = p_2 V_2^\gamma                           \\ \\
+          W                    & = n C_V (T_1 - T_2)                        \\ \\
+          W                    & = \frac{C_V}{R} (p_1 V_1 - p_2 V_2)        \\
+                               & = \frac{1}{\gamma - 1} (p_1 V_1 - p_2 V_2)
+        \end{align*}
+\end{itemize}
+
 \end{document}
