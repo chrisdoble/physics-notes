@@ -2335,4 +2335,228 @@ c
 
 d
 
+\section{The Second Law of Thermodynamics}
+
+\subsection{Guided Practice}
+
+\subsubsection{}
+
+\begin{enumerate}
+  \item \[W = e Q_H \Rightarrow Q_H = \frac{W}{e} = \qty{6.89e4}{J}\]
+
+  \item \[|W| = |Q_H| - |Q_C| \Rightarrow |Q_C| = |Q_H| - |W| = \qty{5.65e4}{J}\]
+\end{enumerate}
+
+\subsubsection{}
+
+\[e = \frac{W}{Q_H} = \frac{Q_H + Q_C}{Q_H} = 1 + \frac{Q_C}{Q_H} = 0.173 = 17.3\%\]
+
+\subsubsection{}
+
+\begin{enumerate}
+  \item \[(1 - e) Q_H = Q_C \Rightarrow Q_H = \frac{Q_C}{1 - e} = \qty{6.17e8}{J}\]
+
+  \item \[W = e Q_H = \qty{1.21e8}{J}\]
+\end{enumerate}
+
+\subsubsection{}
+
+\begin{enumerate}
+  \item \[W = 3600 P = \qty{3.96e8}{J}\]
+
+  \item \[Q_H = m L_c = \qty{1.70e9}{J}\]
+
+  \item \[e = \frac{W}{Q_H} = 0.233 = 23.3\%\]
+\end{enumerate}
+
+\subsubsection{}
+
+\begin{enumerate}
+  \item
+
+        \begin{align*}
+          e_\text{Carnot} & = 1 - \frac{T_C}{T_H}     \\
+                          & = 1 + \frac{Q_C}{Q_H}     \\
+                          & = 1 + \frac{W - Q_H}{Q_H} \\
+                          & = 0.21
+        \end{align*}
+
+  \item \[|Q_C| = |Q_H| - |W| = \qty{6.32e4}{J}\]
+
+  \item \[\frac{Q_C}{Q_H} = -\frac{T_C}{T_H} \Rightarrow T_H = -\frac{Q_H}{Q_C} T_C = \qty{377}{K} = \qty{104}{\degree C}\]
+\end{enumerate}
+
+\subsubsection{}
+
+\begin{enumerate}
+  \item \[e = 1 - \frac{T_C}{T_H} = 0.6\]
+
+  \item
+
+        \begin{align*}
+          % Given
+          n           & = \qty{0.200}{mol}                                      \\
+          \gamma      & = 1.40                                                  \\
+          T_H         & = \qty{227}{\degree C} = \qty{500}{K}                   \\
+          T_C         & = \qty{-73}{\degree C} = \qty{200}{K}                   \\
+          p_a         & = \qty{10.0e5}{Pa}                                      \\
+          % a
+          V_a         & = \frac{n R T_H}{p_a}                                   \\
+                      & = \qty{8.31e-4}{m^3}                                    \\
+          % b
+          V_b         & = 2 V_a                                                 \\
+                      & = \qty{1.66e-3}{m^3}                                    \\
+          p_b         & = \frac{n R T_H}{V_b}                                   \\
+                      & = \qty{5.01e5}{Pa}                                      \\
+          W_\text{ab} & = \int_{V_a}^{V_b} p \,d V                              \\
+                      & = n R T_H \ln 2                                         \\
+                      & = \qty{576}{J}                                          \\
+          % c
+          V_c         & = \left( \frac{T_H}{T_C} \right)^{1 / (\gamma - 1)} V_b \\
+                      & = \qty{1.64e-2}{m^3}                                    \\
+          p_c         & = \frac{n r T_C}{V_c}                                   \\
+                      & = \qty{2.03e4}{Pa}                                      \\
+          W_\text{bc} & = \frac{1}{\gamma - 1} (p_b V_b - p_c V_c)              \\
+                      & = \qty{1.25}{kJ}                                        \\
+          % d
+          V_d         & = \frac{1}{2} V_c                                       \\
+                      & = \qty{8.20e-3}{m^3}                                    \\
+          p_d         & = \qty{4.06e4}{Pa}                                      \\
+          W_\text{cd} & = \int_{V_c}^{V_d} p \,d V                              \\
+                      & = n R T_C \ln \frac{1}{2}                               \\
+                      & = \qty{-231}{J}                                         \\
+          W_\text{da} & = \frac{1}{\gamma - 1} (p_d V_d - p_a V_a)              \\
+                      & = \qty{-1.25}{kJ}
+        \end{align*}
+\end{enumerate}
+
+\subsubsection{}
+
+\begin{enumerate}
+  \item \[K = \frac{T_C}{T_H - T_C} = 7.52\]
+
+  \item \[W = \frac{Q_C}{K} = \qty{5.32e5}{J}\]
+\end{enumerate}
+
+\subsubsection{}
+
+\begin{enumerate}
+  \item
+
+        \begin{align*}
+          W & = \int_{V_a}^{V_b} p \,d V                   \\
+            & = \int_{V_a}^{2 V_a} \frac{n R T_H}{V} \,d V \\
+            & = n R T_H \ln 2
+        \end{align*}
+
+  \item
+
+        \begin{align*}
+          W & = n C_V (T_H - T_C)           \\
+            & = \frac{3}{2} n R (T_H - T_C)
+        \end{align*}
+
+  \item
+
+        \begin{align*}
+          n R T_H \ln 2   & = \frac{3}{2} n R (T_H - T_C)                    \\
+          \ln 2           & = \frac{3}{2} \left( 1 - \frac{T_C}{T_H} \right) \\
+          \frac{T_C}{T_H} & = 1 - \frac{2}{3} \ln 2                          \\
+          e               & = 1 - \frac{T_C}{T_H}                            \\
+                          & = \frac{2}{3} \ln 2                              \\
+                          & = 0.462
+        \end{align*}
+\end{enumerate}
+
+\subsubsection{}
+
+\begin{enumerate}
+  \item \[\Delta S = \frac{Q}{T} = \frac{m L_f}{T} = \qty{655}{J/K}\]
+
+  \item \[\Delta S = m c \int_{159}^{351} \frac{d T}{T} = \qty{1.92e3}{J/K}\]
+
+  \item \[\Delta S = \frac{Q}{T} = \frac{m L_v}{T} = \qty{2.43e3}{J/K}\]
+\end{enumerate}
+
+\subsubsection{}
+
+\begin{enumerate}
+  \item
+
+        \begin{align*}
+          % Given
+          n        & = \qty{5.00}{mol}                        \\
+          V_1      & = \qty{0.120}{m^3}                       \\
+          T_1      & = \qty{20.0}{\degree C}                  \\
+          V_2      & = \qty{0.360}{m^3}                       \\
+          T_2      & = \qty{20.0}{\degree C}                  \\
+          % Isothermal
+          \Delta U & = n C_V \Delta T                         \\
+                   & = 0                                      \\
+          Q        & = W                                      \\
+                   & = \int_{V_1}^{V_2} p \,d V               \\
+                   & = \int_{V_1}^{V_2} \frac{n R T}{V} \,d V \\
+                   & = n R T \ln \frac{V_2}{V_1}              \\
+                   & = \qty{1.34e4}{J}                        \\
+          \Delta S & = \frac{Q}{T}                            \\
+                   & = \qty{45.7}{J/K}
+        \end{align*}
+
+  \item Change in entropy is path independent, so $\Delta S = \qty{45.7}{J/K}$.
+\end{enumerate}
+
+\subsubsection{}
+
+\begin{enumerate}
+  \item \[\Delta S = 0\]
+
+  \item \[\Delta S = \frac{Q}{T} = \qty{-150}{J/K}\]
+
+  \item \[\Delta S = \frac{Q}{T} = \qty{218}{J/K}\]
+
+  \item \[\Delta S = \qty{68}{J/K}\]
+
+        The net entropy increases.
+\end{enumerate}
+
+\subsubsection{}
+
+\begin{enumerate}
+  \item \[\Delta S = \frac{Q}{T} = \frac{m L_f}{T} = \qty{1.22e3}{J/K}\]
+
+  \item
+
+        \begin{align*}
+          \Delta S & = \int \frac{d Q}{T}                 \\
+                   & = m c \int_{368}^{273} \frac{d T}{T} \\
+                   & = \qty{-1.05e3}{J/K}
+        \end{align*}
+
+  \item \[\Delta S = \qty{160}{J/K}\] The net entropy increases.
+\end{enumerate}
+
+\subsubsection{}
+
+\begin{enumerate}
+  \item
+
+        \begin{align*}
+          0 & = m_i L_f + m_w c (T - T_w) + m_i c (T - T_i)           \\
+          T & = \frac{(m_w T_w + m_i T_i) c - m_i L_f}{(m_w + m_i) c} \\
+            & = \qty{307}{K}                                          \\
+            & = \qty{34.3}{\degree C}
+        \end{align*}
+
+  \item
+
+        \begin{align*}
+          \Delta S_i & = \frac{Q}{T_1} + \int \frac{d Q}{T}              \\
+                     & = \frac{m_i L_f}{T_1} + m_i c \ln \frac{T_2}{T_1} \\
+                     & = \qty{101}{J/K}                                  \\
+          \Delta S_w & = m_w c \ln \frac{T_2}{T_1}                       \\
+                     & = \qty{-86.0}{J/K}                                \\
+          \Delta S   & = \qty{15.0}{J/K}
+        \end{align*}
+\end{enumerate}
+
 \end{document}
