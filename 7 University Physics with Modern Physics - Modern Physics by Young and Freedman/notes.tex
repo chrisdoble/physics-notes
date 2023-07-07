@@ -325,4 +325,112 @@
         \end{align*}
 \end{itemize}
 
+\section{The Second Law of Thermodynamics}
+
+\subsection{Directions of Thermodynamic Processes}
+
+\begin{itemize}
+  \item Thermodynamic processes that occur between objects that aren't in thermodynamic equilibrium are irreversible, e.g. heat flowing from an area of higher to lower temperature, free expansion of gas, etc.
+
+  \item Thermodynamic processes that occur between objects that are very nearly in thermodynamic equilibrium approach being reversible. They are also called \textbf{equilibrium processes}.
+\end{itemize}
+
+\subsection{Heat Engines}
+
+\begin{itemize}
+  \item Any device that transforms heat into work or mechanical energy is called a \textbf{heat engine}.
+
+  \item Usually a quantity of matter inside the engine undergoes inflow and outflow of heat, expansion and compression, and sometimes change of phase. We call this matter the \textbf{working substance} of the engine.
+
+  \item All heat engines absorb heat from a \textbf{hot reservoir} and discard waste heat to a \textbf{cold reservoir}.
+
+  \item The amount of heat absorbed from the hot reservoir is denoted $Q_H$ (positive) and the amount of heat discarded to the cold reservoir is denoted $Q_C$ (negative).
+
+  \item If a heat engine undergoes a cyclic process $\Delta U = 0$ so \[W = Q = Q_H + Q_C = |Q_H| - |Q_C|.\]
+
+  \item The \textbf{thermal efficiency} of a heat engine \[e = \frac{W}{Q_H} = 1 + \frac{Q_C}{Q_H} = 1 - \left| \frac{Q_C}{Q_H} \right|\] represents the fraction of input energy that's converted into useful work.
+\end{itemize}
+
+\subsection{Internal Combustion Engines}
+
+\begin{itemize}
+  \item The \textbf{Otto cycle} is an idealised version of the thermodynamic process inside a gasoline engine.
+
+  \item The thermal efficiency of the Otto cycle is \[e = 1- \frac{1}{r^{\gamma - 1}}\] where $r$ is the compression ratio of the engine.
+\end{itemize}
+
+\subsection{Refigerators}
+
+\begin{itemize}
+  \item A fridge is like a reverse heat engine — it takes heat from a cold place (the inside of the fridge) to a hot place (the outside of the fridge). However, where a heat engine has a net output of work a fridge has a net input of work.
+
+  \item When modelling a fridge as a thermodynamic system, $Q_C$ is positive, $Q_H$ is negative, and $W$ is negative.
+
+  \item A more performant fridge will maximise $Q_C$ (the heat removed from the inside of the fridge) for a given $W$ (the power input to the fridge). This is captured by the \textbf{coefficient of performance} \[K = \frac{|Q_C|}{|W|} = \frac{|Q_C|}{|Q_H| - |Q_C|}.\]
+
+  \item Another way of thinking about the performance of an air conditioner or fridge is in terms of the amount of heat removed per unit time, i.e. the heat current $H$, and the energy input per unit time, i.e. the power $P$. In terms of these units the coefficient of performance is \[K = \frac{|Q_C|}{|W|} = \frac{H t}{P t} = \frac{H}{P}.\]
+\end{itemize}
+
+\subsection{The Second Law of Thermodynamics}
+
+\begin{itemize}
+  \item The \textbf{second law of thermodynamics} states that it is impossible for any system to undergo a process in which it absorbs heat from a reservoir at a single temperature and converts the heat completely into mechanical work, with the system ending in the same state in which it began.
+
+  \item An alternative wording is that it is impossible for any process to have as its sole result the transfer of heat from a cooler to a hotter object.
+\end{itemize}
+
+\subsection{The Carnot Cycle}
+
+\begin{itemize}
+  \item The \textbf{Carnot cycle} is an ideal thermodynamic process that provides an upper limit on the maximum efficiency of an engine. In it, only reversible thermodynamic processes may be used — namely adiabatic and isothermal processes.
+\end{itemize}
+
+\includegraphics[scale=0.464]{carnot-cycle}
+
+\begin{itemize}
+  \item The amount of heat transferred to/from the reservoirs in a Carnot cycle are related to the temperatures of the reservoirs by \[\frac{Q_C}{Q_H} = -\frac{T_C}{T_H}.\]
+
+  \item The efficiency of a Carnot engine is \[e_\text{Carnot} = 1 - \frac{T_C}{T_H}.\]
+
+  \item Because all processes in the Carnot cycle are reversible, the cycle itself can be reversed to make a Carnot fridge.
+
+  \item The coefficient of performance of a Carnot fridge is \[K_\text{Carnot} = \frac{T_C}{T_H - T_C}.\]
+\end{itemize}
+
+\subsection{Entropy}
+
+\begin{itemize}
+  \item \textbf{Entropy} $S$ is a measure of the randomness in a system. When you add heat to a system the constituent particles gain kinetic energy, there is more randomness to their positions, and thus entropy increases. When you remove heat from a system entropy decreases.
+
+  \item The units of entropy are $\unit{J/K}$.
+
+  \item The change in entropy during a reversible isothermal process is \[\Delta S = \frac{Q}{T}.\]
+
+  \item The change in entropy during any reversible thermodynamic process can be calculated as \[\Delta S = \int_1^2 \frac{d Q}{T}\] where $\Delta S$ is the change in entropy, $1$ is the initial state, $2$ is the final state, $d Q$ is the infinitesimal heat flow into the system, and $T$ is the absolute temperature of the system.
+
+  \item Entropy is determined entirely by the state of a system, not how it got there, i.e. entropy is path independent.
+
+  \item In an adiabatic process $Q = 0$ and thus there is no change in entropy.
+
+  \item To calculate the change in entropy of an irreversible process, come up with a series of reversible processes that take the system between the same states and calculate the change in entropy of that.
+
+  \item When a system undergoes a reversible change from state $a$ to state $b$, the change in entropy is $0$. This means that the change in entropy of adiabatic and isothermal processes are $0$ (because they are reversible). The Carnot cycle is composed of adiabatic and isothermal processes so its change in entropy is also $0$. In general, the change in entropy for any reversible cyclic process is $0$.
+
+  \item An alternative formulation of the second law of thermodynamics is that no process is possible in which total entropy decreases, when all systems that take part in the process are included.
+\end{itemize}
+
+\subsection{Microscopic Interpretation of Entropy}
+
+\begin{itemize}
+  \item A description of the \textbf{macroscopic state} of a system describes the system as a whole rather than individual components of the system, e.g. ``50\% of the coins are heads, 50\% are tails.''
+
+  \item A description of the \textbf{microscopic state} of a system describes the individual components, e.g. ``Coin 1 is heads, coin 2 is tails, etc.''
+
+  \item Many microscopic states may correspond to a given macroscopic state.
+
+  \item For any thermodynamic system, the most probable macroscopic state is the one with the greatest number of corresponding microscopic states, which is also the macroscopic state with the greatest randomness and the greatest entropy.
+
+  \item The entropy of a given macroscopic state is \[S = k \ln w\] where $k$ is the Boltzmann constant and $w$ is the number of microscopic states associated with the macroscopic state.
+\end{itemize}
+
 \end{document}
