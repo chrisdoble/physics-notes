@@ -433,4 +433,98 @@
   \item The entropy of a given macroscopic state is \[S = k \ln w\] where $k$ is the Boltzmann constant and $w$ is the number of microscopic states associated with the macroscopic state.
 \end{itemize}
 
+\setcounter{section}{36}
+\section{Relativity}
+
+\subsection{Invariance of Physical Laws}
+
+\begin{itemize}
+  \item \textbf{Einstein's first postulate} or the \textbf{principle of relativity} states that the law of physics are the same in every inertial frame of reference.
+
+  \item \textbf{Einstein's second postulate} states that the speed of light in vacuum is the same in all intertial frames of reference and is independent of the motion of the source.
+
+  \item It is not possible to travel at the speed of light.
+
+  \item A \textbf{Galilean transformation} transforms between the coordinates of two reference frames that differ only by constant relative motion, e.g. \begin{align*}
+          x & = x' + v t \\
+          y & = y'       \\
+          z & = z'.
+        \end{align*}
+\end{itemize}
+
+\subsection{Relativity of Simultaneity}
+
+\begin{itemize}
+  \item In a given frame of reference an \textbf{event} is an occurence that has a definite position and time.
+
+  \item In general, two events that are \textbf{simultaneous} in one frame of reference are not simultaneous in another frame that is moving relative to the first, even if both are inertial frames.
+\end{itemize}
+
+\subsection{Relativity of Time Intervals}
+
+\begin{itemize}
+  \item There is only one reference frame in which a given point is at rest and we call it the point's \textbf{rest frame}.
+
+  \item The time interval measured between two events that occur at the same point (and thus in the point's reference frame) is called \textbf{proper time $\Delta t_0$}.
+
+  \item The time interval between those two same events in another frame of reference moving at speed $u$ relative to the rest frame is \[\Delta t = \frac{\Delta t_0}{\sqrt{1 - u^2 / c^2}}\] which is greater than $\Delta t_0$. This phenomenon is called \textbf{time dilation}.
+
+  \item The \textbf{Lorentz factor} is defined as \[\gamma = \frac{1}{\sqrt{1 - u^2 / c^2}}.\]
+
+  \item If the relative speed $u$ of a reference frame is large enough that the Lorentz factor $\gamma$ is appreciably greater than $1$, the speed is said to be \textbf{relativistic}. Otherwise it's said to be \textbf{nonrelativistic}.
+\end{itemize}
+
+\subsection{Relativity of Length}
+
+\begin{itemize}
+  \item The length of a body as measured in its rest frame is called its \textbf{proper length $l_0$}.
+
+  \item In a moving reference frame, The length of a body in the direction parellel to motion is \[l = \frac{l_0}{\gamma}\] which is less than $l_0$. This phenomenon is called \textbf{length contraction}.
+
+  \item Length contraction doesn't occur in directions perpendicular to motion.
+\end{itemize}
+
+\subsection{The Lorentz Transformations}
+
+\begin{itemize}
+  \item If $S'$ is a reference frame moving at speed $u$ along the $x$-axis relative to reference frame $S$, then the \textbf{Lorentz transformation} can be used to determine the spacetime coordinates $x'$, $y'$, $z'$, and $t'$ in $S'$ from coordinates $x$, $y$, $z$, and $t$ in $S$ \begin{align*}
+          x' & = \frac{x - u t}{\sqrt{1 - u^2 / c^2}} = \gamma (x - u t)              \\
+          y' & = y                                                                    \\
+          z' & = z                                                                    \\
+          t' & = \frac{t - u x / c^2}{\sqrt{1 - u^2 / c^2}} = \gamma (t - u x / c^2).
+        \end{align*}
+
+  \item At relativistic speeds length and time have no meaning independent of a reference frame, so we use \textbf{spacetime coordinates} $x$, $y$, $z$, and $t$.
+
+  \item The \textbf{Lorentz velocity transformation} can be used to determine the velocity in $S'$ in terms of the velocity in $S$ \[v_x' = \frac{v_x - u}{1 - u v_x / c^2}.\]
+\end{itemize}
+
+\subsection{The Doppler Effect For Electromagnetic Waves}
+
+\begin{itemize}
+  \item When the source of an electromagnetic wave of proper frequency $f_0$ is approaching a stationary observer at speed $u$, the observer measures frequency \[f = \sqrt{\frac{c + u}{c - u}} f_0.\] When the source is moving away from the observer the sign of $u$ changes.
+\end{itemize}
+
+\subsection{Relativistic Momentum}
+
+\begin{itemize}
+  \item The mass of a particle when it is at rest relative to the observer is called its \textbf{rest mass}.
+
+  \item A particle's \textbf{relativistic momentum} is \[\mathbf{p} = \frac{m \mathbf{v}}{\sqrt{1 - v^2 / c^2}} = \gamma m \mathbf{v}.\] This means that as a particle's speed increases so does its relativistic momentum.
+
+  \item The expression $\gamma m$ is sometimes called the \textbf{relativistic mass}, which increases with a particle's speed.
+
+  \item Newton's second law must be adjusted at relativistic speeds. For forces parallel to the direction of motion \[F = \gamma^3 m a\] and for forces perpendicular to the direction of motion \[F = \gamma m a.\] This means that, unless the net force on a particle moving at relativistic speeds is either parallel or perpendicular to its direction of motion, the acceleration and force vectors aren't parallel.
+\end{itemize}
+
+\subsection{Relativistic Work and Energy}
+
+\begin{itemize}
+  \item The kinetic energy of a particle travelling at relativistic speeds is \[K = (\gamma - 1) m c^2.\]
+
+  \item The total energy of a particle is \[E = \gamma m c^2\] or \[E^2 = (m c^2)^2 + (p c)^2.\]
+
+  \item For a particle at rest $E = m c^2$. This is called the particle's \textbf{rest energy}.
+\end{itemize}
+
 \end{document}
