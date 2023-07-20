@@ -637,4 +637,103 @@
   \item \textbf{Planck's radiation law} gives the spectral emittance (intensity per unit wavelength) of a blackbody \[I(\lambda) = \frac{2 \pi h c^2}{\lambda^5 (e^{h c / \lambda k T} - 1)}.\]
 \end{itemize}
 
+\section{Quantum Mechanics I: Wave Functions}
+
+\subsection{Wave Functions and the One-Dimensional\\Schrödinger Equation}
+
+\begin{itemize}
+  \item A \textbf{free particle} is a particle that experiences no force, i.e. its potential energy function is $0$ at all locations.
+
+  \item Thus the energy of a free particle is equal to its kinetic energy \[E = K = \frac{1}{2} m v^2 = \frac{m^2 v^2}{2 m} = \frac{p^2}{2 m}.\]
+
+  \item From the de Broglie relationships we find \begin{align*}
+          E & = h f = \frac{h}{2 \pi} 2 \pi f = \hbar \omega                         \\
+          p & = \frac{h}{\lambda} = \frac{h}{2 \pi} \frac{2 \pi}{\lambda} = \hbar k.
+        \end{align*}
+
+  \item Substituting these equations into that of the energy of a free particle we find \[\hbar \omega = \frac{\hbar^2 k^2}{2 m}.\]
+
+  \item The \textbf{one-dimensional Schrödinger equation for a free particle} is \[-\frac{\hbar^2}{2 m} \frac{\partial^2 \Psi(x, t)}{\partial x^2} = i \hbar \frac{\partial \Psi(x, t)}{\partial y}\] the general solution of which is \[\Psi(x, t) =  A[\cos (k x - \omega t) + i \sin (k x - \omega t)] = A e^{i (k x - \omega t)}.\]
+
+  \item For a particle that can only move in the $x$ direction, $|\Psi(x, t)|^2$ is called the \textbf{probability distribution function} and the value $|\Psi(x, t)|^2 \,dx$ is the probability that the particle will be found at time $t$ at a coordinate between $x$ and $x + dx$. This requires that the wave function $\Psi$ be normalized, i.e. \[\int_{-\infty}^\infty |\Psi(x, t)|^2 \,dx = 1.\]
+
+  \item The probability distribution function can be calculated by multiplying $\Psi(x, t)$ buy its complex conjugate \[\Psi(x, y)|^2 = \Psi(x, t) \Psi^*(x, t).\]
+
+  \item A localised wave pulse constructed from multiple superposed waves is called a \textbf{wave packet} and it has properties of both a particle and a wave. It can be represented by an expression like \[\Psi(x, t) = \int_{-\infty}^\infty A(k) e^{i (k x - \omega t)} \,dk.\]
+
+  \item The \textbf{general one-dimensional Schrödinger equation}, i.e. for a particle with a nonzero potential energy function $U(x)$, is \[-\frac{\hbar^2}{2 m} \frac{\partial^2 \Psi(x, t)}{\partial x^2} + U(x) \Psi(x, t) = i \hbar \frac{\partial \Psi(x, t)}{\partial t}.\] If $\Psi(x, t) = A e^{i (k x - \omega t)}$ this reduces to \begin{align*}
+          -\frac{\hbar^2}{2 m} (-k^2 \Psi(x, t)) + U(x) \Psi(x, t) & = i \hbar (-i \omega \Psi(x, t)) \\
+          \frac{\hbar^2 k^2}{2 m} \Psi(x, t) + U(x) \Psi(x, t)     & = \hbar \omega \Psi(x, t)        \\
+          \frac{\hbar^2 k^2}{2 m} + U(x)                           & = \hbar \omega                   \\
+          K + U(x)                                                 & = E.
+        \end{align*}
+
+  \item If a particle has a known energy $E$ then $\omega = E / \hbar$ and the wave function can be written as \[\Psi(x, t) = A e^{i (k x - E t / \hbar)} = A e^{i k x} e^{-i E t / \hbar} = \psi(x) e^{-i E t / \hbar}.\] This is known as the \textbf{time-dependent wave function for a state of definite energy} or a \textbf{stationary state} because \begin{align*}
+          |\Psi(x, t)|^2 & = \Psi(x, t) \Psi(x, t)^*                                    \\
+                         & = (\psi(x) e^{-i E t / \hbar}) (\psi^*(x) E^{i E t / \hbar}) \\
+                         & = \psi(x) \psi^*(x)                                          \\
+                         & = |\psi(x)|^2,
+        \end{align*} i.e. the probability distribution function does not depend on time.
+
+  \item Substituting the stationary state equation into the Schrödinger equation we find the \textbf{time-independent one-dimensional Schrödinger equation} \[-\frac{\hbar^2}{2 m} \frac{d^2 \psi(x)}{d x^2} + U(x) \psi(x) = E \psi(x).\]
+\end{itemize}
+
+\subsection{Particle in a Box}
+
+\begin{itemize}
+  \item For a particle confined to a potential well, i.e. \[U(x) = \begin{cases}
+            \infty & x \le 0   \\
+            0      & 0 < x < L \\
+            \infty & L \le x
+          \end{cases}\] the stationary state wave function between $x = 0$ and $x = L$ must satisfy the time-indepdendent one-dimensional Schrödinger equation \[-\frac{\hbar}{2 m} \frac{d^2 \psi(x)}{d x^2} = E \psi(x)\] and the boundary conditions $\psi(0) = 0$ and $\psi(L) = 0$.
+
+  \item The general solution to the above is \begin{align*}
+          \psi(x) & = A_1 e^{i k x} + A_2 e^{-i k x} \\
+                  & = 2 i A_1 \sin k x               \\
+                  & = C \sin k x
+        \end{align*} where $k = n \pi / L$ and $\lambda = 2 \pi / k = 2 L / n$ for $n = 1, 2, 3, \ldots$ which is the same as a standing wave one a string.
+
+  \item For each quantum number $n$, a particle in a box has a wavelength \[\lambda_n = \frac{2 L}{n}\] and thus a momentum \[p_n = \frac{h}{\lambda_n} = \frac{n h}{2 L}\] and an energy \[E_n = \frac{p_n^2}{2 m} = \frac{n^2 h^2}{8 m L^2} = \frac{n^2 \pi^2 \hbar^2}{2 m L^2}.\]
+
+  \item Each energy level has an associated wave function \[\psi_n(x) = C \sin \frac{n \pi x}{L}.\]
+
+  \item A particle in a box cannot have zero energy because that implies zero uncertainty in momentum and, by Hiesenberg's uncertainty principle, infinite uncertainty in position which potentially places the particle outside the box.
+
+  \item The normalized time-independent wave function for a particle in a box is \[\phi_n(x) = \sqrt{\frac{2}{L}} \sin \frac{n \pi x}{L}.\]
+\end{itemize}
+
+\subsection{Potential Wells}
+
+\begin{itemize}
+  \item A \textbf{potential well} is a potential-energy function $U(x)$ that has a minimum.
+
+  \item A \textbf{finite well} is a potential well that has straight sides but finite height: \[U(x) = \begin{cases}
+            U_0 & x \le 0   \\
+            0   & 0 < x < L \\
+            U_0 & L \le x
+          \end{cases}.\]
+
+  \item In Newtonian mechanics a particle is trapped in a potential well if its total energy $E$ is less than $U_0$. In quantum mechanics, such a trapped state is called a \textbf{bound state}.
+
+  \item The wave function for a particle in a finite well of depth $U_0$ and width $L$ is \[\psi(x) = \begin{cases}
+            C e^{\kappa x}                                                                                          & x \le 0   \\
+            A \cos \left( \frac{\sqrt{2 m E}}{\hbar} x \right) + B \sin \left( \frac{\sqrt{2 m E}}{\hbar} x \right) & 0 < x < L \\
+            D e^{-\kappa x}                                                                                         & L \le x
+          \end{cases}\] where $\kappa = \sqrt{2 m (U_0 - E)} / \hbar$.
+\end{itemize}
+
+\subsection{Potential Barriers and Tunneling}
+
+\begin{itemize}
+  \item A \textbf{potential barrier} is a potential ene rgy function with a maximum.
+
+  \item The \textbf{tunneling probability} $T$ is the probability a particle tunnels\\through a potential barrier and is equal to \[T = G e^{-2 \kappa L}\] where \[G = 16 \frac{E}{U_0} \left( 1 - \frac{E}{U_0} \right)\] and \[\kappa = \frac{\sqrt{2 m (U_0 - E)}}{\hbar}.\]
+\end{itemize}
+
+\subsection{The Harmonic Oscilator}
+
+\begin{itemize}
+  \item The energy levels for a harmonic oscillator are \[E_n = \left( n + \frac{1}{2} \right) \hbar \sqrt{\frac{k'}{m}} = \left( n + \frac{1}{2} \right) \hbar \omega, n = 0, 1, 2, \ldots\] where $n$ is the quantum number (where $n = 0$ is the ground state), $k'$ is the potential well's force constant, and $\omega$ is the oscillator's angular frequency.
+\end{itemize}
+
 \end{document}
