@@ -4653,4 +4653,726 @@ a
 
 a
 
+\section{Quantum Mechanics I: Wave Functions}
+
+\subsection{Guided Practice}
+
+\subsubsection{}
+
+\begin{enumerate}
+  \item
+
+        \begin{align*}
+          E_n            & = \frac{n^2 \pi^2 \hbar^2}{2 m L^2}                                                                                             \\
+          E_2            & = 4 E_1                                                                                                                         \\
+          \psi_n(x)      & = \sqrt{\frac{2}{L}} \sin \frac{n \pi x}{L}                                                                                     \\
+          \Psi(x, t)     & = \frac{1}{\sqrt{2}} \psi_1(x) e^{-i E_1 t / \hbar} + \frac{1}{\sqrt{2}} \psi_2(x) e^{-i E_2 t / \hbar}                         \\
+                         & = \frac{1}{\sqrt{L}} \sin \frac{\pi x}{L} e^{-i E_1 t / \hbar} + \frac{1}{\sqrt{L}} \sin \frac{2 \pi x}{L} e^{-i E_2 t / \hbar} \\
+          |\Psi(x, t)|^2 & = \Psi(x, t) \Psi^*(x, t)                                                                                                       \\
+                         & = \frac{1}{L} \sin^2 \frac{\pi x}{L} + \frac{1}{L} \sin^2 \frac{2 \pi x}{L}                                                     \\
+                         & \qquad + \frac{1}{L} \sin \frac{\pi x}{L} \sin \frac{2 \pi x}{L} e^{i 3 E_1 t / \hbar}                                          \\
+                         & \qquad + \frac{1}{L} \sin \frac{\pi x}{L} \sin \frac{2 \pi x}{L} e^{-i 3 E_1 t / \hbar}                                         \\
+                         & = \frac{1}{L} \left[ \sin^2 \frac{\pi x}{L} + \sin^2 \frac{2 \pi x}{L} \right.                                                  \\
+                         & \qquad \left. + 2 \sin \frac{\pi x}{L} \sin \frac{2 \pi x}{L} \cos \frac{(E_2 - E_1) t}{\hbar} \right]
+        \end{align*}
+
+  \item No, because $|\Psi(x, t)|^2$ depends on time.
+
+  \item
+
+        \begin{align*}
+           & \int_0^L |\Psi(x, t)|^2 \,dx                                                                                                                                                  \\
+           & = \int_0^L \frac{1}{L} \left[ \sin^2 \frac{\pi x}{L} + \sin^2 \frac{2 \pi x}{L} + 2 \sin \frac{\pi x}{L} \sin \frac{2 \pi x}{L} \cos \frac{(E_2 - E_1) t}{\hbar} \right] \,dx \\
+           & = \frac{1}{L} \int_0^L \left[ \frac{1}{2} - \frac{1}{2} \cos \frac{2 \pi x}{L} + \frac{1}{2} - \frac{1}{2} \cos \frac{4 \pi x}{L} \right.                                     \\
+           & \qquad \left. + \left( \cos \frac{\pi x}{L} - \cos \frac{3 \pi x}{L} \right) \cos \frac{(E_2 - E_1) t}{\hbar} \right] \,dx                                                    \\
+           & = \frac{1}{L} \int_0^L \left[ 1 - \frac{1}{2} \cos \frac{2 \pi x}{L} - \frac{1}{2} \cos \frac{4 \pi x}{L} \right.                                                             \\
+           & \qquad \left. + \left( \cos \frac{\pi x}{L} - \cos \frac{3 \pi x}{L} \right) \cos \frac{(E_2 - E_1) t}{\hbar} \right] \,dx                                                    \\
+           & = \frac{1}{L} [x]_0^L                                                                                                                                                         \\
+           & = 1
+        \end{align*}
+
+  \item
+
+        \begin{align*}
+          \omega & = \frac{E_2 - E_1}{\hbar}       \\
+                 & = \frac{3 \pi^2 \hbar}{2 m L^2}
+        \end{align*}
+
+        This is the difference $\omega_2 - \omega_1$ or the beat frequency.
+
+  \item
+
+        \begin{align*}
+          \omega & = \frac{E_2 - E_1}{\hbar}                                  \\
+                 & = \frac{2.43 E_\text{1-IDW} - 0.625 E_\text{1-IDW}}{\hbar} \\
+                 & = \frac{1.805 E_\text{1-IDW}}{\hbar}                       \\
+                 & = 0.903 \frac{\pi^2 \hbar}{m L^2}
+        \end{align*}
+\end{enumerate}
+
+\subsection{Exercises and Problems}
+
+\subsubsection{}
+
+\begin{align*}
+  p          & = \hbar k                                          \\
+  k          & = \frac{p}{\hbar}                                  \\
+             & = \qty{4.27e10}{rad/m}                             \\
+  E          & = \hbar \omega                                     \\
+  \omega     & = \frac{E}{\hbar}                                  \\
+             & = \frac{p^2 / 2 m}{\hbar}                          \\
+             & = \qty{1.06e17}{rad/s}                             \\
+  \Psi(x, t) & = A e^{i (-(\num{4.27e10}) x - (\num{1.06e17}) t)}
+\end{align*}
+
+\setcounter{subsubsection}{2}
+\subsubsection{}
+
+\begin{enumerate}
+  \item
+
+        \begin{align*}
+          |\Psi(x, t)|^2      & = 2 |A|^2 \{1 + \cos [2 k x - (\omega_2 - \omega_1) t]\}                                                   \\ \\
+          \hbar \omega        & = \frac{\hbar^2 k^2}{2 m}                                                                                  \\
+          \omega              & = \frac{\hbar k^2}{2 m}                                                                                    \\ \\
+          \omega_2            & = \frac{\hbar (3 k)^2}{2 m}                                                                                \\
+                              & = \frac{9 \hbar k^2}{2 m}                                                                                  \\ \\
+          \omega_1            & = \frac{\hbar k^2}{2 m}                                                                                    \\ \\
+          \omega_2 - \omega_1 & = \frac{4 \hbar k^2}{m}                                                                                    \\ \\
+          |\Psi(x, t)|^2      & = 2 |A|^2 \left\{ 1 + \cos \left[ 2 k x - \frac{4 \hbar k^2}{m} \frac{4 \pi m}{\hbar k^2} \right] \right\} \\
+                              & = 2 |A|^2 [1 + \cos (2 k x - 16 \pi)]                                                                      \\
+          2 k x               & = 16 \pi                                                                                                   \\
+          x                   & = \frac{16 \pi}{2 k}                                                                                       \\
+                              & = \frac{8 \pi}{k}
+        \end{align*}
+
+  \item
+
+        \begin{align*}
+          v           & = \frac{x}{t}                       \\
+                      & = \frac{4}{k} \frac{\hbar k^2}{2 m} \\
+                      & = \frac{2 \hbar k}{m}               \\ \\
+          v_\text{av} & = \frac{\omega_2 - \omega_1}{2 k}   \\
+                      & = \frac{2 \hbar k}{m}
+        \end{align*}
+\end{enumerate}
+
+\setcounter{subsubsection}{4}
+\subsubsection{}
+
+\begin{enumerate}
+  \item
+
+        \begin{align*}
+          \psi(x)                      & = A \sin \frac{2 \pi}{\lambda} x                                      \\
+          |\psi(x)|^2                  & = A^2 \sin^2 \frac{2 \pi}{\lambda} x                                  \\
+                                       & = \frac{1}{2} A^2 \left( 1 - \cos \frac{4 \pi}{\lambda} x \right)     \\ \\
+          \cos \frac{4 \pi}{\lambda} x & = -1                                                                  \\
+          \frac{4 \pi}{\lambda} x      & = \pi + 2 \pi n, n \in \mathbb{Z}                                     \\
+          x                            & = \frac{\lambda}{4 \pi} (\pi + 2 \pi n), n \in \mathbb{Z}             \\
+                                       & = \lambda \left( \frac{1}{4} + \frac{n}{2} \right), n \in \mathbb{Z}  \\
+                                       & = \frac{\lambda}{4}, \frac{3 \lambda}{4}, \frac{5 \lambda}{4}, \ldots
+        \end{align*}
+
+  \item
+
+        \begin{align*}
+          \cos \frac{4 \pi}{\lambda} x & = 1                                                          \\
+          \frac{4 \pi}{\lambda} x      & = 2 \pi n, n \in \mathbb{Z}                                  \\
+          x                            & = \frac{\lambda}{4 \pi} 2 \pi n, n \in \mathbb{Z}            \\
+                                       & = \frac{\lambda n}{2}, n \in \mathbb{Z}                      \\
+                                       & = 0, \frac{\lambda}{2}, \lambda, \frac{3 \lambda}{2}, \ldots
+        \end{align*}
+\end{enumerate}
+
+\setcounter{subsubsection}{8}
+\subsubsection{}
+
+\begin{enumerate}
+  \item
+
+        \begin{align*}
+          E_1 & = \frac{\pi^2 \hbar^2}{2 m L^2} \\
+              & = \qty{1.62e-67}{J}
+        \end{align*}
+
+  \item
+
+        \begin{align*}
+          K & = \frac{1}{2} m v^2    \\
+          v & = \sqrt{\frac{2 K}{m}} \\
+            & = \qty{1.27e-33}{m/s}  \\
+          t & = \frac{d}{v}          \\
+            & = \qty{3.75e25}{years}
+        \end{align*}
+
+  \item
+
+        \begin{align*}
+          E_2 - E_1 & = \frac{4 \pi^2 \hbar^2}{2 m L} - \frac{\pi^2 \hbar^2}{2 m L} \\
+                    & = \frac{3 \pi^2 \hbar^2}{2 m L}                               \\
+                    & = 3 E_1                                                       \\
+                    & = \qty{4.87e-67}{J}
+        \end{align*}
+
+  \item No
+\end{enumerate}
+
+\setcounter{subsubsection}{10}
+\subsubsection{}
+
+\begin{align*}
+  E & = \frac{\pi^2 \hbar^2}{2 m L^2}      \\
+  L & = \sqrt{\frac{\pi^2 \hbar^2}{2 m E}} \\
+    & = \qty{0.166}{nm}
+\end{align*}
+
+\setcounter{subsubsection}{12}
+\subsubsection{}
+
+\begin{align*}
+  E & = E_2 - E_1                            \\
+    & = \frac{3 \pi^2 \hbar^2}{2 m L^2}      \\
+  L & = \sqrt{\frac{3 \pi^2 \hbar^2}{2 m E}} \\
+    & = \qty{0.568}{nm}
+\end{align*}
+
+\setcounter{subsubsection}{14}
+\subsubsection{}
+
+\begin{enumerate}
+  \item \[\int_{-\infty}^\infty |\psi(x, t)|^2 \,dx = 1\]
+
+  \item
+
+        \begin{align*}
+          \int_{-\infty}^\infty |e^{a x}|^2 \,dx & = \int_{-\infty}^\infty e^{2 a x} \,dx                    \\
+                                                 & = \left[ \frac{1}{2 a} e^{2 a x} \right]_{-\infty}^\infty \\
+                                                 & = \infty
+        \end{align*}
+
+        No, no.
+
+  \item
+
+        \begin{align*}
+          \int_0^\infty |A e^{-b x}|^2 \,dx & = A^2 \int_0^\infty e^{-2 b x} \,dx      \\
+                                            & = -\frac{A^2}{2 b} [e^{-2 b x}]_0^\infty \\
+                                            & = \frac{A^2}{2 b}                        \\
+          A                                 & = \sqrt{2 b} \,\unit{m^{-1 / 2}}
+        \end{align*}
+\end{enumerate}
+
+\setcounter{subsubsection}{16}
+\subsubsection{}
+
+\begin{enumerate}
+  \item
+
+        \begin{align*}
+          \psi(x)                & = \sqrt{\frac{2}{L}} \sin \frac{2 \pi x}{L} \\ \\
+          \sin \frac{2 \pi x}{L} & = 0                                         \\
+          \frac{2 \pi x}{L}      & = n \pi, n \in \mathbb{Z}                   \\
+          x                      & = \frac{L n}{2}, n \in \mathbb{Z}           \\
+                                 & = 0, \frac{L}{2}, L
+        \end{align*}
+
+  \item
+
+        \begin{align*}
+          |\psi(x)|^2            & = \frac{2}{L} \sin^2 \frac{2 \pi x}{L}                  \\
+                                 & = \frac{1}{L} \left( 1 - \cos \frac{4 \pi x}{L} \right) \\
+          \cos \frac{4 \pi x}{L} & = -1                                                    \\
+          \frac{4 \pi x}{L}      & = \pi + 2 \pi n, n \in \mathbb{Z}                       \\
+          x                      & = \frac{L}{4 \pi} (\pi + 2 \pi n), n \in \mathbb{Z}     \\
+                                 & = \frac{L}{4} (1 + 2 n), n \in \mathbb{Z}               \\
+                                 & = \frac{L}{4}, \frac{3 L}{4}
+        \end{align*}
+
+  \item Yes
+\end{enumerate}
+
+\setcounter{subsubsection}{18}
+\subsubsection{}
+
+\begin{enumerate}
+  \item
+
+        \begin{align*}
+          \lambda_1 & = 2 L                    \\
+                    & = \qty{6.8e-10}{m}       \\
+          p_1       & = \frac{h}{2 L}          \\
+                    & = \qty{9.74e-25}{kg.m/s}
+        \end{align*}
+
+  \item
+
+        \begin{align*}
+          \lambda_2 & = \qty{3.4e-10}{m}       \\
+          p_2       & = \qty{1.95e-24}{kg.m/s}
+        \end{align*}
+
+  \item
+
+        \begin{align*}
+          \lambda_3 & = \qty{2.27e-10}{m}      \\
+          p_3       & = \qty{2.92e-24}{kg.m/s}
+        \end{align*}
+\end{enumerate}
+
+\setcounter{subsubsection}{20}
+\subsubsection{}
+
+\begin{align*}
+  E_1 & = 0.625 E_\text{1-IDW}                       \\
+      & = 0.625 \frac{\pi^2 \hbar^2}{2 m L^2}        \\
+  L   & = \sqrt{0.625 \frac{\pi^2 \hbar^2}{2 m E_1}} \\
+      & = \qty{0.313}{nm}
+\end{align*}
+
+\setcounter{subsubsection}{22}
+\subsubsection{}
+
+\begin{align*}
+  E                                       & = h f                                             \\
+  U_0 - E_1                               & = \frac{h c}{\lambda}                             \\
+  6 E_\text{1-IDW} - 0.625 E_\text{1-IDW} & = \frac{h c}{\lambda}                             \\
+  \lambda                                 & = \frac{h c}{5.375 E_\text{1-IDW}}                \\
+                                          & = \frac{h c}{5.375 \frac{\pi^2 \hbar^2}{2 m L^2}} \\
+                                          & = \frac{2 m L^2 h c}{5.375 \pi^2 \hbar^2}         \\
+                                          & = \qty{613}{nm}
+\end{align*}
+
+\setcounter{subsubsection}{24}
+\subsubsection{}
+
+\begin{align*}
+  E                                          & = h f                                             \\
+  E_3 - E_1                                  & = \frac{h c}{\lambda}                             \\
+  5.09 E_\text{1-IDW} - 0.625 E_\text{1-IDW} & = \frac{h c}{\lambda}                             \\
+  \lambda                                    & = \frac{h c}{4.465 E_\text{1-IDW}}                \\
+                                             & = \frac{h c}{4.465 \frac{\pi^2 \hbar^2}{2 m L^2}} \\
+                                             & = \frac{2 m L^2 h c}{4.465 \pi^2 \hbar^2}         \\
+                                             & = \qty{27}{fm}
+\end{align*}
+
+\setcounter{subsubsection}{26}
+\subsubsection{}
+
+\begin{enumerate}
+  \item
+
+        \begin{align*}
+          G      & = 16 \frac{E}{U_0} \left( 1 - \frac{E}{U_0} \right) \\
+                 & = 2.74                                              \\
+          \kappa & = \frac{\sqrt{2 m (U_0 - E)}}{\hbar}                \\
+                 & = \num{1.53e10}                                     \\
+          T      & = G e^{-2 \kappa L}                                 \\
+                 & = 0.0013
+        \end{align*}
+
+  \item
+
+        \begin{align*}
+          \kappa & = \num{6.57e11} \\
+          T      & = \num{1e-143}
+        \end{align*}
+\end{enumerate}
+
+\setcounter{subsubsection}{28}
+\subsubsection{}
+
+\begin{enumerate}
+  \item
+
+        \begin{align*}
+          G      & = 3.99          \\
+          \kappa & = \num{1.16e10} \\
+          T      & = \num{1.1e-8}
+        \end{align*}
+
+  \item \[T = \num{3.7e-4}\]
+\end{enumerate}
+
+\setcounter{subsubsection}{30}
+\subsubsection{}
+
+\begin{align*}
+  E_1       & = \frac{p_1^2}{2 m}            \\
+  U_0       & = \frac{h^2}{2 m \lambda_1^2}  \\
+  \lambda_1 & = \sqrt{\frac{h^2}{2 m U_0}}   \\ \\
+  \lambda_2 & = \sqrt{\frac{h^2}{4 m U_0}}   \\
+            & = \frac{1}{\sqrt{2}} \lambda_1
+\end{align*}
+
+\setcounter{subsubsection}{32}
+\subsubsection{}
+
+\begin{align*}
+  E_n             & = \left( n + \frac{1}{2} \right) \hbar \sqrt{\frac{1000}{3}} \\
+  E_0             & = \qty{9.63e-34}{J}                                          \\
+                  & = \qty{6.02e-15}{eV}                                         \\
+  E_{n + 1} - E_n & = \hbar \sqrt{\frac{1000}{3}}                                \\
+                  & = \qty{1.93e-33}{J}                                          \\
+                  & = \qty{1.2e-14}{eV}
+\end{align*}
+
+No
+
+\setcounter{subsubsection}{34}
+\subsubsection{}
+
+\begin{enumerate}
+  \item \[E = \frac{h c}{\lambda} = \qty{3.43e-20}{J} = \qty{0.214}{eV}\]
+
+  \item
+
+        \begin{align*}
+          \Delta E & = \hbar \sqrt{\frac{k}{m}}                  \\
+          k        & = m \left( \frac{\Delta E}{\hbar} \right)^2 \\
+                   & = \qty{5.9e3}{N/m}
+        \end{align*}
+\end{enumerate}
+
+\setcounter{subsubsection}{36}
+\subsubsection{}
+
+\begin{align*}
+  E_0     & = \frac{1}{2} \hbar \omega \\
+  \omega  & = \frac{2 E_0}{\hbar}      \\
+          & = \qty{1.76e16}{rad/s}     \\ \\
+  E       & = \frac{h c}{\lambda}      \\
+  \lambda & = \frac{h c}{E}            \\
+          & = \frac{h c}{\hbar \omega} \\
+          & = \frac{2 \pi c}{\omega}   \\
+          & = \qty{107}{nm}
+\end{align*}
+
+\setcounter{subsubsection}{38}
+\subsubsection{}
+
+\begin{align*}
+  E                            & = \left( n + \frac{1}{2} \right) \hbar \omega                                \\ \\
+  \frac{1}{2} k' A^2           & = \left( n + \frac{1}{2} \right) \hbar \sqrt{\frac{k'}{m}}                   \\
+  A                            & = \sqrt{\frac{2 \hbar}{\sqrt{k' m}} \left( n + \frac{1}{2} \right)}          \\ \\
+  \frac{1}{2} m v_\text{max}^2 & = \frac{1}{2} k' A^2                                                         \\
+  v_\text{max}                 & = A \sqrt{\frac{k'}{m}}                                                      \\
+                               & = \sqrt{\frac{2 \hbar k'^{1 / 2}}{m^{3 / 2}} \left( n + \frac{1}{2} \right)} \\ \\
+  p_\text{max}                 & = \sqrt{2 \hbar \sqrt{k' m} \left( n + \frac{1}{2} \right)}                  \\ \\
+  \Delta x \Delta p            & = \frac{A}{\sqrt{2}} \frac{p_\text{max}}{\sqrt{2}}                           \\
+                               & = \frac{1}{2} \sqrt{4 \hbar^2 \left( n + \frac{1}{2} \right)^2}              \\
+                               & = \hbar \left( n + \frac{1}{2} \right)
+\end{align*}
+
+\setcounter{subsubsection}{40}
+\subsubsection{}
+
+\begin{enumerate}
+  \item \[E_0 = \frac{1}{2} \hbar \omega = \qty{9.44e-22}{J} = \qty{0.0059}{eV}\]
+
+  \item
+
+        \begin{align*}
+          \lambda & = \frac{h c}{E}            \\
+                  & = \frac{h c}{\hbar \omega} \\
+                  & = \frac{2 \pi c}{\omega}   \\
+                  & = \qty{105}{\mu m}
+        \end{align*}
+
+  \item \[\Delta E = \hbar \omega = \qty{1.89e-21}{J} = \qty{0.0118}{eV}\]
+\end{enumerate}
+
+\setcounter{subsubsection}{42}
+\subsubsection{}
+
+\begin{enumerate}
+  \item
+
+        \begin{align*}
+          E_n                & = \frac{n^2 \pi^2 \hbar^2}{2 m L^2}                                                                                                                   \\
+          \psi_n(x)          & = \sqrt{\frac{2}{L}} \sin \frac{n \pi x}{L}                                                                                                           \\
+          \Psi(x, t)         & = \frac{1}{\sqrt{L}} \sin \frac{\pi x}{L} e^{-i \pi^2 \hbar t / 2 m L^2} + \frac{1}{\sqrt{L}} \sin \frac{3 \pi x}{L} e^{-i 9 \pi^2 \hbar t / 2 m L^2} \\
+          \Psi(L / 2, t)     & = \frac{1}{\sqrt{L}} e^{-i \pi^2 \hbar t / 2 m L^2} - \frac{1}{\sqrt{L}} e^{-i 9 \pi^2 \hbar t / 2 m L^2}                                             \\
+          |\Psi(L / 2, t)|^2 & = \Psi(L / 2, t) \Psi^*(L / 2, t)                                                                                                                     \\
+                             & = \frac{1}{L} \left( 1 - e^{i 8 \pi^2 \hbar t / 2 m L^2} - e^{-i 8 \pi^2 \hbar t / 2 m L^2} + 1 \right)                                               \\
+                             & = \frac{2}{L} \left[ 1 - \cos \left( \frac{4 \pi^2 \hbar}{m L^2} t \right) \right]
+        \end{align*}
+
+  \item \[\omega = \frac{4 \pi^2 \hbar}{m L^2}\]
+\end{enumerate}
+
+\setcounter{subsubsection}{44}
+\subsubsection{}
+
+\begin{align*}
+  A + B           & = C                             \\
+  k_1 (A - B)     & = k_2 C                         \\ \\
+  k_1 (A - C + A) & = k_2 C                         \\
+  2 k_1 A - k_1 C & = k_2 C                         \\
+  C               & = \frac{2 k_1}{k_1 + k_2} A     \\ \\
+  A + B           & = \frac{2 k_1}{k_1 + k_2} A     \\
+  B               & = \frac{k_1 - k_2}{k_1 + k_2} A
+\end{align*}
+
+\setcounter{subsubsection}{46}
+\subsubsection{}
+
+\begin{enumerate}
+  \item
+
+        \begin{align*}
+          E         & = h f                                         \\
+          E_2 - E_1 & = \frac{h c}{\lambda}                         \\
+          \lambda   & = \frac{h c}{\frac{3 \pi^2 \hbar^2}{2 m L^2}} \\
+                    & = \frac{2 m L^2 h c}{3 \pi^2 \hbar^2}         \\
+                    & = \qty{1.94e-5}{m}                            \\
+                    & = \qty{19.4}{\mu m}
+        \end{align*}
+
+  \item
+
+        \begin{align*}
+          \lambda & = \frac{2 m L^2 h c}{5 \pi^2 \hbar^2} \\
+                  & = \qty{11.6}{\mu m}
+        \end{align*}
+\end{enumerate}
+
+\setcounter{subsubsection}{48}
+\subsubsection{}
+
+\begin{enumerate}
+  \item
+
+        \begin{align*}
+          \psi_2(x)              & = \sqrt{\frac{2}{L}} \sin \frac{2 \pi x}{L}             \\
+          |\psi_2(x)|^2          & = \frac{2}{L} \sin^2 \frac{2 \pi x}{L}                  \\
+                                 & = \frac{1}{L} \left( 1 - \cos \frac{4 \pi x}{L} \right) \\
+          |\psi_2(L / 4)|^2 \,dx & = \frac{2}{L} \,dx
+        \end{align*}
+
+  \item \[|\psi_2(L / 2)|^2 \,dx = 0\]
+
+  \item \[|\psi_2(3 L / 4)|^2 \,dx = \frac{2}{L} \,dx\]
+\end{enumerate}
+
+\setcounter{subsubsection}{50}
+\subsubsection{}
+
+\begin{enumerate}
+  \item
+
+        \begin{align*}
+          \psi_1(x)                                 & = \sqrt{\frac{2}{L}} \sin \frac{\pi x}{L}                                                    \\
+          |\psi_1(x)|^2                             & = \frac{2}{L} \sin^2 \frac{\pi x}{L}                                                         \\
+                                                    & = \frac{1}{L} \left( 1 - \cos \frac{2 \pi x}{L} \right)                                      \\
+          \int_{L / 4}^{3 L / 4} |\psi_1(x)|^2 \,dx & = \int_{L / 4}^{3 L / 4} \frac{1}{L} \left( 1 - \cos \frac{2 \pi x}{L} \right) \,dx          \\
+                                                    & = \frac{1}{L} \left[ x - \frac{L}{2 \pi} \sin \frac{2 \pi x}{L} \right]_{L / 4}^{3 L / 4}    \\
+                                                    & = \frac{1}{L} \left( \frac{3 L}{4} + \frac{L}{2 \pi} - \frac{L}{4} + \frac{L}{2 \pi} \right) \\
+                                                    & = \frac{1}{2} + \frac{1}{\pi}                                                                \\
+                                                    & \approx 0.818
+        \end{align*}
+
+  \item
+
+        \begin{align*}
+          |\psi_2(x)|^2                             & = \frac{1}{L} \left( 1 - \cos \frac{4 \pi x}{L} \right)                                   \\
+          \int_{L / 4}^{3 L / 4} |\psi_2(x)|^2 \,dx & = \int_{L / 4}^{3 L / 4} \frac{1}{L} \left( 1 - \cos \frac{4 \pi x}{L} \right) \,dx       \\
+                                                    & = \frac{1}{L} \left[ x - \frac{L}{4 \pi} \sin \frac{4 \pi x}{L} \right]_{L / 4}^{3 L / 4} \\
+                                                    & = \frac{1}{L} \left( \frac{3 L}{4} - \frac{L}{4} \right)                                  \\
+                                                    & = \frac{1}{2}
+        \end{align*}
+
+  \item Yes
+\end{enumerate}
+
+\setcounter{subsubsection}{52}
+\subsubsection{}
+
+\begin{enumerate}
+  \setcounter{enumi}{1}
+  \item
+
+        \begin{align*}
+          -\frac{\hbar^2}{2 m} \frac{d^2 \psi(x)}{d x^2} & = E \psi(x)                     \\
+          -\frac{\hbar^2 \kappa^2}{2 m} \psi(x)          & = E \psi(x)                     \\
+          E                                              & = -\frac{\hbar^2 \kappa^2}{2 m}
+        \end{align*}
+
+  \item
+
+        \begin{align*}
+          -\frac{\hbar^2}{2 m} \frac{d^2 \psi(x)}{d x^2} & = E \psi(x)                     \\
+          -\frac{\hbar^2 \kappa^2}{2 m} \psi(x)          & = E \psi(x)                     \\
+          E                                              & = -\frac{\hbar^2 \kappa^2}{2 m}
+        \end{align*}
+
+  \item Because the derivative is discontinuous at $x = 0$.
+\end{enumerate}
+
+\setcounter{subsubsection}{54}
+\subsubsection{}
+
+\begin{enumerate}
+  \item
+
+        \begin{align*}
+          \psi_\text{inside}(x)  & = A \cos \left( \frac{\sqrt{2 m E}}{\hbar} x \right) + B \sin \left( \frac{\sqrt{2 m E}}{\hbar} x \right) \\
+          \psi_\text{outside}(x) & = C e^{\kappa x} + D e^{-\kappa x}                                                                        \\ \\
+          \psi_\text{outside}(0) & = \psi_\text{inside}(0)                                                                                   \\
+          C                      & = A                                                                                                       \\ \\
+          \psi_\text{outside}(L) & = \psi_\text{inside}(L)                                                                                   \\
+          D e^{-\kappa L}        & = A \cos \left( \frac{\sqrt{2 m E}}{\hbar} L \right) + B \sin \left( \frac{\sqrt{2 m E}}{\hbar} L \right)
+        \end{align*}
+
+  \item
+
+        \begin{align*}
+          \frac{d \psi_\text{outside}(x)}{d x} & = \kappa C e^{\kappa x} - \kappa D e^{-\kappa x} \\
+          \frac{d \psi_\text{inside}(x)}{d x}  & = -k A \sin k x + k B \cos k x                   \\ \\
+          \frac{d \psi_\text{outside}(0)}{d x} & = \frac{d \psi_\text{inside}(0)}{d x}            \\
+          \kappa C                             & = k B                                            \\ \\
+          \frac{d \psi_\text{outside}(L)}{d x} & = \frac{d \psi_\text{inside}(L)}{d x}            \\
+          -\kappa D e^{-\kappa L}              & = -k A \sin k L + k B \cos k L
+        \end{align*}
+\end{enumerate}
+
+\setcounter{subsubsection}{56}
+\subsubsection{}
+
+\begin{align*}
+  T        & = \qty{0.500}{s}                              \\
+  E_0      & = \frac{1}{2} \hbar \omega                    \\
+           & = \frac{1}{2} \frac{h}{2 \pi} \frac{2 \pi}{T} \\
+           & = \frac{h}{2 T}                               \\
+           & = h                                           \\
+           & = \qty{6.626e-34}{J}                          \\
+           & = \qty{4.414e-15}{eV}                         \\
+  \Delta E & = \hbar \omega                                \\
+           & = \frac{h}{2 \pi} \frac{2 \pi}{T}             \\
+           & = 2 h                                         \\
+           & = \qty{1.33e-33}{J}                           \\
+           & = \qty{8.28e-15}{eV}
+\end{align*}
+
+No
+
+\setcounter{subsubsection}{58}
+\subsubsection{}
+
+\begin{enumerate}
+  \item
+
+        \begin{align*}
+          \lambda & = \frac{2 L}{n}                                  \\
+          p       & = \frac{h}{\lambda}                              \\
+                  & = \frac{n h}{2 L}                                \\
+          E       & = K                                              \\
+                  & = \frac{1}{2} m v^2                              \\
+                  & = \frac{p^2}{2 m}                                \\
+                  & = \left( \frac{n h}{2 L} \right)^2 \frac{1}{2 m} \\
+                  & = \frac{n^2 h^2}{8 m L^2}
+        \end{align*}
+
+  \item
+
+        \begin{align*}
+          E_1 & = \frac{h^2}{8 m L^2} \\
+              & = \qty{2.15e-17}{J}   \\
+              & = \qty{135}{eV}
+        \end{align*}
+\end{enumerate}
+
+\setcounter{subsubsection}{60}
+\subsubsection{}
+
+\begin{enumerate}
+  \item
+
+        \begin{align*}
+          E_n - E_1                                   & = \frac{(n^2 - 1) \pi^2 \hbar^2}{2 m L^2}                                              \\
+          L^2                                         & = \frac{(n^2 - 1) \pi^2 \hbar^2}{2 m h f_n}                                            \\ \\
+          E_{n + 1} - E_1                             & = \frac{(n^2 + 2 n) \pi^2 \hbar^2}{2 m L^2}                                            \\
+          L^2                                         & = \frac{(n^2 + 2n) \pi^2 \hbar^2}{2 m h f_{n + 1}}                                     \\ \\
+          \frac{(n^2 - 1) \pi^2 \hbar^2}{2 m h f_n}   & = \frac{(n^2 + 2n) \pi^2 \hbar^2}{2 m h f_{n + 1}}                                     \\
+          f_{n + 1} (n^2 - 1)                         & = f_n (n^2 + 2 n)                                                                      \\
+          (f_{n + 1} - f_n) n^2 - 2 f_n n - f_{n + 1} & = 0                                                                                    \\
+          n                                           & = \frac{2 f_n \pm \sqrt{4 f_n^2 + 4 (f_{n + 1} - f_n) f_{n + 1}}}{2 (f_{n + 1} - f_n)} \\
+                                                      & = \frac{f_n \pm \sqrt{f_n^2 + f_{n + 1} (f_{n + 1} - f_n)}}{f_{n + 1} - f_n}           \\
+                                                      & = 3
+        \end{align*}
+
+        The two principle quantum numbers are $3$ and $4$.
+
+  \item
+
+        \begin{align*}
+          E_4 - E_3     & = \frac{7 \pi^2 \hbar^2}{2 m L^2}                  \\
+          h (f_4 - f_3) & = \frac{7 \pi^2 \hbar^2}{2 m L^2}                  \\
+          L             & = \sqrt{\frac{7 \pi^2 \hbar^2}{2 m h (f_4 - f_3)}} \\
+                        & = \qty{0.9}{nm}
+        \end{align*}
+
+  \item
+
+        \begin{align*}
+          E_2 - E_1 & = \frac{h c}{\lambda}                         \\
+          \lambda   & = \frac{h c}{\frac{3 \pi^2 \hbar^2}{2 m L^2}} \\
+                    & = \frac{2 m L^2 h c}{3 \pi^2 \hbar^2}         \\
+                    & = \qty{890}{nm}
+        \end{align*}
+\end{enumerate}
+
+\setcounter{subsubsection}{62}
+\subsubsection{}
+
+\begin{align*}
+  E             & = \frac{1}{2} m v^2                              \\
+                & = \frac{p^2}{2 m}                                \\
+  p             & = \sqrt{2 E m}                                   \\ \\
+  \lambda       & = \frac{h}{p}                                    \\
+  \frac{2 L}{n} & = \frac{h}{\sqrt{2 E m}}                         \\
+  2 E m         & = \left( \frac{h n}{2 L} \right)^2               \\
+  E             & = \left( \frac{h n}{2 L} \right)^2 \frac{1}{2 m} \\ \\
+  E_1           & = \qty{12}{eV}                                   \\
+  E_2           & = \qty{46}{eV}                                   \\
+  E_3           & = \qty{105}{eV}
+\end{align*}
+
+Adding $\qty{10}{eV}$ to each value gives $\qty{22}{eV}$, $\qty{56}{eV}$, and $\qty{115}{eV}$.
+
+\setcounter{subsubsection}{64}
+\subsubsection{}
+
+\begin{enumerate}
+  \item
+
+        \begin{align*}
+          E & = \frac{1}{2} k' A^2        \\
+          A & = \pm \sqrt{\frac{2 E}{k'}}
+        \end{align*}
+
+  \item
+
+        \begin{align*}
+          \frac{n h}{2} & = \int_{-A}^A \sqrt{2 m [E - \frac{1}{2} k' x^2]} \,dx                                                                                           \\
+                        & = 2 \sqrt{k' m} \int_0^A \sqrt{\frac{2 E}{k'} - x^2} \,dx                                                                                        \\
+                        & = \sqrt{k' m} \left[ x \sqrt{\frac{2 E}{k'} - x^2} + \frac{2 E}{k'} \arcsin \left( \frac{x}{\sqrt{2 E / k'}} \right) \right]_0^{\sqrt{2 E / k'}} \\
+                        & = \sqrt{k' m} \left( \frac{2 E}{k'} \frac{\pi}{2} \right)                                                                                        \\
+                        & = \sqrt{\frac{m}{k'}} E \pi                                                                                                                      \\
+          E             & = n \hbar \omega
+        \end{align*}
+
+  \item Underestimate
+\end{enumerate}
+
+\setcounter{subsubsection}{66}
+\subsubsection{}
+
+c
+
+\setcounter{subsubsection}{68}
+\subsubsection{}
+
+a
+
 \end{document}
