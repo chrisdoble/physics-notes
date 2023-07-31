@@ -736,4 +736,169 @@
   \item The energy levels for a harmonic oscillator are \[E_n = \left( n + \frac{1}{2} \right) \hbar \sqrt{\frac{k'}{m}} = \left( n + \frac{1}{2} \right) \hbar \omega, n = 0, 1, 2, \ldots\] where $n$ is the quantum number (where $n = 0$ is the ground state), $k'$ is the potential well's force constant, and $\omega$ is the oscillator's angular frequency.
 \end{itemize}
 
+\section{Quantum Mechanics II: Atomic Structure}
+
+\subsection{The Schrödinger Equation in Three Dimensions}
+
+\begin{itemize}
+  \item The general form of the Schrödinger equation in three dimensions is \begin{align*}
+           & -\frac{\hbar^2}{2 m} \left( \frac{\partial^2 \Psi(x, y, z, t)}{\partial x^2} + \frac{\partial^2 \Psi(x, y, z, t)}{\partial y^2} + \frac{\partial^2 \Psi(x, y, z, t)}{\partial z^2} \right) \\
+           & \qquad + U(x, y, z) \Psi(x, y, z, t) = i \hbar \frac{\partial \Psi(x, y, z, t)}{\partial t}
+        \end{align*}
+
+  \item As in one dimension, the square of the modulus of the wave function is the probability distribution function of the particle's location, i.e. the probability of finding the particle in a volume $V$ is given by \[\int_V |\Psi(x, y, z, t)|^2 \,dV.\]
+
+  \item The normalization condition on the wave function is that the integral of its modulus squared over all space must equal $1$, i.e. the probability that the particle is somewhere is $1$ \[\int |\Psi(x, y, z, t)|^2 \,dV = 1.\]
+
+  \item If the wave function represents a state of definite energy $E$ the time component can be dropped leaving the time-independent three-dimensional Schrödinger equation \begin{align*}
+           & -\frac{\hbar^2}{2 m} \left( \frac{\partial^2 \psi(x, y, z)}{\partial x^2} + \frac{\partial^2 \psi(x, y, z)}{\partial y^2} + \frac{\partial^2 \psi(x, y, z)}{\partial z^2} \right) \\
+           & \qquad + U(x, y, z) \psi(x, y, z) = E \psi(x, y, z).
+        \end{align*}
+
+  \item The probability distribution function for a stationary state in three dimensions is \[|\psi(x, y, z)|^2\] giving the normalization condition \[\int |\psi(x, y, z)|^2 \,dV = 1.\]
+\end{itemize}
+
+\subsection{Particle in a Three-Dimensional Box}
+
+\begin{itemize}
+  \item The time-independent Schrödinger equation in three dimensions reduces to three independent equations — one for each dimension. These equations are the same as for a particle in a one-dimensional box. The solutions for each dimension are thus \begin{align*}
+          X_{n_X}(x) & = C_X \sin \frac{n_X \pi x}{L} & (n_X = 1, 2, 3, \ldots) \\
+          Y_{n_Y}(y) & = C_Y \sin \frac{n_Y \pi y}{L} & (n_Y = 1, 2, 3, \ldots) \\
+          Z_{n_Z}(z) & = C_Z \sin \frac{n_Z \pi z}{L} & (n_Z = 1, 2, 3, \ldots)
+        \end{align*} where $C_X$, $C_Y$, and $C_Z$ are constants.
+
+  \item This means that there are three different quantum numbers — one for each dimension — and the ``dead spots'' of the wave function are determined by these numbers.
+
+  \item The energy of the particle is $E = E_X + E_Y + E_Z$ where \begin{align*}
+          E_X = \frac{n_X^2 \pi^2 \hbar^2}{2 m L^2} & (n_X = 1, 2, 3, \ldots)  \\
+          E_Y = \frac{n_Y^2 \pi^2 \hbar^2}{2 m L^2} & (n_Y = 1, 2, 3, \ldots)  \\
+          E_Z = \frac{n_Z^2 \pi^2 \hbar^2}{2 m L^2} & (n_Z = 1, 2, 3, \ldots).
+        \end{align*} Equivalently \[E_{n_X,n_Y,n_Z} = \frac{(n_X^2 + n_Y^2 + n_Z^2) \pi^2 \hbar^2}{2 m L^2}.\]
+
+  \item For quantum systems in multiple dimensions, two or more sets of quantum numbers (and thus quantum states) can correspond to the same energy level. This is called \textbf{degeneracy} and the quantum states are said to be \textbf{degenerate}.
+
+  \item For a particle in a three-dimensional box, degeneracy is a result of the sides of the box having equal lengths. The degeneracy can be removed by making the sides have different lengths.
+\end{itemize}
+
+\subsection{The Hydrogen Atom}
+
+\begin{itemize}
+  \item The energy levels of a hydrogen atom are given by \[E_n = -\frac{1}{(4 \pi \epsilon_0)^2} \frac{m_r e^4}{2 n^2 \hbar^2}\] where $m_r$ is the reduced mass of the electron/nucleus system and $n$ is the principle quantum number.
+
+  \item In an energy level $E_n$ with principal quantum number $n$, the possible values of the magnitude of angular momentum for a hydrogen atom are \[L = \sqrt{l (l + 1)} \hbar, \,l = 0, 1, 2, \ldots, n - 1\] where $l$ is the \textbf{orbital quantum number}. This shows that for principle quantum number $n$ there are $n$ possible magnitude of angular momentum.
+
+  \item The possible values of the $z$ component of the angular momentum are \[L_z = m_l \hbar, \,m_l = 0, \pm 1, \pm 2, \ldots, \pm l\] where $m_l$ is called the \textbf{orbital magnetic quantum number} or \textbf{magnetic quantum number}.
+
+  \item $L_z$ is always less than $L$. This can be seen if we maximise $L_z$ and compare it to $L$ \begin{align*}
+          L   & = \sqrt{l (l + 1)} \hbar \\
+          L_z & = l \hbar.
+        \end{align*} This means we don't know the $x$ and $y$ components of $\mathbf{L}$ as is required by the uncertainty principle.
+
+  \item Like a particle in a three-dimensional box, the wave functions for the hydrogen atom are determined by three quantum numbers $n$, $l$, and $m_l$. The energy $E_n$ is determined by $n$, the magnitude of the orbital angular momentum $L$ is determined by $l$, and the $z$ component of the orbital angular momentum $\mathbf{L}$ is determined by $m_l$.
+
+  \item States with various values of the orbital quantum number $l$ are often labelled with letters according to the following scheme: \begin{align*}
+          l & = 0 \text{: } s \text{ states} & l & = 3 \text{: } f \text{ states} \\
+          l & = 1 \text{: } p \text{ states} & l & = 4 \text{: } g \text{ states} \\
+          l & = 2 \text{: } d \text{ states} & l & = 5 \text{: } h \text{ states}
+        \end{align*} an so on alphabetically.
+
+  \item \textbf{Spectroscopic notation} combines the principle quantum number $n$ with the letter associated with the orbital quantum number $l$ as above to describe a state, e.g. $2 p$ corresponds to $n = 2$ and $l = 1$.
+
+  \item The region of space associated with the wave function for a particular value of $n$ is called a \textbf{shell}.
+
+  \item \textbf{X-ray notation} is a way of describing the shells associated with various values of $n$ \begin{align*}
+          n & = 1 \text{: } K \text{ shell} \\
+          n & = 2 \text{: } L \text{ shell} \\
+          n & = 4 \text{: } M \text{ shell}
+        \end{align*} and so on.
+
+  \item For each $n$, different values of $l$ correspond to different \textbf{subshells}.
+
+  \item If $P(r)$ is the radial probability distribution function for an electron, then the probability the electron will be found in a spherical shell between radii $r$ and $r + d r$ is \[P(r) \,dr = |\psi|^2 \,dr = |\psi|^2 4 \pi r^2 \,dr.\]
+\end{itemize}
+
+\subsection{The Zeeman Effect}
+
+\begin{itemize}
+  \item The \textbf{Zeeman effect} is the splitting of a spectral line into several components in the presence of a magnetic field. This occurs because an orbiting electron has a magnetic moment $\boldsymbol{\mu}$ which has potential energy with the magnetic field $\mathbf{B}$.
+
+  \item The orbital magnetic interaction energy is given by \[U = -\mu_z B = -\frac{e}{2 m} L_z B = -\frac{e}{2 m} m_l \hbar B = m_l \mu_B B\] where $\mu_z$ is the $z$ component of the magnetic moment, $m_l$ is the magnetic quantum number, and $\mu_B$ is the Bohr magneton. Because this depends on $m_l$ which can take on any integer value between $-l$ and $l$, the potential energy $U$ can be positive or negative which causes the spectral line to ``spread out'' above and below its usual position.
+
+  \item \textbf{Selection rules} constrain the possible transitions from one quantum state to another. Transitions that obey the rules are called \textbf{allowed transitions}; those that don't are called \textbf{forbidden transitions}.
+\end{itemize}
+
+\subsection{Electron Spin}
+
+\begin{itemize}
+  \item \textbf{Spin} is an intrinsic form of angular momentum carried by elementary particles. It's like a spinning ball but it's not spinning and it's not a ball.
+
+  \item The magnitude of the spin angular momentum of an electron is \[S = \sqrt{\frac{1}{2} \left( \frac{1}{2} + 1 \right)} \hbar = \sqrt{\frac{3}{4}} \hbar.\]
+
+  \item The $z$-component of the spin angular momentum of an electron is \[S_z = m_s \hbar\] where $m_s$ is the \textbf{spin magnetic quantum number} with possible values $m_s = -\frac{1}{2}$ (``spin down'') and $m_s = \frac{1}{2}$ (``spin up'').
+
+  \item The $z$-component of the spin magnetic moment is \[\mu_z = -2.00232 \frac{e}{2 m} S_z = -2.00232 \frac{e}{2 m} m_s \hbar = \mp 1.00116 \mu_B.\]
+
+  \item The interaction energy between the spin magnetic moment and an external magnetic field is thus \[U = -\boldsymbol{\mu} \cdot \mathbf{B} = -\mu_z B_z = \pm 1.00116 \mu_B B_z.\]
+
+  \item The spin gyromagnetic ratio (the ratio of spin magnetic moment to spin angular momentum) is two times the orbital gyromagnetic ratio.
+
+  \item Four numbers are needed to describe the state of an electron in a hydrogen atom: $n$, $l$, $m_l$, and $m_s$.
+
+  \item Like orbital angular momentum, spin angular momentum causes electron energy levels to split in the presence of a magnetic field (the ``anomolous Zeeman effect'').
+
+  \item Electron spin can cause splitting of energy levels in the absense of an external magnetic field. This happens because, from the electron's frame of reference, a magnetic field is generated by the orbiting positively charged nucleus. This is called \textbf{spin-orbit coupling}.
+
+  \item The total angular momentum of an electron is the sum of its orbital and spin angular momenta \[\mathbf{J} = \mathbf{L} + \mathbf{S}.\]
+
+  \item The magnitude of its total momentum is \[J = \sqrt{j (j + 1)} \hbar\] where $j$ is the \textbf{total angular momentum quantum number} \[j = \left| l \pm \frac{1}{2} \right|.\]
+
+  \item Various combinations of $l$ and $j$ can be expressed in an alternative spectroscopic notation e.g. $^2 P_{1 / 2}$ where the superscript indicates the number of possible spin states (in this case $2$), the letter is the capitalised letter associated with the $l$ state (in this case $l = 1$), and the subscript is the value of $j$.
+
+  \item In addition to shifts in energy levels due to magnetic effects within the atom, there are also shifts due to relativistic corrections to the kinetic energy of the electron. The term \textbf{fine structure} refers to the energy level shifts caused by magnetic and relativistic effects together. Including these effects, the energy levels of the hydrogen atom are \[E_{n,j} = -\frac{\qty{13.60}{eV}}{n^2} \left[ 1 + \frac{\alpha^2}{n^2} \left( \frac{n}{j + \frac{1}{2}} - \frac{3}{4} \right) \right]\] where $\alpha$ is the \textbf{fine structure constant}.
+\end{itemize}
+
+\subsection{Many-Electron Atoms and the Exclusion Principle}
+
+\begin{itemize}
+  \item A neutral atom with $Z$ protons also has $Z$ electrons. The wave function of one of these electrons depends on $3 Z$ coordinates ($3$ for each electron), making it very complicated and difficult to solve exactly.
+
+  \item An approximation that simplifies the above is to assume the atom's charge cloud is spherically symmetric, resulting in a potential energy function $U(r)$. This is called the \textbf{central-field approximation}.
+
+  \item The \textbf{Pauli exclusion principle} states that no two electrons in an atom can occupy the same quantum-mechanical state, i.e. they can't have the same values for all four quantum numbers $n$, $l$, $m_l$, and $m_s$. This determines the number of electrons that can be present in each shell.
+\end{itemize}
+
+\includegraphics[scale=0.516]{shell-states}
+
+\begin{itemize}
+  \item The number of electrons permitted in each subshell is given by $2 (2 l + 1)$.
+
+  \item The number of electrons permitted in each shell is given by $2 n^2$.
+
+  \item The Pauli exclusion principle can be used to determine the ground state of an element with atomic number $Z$ by filling the lowest energy level electron positions from $1 s$ onwards. This can be represented as a sequence \begin{align*}
+           & 1 s               \\
+           & 1 s^2             \\
+           & 1 s^2 2 s         \\
+           & 1 s^2 2 s^2       \\
+           & 1 s^2 2 s^2 2 p   \\
+           & 1 s^2 2 s^2 2 p^2 \\
+           & 1 s^2 2 s^2 2 p^3 \\
+           & 1 s^2 2 s^2 2 p^4 \\
+           & 1 s^2 2 s^2 2 p^5 \\
+           & 1 s^2 2 s^2 2 p^6 \\
+           & \qquad \vdots
+        \end{align*} where superscripts indicate the number of electrons in that position.
+
+  \item This pattern continues as expected until the $M$ and $N$ shells ($n = 3$ and $n = 4$) where some electrons go into the $4 s$ subshell instead of the $3 d$ subshell.
+
+  \item Gauss's law tells us that if the charge distribution within an atom is spherically symmetrical (as in the central-field approximation), the electric field at radius $r$ is given by $Q_\text{encl} / 4 \pi \epsilon_0 r^2$. As you move from inner to outer shells, $Q_\text{encl}$ becomes less positive as electrons closer to the nucleus are \textbf{screening} some of its positive charge.
+
+  \item From the view of electrons in outer shells, the atomic number of the atom is effectively reduced. The energy of an electron in shell $n$ is \[E_n = -\frac{Z_\text{eff}^2}{n^2} (\qty{13.6}{eV})\] where $Z_\text{eff}$ is the \textbf{effective atomic number} it experiences as a result of screening.
+
+  \item An electron's $l$ value determines how many maxima are present in its wave function and how much ``time'' it spends at various distances from the nucleus. This means it determines $Z_\text{eff}$ and thus the electron's energy level.
+
+  \item When electrons strike a metal target, their deceleration results in x-rays being emitted (bremsstrahlung or braking radiation). The type of metal determines the wavelengths that are emitted. There are peaks in radiation intensity at particlar wavelengths that change with the metal.
+
+  \item The most intense peak is called the $K_\alpha$ line and its frequency is given by \textbf{Moseley's law} \[f = (\qty{2.48e15}{Hz}) (Z - 1)^2.\]
+\end{itemize}
+
 \end{document}
