@@ -1036,4 +1036,230 @@
   \item The reverse of the above (the photovoltaic effect) is used to create solar cells. Electrons in the junction absorb photons creating electron-hole pairs. Those pairs are then separated by the recombination electric field, generating a current.
 \end{itemize}
 
+\section{Nuclear Physics}
+
+\subsection{Properties of Nuclei}
+
+\begin{itemize}
+  \item The number of protons in a nucleus is called its \textbf{atomic number ($Z$)}.
+
+  \item The number of neutrons in a nucleus is called its \textbf{neutron number ($N$)}.
+
+  \item A \textbf{nucleon} is a neutron or a proton.
+
+  \item The \textbf{nucleon number} of a nucleus is the number of nucleons it contains.
+
+  \item The nucleon number is also called the \textbf{mass number} \[A = Z + N\] because it's the nearest whole number to the mass of the nucleus measured in atomic mass units (u) where \[\qty{1}{u} = \qty{1.660538921e-27}{kg}.\]
+
+  \item The radius of an nucleus is \[R = R_0 A^{1 / 3}\] where \[R_0 = \qty{1.2e-15}{m} = \qty{1.2}{fm}\] and $A$ is the nucleon number.
+
+  \item A nucleus's mass is proportional to $A$ and its volume is proportional to $R^3 = A$ so its density is constant. This means that all nuclei have approximately the same density.
+
+  \item A particular combination of $Z$ and $N$ values is called a \textbf{nuclear species} or a \textbf{nuclide}. It's possible for different nuclides to have the same mass number.
+
+  \item Nuclides that have the same number of protons ($Z$) but differenet numbers of neutrons ($N$) are called \textbf{isotopes}. They both represent the same element but have slightly different physical properties.
+
+  \item The notation for nuclides is $^A_Z \text{El}$ or $^A \text{El}$ because $Z$ can be determined from the name of the element.
+
+  \item Like electrons, nucleons are spin-$\frac{1}{2}$ particles.
+
+  \item The magnitude of the spin angular momentum of a nucleon is \[S = \sqrt{\frac{1}{2} \left( \frac{1}{2} + 1 \right)} \hbar = \sqrt{\frac{3}{4}} \hbar\] and the $z$-component is \[S_Z = \pm \frac{1}{2} \hbar.\]
+
+  \item The total orbital angular momentum of a nucleus has magnitude \[J = \sqrt{j (j + 1)} \hbar\] and $z$-component \[J_z = m_j \hbar, \,m_j = -j, -j + 1, \ldots, j - 1, j\] where $j$ is the \textbf{nuclear spin}.
+
+  \item When the total number of nucleons $A$ is even, $j$ is an integer. When it's odd, $j$ is a half-integer.
+
+  \item When $Z$ and $N$ are both even, $J = 0$.
+
+  \item The \textbf{nuclear magneton} is to nucleons what the Bohr magneton is to electrons (the quanta of magnetic moment) \[\mu_n = \frac{e \hbar}{2 m_p} = \qty{5.05078e-27}{J/T} = \qty{3.15245e-8}{eV/T}.\]
+
+  \item The magnitude of the $z$-component of spin magnetic moment of a proton is \[|\mu_n|_\text{proton} = 2.7928 \mu_n\] and it is parallel to the spin angular momentum.
+
+  \item The magnitude of the $z$-component of the spin magnetic moment of a neutron is \[|\mu_n|_\text{neutron} = 1.9130 \mu_n\] and it is antiparallel to the spin angular momentum.
+
+  \item Because a nucleus has a magnetic moment, there is an interaction energy \[U = -\boldsymbol{\mu} \cdot \mathbf{B}\] when it is placed in an external magnetic field. The component of the magnetic moment in the direction of the magnetic field $\mu_z$ is quantized so a series of energy levels results from this interaction.
+
+  \item The magnetic moment of the nucleus causes a magnetic field. The interaction of electrons with this magnetic field results in \textbf{hyperfine structure} — the additional splitting of energy levels and spectra.
+\end{itemize}
+
+\subsection{Nuclear Binding and Nuclear Structure}
+
+\begin{itemize}
+  \item Because energy must be added to a nucleus to separate it into its individual nucleons, the total rest energy of the separated nucleons $E_0$ is greater than the rest energy of the nucleus.
+
+  \item The energy the must be added to separate the nucleons is called the \textbf{binding energy $E_B$} thus the rest energy of the nucleus is $E_0 - E_B$.
+
+  \item Using the mass-energy equivalence $E = m c^2$ we can calculate the binding energy $E_B$ as the difference in mass between the separated nucleons and the nucleus \[E_B = (Z M_H + N m_n - ^A_Z M) c^2\] where $M_H$ is the mass of a hydrogen atom, $m_n$ is the mass of a neutron, and $^A_Z M$ is the mass of a neutral atom containing the nucleus in question.
+
+  \item An important measure of how tightly a nucleus is bound is the \textbf{binding energy per nucleon} $E_B / A$.
+
+  \item The mass of a nucleus is always smaller than the mass of its constituent nucleons by $\Delta M = E_B / c^2$. This is called the \textbf{mass defect}.
+
+  \item The force that binds neutrons and protons together in the nucleus is an example of the strong interaction. In this context it's called the \textbf{nuclear force}.
+
+  \item The nuclear force…
+
+        \begin{itemize}
+          \item Does not depend on charge. Neutrons and protons are both bound.
+
+          \item Exhibits ``saturation'', i.e. an individual nucleon only interacts with a few of its neighbours.
+
+          \item Has a short range (on the order of $10^{-15} \,\unit{m}$) but within that range it's much stronger than electric forces.
+
+          \item Favors binding pairs of neutrons or protons with opposite spins and of pairs of pairs (i.e. a pair of neutrons or a pair of protons, each pair having opposite spins).
+        \end{itemize}
+
+  \item The \textbf{liquid-drop model} for nuclear structure estimates the binding energy of a nucleus as \[E_B = C_1 A - C_2 A^{2 / 3} - C_3 \frac{Z (Z - 1)}{A^{1 / 3}} - C_4 \frac{(A - 2 Z)^2}{A} \pm C_5 A^{-4 / 3}\] where \begin{align*}
+          C_1 & = \qty{15.75}{MeV}  \\
+          C_2 & = \qty{17.80}{MeV}  \\
+          C_3 & = \qty{0.7100}{MeV} \\
+          C_4 & = \qty{23.69}{MeV}  \\
+          C_5 & = \qty{39}{MeV}
+        \end{align*} and the $C_5$ term is positive if both $Z$ and $N$ are even, negative if they're both odd, and zero otherwise.
+
+  \item The \textbf{semiempirical mass formula}, derived from the liquid-drop model, can be used to estimate the mass of any neutral atom \[^A_Z M = Z M_H + N m_n - \frac{E_B}{c^2}.\]
+
+  \item The \textbf{shell model} for nuclear structure assumes a spherically symmetric potential energy function (similar to the central-field approximation for electrons).
+
+  \item As neutrons and protons are also spin-$\frac{1}{4}$ particles, the Pauli exclusion principle prevents any two from occupying the same state within a nucleus. Like the noble gases, this results in certain \textbf{magic numbers} of neutrons and/or protons that result in particularly high binding energies and thus stable nuclei. The numbers are 2, 8, 20, 28, 50, 82, and 126.
+\end{itemize}
+
+\subsection{Nuclear Stability and Radioactivity}
+
+\begin{itemize}
+  \item Among ~2500 known nuclides, fewer than 300 are stable. The others are unstable and decay into other nuclides by emitting electromagnetic radiation and particles, a process called \textbf{radioactivity}.
+
+  \item A \textbf{Segrè chart} has neutron number on the $y$-axis, proton number on the $x$-axis, and plots points where the combination results in a stable nuclide.
+
+  \item Each value of the mass number $A$ typically only has 2 or 3 associated stable nuclides.
+
+  \item Most stable nuclides have an even number of neutrons and/or protons. Only 3 have odd numbers of both.
+
+  \item The plot of stable nuclides forms a line slightly steeper than the $N = Z$ line. Nuclides in the region to the left have too many neutrons and convert them to protons via $\beta^-$ decay. Nuclides in the region to the right have too many protons and electric repulsion causes the atom to split.
+
+  \item \textbf{Alpha decay} occurs when an unstable nuclide emits an \textbf{alpha particle}: a $^4 \text{He}$ nucleus. This occurs principally with nuclei that are too large to be stable. When a nucleus emits an alpha particle its $N$ and $Z$ values both decrease by 2.
+
+  \item Alpha decay is possible whenever the mass of the original neutral atom is greater than the sum of the masses of the final neutral atom and a neutral $^4_2 \text{He}$ atom. The difference in mass is converted into the kinetic energy of the alpha particle and daughter nucleus (both may be moving due to conservation of momentum).
+
+  \item The original nucleus is called the \textbf{parent nucleus} and the remaining nucleus is called the \textbf{daughter nucleus}.
+
+  \item Sometimes the parent nucleus decays to an excited state of the daughter nucleus which then emits an additional photon.
+
+  \item Alpha particles are emitted at high speeds (typically a few percent of the speed of light), but because of their charge and mass they can typically only travel a few centimeters in air or a small fraction of a millimeter in solids.
+
+  \item In \textbf{beta-minus ($\boldsymbol{\beta}^-$) decay}, a neutron changes into a proton, a $\beta^-$ particle (an electron), and an antineutrino $\overline{\nu}_e$. The nucleus's neutron number $N$ decreases by one and its proton number $Z$ increases by one.
+
+  \item $\beta^-$ particles (electrons) are emitted at very high speeds — up to 0.9995 of the speed of light — so their motion is highly relativistic.
+
+  \item The antineutrino is the antiparticle of the neutrino. It has zero charge, very small mass, and is spin-$\frac{1}{2}$.
+
+  \item $\beta^-$ decay can occur whenever the mass of the original neutral atom is larger than that of the final atom.
+
+  \item Because there are three products in $\beta^-$ decay, the energy can be shared in many different ways while still converving energy and momentum. This makes it impossible to predict precisely how the energy will be shared, incontrast with $\alpha$ decay where only two products mean the energy and momenta can be uniquely determined.
+
+  \item In \textbf{beta-plus ($\boldsymbol{\beta}+$) decay}, a proton changes into a neutron, a $\beta+$ particle (a positron), and a neutrino $\nu_e$. The nucleus's neutron number $N$ increases by one and its proton number $Z$ decreases by one.
+
+  \item $\beta^+$ decay can occur whenever the mass of the original neutral atom is at least two electron masses larger than that of the final atom.
+
+  \item In \textbf{electron capture}, an orbital electron (typically in the $K$ shell) can combine with a proton in the nucleus to form a neutron and a neutrino. The neutron remains in the nucleus and the neutrino is emitted. The nucleus's neutron number increases by one and its proton number decreases by one.
+
+  \item Electron capture can occur whenever the mass of the original neutral atom is larger than that of the final atom.
+
+  \item Like electrons, the internal energy of nuclei is quantized and they have a ground state. However because of the great strength of nuclear interactions, excitation energies of nuclei are much greater than those of electrons.
+
+  \item When a nucleus is in an excited state it can decay to its ground state by emitting a high-energy photon or \textbf{gamma ($\boldsymbol{\gamma}$) ray}. This process is called \textbf{gamma ($\boldsymbol{\gamma}$) decay}.
+
+  \item In both $\alpha$ and $\beta$ decay the $Z$ value of the nucleus changes. In $\gamma$ decay it doesn't.
+
+  \item When an unstable nucleus decays, the daughter nucleus may also be unstable and itself decay. This results in a series of decays until a stable configuration is reached.
+\end{itemize}
+
+\subsection{Activities and Half-Lives}
+
+\begin{itemize}
+  \item If you have a number of unstable nuclei $N(t)$ they will decay over time and the number will decrease, i.e. $d N(t) / d t$ is negative.
+
+  \item The number of nuclei decaying per unit interval $-d N(t) / d t$ is called the \textbf{activity} or \textbf{decay rate} of the specimen and is proportional to the remaining number of nuclei present \[-\frac{d N(t)}{d t} = \lambda N(t)\] where $\lambda$ is the \textbf{decay constant}.
+
+  \item If $\lambda$ is large the sample decays quickly, if it's small it decays slowly.
+
+  \item The number of remaining nuclei at time $t$ is \[N(t) = N_0 e^{-\lambda t}\] where $N_0$ is the number of nuclei present at $t = 0$.
+
+  \item The \textbf{half-life} of a sample is the amount of time required for half of its nuclei to decay \[T_{1 / 2} = \frac{\ln 2}{\lambda} = \frac{0.693}{\lambda}.\]
+
+  \item The \textbf{(mean) lifetime} of an unstable nucleus is proportional to its half-life \[T_\text{mean} = \frac{1}{\lambda} = \frac{T_{1 / 2}}{\ln 2} = \frac{T_{1 / 2}}{0.693}.\]
+
+  \item A common unit of radioactive activity is the \textbf{curie} where \[\qty{1}{Ci} = \num{3.70e10} \text{ decays/s}.\]
+
+  \item The SI unit of activity is the \textbf{becquerel} where \[\qty{1}{Bq} = 1 \text{ decay/s}.\]
+\end{itemize}
+
+\subsection{Biological Effects of Radiation}
+
+\begin{itemize}
+  \item The \textbf{absorbed dose} of radiation is the amount of energy delivered by the radiation per unit mass of living tissue.
+
+  \item The unit of absorbed dose is the gray where \[\qty{1}{Gy} = \qty{1}{J/kg}.\]
+
+  \item Another common unit is the rad where \[\qty{1}{rad} = \qty{0.01}{J/kg} = \qty{0.01}{Gy}.\]
+
+  \item \textbf{Ionizing radiation} is radiation that has enough energy to ionize atoms, i.e. strip them of their electrons.
+
+  \item Different types of radiation have different effects on living tissue. The \textbf{relative biological effectiveness (RBE)} or \textbf{quality factor (QF)} is a number associated with each type of radiation that quantifies the scale of its effects.
+\end{itemize}
+
+\begin{center}
+  \includegraphics[scale=0.43]{rbe}
+\end{center}
+
+\begin{itemize}
+  \item The biological effects of radiation can be quantified as the product of the absorbed dose (in $\unit{Gy}$ or $\unit{rad}$) and the RBE of the radiation. This is called the \textbf{biologically equivalent dose} or \textbf{equivalent dose}.
+
+  \item The units of equivalent dose are sieverts ($\unit{Sv}$) when the absorbed dose is measured in gray, and rem ($\unit{rem}$) when it's measured in rad.
+
+  \item While the units of gray and sieverts are both equivalent to $\unit{J/kg}$, the former is used to communicate the quantity of an absorbed dose while the latter is used to communicate the biological effects of an absorbed dose.
+\end{itemize}
+
+\subsection{Nuclear Reactions}
+
+\begin{itemize}
+  \item A \textbf{nuclear reaction} is the rearrangement of nuclear components that result from a bombardment by a particle rather than a spontaneous natural process.
+
+  \item Nuclear reactions are subject to several conservation laws: charge, momentum, angular momentum, energy, and the total number of nucleons. Note that the number of neutrons and protons may not be conserved as they can change into each other in $\beta$ decay.
+
+  \item In general, nuclear reactions are not elastic collisions and the total initial mass does not equalt the total final mass.
+
+  \item By the mass-energy equivalence, the difference in mass before and after the reaction corresponds to the \textbf{reaction energy}. If initial particles $A$ and $B$ interact to produce particles $C$ and $D$, then the reaction energy is \[Q = (M_A + M_B - M_C - M_D) c^2.\] To balance the electrons, the neutral atomic masses are used.
+
+  \item When the reaction energy is positive, the total mass decreases and the total kinetic energy increases. This is called an \textbf{exoergic reaction}.
+
+  \item Even though energy is released in an exoergic reaction, the initial kinetic energies must be great enough for the particles to overcome their electric repulsion unless they tunnel.
+
+  \item When the reaction energy is negative, the total mass increases and the total kinetic energy decreases. This is called an \textbf{endoergic reaction}.
+
+  \item An endoergic reaction can't occur unless the initial kinetic energy in the centre of mass reference frame is at least as great as $|Q|$. This is called the \textbf{threshold energy}.
+\end{itemize}
+
+\subsection{Nuclear Fission}
+
+\begin{itemize}
+  \item \textbf{Nuclear fission} is a decay process in which an unstable nucleus splits into two fragments of comparable mass (\textbf{fission fragments}).
+
+  \item Fission resulting from neutron absorption is called \textbf{induced fission}.
+
+  \item Some nuclides also undergo \textbf{spontaneous fission} without neutron absorption but this is rare.
+
+  \item Fission fragments typically have large kinetic energies. This is because they typically have much larger binding energies than the parent nucleus, resulting in lower rest energy and thus a release of energy during the reaction.
+
+  \item Fission fragments are always unstable because their $N / Z$ ratio is too high. They typically turn into stable nuclides via a chain of $\beta^-$ decays.
+\end{itemize}
+
+\subsection{Nuclear Fusion}
+
+\begin{itemize}
+  \item In a \textbf{nuclear fusion} reaction, two or more small light nuclei come together, or fuse, to form a larger nucleus. These reactions release energy because the binding energy per nucleon after the reaction is greater than before.
+
+  \item The binding energy per nucleon increases until around $A = 60$, so the mass numbers of the initial nuclei must add to less than $60$.
+\end{itemize}
+
 \end{document}
