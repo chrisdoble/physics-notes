@@ -16,4 +16,93 @@
 
 \tableofcontents
 
+\setcounter{section}{9}
+\section{Systems of Linear Differential Equations}
+
+\subsection{Theory of Linear Systems}
+
+\begin{itemize}
+  \item A system of the form \begin{align*}
+          \frac{d x_1}{d t} & = g_1(t, x_1, x_2, \ldots, x_n) \\
+          \frac{d x_2}{d t} & = g_2(t, x_1, x_2, \ldots, x_n) \\
+          \vdots                                              \\
+          \frac{d x_n}{d t} & = g_n(t, x_1, x_2, \ldots, x_n)
+        \end{align*} is called a \textbf{first-order system}.
+
+  \item When each of the functions $g_n(t, x_1, x_2, \ldots, x_n)$ is linear in the dependent variables $x_1, x_2, \ldots, x_n$, we get the \textbf{normal form} of a first-order system of linear equations \begin{align*}
+          \frac{d x_1}{d t} & = a_{11}(t) x_1 + a_{12}(t) x_2 + \ldots + a_{1n}(t) x_n + f_1(t)  \\
+          \frac{d x_2}{d t} & = a_{21}(t) x_1 + a_{22}(t) x_2 + \ldots + a_{2n}(t) x_n + f_2(t)  \\
+          \vdots                                                                                 \\
+          \frac{d x_n}{d t} & = a_{n1}(t) x_1 + a_{n2}(t) x_2 + \ldots + a_{nn}(t) x_n + f_n(t). \\
+        \end{align*} Such a system is called a \textbf{linear system}.
+
+  \item When $f_i(t) = 0$ for $i = 1, 2, \ldots, n$ the linear system is said to be \textbf{homogeneous}, otherwise it's \textbf{nonhomogenous}.
+
+  \item If $\mathbf{X}$, $\mathbf{A}(t)$, and $\mathbf{F}(t)$ denote the matrices \begin{align*}
+          \mathbf{X}    & = \begin{pmatrix}
+                              x_1(t) \\
+                              x_2(t) \\
+                              \vdots \\
+                              x_n(t)
+                            \end{pmatrix}                             \\
+          \mathbf{A}(t) & = \begin{pmatrix}
+                              a_{11}(t) & a_{12}(t) & \ldots & a_{1n}(t) \\
+                              a_{21}(t) & a_{22}(t) & \ldots & a_{2n}(t) \\
+                              \vdots    &           &        & \vdots    \\
+                              a_{n1}(t) & a_{n2}(t) & \ldots & a_{nn}(t)
+                            \end{pmatrix} \\
+          \mathbf{F}(t) & = \begin{pmatrix}
+                              f_1(t) \\
+                              f_2(t) \\
+                              \vdots \\
+                              f_n(t)
+                            \end{pmatrix}
+        \end{align*} then homogeneous linear systems can be written \[\mathbf{X}' = \mathbf{A} \mathbf{X}\] and nonhomogeneous linear systems can be written \[\mathbf{X}' = \mathbf{A} \mathbf{X} + \mathbf{F}.\]
+
+  \item A \textbf{solution vector} on an interval $I$ is any column matrix \[\mathbf{X} = \begin{pmatrix}
+            x_1(t) \\
+            x_2(t) \\
+            \vdots \\
+            x_n(t)
+          \end{pmatrix}\] whose entries are differentiable functions satisfying the linear system on the interval.
+
+  \item The entries of a solution vector can be considered a set of parametric equations that define a curve in $n$-space. Such a curve is called a \textbf{trajectory}.
+
+  \item The problem of solving \[\mathbf{X}' = \mathbf{A}(t) \mathbf{X} + \mathbf{F}(t)\] subject to \[\mathbf{X}(t_0) = \mathbf{X}_0\] is an \textbf{initial value problem} in matrix form.
+
+  \item The \textbf{superposition principle} states that if $\mathbf{X}_1, \mathbf{X}_2, \ldots, \mathbf{X}_n$ are solution vectors of a homogeneous linear system on an interval $I$, then \[\mathbf{X} = c_1 \mathbf{X}_1 + c_2 \mathbf{X}_2 + \ldots + c_n \mathbf{X}_n\] where $c_n$ are arbitrary constants is also a solution.
+
+  \item If $\mathbf{X}_1, \mathbf{X}_2, \ldots, \mathbf{X}_n$ are a set of solution vectors of a homogeneous linear system on an interval $I$, the set is said to be \textbf{linearly dependent} if there exist constants $c_1, c_2, \ldots, c_n$ not all zero such that \[c_1 \mathbf{X}_1 + c_2 \mathbf{X}_2 + \ldots + x_n \mathbf{X}_n = \mathbf{0}\] for every $t$ in the interval. Otherwise the set is said to be \textbf{linearly independent}.
+
+  \item A set of solution vectors \[\mathbf{X}_1 = \begin{pmatrix}
+            x_{11} \\
+            x_{21} \\
+            \vdots \\
+            x_{n1}
+          \end{pmatrix}, \quad \mathbf{X}_2 = \begin{pmatrix}
+            x_{12} \\
+            x_{22} \\
+            \vdots \\
+            x_{n2}
+          \end{pmatrix}, \quad \ldots, \quad \mathbf{X}_n = \begin{pmatrix}
+            x_{1n} \\
+            x_{2n} \\
+            \vdots \\
+            x_{nn}
+          \end{pmatrix}\] is linearly independent on an interval $I$ if the \textbf{Wronskian} \[W(\mathbf{X}_1, \mathbf{X}_2, \ldots, \mathbf{X}_n) = \begin{vmatrix}
+            x_{11} & x_{12} & \ldots & x_{1n} \\
+            x_{21} & x_{22} & \ldots & x_{2n} \\
+            \vdots &        &        & \vdots \\
+            x_{n1} & x_{n2} & \ldots & x_{nn}
+          \end{vmatrix} \ne 0\] for every $t$ in the interval.
+
+  \item Any set of $n$ linearly independent solution vectors of a homogeneous linear system on an interval $I$ is said to be a \textbf{fundamental set of solutions} on that interval.
+
+  \item If $\mathbf{X}_1, \mathbf{X}_2, \ldots, \mathbf{X}_n$ are a fundamental set of solutions of a homogeneous linear system on an interval $I$, then the \textbf{general solution} of the system on that interval is \[\mathbf{X} = c_1 \mathbf{X}_1 + c_2 \mathbf{X}_2 + \ldots + c_n \mathbf{X}_n\] where $c_i$ are arbitrary constants.
+
+  \item For nonhomogenous systems, a \textbf{particular solution} $\mathbf{X}_p$ on an interval $I$ is any vector, free from arbitrary parameters, whose entries are functions that satify the system.
+
+  \item For nonhomogeneous systems, the \textbf{general solution} of the system on the interval is \[\mathbf{X} = \mathbf{X}_c + \mathbf{X}_p\] where $\mathbf{X}_c$ is the general solution of the associated homogeneous system (the \textbf{complementary function}) and $\mathbf{X}_p$ is a particular solution of the nonhomogeneous system.
+\end{itemize}
+
 \end{document}

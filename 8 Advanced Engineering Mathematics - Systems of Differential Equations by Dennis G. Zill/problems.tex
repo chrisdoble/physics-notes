@@ -19,4 +19,130 @@
 
 \tableofcontents
 
+\setcounter{section}{9}
+\section{Systems of Linear Differential Equations}
+
+\subsection{Theory of Linear Systems}
+
+\subsubsection{}
+
+\[\mathbf{X}' = \begin{pmatrix}
+    3 & -5 \\
+    4 & 8
+  \end{pmatrix} \mathbf{X}\]
+
+\setcounter{subsubsection}{2}
+\subsubsection{}
+
+\[\mathbf{X}' = \begin{pmatrix}
+    -3 & 4  & -9 \\
+    6  & -1 & 0  \\
+    10 & 4  & 3
+  \end{pmatrix} \mathbf{X}\]
+
+\setcounter{subsubsection}{4}
+\subsubsection{}
+
+\[\mathbf{X}' = \begin{pmatrix}
+    1 & -1 & 1  \\
+    2 & 1  & -1 \\
+    1 & 1  & 1
+  \end{pmatrix} \mathbf{X} + \begin{pmatrix}
+    t - 1  \\
+    -3 t^2 \\
+    t^2 - t + 2
+  \end{pmatrix}\]
+
+\setcounter{subsubsection}{6}
+\subsubsection{}
+
+\begin{align*}
+  \frac{d x}{d t} & = 4 x + 2 y + e^t \\
+  \frac{d y}{d t} & = -x + 3 y - e^t
+\end{align*}
+
+\setcounter{subsubsection}{8}
+\subsubsection{}
+
+\begin{align*}
+  \frac{d x}{d t} & = x - y + 2 z + e^{-t} - 3 t      \\
+  \frac{d y}{d t} & = 3 x - 4 y + z + 2 e^{-t} + t    \\
+  \frac{d z}{d t} & = -2 x + 5 y + 6 z + 2 e^{-t} - t
+\end{align*}
+
+\setcounter{subsubsection}{10}
+\subsubsection{}
+
+\begin{align*}
+  3 (e^{-5 t}) - 4 (2 e^{-5 t}) & = -5 e^{-5 t}     \\
+                                & = \frac{d x}{d t} \\
+  4 (e^{-5 t}) - 7 (2 e^{-5 t}) & = -10 e^{-5 t}    \\
+                                & = \frac{d y}{d t}
+\end{align*}
+
+\setcounter{subsubsection}{12}
+\subsubsection{}
+
+\begin{align*}
+  -(-e^{-3 t / 2}) + \frac{1}{4} (2 e^{-3 t / 2}) & = \frac{3}{2} e^{-3 t / 2} \\
+                                                  & = \frac{d x}{d t}          \\
+  (-e^{-3 t / 2}) - (2 e^{-3 t / 2})              & = -3 e^{-3 t / 2}          \\
+                                                  & = \frac{d y}{d t}
+\end{align*}
+
+\setcounter{subsubsection}{16}
+\subsubsection{}
+
+\begin{align*}
+  W(\mathbf{X}_1, \mathbf{X}_2) & = \begin{vmatrix}
+                                      e^{-2 t} & e^{-6 t}  \\
+                                      e^{-2 t} & -e^{-6 t}
+                                    \end{vmatrix}                     \\
+                                & = -e^{-8 t} - e^{-8 t}                     \\
+                                & = -2 e^{-8 t}                              \\
+                                & \ne 0 \text{ for } t \in (-\infty, \infty)
+\end{align*}
+
+Yes, they form a fundamental set.
+
+\setcounter{subsubsection}{18}
+\subsubsection{}
+
+\begin{align*}
+  W(\mathbf{X}_1, \mathbf{X}_2, \mathbf{X}_3) & = \begin{vmatrix}
+                                                    1 + t    & 1  & 3 + 2 t  \\
+                                                    -2 + 2 t & -2 & -6 + 4 t \\
+                                                    4 + 2 t  & 4  & 12 + 4 t
+                                                  \end{vmatrix} \\
+                                              & = 0
+\end{align*}
+
+No, they don't form a fundamental set.
+
+\setcounter{subsubsection}{20}
+\subsubsection{}
+
+\begin{align*}
+  x               & = 2 t + 5                             \\
+  y               & = -t + 1                              \\
+  \frac{d x}{d t} & = (2 t + 5) + 4 (-t + 1) + 2 t - 7    \\
+                  & = 2                                   \\
+  \frac{d y}{d t} & = 3 (2 t + 5) + 2 (-t + 1) - 4 t - 18 \\
+                  & = -1
+\end{align*}
+
+\setcounter{subsubsection}{22}
+\subsubsection{}
+
+\begin{align*}
+  x               & = e^t + t e^t                               \\
+  x'              & = 2 e^t + t e^t                             \\
+  y               & = e^t - t e^t                               \\
+  y'              & = - t e^t                                   \\
+  \frac{d x}{d t} & = 2 (e^t + t e^t) + (e^t - t e^t) - e^t     \\
+                  & = 2 e^t + t e^t                             \\
+  \frac{d y}{d t} & = 3 (e^t + t e^t) + 4 (e^t - t e^t) - 7 e^t \\
+                  & = -t e^t
+\end{align*}
+
 \end{document}
