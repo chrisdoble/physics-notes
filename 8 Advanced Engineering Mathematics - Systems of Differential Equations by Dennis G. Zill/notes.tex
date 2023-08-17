@@ -156,4 +156,25 @@
         \end{align*} where $\mathbf{B}_1 = \Re (\mathbf{K}_1)$ and $\mathbf{B}_2 = \Im(\mathbf{K}_1)$.
 \end{itemize}
 
+\subsection{Solution by Diagonalization}
+
+\begin{itemize}
+  \item A homogeneous linear system $\mathbf{X}' = \mathbf{A} \mathbf{X}$ in which each $x_i'$ is expressed as a linear combination of $x_1, x_2, \ldots, x_n$ is said to be \textbf{coupled}. If each $x_i'$ is expressed solely in terms of $x_i$ the system is said to be \textbf{uncoupled}.
+
+  \item Given a linear system $\mathbf{X' = A X}$, if the coefficient matrix $\mathbf{A}$ is diagonalisable such that $\mathbf{P^{-1} A P = D}$ then the system can be solved by:
+
+        \begin{enumerate}
+          \item Substituting $\mathbf{X = P Y}$ which gives $\mathbf{P Y' = A P Y}$ or \\ $\mathbf{Y' = P^{-1} A P Y = D Y}$
+
+          \item Because $\mathbf{D}$ is a diagonal matrix with $\mathbf{A}$'s eigenvalues along the diagonal, this means the solutions to $\mathbf{Y' = D Y}$ are \[\mathbf{Y} = \begin{pmatrix}
+                    c_1 e^{\lambda_1 t} \\
+                    c_2 e^{\lambda_2 t} \\
+                    \vdots              \\
+                    c_n e^{\lambda_n t}
+                  \end{pmatrix}\]
+
+          \item These solutions can then be substituted into $\mathbf{X = P Y}$ to solve for $\mathbf{X}$
+        \end{enumerate}
+\end{itemize}
+
 \end{document}
