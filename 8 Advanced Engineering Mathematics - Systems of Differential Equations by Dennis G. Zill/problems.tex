@@ -145,4 +145,441 @@ No, they don't form a fundamental set.
                   & = -t e^t
 \end{align*}
 
+\subsection{Homogeneous Linear Systems}
+
+\subsubsection{}
+
+\[\mathbf{X} = c_1 \begin{pmatrix}
+    1 \\
+    2
+  \end{pmatrix} e^{5 t} + c_2 \begin{pmatrix}
+    -1 \\
+    1
+  \end{pmatrix} e^{-t}\]
+
+\setcounter{subsubsection}{2}
+\subsubsection{}
+
+\[\mathbf{X} = c_1 \begin{pmatrix}
+    2 \\
+    1
+  \end{pmatrix} e^{-3 t} + c_2 \begin{pmatrix}
+    \frac{2}{5} \\
+    1
+  \end{pmatrix} e^{t}\]
+
+\setcounter{subsubsection}{4}
+\subsubsection{}
+
+\[\mathbf{X} = c_1 \begin{pmatrix}
+    1 \\
+    4
+  \end{pmatrix} e^{-10 t} + c_2 \begin{pmatrix}
+    5 \\
+    2
+  \end{pmatrix} e^{8 t}\]
+
+\setcounter{subsubsection}{6}
+\subsubsection{}
+
+\[\mathbf{X} = c_1 \begin{pmatrix}
+    2 \\
+    3 \\
+    1
+  \end{pmatrix} e^{2 t} + c_2 \begin{pmatrix}
+    1 \\
+    0 \\
+    2
+  \end{pmatrix} e^{-t} + c_3 \begin{pmatrix}
+    1 \\
+    0 \\
+    0
+  \end{pmatrix} e^t\]
+
+\setcounter{subsubsection}{12}
+\subsubsection{}
+
+\[\mathbf{X} = 2 \begin{pmatrix}
+    0 \\
+    1
+  \end{pmatrix} e^{-t / 2} + 3 \begin{pmatrix}
+    1 \\
+    1
+  \end{pmatrix} e^{t / 2}\]
+
+\setcounter{subsubsection}{14}
+\subsubsection{}
+
+\begin{enumerate}
+  \item
+
+        \begin{align*}
+          \frac{d x_1}{d t}    & = -\frac{3}{100} x_1 + \frac{1}{100} x_2 \\
+          \frac{d x_2}{d t}    & = \frac{2}{100} x_1 - \frac{2}{100} x_2  \\
+          \begin{pmatrix}
+            \frac{d x_1}{d t} \\
+            \frac{d x_2}{d t}
+          \end{pmatrix} & = \begin{pmatrix}
+                              -\frac{3}{100} & \frac{1}{100}  \\
+                              \frac{2}{100}  & -\frac{2}{100}
+                            \end{pmatrix} \begin{pmatrix}
+                                            x_1 \\
+                                            x_2
+                                          \end{pmatrix}
+        \end{align*}
+
+  \item
+
+        \[\begin{pmatrix}
+            x_1 \\
+            x_2
+          \end{pmatrix} = -\frac{35}{3} \begin{pmatrix}
+            -1 \\
+            1
+          \end{pmatrix} e^{-t / 25} + \frac{50}{3} \begin{pmatrix}
+            \frac{1}{2} \\
+            1
+          \end{pmatrix} e^{-t / 100}\]
+\end{enumerate}
+
+\setcounter{subsubsection}{20}
+\subsubsection{}
+
+\[\mathbf{X} = c_1 \begin{pmatrix}
+    1 \\
+    3
+  \end{pmatrix} + c_2 \left[ \begin{pmatrix}
+      1 \\
+      3
+    \end{pmatrix} t +
+    \begin{pmatrix}
+      0 \\
+      -1
+    \end{pmatrix} \right]\]
+
+\setcounter{subsubsection}{22}
+\subsubsection{}
+
+\[\mathbf{X} = c_1 \begin{pmatrix}
+    1 \\
+    1
+  \end{pmatrix} e^{2 t} + c_2 \left[ \begin{pmatrix}
+      1 \\
+      1
+    \end{pmatrix} t + \begin{pmatrix}
+      0 \\
+      \frac{1}{3}
+    \end{pmatrix} \right] e^{2 t}\]
+
+\setcounter{subsubsection}{24}
+\subsubsection{}
+
+\[\mathbf{X} = c_1 \begin{pmatrix}
+    1 \\
+    0 \\
+    1
+  \end{pmatrix} e^{2 t} + c_2 \begin{pmatrix}
+    1 \\
+    1 \\
+    0
+  \end{pmatrix} e^{2 t} + c_3 \begin{pmatrix}
+    1 \\
+    1 \\
+    1
+  \end{pmatrix} e^t\]
+
+\setcounter{subsubsection}{30}
+\subsubsection{}
+
+\[\mathbf{X} = -\frac{1}{2} \begin{pmatrix}
+    2 \\
+    1
+  \end{pmatrix} e^{4 t} + 13 \left[ \begin{pmatrix}
+      2 \\
+      1
+    \end{pmatrix} t + \begin{pmatrix}
+      0 \\
+      \frac{1}{2}
+    \end{pmatrix} \right] e^{4 t}\]
+
+\setcounter{subsubsection}{32}
+\subsubsection{}
+
+\begin{align*}
+  \mathbf{K}_1 & = \begin{pmatrix}
+                     1 \\
+                     0 \\
+                     0 \\
+                     0 \\
+                     0
+                   \end{pmatrix} \\
+  \mathbf{K}_1 & = \begin{pmatrix}
+                     0 \\
+                     0 \\
+                     0 \\
+                     1 \\
+                     0
+                   \end{pmatrix} \\
+  \mathbf{K}_3 & = \begin{pmatrix}
+                     0 \\
+                     0 \\
+                     1 \\
+                     0 \\
+                     0
+                   \end{pmatrix} \\
+\end{align*}
+
+\setcounter{subsubsection}{34}
+\subsubsection{}
+
+\begin{align*}
+  \mathbf{X} & = c_1 \begin{pmatrix}
+                       1 \\
+                       2 - i
+                     \end{pmatrix} e^{(4 + i) t} + c_2 \begin{pmatrix}
+                                                         1 \\
+                                                         2 + i
+                                                       \end{pmatrix} e^{(4 - i) t}                                                                               \\
+             & = c_1 \left[ \begin{pmatrix}
+                                1 \\
+                                2
+                              \end{pmatrix} \cos t - \begin{pmatrix}
+                                                       0 \\
+                                                       -1
+                                                     \end{pmatrix} \sin t \right] e^{4 t} + c_2 \left[ \begin{pmatrix}
+                                                                                                         0 \\
+                                                                                                         -1
+                                                                                                       \end{pmatrix} \cos t + \begin{pmatrix}
+                                                                                                                                1 \\
+                                                                                                                                2
+                                                                                                                              \end{pmatrix} \sin t \right] e^{4 t} \\
+             & = c_1 \begin{pmatrix}
+                       \cos t \\
+                       2 \cos t + \sin t
+                     \end{pmatrix} e^{4 t} + c_2 \begin{pmatrix}
+                                                   \sin t \\
+                                                   2 \sin t - \cos t
+                                                 \end{pmatrix} e^{4 t}
+\end{align*}
+
+\setcounter{subsubsection}{36}
+\subsubsection{}
+
+\begin{align*}
+  \mathbf{X} & = c_1 \begin{pmatrix}
+                       1 \\
+                       -1 + i
+                     \end{pmatrix} e^{(4 + i) t} + c_2 \begin{pmatrix}
+                                                         1 \\
+                                                         -1 - i
+                                                       \end{pmatrix} e^{(4 - i) t}                                                                               \\
+             & = c_1 \left[ \begin{pmatrix}
+                                1 \\
+                                -1
+                              \end{pmatrix} \cos t - \begin{pmatrix}
+                                                       0 \\
+                                                       1
+                                                     \end{pmatrix} \sin t \right] e^{4 t} + c_2 \left[ \begin{pmatrix}
+                                                                                                         0 \\
+                                                                                                         1
+                                                                                                       \end{pmatrix} \cos t + \begin{pmatrix}
+                                                                                                                                1 \\
+                                                                                                                                -1
+                                                                                                                              \end{pmatrix} \sin t \right] e^{4 t} \\
+             & = c_1 \begin{pmatrix}
+                       \cos t \\
+                       -\cos t - \sin t
+                     \end{pmatrix} e^{4 t} + c_2 \begin{pmatrix}
+                                                   \sin t \\
+                                                   \cos t - \sin t
+                                                 \end{pmatrix} e^{4 t}
+\end{align*}
+
+\setcounter{subsubsection}{38}
+\subsubsection{}
+
+\begin{align*}
+  \mathbf{X} & = c_1 \begin{pmatrix}
+                       5 \\
+                       4 - 3 i
+                     \end{pmatrix} e^{3 i} + c_2 \begin{pmatrix}
+                                                   5 \\
+                                                   4 + 3 i
+                                                 \end{pmatrix} e^{-3 i}                                                                                  \\
+             & = c_1 \left[ \begin{pmatrix}
+                                5 \\
+                                4
+                              \end{pmatrix} \cos 3 t - \begin{pmatrix}
+                                                         0 \\
+                                                         -3
+                                                       \end{pmatrix} \sin 3 t \right] + c_2 \left[ \begin{pmatrix}
+                                                                                                     0 \\
+                                                                                                     -3
+                                                                                                   \end{pmatrix} \cos 3 t + \begin{pmatrix}
+                                                                                                                              5 \\
+                                                                                                                              4
+                                                                                                                            \end{pmatrix} \sin 3 t \right] \\
+             & = c_1 \begin{pmatrix}
+                       5 \cos 3 t \\
+                       4 \cos 3 t + 3 \sin 3 t
+                     \end{pmatrix} + c_2 \begin{pmatrix}
+                                           5 \sin 3 t \\
+                                           4 \sin 3 t - 3 \cos 3 t
+                                         \end{pmatrix}
+\end{align*}
+
+\setcounter{subsubsection}{46}
+\subsubsection{}
+
+\begin{align*}
+  \mathbf{X} & = c_1 \begin{pmatrix}
+                       25 \\
+                       -7 \\
+                       6
+                     \end{pmatrix} e^t + c_2 \begin{pmatrix}
+                                               1 + 5 i \\
+                                               1       \\
+                                               1
+                                             \end{pmatrix} e^{5 i t} + c_3 \begin{pmatrix}
+                                                                             1 - 5 i \\
+                                                                             1       \\
+                                                                             1
+                                                                           \end{pmatrix} e^{-5 i t}         \\
+             & = c_1 \begin{pmatrix}
+                       25 \\
+                       -7 \\
+                       6
+                     \end{pmatrix} e^t + c_2 \left[ \begin{pmatrix}
+                                                        1 \\
+                                                        1 \\
+                                                        1
+                                                      \end{pmatrix} \cos 5 t - \begin{pmatrix}
+                                                                                 5 \\
+                                                                                 0 \\
+                                                                                 0
+                                                                               \end{pmatrix} \sin 5 t \right] \\
+             & \qquad + c_3 \left[ \begin{pmatrix}
+                                       5 \\
+                                       0 \\
+                                       0
+                                     \end{pmatrix} \cos 5 t + \begin{pmatrix}
+                                                                1 \\
+                                                                1 \\
+                                                                1
+                                                              \end{pmatrix} \sin 5 t \right]                  \\
+             & = c_1 \begin{pmatrix}
+                       25 \\
+                       -7 \\
+                       6
+                     \end{pmatrix} e^t + c_2 \begin{pmatrix}
+                                               \cos 5 t - 5 \sin 5 t \\
+                                               \cos 5 t              \\
+                                               \cos 5 t
+                                             \end{pmatrix} + c_3 \begin{pmatrix}
+                                                                   5 \cos 5 t + \sin 5 t \\
+                                                                   \sin 5 t              \\
+                                                                   \sin 5 t
+                                                                 \end{pmatrix}                      \\
+             & = -\begin{pmatrix}
+                    25 \\
+                    -7 \\
+                    6
+                  \end{pmatrix} e^t - \begin{pmatrix}
+                                        \cos 5 t - 5 \sin 5 t \\
+                                        \cos 5 t              \\
+                                        \cos 5 t
+                                      \end{pmatrix} + 6 \begin{pmatrix}
+                                                          5 \cos 5 t + \sin 5 t \\
+                                                          \sin 5 t              \\
+                                                          \sin 5 t
+                                                        \end{pmatrix}                               \\
+\end{align*}
+
+\setcounter{subsubsection}{48}
+\subsubsection{}
+
+\begin{enumerate}
+  \item \[\begin{pmatrix}
+            x_1' \\
+            x_2' \\
+            x_3'
+          \end{pmatrix} = \begin{pmatrix}
+            -\frac{1}{20} & 0             & \frac{1}{10}  \\
+            \frac{1}{20}  & -\frac{1}{20} & 0             \\
+            0             & \frac{1}{20}  & -\frac{1}{10}
+          \end{pmatrix} \begin{pmatrix}
+            x_1 \\
+            x_2 \\
+            x_3
+          \end{pmatrix}\]
+
+  \item
+
+        \begin{align*}
+          \mathbf{X} & = c_1 \begin{pmatrix}
+                               2 \\
+                               2 \\
+                               1
+                             \end{pmatrix} + c_2 \begin{pmatrix}
+                                                   -1 - i \\
+                                                   i      \\
+                                                   1
+                                                 \end{pmatrix} e^{\left( -\frac{1}{10} + \frac{1}{20} i \right) t} + c_3 \begin{pmatrix}
+                                                                                                                           -1 + i \\
+                                                                                                                           -i     \\
+                                                                                                                           1
+                                                                                                                         \end{pmatrix} e^{\left( -\frac{1}{10} - \frac{1}{20} i \right) t} \\
+                     & = c_1 \begin{pmatrix}
+                               2 \\
+                               2 \\
+                               1
+                             \end{pmatrix} + c_2 \left[ \begin{pmatrix}
+                                                            -1 \\
+                                                            0  \\
+                                                            1
+                                                          \end{pmatrix} \cos \frac{1}{20} t - \begin{pmatrix}
+                                                                                                -1 \\
+                                                                                                1  \\
+                                                                                                0
+                                                                                              \end{pmatrix} \sin \frac{1}{20} t \right] e^{-t / 10}                                          \\
+                     & \qquad + c_3 \left[ \begin{pmatrix}
+                                               -1 \\
+                                               1  \\
+                                               0
+                                             \end{pmatrix} \cos \frac{1}{20} t + \begin{pmatrix}
+                                                                                   -1 \\
+                                                                                   0  \\
+                                                                                   1
+                                                                                 \end{pmatrix} \sin \frac{1}{20} t \right] e^{-t / 10}                                                       \\
+                     & = c_1 \begin{pmatrix}
+                               2 \\
+                               2 \\
+                               1
+                             \end{pmatrix} + c_2 \begin{pmatrix}
+                                                   \sin \frac{t}{20} - \cos \frac{t}{20} \\
+                                                   -\sin \frac{t}{20}                    \\
+                                                   \cos \frac{t}{20}
+                                                 \end{pmatrix} e^{-t / 10}                                                                                                     \\
+                     & \qquad + c_3 \begin{pmatrix}
+                                      -\cos \frac{t}{20} - \sin \frac{t}{20} \\
+                                      \cos \frac{t}{20}                      \\
+                                      \sin \frac{t}{20}
+                                    \end{pmatrix} e^{-t / 10}                                                                                                                 \\
+                     & = 11 \begin{pmatrix}
+                              2 \\
+                              2 \\
+                              1
+                            \end{pmatrix} - 6 \begin{pmatrix}
+                                                \sin \frac{t}{20} - \cos \frac{t}{20} \\
+                                                -\sin \frac{t}{20}                    \\
+                                                \cos \frac{t}{20}
+                                              \end{pmatrix} e^{-t / 10}                                                                                                        \\
+                     & \qquad - 2 \begin{pmatrix}
+                                    -\cos \frac{t}{20} - \sin \frac{t}{20} \\
+                                    \cos \frac{t}{20}                      \\
+                                    \sin \frac{t}{20}
+                                  \end{pmatrix} e^{-t / 10}
+        \end{align*}
+\end{enumerate}
+
 \end{document}

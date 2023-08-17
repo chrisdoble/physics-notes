@@ -6,6 +6,9 @@
 \usepackage{siunitx} % For units
 \graphicspath{{./images/}}
 
+\renewcommand{\Im}{\operatorname{Im}}
+\renewcommand{\Re}{\operatorname{Re}}
+
 \title{Advanced Engineering Mathematics Systems of Differential Equations by Dennis G. Zill Notes}
 \author{Chris Doble}
 \date{August 2023}
@@ -103,6 +106,54 @@
   \item For nonhomogenous systems, a \textbf{particular solution} $\mathbf{X}_p$ on an interval $I$ is any vector, free from arbitrary parameters, whose entries are functions that satify the system.
 
   \item For nonhomogeneous systems, the \textbf{general solution} of the system on the interval is \[\mathbf{X} = \mathbf{X}_c + \mathbf{X}_p\] where $\mathbf{X}_c$ is the general solution of the associated homogeneous system (the \textbf{complementary function}) and $\mathbf{X}_p$ is a particular solution of the nonhomogeneous system.
+\end{itemize}
+
+\subsection{Homogeneous Linear Systems}
+
+\subsubsection{Distinct Real Eigenvalues}
+
+\begin{itemize}
+  \item If $\mathbf{X}' = \mathbf{A} \mathbf{X}$ is a homogeneous linear system, $\lambda_1, \lambda_2, \ldots, \lambda_n$ are $n$ real, distinct eigenvalues of $\mathbf{A}$, and $\mathbf{K}_1, \mathbf{K}_2, \ldots, \mathbf{K}_n$ are the corresponding eigenvectors of $\mathbf{A}$, then \[\mathbf{X} = c_1 \mathbf{K}_1 e^{\lambda_1 t} + c_2 \mathbf{K}_2 e^{\lambda_2 t} + \ldots + c_n \mathbf{K}_n e^{\lambda_n t}\] is the general solution of the system.
+
+  \item If a system of linear equations consists of variables $x$ and $y$, then the $x-y$ plane is called the \textbf{phase plane}.
+
+  \item Solution vectors of a linear system can be considered parametric equations and plotted on the phase plane. These are called trajectories.
+
+  \item When multiple trajectories are plotted in the phase plane, it's called a \textbf{phase portrait}.
+\end{itemize}
+
+\subsubsection{Repeated Eigenvalues}
+
+\begin{itemize}
+  \item If the coefficient matrix $\mathbf{A}$ of a linear system has an eigenvalue $\lambda$ of multiplicity $m$, it may be possible to find $m$ linearly independent eigenvectors $\mathbf{K}_1, \mathbf{K}_2, \ldots, \mathbf{K}_m$ associated with the eigenvalue in which case the $m$ solution vectors associated with the eigenvalue are \begin{align*}
+          \mathbf{X}_1 & = \mathbf{K}_1 e^{\lambda t}  \\
+          \mathbf{X}_2 & = \mathbf{K}_2 e^{\lambda t}  \\
+          \vdots                                       \\
+          \mathbf{X}_m & = \mathbf{K}_m e^{\lambda t}.
+        \end{align*}
+
+  \item If the coefficient matrix $\mathbf{A}$ of a linear system has an eigenvalue $\lambda$ of multiplicity $m$ and it's not possible to find $m$ linearly independent eigenvectors associated with the eigenvalue, then the $m$ solution vectors associated with the eigenvalue are \begin{align*}
+          \mathbf{X}_1 & = \mathbf{K}_1 e^{\lambda t}                                                                                                                          \\
+          \mathbf{X}_2 & = \mathbf{K}_1 t e^{\lambda t} + \mathbf{K_2} e^{\lambda t}                                                                                           \\
+          \vdots                                                                                                                                                               \\
+          \mathbf{X}_m & = \mathbf{K}_1 \frac{t^{m - 1}}{(m - 1)!} e^{\lambda t} + \mathbf{K}_2 \frac{t^{m - 2}}{(m - 2)!} e^{\lambda t} + \ldots + \mathbf{K}_m e^{\lambda t}
+        \end{align*} where $\mathbf{K}_i$ are the solutions to the equations \begin{align*}
+          (\mathbf{A} - \lambda \mathbf{I}) \mathbf{K}_1 & = \mathbf{0}          \\
+          (\mathbf{A} - \lambda \mathbf{I}) \mathbf{K}_2 & = \mathbf{K}_1        \\
+          \vdots                                                                 \\
+          (\mathbf{A} - \lambda \mathbf{I}) \mathbf{K}_m & = \mathbf{K}_{m - 1}. \\
+        \end{align*}
+\end{itemize}
+
+\subsubsection{Complex Eigenvalues}
+
+\begin{itemize}
+  \item If $\mathbf{A}$ is the coefficient matrix of a homogeneous linear system and it has a complex eigenvalue $\lambda = \alpha + i \beta$ and associated eigenvector $\mathbf{K}_1$, then \[\mathbf{X}_1 = \mathbf{K}_1 e^{\lambda t} \text{ and } \mathbf{X}_2 = \overline{\mathbf{K}}_1 e^{\overline{\lambda} t}\] are solutions of the system.
+
+  \item The solutions above can be made real by writing them as \begin{align*}
+          \mathbf{X}_1 & = [\mathbf{B}_1 \cos \beta t - \mathbf{B}_2 \sin \beta t] e^{\alpha t} \\
+          \mathbf{X}_2 & = [\mathbf{B}_2 \cos \beta t + \mathbf{B}_1 \sin \beta t] e^{\alpha t}
+        \end{align*} where $\mathbf{B}_1 = \Re (\mathbf{K}_1)$ and $\mathbf{B}_2 = \Im(\mathbf{K}_1)$.
 \end{itemize}
 
 \end{document}
