@@ -177,4 +177,77 @@
         \end{enumerate}
 \end{itemize}
 
+\subsection{Nonhomogeneous Linear Systems}
+
+\subsubsection{Undetermined Coefficients}
+
+\begin{itemize}
+  \item The \textbf{method of undetermined coefficients} can be applied to a linear system $\mathbf{X' = A X + F(t)}$ when the entries of $\mathbf{A}$ are constants and the entries of $\mathbf{F}(t)$ are constants, polynomials, exponential functions, sines and cosines, or finite sums and products of these functions.
+
+  \item To apply the method of undetermined coefficients:
+
+        \begin{enumerate}
+          \item Solve the associated homogeneous linear system to find the complementary function $\mathbf{X}_c$.
+
+          \item Assume the particular solution $\mathbf{X}_p$ has the same form as $\mathbf{F}(t)$.
+
+          \item Substitute the trial solution into the system and solve for the unknowns.
+
+          \item The general solution is $\mathbf{X} = \mathbf{X_c + X_p}$.
+        \end{enumerate}
+
+  \item If $\mathbf{F}(t)$ contains a term that's present in the complementary function, that term needs to be adjusted (similar to how you multiply by $x^n$ in the method of undetermined coefficients for ODEs). The textbook doesn't cover the rules for this.
+\end{itemize}
+
+\subsubsection{Variation of Parameters}
+
+\begin{itemize}
+  \item If $\mathbf{X}_1, \mathbf{X}_2, \ldots, \mathbf{X}_n$ is a fundamental set of solutions of the homogeneous linear system $\mathbf{X' = A X}$ on an interval $I$, then the general solution is \[\mathbf{X} = c_1 \mathbf{X}_1 + c_2 \mathbf{X}_2 + \ldots + c_n \mathbf{X}_n\] which can also be written \[\mathbf{X} = \mathbf{\Phi}(t) \mathbf{C} = \begin{pmatrix}
+            \mathbf{X}_1 & \mathbf{X}_2 & \ldots & \mathbf{X}_n
+          \end{pmatrix} \mathbf{C}\] where $\mathbf{\Phi}(t)$ is called a \textbf{fundamental matrix} and $\mathbf{C}$ is a column vector containing the arbitrary constants $c_1, c_2, \ldots, c_n$.
+
+  \item A fundamental matrix:
+
+        \begin{itemize}
+          \item always has an inverse, and
+
+          \item has the property that $\mathbf{\Phi}'(t) = \mathbf{A} \mathbf{\Phi}(t).$
+        \end{itemize}
+
+  \item The \textbf{method of variation of parameters} finds a particular solution to a nonhomogeneous linear system by replacing column vector of unknown constants $\mathbf{C}$ with a column vector of functions \[\mathbf{U}(t) = \begin{pmatrix}
+            u_1(t) \\
+            u_2(t) \\
+            \vdots \\
+            u_n(t)
+          \end{pmatrix}\] such that $\mathbf{X}_p = \mathbf{\Phi}(t) \mathbf{U}(t)$ is a particular solution to the system.
+
+  \item $\mathbf{U}(t)$ can be calculated as \[\mathbf{U}(t) = \int \mathbf{\Phi}^{-1}(t) \mathbf{F}(t) \,dt\] so \[\mathbf{X}_p = \mathbf{\Phi}(t) \int \mathbf{\Phi}^{-1}(t) \mathbf{F}(t) \,dt\] and \[\mathbf{X} = \mathbf{X}_c + \mathbf{X}_p = \mathbf{\Phi}(t) \mathbf{C} + \mathbf{\Phi}(t) \int \mathbf{\Phi}^{-1}(t) \mathbf{F}(t) \,dt.\]
+
+  \item When solving initial value problems via the method of variation of parameters where you're given $\mathbf{X}(t_0) = \mathbf{X}_0$, the column vector of arbitrary constants $\mathbf{C}$ can be calculated as \[\mathbf{C} = \mathbf{\Phi}^{-1}(t_0) \mathbf{X}_0.\]
+\end{itemize}
+
+\subsubsection{Diagonalization}
+
+\begin{itemize}
+  \item If the coefficient matrix $\mathbf{A}$ in a nonhomogeneous linear system \\ $\mathbf{X' = A X + F}(t)$ is diagonalizable, the system can be solved by:
+
+        \begin{enumerate}
+          \item Substituting $\mathbf{X = P Y}$ which gives $\mathbf{P Y' = A P Y + F}(t)$ or \\ $\mathbf{Y' = P^{-1} A P Y + P^{-1} F}(t)$ or $\mathbf{Y' = D Y + G}$
+
+          \item Because $\mathbf{D}$ is a diagonal matrix with $\mathbf{A}$'s eigenvalues along the diagonal and $\mathbf{G = P^{-1} F}(t)$ this means $\mathbf{Y' = D Y + G(t)}$ is a set of $n$ uncoupled equations of the form \[\begin{pmatrix}
+                    y_1'   \\
+                    y_2'   \\
+                    \vdots \\
+                    v_n'
+                  \end{pmatrix} = \begin{pmatrix}
+                    \lambda_1 y_1 + g_1(t) \\
+                    \lambda_2 y_2 + g_2(t) \\
+                    \vdots                 \\
+                    \lambda_n y_n + g_n(t)
+                  \end{pmatrix}\]
+
+          \item These equations can be solved and substituted into $\mathbf{X = P Y}$ to solve for $\mathbf{X}$.
+        \end{enumerate}
+\end{itemize}
+
 \end{document}
