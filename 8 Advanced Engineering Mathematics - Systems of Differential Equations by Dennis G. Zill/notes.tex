@@ -250,4 +250,30 @@
         \end{enumerate}
 \end{itemize}
 
+\subsection{Matrix Exponential}
+
+\begin{itemize}
+  \item The linear first-order differential equation $x' = a x$ has a general solution $x = c e^{a t}$. Similarly, the system $\mathbf{X' = A X}$ has a general solution $\mathbf{X} = e^{\mathbf{A} t} \mathbf{C}$ where $e^{\mathbf{A} t}$ is an $n \times n$ matrix given by the \textbf{matrix exponential} and $\mathbf{C}$ is a $n \times 1$ matrix of arbitrary constants.
+
+  \item The matrix exponential is defined as \[e^{\mathbf{A} t} = \sum_{k = 0}^\infty \mathbf{A}^k \frac{t^k}{k!}.\]
+
+  \item The exponential of a diagonal matrix \[\mathbf{A} = \begin{pmatrix}
+            a_{11} & 0      & \ldots & 0      \\
+            0      & a_{22} & \ldots & 0      \\
+            \vdots &        &        & \vdots \\
+            0      & 0      & \ldots & a_{nn}
+          \end{pmatrix}\] is \[e^{\mathbf{A} t} = \begin{pmatrix}
+            e^{a_{11} t} & 0            & \ldots & 0            \\
+            0            & e^{a_{22} t} & \ldots & 0            \\
+            \vdots       &              &        & \vdots       \\
+            0            & 0            & \ldots & e^{a_{nn} t}
+          \end{pmatrix}.\]
+
+  \item The nonhomogeneous system $\mathbf{X' = A X + F}$ has a general solution \[\mathbf{X} = \mathbf{X_c} + \mathbf{X}_p = e^{\mathbf{A} t} \mathbf{C} + e^{\mathbf{A} t} \int e^{-\mathbf{A} t} \mathbf{F} \,dt\] where \[e^{-\mathbf{A} t} = (e^{\mathbf{A} t})^{-1}\] is the inverse of $e^{\mathbf{A} t}$.
+
+  \item A matrix exponential can be calculated with the inverse Laplace transform \[e^{\mathbf{A} t} = \mathcal{L}^{-1} \{ (s \mathbf{I} - \mathbf{A})^{-1} \}.\]
+
+  \item A matrix exponential or that of one of its eigenvalues can be calculated as \[e^{\mathbf{A} t} = \sum_{j = 0}^{n - 1} \mathbf{A}^j b_j(t) \text{ or } e^{\lambda t} = \sum_{j = 0}^{n - 1} \lambda^j b_j(t)\] where $b_j(t)$ are the same for both expressions. This means that for an $n x n$ matrix with $n$ distinct eigenvalues the expressions for $e^{\lambda_1 t}, e^{\lambda_2 t}, \ldots, e^{\lambda_n t}$ give $n$ equations with $n$ unknowns ($b_j(t)$). Solving for the $b_j(t)$ and substituting them into the expression for $e^{\mathbf{A} t}$ allows us to calculate the matrix exponential.
+\end{itemize}
+
 \end{document}
