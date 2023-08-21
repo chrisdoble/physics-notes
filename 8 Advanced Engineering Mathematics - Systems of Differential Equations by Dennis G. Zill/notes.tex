@@ -317,4 +317,38 @@
         \end{align*} sometimes substituting a system's expressions for $\frac{d x}{d t}$ and $\frac{d y}{d t}$ into these equations allow them to be solved.
 \end{itemize}
 
+\subsection{Stability of Linear Systems}
+
+\begin{itemize}
+  \item Considering a plane system as the velocity field of a particle, if a particle is placed at $\mathbf{X}_0$ near a critical point $\mathbf{X}_1$ and the particle eventually moves to $\mathbf{X}_1$ or remains near it (e.g. circles), then $\mathbf{X}_1$ is said to be \textbf{locally stable}. If it's not possible to find a neighborhood in which the particle remains near $\mathbf{X}_1$ then it is said to be \textbf{unstable}.
+
+  \item If $\mathbf{A}$ is an $n \times n$ matrix, the \textbf{trace} of $\mathbf{A}$ is the sum of the main diagonal entries.
+
+  \item If $\mathbf{A}$ is the $2 \times 2$ coefficient matrix of a homogeneous linear system then its characteristic equation can be written as \[\det (\mathbf{A} - \lambda \mathbf{I}) = \lambda^2 - \tau \lambda - \Delta = 0\] where $\tau$ is its trace and $\Delta$ is its determinant. Using the quadractic equation we find that \[\lambda = \frac{\tau \pm \sqrt{\tau^2 - 4 \Delta}}{2}\] and thus the nature of $\mathbf{A}$'s eigenvalues are determined by the expression \[\tau^2 - 4 \Delta.\]
+
+  \item The phase portrait of a system of two linear differential equations is determined by the eigenvalues and eigenvectors. There are three cases:
+
+        \begin{enumerate}
+          \item The eigenvalues are real and distinct ($\tau^2 - 4 \Delta > 0$) so the general solution has the form $\mathbf{X} = c_1 \mathbf{K}_1 e^{\lambda_1 t} + c_2 \mathbf{K}_2 e^{\lambda_2 t}$.
+
+                \begin{itemize}
+                  \item If both eigenvalues are negative $\lim_{t \rightarrow \infty} \mathbf{X} = \mathbf{0}$ and $\mathbf{X}$ will approach $\mathbf{0}$ from one of two directions determined by $\mathbf{K}_1$ and $\mathbf{K}_2$. In this case a critical point is called a \textbf{stable node}.
+
+                  \item If both eigenvalues are positive $\mathbf{X}$ becomes unbounded as $t$ increases, moving in one of two directions determined by $\mathbf{K}_1$ and $\mathbf{K}_2$. In this case a critical point is called a \textbf{unstable node}.
+
+                  \item If the eigenvalues have opposite signs $\mathbf{X}$ approaches $\mathbf{0}$ from the direction of the eigenvector associated with the negative eigenvalue, then becomes unbounded in the direction of the other eigenvector. In this case a critical point is called a \textbf{saddle point}.
+                \end{itemize}
+
+          \item There is a single real and repeated eigenvalue ($\tau^2 - 4 \Delta = 0$). If $\lambda < 0$ then $\mathbf{X}$ approaches $\mathbf{0}$ from a direction determined by the eigenvector(s) and the critical point is called a \textbf{degenerate stable node}. If $\lambda > 0$ then $\mathbf{X}$ moves away from $\mathbf{0}$ in the same direction and the critical point is called a \textbf{degenerate unstable node}.
+
+          \item The eigenvalues are complex ($\tau^2 - 4 \Delta < 0$).
+
+                \begin{itemize}
+                  \item If the eigenvalues are pure imaginary $\mathbf{X}$ moves in an ellipse with centre at the origin. The ellipses are all traversed in the same direction. In this case a critical point is called a \textbf{centre}.
+
+                  \item When there is a nonzero real part the $e^{\alpha t}$ changes the radius over time. If $\alpha < 0$ the ellipse spirals towards $\mathbf{0}$ and is called a \textbf{stable spiral point}. If $\alpha > 0$ the ellipse spirals away from $\mathbf{0}$ and is called an \textbf{unstable spiral point}.
+                \end{itemize}
+        \end{enumerate}
+\end{itemize}
+
 \end{document}
