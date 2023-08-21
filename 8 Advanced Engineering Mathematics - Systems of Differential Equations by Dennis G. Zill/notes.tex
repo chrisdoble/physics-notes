@@ -276,4 +276,45 @@
   \item A matrix exponential or that of one of its eigenvalues can be calculated as \[e^{\mathbf{A} t} = \sum_{j = 0}^{n - 1} \mathbf{A}^j b_j(t) \text{ or } e^{\lambda t} = \sum_{j = 0}^{n - 1} \lambda^j b_j(t)\] where $b_j(t)$ are the same for both expressions. This means that for an $n x n$ matrix with $n$ distinct eigenvalues the expressions for $e^{\lambda_1 t}, e^{\lambda_2 t}, \ldots, e^{\lambda_n t}$ give $n$ equations with $n$ unknowns ($b_j(t)$). Solving for the $b_j(t)$ and substituting them into the expression for $e^{\mathbf{A} t}$ allows us to calculate the matrix exponential.
 \end{itemize}
 
+\section{Systems of Nonlinear Differential Equations}
+
+\subsection{Autonomous Systems}
+
+\begin{itemize}
+  \item A system of first-order differential equations is called \textbf{autonomous} when the system can be written in the form \begin{align*}
+          \frac{d x_1}{d t} & = g_1(x_1, x_2, \ldots, x_n)  \\
+          \frac{d x_2}{d t} & = g_2(x_1, x_2, \ldots, x_n)  \\
+          \vdots                                            \\
+          \frac{d x_n}{d t} & = g_n(x_1, x_2, \ldots, x_n),
+        \end{align*} i.e. the independent variable $t$ doesn't appear on the right-hand side of each equation.
+
+  \item Any autonomous second-order differential equation $x'' = g(x, x')$ can be written as the autonomous system \begin{align*}
+          x' & = y        \\
+          y' & = g(x, y).
+        \end{align*}
+
+  \item A system with $n = 2$ is called a \textbf{plane autonomous system} and its equations \begin{align*}
+          \frac{d x}{d t} & = P(x, y) \\
+          \frac{d y}{d t} & = Q(x, y)
+        \end{align*} define a vector field in a region of the plane that represents a particle's velocity at a given point $(x, y)$.
+
+  \item If $P(x, y)$, $Q(x, y)$, and the first-order partial derivatives $\partial P / \partial x$, $\partial P / \partial y$, $\partial Q / \partial x$, and $\partial Q / \partial y$ are continuous in the region $R$ of the plane, then a solution to the plane autonomous system may be one of three types:
+
+        \begin{enumerate}
+          \item A \textbf{constant solution} $x(t) = x_0, y(t) = y_0$ (or $\mathbf{X} = \mathbf{X}_0$ for all $t$). Also known as a \textbf{critical/stationary point} or an \textbf{equilibrium solution}.
+
+          \item A solution $x = x(t), y = y(t)$ defines an \textbf{arc} — a plane curve that does not cross itself. Crossing itself would imply that the system has two solutions at a single point.
+
+          \item A periodic solution $x = x(t), y = y(t)$. A periodic solution is called a \textbf{cycle}. If $p$ is the period of the solution, then $\mathbf{X}(t + p) = \mathbf{X}(t)$.
+        \end{enumerate}
+
+  \item Sometimes it's not possible to find explicit expressions for the solutions of nonlinear systems in one coordinate system, but it is in another. If we take the expressions for polar coordinates \begin{align*}
+          r^2    & = x^2 + y^2           \\
+          \theta & = \arctan \frac{y}{x}
+        \end{align*} and differentiate them with respect to $t$ \begin{align*}
+          \frac{d r}{d t}      & = \frac{1}{r} \left( x \frac{d x}{d t} + y \frac{d y}{d t} \right)    \\
+          \frac{d \theta}{d t} & = \frac{1}{r^2} \left( -y \frac{d x}{d t} + x \frac{d y}{d t} \right)
+        \end{align*} sometimes substituting a system's expressions for $\frac{d x}{d t}$ and $\frac{d y}{d t}$ into these equations allow them to be solved.
+\end{itemize}
+
 \end{document}
