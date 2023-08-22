@@ -351,4 +351,67 @@
         \end{enumerate}
 \end{itemize}
 
+\subsection{Linearization and Local Stability}
+
+\includegraphics[scale=0.47]{stable-critical-points}
+
+\begin{itemize}
+  \item A critical point is called a \textbf{stable critical point} if for an arbitrary radius $\rho > 0$ it's always possible to find a radius $r > 0$ such that the solution is never more than $\rho$ units away from the critical point at all times.
+
+  \item An \textbf{asymptotically stable critical point} is a critical point where the solution approaches the critical point as $t \rightarrow \infty$.
+\end{itemize}
+
+\noindent
+\includegraphics[scale=0.47]{unstable-critical-points}
+
+\begin{itemize}
+  \item An \textbf{unstable critical point} is a critical point that is not stable. In other words, for an arbitrary radius $\rho > 0$ it's always possible to find a solution whose initial position is less than $\rho$ units away from the critical point but eventually moves more than $\rho$ units away.
+\end{itemize}
+
+\noindent
+\includegraphics[scale=0.47]{stability-criteria-for-odes}
+
+\begin{itemize}
+  \item One way of thinking about theorem 11.3.1 is this:
+
+        \begin{itemize}
+          \item Consider the differential equation as representing the $x$-velocity of a particle. Because it's an autonomous equation, the particle's $x$-velocity is determined entirely by its $x$-coordinate. If $g(x) > 0$ the particle moves to the right. If $g(x) < 0$ it moves to the left.
+
+          \item If $x_1$ is a critical point of the equation, then $g(x_1) = 0$.
+
+          \item If $g'(x_1) < 0$ then $g(x) > 0$ just to the left of $x = x_1$ and $g(x) < 0$ just to the right.
+
+          \item This means if the particle is displaced a small amount to the left of $x = x_1$ it will experience a restoring force to the right and vice versa if it's displaced to the right. This means $x = x_1$ is a stable critical point.
+
+          \item Similarly, if $g'(x_1) > 0$ then $g(x) < 0$ just to the left of $x = x_1$ and $g(x) > 0$ just to the right. This is an unstable critical point.
+        \end{itemize}
+
+  \item An equation of the tangent plane to the surface $z = g(x, y)$ at $\mathbf{X}_1 = (x_1, y_1)$ is \[z = g(x_1, y_1) + \left. \frac{\partial g}{\partial x} \right|_{(x_1, y_1)} (x - x_1) + \left. \frac{\partial g}{\partial y} \right|_{(x_1, y_1)} (y - y_1).\]
+
+  \item When $\mathbf{X}_1$ is a critical point of a plane autonomous system \begin{align*}
+          x' & = P(x, y) \\
+          y' & = Q(x, y)
+        \end{align*} the system can be approximated in the neighborhood of the critical point with the tangent plane approximation, given by the linear system $\mathbf{X}' = \mathbf{A} (\mathbf{X} - \mathbf{X}_1)$ where \[\mathbf{A} = \begin{pmatrix}
+            \left. \frac{\partial P}{\partial x} \right|_{(x_1, y_1)} & \left. \frac{\partial P}{\partial y} \right|_{(x_1, y_1)} \\
+            \left. \frac{\partial Q}{\partial x} \right|_{(x_1, y_1)} & \left. \frac{\partial Q}{\partial y} \right|_{(x_1, y_1)}
+          \end{pmatrix}\] is called the \textbf{Jacobian matrix}, denoted $\mathbf{g}'(\mathbf{X}_1)$.
+
+  \item If we let $\mathbf{H} = \mathbf{X} - \mathbf{X}_1$ then $\mathbf{X}' = \mathbf{A} (\mathbf{X} - \mathbf{X}_1)$ becomes $\mathbf{H}' = \mathbf{A} \mathbf{H}$ and the critical points of the system can be analysed via the eigenvalues and eigenvectors of $\mathbf{A}$ as normal.
+\end{itemize}
+
+\noindent
+\includegraphics[scale=0.47]{stability-criteria-for-plane-systems}
+
+\begin{itemize}
+  \item Unlike with linear systems, it's not always possible to determine the geometric nature (stable node, stable spiral, etc.) of a critical point of a nonlinear autonomous system.
+
+        \begin{itemize}
+          \item If $\tau^2 = 4 \Delta$ (i.e. there is a single real and repeated eigenvalue) and $\tau > 0$ the critical point is unstable but we can't determine if it's an degenerate unstable node, unstable node, or unstable spiral. Similarly, if $\tau < 0$ the critical point is stable but we can't determine if it's a degenerate stable node, a stable node, or a stable spiral.
+
+          \item If $\tau = 0$ and $\Delta > 0$ then the eigenvalues of the coefficient matrix are pure imaginary and the critical point may be a centre, a stable spiral, or an unstable spiral. It's not possible to classify it further.
+        \end{itemize}
+
+  \item The \textbf{phase-plane method} attempts to find $y$ as a function of $x$ by taking advantage of the fact that \[\frac{d y}{d x} = \frac{d y / d t}{d x / d t}.\] If you divide the expression for $d y / d t$ by that of $d x / d t$ it may be possible to solve the resulting ODE. The solution can then be graphed and the nature of critical points determined.
+\end{itemize}
+
 \end{document}

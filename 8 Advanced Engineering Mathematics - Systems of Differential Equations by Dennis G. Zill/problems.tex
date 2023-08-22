@@ -1946,4 +1946,314 @@ Saddle point when $\mu < -1$, unstable spiral when $-1 < \mu < 3$, unstable node
   \item Unstable spiral
 \end{enumerate}
 
+\subsection{Linearization and Local Stability}
+
+\subsubsection{}
+
+The Jacobian is \[\begin{pmatrix}
+    \alpha    & -\beta + 2 y \\
+    \beta - y & \alpha - x
+  \end{pmatrix}.\]
+
+At $(0, 0)$ this is \[\begin{pmatrix}
+    \alpha & -\beta \\
+    \beta  & \alpha
+  \end{pmatrix}.\]
+
+The eigenvalues of this matrix are $\alpha \pm i \beta$ so if $\alpha > 0$ then $(0, 0)$ is an unstable critical point and if $\alpha < 0$ it is a stable critical point.
+
+\setcounter{subsubsection}{2}
+\subsubsection{}
+
+\begin{align*}
+  g(x)      & = k x (n + 1 - x)       \\
+  g'(x)     & = k (n + 1 - x) - k x   \\
+            & = k (n + 1 - 2 x)       \\
+  g'(0)     & = k (n + 1)             \\
+  g'(n + 1) & = k (n + 1 - 2 (n + 1)) \\
+            & = -k (n + 1)
+\end{align*}
+
+$x = 0$ is unstable, $x = n + 1$ is stable.
+
+\setcounter{subsubsection}{4}
+\subsubsection{}
+
+\begin{align*}
+  g(T)    & = k (T - T_0) \\
+  g'(T)   & = k           \\
+  g'(T_0) & = k
+\end{align*}
+
+$T = T_0$ is unstable.
+
+\setcounter{subsubsection}{6}
+\subsubsection{}
+
+\begin{align*}
+  g(x)       & = k (\alpha - x) (\beta - x), \alpha > \beta \\
+  g'(x)      & = -k (\beta - x) - k (\alpha - x)            \\
+  g'(\alpha) & = -k (\beta - \alpha) - k (\alpha - \alpha)  \\
+             & = k (\alpha - \beta)                         \\
+  g'(\beta)  & = -k (\beta - \beta) - k (\alpha - \beta)    \\
+             & = -k (\alpha - \beta)
+\end{align*}
+
+$x = \alpha$ is unstable, $x = \beta$ is stable.
+
+\setcounter{subsubsection}{8}
+\subsubsection{}
+
+\begin{align*}
+  g(P)                         & = P (a - b P) (1 - c P^{-1}), P > 0, a < b c                                                                                                                          \\
+  g'(P)                        & = (a - b P) (1 - c P^{-1}) - b P (1 - c P^{-1}) + c P^{-1} (a - b P)                                                                                                  \\
+  g'\left( \frac{a}{b} \right) & = \left( a - b \frac{a}{b} \right) \left( 1 - c \frac{b}{a} \right) - b \frac{a}{b} \left( 1 - c \frac{b}{a} \right) + c \frac{b}{a} \left( a - b \frac{a}{b} \right) \\
+                               & = -a \left( 1 - \frac{b c}{a} \right)                                                                                                                                 \\
+  g'(c)                        & = (a - b c) \left( 1 - c \frac{1}{c} \right) - b c \left( 1 - c \frac{1}{c} \right) + c \frac{1}{c} (a - b c)                                                         \\
+                               & = a - b c
+\end{align*}
+
+$P = \frac{a}{b}$ is unstable, $P = c$ is stable.
+
+\setcounter{subsubsection}{10}
+\subsubsection{}
+
+\begin{align*}
+  x'                                                        & = 1 - 2 x y      \\
+  y'                                                        & = 2 x y - y      \\ \\
+  0                                                         & = 1 - 2 x y      \\
+  2 x y                                                     & = 1              \\ \\
+  0                                                         & = 1 - y          \\
+  y                                                         & = 1              \\
+  x                                                         & = \frac{1}{2}    \\ \\
+  \mathbf{A}                                                & = \begin{pmatrix}
+                                                                  -2 y & -2 x    \\
+                                                                  2 y  & 2 x - 1
+                                                                \end{pmatrix} \\
+  \left. \mathbf{A} \right|_{\left( \frac{1}{2}, 1 \right)} & = \begin{pmatrix}
+                                                                  -2 & -1 \\
+                                                                  2  & 0
+                                                                \end{pmatrix}
+\end{align*}
+
+$\left( \frac{1}{2}, 1 \right)$ is a stable spiral.
+
+\setcounter{subsubsection}{12}
+\subsubsection{}
+
+\begin{align*}
+  x' & = y - x^2 + 2                             \\
+  y' & = 2 x y - y                               \\ \\
+  0  & = y - x^2 + 2                             \\
+  y  & = x^2 - 2                                 \\ \\
+  0  & = 2 x (x^2 - 2) - (x^2 - 2)               \\
+     & = 2 x^3 - x^2 - 4 x + 2                   \\
+     & = (x^2 - 2) (2 x - 1)                     \\
+     & = (x + \sqrt{2}) (x - \sqrt{2}) (2 x - 1) \\
+  x  & = \frac{1}{2} \text{ or } \pm \sqrt{2}    \\
+  y  & = -\frac{7}{4} \text{ or } 0
+\end{align*}
+
+Critical points are $\left( \frac{1}{2}, -\frac{7}{4} \right)$ and $(\pm \sqrt{2}, 0)$.
+
+\begin{align*}
+  \mathbf{A}                                                           & = \begin{pmatrix}
+                                                                             -2 x & 1       \\
+                                                                             2 y  & 2 x - 1
+                                                                           \end{pmatrix}               \\
+  \left. \mathbf{A} \right|_{\left( \frac{1}{2}, -\frac{7}{4} \right)} & = \begin{pmatrix}
+                                                                             -1           & 1 \\
+                                                                             -\frac{7}{2} & 0
+                                                                           \end{pmatrix}             \\
+  \left. \mathbf{A} \right|_{(-\sqrt{2}, 0)}                           & = \begin{pmatrix}
+                                                                             2 \sqrt{2} & 1               \\
+                                                                             0          & -2 \sqrt{2} - 1
+                                                                           \end{pmatrix} \\
+  \left. \mathbf{A} \right|_{(\sqrt{2}, 0)}                            & = \begin{pmatrix}
+                                                                             -2 \sqrt{2} & 1              \\
+                                                                             0           & 2 \sqrt{2} - 1
+                                                                           \end{pmatrix}
+\end{align*}
+
+$\left( \frac{1}{2}, -\frac{7}{4} \right)$ is a stable spiral, $(\pm \sqrt{2}, 0)$ are saddle points.
+
+\setcounter{subsubsection}{14}
+\subsubsection{}
+
+\begin{align*}
+  x'  & = -3 x + y^2 + 2          \\
+  y'  & = x^2 - y^2               \\ \\
+  0   & = -3 x + y^2 + 2          \\
+  y^2 & = 3 x - 2                 \\ \\
+  0   & = x^2 - 3 x + 2           \\
+      & = (x - 2) (x - 1)         \\
+  x   & = 1 \text{ or } 2         \\ \\
+  y   & = \pm 1 \text{ or } \pm 2
+\end{align*}
+
+Critical points are $(1, \pm 1)$ and $(2, \pm 2)$.
+
+\begin{align*}
+  \mathbf{A}                          & = \begin{pmatrix}
+                                            -3  & 2 y  \\
+                                            2 x & -2 y
+                                          \end{pmatrix} \\
+  \left. \mathbf{A} \right|_{(1, -1)} & = \begin{pmatrix}
+                                            -3 & -2 \\
+                                            2  & 2
+                                          \end{pmatrix} \\
+  \left. \mathbf{A} \right|_{(1, 1)}  & = \begin{pmatrix}
+                                            -3 & 2  \\
+                                            2  & -2
+                                          \end{pmatrix} \\
+  \left. \mathbf{A} \right|_{(2, -2)} & = \begin{pmatrix}
+                                            -3 & -4 \\
+                                            4  & 4
+                                          \end{pmatrix} \\
+  \left. \mathbf{A} \right|_{(2, 2)}  & = \begin{pmatrix}
+                                            -3 & 4  \\
+                                            4  & -4
+                                          \end{pmatrix} \\
+\end{align*}
+
+$(1, -1)$ is a saddle point, $(1, 1)$ is a stable node, $(2, -2)$ is an unstable spiral, $(2,2)$ is a saddle point.
+
+\setcounter{subsubsection}{22}
+\subsubsection{}
+
+It's not possible to classify $x = 0$.
+
+\setcounter{subsubsection}{24}
+\subsubsection{}
+
+It's not possible to classify $x = 0$ but $x = \pm \sqrt{\frac{1}{\epsilon}}$ are saddle points.
+
+\setcounter{subsubsection}{28}
+\subsubsection{}
+
+\begin{enumerate}
+  \item The critical point at $(0, 0)$ is a stable spiral.
+\end{enumerate}
+
+\setcounter{subsubsection}{32}
+\subsubsection{}
+
+\begin{enumerate}
+  \item
+
+        \begin{align*}
+          x' & = 2 x y              \\
+          y' & = 1 - x^2 + y^2      \\ \\
+          0  & = 1 - x^2 + y^2      \\
+          x  & = \sqrt{y^2 + 1}     \\ \\
+          0  & = 2 \sqrt{y^2 + 1} y \\
+             & = 4 (y^2 + 1) y^2    \\
+             & = 4 y^4 + 4 y^2      \\
+          y  & = 0                  \\ \\
+          x  & = \pm 1
+        \end{align*}
+
+        Critical points are $(\pm 1, 0)$.
+
+        \begin{align*}
+          \mathbf{A}                          & = \begin{pmatrix}
+                                                    2 y  & 2 x \\
+                                                    -2 x & 2 y
+                                                  \end{pmatrix} \\
+          \left. \mathbf{A} \right|_{(-1, 0)} & = \begin{pmatrix}
+                                                    0 & -2 \\
+                                                    2 & 0
+                                                  \end{pmatrix} \\
+          \left. \mathbf{A} \right|_{(1, 0)}  & = \begin{pmatrix}
+                                                    0  & 2 \\
+                                                    -2 & 0
+                                                  \end{pmatrix}
+        \end{align*}
+
+        The trace of both the matrices is $0$ and the determinant is $4$, so we know the eigenvalues are pure imaginary but don't know the nature of the critical points.
+
+  \item
+
+        \begin{align*}
+          \frac{d y}{d x} & = \frac{d y / d t}{d x / d t}      \\
+                          & = \frac{1 - x^2 + y^2}{2 x y}      \\
+          y               & = \pm \sqrt{-x^2 + c_1 x - 1}      \\
+          y^2             & = -x^2 + c_1 x - 1                 \\
+                          & = -x^2 + 2 c_2 x - 1               \\
+                          & = -(x^2 - 2 c_2 x + c^2) + c^2 - 1 \\
+                          & = -(x - c)^2 + c^2 - 1             \\
+          (x - c)^2 + y^2 & = c^2 - 1
+        \end{align*}
+\end{enumerate}
+
+\setcounter{subsubsection}{36}
+\subsubsection{}
+
+\begin{align*}
+  L q'' + R q' + \alpha q + \beta q^3 & = 0                                         \\
+  q'                                  & = r                                         \\
+  r'                                  & = -\frac{1}{L} (R r + \alpha q + \beta q^3)
+\end{align*}
+
+When $\beta > 0$ the only critical point is $(q, r) = (0, 0)$. When $\beta < 0$ the critical points are $(0, 0)$ and $\left( \pm \sqrt{-\frac{\alpha}{\beta}}, 0 \right)$.
+
+\begin{align*}
+  \mathbf{A}                                                                     & = \begin{pmatrix}
+                                                                                       0                                   & 1            \\
+                                                                                       -\frac{1}{L} (\alpha + 3 \beta q^2) & -\frac{R}{L}
+                                                                                     \end{pmatrix} \\
+  \left. \mathbf{A} \right|_{(0, 0)}                                             & = \begin{pmatrix}
+                                                                                       0                 & 1            \\
+                                                                                       -\frac{\alpha}{L} & -\frac{R}{L}
+                                                                                     \end{pmatrix}                   \\
+  \left. \mathbf{A} \right|_{\left( \pm \sqrt{-\frac{\alpha}{\beta}}, 0 \right)} & = \begin{pmatrix}
+                                                                                       0                  & 1            \\
+                                                                                       \frac{2 \alpha}{L} & -\frac{R}{L}
+                                                                                     \end{pmatrix}
+\end{align*}
+
+The eigenvalues of $\left. \mathbf{A} \right|_{(0, 0)}$ are \[\frac{-R \pm \sqrt{R^2 - 4 L \alpha}}{2 L}\] both of which are negative, so $(0, 0)$ is stable.
+
+The eigenvalues of $\left. \mathbf{A} \right|_{\left( \pm \sqrt{-\frac{\alpha}{\beta}}, 0 \right)}$ are \[\frac{-R \pm \sqrt{R^2 + 8 L \alpha}}{2 L}\] of which one is negative and the other positive meaning $\left(\pm \sqrt{-\frac{\alpha}{\beta}}, 0 \right)$ are saddle points.
+
+\setcounter{subsubsection}{38}
+\subsubsection{}
+
+\begin{enumerate}
+  \item
+
+        \begin{align*}
+          \theta'' + \sin \theta & = \frac{1}{2}                        \\ \\
+          \theta'                & = r                                  \\
+          r'                     & = \frac{1}{2} - \sin \theta          \\ \\
+          \theta'(\pi / 6, 0)    & = 0                                  \\
+          r'(\pi / 6, 0)         & = \frac{1}{2} - \sin \frac{\pi}{6}   \\
+                                 & = 0                                  \\
+          \theta'(5 \pi / 6, 0)  & = 0                                  \\
+          r'(5 \pi / 6, 0)       & = \frac{1}{2} - \sin \frac{5 \pi}{6} \\
+                                 & = 0                                  \\
+        \end{align*}
+
+  \item
+
+        \begin{align*}
+          \mathbf{A}                                                    & = \begin{pmatrix}
+                                                                              0            & 1 \\
+                                                                              -\cos \theta & 0
+                                                                            \end{pmatrix}                      \\
+          \left. \mathbf{A} \right|_{\left( \frac{\pi}{6}, 0 \right)}   & = \begin{pmatrix}
+                                                                              0                   & 1 \\
+                                                                              -\frac{\sqrt{3}}{2} & 0
+                                                                            \end{pmatrix} \\
+          \left. \mathbf{A} \right|_{\left( \frac{5 \pi}{6}, 0 \right)} & = \begin{pmatrix}
+                                                                              0                  & 1 \\
+                                                                              \frac{\sqrt{3}}{2} & 0
+                                                                            \end{pmatrix}
+        \end{align*}
+
+        The eigenvalues of $\left. \mathbf{A} \right|_{\left( \frac{\pi}{6}, 0 \right)}$ are $\pm \frac{3^{1 / 4}}{\sqrt{2}} i$ so $\left( \frac{\pi}{6}, 0 \right)$ is a center, a stable spiral, or an unstable spiral.
+
+        The eigenvalues of $\left. \mathbf{A} \right|_{\left( \frac{5 \pi}{6} \right)}$ are $\pm \frac{3^{1 / 4}}{\sqrt{2}}$ so $\left( \frac{5 \pi}{6}, 0 \right)$ is a saddle point.
+\end{enumerate}
+
 \end{document}
