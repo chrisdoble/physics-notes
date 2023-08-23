@@ -2256,4 +2256,127 @@ The eigenvalues of $\left. \mathbf{A} \right|_{\left( \pm \sqrt{-\frac{\alpha}{\
         The eigenvalues of $\left. \mathbf{A} \right|_{\left( \frac{5 \pi}{6} \right)}$ are $\pm \frac{3^{1 / 4}}{\sqrt{2}}$ so $\left( \frac{5 \pi}{6}, 0 \right)$ is a saddle point.
 \end{enumerate}
 
+\subsection{Autonomous Systems as Mathematical Models}
+
+\subsubsection{}
+
+\begin{align*}
+  y^2        & = \frac{2 g}{l} \cos x + c                                                     \\
+  \omega_0^2 & = \frac{2 g}{l} \cos \frac{\pi}{3} + c                                         \\
+  c          & = \omega_0^2 - \frac{g}{l}                                                     \\ \\
+  y^2        & = \frac{2 g}{l} \left( \cos x + \frac{l}{2 g} \omega_0^2 - \frac{1}{2} \right) \\
+  0          & = \frac{2 g}{l} \left( \cos x + \frac{l}{2 g} \omega_0^2 - \frac{1}{2} \right) \\
+  \cos x     & = \frac{1}{2} - \frac{l}{2 g} \omega_0^2
+\end{align*}
+
+This equation has two solutions providing \begin{align*}
+  \frac{1}{2} - \frac{l}{2 g} \omega_0^2 & > -1                    \\
+  \frac{l}{2 g} \omega_0^2               & < \frac{3}{2}           \\
+  |\omega_0|                             & < \sqrt{\frac{3 g}{l}}.
+\end{align*}
+
+\setcounter{subsubsection}{4}
+\subsubsection{}
+
+\begin{enumerate}
+  \item
+
+        \begin{align*}
+          x(0)            & = x_0                                                    \\
+          x'(0)           & = v_0                                                    \\
+          z               & = \frac{1}{2} x^2                                        \\ \\
+          \frac{d y}{d x} & = \frac{d y / d t}{d x / d t}                            \\
+                          & = \frac{-g \frac{x}{1 + x^2}}{y}                         \\
+          \int y \,dy     & = \int -g \frac{x}{1 + x^2} \,dx                         \\
+          \frac{1}{2} y^2 & = c - \frac{g}{2} \ln (1 + x^2)                          \\
+          y^2             & = c - g \ln (1 + x^2)                                    \\ \\
+          v_0^2           & = c - g \ln (1 + x_0^2)                                  \\
+          c               & = v_0^2 + g \ln (1 + x_0^2)                              \\ \\
+          y^2             & = v_0^2 + g \ln (1 + x_0^2) - g \ln (1 + x^2)            \\
+                          & = v_0^2 + g \ln \left( \frac{1 + x_0^2}{1 + x^2} \right)
+        \end{align*}
+
+  \item $z$ is maximised when $x$ is maximised. That occurs when $y = x' = 0$, so \begin{align*}
+          0                         & = v_0^2 + g \ln \left( \frac{1 + x_0^2}{1 + x^2} \right) \\
+          \frac{1 + x_0^2}{1 + x^2} & = e^{-v_0^2 / g}                                         \\
+          \frac{1 + x^2}{1 + x_0^2} & = e^{v_0^2 / g}                                          \\
+          1 + x^2                   & = e^{v_0^2 / g} (1 + x_0^2)                              \\
+          x^2                       & = e^{v_0^2 / g} (1 + x_0^2) - 1
+        \end{align*} and thus \[z_\text{max} = \frac{1}{2} x^2 = \frac{1}{2} \left[ e^{v_0^2 / g} (1 + x_0^2) - 1 \right].\]
+\end{enumerate}
+
+\setcounter{subsubsection}{8}
+\subsubsection{}
+
+\begin{enumerate}
+  \item $(0, 0)$ remains a critical point. Assuming $x \ne 0$ and $y \ne 0$ the coordinates of the new critical point are: \begin{align*}
+          0 & = x (-a + b y - \epsilon_1) \\
+            & = -a + b y - \epsilon_1     \\
+          y & = \frac{a + \epsilon_1}{b}  \\ \\
+          0 & = y (-c x + d - \epsilon_2) \\
+            & = -c x + d - \epsilon_2     \\
+          x & = \frac{d - \epsilon_2}{c}.
+        \end{align*}
+
+        The Jacobian matrix is \begin{align*}
+          \mathbf{A}                                                                                    & = \begin{pmatrix}
+                                                                                                              -a + b y - \epsilon_1 & b x                   \\
+                                                                                                              -c y                  & -c x + d - \epsilon_2
+                                                                                                            \end{pmatrix}                \\
+          \left. \mathbf{A} \right|_{\left( \frac{d - \epsilon_2}{c}, \frac{a + \epsilon_1}{b} \right)} & = \begin{pmatrix}
+                                                                                                              0                             & \frac{b}{c} (d - \epsilon_2) \\
+                                                                                                              -\frac{c}{b} (a + \epsilon_1) & 0
+                                                                                                            \end{pmatrix}
+        \end{align*}
+
+        the trace of which is $\tau = 0$ and the determinant is $\Delta = (a + \epsilon_1) (d - \epsilon_2)$. If $\epsilon_2 < d$ then $\Delta > 0$ and the eigenvalues of the Jacobian are pure imaginary, meaning the critical point is a centre, a stable spiral, or an unstable spiral.
+
+  \item Yes, because increasing $\epsilon_1$ increases the $y$-coordinate of the critical point and increasing $\epsilon_2$ decreases its $x$-coordinate.
+\end{enumerate}
+
+\setcounter{subsubsection}{10}
+\subsubsection{}
+
+\begin{itemize}
+  \item $(0, 100)$ is a stable critical point.
+
+  \item $(20, 40)$ is a saddle point.
+
+  \item $(50, 0)$ is a stable critical point.
+
+  \item $(0, 0)$ is an unstable point.
+\end{itemize}
+
+\setcounter{subsubsection}{16}
+\subsubsection{}
+
+\begin{enumerate}
+  \item
+
+        \begin{align*}
+          x' & = y                                      \\
+          y' & = -\frac{\beta}{m} y |y| - \frac{k}{m} x \\ \\
+          0  & = y                                      \\
+          0  & = -\frac{k}{m} x                         \\
+          x  & = 0
+        \end{align*}
+
+        The only critical point is $(0, 0)$.
+
+  \item
+
+        \begin{align*}
+          \mathbf{A}                         & = \begin{pmatrix}
+                                                   0            & 1                      \\
+                                                   -\frac{k}{m} & -\frac{\beta}{m} 2 |y|
+                                                 \end{pmatrix} \\
+          \left. \mathbf{A} \right|_{(0, 0)} & = \begin{pmatrix}
+                                                   0            & 1 \\
+                                                   -\frac{k}{m} & 0
+                                                 \end{pmatrix}
+        \end{align*}
+
+        The trace of the Jacobian is $\tau = 0$ and its determinant is $\Delta = \frac{k}{m}$ so $(0, 0)$ is a centre, a stable spiral point or an unstable spiral point. Physical considerations show that the system must be a stable spiral point.
+\end{enumerate}
+
 \end{document}
