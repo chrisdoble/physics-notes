@@ -414,10 +414,37 @@
   \item The \textbf{phase-plane method} attempts to find $y$ as a function of $x$ by taking advantage of the fact that \[\frac{d y}{d x} = \frac{d y / d t}{d x / d t}.\] If you divide the expression for $d y / d t$ by that of $d x / d t$ it may be possible to solve the resulting ODE. The solution can then be graphed and the nature of critical points determined.
 \end{itemize}
 
-\subsection{Autonomous Systems as Mathematical Models}
+\setcounter{subsection}{4}
+\subsection{Periodic Solutions, Limit Cycles, and Global Stability}
 
 \begin{itemize}
-  \item
+  \item A critical point $\mathbf{X}_1$ is said to be \textbf{globally stable} in a region $R$ if \\ $\lim_{t \rightarrow \infty} \mathbf{X}(t) = \mathbf{X}_1$ for all initial position in $R$.
 \end{itemize}
+
+\noindent
+\includegraphics[scale=0.47]{cycles-and-critical-points}
+
+\noindent
+\includegraphics[scale=0.47]{bendixon-negative-criterion}
+
+\noindent
+\includegraphics[scale=0.47]{dulac-negative-criterion}
+
+\begin{itemize}
+\item A region $R$ is called an \textbf{invariant region} for a plane autonomous system if, whenever $\mathbf{X}_0$ is in $R$, the solution $\mathbf{X} = \mathbf{X}(t)$ satisfying $\mathbf{X}(0) = \mathbf{X}_0$ remains in $R$.
+
+\item A \textbf{Type I invariant region} is bounded by a simple closed curve and the flow at the boundary is always directed into the region.
+
+\item A \textbf{Type II invariant region} is an annular region bounded by two simple closed curves and the flow at the boundaries is directed toward the interior of the region.
+\end{itemize}
+
+\noindent
+\includegraphics[scale=0.47]{normal-vectors-and-invariant-regions}
+
+\noindent
+\includegraphics[scale=0.47]{poincare-bendixson-i}
+
+\noindent
+\includegraphics[scale=0.47]{poincare-bendixson-ii}
 
 \end{document}

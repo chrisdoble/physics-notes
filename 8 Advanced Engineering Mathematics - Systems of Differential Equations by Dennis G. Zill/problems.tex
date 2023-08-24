@@ -2379,4 +2379,97 @@ This equation has two solutions providing \begin{align*}
         The trace of the Jacobian is $\tau = 0$ and its determinant is $\Delta = \frac{k}{m}$ so $(0, 0)$ is a centre, a stable spiral point or an unstable spiral point. Physical considerations show that the system must be a stable spiral point.
 \end{enumerate}
 
+\subsection{Periodic Solutions, Limit Cycles, and Global Stability}
+
+\subsubsection{}
+
+\begin{align*}
+  0 & = x - y   \\
+  x & = y       \\ \\
+  0 & = 2 + x y \\
+    & = 2 x^2   \\ \\
+  0 & = 2 y^2
+\end{align*}
+
+$x$ and $y$ can't be complex numbers, so the system has no critical points.
+
+\setcounter{subsubsection}{2}
+\subsubsection{}
+
+\[\nabla \cdot \mathbf{V} = -1 - 1 = -2\]
+
+The $\nabla \cdot \mathbf{V}$ doesn't change sign so the system has no periodic solutions.
+
+\setcounter{subsubsection}{4}
+\subsubsection{}
+
+\[\nabla \cdot \mathbf{V} = -\mu + 3 y^2\]
+
+If $\mu < 0$ then $\nabla \cdot \mathbf{V}$ doesn't change sign so the system has no periodic solutions.
+
+\setcounter{subsubsection}{6}
+\subsubsection{}
+
+The only critical point is at $(0, 0)$ and the eigenvalues of the Jacobian at that point have opposite signs, so it's a saddle point. By the Corollary to Theorem 11.5.1 there is no periodic solution.
+
+\setcounter{subsubsection}{10}
+\subsubsection{}
+
+$\nabla \cdot \mathbf{V} = 4 (1 - x^2 - 3 y^2) > 0$ within the region defined by the ellipse $x^2 + 3 y^2 = 1$.
+
+\setcounter{subsubsection}{14}
+\subsubsection{}
+
+\begin{align*}
+  \mathbf{V} \cdot \mathbf{n} & = \begin{pmatrix}
+                                    -x + y + x y \\
+                                    x - y - x^2 - y^3
+                                  \end{pmatrix} \cdot \begin{pmatrix}
+                                                        -x \\
+                                                        -y
+                                                      \end{pmatrix}          \\
+                              & = -x (-x + y + x y) - y (x - y - x^2 - y^3)   \\
+                              & = x^2 - x y - x^2 y - x y + y^2 + x^2 y + y^4 \\
+                              & = x^2 - 2 x y + y^2 + y^4                     \\
+                              & = (x - y)^2 + y^4
+\end{align*}
+
+$(x - y)^2 + y^4$ is always positive, so any circle centred at the origin is an invariant region.
+
+\setcounter{subsubsection}{16}
+\subsubsection{}
+
+Yes, by Theorem 11.5.5 b.
+
+\setcounter{subsubsection}{18}
+\subsubsection{}
+
+\begin{align*}
+  \mathbf{V} \cdot \mathbf{n} & = -x (y) - y (-x - (1 - x^2) y) \\
+                              & = -x y + x y + y^2 (1 - x^2)    \\
+                              & = y^2 (1 - x^2)
+\end{align*}
+
+Thus $\mathbf{V} \cdot \mathbf{n} \ge 0$ if $x^2 \le 1$. If the region $R$ is defined by $x^2 + y^2 \le r^2$ where $r < 1$ then $x^2 < 1$ and $R$ is an invariant region.
+
+Because $\nabla \cdot \mathbf{V} = -(1 - x^2)$ doesn't change sign in $R$, there are no periodic solutions in $R$ (Theorem 11.5.2).
+
+The only critical point in $R$ is $(0, 0)$ and it is stable and thus by Theorem 11.5.6 b $\lim_{t \rightarrow \infty} \mathbf{X}(t) = (0, 0)$ for all initial points.
+
+\setcounter{subsubsection}{20}
+\subsubsection{}
+
+\begin{enumerate}
+  \item
+
+        \begin{align*}
+          \nabla \cdot \mathbf{V} & = 2 x y - 1 - x^2  \\
+                                  & = -x^2 + 2 x y - 1
+        \end{align*}
+
+        $\nabla \cdot \mathbf{V} < 0$ in $R$ so there are no periodic solutions in $R$.
+
+  \item $R$ contains a single stable node at $\left( \frac{3}{2}, \frac{2}{9} \right)$ so by Theorem 11.5.6 b \\ $\lim_{t \rightarrow \infty} \mathbf{X}(t) = \left( \frac{3}{2}, \frac{2}{9} \right)$.
+\end{enumerate}
+
 \end{document}
