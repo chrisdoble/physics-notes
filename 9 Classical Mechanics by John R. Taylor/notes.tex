@@ -6,6 +6,10 @@
 \usepackage{siunitx} % For units
 \graphicspath{{./images/}}
 
+\renewcommand{\vec}[1]{\boldsymbol{\mathbf{#1}}}
+\newcommand{\dvec}[1]{\dot{\vec{#1}}}
+\newcommand{\uvec}[1]{\hat{\vec{#1}}}
+
 \title{Classical Mechanics by John R. Taylor Notes}
 \author{Chris Doble}
 \date{August 2023}
@@ -15,5 +19,60 @@
 \maketitle
 
 \tableofcontents
+
+\section{Newton's Laws of Motion}
+
+\setcounter{subsection}{1}
+\subsection{Space and Time}
+
+\begin{itemize}
+  \item In cartesian coordinates the basis vectors don't depend on time so their derivatives are $\mathbf{0}$. This means that \begin{align*}
+          \frac{d}{d t} (x \uvec{x} + y \uvec{y} + z \uvec{z}) & = \frac{d x}{d t} \uvec{x} + x \frac{d \uvec{x}}{d t} + \frac{d y}{d t} \uvec{y} + y \frac{d \uvec{y}}{d t} + \frac{d z}{d t} \uvec{z} + z \frac{d \uvec{z}}{d t} \\
+                                                               & = \frac{d x}{d t} \uvec{x} + \frac{d y}{d t} \uvec{y} + \frac{d z}{d t} \uvec{z}
+        \end{align*} as expected. However, in order coordinate systems (e.g. polar, spherical) the basis vectors may depend on time and their derivatives aren't $\vec{0}$.
+\end{itemize}
+
+\setcounter{subsection}{3}
+\subsection{Newton's First and Second Laws; Inertial Frames}
+
+\begin{itemize}
+  \item Newton's second law $\vec{F} = m \vec{a}$ can be restated as $\vec{F} = \dvec{p}$.
+
+  \item An inertial frame is one where Newton's first law holds. Typically this means the frame isn't accelerating or rotating.
+\end{itemize}
+
+\subsection{The Third Law and Conservation of Momentum}
+
+\begin{itemize}
+  \item Forces that act along the line joining two objects are called \textbf{central forces}.
+
+  \item The \textbf{principle of conservation of momentum} states that if the net external force $\vec{F}_\text{ext}$ on an $N$-particle system is zero, the system's total momentum $\vec{P}$ is constant.
+\end{itemize}
+
+\setcounter{subsection}{6}
+\subsection{Two-Dimensional Polar Coordinates}
+
+\begin{itemize}
+  \item In two-dimensional polar coordinates, the unit vectors $\uvec{r}$ and $\uvec{\phi}$ depend on position and thus time. Their derivatives are \begin{align*}
+          \frac{d \uvec{r}}{d t}    & = \dot{\phi} \uvec{\phi} \\
+          \frac{d \uvec{\phi}}{d t} & = -\dot{\phi} \uvec{r}.
+        \end{align*}
+
+        Consequently, the derivatives of the position vector $\vec{r} = r \uvec{r}$ are \begin{align*}
+          \frac{d \vec{r}}{d t} & = \frac{d}{d t} (r \uvec{r})                  \\
+                                & = \dot{r} \uvec{r} + r \frac{d \uvec{r}}{d t} \\
+                                & = \dot{r} \uvec{r} + r \dot{\phi} \uvec{\phi}
+        \end{align*} and \begin{align*}
+          \frac{d^2 \vec{r}}{d t^2} & = \frac{d}{d t} (\dot{r} \uvec{r} + r \dot{\phi} \uvec{\phi})                                                                                              \\
+                                    & = \ddot{r} \uvec{r} + \dot{r} \frac{d \uvec{r}}{d t} + \dot{r} \dot{\phi} \uvec{\phi} + r \ddot{\phi} \uvec{\phi} + r \dot{\phi} \frac{d \uvec{\phi}}{d t} \\
+                                    & = \ddot{r} \uvec{r} + \dot{r} \dot{\phi} \uvec{\phi} + \dot{r} \dot{\phi} \uvec{\phi} + r \ddot{\phi} \uvec{\phi} - r \dot{\phi}^2 \uvec{r}                \\
+                                    & = (\ddot{r} - r \dot{\phi}^2) \uvec{r} + (r \ddot{\phi} + 2 \dot{r} \dot{\phi}) \uvec{\phi}.
+        \end{align*}
+
+  \item In light of the above, Newton's second law in polar coordinates can be written \begin{align*}
+          F_r    & = m (\ddot{r} - r \dot{\phi}^2)             \\
+          F_\phi & = m (r \ddot{\phi} + 2 \dot{r} \dot{\phi}).
+        \end{align*}
+\end{itemize}
 
 \end{document}

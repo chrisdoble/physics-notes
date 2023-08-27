@@ -6,6 +6,10 @@
 \usepackage{siunitx} % For units
 \graphicspath{{./images/}}
 
+\renewcommand{\vec}[1]{\boldsymbol{\mathbf{#1}}}
+\newcommand{\dvec}[1]{\dot{\vec{#1}}}
+\newcommand{\uvec}[1]{\hat{\vec{#1}}}
+
 \setlist[enumerate, 1]{label={(\alph*)}}
 \setlist[enumerate, 2]{label={(\roman*)}}
 
@@ -18,5 +22,190 @@
 \maketitle
 
 \tableofcontents
+
+\section{Newton's Laws of Motion}
+
+\subsection{}
+
+\begin{align*}
+  \vec{b} + \vec{c}      & = 2 \uvec{x} + \uvec{y} + \uvec{z}     \\
+  5 \vec{b} + 2 \vec{x}  & = 7 \uvec{x} + 5 \uvec{y} + 2 \uvec{z} \\
+  \vec{b} \cdot \vec{c}  & = 1                                    \\
+  \vec{b} \times \vec{c} & = \begin{vmatrix}
+                               \uvec{x} & \uvec{y} & \uvec{z} \\
+                               1        & 1        & 0        \\
+                               1        & 0        & 1
+                             \end{vmatrix}       \\
+                         & = \uvec{x} - \uvec{y} - \uvec{z}
+\end{align*}
+
+\setcounter{subsection}{4}
+\subsection{}
+
+\begin{align*}
+  \vec{v}_\text{body}                           & = \uvec{x} + \uvec{y} + \uvec{z}          \\
+  \vec{v}_\text{face}                           & = \uvec{x} + \uvec{z}                     \\
+  \vec{v}_\text{body} \cdot \vec{v}_\text{face} & = v_\text{body} v_\text{face} \cos \theta \\
+  2                                             & = \sqrt{6} \cos \theta                    \\
+  \cos \theta                                   & = \frac{2}{\sqrt{6}}                      \\
+  \theta                                        & = \arccos \frac{2}{\sqrt{6}}              \\
+                                                & = \ang{35.26}
+\end{align*}
+
+\setcounter{subsection}{10}
+\subsection{}
+
+The particle moves counterclockwise in an ellipse of width $2 b$ and height $2 c$. The angular speed is $\omega$.
+
+\setcounter{subsection}{22}
+\subsection{}
+
+\begin{align*}
+  \vec{v} & = v \cos \theta \frac{\vec{b}}{b} - v \sin \theta \frac{\vec{b} \times \vec{c}}{b c}   \\
+          & = \frac{\lambda}{b} \frac{\vec{b}}{b} - \frac{c}{b} \frac{\vec{b} \times \vec{c}}{b c} \\
+          & = \frac{\lambda \vec{b} - \vec{b} \times \vec{c}}{b^2}
+\end{align*}
+
+\setcounter{subsection}{24}
+\subsection{}
+
+\begin{align*}
+  \frac{d f}{d t}             & = -3 f       \\
+  \frac{1}{f} \frac{d f}{d t} & = -3         \\
+  \ln f                       & = -3 t + c   \\
+  f                           & = c e^{-3 t}
+\end{align*}
+
+One constant.
+
+\setcounter{subsection}{34}
+\subsection{}
+
+\begin{align*}
+  F_x   & = 0                                             \\
+  m a_x & = 0                                             \\
+  a_x   & = 0                                             \\
+  v_x   & = c_1                                           \\
+        & = v_o \cos \theta                               \\
+  r_x   & = v_o \cos (\theta) t + c_2                     \\
+        & = v_o \cos (\theta) t                           \\ \\
+  F_y   & = 0                                             \\
+  m a_y & = 0                                             \\
+  a_y   & = 0                                             \\
+  v_y   & = c_3                                           \\
+  v_y   & = 0                                             \\
+  r_y   & = c_4                                           \\
+  r_y   & = 0                                             \\ \\
+  F_z   & = -m g                                          \\
+  m a_z & = -m g                                          \\
+  a_z   & = -g                                            \\
+  v_z   & = -g t + c_5                                    \\
+        & = v_o \sin \theta - g t                         \\
+  r_z   & = v_o \sin (\theta) t - \frac{1}{2} g t^2 + c_6 \\
+        & = v_o \sin (\theta) t - \frac{1}{2} g t^2       \\ \\
+  0     & = v_o \sin (\theta) t - \frac{1}{2} g t^2       \\
+  t     & = \frac{2 \sin (\theta) v_o}{g}                 \\
+  r_x   & = v_o \cos (\theta) t                           \\
+        & = \frac{2 \cos (\theta) \sin (\theta) v_o^2}{g} \\
+        & = \frac{\sin (2 \theta) v_o^2}{g}
+\end{align*}
+
+\setcounter{subsection}{36}
+\subsection{}
+
+\begin{enumerate}
+  \item
+
+        \begin{align*}
+          F   & = -m g \sin \theta                      \\
+          m a & = -m g \sin \theta                      \\
+          a   & = -g \sin \theta                        \\
+          v   & = c_1 - g t \sin \theta                 \\
+              & = v_o - g t \sin \theta                 \\
+          x   & = v_o t - \frac{1}{2} g t^2 \sin \theta
+        \end{align*}
+
+  \item \[t = \frac{2 v_o}{g \sin \theta}\]
+\end{enumerate}
+
+\setcounter{subsection}{38}
+\subsection{}
+
+\begin{align*}
+  F_x   & = -m g \sin \phi                                                                                            \\
+  m a_x & = -m g \sin \phi                                                                                            \\
+  a_x   & = -g \sin \phi                                                                                              \\
+  v_x   & = c_1 - g t \sin \phi                                                                                       \\
+        & = v_o \cos \theta - g t \sin \phi                                                                           \\
+  r_x   & = v_o t \cos \theta - \frac{1}{2} g t^2 \sin \phi + c_2                                                     \\
+        & = v_o t \cos \theta - \frac{1}{2} g t^2 \sin \phi                                                           \\ \\
+  F_y   & = -m g \cos \phi                                                                                            \\
+  m a_y & = -m g \cos \phi                                                                                            \\
+  a_y   & = -g \cos \phi                                                                                              \\
+  v_y   & = c_3 - g t \cos \phi                                                                                       \\
+        & = v_o \sin \theta - g t \cos \phi                                                                           \\
+  r_y   & = v_o t \sin \theta - \frac{1}{2} g t^2 \cos \phi + c_4                                                     \\
+        & = v_o t \sin \theta - \frac{1}{2} g t^2 \cos \phi                                                           \\ \\
+  0     & = v_o t \sin \theta - \frac{1}{2} g t^2 \cos \phi                                                           \\
+  t     & = \frac{2 v_o \sin \theta}{g \cos \phi}                                                                     \\ \\
+  r_x   & = \frac{2 v_o^2 \cos \theta \sec \phi \sin \theta}{g} - \frac{2 v_o^2 \sec \phi \sin^2 \theta \tan \phi}{g} \\
+        & = \frac{2 v_o^2 \sin \theta (\cos \theta \cos \phi - \sin \theta \sin \phi)}{g \cos^2 \phi}                 \\
+        & = \frac{2 v_o^2 \sin \theta \cos (\theta + \phi)}{g \cos^2 \phi}
+\end{align*}
+
+\begin{align*}
+  \frac{d r_x}{d \theta} & = \frac{2 v_o^2}{g \cos^2 \phi} [\cos \theta \cos (\theta + \phi) - \sin \theta \sin (\theta + \phi)]                                        \\
+                         & = \frac{2 v_o^2 \cos (2 \theta + \phi)}{g \cos^2 \phi}                                                                                       \\
+  0                      & = \frac{2 v_o^2 \cos (2 \theta + \phi)}{g \cos^2 \phi}                                                                                       \\
+                         & = \cos (2 \theta + \phi)                                                                                                                     \\
+  2 \theta + \phi        & = \frac{\pi}{2}                                                                                                                              \\
+  \theta                 & = \frac{\pi}{4} - \frac{\phi}{2}                                                                                                             \\
+  r_{x\text{,max}}       & = \frac{2 v_o^2 \sin \left( \frac{\pi}{4} - \frac{\phi}{2} \right) \cos \left( \frac{\pi}{4} - \frac{\phi}{2} + \phi \right)}{g \cos^2 \phi} \\
+                         & = \frac{v_o^2 (1 - \sin \phi)}{g \cos^2 \phi}                                                                                                \\
+                         & = \frac{v_o^2}{g (1 + \sin \phi)}
+\end{align*}
+
+\setcounter{subsection}{40}
+\subsection{}
+
+\begin{align*}
+  F & = m a                      \\
+  T & = m \frac{v^2}{R}          \\
+    & = m \frac{(\omega R)^2}{R} \\
+    & = m \omega^2 R
+\end{align*}
+
+\setcounter{subsection}{46}
+\subsection{}
+
+\begin{enumerate}
+  \item
+
+        \begin{align*}
+          \rho & = \sqrt{x^2 + y^2}    \\
+          \phi & = \arctan \frac{y}{x} \\
+          z    & = z
+        \end{align*}
+
+        $\rho$ is the distance of $P$ from the $z$-axis.
+
+        The use of $r$ may be unfortunate because it suggests it's the distance of $P$ from the origin.
+
+  \item $\uvec{\rho}$ points away from the $z$-axis, $\uvec{\phi}$ points counter-clockwise around the $z$-axis, and $\uvec{z}$ points in the positive $z$ direction.
+
+        \[\vec{r} = \rho \uvec{\rho} + z \uvec{z} + \sqrt{x^2 + y^2} \uvec{\rho} + z \uvec{z}\]
+
+  \item
+
+        \begin{align*}
+          \vec{v} & = \frac{d \vec{r}}{d t}                                                                                                                                                                             \\
+                  & = \dot{\rho} \uvec{\rho} + \rho \frac{d \uvec{\rho}}{d t} + \dot{z} \uvec{z} + z \frac{d \uvec{z}}{d t}                                                                                             \\
+                  & = \dot{\rho} \uvec{\rho} + \rho \dot{\phi} \uvec{\phi} + \dot{z} \uvec{z}                                                                                                                           \\
+          \vec{a} & = \frac{d \vec{v}}{d t}                                                                                                                                                                             \\
+                  & = \ddot{\rho} \uvec{\rho} + \dot{\rho} \frac{d \uvec{\rho}}{d t} + \dot{\rho} \dot{\phi} \uvec{\phi} + \rho \ddot{\phi} \uvec{\phi} + \rho \dot{\phi} \frac{d \uvec{\phi}}{d t} + \ddot{z} \uvec{z} \\
+                  & = \ddot{\rho} \uvec{\rho} + \dot{\rho} \dot{\phi} \uvec{\phi} + \dot{\rho} \dot{\phi} \uvec{\phi} + \rho \ddot{\phi} \uvec{\phi} - \rho \dot{\phi}^2 \uvec{\rho} + \ddot{z} \uvec{z}                \\
+                  & = (\ddot{\rho} - \rho \dot{\phi}^2) \uvec{\rho} + (2 \dot{\rho} \dot{\phi} + \rho \ddot{\phi}) \uvec{\phi} + \ddot{z} \uvec{z}
+        \end{align*}
+\end{enumerate}
 
 \end{document}
