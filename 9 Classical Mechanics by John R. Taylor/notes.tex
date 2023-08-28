@@ -75,4 +75,26 @@
         \end{align*}
 \end{itemize}
 
+\section{Projectiles and Charged Particles}
+
+\subsection{Air Resistance}
+
+\begin{itemize}
+  \item Air resistance depends on the speed $v$ of the moving object. For many objects the direction of the air resistance force $\vec{f}$ is opposite to $\vec{v}$, but not always. For example, the air resistance force on an airplane causes lift.
+
+  \item An air resistance force can be described by the equation \[\vec{f} = -f(v) \uvec{v}\] where $\uvec{v} = \vec{v} / |\vec{v}|$ gives the direction and $f(v)$ gives the magnitude.
+
+  \item $f(v)$ can be approximated as \[f(v) = f_\text{lin} + f_\text{quad} = b v + c v^2.\]
+
+  \item The linear term $f_\text{lin}$ arises from the viscous drag of the medium and is generally proportional to the projectile's linear size.
+
+  \item The quadratic term $f_\text{quad}$ arises from the fact that the projectile must accelerate the air with which it is continually colliding and it is proportional to the density of the medium and the cross-sectional area of the projectile.
+
+  \item For a spherical projectile the coefficients $b$ and $c$ above have the form \[b = \beta D \text{ and } c = \gamma D^2\] where $D$ is the diameter of the sphere and the coefficients $\beta$ and $\gamma$ depend on the nature of the medium. In air at STP they have approximate values \[\beta = \qty{1.6e-4}{N.s/m^2}\] and \[\gamma = \qty{0.25}{N.s^2/m^4}.\]
+
+  \item Depending on the natures of the medium and projectile it's often possible to neglect one of the terms in $f(v)$. To determine if this is the case we can calculate their ratio. For example, for a spherical projectile at STP \[\frac{f_\text{quad}}{f_\text{lin}} = \frac{c v^2}{b v} = \frac{\gamma D}{\beta} v = (\qty{1.6e3}{s/m^2}) D v.\] If the ratio is large $f_\text{lin}$ can be ignored. If it's small $f_\text{quad}$ can be ignored.
+
+  \item The \textbf{Reynolds number} can be used to characterise the behaviour of an object in a fluid \[R = \frac{\rho}{\mu} D v\] where $\rho$ is the medium's density, $\mu$ is its viscosity, $D$ is the linear dimension of the projectile (diameter for spherical projectiles), and $v$ is the projectile's speed. The quadratic force $f_\text{quad}$ is dominant when the Reynolds number $R$ is large and the linear force $f_\text{linear}$ is dominant when it is small.
+\end{itemize}
+
 \end{document}
