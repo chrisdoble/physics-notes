@@ -135,4 +135,21 @@
         \end{itemize}
 \end{itemize}
 
+\setcounter{subsection}{3}
+\subsection{Quadratic Air Resistance}
+
+\begin{itemize}
+  \item Equations of motion for quadratic air resistance can be solved analytically when the projectile moves in one dimension, but can only be solved numerically when it moves in multiple dimensions.
+
+  \item When a projectile moves in one dimension and only experiences the force of air resistance (i.e. there are no other forces), the equation of motion is \[m \dot{v} = -c v^2.\] Using separation of variables the solution can be found to be \[v(t) = \frac{v_0}{1 + t / \tau}\] where \[\tau = \frac{m}{c v_0}.\]
+
+  \item As in the linear case, $\tau$ is a measure of how long it takes for air resistance to slow down the projectile ($v = v_0 / 2$ at $t = \tau$).
+
+  \item Integrating the equation for $v(t)$ gives \[x(t) = v_0 \tau \ln \left( 1 + \frac{t}{\tau} \right).\]
+
+  \item When a projectile moves in one dimension and experiences the forces of air resistance and weight, the equation of motion (with $y$ down) is \[m \dot{v} = m g - c v^2.\] Using separation of variables the solution can be found to be \[v(t) = v_\text{ter} \tanh \frac{g t}{v_\text{ter}}\] where \[v_\text{ter} = \sqrt{\frac{m g}{c}}.\]
+
+  \item Integrating the equation for $v(t)$ gives \[y = \frac{v_\text{ter}^2}{g} \ln \left( \cosh \frac{g t}{v_\text{ter}} \right).\]
+\end{itemize}
+
 \end{document}

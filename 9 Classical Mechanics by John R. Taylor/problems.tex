@@ -9,6 +9,8 @@
 \renewcommand{\vec}[1]{\boldsymbol{\mathbf{#1}}}
 \newcommand{\dvec}[1]{\dot{\vec{#1}}}
 \newcommand{\uvec}[1]{\hat{\vec{#1}}}
+\newcommand{\arcsinh}{\operatorname{arcsinh}}
+\newcommand{\arctanh}{\operatorname{arctanh}}
 
 \setlist[enumerate, 1]{label={(\alph*)}}
 \setlist[enumerate, 2]{label={(\roman*)}}
@@ -364,5 +366,230 @@ The velocity starts at $2 v_\text{ter}$ and asymptotically approaches $v_\text{t
             & = \frac{v_{y0}}{v_{x0}} x - \frac{1}{2} g \left( \frac{x}{v_{x0}} \right)^2
         \end{align*}
 \end{enumerate}
+
+% Section 2.4
+
+\setcounter{subsection}{22}
+\subsection{}
+
+\begin{enumerate}
+  \item
+
+        \begin{align*}
+          v_\text{ter} & = \sqrt{\frac{m g}{c}}                                                        \\
+                       & = \sqrt{\frac{m g}{\gamma D^2}}                                               \\
+                       & = \sqrt{\frac{m g}{0.25 D^2}}                                                 \\
+                       & = \sqrt{\frac{\rho \frac{4}{3} \pi \left( \frac{D}{2} \right)^3 g}{0.25 D^2}} \\
+                       & = \sqrt{\frac{4 \pi \rho D g}{6}}                                             \\
+                       & = \qty{22}{m/s}
+        \end{align*}
+
+  \item
+
+        \begin{align*}
+          m            & = \rho V                                            \\
+                       & = \rho \frac{4}{3} \pi \left( \frac{D}{2} \right)^3 \\
+                       & = \frac{\pi \rho D^3}{6}                            \\
+          D^2          & = \left( \frac{6 m}{\pi \rho} \right)^{2 / 3}       \\
+          v_\text{ter} & = \sqrt{\frac{m g}{0.25 D^2}}                       \\
+                       & = \sqrt{\frac{m g}{0.25 (6 m / \pi \rho)^{2 / 3}}}  \\
+                       & = \qty{140}{m/s}
+        \end{align*}
+
+  \item \[v_\text{ter} = \qty{107}{m/s}\]
+\end{enumerate}
+
+\setcounter{subsection}{26}
+\subsection{}
+
+\begin{align*}
+  m \dot{v}                                                                                  & = -m g \sin \theta - c v^2                                                                        \\
+  -\frac{\sqrt{m} \arctan \frac{\sqrt{c} v}{\sqrt{g m \sin \theta}}}{\sqrt{c g \sin \theta}} & = t + c_1                                                                                         \\
+  \arctan \frac{\sqrt{c} v}{\sqrt{g m \sin \theta}}                                          & = \sqrt{\frac{c g \sin \theta}{m}} (c_1 - t)                                                      \\
+  \frac{\sqrt{c} v}{\sqrt{g m \sin \theta}}                                                  & = \tan \left[ \sqrt{\frac{c g \sin \theta}{m}} (c_1 - t) \right]                                  \\
+  v                                                                                          & = \sqrt{\frac{g m \sin \theta}{c}} \tan \left[ \sqrt{\frac{c g \sin \theta}{m}} (c_1 - t) \right] \\ \\
+  v_0                                                                                        & = \sqrt{\frac{g m \sin \theta}{c}} \tan \left( \sqrt{\frac{c g \sin \theta}{m}} c_1 \right)       \\
+  c_1                                                                                        & = \sqrt{\frac{m}{c g \sin \theta}} \arctan \left( \sqrt{\frac{c}{g m \sin \theta}} v_0 \right)
+\end{align*}
+
+\begin{align*}
+  v                                  & = \sqrt{\frac{g m \sin \theta}{c}} \tan \left[ \arctan \left( \sqrt{\frac{c}{g m \sin \theta}} v_0 \right) - \sqrt{\frac{c g \sin \theta}{m}} t \right] \\ \\
+  0                                  & = \sqrt{\frac{g m \sin \theta}{c}} \tan \left[ \arctan \left( \sqrt{\frac{c}{g m \sin \theta}} v_0 \right) - \sqrt{\frac{c g \sin \theta}{m}} t \right] \\
+  \sqrt{\frac{c g \sin \theta}{m}} t & = \arctan \left( \sqrt{\frac{c}{g m \sin \theta}} v_0 \right)                                                                                           \\
+  t                                  & = \sqrt{\frac{m}{c g \sin \theta}} \arctan \left( \sqrt{\frac{c}{g m \sin \theta}} v_0 \right)
+\end{align*}
+
+\setcounter{subsection}{28}
+\subsection{}
+
+\begin{align*}
+  v(t)  & = v_\text{ter} \tanh \frac{g t}{v_\text{ter}} \\
+  v(1)  & = \qty{9.6}{m/s}                              \\
+  v(5)  & = \qty{38}{m/s}                               \\
+  v(10) & = \qty{48}{m/s}                               \\
+  v(20) & = \qty{50}{m/s}                               \\
+  v(30) & = \qty{50}{m/s}
+\end{align*}
+
+\setcounter{subsection}{30}
+\subsection{}
+
+\begin{enumerate}
+  \item
+
+        \begin{align*}
+          v_\text{ter} & = \sqrt{\frac{m g}{c}}        \\
+                       & = \sqrt{\frac{m g}{0.25 D^2}} \\
+                       & = \qty{20.2}{m/s}
+        \end{align*}
+
+  \item
+
+        \begin{align*}
+          y       & = -30 + \frac{v_\text{ter}^2}{g} \ln \left( \cosh \frac{g t}{v_\text{ter}} \right) \\
+          0       & = -30 + \frac{v_\text{ter}^2}{g} \ln \left( \cosh \frac{g t}{v_\text{ter}} \right) \\
+          t       & = \qty{2.78}{s}                                                                    \\
+          v(2.78) & = \qty{17.6}{m/s}
+        \end{align*}
+\end{enumerate}
+
+\setcounter{subsection}{32}
+\subsection{}
+
+\begin{enumerate}
+  \setcounter{enumi}{1}
+  \item
+
+        \begin{align*}
+          \cosh z  & = \frac{e^z + e ^{-z}}{2}                                                                                                                                  \\
+                   & = \frac{1}{2} \left[ \left( 1 + z + \frac{z^2}{2} + \frac{z^3}{6} + \cdots \right) + \left( 1 - z + \frac{z^2}{2} - \frac{z^3}{6} + \cdots \right) \right] \\
+                   & = 1 + \frac{z^2}{2} + \frac{z^4}{24} + \frac{z^6}{720} + \cdots                                                                                            \\
+          \cos i z & = 1 - \frac{(i z)^2}{2} + \frac{(i z)^4}{24} - \frac{(i z)^6}{720} + \cdots                                                                                \\
+                   & = 1 + \frac{z^2}{2} + \frac{z^4}{24} + \frac{z^6}{720} + \cdots                                                                                            \\
+                   & = \cosh z                                                                                                                                                  \\
+          \sinh z  & = -i \sin i z
+        \end{align*}
+
+  \item
+
+        \begin{align*}
+          \frac{d}{d z} \cosh z & = \frac{d}{d z} \left( \frac{e^z + e^{-z}}{2} \right) \\
+                                & = \frac{e^z - e^{-z}}{2}                              \\
+                                & = \sinh z                                             \\
+          \frac{d}{d z} \sinh z & = \frac{d}{d z} \left( \frac{e^z - e^{-z}}{2} \right) \\
+                                & = \frac{e^z + e^{-z}}{2}                              \\
+                                & = \cosh z
+        \end{align*}
+
+  \item
+
+        \begin{align*}
+          \cosh^2 z - \sinh^2 z & = \left( \frac{e^z + e^{-z}}{2} \right)^2 - \left( \frac{e^z - e^{-z}}{2} \right)^2 \\
+                                & = \frac{1}{4} (e^{2 z} + 2 + e^{-2 z} - e^{2 z} + 2 - e^{-2 z})                     \\
+                                & = 1
+        \end{align*}
+
+  \item
+
+        \begin{align*}
+          \int \frac{1}{\sqrt{1 + x^2}} \,d x & = \int \frac{\cosh z}{\sqrt{1 + \sinh^2 z}} \,d z \\
+                                              & = \int 1 \,d z                                    \\
+                                              & = z                                               \\
+                                              & = \arcsinh x
+        \end{align*}
+\end{enumerate}
+
+\setcounter{subsection}{34}
+\subsection{}
+
+\begin{enumerate}
+  \item
+
+        \begin{align*}
+          m \dot{v}                                           & = m g - c v^2                                                                               \\
+          \dot{v}                                             & = g \left( 1 - \frac{v^2}{v_\text{ter}^2} \right)                                           \\
+          \int_0^v \frac{1}{1 - v'^2 / v_\text{ter}^2} \,d v' & = \int_0^t g \,d t                                                                          \\
+          v_\text{ter} \arctanh \frac{v}{v_\text{ter}}        & = g t                                                                                       \\
+          v                                                   & = v_\text{ter} \tanh \frac{g t}{v_\text{ter}}                                               \\ \\
+          y                                                   & = \int_0^t v_\text{ter} \tanh \frac{g t'}{v_\text{ter}} d t'                                \\
+                                                              & = \frac{v_\text{ter}^2}{g} \ln \left[ \cosh \left( \frac{g t}{v_\text{ter}} \right) \right]
+        \end{align*}
+
+  \item
+
+        \begin{align*}
+          v         & = g \tau \tanh \frac{t}{\tau}                                     \\
+          y         & = g \tau^2 \ln \left[ \cosh \left( \frac{t}{\tau} \right) \right] \\
+          v(\tau)   & = g \tau \tanh 1                                                  \\
+                    & = 0.76 v_\text{ter}                                               \\
+          v(2 \tau) & = 0.96 v_\text{ter}                                               \\
+          v(3 \tau) & = 0.99 v_\text{ter}
+        \end{align*}
+
+  \item
+
+        \begin{align*}
+          y & = g \tau^2 \ln \left[ \cosh \left( \frac{t}{\tau} \right) \right]    \\
+            & = g \tau^2 \ln \left( \frac{e^{t / \tau} + e^{-t / \tau}}{2} \right) \\
+            & = g \tau^2 \ln \left( \frac{e^{t / \tau}}{2} \right)                 \\
+            & = g \tau^2 (\ln e^{t / \tau} - \ln 2)                                \\
+            & = g \tau t - g \tau^2 \ln 2                                          \\
+            & = v_\text{ter} t - g \tau^2 \ln 2
+        \end{align*}
+
+  \item
+
+        \begin{align*}
+          y & = \frac{(v_\text{ter})^2}{g} \ln \left[ \cosh \left( \frac{g t}{v_\text{ter}} \right) \right]                  \\
+            & \approx \frac{(v_\text{ter})^2}{g} \ln \left[ 1 + \frac{1}{2} \left( \frac{g t}{v_\text{ter}} \right)^2\right] \\
+            & \approx \frac{(v_\text{ter})^2}{g} \frac{1}{2} \left( \frac{g t}{v_\text{ter}} \right)^2                       \\
+            & = \frac{1}{2} g t^2
+        \end{align*}
+\end{enumerate}
+
+\setcounter{subsection}{38}
+\subsection{}
+
+\begin{enumerate}
+  \item
+
+        \begin{align*}
+          m \dot{v}                                                                                                                       & = -c v^2 - 3    \\
+          \int_{v_0}^v \frac{m}{-c v'^2 - 3} \,d v'                                                                                       & = \int_0^t d t' \\
+          \frac{m}{\sqrt{3 c}} \left[ \arctan \left( \sqrt{\frac{c}{3}} v_0 \right) - \arctan \left( \sqrt{\frac{c}{3}} v \right) \right] & = t
+        \end{align*}
+
+  \item
+
+        \begin{tabular}{c c}
+          Speed         & Time          \\
+          \hline
+          \qty{15}{m/s} & \qty{6.34}{s} \\
+          \qty{10}{m/s} & \qty{18.4}{s} \\
+          \qty{5}{m/s}  & \qty{48.3}{s} \\
+          \qty{0}{m/s}  & \qty{142}{s}
+        \end{tabular}
+\end{enumerate}
+
+\setcounter{subsection}{40}
+\subsection{}
+
+\begin{align*}
+  m \dot{v}                                                                              & = -m g - c v^2                                                                  \\
+  \dot{v}                                                                                & = -g \left[ 1 + \left( \frac{v}{v_\text{ter}} \right)^2 \right]                 \\
+  v \frac{d v}{d y}                                                                      & = -g \left[ 1 + \left( \frac{v}{v_\text{ter}} \right)^2 \right]                 \\
+  \int_{v_0}^v \frac{v'}{1 + (v' / v_\text{ter})^2} \,d v'                               & = \int_0^y -g \,d y'                                                            \\
+  \frac{1}{2} v_\text{ter}^2 [\ln (v_\text{ter}^2 + v^2) - \ln (v_\text{ter}^2 + v_0^2)] & = -g y                                                                          \\
+  \ln \frac{v_\text{ter}^2 + v^2}{v_\text{ter}^2 + v_0^2}                                & = -\frac{2 g y}{v_\text{ter}^2}                                                 \\
+  \frac{v_\text{ter}^2 + v^2}{v_\text{ter}^2 + v_0^2}                                    & = e^{-2 g y / v_\text{ter}^2}                                                   \\
+  v                                                                                      & = \sqrt{(v_\text{ter}^2 + v_0^2) e^{-2 g y / v_\text{ter}^2} - v_\text{ter}^2}  \\ \\
+  0                                                                                      & = \sqrt{(v_\text{ter}^2 + v_0^2) e^{-2 g y / v_\text{ter}^2} - v_\text{ter}^2}  \\
+  v_\text{ter}^2                                                                         & = (v_\text{ter}^2 + v_0^2) e^{-2 g y / v_\text{ter}^2}                          \\
+  \frac{v_\text{ter}^2}{v_\text{ter}^2 + v_0^2}                                          & = e^{-2 g y / v_\text{ter}^2}                                                   \\
+  -\frac{2 g y}{v_\text{ter}^2}                                                          & = \ln \frac{v_\text{ter}^2}{v_\text{ter}^2 + v_0^2}                             \\
+  y                                                                                      & = -\frac{v_\text{ter}^2}{2 g} \ln \frac{v_\text{ter}^2}{v_\text{ter}^2 + v_0^2} \\
+                                                                                         & = \frac{v_\text{ter}^2}{2 g} \ln \frac{v_\text{ter}^2 + v_0^2}{v_\text{ter}^2}  \\ \\
+  y_\text{max}                                                                           & = \qty{17.6}{m}
+\end{align*}
 
 \end{document}
