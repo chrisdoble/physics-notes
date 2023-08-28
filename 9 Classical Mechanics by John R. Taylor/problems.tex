@@ -236,4 +236,99 @@ When $v \gg \qty{1}{cm/s}$ the drag force can be treated as purely quadratic. Fo
   \item \[R = \frac{D v \rho}{\eta} \approx 0.01\]
 \end{enumerate}
 
+\setcounter{subsection}{4}
+\subsection{}
+
+\begin{align*}
+  v_y(t) & = v_\text{ter} + (v_\text{yo} - v_\text{ter}) e^{-t / \tau}    \\
+         & = v_\text{ter} + (2 v_\text{ter} - v_\text{ter}) e^{-t / \tau} \\
+         & = v_\text{ter} (1 + e^{-t / \tau})
+\end{align*}
+
+The velocity starts at $2 v_\text{ter}$ and asymptotically approaches $v_\text{ter}$.
+
+\setcounter{subsection}{6}
+\subsection{}
+
+\begin{align*}
+  F                  & = F(v)                                     \\
+  m \dot{v}          & = F(v)                                     \\
+  m \frac{d v}{F(v)} & = d t                                      \\
+  t                  & = \int_{v_\text{o}}^v m \frac{d v'}{F(v')} \\ \\
+  F                  & = F(v)                                     \\
+  m \dot{v}          & = F_\text{o}                               \\
+  v                  & = \frac{F_\text{o}}{m} t + c
+\end{align*}
+
+\setcounter{subsection}{10}
+\subsection{}
+
+\begin{enumerate}
+  \item
+
+        \begin{align*}
+          m \dot{v}                   & = -m g - b v                                                             \\
+          \dot{v}                     & = -g - k v                                                               \\
+          \frac{1}{-g - k v} \dot{v}  & = 1                                                                      \\
+          -\frac{1}{k} \ln (-g - k v) & = t + c                                                                  \\
+          \ln (-g - k v)              & = c - \frac{t}{\tau}                                                     \\
+          -g - k v                    & = A e^{-t / \tau}                                                        \\
+          v                           & = \tau (-g - A e^{-t / \tau})                                            \\
+                                      & = -v_\text{ter} - \tau A e^{-t / \tau}                                   \\ \\
+          v_\text{o}                  & = -v_\text{ter} - \tau A                                                 \\
+          A                           & = -k (v_\text{o} + v_\text{ter})                                         \\ \\
+          v                           & = -v_\text{ter} + (v_\text{o} + v_\text{ter}) e^{-t / \tau}              \\ \\
+          y                           & = -v_\text{ter} t - \tau (v_\text{o} + v_\text{ter}) e^{-t / \tau} + c   \\ \\
+          0                           & = -\tau (v_\text{o} + v_\text{ter}) + c                                  \\
+          c                           & = \tau (v_\text{o} + v_\text{ter})                                       \\ \\
+          y                           & = -v_\text{ter} t + \tau (v_\text{o} + v_\text{ter}) (1 - e^{-t / \tau})
+        \end{align*}
+
+  \item
+
+        \begin{align*}
+          0               & = -v_\text{ter} + (v_\text{o} + v_\text{ter}) e^{-t / \tau}                                                                                                                                  \\
+          e^{-t / \tau}   & = \frac{v_\text{ter}}{v_\text{o} + v_\text{ter}}                                                                                                                                             \\
+          -\frac{t}{\tau} & = \ln \frac{v_\text{ter}}{v_\text{o} + v_\text{ter}}                                                                                                                                         \\
+          t               & = -\tau \ln \frac{v_\text{ter}}{v_\text{o} + v_\text{ter}}                                                                                                                                   \\ \\
+          y_\text{max}    & = -v_\text{ter} \left( -\tau \ln \frac{v_\text{ter}}{v_\text{o} + v_\text{ter}} \right) + \tau (v_\text{o} + v_\text{ter}) \left( 1 - \frac{v_\text{ter}}{v_\text{o} + v_\text{ter}} \right) \\
+                          & = \tau v_\text{ter} \ln \frac{v_\text{ter}}{v_\text{o} + v_\text{ter}} + \tau (v_\text{o} + v_\text{ter} - v_\text{ter})                                                                     \\
+                          & = \tau \left( v_\text{o} + v_\text{ter} \ln \frac{v_\text{ter}}{v_\text{o} + v_\text{ter}} \right)                                                                                           \\
+                          & = \tau \left[ v_\text{o} - v_\text{ter} \ln \left( 1 + \frac{v_\text{o}}{v_\text{ter}} \right) \right]
+        \end{align*}
+
+  \item
+
+        \begin{align*}
+          y_\text{max} & = \tau \left[ v_\text{o} - v_\text{ter} \ln \left( 1 + \frac{v_\text{o}}{v_\text{ter}} \right) \right]                                              \\
+                       & = \tau \left[ v_\text{o} - g \tau \ln \left( 1 + \frac{v_\text{o}}{g \tau} \right) \right]                                                          \\
+                       & \approx \tau \left\{ v_\text{o} - g \tau \left[ \frac{v_\text{o}}{g \tau} - \frac{1}{2} \left( \frac{v_\text{o}}{g \tau} \right)^2 \right] \right\} \\
+                       & = \tau \left( v_\text{o} - v_\text{o} + \frac{1}{2} \frac{v_\text{o}^2}{g \tau} \right)                                                             \\
+                       & = \frac{1}{2} \frac{v_\text{o}^2}{g}
+        \end{align*}
+\end{enumerate}
+
+\setcounter{subsection}{12}
+\subsection{}
+
+\begin{align*}
+  v^2                                                                             & = \frac{2}{m} \int_{x_0}^x -k x' \,d x'                             \\
+                                                                                  & = -\frac{2 k}{m} \left( \frac{1}{2} x^2 - \frac{1}{2} x_0^2 \right) \\
+                                                                                  & = -\frac{k}{m} (x^2 - x_0^2)                                        \\
+  v                                                                               & = \sqrt{\frac{k}{m} (x_0^2 - x^2)}                                  \\
+                                                                                  & = \omega \sqrt{x_0^2 - x^2}                                         \\ \\
+  \int_{x_0}^x \frac{1}{\sqrt{x_0^2 - x'^2}} \,d x'                               & = \int_0^t \omega \,d t                                             \\
+  \arctan \frac{x}{\sqrt{x_0^2 - x^2}} - \arctan \frac{x_0}{\sqrt{x_0^2 - x_0^2}} & = \omega t                                                          \\
+  \arctan \frac{x}{\sqrt{x_0^2 - x^2}}                                            & = \omega t + \frac{\pi}{2}                                          \\
+  \frac{x}{\sqrt{x_0^2 - x^2}}                                                    & = \tan \left( \omega t + \frac{\pi}{2} \right)                      \\
+                                                                                  & = -\cot \omega t                                                    \\
+  \frac{\sqrt{x_0^2 - x^2}}{x}                                                    & = -\tan \omega t                                                    \\
+  \sqrt{x_0^2 - x^2}                                                              & = -x \tan \omega t                                                  \\
+  x_0^2 - x^2                                                                     & = x^2 \tan^2 \omega t                                               \\
+  x^2                                                                             & = \frac{x_0^2}{1 + \tan^2 \omega t}                                 \\
+                                                                                  & = \frac{x_0^2 \cos^2 \omega t}{\cos^2 \omega t + \sin^2 \omega t}   \\
+                                                                                  & = x_0^2 \cos^2 \omega t                                             \\
+  x                                                                               & = x_0 \cos \omega t
+\end{align*}
+
 \end{document}

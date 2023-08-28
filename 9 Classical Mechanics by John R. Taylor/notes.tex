@@ -97,4 +97,42 @@
   \item The \textbf{Reynolds number} can be used to characterise the behaviour of an object in a fluid \[R = \frac{\rho}{\mu} D v\] where $\rho$ is the medium's density, $\mu$ is its viscosity, $D$ is the linear dimension of the projectile (diameter for spherical projectiles), and $v$ is the projectile's speed. The quadratic force $f_\text{quad}$ is dominant when the Reynolds number $R$ is large and the linear force $f_\text{linear}$ is dominant when it is small.
 \end{itemize}
 
+\subsection{Linear Air Resistance}
+
+\begin{itemize}
+  \item When the quadratic drag force is negligible the equation of motion becomes \begin{align*}
+          \vec{F}    & = \vec{W} - \vec{f}      \\
+          m \vec{a}  & = m \vec{g} - b \vec{v}  \\
+          m \dvec{v} & = m \vec{g} - b \vec{v}.
+        \end{align*} This is a first-order differential equation for $\vec{v}$ where the horizontal and vertical components can be separated to \begin{align*}
+          m \dot{v}_x & = -b v_x       \\
+          m \dot{v}_y & = m g - b v_y,
+        \end{align*} each of which is easily solvable.
+
+  \item The \textbf{terminal speed} of an object undergoing freefall and experiencing only linear drag is \[v_\text{ter} = \frac{m g}{b}.\]
+
+  \item The \textbf{characteristic time} \[\tau = \frac{1}{k} = \frac{1}{b / m} = \frac{m}{b}\] is a measure of the importance of air resistance.
+
+        \begin{itemize}
+          \item For horizontal motion with drag it's a measure of the time it takes for the projectile to reach $1 / e$ of its initial velocity.
+
+          \item For freefall with drag it's a measure of the time it would take the projectile to reach its terminal velocity if it didn't experience drag \[v_\text{ter} = g \tau.\]
+
+          \item For freefall with drag it can also be used to gauge what percentage of its terminal velocity a projectile will reach after a certain time:
+
+                \begin{center}
+                  \begin{tabular}{c c}
+                    Time $t$ & Percent of $v_\text{ter}$ \\
+                    \hline
+                    $0$      & $0$                       \\
+                    $\tau$   & $63\%$                    \\
+                    $2 \tau$ & $86\%$                    \\
+                    $3 \tau$ & $95\%$
+                  \end{tabular}
+                \end{center}
+
+                From this it can be seen that after $t = 3 \tau$ the projectile has effectively reached its terminal velocity.
+        \end{itemize}
+\end{itemize}
+
 \end{document}
