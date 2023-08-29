@@ -152,4 +152,24 @@
   \item Integrating the equation for $v(t)$ gives \[y = \frac{v_\text{ter}^2}{g} \ln \left( \cosh \frac{g t}{v_\text{ter}} \right).\]
 \end{itemize}
 
+\subsection{Motion of a Charge in a Uniform Magnetic Field}
+
+\begin{itemize}
+  \item When a particle of charge $q$ moves in a magnetic field $\vec{B} = (0, 0, B_z)$ with velocity $\vec{v} = (v_x, v_y, v_z)$ it experiences a force \[\vec{F} = q \vec{v} \times \vec{B} = q (v_y B, -b_x B, 0).\] This gives the coupled equations of motion \begin{align*}
+          m \dot{v}_x & = q B v_y  \\
+          m \dot{v}_y & = -q B v_x \\
+          m \dot{v}_z & = 0
+        \end{align*} or \begin{align*}
+          \dot{v}_x & = \omega v_y  \\
+          \dot{v}_y & = -\omega v_x \\
+          \dot{v}_z & = 0
+        \end{align*} where $\omega = q B / m$ is called the \textbf{cyclotron frequency}.
+
+  \item If we define a complex value \[\eta = v_x + i v_y,\] its derivative is \begin{align*}
+          \dot{\eta} & = \dot{v}_x + i \dot{v}_y   \\
+                     & = \omega v_y - i \omega v_x \\
+                     & = -i \omega \eta
+        \end{align*} which has the solution \[\eta = A e^{-i \omega t}.\]
+\end{itemize}
+
 \end{document}

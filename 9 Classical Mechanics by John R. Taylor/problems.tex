@@ -592,4 +592,252 @@ The velocity starts at $2 v_\text{ter}$ and asymptotically approaches $v_\text{t
   y_\text{max}                                                                           & = \qty{17.6}{m}
 \end{align*}
 
+\setcounter{subsection}{44}
+\subsection{}
+
+\begin{enumerate}
+  \item
+
+        \begin{align*}
+          z & = r e^{i \theta}                                                                                                      \\
+            & = r (\cos \theta + i \sin \theta)                                                                                     \\
+            & = \sqrt{x^2 + y^2} \left[ \cos \left( \arctan \frac{y}{x} \right) + i \sin \left( \arctan \frac{y}{x} \right) \right] \\
+            & = \sqrt{x^2 + y^2} \left( \frac{1}{\sqrt{1 + \frac{y^2}{x^2}}} + i \frac{y}{x \sqrt{1 + \frac{y^2}{x^2}}} \right)     \\
+            & = \sqrt{x^2 + y^2} \left( \frac{x}{\sqrt{x^2 + y^2}} + i \frac{y}{\sqrt{x^2 + y^2}} \right)                           \\
+            & = x + i y
+        \end{align*}
+
+        $r$ is the distance between $z$ and the origin, $\theta$ is the angle between the positive real axis and $z$.
+
+  \item \[z = \sqrt{3^2 + 4^2} e^{i \arctan 4 / 3} = 5 e^{0.927 i}\]
+
+  \item \[z = 2 \cos -\frac{\pi}{3} + i 2 \sin -\frac{\pi}{3} = 1 - \sqrt{3} i\]
+\end{enumerate}
+
+\setcounter{subsection}{46}
+\subsection{}
+
+\begin{enumerate}
+  \item
+
+        \begin{align*}
+          z + w       & = 9 + 4 i                                            \\
+          z - w       & = 3 + 12 i                                           \\
+          z w         & = (6 + 8 i) (3 - 4 i)                                \\
+                      & = 18 - 24 i + 24 i + 32                              \\
+                      & = 50                                                 \\
+          \frac{z}{w} & = \frac{z w*}{w w*}                                  \\
+                      & = \frac{(6 + 8 i) (3 + 4 i)}{(3 - 4 i) (3 + 4 i)}    \\
+                      & = \frac{18 + 24 i + 24 i - 32}{9 + 12 i - 12 i + 16} \\
+                      & = \frac{-14 + 48 i}{25}                              \\
+                      & = -\frac{14}{25} + \frac{48}{25} i
+        \end{align*}
+
+  \item
+
+        \begin{align*}
+          z + w       & = \left( 8 \cos \frac{\pi}{3} + i 8 \sin \frac{\pi}{3} \right) + \left( 4 \cos \frac{\pi}{6} + i 4 \sin \frac{\pi}{6} \right) \\
+                      & = (4 + 2 \sqrt{3}) + i (4 \sqrt{3} + 2)                                                                                       \\
+          z - w       & = (4 - 2 \sqrt{3}) + i (4 \sqrt{3} - 2)                                                                                       \\
+          z w         & = 32 e^{i \pi / 2}                                                                                                            \\
+                      & = 32 i                                                                                                                        \\
+          \frac{z}{w} & = 2 e^{i \pi / 6}                                                                                                             \\
+                      & = \sqrt{3} + i
+        \end{align*}
+\end{enumerate}
+
+\setcounter{subsection}{48}
+\subsection{}
+
+\begin{enumerate}
+  \item
+
+        \begin{align*}
+          z^2                             & = (e^{i \theta})^2                                            \\
+                                          & = e^{i 2 \theta}                                              \\
+                                          & = \cos 2 \theta + i \sin 2 \theta                             \\
+          z^2                             & = (\cos \theta + i \sin \theta)^2                             \\
+                                          & = \cos^2 \theta + 2 i \cos \theta \sin \theta - \sin^2 \theta \\
+                                          & = \cos^2 \theta + i \sin 2 \theta - \sin^2 \theta             \\ \\
+          \cos 2 \theta                   & = \cos^2 \theta - \sin^2 \theta                               \\ \\
+          \cos 2 \theta + i \sin 2 \theta & = \cos^2 \theta + 2 i \sin \theta \cos \theta - \sin^2 \theta \\
+          i \sin 2 \theta                 & = 2 i \sin \theta \cos \theta                                 \\
+          \sin 2 \theta                   & = 2 \sin \theta \cos \theta
+        \end{align*}
+
+  \item
+
+        \begin{align*}
+          z^3                             & = (e^{i \theta})^3                                                                                      \\
+                                          & = e^{i 3 \theta}                                                                                        \\
+                                          & = \cos 3 \theta + i \sin 3 \theta                                                                       \\
+          z^3                             & = (\cos \theta + i \sin \theta)^3                                                                       \\
+                                          & = \cos^3 \theta + 3 i \cos^2 \theta \sin \theta - 3 \cos \theta \sin^2 \theta - i \sin^3 \theta         \\ \\
+          \cos 3 \theta + i \sin 3 \theta & = \cos^3 \theta + 3 i \cos^2 \theta \sin \theta - 3 \cos \theta \sin^2 \theta - i \sin^3 \theta         \\
+                                          & = \cos \theta (\cos^2 \theta - 3 \sin^2 \theta) + i (3 \cos^2 \theta \sin \theta - \sin^3 \theta)       \\
+                                          & = \cos \theta (\cos^2 \theta - 3 \sin^2 \theta) + i [3 (1 - \sin^2 \theta) \sin \theta - \sin^3 \theta] \\
+                                          & = \cos \theta (\cos^2 \theta - 3 \sin^2 \theta) + i (3 \sin \theta - 4 \sin^3 \theta)                   \\
+          \cos 3 \theta                   & = \cos \theta (\cos^2 \theta - 3 \sin^2 \theta)                                                         \\ \\
+          \sin 3 \theta                   & = 3 \sin \theta - 4 \sin^3 \theta
+        \end{align*}
+\end{enumerate}
+
+\setcounter{subsection}{52}
+\subsection{}
+
+\begin{align*}
+  \vec{B}                       & = B_z \uvec{z}                                                                                                                                              \\
+  \vec{E}                       & = E_z \uvec{z}                                                                                                                                              \\
+  \vec{v} \times \vec{B}        & = B_z v_y \uvec{x} - B_z v_x \uvec{y}                                                                                                                       \\
+  \vec{F}                       & = q (\vec{E} + \vec{v} \times \vec{B})                                                                                                                      \\
+                                & = q B_z v_y \uvec{x} - q B_z v_x \uvec{y} + q E_z \uvec{z}                                                                                                  \\ \\
+  m \dot{v}_x                   & = q B_z v_y                                                                                                                                                 \\
+  \dot{v}_x                     & = \omega v_y                                                                                                                                                \\ \\
+  m \dot{v}_y                   & = -q B_z v_x                                                                                                                                                \\
+  \dot{v}_y                     & = -\omega v_x                                                                                                                                               \\ \\
+  m \dot{v}_z                   & = q E_z                                                                                                                                                     \\
+  \dot{v}_z                     & = \frac{q}{m} E_z                                                                                                                                           \\ \\
+  \frac{d}{d t} \begin{pmatrix}
+                  v_x \\
+                  v_y
+                \end{pmatrix} & = \begin{pmatrix}
+                                    0       & \omega \\
+                                    -\omega & 0
+                                  \end{pmatrix} \begin{pmatrix}
+                                                  v_x \\
+                                                  v_y
+                                                \end{pmatrix}                                                                                                                                \\
+  \begin{pmatrix}
+    v_x \\
+    v_y
+  \end{pmatrix}               & = c_1 \left[ \begin{pmatrix}
+                                                 0 \\
+                                                 1
+                                               \end{pmatrix} \cos \omega t - \begin{pmatrix}
+                                                                               -1 \\
+                                                                               0
+                                                                             \end{pmatrix} \sin \omega t \right] + c_2 \left[ \begin{pmatrix}
+                                                                                                                                -1 \\
+                                                                                                                                0
+                                                                                                                              \end{pmatrix} \cos \omega t + \begin{pmatrix}
+                                                                                                                                                              0 \\
+                                                                                                                                                              1
+                                                                                                                                                            \end{pmatrix} \sin \omega t \right] \\
+                                & = \begin{pmatrix}
+                                      c_1 \sin \omega t - c_2 \cos \omega t \\
+                                      c_1 \cos \omega t + c_2 \sin \omega t
+                                    \end{pmatrix}                                                                                                                     \\ \\
+  x                             & = -\frac{c_1}{\omega} \cos \omega t - \frac{c_2}{\omega} \sin \omega t + x_0                                                                                \\
+  y                             & = \frac{c_1}{\omega} \sin \omega t - \frac{c_2}{\omega} \cos \omega t + y_0                                                                                 \\ \\
+  v_z                           & = \frac{q}{m} E_z t + v_{z0}                                                                                                                                \\
+  z                             & = \frac{q}{2 m} E_z t^2 + v_{z0} t + z_0
+\end{align*}
+
+The particle moves in a helix oriented along the $z$-axis.
+
+\setcounter{subsection}{54}
+\subsection{}
+
+\begin{enumerate}
+  \item
+
+        \begin{align*}
+          \vec{B}   & = B \uvec{z}                                \\
+          \vec{E}   & = E \uvec{y}                                \\
+          \vec{F}   & = q (\vec{E} + \vec{v} \times \vec{B})      \\
+                    & = B q v_y \uvec{x} + q (E - B v_x) \uvec{y} \\
+          \dot{v}_x & = \frac{B q}{m} v_y                         \\
+                    & = \omega v_y                                \\
+          \dot{v}_y & = \frac{E q}{m} - \frac{B q}{m} v_x         \\
+                    & = \frac{E q}{m} - \omega v_x                \\
+          \dot{v}_z & = 0
+        \end{align*}
+
+        The net force has no $\uvec{z}$ component, so the motion stays in the $xy$-plane.
+
+  \item
+
+        \begin{align*}
+          0   & = \frac{E q}{m} - \omega v_x \\
+          v_x & = \frac{E q}{\omega m}       \\
+              & = \frac{E}{B}
+        \end{align*}
+
+  \item
+
+        \begin{align*}
+          \begin{pmatrix}
+            \dot{v}_x \\
+            \dot{v}_y
+          \end{pmatrix} & = \begin{pmatrix}
+                              0       & \omega \\
+                              -\omega & 0
+                            \end{pmatrix} \begin{pmatrix}
+                                            v_x \\
+                                            v_y
+                                          \end{pmatrix} + \begin{pmatrix}
+                                                            0 \\
+                                                            \frac{E q}{m}
+                                                          \end{pmatrix}          \\
+          \mathbf{V}_c    & = \begin{pmatrix}
+                                c_1 \sin \omega t - c_2 \cos \omega t \\
+                                c_1 \cos \omega t + c_2 \sin \omega t
+                              \end{pmatrix}               \\
+          \mathbf{V}_p    & = \begin{pmatrix}
+                                c_3 \\
+                                c_4
+                              \end{pmatrix}                                      \\
+          \begin{pmatrix}
+            0 \\
+            0
+          \end{pmatrix} & = \begin{pmatrix}
+                              0       & \omega \\
+                              -\omega & 0
+                            \end{pmatrix} \begin{pmatrix}
+                                            c_3 \\
+                                            c_4
+                                          \end{pmatrix} + \begin{pmatrix}
+                                                            0 \\
+                                                            \frac{E q}{m}
+                                                          \end{pmatrix}          \\
+                          & = \begin{pmatrix}
+                                c_4 \omega \\
+                                -c_3 \omega + \frac{E q}{m}
+                              \end{pmatrix}                          \\
+          c_3             & = \frac{E q}{m \omega}                                \\
+                          & = \frac{E}{B}                                         \\
+                          & = v_\text{dr}                                         \\
+          c_4             & = 0                                                   \\
+          \mathbf{V}_p    & = \begin{pmatrix}
+                                v_\text{dr} \\
+                                0
+                              \end{pmatrix}                                      \\
+          \mathbf{V}      & = \begin{pmatrix}
+                                c_1 \sin \omega t - c_2 \cos \omega t + v_\text{dr} \\
+                                c_1 \cos \omega t + c_2 \sin \omega t
+                              \end{pmatrix} \\
+          \begin{pmatrix}
+            v_{x0} \\
+            0
+          \end{pmatrix} & = \begin{pmatrix}
+                              -c_2 + v_\text{dr} \\
+                              c_1
+                            \end{pmatrix}                                    \\
+          c_1             & = 0                                                   \\
+          c_2             & = v_\text{dr} - v_{x0}                                \\
+          \mathbf{V}      & = \begin{pmatrix}
+                                v_\text{dr} + (v_{x0} - v_\text{dr}) \cos \omega t \\
+                                -(v_{x0} - v_\text{dr}) \sin \omega t
+                              \end{pmatrix}
+        \end{align*}
+
+  \item
+
+        \begin{align*}
+          x & = v_\text{dr} t + \frac{v_{x0} - v_\text{dr}}{\omega} \sin \omega t + x_0 \\
+          y & = \frac{v_{x0} - v_\text{dr}}{\omega} \cos \omega t + y_0                 \\
+          z & = z_0
+        \end{align*}
+\end{enumerate}
+
 \end{document}
