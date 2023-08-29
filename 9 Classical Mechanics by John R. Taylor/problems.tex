@@ -910,4 +910,73 @@ The thrust is $1.28$ times the weight on Earth.
   y(\qty{2}{min}) & = \qty{40}{km}
 \end{align*}
 
+\setcounter{subsection}{14}
+\subsection{}
+
+\begin{align*}
+  M       & = m_1 + m_2 + m_3                                                                           \\
+          & = m_1 + m_1 + 10 m_1                                                                        \\
+          & = 12 m_1                                                                                    \\
+  \vec{R} & = \frac{1}{12 m_1} \left[ m_1 \begin{pmatrix}
+                                              1 \\
+                                              1 \\
+                                              0
+                                            \end{pmatrix} + m_2 \begin{pmatrix}
+                                                                  1  \\
+                                                                  -1 \\
+                                                                  0
+                                                                \end{pmatrix} + m_3 \begin{pmatrix}
+                                                                                      0 \\
+                                                                                      0 \\
+                                                                                      0
+                                                                                    \end{pmatrix} \right] \\
+          & = \frac{1}{12 m_1} \begin{pmatrix}
+                                 2 m_1 \\
+                                 0     \\
+                                 0
+                               \end{pmatrix}                                                           \\
+          & = \begin{pmatrix}
+                \frac{1}{6} \\
+                0           \\
+                0
+              \end{pmatrix}
+\end{align*}
+
+\setcounter{subsection}{16}
+\subsection{}
+
+If we let Earth be at the origin, then
+
+\begin{align*}
+  R & = \frac{d M_m}{M_e + M_m} \\
+    & = \qty{4630}{km}
+\end{align*}
+
+The centre of mass is inside Earth.
+
+\setcounter{subsection}{18}
+\subsection{}
+
+\begin{enumerate}
+  \item No external forces apply during the explosion so the path of the centre of mass would be unchanged.
+
+  \item \qty{100}{m} before the target.
+
+  \item No.
+\end{enumerate}
+
+\setcounter{subsection}{20}
+\subsection{}
+
+\begin{align*}
+  \vec{R} & = \frac{1}{M} \int \vec{r} \,d m                                                                     \\
+          & = \frac{2}{\sigma \pi R^2} \int \vec{r} \sigma \,d A                                                 \\
+          & = \frac{2}{\pi R^2} \int_0^R \int_0^\pi \vec{r} r \,d \phi \,d r                                     \\
+          & = \frac{2}{\pi R^2} \int_0^R \int_0^\pi r (\cos \phi \uvec{x} + \sin \phi \uvec{y}) r \,d \phi \,d r \\
+          & = \frac{2}{\pi R^2} \int_0^R r^2 \int_0^\pi (\cos \phi \uvec{x} + \sin \phi \uvec{y}) \,d \phi \,d r \\
+          & = \frac{2}{\pi R^2} \int_0^R r^2 [\sin \phi \uvec{x} - \cos \phi \uvec{y}]_0^\pi \,d r               \\
+          & = \frac{4}{\pi R^2} \int_0^R r^2 \,d r \,\uvec{y}                                                    \\
+          & = \frac{4 R}{3 \pi} \uvec{y}
+\end{align*}
+
 \end{document}

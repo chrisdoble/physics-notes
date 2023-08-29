@@ -8,6 +8,7 @@
 
 \renewcommand{\vec}[1]{\boldsymbol{\mathbf{#1}}}
 \newcommand{\dvec}[1]{\dot{\vec{#1}}}
+\newcommand{\ddvec}[1]{\ddot{\vec{#1}}}
 \newcommand{\uvec}[1]{\hat{\vec{#1}}}
 
 \title{Classical Mechanics by John R. Taylor Notes}
@@ -186,6 +187,21 @@
   \item Newton's second law for a rocket is \[m \dot{v} = -\dot{m} v_\text{ex}\] where $\dot{m}$ is the (negative) rate of change of the mass of the rocket and $v_\text{ex}$ is the velocity of the exhaust. The quantity on the right hand side of the equation is called the \textbf{thrust}.
 
   \item The equation above can be solved by separation of variables giving \[v - v_0 = v_\text{ex} \ln \frac{m_0}{m}\] which is often called the \textbf{rocket equation}.
+\end{itemize}
+
+\subsection{The Center of Mass}
+
+\begin{itemize}
+  \item The \textbf{centre of mass} of a system is defined to be \[\vec{R} = \frac{1}{M} \sum_{\alpha = 1}^N m_\alpha \vec{r}_\alpha\] where $M$ is the total mass of all particles in the system, $m_\alpha$ is the mass of particle $\alpha$, and $\vec{r}_\alpha$ is the vector from the origin to particle $\alpha$.
+
+  \item The total momentum of a system can be written in terms of its centre of mass \[\vec{P} = \sum_\alpha \vec{p}_\alpha = \sum_\alpha m_\alpha \dvec{r}_\alpha = M \dvec{R}\] i.e. the total momentum of $N$ particles is equivalent to that of a single particle of mass $M$ with velocity equal to that of the centre of mass.
+
+  \item Differentiating the above we find \begin{align*}
+          \frac{d}{d t} \vec{P} & = \frac{d}{d t} (M \dvec{R}) \\
+          \vec{F}_\text{ext}    & = M \ddvec{R}
+        \end{align*} i.e. the centre of mass moves as if it was a single particle of mass $M$ subject to the net external force on the system.
+
+  \item When a body is continuous the expression for its centre of mass becomes an integral \[\vec{R} = \frac{1}{M} \int \vec{r} \,d m = \frac{1}{M} \int \rho \vec{r} \,d V.\]
 \end{itemize}
 
 \end{document}
