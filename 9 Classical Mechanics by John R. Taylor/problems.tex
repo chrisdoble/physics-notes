@@ -842,8 +842,8 @@ The particle moves in a helix oriented along the $z$-axis.
 
 \section{Momentum and Angular Momentum}
 
-\setcounter{subsubsection}{2}
-\subsubsection{}
+\setcounter{subsection}{2}
+\subsection{}
 
 \begin{align*}
   m v_0     & = \frac{m}{3} (v_1 + v_2 \cos \theta + v_3 \cos \theta)                                 \\
@@ -853,6 +853,61 @@ The particle moves in a helix oriented along the $z$-axis.
   \vec{v}_2 & = \sqrt{2} v_0 \left( \cos \frac{\pi}{4} \uvec{x} + \sin \frac{\pi}{4} \uvec{y} \right) \\
             & = v_0 (\uvec{x} + \uvec{y})                                                             \\
   \vec{v}_3 & = v_0 (\uvec{x} - \uvec{y})
+\end{align*}
+
+\setcounter{subsection}{6}
+\subsection{}
+
+\begin{align*}
+  v & = v_\text{ex} \ln \frac{m_0}{m} \\
+    & = \qty{2079}{m/s}               \\
+  F & = \qty{25}{MN}                  \\
+  W & = \qty{19.6}{MN}
+\end{align*}
+
+The thrust is $1.28$ times the weight on Earth.
+
+\setcounter{subsection}{8}
+\subsection{}
+
+\begin{align*}
+  -\dot{m} v_\text{ex} & = m_0 g                  \\
+  v_\text{ex}          & = -\frac{m_0 g}{\dot{m}} \\
+                       & = \qty{2352}{m/s}
+\end{align*}
+
+\setcounter{subsection}{10}
+\subsection{}
+
+\begin{enumerate}
+  \item \[m \dot{v} = -\dot{m} v_\text{ex} + F_\text{ext}\]
+
+  \item
+
+        \begin{align*}
+          m \dot{v}              & = -\dot{m} v_\text{ex} - m g                                        \\
+          \dot{v}                & = -\frac{v_\text{ex}}{m} \dot{m} - g                                \\
+          \int_0^t \dot{v} \,d t & = \int_0^t \left( -\frac{v_\text{ex}}{m} \dot{m} - g \right) \,d t  \\
+          \int_0^v \,d v'        & = -v_\text{ex} \int_{m_0}^m \frac{1}{m'} \,d m' - \int_0^t g \,d t' \\
+          v                      & = -v_\text{ex} \ln \frac{m}{m_0} - g t                              \\
+                                 & = v_\text{ex} \ln \frac{m_0}{m} - g t
+        \end{align*}
+
+  \item \[v = \qty{903}{m/s}\]
+
+        It would be $\qty{2079}{m/s}$ without gravity ($2.3$ times larger).
+
+  \item The rocket wouldn't take off until it was light enough (from burning fuel) that its thrust was greater than its weight.
+\end{enumerate}
+
+\setcounter{subsection}{12}
+\subsection{}
+
+\begin{align*}
+  v               & = v_\text{ex} \ln \frac{m_0}{m} - g t                                           \\
+                  & = v_\text{ex} \ln \frac{m_0}{m_0 - k t} - g t                                   \\
+  y               & = v_\text{ex} t - \frac{m v_\text{ex}}{k} \ln \frac{m_0}{m} - \frac{1}{2} g t^2 \\
+  y(\qty{2}{min}) & = \qty{40}{km}
 \end{align*}
 
 \end{document}
