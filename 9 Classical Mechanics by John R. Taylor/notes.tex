@@ -239,4 +239,24 @@
   \item The \textbf{work-kinetic-energy theorem} states that the change in a particle's kinetic energy between two points is equal to the work done by the net force on the particle between those two points \[\Delta K = \int_1^2 \vec{F} \cdot d \vec{r}.\]
 \end{itemize}
 
+\subsection{Potential Energy and Conservative Forces}
+
+\begin{itemize}
+  \item A force $\vec{F}$ acting on a particle is considered \textbf{conservative} if:
+
+        \begin{itemize}
+          \item $\vec{F}$ depends only on the particle's position $\vec{r}$ (and not on its velocity $\vec{v}$, time $t$, or any other variable), and
+
+          \item for any two points $1$ and $2$, the work done by $\vec{F}$ is the same for all paths between $1$ and $2$.
+        \end{itemize}
+
+  \item Only conservative forces have associated \textbf{potential energy} functions.
+
+  \item The potential energy function $U(\vec{r})$ of a conservative force $\vec{F}$ is defined as \[U(\vec{r}) = -\int_{\vec{r}_0}^{\vec{r}} \vec{F}(\vec{r}') \,d \vec{r}'\] where $\vec{r}_0$ is an arbitrary point at which $U(\vec{r}_0)$ is defined to be $0$.
+
+  \item The \textbf{principle of conservation of energy} states that if all the forces acting on a particle are conservative, each with its corresponding potential energy function $U_i(\vec{r})$, the \textbf{total mechanical energy} \[E = K + U = K + U_1(\vec{r}) + \cdots + U_n(\vec{r}),\] is constant in time.
+
+  \item If nonconservative forces do work then the total energy of the system changes by that amount \[\Delta E = W_\text{nc}.\]
+\end{itemize}
+
 \end{document}
