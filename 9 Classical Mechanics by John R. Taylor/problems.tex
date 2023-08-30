@@ -1210,4 +1210,52 @@ If the radius doubles the angular velocity is $\omega_0 / 32$.
         \end{align*}
 \end{enumerate}
 
+\setcounter{subsection}{20}
+\subsection{}
+
+\begin{align*}
+  \vec{F}               & = -\frac{G M m}{r^2} \uvec{r}                                                                                                                                      \\
+  \nabla \times \vec{F} & = \begin{vmatrix}
+                              \uvec{x}                    & \uvec{y}                    & \uvec{z}                    \\
+                              \frac{\partial}{\partial x} & \frac{\partial}{\partial y} & \frac{\partial}{\partial z} \\
+                              -\frac{G M m}{r^3} x        & -\frac{G M m}{r^3} y        & -\frac{G M m}{r^3} z        \\
+                            \end{vmatrix}                                                                          \\
+                        & = \left[ \frac{\partial}{\partial y} \left( -\frac{G M m}{r^3} z \right) - \frac{\partial}{\partial z} \left( -\frac{G M m}{r^3} y \right) \right] \uvec{x}        \\
+                        & \qquad - \left[ \frac{\partial}{\partial x} \left( -\frac{G M m}{r^3} z \right) - \frac{\partial}{\partial z} \left( -\frac{G M m}{r^3} x \right) \right] \uvec{y} \\
+                        & \qquad + \left[ \frac{\partial}{\partial x} \left( -\frac{G M m}{r^3} y \right) - \frac{\partial}{\partial y} \left( -\frac{G M m}{r^3} x \right) \right] \uvec{z} \\
+                        & = -G M m \left[ \left( -\frac{3 y z}{r^5} + \frac{3 y z}{r^5} \right) \uvec{x} + \left( -\frac{3 x z}{r^5} + \frac{3 x z}{r^5} \right) \uvec{y} \right.            \\
+                        & \qquad \left. \left( -\frac{3 x y}{r^5} + \frac{3 x y}{r^4} \right) \uvec{z} \right]                                                                               \\
+                        & = \vec{0}                                                                                                                                                          \\
+  U(\vec{r})            & = -\int_{\vec{\infty}}^{\vec{r}} \vec{F} \cdot d \vec{r}'                                                                                                          \\
+                        & = -\int_\infty^r -\frac{G M m}{r'^2} \,d r'                                                                                                                        \\
+                        & = G M m \left[ -\frac{1}{r'} \right]_\infty^r                                                                                                                      \\
+                        & = G M m \left( -\frac{1}{r} + \frac{1}{\infty} \right)                                                                                                             \\
+                        & = -\frac{G M m}{r}
+\end{align*}
+
+\setcounter{subsection}{22}
+\subsection{}
+
+\begin{enumerate}
+  \item
+
+        \begin{align*}
+          \nabla \times \vec{F} & = \vec{0}                                                                          \\
+          U                     & = -\int_{\vec{0}}^{\vec{r}} \vec{F} \cdot d \vec{r}                                \\
+                                & = -\left( \int_0^x k x \,d x + \int_0^y 2 k y \,d y + \int_0^z 3 k z \,d z \right) \\
+                                & = -\frac{1}{2} k (x^2 + 2 y^2 + 3 z^2)
+        \end{align*}
+
+  \item
+
+        \begin{align*}
+          \nabla \times \vec{F} & = \vec{0}                                                 \\
+          U                     & = -\int_{\vec{0}}^{\vec{r}} \vec{F} \cdot d \vec{r}       \\
+                                & = -\left( \int_0^x k y \,d x + \int_0^y k x \,d y \right) \\
+                                & = -k x y
+        \end{align*}
+
+  \item \[\nabla \times \vec{F} = 2 k \uvec{z}\] Not conservative
+\end{enumerate}
+
 \end{document}
