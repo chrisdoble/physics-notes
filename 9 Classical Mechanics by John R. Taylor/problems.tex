@@ -1072,4 +1072,43 @@ If the radius doubles the angular velocity is $\omega_0 / 32$.
         \end{align*}
 \end{enumerate}
 
+\section{Energy}
+
+\setcounter{subsection}{2}
+\subsection{}
+
+\begin{enumerate}
+  \item
+
+        \begin{align*}
+          \int_P^Q \vec{F} \cdot d \vec{r} & = \int_P^O \vec{F} \cdot d \vec{r} + \int_O^Q \vec{F} \cdot d \vec{r} \\
+                                           & = 0
+        \end{align*}
+
+  \item
+
+        \begin{align*}
+          x                                & = 1 - t                         \\
+          y                                & = t                             \\
+          \vec{r}                          & = (1 - t) \uvec{x} + t \uvec{y} \\
+          d \vec{r}                        & = (-\uvec{x} + \uvec{y}) \,d t  \\
+          \vec{F} \cdot d \vec{r}          & = (x + y) \,d t                 \\
+                                           & = [(1 - t) + 1] \,d t           \\
+                                           & = d t                           \\
+          \int_P^Q \vec{F} \cdot d \vec{r} & = \int_0^1 \,d t                \\
+                                           & = 1
+        \end{align*}
+
+  \item
+
+        \begin{align*}
+          \vec{r}                          & = \cos \phi \uvec{x} + \sin \phi \uvec{y}             \\
+          d \vec{r}                        & = (-\sin \phi \uvec{x} + \cos \phi \uvec{y}) \,d \phi \\
+          \vec{F} \cdot d \vec{r}          & = (\sin^2 \phi + \cos^2 \phi) \,d \phi                \\
+                                           & = d \phi                                              \\
+          \int_P^Q \vec{F} \cdot d \vec{r} & = \int_0^{\pi / 2} d \phi                             \\
+                                           & = \frac{\pi}{2}
+        \end{align*}
+\end{enumerate}
+
 \end{document}
