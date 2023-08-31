@@ -1334,4 +1334,55 @@ If the radius doubles the angular velocity is $\omega_0 / 32$.
         There is a position of equilibrium at $\phi = \arcsin \frac{m}{M}$. It is stable if $\phi < \frac{\pi}{2}$, i.e. $m < M$.
 \end{enumerate}
 
+\setcounter{subsection}{50}
+\subsection{}
+
+\begin{align*}
+  U(\vec{r}_1, \vec{r}_2, \vec{r}_3, \vec{r}_4) & = U_\text{int} + U_\text{ext}                                                                                                    \\
+                                                & = [U_{12}(\vec{r}_1 - \vec{r}_2) + U_{13}(\vec{r}_1 - \vec{r}_3) + U_{14}(\vec{r}_1 - \vec{r}_4) + U_{23}(\vec{r}_2 - \vec{r}_3) \\
+                                                & \qquad + U_{24}(\vec{r}_2 - \vec{r}_4) + U_{34}(\vec{r}_3 - \vec{r}_4)] + [U_1(\vec{r}_1) + U_2(\vec{r}_2) + U_3(\vec{r}_3)      \\
+                                                & \qquad + U_4(\vec{r}_4)]                                                                                                         \\
+  \vec{F}_3                                     & = \vec{F}_{3 \text{,int}} + \vec{F}_{3 \text{,ext}}                                                                              \\
+                                                & = [\vec{F}_{13} + \vec{F}_{23} + \vec{F}_{34}] + \vec{F}_{3 \text{,ext}}                                                         \\
+                                                & = -\nabla_3 U_{13} - \nabla_3 U_{23} - \nabla_3 U_{34} - \nabla_3 U_{3 \text{,ext}}                                              \\
+                                                & = -\nabla_3 U
+\end{align*}
+
+\setcounter{subsection}{52}
+\subsection{}
+
+\begin{enumerate}
+  \item
+
+        \begin{align*}
+          F                 & = m a               \\
+          \frac{k e^2}{r^2} & = m \frac{v^2}{r}   \\
+          v^2               & = \frac{k e^2}{m r} \\
+          K                 & = \frac{1}{2} m v^2 \\
+                            & = \frac{k e^2}{2 r} \\
+          U                 & = -\frac{k e^2}{r}  \\
+          K                 & = -\frac{1}{2} U
+        \end{align*}
+
+  \item
+
+        \begin{align*}
+          E & = K_1 + K_2 + U_{1 2} + U_{1 p} + U_{2 p}                                                                            \\
+            & = \frac{1}{2} m v_1^2 + \frac{1}{2} m v_2^2 - k e^2 \left( \frac{1}{r_1} + \frac{1}{r_2} - \frac{1}{r_{1 2}} \right)
+        \end{align*}
+
+  \item
+
+        \begin{align*}
+          E_\text{before}         & = K_1 + K_2 + U_1 + U_2 + U_{1 2}                                 \\
+                                  & = T_2 + \frac{k e^2}{2 r} - \frac{k e^2}{r}                       \\
+                                  & = T_2 - \frac{k e^2}{2 r}                                         \\ \\
+          E_\text{after}          & = K_1' + K_2' + U_1 + U_2 + U_{1 2}                               \\
+                                  & = T_1' + \frac{k e^2}{2 r'} - \frac{k e^2}{r'}                    \\
+                                  & = T_1' - \frac{k e^2}{2 r'}                                       \\
+          T_2 - \frac{k e^2}{2 r} & = T_1' - \frac{k e^2}{2 r'}                                       \\
+          T_1'                    & = T_2 + \frac{k e^2}{2} \left( \frac{1}{r'} - \frac{1}{r} \right)
+        \end{align*}
+\end{enumerate}
+
 \end{document}
