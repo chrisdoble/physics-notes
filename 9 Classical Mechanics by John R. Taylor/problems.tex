@@ -1276,4 +1276,62 @@ If the radius doubles the angular velocity is $\omega_0 / 32$.
   \item $\tau \approx \qty{3.71}{s}$
 \end{enumerate}
 
+\setcounter{subsection}{30}
+\subsection{}
+
+\begin{enumerate}
+  \item \[E = \frac{1}{2} (m_1 + m_2) \dot{x}^2 + (m_2 - m_1) g x\]
+
+  \item
+
+        \begin{align*}
+          (m_1 + m_2) \ddot{x} & = (m_1 - m_2) g                                        \\ \\
+          c                    & = \frac{1}{2} (m_1 + m_2) \dot{x}^2 + (m_2 - m_1) g x  \\
+          0                    & = (m_1 + m_2) \dot{x} \ddot{x} + (m_2 - m_1) g \dot{x} \\
+          (m_1 + m_2) \ddot{x} & = (m_1 - m_2) g
+        \end{align*}
+\end{enumerate}
+
+\setcounter{subsection}{34}
+\subsection{}
+
+\begin{enumerate}
+  \item \[E = \frac{1}{2} \left( m_1 + m_2 + \frac{I}{R^2} \right) \dot{x}^2 + (m_2 - m_1) g x\]
+
+  \item
+
+        \begin{align*}
+          0                                                 & = \left( m_1 + m_2 + \frac{I}{R^2} \right) \dot{x} \ddot{x} + (m_2 - m_1) g \dot{x} \\
+          \left( m_1 + m_2 + \frac{I}{R^2} \right) \ddot{x} & = (m_1 - m_2) g                                                                     \\ \\
+          m_1 \ddot{x}                                      & = m_1 g - T_2                                                                       \\
+          T_2                                               & = m_1 g - m_1 \ddot{x}                                                              \\ \\
+          m_2 \ddot{x}                                      & = T_1 - m_2 g                                                                       \\
+          T_1                                               & = m_2 \ddot{x} + m_2 g                                                              \\ \\
+          \omega                                            & = -\frac{\dot{x}}{R}                                                                \\
+          \dot{\omega}                                      & = -\frac{\ddot{x}}{R}                                                               \\ \\
+          I \dot{\omega}                                    & = (T_1 - T_2) R                                                                     \\
+          -I \frac{\ddot{x}}{R}                             & = \left( m_2 \ddot{x} + m_2 g - m_1 g - m_1 \ddot{x} \right) R                      \\
+          \left( m_1 + m_2 + \frac{I}{R^2} \right) \ddot{x} & = (m_1 - m_2) g
+        \end{align*}
+\end{enumerate}
+
+\setcounter{subsection}{36}
+\subsection{}
+
+\begin{enumerate}
+  \item \[U(\phi) = M g R (1 - \cos \phi) - m g R \phi\]
+
+  \item
+
+        \begin{align*}
+          \frac{d U(\phi)}{d \phi}     & = M g R \sin \phi - m g R \\
+                                       & = g R (M \sin \phi - m)   \\
+          0                            & = g R (M \sin \phi - m)   \\
+          m                            & = M \sin \phi             \\ \\
+          \frac{d^2 U(\phi)}{d \phi^2} & = M g R \cos \phi
+        \end{align*}
+
+        There is a position of equilibrium at $\phi = \arcsin \frac{m}{M}$. It is stable if $\phi < \frac{\pi}{2}$, i.e. $m < M$.
+\end{enumerate}
+
 \end{document}
