@@ -1483,4 +1483,28 @@ If the radius doubles the angular velocity is $\omega_0 / 32$.
                       & = \sqrt{\frac{2 U_0}{\lambda m R^2}}
 \end{align*}
 
+\setcounter{subsection}{16}
+\subsection{}
+
+\begin{enumerate}
+  \item
+
+        \begin{align*}
+          x(t)                       & = A_x \cos \omega_x t                                                                 \\
+          y(t)                       & = A_y \cos (\omega_y t - \delta)                                                      \\
+          \frac{\omega_x}{\omega_y}  & = \frac{p}{q}                                                                         \\
+          \omega_x \tau              & = 2 \pi p                                                                             \\
+          \omega_y \tau              & = 2 \pi q                                                                             \\
+          (\omega_x + \omega_y) \tau & = 2 \pi (p + q)                                                                       \\
+          \tau                       & = \frac{2 \pi (p + q)}{\omega_x + \omega_y}                                           \\
+          x(\tau)                    & = A_x \cos \left( \omega_x \frac{2 \pi (p + q)}{\omega_x + \omega_y} \right)          \\
+                                     & = A_x \cos \left( \frac{2 \pi (p + q)}{1 + \omega_y / \omega_x} \right)               \\
+                                     & = A_x \cos \left( \frac{2 \pi (p + q)}{1 + q / p} \right)                             \\
+                                     & = A_x \cos \left( 2 \pi \frac{p (p + q)}{p + q} \right)                               \\
+          y(\tau)                    & = A_y \cos \left( \omega_y \frac{2 \pi (p + q)}{\omega_x + \omega_y} - \delta \right) \\
+                                     & = A_y \cos \left( 2 \pi \frac{p + q}{1 + \omega_x / \omega_y} - \delta \right)        \\
+                                     & = A_y \cos \left( 2 \pi \frac{q (p + q)}{p + q} - \delta \right)
+        \end{align*}
+\end{enumerate}
+
 \end{document}
