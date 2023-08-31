@@ -11,6 +11,7 @@
 \newcommand{\uvec}[1]{\hat{\vec{#1}}}
 \newcommand{\arcsinh}{\operatorname{arcsinh}}
 \newcommand{\arctanh}{\operatorname{arctanh}}
+\renewcommand{\Re}{\operatorname{Re}}
 
 \setlist[enumerate, 1]{label={(\alph*)}}
 \setlist[enumerate, 2]{label={(\roman*)}}
@@ -1395,6 +1396,91 @@ If the radius doubles the angular velocity is $\omega_0 / 32$.
           & \approx m g l \left( 1 - 1 + \frac{1}{2} \phi^2 \right) \\
           & = \frac{1}{2} m g l \phi^2                              \\
   k       & = m g l
+\end{align*}
+
+\setcounter{subsection}{4}
+\subsection{}
+
+\begin{align*}
+  x(t)   & = C_1 e^{i \omega t} + C_2 e^{-i \omega t}                                      \\
+         & = C_1 (\cos \omega t + i \sin \omega t) + C_2 (\cos \omega t - i \sin \omega t) \\
+         & = (C_1 + C_2) \cos \omega t + i (C_1 - C_2) \sin \omega t                       \\
+         & = B_1 \cos \omega t + B_2 \sin \omega t                                         \\
+  B_1    & = C_1 + C_2                                                                     \\
+  B_2    & = i (C_1 - C_2)                                                                 \\ \\
+  x(t)   & = A \cos (\omega t - \delta)                                                    \\
+  A      & = \sqrt{B_1^2 + B_2^2}                                                          \\
+  \delta & = \arctan \frac{B_2}{B_1}                                                       \\ \\
+  x(t)   & = C \Re e^{\omega t}                                                            \\
+  C      & = A e^{-i \delta}
+\end{align*}
+
+\setcounter{subsection}{6}
+\subsection{}
+
+\begin{enumerate}
+  \item $B_1 = x_0$, $B_2 = \frac{v_0}{\omega}$
+
+  \item
+
+        \begin{align*}
+          \omega & = \sqrt{\frac{k}{m}} \\
+                 & = \qty{10}{rad/s}    \\
+          B_1    & = \qty{3.0}{m}       \\
+          B_2    & = \qty{5.0}{m}
+        \end{align*}
+
+  \item $x = \qty{0}{m}$ at $t = \qty{0.26}{s}$, $\dot{x} = \qty{0}{m/s}$ at $t = \qty{0.10}{s}$.
+\end{enumerate}
+
+\setcounter{subsection}{8}
+\subsection{}
+
+\begin{align*}
+  \frac{1}{2} k A^2 & = \frac{1}{2} m v^2            \\
+  \frac{k}{m}       & = \left( \frac{v}{A} \right)^2 \\
+  \tau              & = \frac{2 \pi}{\omega}         \\
+                    & = \frac{2 \pi}{\sqrt{k / m}}   \\
+                    & = \frac{2 \pi}{v / A}          \\
+                    & = \qty{1.05}{s}
+\end{align*}
+
+\setcounter{subsection}{10}
+\subsection{}
+
+\begin{align*}
+  \frac{1}{2} k x_1^2 + \frac{1}{2} m v_1^2 & = \frac{1}{2} k x_2^2 + \frac{1}{2} m v_2^2                                  \\
+  k x_1^2 + m v_1^2                         & = k x_2^2 + m v_2^2                                                          \\
+  \frac{k}{m} x_1^2 + v_1^2                 & = \frac{k}{m} x_2^2 + v_2^2                                                  \\
+  \omega^2 (x_1^2 - x_2^2)                  & = v_2^2 - v_1^2                                                              \\
+  \omega                                    & = \sqrt{\frac{v_2^2 - v_1^2}{x_1^2 - x_2^2}}                                 \\ \\
+  \frac{1}{2} k A^2                         & = \frac{1}{2} k x_1^2 + \frac{1}{2} m v_1^2                                  \\
+  A^2                                       & = x_1^2 + \frac{m}{k} v_1^2                                                  \\
+  A                                         & = \sqrt{x_1^2 + \frac{v_1^2}{\omega^2}}                                      \\
+                                            & = \sqrt{x_1^2 + v_1^2 \frac{x_1^2 - x_2^2}{v_2^2 - v_1^2}}                   \\
+                                            & = \sqrt{\frac{x_1^2 (v_2^2 - v_1^2) + v_1^2 (x_1^2 - x_2^2)}{v_2^2 - v_1^2}} \\
+                                            & = \sqrt{\frac{x_2^2 v_1^2 - x_1^2 v_2^2}{v_1^2 - v_2^2}}
+\end{align*}
+
+\setcounter{subsection}{12}
+\subsection{}
+
+\begin{align*}
+  U(r)                & = U_0 \left( \frac{r}{R} + \lambda^2 \frac{R}{r} \right)                                                                                  \\
+  \frac{d U(r)}{d r}  & = U_0 \left( \frac{1}{R} - \lambda^2 \frac{R}{r^2} \right)                                                                                \\
+  0                   & = \frac{d U(r_0)}{d r}                                                                                                                    \\
+                      & = U_0 \left( \frac{1}{R} - \lambda^2 \frac{R}{r_0^2} \right)                                                                              \\
+  \frac{1}{R}         & = \lambda^2 \frac{R}{r_0^2}                                                                                                               \\
+  r_0                 & = \lambda R                                                                                                                               \\ \\
+  U(r_0 + x) - U(r_0) & = U_0 \left( \frac{r_0 + x}{R} + \lambda^2 \frac{R}{r_0 + x} \right) - U_0 \left( \frac{r_0}{R} + \lambda^2 \frac{R}{r_0} \right)         \\
+                      & = U_0 \left[ \frac{1}{R} x + \lambda^2 R \left( \frac{1}{r_0 + x} - \frac{1}{r_0} \right) \right]                                         \\
+                      & \approx U_0 \left[ \frac{1}{R} x + \lambda^2 R \left( \frac{1}{r_0} - \frac{x}{r_0^2} + \frac{x^2}{r_0^3} - \frac{1}{r_0} \right) \right] \\
+                      & = U_0 \left[ \frac{1}{R} x + \lambda^2 R \left( \frac{x^2}{r_0^3} - \frac{x}{r_0^2} \right) \right]                                       \\
+                      & = U_0 \left[ \frac{1}{R} x + \lambda^2 R \left( \frac{x^2}{(\lambda R)^3} - \frac{x}{(\lambda R)^2} \right) \right]                       \\
+                      & = \frac{U_0 x^2}{\lambda R^2}                                                                                                             \\
+                      & = \frac{1}{2} \left( \frac{2 U_0}{\lambda R^2} \right) x^2                                                                                \\ \\
+  \omega              & = \sqrt{\frac{k}{m}}                                                                                                                      \\
+                      & = \sqrt{\frac{2 U_0}{\lambda m R^2}}
 \end{align*}
 
 \end{document}
