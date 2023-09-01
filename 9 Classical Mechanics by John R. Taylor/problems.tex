@@ -1507,4 +1507,64 @@ If the radius doubles the angular velocity is $\omega_0 / 32$.
         \end{align*}
 \end{enumerate}
 
+\setcounter{subsection}{22}
+\subsection{}
+
+\begin{align*}
+  \frac{d E}{d t} & = m \dot{x} \ddot{x} + k x \dot{x} \\
+                  & = \dot{x} (m \ddot{x} + k x)       \\
+                  & = -b \dot{x}^2
+\end{align*}
+
+\setcounter{subsection}{24}
+\subsection{}
+
+\begin{enumerate}
+  \item \[\tau = \frac{2 \pi}{\omega_1}\]
+
+  \item
+
+        \begin{align*}
+          0 & = A e^{-\beta t} \cos \omega_1 t                           \\
+            & = \cos \omega_1 t                                          \\
+          t & = \frac{\frac{\pi}{2} + n \pi}{\omega_1}, n \in \mathbb{Z} \\
+        \end{align*}
+
+        The time between successive zeroes is $\pi / \omega_1$. The period $\tau$ is twice this.
+
+  \item
+
+        \begin{align*}
+          e^{-\beta \tau} & = e^{-(\omega_0 / 2) (2 \pi / \omega_1)}                   \\
+                          & = e^{-\pi \omega_0 / \omega_1}                             \\
+                          & = e^{-\pi \omega_0 / \sqrt{\omega_0^2 - (\omega_0 / 2)^2}} \\
+                          & = e^{-\pi \omega_0 / \sqrt{3 \omega_0^2 / 4}}              \\
+                          & = e^{-\pi \sqrt{4 / 3}}                                    \\
+                          & \approx 0.027
+        \end{align*}
+\end{enumerate}
+
+\setcounter{subsection}{28}
+\subsection{}
+
+\begin{align*}
+  \tau_0                                      & = \qty{1}{s}                                                              \\
+  \omega_0                                    & = 2 \pi f                                                                 \\
+                                              & = \frac{2 \pi}{\tau}                                                      \\
+                                              & = 2 \pi \,\unit{rad/s}                                                    \\
+  \frac{1}{2}                                 & = e^{-\beta \tau_1}                                                       \\
+                                              & = e^{-2 \pi \beta / \omega_1}                                             \\
+                                              & = e^{-2 \pi \beta / \sqrt{\omega_0^2 - \beta^2}}                          \\
+  \ln \frac{1}{2}                             & = -\frac{2 \pi \beta}{\sqrt{\omega_0^2 - \beta^2}}                        \\
+  \sqrt{\omega_0^2 - \beta^2} \ln \frac{1}{2} & = -2 \pi \beta                                                            \\
+  (\omega_0^2 - \beta^2) \ln^2 \frac{1}{2}    & = 4 \pi^2 \beta^2                                                         \\
+  \omega_0^2 \ln^2 \frac{1}{2}                & = \left( 4 \pi^2 + \ln^2 \frac{1}{2} \right) \beta^2                      \\
+  \beta                                       & = \pm \frac{\ln \frac{1}{2}}{\sqrt{4 \pi^2 + \ln^2 \frac{1}{2}}} \omega_0 \\
+                                              & \approx 0.11 \omega_0                                                     \\
+  \tau_1                                      & = \frac{2 \pi}{\omega_1}                                                  \\
+                                              & = \frac{2 \pi}{\sqrt{\omega_0^2 - \beta^2}}                               \\
+                                              & = \frac{2 \pi}{\sqrt{\omega_0^2 - 0.0121 \omega_0^2}}                     \\
+                                              & \approx \qty{1.006}{s}
+\end{align*}
+
 \end{document}
