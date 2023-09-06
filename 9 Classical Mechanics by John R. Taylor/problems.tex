@@ -11,6 +11,7 @@
 \newcommand{\uvec}[1]{\hat{\vec{#1}}}
 \newcommand{\arcsinh}{\operatorname{arcsinh}}
 \newcommand{\arctanh}{\operatorname{arctanh}}
+\newcommand{\crd}{\operatorname{crd}}
 \renewcommand{\Re}{\operatorname{Re}}
 
 \setlist[enumerate, 1]{label={(\alph*)}}
@@ -1583,5 +1584,89 @@ If the radius doubles the angular velocity is $\omega_0 / 32$.
 
   \item \[\qty{5}{m/s} \approx \qty{18}{km/h}\]
 \end{enumerate}
+
+\section{Calculus of Variations}
+
+\setcounter{subsection}{4}
+\subsection{}
+
+\begin{align*}
+  |AP|                                                 & = \frac{|AB|}{2} \crd \left( \frac{\pi}{2} - \theta \right)                                                                                                \\
+                                                       & = \frac{|AB|}{2} 2 \sin \left( \frac{\frac{\pi}{2} - \theta}{2} \right)                                                                                    \\
+                                                       & = |AB| \sin \left( \frac{\pi}{4} - \frac{\theta}{2} \right)                                                                                                \\ \\
+  |PB|                                                 & = \frac{|AB|}{2} \crd \left( \frac{\pi}{2} + \theta \right)                                                                                                \\
+                                                       & = \frac{|AB|}{2} 2 \sin \left( \frac{\frac{\pi}{2} + \theta}{2} \right)                                                                                    \\
+                                                       & = |AB| \sin \left( \frac{\pi}{4} + \frac{\theta}{2} \right)                                                                                                \\ \\
+  S                                                    & = |AP| + |PB|                                                                                                                                              \\
+                                                       & = |AB| \left[ \sin \left( \frac{\pi}{4} - \frac{\theta}{2} \right) + \sin \left( \frac{\pi}{4} + \frac{\theta}{2} \right) \right]                          \\ \\
+  \frac{d S}{d \theta}                                 & = |AB| \left[ -\frac{1}{2} \cos \left( \frac{\pi}{4} - \frac{\theta}{2} \right) + \frac{1}{2} \cos \left( \frac{\pi}{4} + \frac{\theta}{2} \right) \right] \\
+                                                       & = \frac{1}{2} |AB| \left[ \cos \left( \frac{\pi}{4} + \frac{\theta}{2} \right) - \cos \left( \frac{\pi}{4} - \frac{\theta}{2} \right) \right]              \\ \\
+  \frac{d S}{d \theta}                                 & = 0                                                                                                                                                        \\
+  \frac{\pi}{4} + \frac{\theta}{2}                     & = \frac{\pi}{4} - \frac{\theta}{2}                                                                                                                         \\
+  \theta                                               & = 0                                                                                                                                                        \\ \\
+  \frac{d^2 S}{d \theta^2}                             & = -\frac{1}{4} |AB| \left[ \sin \left( \frac{\pi}{4} - \frac{\theta}{2} \right) + \sin \left( \frac{\pi}{4} + \frac{\theta}{2} \right) \right]             \\
+  \left. \frac{d^2 S}{d \theta^2} \right|_{\theta = 0} & = -\frac{\sqrt{2}}{4} |AB|
+\end{align*}
+
+$\frac{d S}{d \theta} = 0$ and $\frac{d^2 S}{d \theta^2} < 0$ at $\theta = 0$ so it is a maximum.
+
+\setcounter{subsection}{6}
+\subsection{}
+
+\begin{align*}
+  S                                                                                  & = \int_P^Q \,dS                                                                   \\
+                                                                                     & = \int_P^Q \sqrt{(R \,d \phi)^2 + (d z)^2}                                        \\
+                                                                                     & = \int_{z_1}^{z_2} \sqrt{1 + \left( R \frac{d \phi}{d z} \right)^2} \,d z         \\
+  f \left( z, \phi, \frac{d \phi}{d z} \right)                                       & = \sqrt{1 + \left( R \frac{d \phi}{d z} \right)^2}                                \\
+  \frac{\partial f}{\partial \phi}                                                   & = 0                                                                               \\
+  \frac{\partial f}{\partial \phi'}                                                  & = \frac{R^2 \frac{d \phi}{d z}}{\sqrt{1 + \left( R \frac{d \phi}{d z} \right)^2}} \\
+  \frac{\partial f}{\partial \phi} - \frac{d}{d z} \frac{\partial f}{\partial \phi'} & = 0                                                                               \\
+  \frac{R^2 \frac{d \phi}{d z}}{\sqrt{1 + \left( R \frac{d \phi}{d z} \right)^2}}    & = c_1                                                                             \\
+  R^4 \left( \frac{d \phi}{d z} \right)^2                                            & = c_1 \left[ 1 + \left( R \frac{d \phi}{d z} \right)^2 \right]                    \\
+  (R^4 - c_1 R^2) \left( \frac{d \phi}{d z} \right)^2                                & = c_1                                                                             \\
+  \frac{d \phi}{d z}                                                                 & = \sqrt{\frac{c_1}{R^4 - c_1 R^2}}                                                \\
+                                                                                     & = c_2                                                                             \\
+  \phi                                                                               & = c_2 z + c_3
+\end{align*}
+
+\setcounter{subsection}{8}
+\subsection{}
+
+\begin{align*}
+  f(x, y, y')                                                                  & = y'^2 + y y' + y^2                                  \\
+  \frac{\partial f}{\partial y}                                                & = y' + 2 y                                           \\
+  \frac{\partial f}{\partial y'}                                               & = 2 y' + y                                           \\
+  \frac{d}{d x} \frac{\partial f}{\partial y'}                                 & = 2 y'' + y'                                         \\
+  \frac{\partial f}{\partial y} - \frac{d}{d x} \frac{\partial f}{\partial y'} & = 0                                                  \\
+  y' + 2 y - 2 y'' - y'                                                        & = 0                                                  \\
+  y''                                                                          & = y                                                  \\
+  y                                                                            & = c_1 e^x + c_2 e^{-x}                               \\
+  y(0)                                                                         & = 0                                                  \\
+                                                                               & = c_1 + c_2                                          \\
+  y(1)                                                                         & = 1                                                  \\
+                                                                               & = c_1 e + c_2 e^{-1}                                 \\
+  1                                                                            & = -c_2 e + c_2 e^{-1}                                \\
+                                                                               & = c_2 (e^{-1} - e)                                   \\
+  c_2                                                                          & = \frac{1}{e^{-1} - e}                               \\
+  c_1                                                                          & = \frac{1}{e - e^{-1}}                               \\
+  y                                                                            & = \frac{e^x}{e - e^{-1}} + \frac{e^{-x}}{e^{-1} - e} \\
+                                                                               & = \frac{e^x - e^{-x}}{e - e^{-1}}                    \\
+                                                                               & = \frac{\sinh x}{\sinh 1}
+\end{align*}
+
+\setcounter{subsection}{10}
+\subsection{}
+
+\begin{align*}
+  f(x, y, y')                                                                  & = \sqrt{x (1 + y'^2)}                    \\
+  \frac{\partial f}{\partial y}                                                & = 0                                      \\
+  \frac{\partial f}{\partial y'}                                               & = \frac{\sqrt{x} y'}{\sqrt{1 + y'^2}}    \\
+  \frac{\partial f}{\partial y} - \frac{d}{d x} \frac{\partial f}{\partial y'} & = 0                                      \\
+  \frac{\sqrt{x} y'}{\sqrt{1 + y'^2}}                                          & = c_1                                    \\
+  x y'^2                                                                       & = c_1 (1 + y'^2)                         \\
+  (x - c_1) y'^2                                                               & = c_1                                    \\
+  y'                                                                           & = \sqrt{\frac{c_1}{x - c_1}}             \\
+  y                                                                            & = 2 c_1 \sqrt{\frac{x - c_1}{c_1}} + c_2
+\end{align*}
 
 \end{document}

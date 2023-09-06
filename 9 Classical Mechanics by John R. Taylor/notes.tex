@@ -327,4 +327,23 @@
         \end{align*}
 \end{itemize}
 
+\section{Calculus of Variations}
+
+\begin{itemize}
+  \item A \textbf{functional} is a mapping from a space $X$ to the real or complex numbers. When $X$ is the space of functions a functional is a ``function of a function'', i.e. it takes a function as an argument.
+
+  \item The goal of the \textbf{calculus of variations} is to find maxima and minima of functionals, i.e. functions that maximise or minimise the value of the functional. This is analogous to finding real numbers that maximise or minimise a function in single-variable calculus.
+
+  \item A functional of the form \[S = \int_{x_1}^{x_2} f[x, y(x), y'(x)] \,dx\] can be solved using the \textbf{Euler-Lagrange equation} \[\frac{\partial f}{\partial y} - \frac{d}{d x} \frac{\partial f}{\partial y'} = 0.\]
+
+  \item A solution to the Euler-Lagrange equation isn't guaranteed to be a minimum — it could be a maximum or an inflection point, as in single-variable calculus. In general it's difficult to determine the nature of a given solution so other methods (e.g. inspection) must be used.
+
+  \item A functional with multiple functions as arguments, e.g. \[S = \int_{t_1}^{t_2} f[t, x(t), x'(t), y(t), y'(t)] \,dt,\] results in a Euler-Lagrange equation for each function, e.g. \begin{align*}
+          \frac{\partial f}{\partial x} - \frac{d}{d t} \frac{\partial f}{\partial x'} & = 0  \\
+          \frac{\partial f}{\partial y} - \frac{d}{d t} \frac{\partial f}{\partial y'} & = 0.
+        \end{align*} These can then be solved as above.
+
+  \item Under Lagrangian mechanics, the independent variable is time $t$ and the dependent variable(s) depend on the system under consideration. In general they're denoted $q_1, q_2, \ldots, q_n$ and are called \textbf{generalized coordinates}.
+\end{itemize}
+
 \end{document}
