@@ -8,6 +8,7 @@
 
 \renewcommand{\vec}[1]{\boldsymbol{\mathbf{#1}}}
 \newcommand{\dvec}[1]{\dot{\vec{#1}}}
+\newcommand{\ddvec}[1]{\ddot{\vec{#1}}}
 \newcommand{\uvec}[1]{\hat{\vec{#1}}}
 \newcommand{\arcsinh}{\operatorname{arcsinh}}
 \newcommand{\arctanh}{\operatorname{arctanh}}
@@ -1667,6 +1668,372 @@ $\frac{d S}{d \theta} = 0$ and $\frac{d^2 S}{d \theta^2} < 0$ at $\theta = 0$ so
   (x - c_1) y'^2                                                               & = c_1                                    \\
   y'                                                                           & = \sqrt{\frac{c_1}{x - c_1}}             \\
   y                                                                            & = 2 c_1 \sqrt{\frac{x - c_1}{c_1}} + c_2
+\end{align*}
+
+\section{Lagrange's Equations}
+
+\subsection{}
+
+\begin{align*}
+  K           & = \frac{1}{2} m \vec{v}^2                                   \\
+              & = \frac{1}{2} m (\dot{x}^2 + \dot{y}^2 + \dot{z}^2)         \\
+  U           & = m g z                                                     \\
+  \mathcal{L} & = K - U                                                     \\
+              & = \frac{1}{2} m (\dot{x}^2 + \dot{y}^2 + \dot{z}^2) - m g z \\
+  F_x         & = \frac{\partial \mathcal{L}}{\partial x}                   \\
+              & = 0                                                         \\
+  F_y         & = \frac{\partial \mathcal{L}}{\partial y}                   \\
+              & = 0                                                         \\
+  F_z         & = \frac{\partial \mathcal{L}}{\partial z}                   \\
+              & = -m g
+\end{align*}
+
+\setcounter{subsection}{2}
+\subsection{}
+
+\begin{align*}
+  \mathcal{L}                             & = K - U                                                             \\
+                                          & = \frac{1}{2} m (\dot{x}^2 + \dot{y}^2) - \frac{1}{2} k (x^2 + y^2) \\ \\
+  \frac{\partial \mathcal{L}}{\partial x} & = \frac{d}{d t} \frac{\partial \mathcal{L}}{\partial \dot{x}}       \\
+  m \ddot{x}                              & = -k x                                                              \\ \\
+  \frac{\partial \mathcal{L}}{\partial y} & = \frac{d}{d t} \frac{\partial \mathcal{L}}{\partial \dot{y}}       \\
+  m \ddot{y}                              & = -k y
+\end{align*}
+
+The mass is a harmonic oscillator in each dimension.
+
+\setcounter{subsection}{4}
+\subsection{}
+
+\begin{align*}
+  d f               & = \frac{\partial f}{\partial r} \,d r + \frac{\partial f}{\partial \theta} \,d \theta             \\
+  d \vec{r}         & = d r + r \,d \theta                                                                              \\
+  d f               & = \nabla f \cdot d \vec{r}                                                                        \\
+                    & = (\nabla f)_r \,d r + (\nabla f)_\theta r \,d \theta                                             \\
+  (\nabla f)_r      & = \frac{\partial f}{\partial r}                                                                   \\
+  (\nabla f)_\theta & = \frac{1}{r} \frac{\partial f}{\partial \theta}                                                  \\
+  \nabla f          & = \frac{\partial f}{\partial r} \,d r + \frac{1}{r} \frac{\partial f}{\partial \theta} \,d \theta
+\end{align*}
+
+\setcounter{subsection}{6}
+\subsection{}
+
+\begin{enumerate}
+  \item \[m_i \ddvec{r}_i = -\nabla U_i\]
+
+  \item \[\mathcal{L}({\vec{r}_1, \ldots, \vec{r}_n, \dvec{r}_1, \ldots, \dvec{r}_n}) = \frac{1}{2} m_1 \dot{r}_1^2 + \ldots + \frac{1}{2} m_n \dot{r}_n^2 - U(\vec{r}_1, \ldots, \vec{r}_n)\]
+\end{enumerate}
+
+\setcounter{subsection}{8}
+\subsection{}
+
+\begin{align*}
+  x    & = R \cos \phi         \\
+  y    & = R \sin \phi         \\
+  \phi & = \arctan \frac{y}{x}
+\end{align*}
+
+\setcounter{subsection}{10}
+\subsection{}
+
+\begin{align*}
+  x    & = A \cos \omega t + l \sin \phi         \\
+  y    & = l \cos \phi                           \\
+  \phi & = \arctan \frac{x - A \cos \omega t}{y}
+\end{align*}
+
+\setcounter{subsection}{14}
+\subsection{}
+
+\begin{align*}
+  \mathcal{L}                             & = K - U                                                       \\
+                                          & = \frac{1}{2} (m_1 + m_2) \dot{x}^2 + m_2 g x                 \\
+  \frac{\partial \mathcal{L}}{\partial x} & = \frac{d}{d t} \frac{\partial \mathcal{L}}{\partial \dot{x}} \\
+  (m_1 + m_2) \ddot{x}                    & = m_2 g                                                       \\
+  \ddot{x}                                & = \frac{m_2}{m_1 + m_2} g
+\end{align*}
+
+\setcounter{subsection}{16}
+\subsection{}
+
+\begin{align*}
+  \mathcal{L}                             & = K - U                                                                                                \\
+                                          & = \frac{1}{2} m_1 \dot{x}^2 + \frac{1}{2} I \omega^2 + \frac{1}{2} m_2 \dot{x}^2 - (m_2 g x - m_1 g x) \\
+                                          & = \frac{1}{2} \left( m_1 + m_2 + \frac{I}{R^2} \right) \dot{x}^2 + (m_1 - m_2) g x                     \\
+  \frac{\partial \mathcal{L}}{\partial x} & = \frac{d}{d t} \frac{\partial \mathcal{L}}{\partial \dot{x}}                                          \\
+  (m_1 - m_2) g                           & = \left( m_1 + m_2 + \frac{I}{R^2} \right) \ddot{x}                                                    \\
+  \ddot{x}                                & = \frac{(m_1 - m_2) g}{m_1 + m_2 + \frac{I}{R^2}}
+\end{align*}
+
+\setcounter{subsection}{20}
+\subsection{}
+
+\begin{align*}
+  \mathcal{L}                             & = K - U                                                       \\
+                                          & = \frac{1}{2} m v^2                                           \\
+                                          & = \frac{1}{2} m [\dot{r}^2 + (r \dot{\phi})^2]                \\
+                                          & = \frac{1}{2} m (\dot{r}^2 + r^2 \omega^2)                    \\
+  \frac{\partial \mathcal{L}}{\partial r} & = \frac{d}{d t} \frac{\partial \mathcal{L}}{\partial \dot{r}} \\
+  m \ddot{r}                              & = m r \omega^2                                                \\
+  \ddot{r}                                & = r \omega^2                                                  \\
+  r                                       & = c_1 e^{\omega t} + c_2 e^{-\omega t}
+\end{align*}
+
+If the bead is initially at rest at the origin
+\begin{align*}
+  0   & = c_1 + c_2               \\
+  0   & = c_1 \omega - c_2 \omega \\
+      & = c_1 - c_2               \\
+  c_1 & = 0                       \\
+  c_2 & = 0
+\end{align*}
+thus the bead stays at the origin.
+
+If it is released from a point $r_0 > 0$
+\begin{align*}
+  r_0 & = c_1 + c_2                                    \\
+  0   & = c_1 - c_2                                    \\
+  c_1 & = c_2                                          \\
+      & = \frac{r_0}{2}                                \\
+  r   & = \frac{r_0}{2} (e^{\omega t} + e^{-\omega t})
+\end{align*}
+$r$ eventually grows as $\frac{r_0}{2} e^{\omega t}$.
+
+\setcounter{subsection}{22}
+\subsection{}
+
+\begin{align*}
+  K                                       & = \frac{1}{2} m v^2                                                                                               \\
+                                          & = \frac{1}{2} m (\dot{x} + \dot{X})^2                                                                             \\
+                                          & = \frac{1}{2} m (\dot{x} - A \omega \sin \omega t)^2                                                              \\
+                                          & = \frac{1}{2} m (\dot{x}^2 - 2 \dot{x} A \omega \sin \omega t + A^2 \omega^2 \sin^2 \omega t)                     \\
+  U                                       & = \frac{1}{2} k x^2                                                                                               \\
+  \mathcal{L}                             & = K - U                                                                                                           \\
+                                          & = \frac{1}{2} m (\dot{x}^2 - 2 \dot{x} A \omega \sin \omega t + A^2 \omega^2 \sin^2 \omega t) - \frac{1}{2} k x^2 \\
+  \frac{\partial \mathcal{L}}{\partial x} & = \frac{d}{d t} \frac{\partial \mathcal{L}}{\partial \dot{x}}                                                     \\
+  -k x                                    & = \frac{d}{d t} \left[ \frac{1}{2} m \left( 2 \dot{x} - 2 A \omega \sin \omega t \right) \right]                  \\
+                                          & = m \ddot{x} - A m \omega^2 \cos \omega t                                                                         \\
+  \ddot{x} + \frac{k}{m} x                & = A \omega^2 \cos \omega t                                                                                        \\
+  \ddot{x} + \omega_0^2 x                 & = B \cos \omega t
+\end{align*}
+
+\setcounter{subsection}{26}
+\subsection{}
+
+\begin{align*}
+  K                                         & = \frac{1}{2} (4 m) \dot{x}_1^2 + \frac{1}{2} (3 m) (\dot{x}_1 - \dot{x}_2)^2 + \frac{1}{2} m (\dot{x}_1 + \dot{x}_2)^2                                   \\
+                                            & = 2 m \dot{x}_1^2 + \frac{3}{2} m (\dot{x}_1^2 - 2 \dot{x}_1 \dot{x}_2 + \dot{x}_2^2) + \frac{1}{2} m (\dot{x}_1^2 + 2 \dot{x}_1 \dot{x}_2 + \dot{x}_2^2) \\
+                                            & = \frac{1}{2} m (4 \dot{x}_1^2 + 3 \dot{x}_1^2 - 6 \dot{x}_1 \dot{x}_2 + 3 \dot{x}_2^2 + \dot{x}_1^2 + 2 \dot{x}_1 \dot{x}_2 + \dot{x}_2^2)               \\
+                                            & = 2 m (2 \dot{x}_1^2 - \dot{x}_1 \dot{x}_2 + \dot{x}_2^2)                                                                                                 \\
+  U                                         & = 4 m g x_1 + 3 m g (x_2 - x_1) - m g (x_1 + x_2)                                                                                                         \\
+                                            & = m g (4 x_1 + 3 x_2 - 3 x_1 - x_1 - x_2)                                                                                                                 \\
+                                            & = 2 m g x_2                                                                                                                                               \\
+  \mathcal{L}                               & = K - U                                                                                                                                                   \\
+                                            & = 2 m (2 \dot{x}_1^2 - \dot{x}_1 \dot{x}_2 + \dot{x}_2^2) - 2 m g x_2                                                                                     \\ \\
+  \frac{\partial \mathcal{L}}{\partial x_1} & = \frac{d}{d t} \frac{\partial \mathcal{L}}{\partial \dot{x}_1}                                                                                           \\
+  0                                         & = \frac{d}{d t} (8 m \dot{x}_1 - 2 m \dot{x}_2)                                                                                                           \\
+                                            & = 8 m \ddot{x}_1 - 2 m \ddot{x}_2                                                                                                                         \\
+  \ddot{x}_1                                & = \frac{1}{4} \ddot{x}_2                                                                                                                                  \\ \\
+  \frac{\partial \mathcal{L}}{\partial x_2} & = \frac{d}{d t} \frac{\partial \mathcal{L}}{\partial \dot{x}_2}                                                                                           \\
+  -2 m g                                    & = \frac{d}{d t} (-2 m \dot{x}_1 + 4 m \dot{x}_2)                                                                                                          \\
+                                            & = -2 m \ddot{x}_1 + 4 m \ddot{x}_2                                                                                                                        \\
+  \ddot{x}_2                                & = \frac{1}{2} \ddot{x}_1 - \frac{1}{2} g                                                                                                                  \\ \\
+  \ddot{x}_1                                & = \frac{1}{4} \left( \frac{1}{2} \ddot{x}_1 - \frac{1}{2} g \right)                                                                                       \\
+                                            & = \frac{1}{8} \ddot{x}_1 - \frac{1}{8} g                                                                                                                  \\
+  \frac{7}{8} \ddot{x}_1                    & = -\frac{1}{8} g                                                                                                                                          \\
+  \ddot{x}_1                                & = -\frac{1}{7} g
+\end{align*}
+
+The acceleration of the mass $4 m$ is $\frac{1}{7} g$ downwards.
+
+\setcounter{subsection}{28}
+\subsection{}
+
+\begin{align*}
+  x           & = R \cos \omega t + l \sin \phi                                                                                                          \\
+  \dot{x}     & = -R \omega \sin \omega t + l \dot{\phi} \cos \phi                                                                                       \\
+  y           & = R \sin \omega t - l \cos \phi                                                                                                          \\
+  \dot{y}     & = R \omega \cos \omega t + l \dot{\phi} \sin \phi                                                                                        \\
+  K           & = \frac{1}{2} m v^2                                                                                                                      \\
+              & = \frac{1}{2} m (\dot{x}^2 + \dot{y}^2)                                                                                                  \\
+              & = \frac{1}{2} m [R^2 \omega^2 + l^2 \dot{\phi}^2 + 2 R \omega l \dot{\phi} \sin (\phi - \omega t)]                                       \\
+  U           & = m g y                                                                                                                                  \\
+              & = m g (R \sin \omega t - l \cos \phi)                                                                                                    \\
+  \mathcal{L} & = K - U                                                                                                                                  \\
+              & = \frac{1}{2} m [R^2 \omega^2 + l^2 \dot{\phi}^2 + 2 R \omega l \dot{\phi} \sin (\phi - \omega t)] - m g (R \sin \omega t - l \cos \phi) \\
+\end{align*}
+
+\begin{align*}
+  \frac{\partial \mathcal{L}}{\partial \phi}                       & = \frac{d}{d t} \frac{\partial \mathcal{L}}{\partial \dot{\phi}}                \\
+  m R \omega l \dot{\phi} \cos (\phi - \omega t) - m g l \sin \phi & = \frac{d}{d t} [m l^2 \dot{\phi} + m R \omega l \sin (\phi - \omega t)]        \\
+                                                                   & = m l^2 \ddot{\phi} + m R \omega l \cos (\phi - \omega t) (\dot{\phi} - \omega) \\
+  l \ddot{\phi}                                                    & = R \omega^2 \cos (\phi - \omega t) - g \sin \phi
+\end{align*}
+
+\setcounter{subsection}{30}
+\subsection{}
+
+\begin{enumerate}
+  \item
+
+        \begin{align*}
+          X           & = x + L \sin \phi                                                                                                                       \\
+          \dot{X}     & = \dot{x} + L \dot{\phi} \cos \phi                                                                                                      \\
+          y           & = -L \cos \phi                                                                                                                          \\
+          \dot{y}     & = L \dot{\phi} \sin \phi                                                                                                                \\ \\
+          K           & = \frac{1}{2} m \dot{x}^2 + \frac{1}{2} M v^2                                                                                           \\
+                      & = \frac{1}{2} (m + M) \dot{x}^2 + \frac{1}{2} L M \dot{\phi} (2 \dot{x} \cos \phi + L \dot{\phi})                                       \\ \\
+          U           & = \frac{1}{2} k x^2 - M g L \cos \phi                                                                                                   \\ \\
+          \mathcal{L} & = \frac{1}{2} (m + M) \dot{x}^2 + \frac{1}{2} L M \dot{\phi} (2 \dot{x} \cos \phi + L \dot{\phi}) - \frac{1}{2} k x^2 + M g L \cos \phi
+        \end{align*}
+
+        \begin{align*}
+          \frac{\partial \mathcal{L}}{\partial x}    & = \frac{d}{d t} \frac{\partial \mathcal{L}}{\partial \dot{x}}             \\
+          -k x                                       & = (m + M) \ddot{x} + L M (\ddot{\phi} \cos \phi - \dot{\phi}^2 \sin \phi) \\ \\
+          \frac{\partial \mathcal{L}}{\partial \phi} & = \frac{d}{d t} \frac{\partial \mathcal{L}}{\partial \dot{\phi}}          \\
+          M (L \ddot{\phi} + \ddot{x} \cos \phi)     & = -M g \sin \phi
+        \end{align*}
+
+  \item
+
+        \begin{align*}
+          -k x                         & = (m + M) \ddot{x} + L M (\ddot{\phi} - \phi \dot{\phi}^2) \\
+                                       & \approx (m + M) \ddot{x} + L M \ddot{\phi}                 \\ \\
+          M (L \ddot{\phi} + \ddot{x}) & = -M g \phi
+        \end{align*}
+\end{enumerate}
+
+\setcounter{subsection}{32}
+\subsection{}
+
+\begin{align*}
+  X                                       & = -x \cos \omega t                                                                                         \\
+  \dot{X}                                 & = -\dot{x} \cos \omega t + \omega x \sin \omega t                                                          \\
+  y                                       & = x \sin \omega t                                                                                          \\
+  \dot{y}                                 & = \dot{x} \sin \omega t + \omega x \cos \omega t                                                           \\
+  v^2                                     & = \dot{X}^2 + \dot{y}^2                                                                                    \\
+                                          & = (-\dot{x} \cos \omega t + \omega x \sin \omega t)^2 + (\dot{x} \sin \omega t + \omega x \cos \omega t)^2 \\
+                                          & = \dot{x}^2 + \omega^2 x^2                                                                                 \\
+  K                                       & = \frac{1}{2} m v^2                                                                                        \\
+                                          & = \frac{1}{2} m (\dot{x}^2 + \omega^2 x^2)                                                                 \\
+  U                                       & = m g y                                                                                                    \\
+                                          & = m g x \sin \omega t                                                                                      \\
+  \mathcal{L}                             & = K - U                                                                                                    \\
+                                          & = \frac{1}{2} m (\dot{x}^2 + \omega^2 x^2) - m g x \sin \omega t                                           \\
+  \frac{\partial \mathcal{L}}{\partial x} & = \frac{d}{d t} \frac{\partial \mathcal{L}}{\partial \dot{x}}                                              \\
+  \ddot{x} - \omega^2 x                   & = -g \sin \omega t                                                                                         \\
+  x                                       & = x_0 \cosh \omega t + \frac{g}{2 \omega^2} (\sin \omega - \sinh \omega t)
+\end{align*}
+
+\setcounter{subsection}{34}
+\subsection{}
+
+\begin{align*}
+  x           & = R \cos \omega t + R \cos (\omega t + \phi)                                                        \\
+  \dot{x}     & = -R [\omega \sin \omega t + (\omega + \dot{\phi}) \sin (\omega t + \phi)]                          \\
+  y           & = R [\sin \omega t + \sin (\omega t + \phi)]                                                        \\
+  \dot{y}     & = R [\omega \cos \omega t + (\omega + \dot{\phi}) \cos (\omega t + \phi)]                           \\
+  v^2         & = R^2 [\omega^2 + (\omega + \dot{\phi})^2 + 2 \omega (\omega + \dot{\phi}) \cos \phi]               \\
+  \mathcal{L} & = K - U                                                                                             \\
+              & = \frac{1}{2} m v^2                                                                                 \\
+              & = \frac{1}{2} m R^2 [\omega^2 + (\omega + \dot{\phi})^2 + 2 \omega (\omega + \dot{\phi}) \cos \phi]
+\end{align*}
+
+\begin{align*}
+  \frac{\partial \mathcal{L}}{\partial \phi}    & = \frac{d}{d t} \frac{\partial \mathcal{L}}{\partial \dot{\phi}} \\
+  -m \omega (\omega + \dot{\phi}) R^2 \sin \phi & = m R^2 (\ddot{\phi} - \omega \dot{\phi} \sin \phi)              \\
+  -\omega^2 \sin \phi                           & = \ddot{\phi}
+\end{align*}
+
+This is the equation of motion for a simple pendulum. For small $\phi$ the angular frequency is $\omega$.
+
+\setcounter{subsection}{36}
+\subsection{}
+
+\begin{enumerate}
+  \item
+
+        \begin{align*}
+          K           & = \frac{1}{2} m \dot{r}^2 + \frac{1}{2} I \omega^2 + \frac{1}{2} m \dot{r}^2 \\
+                      & = m \dot{r}^2 + \frac{1}{2} m r^2 \dot{\phi}^2                               \\
+          U           & = m g r                                                                      \\
+          \mathcal{L} & = K - U                                                                      \\
+                      & = m \dot{r}^2 + \frac{1}{2} m r^2 \dot{\phi}^2 - m g r
+        \end{align*}
+
+  \item
+
+        \begin{align*}
+          \frac{\partial \mathcal{L}}{\partial r}    & = \frac{d}{d t} \frac{\partial \mathcal{L}}{\partial \dot{r}}    \\
+          m r \dot{\phi}^2 - m g                     & = \frac{d}{d t} (2 m \dot{r})                                    \\
+                                                     & = 2 m \ddot{r}                                                   \\ \\
+          \frac{\partial \mathcal{L}}{\partial \phi} & = \frac{d}{d t} \frac{\partial \mathcal{L}}{\partial \dot{\phi}} \\
+          0                                          & = \frac{d}{d t} (m r^2 \dot{\phi})                               \\
+          \ell                                       & = m r^2 \dot{\phi}
+        \end{align*}
+
+  \item
+
+        \begin{align*}
+          \dot{\phi}                                    & = \frac{\ell}{m r^2}                     \\ \\
+          m r \left( \frac{\ell}{m r^2} \right)^2 - m g & = 2 m \ddot{r}                           \\
+          \frac{\ell^2}{m r^3} - m g                    & = 2 m \ddot{r}                           \\
+          m \ddot{r}                                    & = \frac{\ell^2}{2 m r^3} - \frac{m g}{2} \\ \\
+          \frac{\ell^2}{2 m r_0^3} - \frac{m g}{2}      & = 0                                      \\
+          \frac{2 m r_0^3}{\ell^2}                      & = \frac{2}{m g}                          \\
+          r_0                                           & = \sqrt[3]{\frac{\ell^2}{m^2 g}}
+        \end{align*}
+\end{enumerate}
+
+\setcounter{subsection}{38}
+\subsection{}
+
+\begin{enumerate}
+  \item
+
+        \begin{align*}
+          K           & = \frac{1}{2} m \dot{r}^2 + \frac{1}{2} I_\theta \dot{\theta}^2 + \frac{1}{2} I_\phi \dot{\phi}^2           \\
+                      & = \frac{1}{2} m \dot{r}^2 + \frac{1}{2} m r^2 \dot{\theta}^2 + \frac{1}{2} m (r \sin \theta)^2 \dot{\phi}^2 \\
+                      & = \frac{1}{2} m [\dot{r}^2 + (r \dot{\theta})^2 + (r \sin \theta \dot{\phi})^2]                             \\
+          \mathcal{L} & = K - U                                                                                                     \\
+                      & = \frac{1}{2} m [\dot{r}^2 + (r \dot{\theta})^2 + (r \sin \theta \dot{\phi})^2] - U(r)
+        \end{align*}
+
+  \item
+
+        \begin{align*}
+          \frac{\partial \mathcal{L}}{\partial r}                                  & = \frac{d}{d t} \frac{\partial \mathcal{L}}{\partial \dot{r}}      \\
+          m r \dot{\theta}^2 + m r \sin^2 \theta \dot{\phi}^2 - \frac{d U(r)}{d r} & = m \ddot{r}                                                       \\ \\
+          \frac{\partial \mathcal{L}}{\partial \theta}                             & = \frac{d}{d t} \frac{\partial \mathcal{L}}{\partial \dot{\theta}} \\
+          m r^2 \sin \theta \cos \theta \dot{\phi}^2                               & = \frac{d}{d t} (m r^2 \dot{\theta})                               \\ \\
+          \frac{\partial \mathcal{L}}{\partial \phi}                               & = \frac{d}{d t} \frac{\partial \mathcal{L}}{\partial \dot{\phi}}   \\
+          0                                                                        & = \frac{d}{d t} (m r^2 \sin^2 \theta \dot{\phi})                   \\
+        \end{align*}
+
+  \item The motion remains in the equatorial plane.
+
+  \item The motion remains on that line of longitude.
+\end{enumerate}
+
+\setcounter{subsection}{40}
+\subsection{}
+
+\begin{align*}
+  z                                                          & = k \rho^2                                                                                           \\
+  \dot{z}                                                    & = 2 k \rho \dot{\rho}                                                                                \\
+  \phi                                                       & = \omega t                                                                                           \\
+  \dot{\phi}                                                 & = \omega                                                                                             \\
+  K                                                          & = \frac{1}{2} m \dot{\rho}^2 + \frac{1}{2} I_\phi \omega^2 + \frac{1}{2} m \dot{z}^2                 \\
+                                                             & = \frac{1}{2} m \dot{\rho}^2 + \frac{1}{2} m \rho^2 \omega^2 + \frac{1}{2} m (2 k \rho \dot{\rho})^2 \\
+                                                             & = \frac{1}{2} m [\dot{\rho}^2 + (\rho \omega)^2 + (2 k \rho \dot{\rho})^2]                           \\
+  U                                                          & = m g z                                                                                              \\
+                                                             & = m g k \rho^2                                                                                       \\
+  \mathcal{L}                                                & = K - U                                                                                              \\
+                                                             & = \frac{1}{2} m [\dot{\rho}^2 + (\rho \omega)^2 + (2 k \rho \dot{\rho})^2] - m g k \rho^2            \\
+  \frac{\partial \mathcal{L}}{\partial \rho}                 & = \frac{d}{d t} \frac{\partial \mathcal{L}}{\partial \dot{\rho}}                                     \\
+  m \rho \omega^2 + 4 m k^2 \rho \dot{\rho}^2 - 2 m g k \rho & = \frac{d}{d t} (m \dot{\rho} + 4 m k^2 \rho^2 \dot{\rho})                                           \\
+                                                             & = m \ddot{\rho} + 8 m k^2 \rho \dot{\rho}^2 + 4 m k^2 \rho^2 \ddot{\rho}                             \\
+  (1 + 4 k^2 \rho^2) \ddot{\rho} + 4 k^2 \rho \dot{\rho}^2   & = (\omega^2 - 2 g k) \rho
 \end{align*}
 
 \end{document}

@@ -346,4 +346,72 @@
   \item Under Lagrangian mechanics, the independent variable is time $t$ and the dependent variable(s) depend on the system under consideration. In general they're denoted $q_1, q_2, \ldots, q_n$ and are called \textbf{generalized coordinates}.
 \end{itemize}
 
+\section{Lagrange's Equations}
+
+\begin{itemize}
+  \item Lagrangian mechanics has two advantages over Newtonian mechanics:
+
+        \begin{itemize}
+          \item Lagrange's equations have the same form in all coordinate systems, and
+
+          \item Lagrange's equations omit the forces of constraint (e.g. the normal force that keeps a bead on a wire), simplifying calculations.
+        \end{itemize}
+\end{itemize}
+
+\subsection{Lagrange's Equations for Unconstrained Motion}
+
+\begin{itemize}
+  \item The \textbf{Lagrangian function} or \textbf{Lagrangian} is defined as \[\mathcal{L} = K - U,\] i.e. the kinetic energy minus the potential energy.
+
+  \item \textbf{Hamilton's principle} states that the actual path taken by a particle between points 1 and 2 in a given time interval $t_1$ to $t_2$ is such that the action integral \[S = \int_{t_1}^{t_2} \mathcal{L} \,dt\] is stationary when taken along the actual path, i.e. the actual path is the solution of the Euler-Lagrange equation when applied to the Lagrangian.
+
+  \item A Lagrangian can be written in terms of any \textbf{generalized coordinates} $q_1, q_2, q_3$ providing each position $\vec{r}$ corresponds to a unique value $(q_1, q_2, q_3)$ and vice versa.
+
+  \item The derivative of the Lagrangian with respect to $x$ \[\frac{\partial \mathcal{L}}{\partial x} = \frac{\partial}{\partial x} (K - U) = \frac{\partial}{\partial x} \left( \frac{1}{2} m (\dot{x}^2 + \dot{y}^2) - U(x, y) \right) = -\frac{\partial U(x, y)}{\partial x} = F_x\] is the $x$ component of the force while the derivative with respect to $\dot{x}$ \[\frac{\partial \mathcal{L}}{\partial \dot{x}} = \frac{\partial}{\partial \dot{x}} (K - U) = \frac{\partial}{\partial \dot{x}} \left( \frac{1}{2} m (\dot{x}^2 + \dot{y}^2) - U(x, y) \right) = m \dot{x} = p_x\] is the $x$ component of the momentum. The same applies to the $y$ and $z$ dimensions. When generalized coordinates $q_1, q_2, q_3$ are used the corresponding values behave like forces and momenta and are called \textbf{generalized forces} and \textbf{generalized momenta}, respectively.
+
+  \item Another way of stating the above is \[\frac{\partial \mathcal{L}}{\partial q_i} = (i\text{th component of generalized force})\] and \[\frac{\partial \mathcal{L}}{\partial \dot{q}_i} = (i\text{th component of generalized momentum}).\] Using this terminology, the Euler-Lagrange equation \[\frac{\partial \mathcal{L}}{\partial q_i} = \frac{d}{d t} \frac{\partial \mathcal{L}}{\partial \dot{q}_i}\] takes the form \[(\text{generalized force}) = (\text{rate of change of generalized momentum}).\]
+
+  \item For example, in 2D polar coordinates $(r, \phi)$ the generalized force for the $\phi$ coordinate is the torque on the particle and the generalized momentum is the angular momentum.
+
+  \item Conservation laws can be derived from the Euler-Lagrange equations in generalized coordinates. For example, if the $i$th component of the generalized force is zero \[\frac{\partial \mathcal{L}}{\partial q_i} = 0\] then the rate of change of the $i$th component of the generalized momentum is also zero and thus it doesn't change.
+
+  \item If the relationship between $\vec{r}$ and the generalized coordinates $q_1, q_2, \ldots, q_n$ doesn't involve $t$ the generalized coordinates are called \textbf{natural} and have some additional properties.
+
+  \item The number of \textbf{degrees of freedom} of a system is the number of coordinates that can be independently varied in a small displacement, i.e. the number of independent ``directions'' in which the system can move from any given initial configuration.
+
+  \item When the number of degrees of freedom of an $N$ particle system is less than $3 N$ (or $2 N$ in two dimensions), the system is said to be \textbf{constrained}.
+
+  \item When the number of degrees of freedom of a system matches the number of generalized coordinates required to model the system, it is said to be \textbf{holonomic}.
+
+  \item In order to apply Lagrange's equations to a system its constraints must be holonomic, i.e. they must be expressible in the form \[f(q_1, q_2, \ldots, q_n, t) = 0.\]
+
+  \item The generalized coordinates can be measured relative to a non-inertial reference frame providing the Lagrangian $\mathcal{L} = K - U$ is originally written as inertial.
+\end{itemize}
+
+\setcounter{subsection}{5}
+\subsection{Generalized Momenta and Ignorable Coordinates}
+
+\begin{itemize}
+  \item When the Lagrangian is independent of a coordinate $q_i$, that coordinate is said to be \textbf{ignorable} or \textbf{cyclic}. When choosing coordinates, it is desirable to make as many ignorable as possible.
+\end{itemize}
+
+\setcounter{subsection}{7}
+\subsection{More about Conservation Laws}
+
+\begin{itemize}
+  \item If the Lagrangian is unchanged by spacial translation, the total momentum of the system is conserved.
+
+  \item If  the Lagrangian is unchanged by time translation, the total energy of the system is conserved.
+\end{itemize}
+
+\subsection{Lagrange's Equations for Magnetic Forces}
+
+\begin{itemize}
+  \item For a given mechanical system with generalized coordinates \\ $q = (q_1, \ldots, q_n)$, a \textbf{Lagrangian} $\mathcal{L}$ is a function $\mathcal{L} (q_1, \ldots, q_n, \dot{q}_1, \ldots, \dot{q}_n, t)$ of the coordinates and velocities, such that the correct equations of motion for the system are the Lagrange equations \[\frac{\partial \mathcal{L}}{\partial q_i} = \frac{d}{d t} \frac{\partial \mathcal{L}}{\partial \dot{q}_i} \text{ for } i = 1, \ldots, n.\]
+
+  \item It's important to note that the above does not define a unique Lagrangian function — any function $\mathcal{L}$ that gives the correct equations of motion is valid and has all the correct properties.
+
+  \item The Lagrangian for a particle of charge $q$ and mass $m$ moving in electric and magnetic fields $\vec{E}$ and $\vec{B}$ is \[\mathcal{L} = \frac{1}{2} m \dvec{r}^2 - q (V - \dvec{r} \cdot \vec{A}).\]
+\end{itemize}
+
 \end{document}
