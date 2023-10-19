@@ -2036,4 +2036,63 @@ This is the equation of motion for a simple pendulum. For small $\phi$ the angul
   (1 + 4 k^2 \rho^2) \ddot{\rho} + 4 k^2 \rho \dot{\rho}^2   & = (\omega^2 - 2 g k) \rho
 \end{align*}
 
+\section{Two-Body Central Force Problems}
+
+\subsection{}
+
+\begin{align*}
+  \vec{r}_1 & = \vec{R} + \frac{m_2}{M} \vec{r}                                                                                                                                                       \\
+            & = \frac{m_1 \vec{r}_1 + m_2 \vec{r}_2}{M} + \frac{m_2}{M} (\vec{r}_1 - \vec{r}_2)                                                                                                       \\
+            & = \frac{(m_1 + m_2) \vec{r}_1}{M}                                                                                                                                                       \\
+            & = \vec{r}_1                                                                                                                                                                             \\
+  \vec{r}_2 & = \vec{R} - \frac{m_1}{M} \vec{r}                                                                                                                                                       \\
+            & = \frac{m_1 \vec{r}_1 + m_2 \vec{r}_2}{M} - \frac{m_1}{M} (\vec{r}_1 - \vec{r}_2)                                                                                                       \\
+            & = \frac{(m_1 + m_2) \vec{r}_2}{M}                                                                                                                                                       \\
+            & = \vec{r}_2                                                                                                                                                                             \\
+  K         & = \frac{1}{2} M \dvec{R}^2 + \frac{1}{2} \mu \dvec{r}^2                                                                                                                                 \\
+            & = \frac{1}{2} M \left( \frac{m_1 \dvec{r}_1 + m_2 \dvec{r}_2}{M} \right)^2 + \frac{1}{2} \frac{m_1 m_2}{M} (\dvec{r}_1 - \dvec{r}_2)^2                                                  \\
+            & = \frac{1}{2} \frac{m_1^2 \dvec{r}_1^2 + m_1 m_2 \dvec{r}_1 \dvec{r}_2 + m_2^2 \dvec{r}_2^2}{M} + \frac{1}{2} \frac{m_1 m_2}{M} (\dvec{r}_1^2 - 2 \dvec{r}_1 \dvec{r}_2 + \dvec{r}_2^2) \\
+            & = \frac{1}{2} \left( \frac{m_1^2 + m_1 m_2}{M} \dvec{r}_1^2 + \frac{m_2^2 + m_1 m_2}{M} \dvec{r}_2^2 \right)                                                                            \\
+            & = \frac{1}{2} m_1 \dvec{r}_1^2 + \frac{1}{2} m_2 \dvec{r}_2^2
+\end{align*}
+
+\subsection{}
+
+\begin{enumerate}
+  \item
+
+        \begin{align*}
+          \mathcal{L} & = K - U                                                                                                                                                                                                                       \\
+                      & = \frac{1}{2} m_1 \dvec{r}_1^2 + \frac{1}{2} m_2 \dvec{r}_2^2 - m_1 g z_1 - m_2 g z_2 - U(r)                                                                                                                                  \\
+                      & = \frac{1}{2} m_1 \left( \dvec{R} + \frac{m_2}{M} \dvec{r} \right)^2 + \frac{1}{2} m_2 \left( \dvec{R} - \frac{m_1}{M} \dvec{r} \right)^2 - m_1 g \left( Z + \frac{m_2}{M} z \right)                                          \\
+                      & \qquad - m_2 g \left( Z - \frac{m_1}{M} z \right) - U(r)                                                                                                                                                                      \\
+                      & = \frac{1}{2} m_1 \left( \dvec{R}^2 + 2 \frac{m_2}{M} \dvec{r} \dvec{R} + \frac{m_2^2}{M^2} \dvec{r}^2 \right) + \frac{1}{2} m_2 \left( \dvec{R}^2 - 2 \frac{m_1}{M} \dvec{r} \dvec{R} + \frac{m_1^2}{M^2} \dvec{r}^2 \right) \\
+                      & \qquad - m_1 g \left( Z + \frac{m_2}{M} z \right) - m_2 g \left( Z - \frac{m_1}{M} z \right) - U(r)                                                                                                                           \\
+                      & = \frac{1}{2} M \dvec{R}^2 + \frac{1}{2} \mu \dvec{r}^2 - M g Z - U(r)                                                                                                                                                        \\
+                      & = \left( \frac{1}{2} M \dvec{R}^2 - M g Z \right) + \left( \frac{1}{2} \mu \dvec{r}^2 - U(r) \right)                                                                                                                          \\
+                      & = \mathcal{L}_\text{cm} + \mathcal{L}_\text{rel}
+        \end{align*}
+\end{enumerate}
+
+\subsection{}
+
+\begin{align*}
+  \dvec{R}                                           & = \frac{m_1 \dvec{r}_1 + m_2 \dvec{r}_2}{M}                                                                   \\
+  \mathcal{L}_\text{cm}                              & = \frac{1}{2} M \dvec{R}^2 - M g Z                                                                            \\
+                                                     & = \frac{1}{2} M (\dot{X}^2 + \dot{Y}^2 + \dot{Z}^2) - M g Z                                                   \\
+  \frac{\partial \mathcal{L}_\text{cm}}{\partial Z}  & = \frac{d}{d t} \frac{\partial \mathcal{L}_\text{cm}}{\partial \dot{Z}}                                       \\
+  -M g                                               & = M \ddot{Z}                                                                                                  \\
+  Z                                                  & = \dot{R}_0 t - \frac{1}{2} g t^2                                                                             \\
+                                                     & = \frac{m_1}{M} v_0 t - \frac{1}{2} g t^2                                                                     \\ \\
+  \mathcal{L}_\text{rel}                             & = \frac{1}{2} \mu \dvec{r}^2 - \frac{1}{2} k (r - L)^2                                                        \\
+  \frac{\partial \mathcal{L}_\text{rel}}{\partial r} & = \frac{d}{d t} \frac{\partial \mathcal{L}_\text{rel}}{\partial \dot{r}}                                      \\
+  -k (r - L)                                         & = \mu \ddot{r}                                                                                                \\
+  \omega                                             & = \sqrt{\frac{k}{\mu}}                                                                                        \\
+  r                                                  & = \frac{v_0}{\omega} \sin \omega t + L                                                                        \\ \\
+  z_1                                                & = Z + \frac{m_2}{M} r                                                                                         \\
+                                                     & = \frac{m_1}{M} v_0 t - \frac{1}{2} g t^2 + \frac{m_2}{M} \left( \frac{v_0}{\omega} \sin \omega t + L \right) \\ \\
+  z_2                                                & = Z - \frac{m_1}{M} r                                                                                         \\
+                                                     & = \frac{m_1}{M} v_0 t - \frac{1}{2} g t^2 - \frac{m_1}{M} \left( \frac{v_0}{\omega} \sin \omega t + L \right)
+\end{align*}
+
 \end{document}
