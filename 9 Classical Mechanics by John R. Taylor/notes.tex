@@ -432,4 +432,18 @@
   \item The Lagrangian is then \[\mathcal{L} = K - U = \frac{1}{2} M \dvec{R}^2 + \left[ \frac{1}{2} \mu \dvec{r}^2 - U(r) \right] = \mathcal{L}_\text{cm} + \mathcal{L}_\text{rel}\] where each generalized coordinate only appears in one ``sub-Lagrangian'' and can be solved separately.
 \end{itemize}
 
+\subsection{The Equations of Motion}
+
+\begin{itemize}
+  \item Because $\mathcal{L}_\text{cm}$ doesn't include $\vec{R}$ the equation of motion for the centre of mass is \[M \ddvec{R} = \vec{0},\] i.e. the centre of mass moves with constant velocity.
+
+  \item The equation of relative motion is \[\mu \ddvec{r} = -\nabla U(r),\] i.e. the two bodies move as if they were a single particle of mass $\mu$ with potential energy $U(r)$.
+
+  \item If we choose to use the inertial centre-of-mass reference frame, $\mathcal{L}_\text{cm} = 0$ and $\mathcal{L} = \mathcal{L}_\text{rel}$ becomes a one-body problem.
+
+  \item The total angular momentum in the centre-of-mass frame is \[\vec{L} = \vec{r} \times \mu \dvec{r}.\] Because the total angular momentum is conserved — including its direction — this means that $\vec{r}$ and $\dvec{r}$ are confined to a plane that we can choose to be the $xy$ plane. The three-dimensional two-body problem has been turned into a two-dimensional one-body problem.
+
+  \item The Lagrangian for this two-dimensional problem in polar coordinates is \[\mathcal{L} = \frac{1}{2} \mu (\dot{r}^2 + r^2 \dot{\phi}^2) - U(r).\] Because this doesn't involve $\phi$ the Lagrange equation corresponding to $\phi$ is \[\frac{\partial \mathcal{L}}{\partial \dot{\phi}} = \mu r^2 \dot{\phi} = \text{const} = \ell\] which is simply a statement of the conservation of angular momentum. The Lagrange equation corresponding to $r$ is \[\mu r \dot{\phi}^2 - \frac{d U}{d r} = \mu \ddot{r}.\]
+\end{itemize}
+
 \end{document}

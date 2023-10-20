@@ -2095,4 +2095,93 @@ This is the equation of motion for a simple pendulum. For small $\phi$ the angul
                                                      & = \frac{m_1}{M} v_0 t - \frac{1}{2} g t^2 - \frac{m_1}{M} \left( \frac{v_0}{\omega} \sin \omega t + L \right)
 \end{align*}
 
+\setcounter{subsection}{6}
+\subsection{}
+
+\begin{enumerate}
+  \item
+
+        \begin{align*}
+          m_1 \frac{v^2}{r} & = \frac{G m_1 m_2}{r^2}          \\
+          v                 & = \sqrt{\frac{G m_2}{r}}         \\
+          T                 & = \frac{2 \pi r}{v}              \\
+                            & = 2 \pi r \sqrt{\frac{r}{G m_2}}
+        \end{align*}
+
+  \item
+
+        \begin{align*}
+          \mathcal{L}                              & = \frac{1}{2} \mu (\dot{r}^2 + r^2 \dot{\phi}^2) + \frac{G M \mu}{r} \\
+          \frac{\partial \mathcal{L}}{\partial r}  & = \frac{d}{d t} \frac{\partial \mathcal{L}}{\partial \dot{r}}        \\
+          \mu r \dot{\phi}^2 - \frac{G M \mu}{r^2} & = \mu \ddot{r}                                                       \\
+          r \left( \frac{v}{r} \right)^2           & = \frac{G M}{r}                                                      \\
+          v                                        & = \sqrt{\frac{G M}{r}}                                               \\
+          T                                        & = \frac{2 \pi r}{v}                                                  \\
+                                                   & = \frac{2 \pi r^{3 / 2}}{\sqrt{G M}}
+        \end{align*}
+
+        This is equal to the period found in part (a) when $m_2 \rightarrow \infty$.
+
+  \item $T = \qty{0.703}{years}$
+\end{enumerate}
+
+\setcounter{subsection}{8}
+\subsection{}
+
+\begin{enumerate}
+  \item
+
+        \begin{align*}
+          \mathcal{L} & = \frac{1}{2} m_1 \dvec{r}_1^2 + \frac{1}{2} m_2 \dvec{r}_2^2 - \frac{1}{2} k (|\vec{r}_1 - \vec{r}_2| - L)^2                                                                                                                 \\
+                      & = \frac{1}{2} m_1 \left( \dvec{R} + \frac{m_2}{M} \dvec{r} \right)^2 + \frac{1}{2} m_2 \left( \dvec{R} - \frac{m_1}{M} \dvec{r} \right)^2 - \frac{1}{2} k (r - L)^2                                                           \\
+                      & = \frac{1}{2} m_1 \left( \dvec{R}^2 + 2 \frac{m_2}{M} \dvec{r} \dvec{R} + \frac{m_2^2}{M^2} \dvec{r}^2 \right) + \frac{1}{2} m_2 \left( \dvec{R}^2 - 2 \frac{m_1}{M} \dvec{r} \dvec{R} + \frac{m_1^2}{M^2} \dvec{r}^2 \right) \\
+                      & \qquad - \frac{1}{2} k (r - L)^2                                                                                                                                                                                              \\
+                      & = \frac{1}{2} M \dvec{R}^2 + \frac{1}{2} \mu \dvec{r}^2 - \frac{1}{2} k (r - L)^2                                                                                                                                             \\
+                      & = \frac{1}{2} M (\dot{X}^2 + \dot{Y}^2) + \frac{1}{2} \mu (\dot{r}^2 + r^2 \dot{\phi}^2) - \frac{1}{2} k (r - L)^2
+        \end{align*}
+
+  \item
+
+        \begin{align*}
+          \frac{\partial \mathcal{L}}{\partial X} & = \frac{d}{d t} \frac{\partial \mathcal{L}}{\partial \dot{X}} \\
+          0                                       & = M \ddot{X}                                                  \\
+          X                                       & = \dot{X}_0 t + X_0                                           \\ \\
+          \frac{\partial \mathcal{L}}{\partial Y} & = \frac{d}{d t} \frac{\partial \mathcal{L}}{\partial \dot{Y}} \\
+          0                                       & = M \ddot{Y}                                                  \\
+          Y                                       & = \dot{Y}_0 t + Y_0                                           \\ \\
+          \frac{\partial \mathcal{L}}{\partial Z} & = \frac{d}{d t} \frac{\partial \mathcal{L}}{\partial \dot{Z}} \\
+          0                                       & = M \ddot{Z}                                                  \\
+          Z                                       & = \dot{Z}_0 t + Z_0
+        \end{align*}
+
+  \item
+
+        \begin{align*}
+          \frac{\partial \mathcal{L}}{\partial r}    & = \frac{d}{d t} \frac{\partial \mathcal{L}}{\partial \dot{r}}    \\
+          \mu r \dot{\phi}^2 - k (r - L)             & = \mu \ddot{r}                                                   \\ \\
+          \frac{\partial \mathcal{L}}{\partial \phi} & = \frac{d}{d t} \frac{\partial \mathcal{L}}{\partial \dot{\phi}} \\
+          0                                          & = \frac{d}{d t} (\mu r^2 \dot{\phi})                             \\
+          \mu r^2 \dot{\phi}                         & = \ell
+        \end{align*}
+
+        $r$ remains constant:
+
+        \begin{align*}
+          \mu r \dot{\phi}^2 - k (r - L) & = 0                                \\
+          \dot{\phi}                     & = \sqrt{\frac{k (r - L)}{\mu r}}   \\
+          r                              & = \frac{\mu r \dot{\phi}^2}{k} + L
+        \end{align*}
+
+        $\phi$ remains constant:
+
+        \begin{align*}
+          \mu \ddot{r} & = -k (r - L)                     \\
+          \ddot{r}     & = -\frac{k}{\mu} (r - L)         \\
+                       & = -\frac{2 k}{m_1} (r - L)       \\
+                       & = -\omega^2 (r - L)              \\
+          \omega       & = \sqrt{\frac{2 k}{m_1}}         \\
+          r            & = L + A \cos (\omega t - \delta)
+        \end{align*}
+\end{enumerate}
+
 \end{document}
