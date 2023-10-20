@@ -446,4 +446,19 @@
   \item The Lagrangian for this two-dimensional problem in polar coordinates is \[\mathcal{L} = \frac{1}{2} \mu (\dot{r}^2 + r^2 \dot{\phi}^2) - U(r).\] Because this doesn't involve $\phi$ the Lagrange equation corresponding to $\phi$ is \[\frac{\partial \mathcal{L}}{\partial \dot{\phi}} = \mu r^2 \dot{\phi} = \text{const} = \ell\] which is simply a statement of the conservation of angular momentum. The Lagrange equation corresponding to $r$ is \[\mu r \dot{\phi}^2 - \frac{d U}{d r} = \mu \ddot{r}.\]
 \end{itemize}
 
+\subsection{The Equivalent One-Dimensional Problem}
+
+\begin{itemize}
+  \item Rearranging the $\phi$ equation we find \[\dot{\phi} = \frac{\ell}{\mu r^2}\] where $\ell$ is determined by initial conditions.
+
+  \item The radial equation can be rewritten as \begin{align*}
+          \mu \ddot{r} & = -\frac{d U}{d r} + \mu r \dot{\phi}^2 \\
+                       & = -\frac{d U}{d r} + F_\text{cf}
+        \end{align*} where $F_\text{cf}$ is the fictitious centifugal force \[F_\text{cf} = \mu r \dot{\phi}^2 = \frac{\ell^2}{\mu r^3} = -\frac{d}{d r} \left( \frac{\ell^2}{2 \mu r^2} \right) = -\frac{d U_\text{cf}}{d r}.\]
+
+  \item The radial equation can now be written in terms of the \textbf{effective potential energy} \[\mu \ddot{r} = -\frac{d}{d r} [U(r) + U_\text{cf}(r)] = -\frac{d}{d r} U_\text{eff}(r).\]
+
+  \item The total energy of the one-body system is \[E = \frac{1}{2} \mu \dot{r}^2 + \frac{1}{2} \mu r^2 \dot{\phi}^2 + U(r)\] and this value is conserved.
+\end{itemize}
+
 \end{document}
