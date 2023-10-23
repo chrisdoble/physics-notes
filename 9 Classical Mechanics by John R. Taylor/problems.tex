@@ -2251,4 +2251,22 @@ $\theta = \arctan \frac{A}{g}$ from vertical.
   \item Same magnitude, opposite direction.
 \end{enumerate}
 
+\setcounter{subsection}{8}
+\subsection{}
+
+\begin{align*}
+  \dvec{r}                     & = v_0 (-\cos \theta \uvec{x} + \sin \theta \uvec{z}) \\
+  \vec{\Omega}                 & = \Omega \uvec{z}                                    \\
+  \dvec{r} \times \vec{\Omega} & = \begin{vmatrix}
+                                     \uvec{x}         & \uvec{y} & \uvec{z}        \\
+                                     -v_0 \cos \theta & 0        & v_0 \sin \theta \\
+                                     0                & 0        & \Omega
+                                   \end{vmatrix}      \\
+                               & = v_0 \Omega \cos \theta \uvec{y}                    \\
+  \vec{F}_\text{cor}           & = 2 m \dvec{r} \times \vec{\Omega}                   \\
+                               & = 2 m v_0 \Omega \cos \theta \uvec{y}                \\
+  \frac{F_\text{cor}}{W}       & = \frac{2 m v_0 \Omega \cos \theta}{m g}             \\
+                               & \approx 1.1\%
+\end{align*}
+
 \end{document}

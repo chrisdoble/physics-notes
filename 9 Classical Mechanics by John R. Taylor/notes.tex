@@ -486,4 +486,13 @@
   \item Given an inertial reference frame $\mathcal{S}_0$ and a noninertial reference frame $\mathcal{S}$ that is rotating with angular velocity $\vec{\Omega}$ relative to $\mathcal{S}_0$, the time derivative of a vector $\vec{Q}$ differs between the two with the relation \[\left( \frac{d \vec{Q}}{d t} \right)_{\mathcal{S}_0} = \left( \frac{d \vec{Q}}{d t} \right)_\mathcal{S} + \vec{\Omega} \times \vec{Q}.\]
 \end{itemize}
 
+\subsection{Newton's Second Law in a Rotating Frame}
+
+\begin{itemize}
+  \item Newton's second law in a noninertial frame rotating with angular velocity $\vec{\Omega}$ is \begin{align*}
+          m \ddvec{r} & = \vec{F} + \vec{F}_\text{cor} + \vec{F}_{cf}                                                      \\
+                      & = \vec{F} + 2 m \dvec{r} \times \vec{\Omega} + m (\vec{\Omega} \times \vec{r}) \times \vec{\Omega}
+        \end{align*} where $\vec{F}_\text{cor}$ is the \textbf{Coriolis force} and $\vec{F}_\text{cf}$ is the \textbf{centrifugal force}.
+\end{itemize}
+
 \end{document}
