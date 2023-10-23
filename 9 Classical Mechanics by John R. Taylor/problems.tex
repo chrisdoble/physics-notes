@@ -2231,4 +2231,24 @@ The constant would vary around $0.101\%$.
 
 $\theta = \arctan \frac{A}{g}$ from vertical.
 
+\setcounter{subsection}{2}
+\subsection{}
+
+\begin{enumerate}
+  \item
+
+        \begin{align*}
+          d                        & = d_0 - R_e                                                                                    \\
+                                   & = d_0 (1 - R_e / d_0)                                                                          \\
+          d^{-2}                   & \approx \frac{1 + 2 \frac{R_e}{d_0}}{d_0^2}                                                    \\
+          \vec{F}_\text{tid}       & = -G M_m m \left( \frac{\uvec{d}}{d^2} - \frac{\uvec{d}_0}{d_0^2} \right)                      \\
+                                   & \approx -G M_m m \left( \frac{1 + 2 \frac{R_e}{d_0}}{d_0^2} - \frac{1}{d_0^2} \right) \uvec{x} \\
+                                   & = -\frac{2 G M_m m R_e}{d_0^3} \uvec{x}                                                        \\
+                                   & \approx -(\num{1.1e-6}) m \uvec{x}                                                             \\
+          \frac{F_\text{tid}}{m g} & \approx \num{1.1e-7}
+        \end{align*}
+
+  \item Same magnitude, opposite direction.
+\end{enumerate}
+
 \end{document}
