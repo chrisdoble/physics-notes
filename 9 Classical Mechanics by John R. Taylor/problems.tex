@@ -2301,4 +2301,53 @@ $\theta = \arctan \frac{A}{g}$ from vertical.
 
 The plumb line is deflected to the left.
 
+\section{Rotational Motion of Rigid Bodies}
+
+\setcounter{subsection}{2}
+\subsection{}
+
+In the equation for the centre of mass the four points at the base of the pyramid combine to a zero vector. The centre of mass is thus on the $z$ axis $\frac{H}{5}$ units up from the origin.
+
+\setcounter{subsection}{4}
+\subsection{}
+
+By symmetry the centre of mass will be on the $z$ axis. Its $z$ coordinate is
+
+\begin{align*}
+  z & = \frac{1}{M} \int z' \,d m                                                  \\
+    & = \frac{1}{M} \int z' M \frac{d V}{V}                                        \\
+    & = \int_0^R z' \frac{\pi (R^2 - z'^2)}{\frac{2}{3} \pi R^3} \,d z'            \\
+    & = \frac{3}{2 R^3} \int_0^R (R^2 z' - z'^3) \,d z'                            \\
+    & = \frac{3}{2 R^3} \left[ \frac{1}{2} R^2 z'^2 - \frac{1}{4} z'^4 \right]_0^R \\
+    & = \frac{3}{2 R^3} \left( \frac{1}{2} R^4 - \frac{1}{4} R^4 \right)           \\
+    & = \frac{3}{8} R
+\end{align*}
+
+\setcounter{subsection}{6}
+\subsection{}
+
+\begin{enumerate}
+  \item
+
+        \begin{align*}
+          V & = \int \,d V                                                                          \\
+            & = \int_0^R \int_0^{\theta_0} \int_0^{2 \pi} r^2 \sin \theta \,d r \,d \theta \,d \phi \\
+            & = 2 \pi \int_0^R r^2 [-\cos \theta]_0^{\theta_0} \,d r                                \\
+            & = 2 \pi (1 - \cos \theta_0) \int_0^R r^2 \,d r                                        \\
+            & = \frac{2}{3} \pi R^3 (1 - \cos \theta_0)
+        \end{align*}
+
+  \item By symmetry the centre of mass will lie on the $z$ axis, so all other dimensions will cancel and can be ignored.
+
+        \begin{align*}
+          z & = \frac{1}{M} \int z' \,d m                                                                                   \\
+            & = \frac{1}{M} \int r \cos \theta M \frac{d V}{V}                                                              \\
+            & = \frac{1}{V} \int_0^R \int_0^{\theta_0} \int_0^{2 \pi} r^3 \cos \theta \sin \theta \,d r \,d \theta \,d \phi \\
+            & = \frac{\pi}{V} \int_0^R r^3 \left[ -\frac{1}{2} \cos 2 \theta \right]_0^{\theta_0} \,d r                     \\
+            & = \frac{\pi (1 - \cos 2 \theta_0)}{2 V} \left[ \frac{1}{4} r^4 \right]_0^R                                    \\
+            & = \frac{\pi R^4 (1 - \cos 2 \theta_0)}{8 V}                                                                   \\
+            & = \frac{3 R}{16} \cdot \frac{1 - \cos 2 \theta_0}{1 - \cos \theta_0}                                          \\
+        \end{align*}
+\end{enumerate}
+
 \end{document}

@@ -495,4 +495,24 @@
         \end{align*} where $\vec{F}_\text{cor}$ is the \textbf{Coriolis force} and $\vec{F}_\text{cf}$ is the \textbf{centrifugal force}.
 \end{itemize}
 
+\section{Rotational Motion of Rigid Bodies}
+
+\subsection{Properties of the Centre of Mass}
+
+\begin{itemize}
+  \item The total angular momentum of a system of $N$ particles is \begin{align*}
+          \vec{L} & = \vec{L}_\text{O} + \vec{L}_\text{CM}                                           \\
+                  & = \vec{R} \times \vec{P} + \sum \vec{r}_\alpha' \times m_\alpha \dvec{r}_\alpha'
+        \end{align*} where $\vec{L}_\text{O}$ is the angular momentum of the centre of mass of the system relative to the origin, $\vec{L}_\text{CM}$ is the angular momentum of the particles of the system relative to its centre of mass, $\vec{R}$ is the centre of mass of the system, $\vec{P}$ is the linear momentum of the system, $\vec{r}_\alpha'$ is the position of partical $\alpha$ relative to the centre of mass of the system, $m_\alpha$ is the mass of particle $\alpha$, and $\dvec{r}_\alpha'$ is the velocity of particle $\alpha$ relative to the centre of mass of the system.
+
+  \item The values $\vec{L}_\text{O}$ and $\vec{L}_\text{CM}$ are independently conserved, with \[\dvec{L}_\text{O} = \vec{R} \times \vec{F}^\text{ext} = \vec{\tau}^\text{ext} \text{ (about origin)}\] and \[\dvec{L}_\text{CM} = \sum \vec{r}_\alpha' \times \vec{F}_\alpha^\text{ext} = \vec{\tau}^\text{ext} \text{ (about centre of mass)}.\]
+
+  \item The total kinetic energy of a system of $N$ particles is \begin{align*}
+          T & = T_\text{CM} + T_\text{relative to CM}                                  \\
+            & = \frac{1}{2} M \dvec{R}^2 + \frac{1}{2} \sum m_\alpha \dvec{r}_\alpha^2
+        \end{align*}
+
+  \item The total potential energy of a system of $N$ particles is \[U = U^\text{ext} + U^\text{int}\] where $U^\text{ext}$ is the total potential energy due to external forces and $U^\text{int}$ is the total potential energies for all pairs of particles \[U^\text{int} = \sum_{\alpha < \beta} U_{\alpha \beta} (r_{\alpha \beta}).\] However, in a rigid body the distances between all particles are fixed so $U^\text{int}$ is constant and can be ignored.
+\end{itemize}
+
 \end{document}
