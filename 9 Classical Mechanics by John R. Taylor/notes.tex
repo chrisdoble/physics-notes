@@ -515,4 +515,20 @@
   \item The total potential energy of a system of $N$ particles is \[U = U^\text{ext} + U^\text{int}\] where $U^\text{ext}$ is the total potential energy due to external forces and $U^\text{int}$ is the total potential energies for all pairs of particles \[U^\text{int} = \sum_{\alpha < \beta} U_{\alpha \beta} (r_{\alpha \beta}).\] However, in a rigid body the distances between all particles are fixed so $U^\text{int}$ is constant and can be ignored.
 \end{itemize}
 
+\subsection{Rotation about a Fixed Axis}
+
+\begin{itemize}
+  \item For a system of $N$ particles rotating around the $z$ axis, the angular momentum of the system is is \begin{align*}
+          \vec{L} & = \sum_\alpha \vec{\ell}_\alpha                                                                  \\
+                  & =  \sum_\alpha m_\alpha \vec{r}_\alpha \times \vec{v}_\alpha                                     \\
+                  & = \sum_\alpha m_\alpha \omega (-z_\alpha x_\alpha, -z_\alpha y_\alpha, x_\alpha^2 + y_\alpha^2).
+        \end{align*} Thus, $\vec{L}$ may have $\vec{x}$ and/or $\vec{y}$ components and $\vec{L} = I \vec{\omega}$ doesn't hold.
+
+  \item The angular momentum can be expressed as \[\vec{L} = (I_{xz} \omega, I_{yz} \omega, I_{zz} \omega)\] where \begin{align*}
+          I_{xz} & = -\sum_\alpha m_\alpha x_\alpha z_\alpha \text{,}     \\
+          I_{yz} & = -\sum_\alpha m_\alpha y_\alpha z_\alpha \text{, and} \\
+          I_{zz} & = \sum_\alpha m_\alpha (x_\alpha^2 + y_\alpha^2)
+        \end{align*} are called the \textbf{products of inertia} of the body. The notation means that e.g. $I_{xz}$ is the $x$ component of the angular momentum for a body rotating around the $z$ axis.
+\end{itemize}
+
 \end{document}
