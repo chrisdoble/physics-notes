@@ -531,4 +531,23 @@
         \end{align*} are called the \textbf{products of inertia} of the body. The notation means that e.g. $I_{xz}$ is the $x$ component of the angular momentum for a body rotating around the $z$ axis.
 \end{itemize}
 
+\subsection{Rotation about Any Axis; the Inertia Tensor}
+
+\begin{itemize}
+  \item Continuing from the above, if a body has angular velocity \[\vec{\omega} = (\omega_x, \omega_y, \omega_z)\] its angular momentum is \begin{align*}
+          L_x & = I_{x x} \omega_x + I_{x y} \omega_y + I_{x z} \omega_z \\
+          L_y & = I_{y x} \omega_x + I_{y y} \omega_y + I_{y z} \omega_z \\
+          L_z & = I_{z x} \omega_x + I_{z y} \omega_y + I_{z z} \omega_z
+        \end{align*} where \begin{align*}
+          I_{x x} & = \sum_\alpha m_\alpha (y_\alpha^2 + z_\alpha^2), \\
+          I_{x y} & = -\sum_\alpha m_\alpha x_\alpha y_\alpha,
+        \end{align*} and the other values follow the same pattern.
+
+  \item The above can also be written \[\vec{L} = \vec{I} \vec{\omega}\] where $\vec{I}$ is the \textbf{moment of inertia tensor} \[\vec{I} = \begin{pmatrix}
+            I_{x x} & I_{x y} & I_{x z} \\
+            I_{y x} & I_{y y} & I_{y z} \\
+            I_{z x} & I_{z y} & I_{z z}
+          \end{pmatrix}.\]
+\end{itemize}
+
 \end{document}
