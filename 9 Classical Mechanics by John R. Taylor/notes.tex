@@ -560,4 +560,14 @@
   \item If we choose the principle axes of a rigid body as our frame of reference rotation calculations are simplified but we're using a noninertial frame of reference.
 \end{itemize}
 
+\subsection{Finding the Principle Axes; Eigenvalue Equations}
+
+\begin{itemize}
+  \item If $\vec{\omega}$ is parallel to a principle axis, then $\vec{L} = \vec{I} \vec{\omega} = \lambda \vec{\omega}$. This can be converted to an eigenvalue equation \[(\vec{I} - \lambda \vec{1}) \vec{\omega} = 0\] where the eigenvectors are the principle axes. Thus to find the principle axes of a rigid body about a point we must calculate an initial intertia tensor then calculate its eigenvectors. The updated inertia tensor will be \[\vec{I} = \begin{pmatrix}
+            \lambda_1 & 0         & 0         \\
+            0         & \lambda_2 & 0         \\
+            0         & 0         & \lambda_3
+          \end{pmatrix}.\]
+\end{itemize}
+
 \end{document}
