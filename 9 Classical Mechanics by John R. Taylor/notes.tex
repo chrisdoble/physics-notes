@@ -570,4 +570,20 @@
           \end{pmatrix}.\]
 \end{itemize}
 
+\setcounter{subsection}{6}
+\subsection{Euler's Equations}
+
+\begin{itemize}
+  \item The axes $x$, $y$, and $z$ are chosen to be in an inertial frame called the \textbf{space frame} while the axes $\vec{e}_1$, $\vec{e}_2$, and $\vec{e}_3$ are chosen to align with the body's principle axes and this is is a non-inertial frame known as the \textbf{body frame}. If the body is rotating around a fixed point that is taken to be the origin of the body frame, otherwise the body's centre of mass is used.
+
+  \item Suppose a body is rotating with angular velocity $\vec{\omega}$ and has principle moments of inertia $\lambda_1$, $\lambda_2$, and $\lambda_3$, then its angular momentum in the body frame is \[\vec{L} = (\lambda_1 \omega_1, \lambda_2 \omega_2, \lambda_3 \omega_3).\] If a torque $\vec{\Gamma}$ acts on the body, then in the space frame \[\left( \frac{d \vec{L}}{d t} \right)_\text{space} = \vec{\Gamma}.\] In the body frame this becomes \begin{align*}
+          \left( \frac{d \vec{L}}{d t} \right)_\text{space} & = \left( \frac{d \vec{L}}{d t} \right)_\text{body} + \vec{\omega} \times \vec{L} \\
+                                                            & = \dvec{L} + \vec{\omega} \times \vec{L}.
+        \end{align*} Equating the previous two equations gives \[\dvec{L} + \vec{\omega} + \vec{L} = \vec{\Gamma}\] or \begin{align*}
+          \lambda_1 \dot{\omega}_1 - (\lambda_2 - \lambda_3) \omega_2 \omega_3 & = \Gamma_1  \\
+          \lambda_2 \dot{\omega}_2 - (\lambda_3 - \lambda_1) \omega_3 \omega_1 & = \Gamma_2  \\
+          \lambda_3 \dot{\omega}_3 - (\lambda_1 - \lambda_2) \omega_1 \omega_2 & = \Gamma_3.
+        \end{align*} where all quantities are in the body frame. This is known as \textbf{Euler's equation} and it is the equation of motion for the rotation of the body.
+\end{itemize}
+
 \end{document}
