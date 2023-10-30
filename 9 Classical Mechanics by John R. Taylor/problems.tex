@@ -2541,4 +2541,32 @@ Any product of inertia involving $z$ is immediately $0$.
             & \approx \qty{21}{rad/s}
 \end{align*}
 
+\section{Coupled Oscillators and Normal Modes}
+
+\subsection{}
+
+\begin{enumerate}
+  \item
+
+        \begin{align*}
+          k_1 (l_1 - L_1) & = k_2 (l_2 - L_2) \\
+          k_2 (l_2 - L_2) & = k_3 (l_3 - L_3)
+        \end{align*}
+
+  \item
+
+        \begin{align*}
+          m_1 \ddot{x}_1 & = -(k_1 + k_2) x_1 + k_2 x_2                                      \\
+          m_2 \ddot{x}_2 & = k_2 x_1 - (k_2 + k_3) x_2                                       \\ \\
+          m_1 \ddot{x}_1 & = k_1 (l_1 - L_1 - x_1) - k_2 (l_2 - L_2 - x_2 + x_1)             \\
+                         & = k_1 (l_1 - L_1) - k_1 x_1 - k_2 (l_2 - L_2) + k_2 x_2 - k_2 x_1 \\
+                         & = -(k_1 + k_2) x_1 + k_2 x_2 + k_1 (l_1 - L_1) - k_2 (l_2 - L_2)  \\
+                         & = -(k_1 + k_2) x_1 + k_2 x_2                                      \\
+          m_2 \ddot{x}_2 & = k_2 (l_2 - L_2 - x_2 + x_1) - k_3 (l_3 - L_3 + x_2)             \\
+                         & = k_2 (l_2 - L_2) + k_2 x_1 - k_2 x_2 - k_3 (l_3 - L_3) - k_3 x_2 \\
+                         & = k_2 x_1 - (k_2 + k_3) x_2 + k_2 (l_2 - L_2) - k_3 (l_3 - L_3)   \\
+                         & = k_2 x_1 - (k_2 + k_3) x_2
+        \end{align*}
+\end{enumerate}
+
 \end{document}

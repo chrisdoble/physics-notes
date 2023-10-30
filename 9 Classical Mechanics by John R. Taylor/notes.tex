@@ -592,4 +592,32 @@
   \item If a body has three different principle moments of inertia and it is rotating about one of its principle axes, its angular velocity will not change. Conversely, if it isn't rotating about one of its principle axes, its angular velocity will change.
 \end{itemize}
 
+\section{Coupled Oscillators and Normal Modes}
+
+\subsection{Two Masses and Three Springs}
+
+\begin{itemize}
+  \item Two carts of masses $m_1$ and $m_2$ are connected to walls via springs of spring constant $k_1$ and $k_3$, respectively. The carts are joined together by another spring of spring constant $k_2$. The equations of motion for the carts are \begin{align*}
+          m_1 \ddot{x}_1 & = -(k_1 + k_2) x_1 + k_2 x_2 \\
+          m_2 \ddot{x}_2 & = k_2 x_1 - (k_2 + k_3) x_2
+        \end{align*} or \[\vec{M} \ddvec{x} = -\vec{K} \vec{x}.\] Assuming a solution of the form \begin{align*}
+          \vec{z}(t) & = \begin{pmatrix}
+                           \alpha_1 e^{i (\omega t - \delta_1)} \\
+                           \alpha_2 e^{i (\omega t - \delta_2)}
+                         \end{pmatrix}    \\
+                     & = \begin{pmatrix}
+                           \alpha_1 e^{-i \delta_1} e^{i \omega t} \\
+                           \alpha_2 e^{-i \delta_2} e^{i \omega t}
+                         \end{pmatrix} \\
+                     & = \begin{pmatrix}
+                           \alpha_1 e^{-i \delta_1} \\
+                           \alpha_2 e^{-i \delta_2}
+                         \end{pmatrix} e^{i \omega t}            \\
+                     & = \vec{a} e^{i \omega t}
+        \end{align*} and substituting it into the equations of motion gives \begin{align*}
+          -\omega^2 \vec{M} \vec{a} e^{i \omega t} & = -\vec{K} \vec{a} e^{i \omega t} \\
+          (\vec{K} - \omega^2 \vec{M}) \vec{a}     & = 0
+        \end{align*} where the solutions $\omega$ give the \textbf{normal frequencies} of the system.
+\end{itemize}
+
 \end{document}
