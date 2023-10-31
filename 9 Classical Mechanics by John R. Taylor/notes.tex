@@ -647,4 +647,21 @@
   \item Nonlinear equations are complicated, in part, because the superposition principle doesn't apply — you can't just take the linear combination of $n$ independent solutions as the general solution.
 \end{itemize}
 
+\subsection{The Driven Damped Pendulum DDP}
+
+\begin{itemize}
+  \item The equation of motion for the DDP is \begin{align*}
+          I \ddot{\phi}     & = \Gamma                                        \\
+          m L^2 \ddot{\phi} & = -L b v - m g L \sin \phi + L F(t)             \\
+                            & = -b L^2 \dot{\phi} - m g L \sin \phi + L F(t).
+        \end{align*}
+
+  \item If we assume $F(t) = F_0 \cos \omega t$ the above becomes \begin{align*}
+          \ddot{\phi} + \frac{b}{m} \dot{\phi} + \frac{g}{L} \sin \phi & = \frac{F_0}{m L} \cos \omega t   \\
+          \ddot{\phi} + 2 \beta \dot{\phi} + \omega_0^2 \sin \phi      & = \gamma \omega_0^2 \cos \omega t
+        \end{align*} where \[\beta = \frac{b}{2 m}\] is the \textbf{damping constant} of the pendulum, \[\omega_0 = \sqrt{\frac{g}{L}}\] is the \textbf{natural frequency} of the pendulum, and \[\gamma = \frac{F_0}{m L \omega_0^2} = \frac{F_0}{m g}\] is the \textbf{drive strength} of the driving force.
+
+  \item The drive strength is the ratio of the amplitude of the driving force to the weight of the pendulum. When $\gamma < 1$ we would expect the driving force to produce small movement and when $\gamma \ge 1$ large movement.
+\end{itemize}
+
 \end{document}
