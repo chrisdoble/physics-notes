@@ -672,4 +672,26 @@
   \item When the drive strength is increased but is still less than $1$ the system still exhibits periodic motion, but it is composed of harmonics of the driving force rather than a single cosine.
 \end{itemize}
 
+\subsection{The DDP: Approach to Chaos}
+
+\begin{itemize}
+  \item As the drive strength is increased over $1$ the transient behaviour becomes wild and less predictable.
+
+  \item Continuing to increase the drive strength results in a steady state period two times the driving period — the system is said to have \textbf{period two}. This isn't possible with harmonics alone so \textbf{subharmonics} (sinusoidal terms with frequency $\omega / n$ rather than $n \omega$) must be present.
+
+  \item Continuing to increase the drive strength results in a steady state with period three.
+
+  \item Changing the initial conditions of the DDP and keeping all other values the same can result in different steady state solutions. This differs from the linear case where there is only one possible steady state solution.
+
+  \item If initial conditions are kept constant and the drive strength is increased we observe a \textbf{period-doubling cascade}, i.e. the period continually doubles as the drive strength increases.
+
+  \item Period-doubling cascades occur across many nonlinear systems and the parameter that determines when the cascades occur (the drive strength above) is called the \textbf{control parameter}.
+
+  \item In many systems, as the control parameter changes there are certain \textbf{threshold values} or \textbf{bifurcation points} at which the period doubles. As the threshold value continues to change the rate at which the period doubles increases. If $\gamma_n$ represents bifurcation point $n$ then the intervals between successive bifurcation points are related by \[\gamma_{n + 1} - \gamma_n \approx \frac{1}{\delta} (\gamma_n - \gamma_{n - 1})\] where $\delta = \num{4.6692016}$ is called the \textbf{Feigenbaum number}.
+
+  \item This implies that the intervals between successive bifucation points shrink as the control parameter increases, approaching a finite limit $\gamma_c$ as $n \rightarrow \infty$.
+
+  \item If $\gamma > \gamma_c$ chaos sets in. This is why the period-doubling cascade is sometimes called a \textbf{route to chaos}.
+\end{itemize}
+
 \end{document}
