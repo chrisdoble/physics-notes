@@ -706,4 +706,24 @@
   \item As we increase $\gamma$ the system moves through regions of chaos and stability.
 \end{itemize}
 
+\subsection{Bifurcation Diagrams}
+
+\begin{itemize}
+  \item A bifurcation diagram is a plot of the dependent variable $\phi(t)$ vs. the control parameter $\gamma$ with the goal of visualising regions of periodicity and chaos as $\gamma$ changes. It is constructed by following these steps:
+
+        \begin{enumerate}
+          \item Solve the nonlinear system for each value of $\gamma$ to be shown on the diagram.
+
+          \item Simulate each solution from $t = 0$ to $t = t_\text{max}$ where $t_\text{max}$ is large enough that all transient behaviour has died out. The simulations should all have the same initial conditions.
+
+          \item Sample each solution a large number of times at one-cycle intervals between $t_\text{min}$ and $t_\text{max}$ where $t_\text{min}$ is large enough that all transient behaviour has died out. If the solution is periodic a small number of values will appear multiple times, if it is chaotic each value will be different.
+
+          \item Plot those values as points on the diagram at the appropriate $(\gamma, \phi(t))$ coordinates.
+        \end{enumerate}
+
+        If a particular value of $\gamma$ results in a periodic solution there will be a small number of points on that vertical line. If it results in a chaotic solution there will be many. This results in a diagram that shows how the periodicity of the solutions change with $\gamma$.
+
+  \item Sometimes solutions can exhibit ``rolling'' behaviour where $\phi(t)$ increases by a multiple of $2 \pi$ each period. The behaviour may still be periodic but the differing values of $\phi(t)$ render the bifurcation diagram useless. This can be avoided by instead plotting $\gamma$ vs $\dot{\phi}(t)$.
+\end{itemize}
+
 \end{document}
