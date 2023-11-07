@@ -2860,4 +2860,106 @@ Any product of inertia involving $z$ is immediately $0$.
         The state-space orbit is an ellipse and it is traced clockwise.
 \end{enumerate}
 
+\section{Hamiltonian Mechanics}
+
+\subsection{}
+
+\begin{align*}
+  T           & = \frac{1}{2} m \dot{x}^2                       \\
+  U           & = 0                                             \\
+  \mathcal{L} & = T - U                                         \\
+              & = \frac{1}{2} m \dot{x}^2                       \\
+  p           & = \frac{\partial \mathcal{L}}{\partial \dot{x}} \\
+              & = m \dot{x}                                     \\
+  \dot{x}     & = \frac{p}{m}                                   \\
+  \mathcal{H} & = p \dot{x} - \mathcal{L}                       \\
+              & = \frac{p^2}{m} - \frac{p^2}{2 m}               \\
+              & = \frac{p^2}{2 m}                               \\
+  \dot{x}     & = \frac{\partial \mathcal{H}}{\partial p}       \\
+              & = \frac{p}{m}                                   \\
+  x           & = x_0 + \frac{p}{m} t                           \\
+  \dot{p}     & = \frac{\partial \mathcal{H}}{\partial x}       \\
+              & = 0                                             \\
+  p           & = p_0
+\end{align*}
+
+\setcounter{subsection}{2}
+\subsection{}
+
+\begin{align*}
+  T           & = \frac{1}{2} \left( m_1 + m_2 + \frac{1}{2} M \right) \dot{x}^2                   \\
+  U           & = (m_2 - m_1) g x                                                                  \\
+  \mathcal{L} & = T - U                                                                            \\
+              & = \frac{1}{2} \left( m_1 + m_2 + \frac{1}{2} M \right) \dot{x}^2 - (m_2 - m_1) g x \\
+  p           & = \frac{\partial \mathcal{L}}{\partial \dot{x}}                                    \\
+              & = \left( m_1 + m_2 + \frac{1}{2} M \right) \dot{x}                                 \\
+  \dot{x}     & = \frac{p}{m_1 + m_2 + \frac{1}{2} M}                                              \\
+  \mathcal{H} & = p \dot{x} - \mathcal{L}                                                          \\
+              & = \frac{p^2}{2 \left( m_1 + m_2 + \frac{1}{2} M \right)} + (m_2 - m_1) g x         \\
+  \dot{p}     & = \frac{\partial \mathcal{H}}{\partial x}                                          \\
+              & = (m_2 - m_1) g                                                                    \\
+  \dot{x}     & = \frac{\partial \mathcal{H}}{\partial p}                                          \\
+              & = \frac{p}{m_1 + m_2 + \frac{1}{2} M}                                              \\
+  \ddot{x}    & = \frac{\dot{p}}{m_1 + m_2 + \frac{1}{2} M}                                        \\
+              & = \frac{m_2 - m_1}{m_1 + m_2 + \frac{1}{2} M} g
+\end{align*}
+
+\setcounter{subsection}{4}
+\subsection{}
+
+\begin{align*}
+  v^2         & = \dot{\rho}^2 + (\rho \dot{\phi})^2 + \dot{z}^2      \\
+              & = R^2 \dot{\phi}^2 + c^2 \dot{\phi}^2                 \\
+              & = (c^2 + R^2) \dot{\phi}^2                            \\
+  T           & = \frac{1}{2} m v^2                                   \\
+              & = \frac{1}{2} m (c^2 + R^2) \dot{\phi}^2              \\
+  U           & = m g z                                               \\
+              & = c m g \phi                                          \\
+  \mathcal{L} & = T - U                                               \\
+              & = \frac{1}{2} m (c^2 + R^2) \dot{\phi}^2 - c m g \phi \\
+  p           & = \frac{\partial \mathcal{L}}{\partial \dot{\phi}}    \\
+              & = m (c^2 + R^2) \dot{\phi}                            \\
+  \dot{\phi}  & = \frac{p}{m (c^2 + R^2)}                             \\
+  \mathcal{H} & = p \dot{\phi} - \mathcal{L}                          \\
+              & = \frac{p^2}{2 m (c^2 + R^2)} + c m g \phi            \\
+  \dot{p}     & = -\frac{\partial \mathcal{H}}{\partial \phi}         \\
+              & = -c m g                                              \\
+  \ddot{\phi} & = \frac{\dot{p}}{m (c^2 + R^2)}                       \\
+              & = -\frac{c g}{c^2 + R^2}                              \\
+  \ddot{z}    & = c \ddot{\phi}                                       \\
+              & = -\frac{c^2 g}{c^2 + R^2}
+\end{align*}
+
+\setcounter{subsection}{6}
+\subsection{}
+
+\begin{enumerate}
+  \item
+
+        \begin{align*}
+          v^2         & = \dot{x}^2 + \dot{y}^2                            \\
+                      & = [1 + h'(x)^2] \dot{x}^2                          \\
+          T           & = \frac{1}{2} m v^2                                \\
+                      & = \frac{1}{2} m [1 + h'(x)^2] \dot{x}^2            \\
+          U           & = m g h(x)                                         \\
+          \mathcal{L} & = T - U                                            \\
+                      & = \frac{1}{2} m [1 + h'(x)^2] \dot{x}^2 - m g h(x) \\
+          p           & = \frac{\partial \mathcal{L}}{\partial \dot{x}}    \\
+                      & = m [1 + h'(x)^2] \dot{x}                          \\
+          \dot{x}     & = \frac{p}{m [1 + h'(x)^2]}                        \\
+          \mathcal{H} & = T + U                                            \\
+                      & = \frac{1}{2} m [1 + h'(x)^2] \dot{x}^2 + m g h(x) \\
+                      & = \frac{p^2}{2 m [1 + h'(x)^2]} + m g h(x)
+        \end{align*}
+
+  \item
+
+        \begin{align*}
+          \dot{x} & = \frac{\partial \mathcal{H}}{\partial p}                \\
+                  & = \frac{p}{m [1 + h'(x)^2]}                              \\
+          \dot{p} & = -\frac{\partial \mathcal{H}}{\partial x}               \\
+                  & = \frac{p^2 h'(x) h''(x)}{m [1 + h'(x)^2]^2} - m g h'(x)
+        \end{align*}
+\end{enumerate}
+
 \end{document}
