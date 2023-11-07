@@ -2962,4 +2962,70 @@ Any product of inertia involving $z$ is immediately $0$.
         \end{align*}
 \end{enumerate}
 
+\setcounter{subsection}{8}
+\subsection{}
+
+\begin{align*}
+  T           & = \frac{1}{2} m v^2                             \\
+              & = \frac{1}{2} m (\dot{x}^2 + \dot{y}^2)         \\
+  U           & = m g y                                         \\
+  \mathcal{L} & = \frac{1}{2} m (\dot{x}^2 + \dot{y}^2) - m g y \\
+  p_x         & = m \dot{x}                                     \\
+  \dot{x}     & = \frac{p_x}{m}                                 \\
+  p_y         & = m \dot{y}                                     \\
+  \dot{y}     & = \frac{p_y}{m}                                 \\
+  \mathcal{H} & = \frac{p_x^2 + p_y^2}{2 m} + m g y             \\
+  \dot{x}     & = \frac{p_x}{m}                                 \\
+  \dot{p}_x   & = 0                                             \\
+  \dot{y}     & = \frac{p_y}{m}                                 \\
+  \dot{p}_y   & = -m g
+\end{align*}
+
+\setcounter{subsection}{10}
+\subsection{}
+
+\begin{align*}
+  \mathcal{L} & = \frac{1}{2} m [(V + \dot{x})^2 + \dot{y}^2 + \dot{z}^2] - m g z                                                                                                                                     \\
+  p_x         & = m (V + \dot{x})                                                                                                                                                                                     \\
+  \dot{x}     & = \frac{p_x}{m} - V                                                                                                                                                                                   \\
+  p_y         & = m \dot{y}                                                                                                                                                                                           \\
+  \dot{y}     & = \frac{p_y}{m}                                                                                                                                                                                       \\
+  p_z         & = m \dot{z}                                                                                                                                                                                           \\
+  \dot{z}     & = \frac{p_z}{m}                                                                                                                                                                                       \\
+  \mathcal{H} & = \sum_{i = 1}^3 p_i \dot{q}_i - \mathcal{L}                                                                                                                                                          \\
+              & = p_x \left( \frac{p_x}{m} - V \right) + \frac{p_y^2}{m} + \frac{p_z^2}{m} - \frac{1}{2} m [\left( \frac{p_x}{m} \right)^2 + \left( \frac{p_y}{m} \right)^2 + \left( \frac{p_z}{m} \right)^2] + m g z \\
+              & = \frac{1}{2 m} (p_x^2 + p_y^2 + p_z^2) - p_x V + m g z                                                                                                                                               \\
+  T + U       & = \frac{1}{2 m} (p_x^2 + p_y^2 + p_z^2) + m g z                                                                                                                                                       \\
+              & \ne \mathcal{H}
+\end{align*}
+
+\setcounter{subsection}{12}
+\subsection{}
+
+\begin{align*}
+  v^2          & = \dot{\rho}^2 + (\rho \dot{\phi})^2 + \dot{z}^2                                                                                      \\
+               & = R^2 \dot{\phi}^2 + \dot{z}^2                                                                                                        \\
+  T            & = \frac{1}{2} m v^2                                                                                                                   \\
+               & = \frac{1}{2} m (R^2 \dot{\phi}^2 + \dot{z}^2)                                                                                        \\
+  U            & = -\int_0^r -k r' \,d r'                                                                                                              \\
+               & = \frac{1}{2} k r^2                                                                                                                   \\
+               & = \frac{1}{2} k (R^2 + z^2)                                                                                                           \\
+  \mathcal{L}  & = T - U                                                                                                                               \\
+               & = \frac{1}{2} m (R^2 \dot{\phi}^2 + \dot{z}^2) - \frac{1}{2} k (R^2 + z^2)                                                            \\
+  p_\phi       & = m R^2 \dot{\phi}                                                                                                                    \\
+  \dot{\phi}   & = \frac{p_\phi}{m R^2}                                                                                                                \\
+  p_z          & = m \dot{z}                                                                                                                           \\
+  \dot{z}      & = \frac{p_z}{m}                                                                                                                       \\
+  \mathcal{H}  & = T + U                                                                                                                               \\
+               & = \frac{1}{2} m (R^2 \dot{\phi}^2 + \dot{z}^2) + \frac{1}{2} k (R^2 + z^2)                                                            \\
+               & = \frac{1}{2} m \left[ R^2 \left( \frac{p_\phi}{m R^2} \right)^2 + \left( \frac{p_z}{m} \right)^2 \right] + \frac{1}{2} k (R^2 + z^2) \\
+               & = \frac{1}{2 m} \left( \frac{p_\phi^2}{R^2} + p_z^2 \right) + \frac{1}{2} k (R^2 + z^2)                                               \\
+  \dot{\phi}   & = \frac{p_\phi}{m R^2}                                                                                                                \\
+  \dot{p}_\phi & = 0                                                                                                                                   \\
+  \dot{z}      & = \frac{p_z}{m}                                                                                                                       \\
+  \dot{p}_z    & = -k z                                                                                                                                \\
+  m \ddot{z}   & = -k z                                                                                                                                \\
+  z            & = A \cos (\omega t - \delta)
+\end{align*}
+
 \end{document}

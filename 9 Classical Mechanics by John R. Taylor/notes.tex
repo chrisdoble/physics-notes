@@ -760,4 +760,24 @@
   \item For a one-dimensional system, the Lagrangian formalism gives a single second-order differential equation while the Hamiltonian formalism gives two first-order differential equations.
 \end{itemize}
 
+\subsection{Hamilton's Equations in Several Dimensions}
+
+\begin{itemize}
+  \item Hamilton's equations for a multi-dimensional system are \[\dot{q}_i = \frac{\partial \mathcal{H}}{\partial p_i} \text{ and } \dot{p}_i = -\frac{\partial \mathcal{H}}{\partial q_i} \text{ for } i = 1, \ldots, n.\]
+
+  \item The process of applying the Hamiltonian formalism to a multi-dimensional system is similar to that of a one-dimensional system:
+
+        \begin{enumerate}
+          \item Determine the Lagrangian $\mathcal{L} = T - U$.
+
+          \item Determine the generalized momenta \[p_i = \frac{\partial \mathcal{L}}{\partial \dot{q}_i} \text{ for } i = 1, \ldots, n.\]
+
+          \item Treat the generalized momenta equations as a system of $n$ equations for the $n$ generalized velocities $\dot{q}_i$ and solve.
+
+          \item Define the Hamiltonian as \[\mathcal{H} = \sum_{i = 1}^n p_i \dot{q}_i - \mathcal{L}.\]
+
+          \item Apply Hamilton's equations as above.
+        \end{enumerate}
+\end{itemize}
+
 \end{document}
