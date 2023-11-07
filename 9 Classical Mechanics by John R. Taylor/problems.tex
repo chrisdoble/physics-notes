@@ -3028,4 +3028,56 @@ Any product of inertia involving $z$ is immediately $0$.
   z            & = A \cos (\omega t - \delta)
 \end{align*}
 
+\setcounter{subsection}{18}
+\subsection{}
+
+\begin{align*}
+  \mathcal{L} & = \frac{1}{2} m (\dot{x}^2 + \dot{y}^2) - U(\sqrt{x^2 + y^2})                                                        \\
+  p_x         & = m \dot{x}                                                                                                          \\
+  p_y         & = m \dot{y}                                                                                                          \\
+  \mathcal{H} & = \frac{1}{2} m \left[ \left( \frac{p_x}{m} \right)^2 + \left( \frac{p_y}{m} \right)^2 \right] + U(\sqrt{x^2 + y^2}) \\
+  \dot{p}_x   & = \frac{d U}{d r} \frac{x}{\sqrt{x^2 + y^2}}                                                                         \\
+  \dot{p}_y   & = \frac{d U}{d r} \frac{y}{\sqrt{x^2 + y^2}}
+\end{align*}
+
+\setcounter{subsection}{20}
+\subsection{}
+
+\begin{enumerate}
+  \item
+
+        \begin{align*}
+          \vec{r}     & = \vec{r}_1 - \vec{r}_2                                                                                                   \\
+          \mathcal{L} & = \frac{1}{2} M (\dot{X}^2 + \dot{Y}^2) + \frac{1}{2} \mu [\dot{r}^2 + (r \dot{\phi})^2] - \frac{1}{2} k (r - l_0)^2      \\
+          p_r         & = \mu \dot{r}                                                                                                             \\
+          p_\phi      & = \mu r^2 \dot{\phi}                                                                                                      \\
+          p_X         & = M \dot{X}                                                                                                               \\
+          p_Y         & = M \dot{Y}                                                                                                               \\
+          \mathcal{H} & = \frac{1}{2 M} (p_X^2 + p_Y^2) + \frac{1}{2 \mu} \left( p_r^2 + \frac{p_\phi^2}{r^2} \right) + \frac{1}{2} k (r - l_0)^2
+        \end{align*}
+
+        $X$, $Y$, and $\phi$ are ignorable.
+
+  \item
+
+        \begin{align*}
+          \dot{X}      & = \frac{p_X}{M}                          \\
+          \dot{p}_X    & = 0                                      \\
+          \dot{Y}      & = \frac{p_Y}{M}                          \\
+          \dot{p}_Y    & = 0                                      \\
+          \dot{r}      & = \frac{p_r}{\mu}                        \\
+          \dot{p}_r    & = \frac{p_\phi^2}{\mu r^3} - k (r - l_0) \\
+          \dot{\phi}   & = \frac{p_\phi}{\mu r^2}                 \\
+          \dot{p}_\phi & = 0
+        \end{align*}
+
+  \item
+
+        \begin{align*}
+          \mu \ddot{r} & = \frac{p_\phi^2}{\mu r^3} - k (r - l_0)                      \\
+                       & = -k (r - l_0)                                                \\
+          r            & = l_0 + A \cos \left( \sqrt{\frac{k}{\mu}} t - \delta \right)
+        \end{align*}
+\end{enumerate}
+
 \end{document}
