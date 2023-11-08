@@ -832,4 +832,18 @@
   \item Some cross sections vary with projectile energy, e.g. if the projectile doesn't have some minimum amount if kinetic energy it won't be able to ionise the target atom and the ionisation cross section is thus 0.
 \end{itemize}
 
+\subsection{The Differential Scattering Cross Section}
+
+\begin{itemize}
+  \item The \textbf{solid angle} of an object is a measure of the field of view that object covers — in otherwords, how large the object appears from a particular field of view. It is defined as the area of the unit sphere, centred at the apex of the field of view, that the object covers.
+
+  \item In two-dimensions the ratio of an arc's length to its radius gives the planar angle in radians. Similarly, in three-dimensions the ratio of the area covered on a sphere by an object to the area given by the radius of the sphere squared gives the solid angle in steradians \[\Omega = \frac{A}{r^2}.\]
+
+  \item Solid angles are meaured in \textbf{steradians} appreviated \textbf{sr} where $\qty{1}{sr}$ is equal to one unit of surface area on the unit sphere.
+
+  \item The number of projectiles that are scattered into a particular solid angle $d \Omega$ is proportional to $N_\text{inc}$ and $n_\text{tar}$ so \[N_\text{sc} \text{(into } d \Omega \text{)} = N_\text{inc} n_\text{tar} \,d \sigma \text{(into } d \Omega \text{)}.\] Where $\sigma \text{(into } d \Omega \text{)}$ is the effective cross sectional area of the target for scattering into the solid angle $d \Omega$. Because this is proportional to $d \Omega$ the above can be rewritten \[N_\text{sc} \text{(into } d \Omega \text{)} = N_\text{inc} n_\text{tar} \frac{d \sigma}{d \Omega} (\theta, \phi) \,d \Omega\] where $d \sigma / d \Omega$ is called the \textbf{differential scattering cross section}.
+
+  \item If we integrate $d \sigma / d \Omega$ over all solid angles we find $N_\text{sc}$.
+\end{itemize}
+
 \end{document}
