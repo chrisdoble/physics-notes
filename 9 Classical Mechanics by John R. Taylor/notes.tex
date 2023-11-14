@@ -927,4 +927,48 @@
         \end{align*}
 \end{itemize}
 
+\subsection{Four-Dimensional Space-Time; Four-Vectors}
+
+\begin{itemize}
+  \item Consider three-dimensional space with basis vectors $\vec{e}_1, \vec{e}_2, \vec{e}_3$. Rotating these basis vectors by an angle $\theta$ around $\vec{e}_2$ gives a second set of basis vectors $\vec{e}_1', \vec{e}_2, \vec{e}_3'$. Using these rotated basis vectors, a vector $\vec{q} = q_1 \vec{e}_1 + q_2 \vec{e}_2 + q_3 \vec{e}_3$ can be expressed as \[q_i' = \vec{e}_i' \cdot \vec{q} = \vec{e}_i' \cdot (q_1 \vec{e}_1 + q_2 \vec{e}_2 + q_3 \vec{e}_3) = q_1 (\vec{e}_i' \cdot \vec{e}_1) + q_2 (\vec{e}_i' \cdot \vec{e}_2) + q_3 (\vec{e}_i' \cdot \vec{e}_3).\] This can be expressed as a matrix equation \[\vec{q}' = \vec{R} \vec{q}\] where \begin{align*}
+          \vec{q}' & = \begin{bmatrix}
+                         q_1' \\
+                         q_2' \\
+                         q_3'
+                       \end{bmatrix}                                                                       \\
+          \vec{R}  & = \begin{bmatrix}
+                         \vec{e}_1' \cdot \vec{e}_1 & \vec{e}_1' \cdot \vec{e}_2 & \vec{e}_1' \cdot \vec{e}_3 \\
+                         \vec{e}_2' \cdot \vec{e}_1 & \vec{e}_2' \cdot \vec{e}_2 & \vec{e}_2' \cdot \vec{e}_3 \\
+                         \vec{e}_3' \cdot \vec{e}_1 & \vec{e}_3' \cdot \vec{e}_2 & \vec{e}_3' \cdot \vec{e}_3
+                       \end{bmatrix} \\
+          \vec{q}  & = \begin{bmatrix}
+                         q_1 \\
+                         q_2 \\
+                         q_3
+                       \end{bmatrix}
+        \end{align*}
+
+  \item The Lorentz transformation mixes coordinates in a similar way to the above, suggesting that we could treat time as a fourth dimension. Indeed, if we let the fourth coordinate be $c t$ and introduce an ``angle'' $\phi$ such that $\gamma = \cosh \phi$ then \begin{align*}
+          x_1' & = (\cosh \phi) x_1 - (\sinh \phi) x_4   \\
+          x_2' & = x_2                                   \\
+          x_3' & = x_3                                   \\
+          x_4' & = (-\sinh \phi) x_1 + (\cosh \phi) x_4.
+        \end{align*} These four coordinates form \textbf{four-dimensional space-time} or \textbf{four-space}.
+
+  \item In four-space, the Lorentz transformation can be represented as a matrix equation \[x' = \Lambda x\] where \[\Lambda = \begin{bmatrix}
+            \gamma        & 0 & 0 & -\gamma \beta \\
+            0             & 1 & 0 & 0             \\
+            0             & 0 & 1 & 0             \\
+            -\gamma \beta & 0 & 0 & \gamma
+          \end{bmatrix}.\] Note that this assumes the two frames of reference are in the standard configuration (axes aligned, relative motion in the $x$ direction).
+
+  \item Any Lorentz transformation that leaves corresponding axes parallel is called a \textbf{pure boost} or a \textbf{boost}.
+
+  \item In each intertial frame $\mathcal{S}$, a \textbf{four-vector} is specified by a set of four numbers $q = (q_1, q_2, q_3, q_4)$ such that the values in two frames $\mathcal{S}$ and $\mathcal{S}'$ are related by the equation $q' = \Lambda q$, where $\Lambda$ is the Lorentz transformation connecting $\mathcal{S}$ and $\mathcal{S}'$.
+
+  \item Any single quantity that is invariant under rotation is called a \textbf{rotation scalar} or \textbf{three-scalar}, e.g. mass.
+
+  \item Any single quantity that is invariant under Lorentz transformations is called a \textbf{Lorentz scalar} or \textbf{four-scalar}.
+\end{itemize}
+
 \end{document}
