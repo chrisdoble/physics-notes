@@ -15,4 +15,55 @@
 
 \tableofcontents
 
+\setcounter{section}{11}
+\section{Orthogonal Functions and Fourier Series}
+
+\subsection{Orthogonal Functions}
+
+\setcounter{subsubsection}{6}
+\subsubsection{}
+
+\begin{align*}
+  \int_0^{\pi / 2} \sin m x \sin n x \,d x & = \frac{1}{2} \int_0^{\pi / 2} [\cos (m - n) x - \cos (m + n) x] \,d x                               \\
+                                           & = \frac{1}{2} \left[ \frac{\sin (m - n) x}{m - n} - \frac{\sin (m + n) x}{m + n} \right]_0^{\pi / 2} \\
+                                           & = \frac{1}{2} \left( \frac{\sin (m - n) \pi / 2}{m - n} - \frac{\sin (m + n) \pi / 2}{m + n} \right) \\
+                                           & = 0                                                                                                  \\
+  ||\sin n x||^2                           & = (\sin n x, \sin n x)                                                                               \\
+                                           & = \int_0^{\pi / 2} \sin^2 n x \,d x                                                                  \\
+                                           & = \frac{1}{2} \int_0^{\pi / 2} (1 - \cos 2 n x) \,d x                                                \\
+                                           & = \frac{1}{2} \left[ x - \frac{1}{2 n} \sin 2 n x \right]_0^{\pi / 2}                                \\
+                                           & = \frac{\pi}{4}                                                                                      \\
+  ||\sin n x||                             & = \frac{\sqrt{\pi}}{2}
+\end{align*}
+
+\setcounter{subsubsection}{8}
+\subsubsection{}
+
+\begin{align*}
+  \int_0^\pi \sin m x \sin n x \,d x & = \frac{1}{2} \int_0^\pi [\cos (m - n) x - \cos (m + n) x] \,d x                               \\
+                                     & = \frac{1}{2} \left[ \frac{\sin (m - n) x}{m - n} - \frac{\sin (m + n) x}{m + n} \right]_0^\pi \\
+                                     & = 0                                                                                            \\
+  ||\sin n x||^2                     & = (\sin n x, \sin n x)                                                                         \\
+                                     & = \int_0^\pi \sin^2 n x \,d x                                                                  \\
+                                     & = \frac{1}{2} \int_0^\pi (1 - \cos 2 n x) \,d x                                                \\
+                                     & = \frac{1}{2} \left[ x - \frac{1}{2 n} \sin 2 n x \right]_0^\pi                                \\
+                                     & = \frac{\pi}{2}                                                                                \\
+  ||\sin n x||                       & = \sqrt{\frac{\pi}{2}}
+\end{align*}
+
+\setcounter{subsubsection}{20}
+\subsubsection{}
+
+\[T = 1\]
+
+\setcounter{subsubsection}{22}
+\subsubsection{}
+
+\[T = 2 \pi\]
+
+\setcounter{subsubsection}{24}
+\subsubsection{}
+
+\[T = 2 \pi\]
+
 \end{document}

@@ -11,4 +11,27 @@
 
 \tableofcontents
 
+\setcounter{section}{11}
+\section{Orthogonal Functions and Fourier Series}
+
+\subsection{Orthogonal Functions}
+
+\begin{itemize}
+  \item The \textbf{inner product} of two functions $f_1$ and $f_2$ on an interval $[a, b]$ is the number \[(f_1, f_2) = \int_a^b f_1(x) f_2(x) \,d x.\]
+
+  \item Two functions $f_1$ and $f_2$ are said to be orthogonal on an interval if $(f_1, f_2) = 0$.
+
+  \item A set of real-valued functions $\{\phi_1(x), \phi_2(x), \ldots, \phi_n(x)\}$ is said to be \textbf{orthogonal} on an interval if \[(\phi_i, \phi_j) = 0 \text{ for } i \ne j.\]
+
+  \item The \textbf{square norm} of a function is \[||\phi_n(x)||^2 = (\phi_n, \phi_n)\] and thus its \textbf{norm} is \[||\phi_n(x)|| = \sqrt{(\phi_n, \phi_n)}.\]
+
+  \item An \textbf{orthonormal set} of functions is an orthogonal set of functions that all have a norm of $1$.
+
+  \item An orthogonal set can be made into an orthonormal set by dividing each member by its norm.
+
+  \item If $\{\phi_n(x)\}$ is an infinite orthogonal set of functions on an interval $[a, b]$ and $f(x)$ is an arbitrary function, then it's possible to determine a set of coefficients $c_n, n = 0, 1, 2, \ldots$ such that \[f(x) = \sum_{n = 0}^\infty c_n \phi_n(x) = c_0 \phi_0(x) + c_1 \phi_1(x) + \ldots + c_n \phi_n(x) + \ldots\] This is called an \textbf{orthogonal series expansion} of $f$ or a \textbf{generalized Fourier series} where the coefficients are given by \[c_n = \frac{(f, \phi_n)}{||\phi_n||^2}.\]
+
+  \item A set of real-valued functions $\{\phi_n(x)\}$ is said to be \textbf{orthogonal with respect to a weight function} $w(x)$ on the interval $[a, b]$ if \[\int_a^b w(x) \phi_m(x) \phi_n(x) \,d x = 0,\ m \ne n.\]
+\end{itemize}
+
 \end{document}
