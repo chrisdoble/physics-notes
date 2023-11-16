@@ -34,4 +34,18 @@
   \item A set of real-valued functions $\{\phi_n(x)\}$ is said to be \textbf{orthogonal with respect to a weight function} $w(x)$ on the interval $[a, b]$ if \[\int_a^b w(x) \phi_m(x) \phi_n(x) \,d x = 0,\ m \ne n.\]
 \end{itemize}
 
+\subsection{Fourier Series}
+
+\begin{itemize}
+  \item The \textbf{Fourier series} of a function $f$ defined on the interval $(-p, p)$ is given by \[f(x) = \frac{a_0}{2} + \sum_{n = 1}^\infty \left( a_n \cos \frac{n \pi}{p} x + b_n \sin \frac{n \pi}{p} x \right)\] where \begin{align*}
+          a_0 & = \frac{1}{p} \int_{-p}^p f(x) \,d x                        \\
+          a_n & = \frac{1}{p} \int_{-p}^p f(x) \cos \frac{n \pi}{p} x \,d x \\
+          b_n & = \frac{1}{p} \int_{-p}^p f(x) \sin \frac{n \pi}{p} x \,d x
+        \end{align*}
+
+  \item At points of discontinuity in $f$, the Fourier series takes on the average of the values either side of it.
+
+  \item The Fourier series of a function $f$ gives a \textbf{periodic extension} of the function outside the interval $(-p, p)$.
+\end{itemize}
+
 \end{document}

@@ -66,4 +66,44 @@
 
 \[T = 2 \pi\]
 
+\subsection{Fourier Series}
+
+\subsubsection{}
+
+\begin{align*}
+  p    & = \pi                                                                           \\
+  a_0  & = \frac{1}{\pi} \int_{-\pi}^\pi f(x) \,d x                                      \\
+       & = \frac{1}{\pi} \int_0^\pi \,d x                                                \\
+       & = 1                                                                             \\
+  a_n  & = \frac{1}{\pi} \int_{-\pi}^\pi f(x) \cos n x \,d x                             \\
+       & = \frac{1}{\pi} \int_0^\pi \cos n x \,d x                                       \\
+       & = \frac{1}{n \pi} [\sin n x]_0^\pi                                              \\
+       & = 0                                                                             \\
+  b_n  & = \frac{1}{\pi} \int_{-\pi}^\pi f(x) \sin n x \,d x                             \\
+       & = \frac{1}{\pi} \int_0^\pi \sin n x \,d x                                       \\
+       & = -\frac{1}{n \pi} [\cos n x]_0^\pi                                             \\
+       & = -\frac{1}{n \pi} [(-1)^n - 1]                                                 \\
+       & = \frac{1 - (-1)^n}{n \pi}                                                      \\
+  f(x) & = \frac{1}{2} + \frac{1}{\pi} \sum_{n = 1}^\infty \frac{1 - (-1)^n}{n} \sin n x
+\end{align*}
+
+The series converges to $\frac{1}{2}$ at the point of discontinuity.
+
+\setcounter{subsubsection}{2}
+\subsubsection{}
+
+\begin{align*}
+  p    & = 1                                                                                                                         \\
+  a_0  & = \frac{3}{2}                                                                                                               \\
+  a_n  & = \int_{-1}^0 \cos n \pi x \,d x + \int_0^1 x \cos n \pi x \,d x                                                            \\
+       & = \frac{1}{n \pi} [\sin n \pi x]_{-1}^0 + \frac{1}{n \pi} \left[ \frac{\cos n \pi x}{n \pi} + x \sin n \pi x \right]_0^1    \\
+       & = \frac{(-1)^n - 1}{n^2 \pi^2}                                                                                              \\
+  b_n  & = \int_{-1}^0 \sin n \pi x \,d x + \int_0^1 x \sin n \pi x \,d x                                                            \\
+       & = -\frac{1}{n \pi} [\cos n \pi x]_{-1}^0 + \frac{1}{n \pi} \left[ \frac{\sin n \pi x}{n \pi} - x \cos n \pi x \right]_0^1   \\
+       & = -\frac{1}{n \pi}                                                                                                          \\
+  f(x) & = \frac{3}{4} + \sum_{n = 1}^\infty \left[ \frac{(-1)^n - 1}{n^2 \pi^2} \cos n \pi x - \frac{1}{n \pi} \sin n \pi x \right]
+\end{align*}
+
+The series converges to $\frac{1}{2}$ at the point of discontinuity.
+
 \end{document}
