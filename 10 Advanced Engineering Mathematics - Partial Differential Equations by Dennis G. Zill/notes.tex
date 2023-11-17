@@ -1,5 +1,6 @@
 \documentclass{article}
 \usepackage{amsmath} % For align*
+\usepackage{siunitx} % For units
 
 \title{Advanced Engineering Mathematics Partial Differential Equations by Dennis G. Zill Notes}
 \author{Chris Doble}
@@ -46,6 +47,45 @@
   \item At points of discontinuity in $f$, the Fourier series takes on the average of the values either side of it.
 
   \item The Fourier series of a function $f$ gives a \textbf{periodic extension} of the function outside the interval $(-p, p)$.
+\end{itemize}
+
+\subsection{Fourier Cosine and Sine Series}
+
+\begin{itemize}
+  \item A function $f$ is said to be \textbf{even} if \[f(-x) = f(x)\] and \textbf{odd} if \[f(-x) = -f(x).\]
+
+  \item Even and odd functions have some interesting properties:
+
+        \begin{itemize}
+          \item The product of two even functions is even.
+
+          \item The product of two odd functions is even.
+
+          \item The product of an even function and an odd function is odd.
+
+          \item If $f$ is even, then $\int_{-a}^a f(x) \,d x = 2 \int_0^a f(x) \,d x$.
+
+          \item If $f$ is odd, then $\int_{-a}^a f(x) \,d x = 0$.
+        \end{itemize}
+
+  \item In light of this, if a function $f$ is even its Fourier coefficients are \begin{align*}
+          a_0 & = \frac{2}{p} \int_0^p f(x) \,d x                        \\
+          a_n & = \frac{2}{p} \int_0^p f(x) \cos \frac{n \pi}{p} x \,d x \\
+          b_n & = 0.
+        \end{align*} The series consists of cosine terms and is called the \textbf{Fourier cosine series}.
+
+  \item Similarly, if $f$ is odd then \begin{align*}
+          a_n & = 0,\ n = 0, 1, 2, \ldots                                 \\
+          b_n & = \frac{2}{p} \int_0^p f(x) \sin \frac{n \pi}{p} x \,d x.
+        \end{align*} The series consists of sine terms and is called the \textbf{Fourier sine series}.
+
+  \item Sometimes a Fourier series ``overshoots'' the original value of the function near discontinuities. This is called the \textbf{Gibbs phenomenon}.
+
+  \item Taking the Fourier cosine series of a function $f$ over the interval $[0, L]$ effectively mirrors the function around the vertical axis.
+
+  \item Taking the Fourier sine series of a function $f$ over the interval $[0, L]$ effectively rotates it $\ang{180}$ around the origin.
+
+  \item A particular solution for a nonhomogeneous differential equation with a periodic driving force can be found by taking the Fourier transform of the driving force then using the method of undetermined coefficients to determine the coefficients.
 \end{itemize}
 
 \end{document}
