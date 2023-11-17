@@ -88,4 +88,16 @@
   \item A particular solution for a nonhomogeneous differential equation with a periodic driving force can be found by taking the Fourier transform of the driving force then using the method of undetermined coefficients to determine the coefficients.
 \end{itemize}
 
+\subsection{Complex Fourier Series}
+
+\begin{itemize}
+  \item The \textbf{complex Fourier series} of a function $f$ defined on an interval $(-p, p)$ is given by \[f(x) = \sum_{n = -\infty}^\infty c_n e^{i n \pi x / p}\] where \[c_n = \frac{1}{2 p} \int_{-p}^p f(x) e^{-i n \pi x / p} \,d x,\ n = 0, \pm 1, \pm 2, \ldots\]
+
+  \item The \textbf{fundamental period} of a Fourier series is $T = 2 p$.
+
+  \item The \textbf{fundamental angular frequency} of a Fourier series is $\omega = \frac{2 \pi}{T}$.
+
+  \item A \textbf{frequency spectrum} is a plot of the points $(n \omega, |c_n|)$ where $\omega$ is the fundamental angular frequency and $c_n$ are the coefficients of the complex Fourier series. This can be useful to see how each harmonic contributes.
+\end{itemize}
+
 \end{document}

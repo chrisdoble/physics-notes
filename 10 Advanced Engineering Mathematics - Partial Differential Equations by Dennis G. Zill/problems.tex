@@ -275,4 +275,46 @@ Neither
                                                                                                & = \frac{\pi^2}{18} + 16 \sum_{n = 1}^\infty \frac{1}{n^2 (n^2 - 48)} \cos n t
 \end{align*}
 
+\subsection{Complex Fourier Series}
+
+\subsubsection{}
+
+\begin{align*}
+  T    & = 4                                                                                                   \\
+  p    & = 2                                                                                                   \\
+  c_n  & = \frac{1}{4} \left( \int_0^2 e^{-i n \pi x / 2} \,d x - \int_{-2}^0 e^{-i n \pi x / 2} \,d x \right) \\
+       & = \frac{1}{2 i n \pi} ([e^{-i n \pi x / 2}]_{-2}^0 - [e^{-i n \pi x / 2}]_0^2)                        \\
+       & = \frac{2 - e^{i n \pi} - e^{-i n \pi}}{2 i n \pi}                                                    \\
+       & = \frac{2 - \cos n \pi - i \sin n \pi - \cos n \pi + i \sin n \pi}{2 i n \pi}                         \\
+       & = \frac{1 - \cos n \pi}{i n \pi}                                                                      \\
+       & = \frac{1 - (-1)^n}{i n \pi}                                                                          \\
+  f(x) & = \sum_{n = -\infty,\ n \ne 0}^\infty \frac{1 - (-1)^n}{i n \pi} e^{i n \pi x / 2}
+\end{align*}
+
+\setcounter{subsubsection}{2}
+\subsubsection{}
+
+\begin{align*}
+  T    & = 1                                                                                                        \\
+  p    & = \frac{1}{2}                                                                                              \\
+  c_n  & = \int_0^{1 / 4} e^{-2 i n \pi x} \,d x                                                                    \\
+       & = -\frac{1}{2 i n \pi} [e^{-2 i n \pi x}]_0^{1 / 4}                                                        \\
+       & = \frac{1}{2 i n \pi} (1 - e^{-i n \pi / 2})                                                               \\
+  c_0  & = \frac{1}{4}                                                                                              \\
+  f(x) & = \frac{1}{4} + \sum_{n = -\infty,\ n \ne 0}^\infty \frac{1 - e^{-i n \pi / 2}}{2 i n \pi} e^{2 i n \pi x}
+\end{align*}
+
+\setcounter{subsubsection}{4}
+\subsubsection{}
+
+\begin{align*}
+  T    & = 2 \pi                                                                 \\
+  p    & = \pi                                                                   \\
+  c_n  & = \frac{1}{2 \pi} \int_0^{2 \pi} x e^{-i n x} \,d x                     \\
+       & = \frac{i}{n}                                                           \\
+  c_0  & = \frac{1}{2 \pi} \int_0^{2 \pi} x \,d x                                \\
+       & = \pi                                                                   \\
+  f(x) & = \pi + \sum_{n = -\infty,\ n \ne 0}^{n = \infty} \frac{i}{n} e^{i n x}
+\end{align*}
+
 \end{document}
