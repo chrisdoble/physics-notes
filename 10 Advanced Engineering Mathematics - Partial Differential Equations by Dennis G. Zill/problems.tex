@@ -317,4 +317,98 @@ Neither
   f(x) & = \pi + \sum_{n = -\infty,\ n \ne 0}^{n = \infty} \frac{i}{n} e^{i n x}
 \end{align*}
 
+\subsection{Sturm-Liouville Problem}
+
+\subsubsection{}
+
+\begin{align*}
+  y'' + \lambda y                          & = 0                                                    \\
+  y'(0)                                    & = 0                                                    \\
+  y(1) + y'(1)                             & = 0                                                    \\
+  \lambda                                  & = \alpha^2                                             \\
+  y                                        & = c_1 \cos \alpha x + c_2 \sin \alpha x                \\
+  y'                                       & = -\alpha c_1 \sin \alpha x + \alpha c_2 \cos \alpha x \\
+  c_2                                      & = 0                                                    \\
+  y                                        & = c_1 \cos \alpha x                                    \\ \\
+  c_1 \cos \alpha - \alpha c_1 \sin \alpha & = 0                                                    \\
+  c_1 \cos \alpha                          & = \alpha c_1 \sin \alpha                               \\
+  \alpha \tan \alpha                       & = 0                                                    \\
+  \alpha                                   & = \cot \alpha                                          \\
+  \lambda_1                                & = 0.740174                                             \\
+  y_1                                      & = \cos 0.860334 x                                      \\
+  \lambda_2                                & = 11.734872                                            \\
+  y_2                                      & = \cos 3.42562 x                                       \\
+  \lambda_3                                & = 41.438831                                            \\
+  y_3                                      & = \cos 6.4373 x                                        \\
+  \lambda_4                                & = 90.808130                                            \\
+  y_4                                      & = \cos 9.52933 x
+\end{align*}
+
+\setcounter{subsubsection}{4}
+\subsubsection{}
+
+\begin{align*}
+  (y_n, y_n) & = \int_0^1 \cos^2 \alpha_n x \,d x                                              \\
+             & = \frac{1}{2} \int_0^1 (1 + \cos 2 \alpha_n x) \,d x                            \\
+             & = \frac{1}{2} \left[ x + \frac{1}{2 \alpha_n} \sin 2 \alpha_n x \right]_0^1     \\
+             & = \frac{1}{2} \left( 1 + \frac{1}{2 \alpha_n} \sin 2 \alpha_n \right)           \\
+             & = \frac{1}{2} \left( 1 + \frac{1}{\alpha_n} \sin \alpha_n \cos \alpha_n \right) \\
+             & = \frac{1}{2} \left( 1 + \tan \alpha_n \sin \alpha_n \cos \alpha_n \right)      \\
+             & = \frac{1}{2} (1 + \sin^2 \alpha_n)
+\end{align*}
+
+\setcounter{subsubsection}{6}
+\subsubsection{}
+
+\begin{enumerate}
+  \item
+
+        \begin{align*}
+          x^2 y'' + x y' + \lambda y                             & = 0                                                 \\
+          y(1)                                                   & = 0                                                 \\
+          y(5)                                                   & = 0                                                 \\ \\
+          \lambda                                                & = \alpha^2                                          \\
+          y                                                      & = x^m                                               \\
+          y'                                                     & = m x^{m - 1}                                       \\
+          y''                                                    & = m (m - 1) x^{m - 2}                               \\
+          x^2 m (m - 1) x^{m - 2} + x m x^{m - 1} + \alpha^2 x^m & = 0                                                 \\
+          m (m - 1) + m + \alpha^2                               & = 0                                                 \\
+          m^2 + \alpha^2                                         & = 0                                                 \\
+          m                                                      & = \pm i \alpha                                      \\
+          y                                                      & = c_1 \cos (\alpha \ln x) + c_2 \sin (\alpha \ln x) \\ \\
+          0                                                      & = c_1                                               \\
+          0                                                      & = c_2 \sin (\alpha \ln 5)                           \\
+          \alpha                                                 & = \frac{n \pi}{\ln 5}                               \\
+          \lambda                                                & = \left( \frac{n \pi}{\ln 5} \right)^2              \\ \\
+          y_n                                                    & = \sin \left( \frac{n \pi}{\ln 5} \ln x \right)
+        \end{align*}
+
+  \item
+
+        \begin{align*}
+          x^2 y'' + x y' + \lambda y                                                   & = 0 \\
+          y'' + \frac{1}{x} y' + \lambda \frac{1}{x^2} y                               & = 0 \\
+          e^{\ln x} y'' + \frac{1}{x} e^{\ln x} y' + \lambda e^{\ln x} \frac{1}{x^2} y & = 0 \\
+          \frac{d}{d x} (e^{\ln x} y') + \lambda e^{\ln x} \frac{1}{x^2} y             & = 0 \\
+          \frac{d}{d x} (x y') + \lambda \frac{1}{x} y                                 & = 0
+        \end{align*}
+
+  \item
+
+        \[\int_1^5 \frac{1}{x} \sin \left( \frac{m \pi}{\ln 5} \ln x \right) \sin \left( \frac{n \pi}{\ln 5} \ln x \right) = 0,\ m \ne n\]
+\end{enumerate}
+
+\setcounter{subsubsection}{8}
+\subsubsection{}
+
+\begin{align*}
+  x y'' + (1 - x) y' + n y                                                             & = 0               \\
+  y'' + \left( \frac{1}{x} - 1 \right) y' + n \frac{1}{x} y                            & = 0               \\
+  e^{\int \left( \frac{1}{x} - 1 \right) \,d x}                                        & = e^{\ln (x) - x} \\
+                                                                                       & = x e^{-x}        \\
+  x e^{-x} y'' + \left( \frac{1}{x} - 1 \right) x e^{-x} y' + n \frac{1}{x} x e^{-x} y & = 0               \\
+  \frac{d}{d x} (x e^{-x} y') + n e^{-x} y                                             & = 0               \\
+  \int_0^\infty e^{-x} L_m(x) L_n(x) \,d x                                             & = 0,\ m \ne n
+\end{align*}
+
 \end{document}
