@@ -411,4 +411,83 @@ Neither
   \int_0^\infty e^{-x} L_m(x) L_n(x) \,d x                                             & = 0,\ m \ne n
 \end{align*}
 
+\subsection{Bessel and Legendre Series}
+
+\subsubsection{}
+
+\begin{align*}
+  J_1(3 \alpha) & = 0     \\
+  \alpha_1      & = 1.277 \\
+  \alpha_2      & = 2.338 \\
+  \alpha_3      & = 3.391 \\
+  \alpha_4      & = 4.441
+\end{align*}
+
+\setcounter{subsubsection}{2}
+\subsubsection{}
+
+\begin{align*}
+  J_0(2 \alpha) & = 0                                                                                                              \\
+  c_i           & = \frac{1}{2 J_1^2(2 \alpha_i)} \int_0^2 x J_0(\alpha_i x) \,d x                                                 \\
+                & = \frac{1}{2 J_1^2(2 \alpha_i)} \int_0^2 \frac{d}{d x} \left[ \frac{1}{\alpha_i} x J_1(\alpha_i x) \right] \,d x \\
+                & = \frac{1}{\alpha_i J_1(2 \alpha_i)}                                                                             \\
+  f(x)          & = \sum_{i = 1}^\infty \frac{J_0(\alpha_i x)}{\alpha_i J_1(2 \alpha_i)}
+\end{align*}
+
+\setcounter{subsubsection}{4}
+\subsubsection{}
+
+\begin{align*}
+  J_0(2 \alpha) + 2 \alpha J_0'(2 \alpha) & = 0                                                                                                                                           \\
+  h                                       & = 1                                                                                                                                           \\
+  b                                       & = 2                                                                                                                                           \\
+  c_i                                     & = \frac{2 \alpha_i^2}{(4 \alpha_i^2 + 1) J_0^2 (2 \alpha_i)} \int_0^2 x J_0(\alpha_i x) \,d x                                                 \\
+                                          & = \frac{2 \alpha_i^2}{(4 \alpha_i^2 + 1) J_0^2 (2 \alpha_i)} \int_0^2 \frac{d}{d x} \left[ \frac{1}{\alpha_i} x J_1(\alpha_i x) \right] \,d x \\
+                                          & = \frac{4 \alpha_i J_1(2 \alpha_i)}{(4 \alpha_i^2 + 1) J_0^2 (2 \alpha_i)}                                                                    \\
+  f(x)                                    & = 4 \sum_{i = 1}^\infty \frac{\alpha_i J_1(2 \alpha_i)}{(4 \alpha_i^2 + 1) J_0^2 (2 \alpha_i)} J_0(\alpha_i x)
+\end{align*}
+
+\setcounter{subsubsection}{6}
+\subsubsection{}
+
+\begin{align*}
+  f(x)                                      & = 5 x,\ 0 < x < 4                                                                                                                                \\
+  4 J_1(4 \alpha) + 4 \alpha J_1'(4 \alpha) & = 0                                                                                                                                              \\
+  h                                         & = 3                                                                                                                                              \\
+  n                                         & = 1                                                                                                                                              \\
+  b                                         & = 4                                                                                                                                              \\
+  c_i                                       & = \frac{2 \alpha_i^2}{(16 \alpha_i^2 + 8) J_1^2(4 \alpha_i)} \int_0^4 5 x^2 J_1(\alpha_i x) \,d x                                                \\
+                                            & = \frac{10 \alpha_i^2}{(16 \alpha_i^2 + 8) J_1^2(4 \alpha_i)} \int_0^4 \frac{d}{d x} \left[ \frac{1}{\alpha_i} x^2 J_2(\alpha_i x) \right] \,d x \\
+                                            & = \frac{160 \alpha_i J_2(4 \alpha_i)}{(16 \alpha_i^2 + 8) J_1^2(4 \alpha_i)}                                                                     \\
+  f(x)                                      & = \sum_{i = 1}^\infty \frac{20 \alpha_i J_2(4 \alpha_i)}{(2 \alpha_i^2 + 1) J_1^2(4 \alpha_i)} J_1(\alpha_i x)
+\end{align*}
+
+\setcounter{subsubsection}{14}
+\subsubsection{}
+
+\begin{align*}
+  f(x) & = \begin{cases}
+             0 & -1 < x < 0 \\
+             x & 0 < x < 1
+           \end{cases}                            \\
+  c_n  & = \frac{2 n + 1}{2} \int_0^1 x P_n(x) \,d x \\
+  c_0  & = \frac{1}{4}                               \\
+  c_1  & = \frac{1}{2}                               \\
+  c_2  & = \frac{5}{16}                              \\
+  c_3  & = 0                                         \\
+  c_4  & = -\frac{3}{32}                             \\
+  c_5  & = 0                                         \\
+  c_6  & = \frac{13}{256}
+\end{align*}
+
+\setcounter{subsubsection}{20}
+\subsubsection{}
+
+\begin{align*}
+  c_0 & = \frac{1}{2}    \\
+  c_1 & = \frac{5}{8}    \\
+  c_2 & = -\frac{3}{16}  \\
+  c_3 & = \frac{13}{128}
+\end{align*}
+
 \end{document}

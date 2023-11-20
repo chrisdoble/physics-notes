@@ -1,6 +1,8 @@
 \documentclass{article}
 \usepackage{amsmath} % For align*
+\usepackage{graphicx} % For images
 \usepackage{siunitx} % For units
+\graphicspath{{./images/}}
 
 \title{Advanced Engineering Mathematics Partial Differential Equations by Dennis G. Zill Notes}
 \author{Chris Doble}
@@ -151,6 +153,24 @@
                   p(x) & = \frac{d}{a} e^{\int (b / a) \,d x}.
                 \end{align*}
         \end{enumerate}
+\end{itemize}
+
+\subsection{Bessel and Legendre Series}
+
+\subsubsection{Fourier-Bessel Series}
+
+\includegraphics[scale=0.47]{fourier-bessel-series}
+
+\begin{itemize}
+  \item The Fourier-Bessel series converges to $f$ where it is continuous and \[\frac{f(x+) + f(x-)}{2}\] where it is discontinuous.
+\end{itemize}
+
+\subsubsection{Fourier-Legendre Series}
+
+\includegraphics[scale=0.47]{fourier-legendre-series}
+
+\begin{itemize}
+  \item The Fourier-Legendre series converges to $f$ where it is continuous and \[\frac{f(x+) + f(x-)}{2}\] where it is discontinuous.
 \end{itemize}
 
 \end{document}
