@@ -173,4 +173,30 @@
   \item The Fourier-Legendre series converges to $f$ where it is continuous and \[\frac{f(x+) + f(x-)}{2}\] where it is discontinuous.
 \end{itemize}
 
+\section{Boundary-Value Problems in Rectangular\\Coordinates}
+
+\subsection{Separable Partial Differential Equations}
+
+\begin{itemize}
+  \item Like ordinary differential equations (ODEs), partial differential equations (PDEs) can be linear or nonlinear. If the dependent variable and its partial derivatives only appear to the first power, it's a linear PDE.
+
+  \item The general form of a \textbf{linear second-order partial differential equation} is \[A \frac{\partial^2 u}{\partial x^2} + B \frac{\partial^2 u}{\partial x \partial y} + C \frac{\partial^2 u}{\partial y^2} + D \frac{\partial u}{\partial x} + E \frac{\partial u}{\partial y} + F u = G.\] When $G(x, y) = 0$ the equation is said to be \textbf{homogeneous}, otherwise it's \textbf{nonhomogeneous}.
+
+  \item Under the method of \textbf{separation of variables} we assume that the solution of a PDE is a product of functions of each independent variable, e.g. if we seek a solution with independent variables $x$ and $y$ we assume it has the form $u = X(x) Y(y)$. With this assumption it's sometimes possible to reduce the PDE into multiple independent ODEs.
+
+  \item A key step during the process of applying the method of separation of variables is when the equation has been reduced to a form like \[F(X, X', X'') = G(Y, Y', Y'').\] Remembering that $X$ and $Y$ are functions of a single variable, this means that varying $x$ independently of $y$ or vice versa affects one side of the equation but not the other. In order for them to remain equal this means both sides must be constant. This lets us equate each side with a \textbf{separation constant}, giving us an ODE that can be solved on its own.
+
+  \item The \textbf{superposition principle} states that if $u_1, u_2, \ldots, u_n$ are solutions of a homogeneous linear partial differential equation, then the linear combination \[u = c_1 u_1 + c_2 u_2 + \ldots + c_n u_k\] is also a solution.
+
+  \item A linear second-order partial differential equation in two independent variables with constant coefficients \[A \frac{\partial^2 u}{\partial^2 x} + B \frac{\partial^2 u}{\partial x \partial y} + C \frac{\partial^2 y}{\partial y^2} + D \frac{\partial u}{\partial x} + E \frac{\partial u}{\partial y} + F u = G\] can be classified as one of three types:
+
+        \begin{itemize}
+          \item \textbf{hyperbolic} if $B^2 - 4 A C > 0$,
+
+          \item \textbf{parabolic} if $B^2 - 4 A C = 0$, and
+
+          \item \textbf{elliptic} if $B^2 - 4 A C < 0$.
+        \end{itemize}
+\end{itemize}
+
 \end{document}

@@ -574,4 +574,148 @@ True
   y_n                                                     & = \cos \left( \frac{2 n + 1}{2} \pi \ln x \right)
 \end{align*}
 
+\section{Boundary-Value Problems in Rectangular\\Coordinates}
+
+\subsection{Separable Partial Differential Equations}
+
+\subsubsection{}
+
+\begin{align*}
+  \frac{\partial u}{\partial x} & = \frac{\partial u}{\partial y} \\
+  u                             & = X(x) Y(y)                     \\
+  X' Y                          & = X Y'                          \\
+  \frac{X'}{X}                  & = \frac{Y'}{Y}                  \\ \\
+  \frac{X'}{X}                  & = \lambda                       \\
+  \ln X                         & = \lambda x + c_1               \\
+  X                             & = c_1 e^{\lambda x}             \\ \\
+  \frac{Y'}{Y}                  & = \lambda                       \\
+  \ln Y                         & = \lambda y + c_2               \\
+  Y                             & = c_2 e^{\lambda y}             \\
+  u                             & = X Y                           \\
+                                & = c_1 c_2 e^{\lambda (x + y)}   \\
+                                & = c_3 e^{\lambda (x + y)}
+\end{align*}
+
+\setcounter{subsubsection}{2}
+\subsubsection{}
+
+\begin{align*}
+  u_x + u_y                   & = u                                   \\
+  X' Y + X Y'                 & = X Y                                 \\
+  \frac{X'}{X} Y + Y'         & = Y                                   \\
+  \frac{X'}{X} + \frac{Y'}{Y} & = 1                                   \\
+  \frac{X'}{X}                & = 1 - \frac{Y'}{Y}                    \\ \\
+  \frac{X'}{X}                & = \lambda                             \\
+  X                           & = c_1 e^{\lambda x}                   \\ \\
+  1 - \frac{Y'}{Y}            & = \lambda                             \\
+  Y' + (\lambda - 1) Y        & = 0                                   \\
+  Y                           & = c_2 e^{-(\lambda - 1) y}            \\ \\
+  u                           & = c_3 e^{\lambda x - (\lambda - 1) y}
+\end{align*}
+
+\setcounter{subsubsection}{4}
+\subsubsection{}
+
+\begin{align*}
+  x \frac{\partial u}{\partial x} & = y \frac{\partial u}{\partial y} \\
+  x X' Y                          & = y X Y'                          \\
+  x \frac{X'}{X}                  & = y \frac{Y'}{Y}                  \\ \\
+  x \frac{X'}{X}                  & = \lambda                         \\
+  \frac{X'}{X}                    & = \frac{\lambda}{x}               \\
+  \ln X                           & = \lambda \ln x + c_1             \\
+  X                               & = c_ 1 x^\lambda                  \\ \\
+  Y                               & = c_2 y^\lambda                   \\ \\
+  u                               & = X Y                             \\
+                                  & = c_3 (x y)^\lambda
+\end{align*}
+
+\setcounter{subsubsection}{6}
+\subsubsection{}
+
+\begin{align*}
+  \frac{\partial^2 u}{\partial x^2} + \frac{\partial^2 u}{\partial x \partial y} + \frac{\partial^2 u}{\partial y^2} & = 0 \\
+  X'' Y + X' Y' + X Y''                                                                                              & = 0
+\end{align*}
+
+Not separable.
+
+\setcounter{subsubsection}{8}
+\subsubsection{}
+
+\begin{align*}
+  k \frac{\partial^2 u}{\partial x^2} - u & = \frac{\partial u}{\partial t},\ k > 0                                                                                                                                                                                               \\
+  k T X'' - T X                           & = T' X                                                                                                                                                                                                                                \\
+  k \frac{X''}{X} - 1                     & = \frac{T'}{T}                                                                                                                                                                                                                        \\ \\
+  \frac{T'}{T}                            & = \lambda                                                                                                                                                                                                                             \\
+  T' - \lambda T                          & = 0                                                                                                                                                                                                                                   \\
+  T                                       & = c_1 e^{\lambda t}                                                                                                                                                                                                                   \\ \\
+  k \frac{X''}{X} - 1                     & = \lambda                                                                                                                                                                                                                             \\
+  X'' - \frac{\lambda + 1}{k} X           & = 0                                                                                                                                                                                                                                   \\
+  X                                       & = \begin{cases}
+                                                c_1 \cos \sqrt{\frac{\lambda + 1}{k}} x + c_2 \sin \sqrt{\frac{\lambda + 1}{k}} x   & \lambda < -1 \\
+                                                c_1 x + c_2                                                                         & \lambda = -1 \\
+                                                c_1 \cosh \sqrt{\frac{\lambda + 1}{k}} x + c_2 \sinh \sqrt{\frac{\lambda + 1}{k}} x & \lambda > -1
+                                              \end{cases}                                                                                                                                \\ \\
+  u                                       & = T X                                                                                                                                                                                                                                 \\
+                                          & = \begin{cases}
+                                                e^{\lambda t} \left( c_1 \cos \sqrt{\frac{\lambda + 1}{k}} x + c_2 \sin \sqrt{\frac{\lambda + 1}{k}} x \right)   & \lambda < -1 \\
+                                                e^{\lambda t} \left( c_1 x + c_2 \right)                                                                         & \lambda = -1 \\
+                                                e^{\lambda t} \left( c_1 \cosh \sqrt{\frac{\lambda + 1}{k}} x + c_2 \sinh \sqrt{\frac{\lambda + 1}{k}} x \right) & \lambda > -1
+                                              \end{cases}
+\end{align*}
+
+\setcounter{subsubsection}{10}
+\subsubsection{}
+
+\begin{align*}
+  a^2 \frac{\partial^2 u}{\partial x^2} & = \frac{\partial^2 u}{\partial t^2}                                                                                                                                     \\
+  a^2 T X''                             & = T'' X                                                                                                                                                                 \\
+  a^2 \frac{X''}{X}                     & = \frac{T''}{T}                                                                                                                                                         \\ \\
+  \frac{T''}{T}                         & = \lambda                                                                                                                                                               \\
+  T'' - \lambda T                       & = 0                                                                                                                                                                     \\
+  T                                     & = \begin{cases}
+                                              c_1 \cos \sqrt{\lambda} t + c_2 \sin \sqrt{\lambda} t   & \lambda < 0 \\
+                                              c_1 t + c_2                                             & \lambda = 0 \\
+                                              c_1 \cosh \sqrt{\lambda} t + c_2 \sinh \sqrt{\lambda} t & \lambda > 0
+                                            \end{cases}                                                                                                 \\ \\
+  a^2 \frac{X''}{X}                     & = \lambda                                                                                                                                                               \\
+  X'' - \frac{\lambda}{a^2} X           & = 0                                                                                                                                                                     \\
+  X                                     & = \begin{cases}
+                                              c_1 \cos \frac{\sqrt{\lambda}}{a} x + c_2 \sin \frac{\sqrt{\lambda}}{a} x   & \lambda < 0 \\
+                                              c_1 x + c_2                                                                 & \lambda = 0 \\
+                                              c_1 \cosh \frac{\sqrt{\lambda}}{a} x + c_2 \sinh \frac{\sqrt{\lambda}}{a} x & \lambda > 0
+                                            \end{cases}                                                             \\ \\
+  u                                     & = T X                                                                                                                                                                   \\
+                                        & = \begin{cases}
+                                              (c_1 \cos \sqrt{\lambda} t + c_2 \sin \sqrt{\lambda} t) (c_3 \cos \frac{\sqrt{\lambda}}{a} x + c_4 \sin \frac{\sqrt{\lambda}}{a} x)     & \lambda < 0 \\
+                                              (c_1 t + c_2) (c_3 x + c_4)                                                                                                             & \lambda = 0 \\
+                                              (c_1 \cosh \sqrt{\lambda} t + c_2 \sinh \sqrt{\lambda} t) (c_3 \cosh \frac{\sqrt{\lambda}}{a} x + c_4 \sinh \frac{\sqrt{\lambda}}{a} x) & \lambda > 0
+                                            \end{cases}
+\end{align*}
+
+\setcounter{subsubsection}{16}
+\subsubsection{}
+
+Elliptic
+
+\setcounter{subsubsection}{18}
+\subsubsection{}
+
+Parabolic
+
+\setcounter{subsubsection}{20}
+\subsubsection{}
+
+Hyperbolic
+
+\setcounter{subsubsection}{22}
+\subsubsection{}
+
+Parabolic
+
+\setcounter{subsubsection}{24}
+\subsubsection{}
+
+Hyperbolic
+
 \end{document}
