@@ -718,4 +718,68 @@ Parabolic
 
 Hyperbolic
 
+\subsection{Classical PDEs and Boundary-Value Problems}
+
+\subsubsection{}
+
+\begin{align*}
+  k^2 \frac{\partial^2 u}{\partial x^2}                & = \frac{\partial u}{\partial t} \\
+  u(0, t)                                              & = 0                             \\
+  \left. \frac{\partial u}{\partial x} \right|_{x = L} & = 0                             \\
+  u(x, 0)                                              & = f(x)
+\end{align*}
+
+\setcounter{subsubsection}{2}
+\subsubsection{}
+
+\begin{align*}
+  k^2 \frac{\partial^2 u}{\partial x^2}                & = \frac{\partial u}{\partial t} \\
+  u(0, t)                                              & = 100                           \\
+  \left. \frac{\partial u}{\partial x} \right|_{x = L} & = -h u(L, t)                    \\
+  u(x, 0)                                              & = f(x)
+\end{align*}
+
+\setcounter{subsubsection}{4}
+\subsubsection{}
+
+\begin{align*}
+  k^2 \frac{\partial^2 u}{\partial x^2} - h u & = \frac{\partial u}{\partial t} \\
+  u(0, t)                                     & = \sin \frac{\pi}{L} t          \\
+  u(L, t)                                     & = 0                             \\
+  u(x, 0)                                     & = f(x)
+\end{align*}
+
+\setcounter{subsubsection}{6}
+\subsubsection{}
+
+\begin{align*}
+  a^2 \frac{\partial^2 u}{\partial x^2}                & = \frac{\partial^2 u}{\partial t^2} \\
+  u(0, t)                                              & = 0                                 \\
+  u(L, t)                                              & = 0                                 \\
+  u(x, 0)                                              & = x (L - x)                         \\
+  \left. \frac{\partial u}{\partial t} \right|_{t = 0} & = 0
+\end{align*}
+
+\setcounter{subsubsection}{8}
+\subsubsection{}
+
+\begin{align*}
+  a^2 \frac{\partial^2 u}{\partial x^2} - c \frac{\partial u}{\partial t} & = \frac{\partial^2 u}{\partial t^2} \\
+  u(0, t)                                                                 & = 0                                 \\
+  u(L, t)                                                                 & = \sin \pi t                        \\
+  u(x, 0)                                                                 & = f(x)                              \\
+  \left. \frac{\partial u}{\partial t} \right|_{t = 0}                    & = 0
+\end{align*}
+
+\setcounter{subsubsection}{10}
+\subsubsection{}
+
+\begin{align*}
+  \frac{\partial^2 u}{\partial x^2} + \frac{\partial^2 u}{\partial y^2} & = 0    \\
+  \left. \frac{\partial u}{\partial x} \right|_{x = 0}                  & = 0    \\
+  \left. \frac{\partial u}{\partial y} \right|_{y = 0}                  & = 0    \\
+  u(x, 2)                                                               & = 0    \\
+  u(4, y)                                                               & = f(y)
+\end{align*}
+
 \end{document}

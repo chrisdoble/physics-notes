@@ -199,4 +199,26 @@
         \end{itemize}
 \end{itemize}
 
+\subsection{Classical PDEs and Boundary-Value Problems}
+
+\begin{itemize}
+  \item The \textbf{one-dimensional heat equation} \[k \frac{\partial^2 u}{\partial x^2} = \frac{\partial u}{\partial t},\ k > 0\] describes the diffusion of thermal energy through a one-dimensional rod where \[k = \frac{K}{\gamma \rho}\] is called the \textbf{thermal diffusivity} of the rod, $K$ is its thermal conductivity, $\gamma$ is its specific heat, and $\rho$ is its density.
+
+  \item The \textbf{one-dimensional wave equation} \[a^2 \frac{\partial^2 u}{\partial x^2} = \frac{\partial^2 u}{\partial t^2}\] describes the motion of a wave through a taut string where \[a^2 = \frac{T}{\rho},\] $T$ is the tension in the string, and $\rho$ is its density per unit length.
+
+  \item If a PDE depends on time $t$, the state of the system at $t = 0$ can be used as \textbf{initial conditions} to help determine the solution.
+
+  \item \textbf{Boundary conditions} state the value of the solution at particular points, e.g. if the ends of a string are fixed in place, and can also help determine the solution.
+
+  \item There are three types of boundary conditions:
+
+        \begin{itemize}
+          \item \textbf{Dirichlet conditions} specify the value of $u$ at a particular location, e.g. a particular point on a string is fixed in place.
+
+          \item \textbf{Neumann conditions} specify the value of $\partial u / \partial n$ at a particular location, e.g. a particular point on a string always has $0$ velocity.
+
+          \item \textbf{Robin conditions} specify the value of $\partial u / \partial n + h u$ where $h$ is a constant, e.g. thermal energy is lost at a constant rate at the end of a rod.
+        \end{itemize}
+\end{itemize}
+
 \end{document}
