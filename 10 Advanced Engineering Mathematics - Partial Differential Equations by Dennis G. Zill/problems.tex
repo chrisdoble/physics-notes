@@ -782,4 +782,79 @@ Hyperbolic
   u(4, y)                                                               & = f(y)
 \end{align*}
 
+\subsection{Heat Equation}
+
+\subsubsection{}
+
+\begin{align*}
+  k \frac{\partial^2 u}{\partial x^2} & = \frac{\partial u}{\partial t}                                                                                                \\
+  u(0, t)                             & = 0                                                                                                                            \\
+  u(L, t)                             & = 0                                                                                                                            \\
+  u(x, 0)                             & = \begin{cases}
+                                            1 & 0 < x < L / 2 \\
+                                            0 & L / 2 < x < L
+                                          \end{cases}                                                                                                            \\
+  A_n                                 & = \frac{2}{L} \int_0^L f(x) \sin \frac{n \pi}{L} x \,d x                                                                       \\
+                                      & = \frac{2}{L} \int_0^{L / 2} \sin \frac{n \pi}{L} x \,d x                                                                      \\
+                                      & = -\frac{2}{n \pi} \left[ \cos \frac{n \pi}{L} x \right]_0^{L / 2}                                                             \\
+                                      & = \frac{2}{n \pi} \left( 1 - \cos \frac{n \pi}{2} \right)                                                                      \\
+  u(x, t)                             & = \sum_{n = 1}^\infty \frac{2}{n \pi} \left( 1 - \cos \frac{n \pi}{2} \right) e^{-k (n^2 \pi^2 /L^2) t} \sin \frac{n \pi}{L} x
+\end{align*}
+
+\setcounter{subsubsection}{2}
+\subsubsection{}
+
+\begin{align*}
+  k \frac{\partial^2 u}{\partial x^2}                  & = \frac{\partial u}{\partial t}                                                                                                                      \\
+  u(x, 0)                                              & = f(x)                                                                                                                                               \\
+  \left. \frac{\partial u}{\partial x} \right|_{x = 0} & = 0                                                                                                                                                  \\
+  \left. \frac{\partial u}{\partial x} \right|_{x = L} & = 0                                                                                                                                                  \\ \\
+  X(x)                                                 & = c_1 \cos \alpha x + c_2 \sin \alpha x                                                                                                              \\
+  X'(x)                                                & = -\alpha c_1 \sin \alpha x + \alpha c_2 \cos \alpha x                                                                                               \\
+  0                                                    & = X'(0)                                                                                                                                              \\
+                                                       & = \alpha c_2                                                                                                                                         \\
+  c_2                                                  & = 0                                                                                                                                                  \\
+  0                                                    & = X'(L)                                                                                                                                              \\
+                                                       & = -\alpha c_1 \sin \alpha L                                                                                                                          \\
+  \alpha L                                             & = n \pi                                                                                                                                              \\
+  \alpha                                               & = \frac{n \pi}{L}                                                                                                                                    \\
+  X(x)                                                 & = c_1 \cos \frac{n \pi}{L} x                                                                                                                         \\ \\
+  T(t)                                                 & = c_3 e^{-k (n^2 \pi^2 / L^2) t}                                                                                                                     \\ \\
+  u_n                                                  & = A_n e^{-k (n^2 \pi^2 / L^2) t} \cos \frac{n \pi}{L} x                                                                                              \\
+  A_n                                                  & = \frac{2}{L} \int_0^L f(x) \cos \frac{n \pi}{L} x \,d x                                                                                             \\
+  u_n                                                  & = \frac{1}{L} \int_0^L f(x) \,d x                                                                                                                    \\
+                                                       & \qquad + \frac{2}{L} \sum_{n = 1}^\infty \left( \int_0^L f(x) \cos \frac{n \pi}{L} x \,d x \right) e^{-k (n^2 \pi^2 / L^2) t} \cos \frac{n \pi}{L} x
+\end{align*}
+
+\setcounter{subsubsection}{4}
+\subsubsection{}
+
+\begin{align*}
+  k \frac{\partial^2 u}{\partial x^2} - h u            & = \frac{\partial u}{\partial t}                                                                                                                                                                         \\
+  u(x, 0)                                              & = f(x)                                                                                                                                                                                                  \\
+  \left. \frac{\partial u}{\partial x} \right|_{x = 0} & = 0                                                                                                                                                                                                     \\
+  \left. \frac{\partial u}{\partial x} \right|_{x = L} & = 0                                                                                                                                                                                                     \\
+  k X'' T - h X T                                      & = X T'                                                                                                                                                                                                  \\
+  k \frac{X''}{X} - h                                  & = \frac{T'}{T}                                                                                                                                                                                          \\
+  k \frac{X''}{X} - h                                  & = -\lambda                                                                                                                                                                                              \\
+  X'' + \frac{\lambda - h}{k} X                        & = 0                                                                                                                                                                                                     \\
+  X                                                    & = c_1 \cos \omega x + c_2 \sin \omega x                                                                                                                                                                 \\
+  X'                                                   & = -\omega c_1 \sin \omega x + \omega c_2 \cos \omega x                                                                                                                                                  \\
+  0                                                    & = X'(0)                                                                                                                                                                                                 \\
+                                                       & = \omega c_2                                                                                                                                                                                            \\
+  c_2                                                  & = 0                                                                                                                                                                                                     \\
+  0                                                    & = X'(L)                                                                                                                                                                                                 \\
+                                                       & = -\omega c_2 \sin \omega L                                                                                                                                                                             \\
+  \omega L                                             & = n \pi                                                                                                                                                                                                 \\
+  \omega                                               & = \frac{n \pi}{L}                                                                                                                                                                                       \\
+  X_n                                                  & = c_1 \cos \frac{n \pi}{L} x                                                                                                                                                                            \\
+  T_n                                                  & = c_3 e^{-\lambda t}                                                                                                                                                                                    \\
+                                                       & = c_3 e^{-(h + k n^2 \pi^2 / L^2) t}                                                                                                                                                                    \\
+  u_n                                                  & = X_n T_n                                                                                                                                                                                               \\
+                                                       & = A_n e^{-(h + k n^2 \pi^2 / L^2) t} \cos \frac{n \pi}{L} x                                                                                                                                             \\
+                                                       & = e^{-h t} A_n e^{-(k n^2 \pi^2 / L^2) t} \cos \frac{n \pi}{L} x                                                                                                                                        \\
+  A_n                                                  & = \frac{2}{L} \int_0^L f(x) \cos \frac{n \pi}{L} x \,d x                                                                                                                                                \\
+  u                                                    & = e^{-h t} \left[ \frac{1}{L} \int_0^L f(x) \,d x + \frac{2}{L} \sum_{n = 1}^\infty \left( \int_0^L f(x) \cos \frac{n \pi}{L} x \,d x \right) e^{-(k n^2 \pi^2 / L^2) t} \cos \frac{n \pi}{L} x \right]
+\end{align*}
+
 \end{document}
