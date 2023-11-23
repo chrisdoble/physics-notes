@@ -857,4 +857,134 @@ Hyperbolic
   u                                                    & = e^{-h t} \left[ \frac{1}{L} \int_0^L f(x) \,d x + \frac{2}{L} \sum_{n = 1}^\infty \left( \int_0^L f(x) \cos \frac{n \pi}{L} x \,d x \right) e^{-(k n^2 \pi^2 / L^2) t} \cos \frac{n \pi}{L} x \right]
 \end{align*}
 
+\subsection{Wave Equation}
+
+\subsubsection{}
+
+\begin{align*}
+  A_n     & = \frac{2}{L} \int_0^L \frac{1}{4} x (L - x) \sin \frac{n \pi}{L} x \,d x                                  \\
+          & = -\frac{[-1 + (-1)^n] L^2}{n^3 \pi^3}                                                                     \\
+  u(x, t) & = \sum_{n = 1}^\infty -\frac{[-1 + (-1)^n] L^2}{n^3 \pi^3} \cos \frac{n \pi a}{L} t \sin \frac{n \pi}{L} x
+\end{align*}
+
+\setcounter{subsubsection}{2}
+\subsubsection{}
+
+\begin{align*}
+  a^2 \frac{\partial^2 u}{\partial x^2}                & = \frac{\partial^2 u}{\partial t^2}          \\
+  u(0, t)                                              & = 0                                          \\
+  u(\pi, t)                                            & = 0                                          \\
+  u(x, 0)                                              & = 0                                          \\
+  \left. \frac{\partial u}{\partial t} \right|_{t = 0} & = \sin x                                     \\
+  X(x)                                                 & = c_1 \cos \alpha x + c_2 \sin \alpha x      \\
+  0                                                    & = X(0)                                       \\
+                                                       & = c_1                                        \\
+  0                                                    & = X(\pi)                                     \\
+                                                       & = c_2 \sin \alpha \pi                        \\
+  \alpha                                               & = n                                          \\
+  X(x)                                                 & = c_2 \sin n x                               \\
+  T(t)                                                 & = c_3 \cos a n t + c_4 \sin a n t            \\
+  u_n                                                  & = (A_n \cos a n t + B_n \sin a n t) \sin n x \\
+  A_n                                                  & = 0                                          \\
+  u_n                                                  & = B_n \sin a n t \sin n x                    \\
+  \sin x                                               & = a \sum_{n = 1}^\infty n B_n \sin n x       \\
+  B_1                                                  & = \frac{1}{a}                                \\
+  B_n                                                  & = 0                                          \\
+  u                                                    & = \frac{1}{a} \sin a t \sin x
+\end{align*}
+
+\setcounter{subsubsection}{4}
+\subsubsection{}
+
+\begin{align*}
+  L       & = 1                                                                                                                                                   \\
+  f(x)    & = x (1 - x)                                                                                                                                           \\
+  g(x)    & = x (1 - x)                                                                                                                                           \\
+  A_n     & = 2 \int_0^1 x (1 - x) \sin n \pi x \,d x                                                                                                             \\
+          & = \frac{4 [1 - (-1)^n]}{n^3 \pi^3}                                                                                                                    \\
+  B_n     & = \frac{2}{n \pi a} \int_0^1 x (1 - x) \sin n \pi x \,d x                                                                                             \\
+          & = \frac{4 [1 - (-1)^n]}{a n^4 \pi^4}                                                                                                                  \\
+  u(x, t) & = \frac{4}{\pi^3} \sum_{n = 1}^\infty \left( \frac{1 - (-1)^n}{n^3} \cos n \pi a t + \frac{1 - (-1)^n}{a n^4 \pi} \sin n \pi a t \right) \sin n \pi x
+\end{align*}
+
+\setcounter{subsubsection}{6}
+\subsubsection{}
+
+\begin{align*}
+  f(x)    & = \begin{cases}
+                \frac{2 h}{L} x       & 0 < x < L / 2 \\
+                2 h - \frac{2 h}{L} x & L / 2 < x < L
+              \end{cases}                                                                                                                                     \\
+  A_n     & = \frac{2}{L} \int_0^L f(x) \sin \frac{n \pi}{L} x \,d x                                                                                                                    \\
+          & = \frac{2}{L} \left[ \int_0^{L / 2} \frac{2 h}{L} x \sin \frac{n \pi}{L} x \,d x + \int_{L / 2}^L \left( 2 h - \frac{2 h}{L} x \right) \sin \frac{n \pi}{L} x \,d x \right] \\
+          & = \frac{4 h}{L} \left[ \frac{1}{L} \int_0^{L / 2} x \sin \frac{n \pi}{L} x \,d x + \int_{L / 2}^L \left( 1 - \frac{1}{L} x \right) \sin \frac{n \pi}{L} x \,d x \right]     \\
+          & = \frac{8 h \sin \frac{n \pi}{2}}{n^2 \pi^2}                                                                                                                                \\
+  u(x, t) & = \frac{8 h}{\pi^2} \sum_{n = 1}^\infty \frac{1}{n^2} \sin \frac{n \pi}{2} \cos \frac{n \pi a}{L} t \sin \frac{n \pi}{L} x
+\end{align*}
+
+\setcounter{subsubsection}{10}
+\subsubsection{}
+
+\begin{align*}
+  X      & = c_1 \cos \omega x + c_2 \sin \omega x                                                                                       \\
+  X'     & = -\omega c_1 \sin \omega x + \omega c_2 \cos \omega x                                                                        \\
+  0      & = X'(0)                                                                                                                       \\
+         & = \omega c_2                                                                                                                  \\
+         & = c_2                                                                                                                         \\
+  0      & = X'(L)                                                                                                                       \\
+         & = -\omega c_1 \sin \omega L                                                                                                   \\
+  \omega & = \frac{n \pi}{L}                                                                                                             \\
+  X      & = c_1 \cos \frac{n \pi}{L} x                                                                                                  \\
+  T      & = c_3 \cos \frac{n \pi a}{L} t + c_4 \sin \frac{n \pi a}{L} t                                                                 \\
+  T'     & = \frac{n \pi a}{L} \left( -c_3 \sin \frac{n \pi a}{L} t + c_4 \cos \frac{n \pi a}{L} t \right)                               \\
+  0      & = T'(0)                                                                                                                       \\
+         & = \frac{n \pi a}{L} c_4                                                                                                       \\
+         & = c_4                                                                                                                         \\
+  u_n    & = B_n \cos \frac{n \pi a}{L} t \cos \frac{n \pi}{L} x                                                                         \\
+  f(x)   & = u(x, 0)                                                                                                                     \\
+  x      & = \sum_{n = 1}^\infty B_n \cos \frac{n \pi}{L} x                                                                              \\
+  B_0    & = \frac{2}{L} \int_0^L x \,d x                                                                                                \\
+         & = L                                                                                                                           \\
+  B_n    & = \frac{2}{L} \int_0^L x \cos \frac{n \pi}{L} x \,d x                                                                         \\
+         & = \frac{2 L [-1 + (-1)^n]}{n^2 \pi^2}                                                                                         \\
+  u      & = \frac{L}{2} + \frac{2 L}{\pi^2} \sum_{n = 1}^\infty \frac{-1 + (-1)^n}{n^2} \cos \frac{n \pi a}{L} t \cos \frac{n \pi}{L} x
+\end{align*}
+
+\setcounter{subsubsection}{14}
+\subsubsection{}
+
+\begin{align*}
+  \frac{\partial^2 u}{\partial x^2}    & = \frac{\partial^2 u}{\partial t^2} + 2 \beta \frac{\partial u}{\partial t}                                                            \\
+  X'' T                                & = X T'' + 2 \beta X T'                                                                                                                 \\
+  \frac{X''}{X}                        & = \frac{T''}{T'} + 2 \beta \frac{T'}{T}                                                                                                \\
+  \frac{X''}{X}                        & = -\lambda                                                                                                                             \\
+  X'' + \lambda X                      & = 0                                                                                                                                    \\
+  X(x)                                 & = c_1 \cos \omega x + c_2 \sin \omega x                                                                                                \\
+  0                                    & = X(0)                                                                                                                                 \\
+                                       & = c_1                                                                                                                                  \\
+  0                                    & = X(\pi)                                                                                                                               \\
+                                       & = c_2 \sin \omega \pi                                                                                                                  \\
+  \omega                               & = n                                                                                                                                    \\
+  X                                    & = c_2 \sin n x                                                                                                                         \\
+  \frac{T''}{T} + 2 \beta \frac{T'}{T} & = -n^2                                                                                                                                 \\
+  T'' + 2 \beta T' + n^2 T             & = 0                                                                                                                                    \\
+  m^2 + 2 \beta m + n^2                & = 0                                                                                                                                    \\
+  m                                    & = \frac{-2 \beta \pm \sqrt{4 \beta^2 - 4 n^2}}{2}                                                                                      \\
+                                       & = -\beta \pm i \sqrt{n^2 - \beta^2}                                                                                                    \\
+  T                                    & = e^{-\beta t} (c_1 \cos \sqrt{n^2 - \beta^2} t + c_2 \sin \sqrt{n^2 - \beta^2} t)                                                     \\
+  u_n                                  & = (A_n \cos \sqrt{n^2 - \beta^2} t + B_n \sin \sqrt{n^2 - \beta^2} t) e^{-\beta t} \sin n x                                            \\
+  f(x)                                 & = \sum_{n = 1}^\infty A_n \sin n x                                                                                                     \\
+  A_n                                  & = \frac{2}{\pi} \int_0^\pi f(x) \sin n x \,d x                                                                                         \\
+  \frac{\partial u_n}{\partial t}      & = (-\sqrt{n^2 - \beta^2} A_n \sin \sqrt{n^2 - \beta^2} t + \sqrt{n^2 - \beta^2} B_n \cos \sqrt{n^2 - \beta^2} t) e^{-\beta t} \sin n x \\
+                                       & \qquad - \beta (A_n \cos \sqrt{n^2 - \beta^2} t + B_n \sin \sqrt{n^2 - \beta^2} t) e^{-\beta t} \sin n x                               \\
+  0                                    & = \left. \frac{\partial u_n}{\partial t} \right|_{t = 0}                                                                               \\
+                                       & = \sqrt{n^2 - \beta^2} B_n \sin n x - \beta A_n \sin n x                                                                               \\
+  B_n                                  & = \frac{\beta A_n}{\sqrt{n^2 - \beta^2}}
+\end{align*}
+
+\begin{align*}
+  u(x, t) & = \frac{2}{\pi} e^{-\beta t} \sum_{n = 1}^\infty \left( \int_0^\pi f(x) \sin n x \,d x \right)                              \\
+          & \qquad \left( \cos \sqrt{n^2 - \beta^2} t + \frac{\beta}{\sqrt{n^2 - \beta^2}} \sin \sqrt{n^2 - \beta^2} t \right) \sin n x
+\end{align*}
+
 \end{document}
