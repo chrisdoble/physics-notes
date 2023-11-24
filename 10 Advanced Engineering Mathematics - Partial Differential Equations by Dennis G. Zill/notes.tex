@@ -227,4 +227,15 @@
   \item Sometimes a solution of a PDE may not satisfy a given boundary condition or initial value. However, if we know that the solution is a member of an infinite orthogonal set of solutions (e.g. via the Sturm-Liouville theorem) then we may be able to use the superposition principle to select constants $c_i$ that do satisfy the boundary condition or initial value.
 \end{itemize}
 
+\setcounter{subsection}{4}
+\subsection{Laplace's Equation}
+
+\begin{itemize}
+  \item A \textbf{Dirichlet problem} is the problem of finding a function which solves a PDE in a particular region given the values the function should take on the boundaries of that region.
+
+  \item The \textbf{maximum principle} states that a solution of Laplace's equation takes on its maximum and minimum values on the boundary of the region in which the solution is defined. Also, the solution can have no relative maxima or minima in the region.
+
+  \item A Dirichlet problem for a rectangle can be solved via separation of variables when homogeneous boundary conditions are specified on two parallel boundaries, but not when the boundary conditions of all four sides are nonhomogeneous. This can be solved by breaking the problem in two: one that has homogeneous boundary conditions on the $x$ axis and another that has them on the $y$ axis. By the superposition principle, adding the solutions to these problems will be a solution to the original problem.
+\end{itemize}
+
 \end{document}

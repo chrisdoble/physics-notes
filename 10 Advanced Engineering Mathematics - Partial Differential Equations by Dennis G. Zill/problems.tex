@@ -6,6 +6,8 @@
 \setlist[enumerate, 1]{label={(\alph*)}}
 \setlist[enumerate, 2]{label={(\roman*)}}
 
+\DeclareMathOperator{\csch}{csch}
+
 \title{Advanced Engineering Mathematics Partial Differential Equations by Dennis G. Zill Problems}
 \author{Chris Doble}
 \date{November 2023}
@@ -985,6 +987,135 @@ Hyperbolic
 \begin{align*}
   u(x, t) & = \frac{2}{\pi} e^{-\beta t} \sum_{n = 1}^\infty \left( \int_0^\pi f(x) \sin n x \,d x \right)                              \\
           & \qquad \left( \cos \sqrt{n^2 - \beta^2} t + \frac{\beta}{\sqrt{n^2 - \beta^2}} \sin \sqrt{n^2 - \beta^2} t \right) \sin n x
+\end{align*}
+
+\subsection{Laplace's Equation}
+
+\subsubsection{}
+
+\begin{align*}
+  u(x, y) & = \sum_{n = 1}^\infty A_n \sinh \frac{n \pi}{a} y \sin \frac{n \pi}{a} x         \\
+  A_n     & = \frac{2}{a \sinh \frac{n \pi b}{a}} \int_0^a f(x) \sin \frac{n \pi}{a} x \,d x
+\end{align*}
+
+\setcounter{subsubsection}{4}
+\subsubsection{}
+
+\begin{align*}
+  Y'' - \lambda Y & = 0                                                          \\
+  Y'(0)           & = 0                                                          \\
+  Y'(1)           & = 0                                                          \\
+  % \lambda < 0
+  Y               & = c_1 \cos \omega y + c_2 \sin \omega y                      \\
+  Y'              & = -\omega c_1 \sin \omega y + \omega c_2 \cos \omega y       \\
+  0               & = \omega c_2                                                 \\
+                  & = c_2                                                        \\
+  0               & = -\omega c_1 \sin \omega                                    \\
+  \omega          & = n \pi                                                      \\
+  Y               & = c_1 \cos n \pi y                                           \\
+  % \lambda = 0
+  Y               & = c_1 + c_2 y                                                \\
+  Y'              & = c_2                                                        \\
+  Y               & = c_1                                                        \\
+  X'' + \lambda X & = 0                                                          \\
+  % \lambda < 0
+  X               & = c_3 \sinh n \pi x + c_4 \cosh n \pi x                      \\
+  0               & = X(0)                                                       \\
+                  & = c_4                                                        \\
+  X               & = c_3 \sinh n \pi x                                          \\
+  % \lambda = 0
+  X               & = c_3 + c_4 x                                                \\
+  0               & = X(0)                                                       \\
+                  & = c_3                                                        \\
+  X               & = c_4 x                                                      \\
+  u               & = A_0 x                                                      \\
+  u_n             & = A_n \sinh n \pi x \cos n \pi y                             \\
+  u               & = A_0 x + \sum_{n = 1}^\infty A_n \sinh n \pi x \cos n \pi y \\
+  % x = 1
+  f(y)            & = u(1, y)                                                    \\
+  1 - y           & = A_0 + \sum_{n = 1}^\infty A_n \sinh n \pi \cos n \pi y     \\
+  A_0             & = \frac{a_0}{2}                                              \\
+                  & = \int_0^1 (1 - y) \,d y                                     \\
+                  & = \frac{1}{2}
+\end{align*}
+
+\begin{align*}
+  A_n \sinh n \pi & = 2 \int_0^1 (1 - y) \cos n \pi y \,d y                                                                             \\
+  A_n             & = \frac{2 [1 - (-1)^n]}{n^2 \pi^2 \sinh n \pi}                                                                      \\
+  u               & = \frac{1}{2} x + \frac{2}{\pi^2} \sum_{n = 1}^\infty \frac{1 - (-1)^n}{n^2 \sinh n \pi} \sinh n \pi x \cos n \pi y
+\end{align*}
+
+\setcounter{subsubsection}{6}
+\subsubsection{}
+
+\begin{align*}
+  Y'' - \lambda Y                   & = 0                                                                                                                           \\
+  Y(0)                              & = 0                                                                                                                           \\
+  Y(\pi)                            & = 0                                                                                                                           \\
+  % \lambda < 0
+  Y                                 & = c_1 \cos \omega y + c_2 \sin \omega y                                                                                       \\
+  0                                 & = Y(0)                                                                                                                        \\
+                                    & = c_1                                                                                                                         \\
+  0                                 & = Y(\pi)                                                                                                                      \\
+                                    & = c_2 \sin \omega \pi                                                                                                         \\
+  \omega                            & = n                                                                                                                           \\
+  Y                                 & = c_2 \sin n y                                                                                                                \\
+  X'' + \lambda X                   & = 0                                                                                                                           \\
+  X                                 & = c_3 \sinh n x + c_4 \cosh n x                                                                                               \\
+  X'                                & = n c_3 \cosh n x + n c_4 \sinh n x                                                                                           \\
+  X'(0) Y(y)                        & = X(0) Y(y)                                                                                                                   \\
+  X'(0)                             & = X(0)                                                                                                                        \\
+  n c_3                             & = c_4                                                                                                                         \\
+  X                                 & = c_3 (\sinh n x + n \cosh n x)                                                                                               \\
+  u                                 & = \sum_{n = 1}^\infty A_n (\sinh n x + n \cosh n x) \sin n y                                                                  \\
+  1                                 & = u(\pi, y)                                                                                                                   \\
+                                    & = \sum_{n = 1}^\infty A_n (\sinh n \pi + n \cosh n \pi) \sin n y                                                              \\
+  A_n (\sinh n \pi + n \cosh n \pi) & = \frac{2}{\pi} \int_0^\pi \sin n y \,d x                                                                                     \\
+  A_n                               & = \frac{2 [1 - (-1)^n]}{n \pi (\sinh n \pi + n \cosh n \pi)}                                                                  \\
+  u                                 & = \frac{2}{\pi} \sum_{n = 1}^\infty \frac{1 - (-1)^n}{n} \frac{\sinh n x + n \cosh n x}{\sinh n \pi + n \cosh n \pi} \sin n y
+\end{align*}
+
+\setcounter{subsubsection}{10}
+\subsubsection{}
+
+\begin{align*}
+  X'' + \lambda X & = 0                                                                                                 \\
+  X               & = c_1 \cos \omega x + c_2 \sin \omega y                                                             \\
+  0               & = X(0)                                                                                              \\
+                  & = c_1                                                                                               \\
+  0               & = X(\pi)                                                                                            \\
+                  & = c_2 \sin \omega \pi                                                                               \\
+  \omega          & = n                                                                                                 \\
+  X               & = c_2 \sin n x                                                                                      \\
+  Y'' - \lambda Y & = 0                                                                                                 \\
+  Y               & = c_3 e^{n y} + c_4 e^{-n y}                                                                        \\
+  0               & = \lim_{y \rightarrow \infty} Y                                                                     \\
+                  & = \lim_{y \rightarrow \infty} (c_3 e^{n y} + c_4 e^{-n y})                                          \\
+  0               & = c_3                                                                                               \\
+  Y               & = c_4 e^{-n y}                                                                                      \\
+  u               & = \sum_{n = 1}^\infty A_n e^{-n y} \sin n x                                                         \\
+  f(x)            & = u(x, 0)                                                                                           \\
+                  & = \sum_{n = 1}^\infty A_n \sin n x                                                                  \\
+  A_n             & = \frac{2}{\pi} \int_0^\pi f(x) \sin n x \,d x                                                      \\
+  u               & = \frac{2}{\pi} \sum_{n = 1}^\infty \left( \int_0^\pi f(x) \sin n x \,d x \right) e^{-n y} \sin n x
+\end{align*}
+
+\setcounter{subsubsection}{12}
+\subsubsection{}
+
+\begin{align*}
+  X'' + \lambda X                                           & = 0                                                                                                                                    \\
+  X                                                         & = c_1 \sin \frac{n \pi}{a} x                                                                                                           \\
+  Y'' - \lambda Y                                           & = 0                                                                                                                                    \\
+  Y                                                         & = c_2 \sinh \frac{n \pi}{a} y + c_3 \cosh \frac{n \pi}{a} y                                                                            \\
+  u                                                         & = \sum_{n = 1}^\infty \left( A_n \sinh \frac{n \pi}{a} y + B_n \cosh \frac{n \pi}{a} y \right) \sin \frac{n \pi}{a} x                  \\
+  f(x)                                                      & = u(x, 0)                                                                                                                              \\
+                                                            & = \sum_{n = 1}^\infty B_n \sin \frac{n \pi}{a} x                                                                                       \\
+  B_n                                                       & = \frac{2}{a} \int_0^a f(x) \sin \frac{n \pi}{a} x \,d x                                                                               \\
+  g(x)                                                      & = u(x, b)                                                                                                                              \\
+                                                            & = \sum_{n = 1}^\infty \left( A_n \sinh \frac{n \pi b}{a} + B_n \cosh \frac{n \pi b}{a} \right) \sin \frac{n \pi}{a} x                  \\
+  A_n \sinh \frac{n \pi b}{a} + B_n \cosh \frac{n \pi b}{a} & = \frac{2}{a} \int_0^a g(x) \sin \frac{n \pi}{a} x \,dx                                                                                \\
+  A_n                                                       & = \frac{1}{\sinh \frac{n \pi b}{a}} \left( \frac{2}{a} \int_0^a g(x) \sin \frac{n \pi}{a} x \,dx - B_n \cosh \frac{n \pi b}{a} \right)
 \end{align*}
 
 \end{document}
