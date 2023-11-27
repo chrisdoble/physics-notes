@@ -238,4 +238,59 @@
   \item A Dirichlet problem for a rectangle can be solved via separation of variables when homogeneous boundary conditions are specified on two parallel boundaries, but not when the boundary conditions of all four sides are nonhomogeneous. This can be solved by breaking the problem in two: one that has homogeneous boundary conditions on the $x$ axis and another that has them on the $y$ axis. By the superposition principle, adding the solutions to these problems will be a solution to the original problem.
 \end{itemize}
 
+\subsection{Nonhomogeneous Boundary-Value Problems}
+
+\begin{itemize}
+  \item A BVP involving a time-independent nonhomogeneous equation and time-independent boundary conditions like \begin{align*}
+          k \frac{\partial^2 u}{\partial x^2} + F(x) & = \frac{\partial u}{\partial t} \\
+          u(0, t)                                    & = u_0                           \\
+          u(L, t)                                    & = u_1                           \\
+          u(x, 0)                                    & = f(x)
+        \end{align*} can be solved by substituting \[u(x, t) = v(x, t) + \psi(x).\] This decomposes the problem into two: an ODE in $\psi(x)$ with nonhomogeneous boundary conditions \begin{align*}
+          k \psi'' + F(x) & = 0    \\
+          \psi(0)         & = u_1  \\
+          \psi(1)         & = u_2,
+        \end{align*} and a PDE in $v(x, t)$ with homogeneous boundary conditions \begin{align*}
+          k \frac{\partial^2 v}{\partial x^2} & = \frac{\partial v}{\partial t} \\
+          v(0, t)                             & = 0                             \\
+          v(L, t)                             & = 0                             \\
+          v(x, 0)                             & = f(x) - \psi(x).
+        \end{align*} We can then solve the ODE for $\psi(x)$, substitute the result into the PDE, and solve for $v(x, t)$, giving us $u(x, t)$.
+
+  \item A BVP involving a time-dependent nonhomogeneous equation and time-dependeny boundary conditions like \begin{align*}
+          k \frac{\partial^2 u}{\partial x^2} + F(x, t) & = \frac{\partial u}{\partial t} \\
+          u(0, t)                                       & = u_0(t)                        \\
+          u(L, t)                                       & = u_1(t)                        \\
+          u(x, 0)                                       & = f(x)
+        \end{align*} can be solved via the following steps:
+
+        \begin{enumerate}
+          \item Substitute \begin{align*}
+                  u(x, t) & = v(x, t) + \psi(x, t)                             \\
+                          & = v(x, t) + u_0(t) + \frac{x}{L} [u_1(t) - u_0(t)]
+                \end{align*} which changes the BVP to \begin{align*}
+                  k \frac{\partial^2 v}{\partial x^2} + G(x, t) & = \frac{\partial v}{\partial t} \\
+                  v(0, t)                                       & = 0                             \\
+                  v(L, t)                                       & = 0                             \\
+                  v(x, 0)                                       & = f(x) - \psi(x, 0)
+                \end{align*} where $G(x, t) = F(x, t) - \frac{\partial \psi}{\partial t}$.
+
+          \item Assuming $G(x, t)$ can be expressed as a Fourier sine series, find the coefficients of that series $G_n(t)$.
+
+          \item Assuming $v(x, t)$ can also be expressed as a Fourier sine series, express the BVP in $v(x, t)$ using such a series and the series for $G(x, t)$.
+
+          \item Equate the coefficients of the two series to get an ODE for the $v(x, t)$ series coefficients $v_n(t)$.
+
+          \item Solve the ODE to find $v_n(t)$ and thus express $v(x, t)$ as a Fourier sine series with coefficients $C_n$.
+
+          \item Use the boundary conditions of the BVP in $v(x, t)$ to solve for $C_n$.
+
+          \item Subsitute $C_n$ to find $v(x, t)$.
+
+          \item Substitute $v(x, t)$ to find $u(x, t)$.
+        \end{enumerate}
+
+  \item If a BVP includes a time-dependent term $F(x, t)$ in the PDE but has homogeneous boundary conditions, $\psi(x, t)$ will be $0$ and there's no need to substitute $u(x, t) = v(x, t) + \psi(x, t)$. The BVP can be solved by proceeding from step 2 above, replacing $G(x, t)$ with $F(x, t)$ and $v(x, t)$ with $u(x, t)$.
+\end{itemize}
+
 \end{document}
