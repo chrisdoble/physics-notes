@@ -293,4 +293,10 @@
   \item If a BVP includes a time-dependent term $F(x, t)$ in the PDE but has homogeneous boundary conditions, $\psi(x, t)$ will be $0$ and there's no need to substitute $u(x, t) = v(x, t) + \psi(x, t)$. The BVP can be solved by proceeding from step 2 above, replacing $G(x, t)$ with $F(x, t)$ and $v(x, t)$ with $u(x, t)$.
 \end{itemize}
 
+\subsection{Orthogonal Series Expansion}
+
+\begin{itemize}
+  \item For certain types of boundary conditions, the method of separation of variables and the superposition principle can lead to infinite series that aren't Fourier series. If a series is a result of a Sturm-Liouville problem its eigenfunctions $\phi_n$ are orthogonal and can still be used to solve the BVP, but the coefficients must be calculated using the general formula \[A_n = \frac{(f, \phi_n)}{||\phi_n||^2}.\]
+\end{itemize}
+
 \end{document}

@@ -1256,4 +1256,156 @@ Hyperbolic
   u(x, t)                                              & = 2 \sum_{n = 1}^\infty \frac{(-1)^n}{n (n^2 - 3)} \left( e^{-n^2 t} - e^{-3 t} \right) \sin n x
 \end{align*}
 
+\subsection{Orthogonal Series Expansion}
+
+\subsubsection{}
+
+\begin{align*}
+  k u_{x x}               & = u_t                                                                     \\
+  u_x|_{x = 0}            & = 0                                                                       \\
+  u_x|_{x = 1}            & = -h u(1, t)                                                              \\
+  u(x, 0)                 & = 1                                                                       \\
+  u(x, t)                 & = X(x) T(t)                                                               \\
+  k X''(x) T(t)           & = X(x) T'(t)                                                              \\
+  \frac{X''}{X}           & = \frac{T'}{k T}                                                          \\
+  X'' + \lambda X         & = 0                                                                       \\
+  X'(0)                   & = 0                                                                       \\
+  X'(1)                   & = -h X(1)                                                                 \\
+  X                       & = c_1 \cos \omega x + c_2 \sin \omega x                                   \\
+  X'                      & = -\omega c_1 \sin \omega x + \omega c_2 \cos \omega x                    \\
+  0                       & = X'(0)                                                                   \\
+                          & = \omega c_2                                                              \\
+                          & = c_2                                                                     \\
+  X'(1)                   & = -h X(1)                                                                 \\
+  -\omega c_1 \sin \omega & = -h c_1 \cos \omega                                                      \\
+  \tan \omega             & = \frac{h}{\omega}                                                        \\
+  X_n                     & = c_1 \cos \omega_n x                                                     \\
+  T' + k \lambda T        & = 0                                                                       \\
+  T_n                     & = c_3 e^{-k \omega_n^2 t}                                                 \\
+  u                       & = \sum_{n = 1}^\infty A_n e^{-k \omega_n^2 t} \cos \omega_n x             \\
+  1                       & = u(x, 0)                                                                 \\
+                          & = \sum_{n = 1}^\infty A_n \cos \omega_n x                                 \\
+  A_n                     & = \frac{\int_0^1 \cos \omega_n x \,d x}{\int_0^1 \cos^2 \omega_n x \,d x} \\
+                          & = \frac{2 \sin \omega_n}{\omega_n + \cos \omega_n \sin \omega_n}          \\
+                          & = \frac{2 h \sin \omega_n}{\omega_n (h + \sin^2 \omega_n)}
+\end{align*}
+
+\[u(x, t) = 2 h \sum_{n = 1}^\infty \frac{\sin \omega_n}{\omega_n (h + \sin^2 \omega_n)} e^{-k \omega_n^2 t} \cos \omega_n x\]
+
+\setcounter{subsubsection}{2}
+\subsubsection{}
+
+\begin{align*}
+  u_{x x} + u_{y y}        & = 0                                                        \\
+  u(0, y)                  & = 0                                                        \\
+  u_x|_{x = a}             & = -h u(a, y)                                               \\
+  u(x, 0)                  & = 0                                                        \\
+  u(x, b)                  & = f(x)                                                     \\
+  u(x, y)                  & = X(x) Y(y)                                                \\
+  X'' Y + X Y''            & = 0                                                        \\
+  \frac{X''}{X}            & = -\frac{Y''}{Y}                                           \\
+  \frac{X''}{X}            & = -\lambda                                                 \\
+  X'' + \lambda X          & = 0                                                        \\
+  X(0)                     & = 0                                                        \\
+  X'(a)                    & = -h X(a)                                                  \\
+  % \lambda > 0
+  X                        & = c_1 \cos \alpha x + c_2 \sin \alpha x                    \\
+  X'                       & = -\alpha c_1 \sin \alpha x + \alpha c_2 \cos \alpha x     \\
+  0                        & = X(0)                                                     \\
+                           & = c_1                                                      \\
+  X'(a)                    & = -h X(a)                                                  \\
+  \alpha c_2 \cos \alpha a & = -h c_2 \sin \alpha a                                     \\
+  \tan \alpha a            & = -\frac{\alpha}{h}                                        \\
+  X                        & = c_2 \sin \alpha_n x                                      \\
+  Y'' - \lambda Y          & = 0                                                        \\
+  Y(0)                     & = 0                                                        \\
+  Y                        & = c_3 \sinh \alpha_n y + c_4 \cosh \alpha_n y              \\
+  0                        & = Y(0)                                                     \\
+                           & = c_4                                                      \\
+  Y                        & = c_3 \sinh \alpha_n y                                     \\
+  u(x, y)                  & = \sum_{n = 1}^\infty A_n \sinh \alpha_n y \sin \alpha_n x \\
+  f(x)                     & = u(x, b)                                                  \\
+                           & = \sum_{n = 1}^\infty A_n \sinh \alpha_n b \sin \alpha_n x
+\end{align*}
+
+\begin{align*}
+  A_n \sinh \alpha_n b & = \frac{\int_0^a f(x) \sin \alpha_n x \,d x}{\int_0^a \sin^2 \alpha_n x \,d x}                                                                    \\
+  A_n                  & = \frac{\int_0^a f(x) \sin \alpha_n x \,d x}{\left( \frac{a}{2} - \frac{\sin 2 a \alpha_n}{4 \alpha_n} \right) \sinh \alpha_n b}                  \\
+                       & = \frac{2 h \int_0^a f(x) \sin \alpha_n x \,d x}{(a h + \cos^2 \alpha_n a) \sinh \alpha_n b}                                                      \\
+  u(x, y)              & = \sum_{n = 1}^\infty \frac{2 h \int_0^a f(x) \sin \alpha_n x \,d x}{(a h + \cos^2 \alpha_n a) \sinh \alpha_n b} \sinh \alpha_n y \sin \alpha_n x
+\end{align*}
+
+\setcounter{subsubsection}{4}
+\subsubsection{}
+
+\begin{align*}
+  k u_{x x}        & = u_t                                                                                                                                                                     \\
+  u(x, 0)          & = f(x)                                                                                                                                                                    \\
+  u(0, t)          & = 0                                                                                                                                                                       \\
+  u_x|_{x = L}     & = 0                                                                                                                                                                       \\
+  \frac{X''}{X}    & = \frac{T'}{k T}                                                                                                                                                          \\
+  X'' + \lambda X  & = 0                                                                                                                                                                       \\
+  X(0)             & = 0                                                                                                                                                                       \\
+  X'(L)            & = 0                                                                                                                                                                       \\
+  X                & = c_1 \cos \omega x + c_2 \sin \omega x                                                                                                                                   \\
+  X'               & = -\omega c_1 \sin \omega x + \omega c_2 \cos \omega x                                                                                                                    \\
+  0                & = X(0)                                                                                                                                                                    \\
+                   & = c_1                                                                                                                                                                     \\
+  0                & = X'(L)                                                                                                                                                                   \\
+                   & = \omega c_2 \cos \omega L                                                                                                                                                \\
+  \omega L         & = \frac{(2 n - 1) \pi}{2}                                                                                                                                                 \\
+  \omega           & = \frac{(2 n - 1) \pi}{2 L},\ n = 1, 2, 3, \ldots                                                                                                                         \\
+  X                & = c_2 \sin \frac{(2 n - 1) \pi}{2 L} x                                                                                                                                    \\
+  T' + k \lambda T & = 0                                                                                                                                                                       \\
+  T                & = c_3 e^{-k \lambda t}                                                                                                                                                    \\
+  u(x, t)          & = \sum_{n = 1}^\infty A_n e^{-k (2 n - 1)^2 \pi^2 t / 4 L^2} \sin \frac{(2 n - 1) \pi}{2 L} x                                                                             \\
+  f(x)             & = u(x, 0)                                                                                                                                                                 \\
+                   & = \sum_{n = 1}^\infty A_n \sin \frac{(2 n - 1) \pi}{2 L} x                                                                                                                \\
+  A_n              & = \frac{\int_0^L f(x) \sin \frac{(2 n - 1) \pi}{2 L} x \,d x}{\int_0^L \sin^2 \frac{(2 n - 1) \pi}{2 L} x \,d x}                                                          \\
+                   & = \frac{2}{L} \int_0^L f(x) \sin \frac{(2 n - 1) \pi}{2 L} x \,d x                                                                                                        \\
+  u(x, t)          & = \frac{2}{L} \sum_{n = 1}^\infty \left( \int_0^L f(x) \sin \frac{(2 n - 1) \pi}{2 L} x \,d x \right) e^{-k (2 n - 1)^2 \pi^2 t / 4 L^2} \sin \frac{(2 n - 1) \pi}{2 L} x
+\end{align*}
+
+\setcounter{subsubsection}{6}
+\subsubsection{}
+
+\begin{align*}
+  u_{x x} + u_{y y} & = 0                                                                                                                \\
+  u_x|_{x = 0}      & = 0                                                                                                                \\
+  u(1, y)           & = u_0                                                                                                              \\
+  u(x, 0)           & = 0                                                                                                                \\
+  u_y|_{y = 1}      & = 0                                                                                                                \\
+  X'' Y + X Y''     & = 0                                                                                                                \\
+  \frac{Y''}{Y}     & = -\frac{X''}{X}                                                                                                   \\
+  Y'' + \lambda Y   & = 0                                                                                                                \\
+  Y(0)              & = 0                                                                                                                \\
+  Y'(1)             & = 0                                                                                                                \\
+  Y                 & = c_1 \cos \omega y + c_2 \sin \omega y                                                                            \\
+  Y'                & = -\omega c_1 \sin \omega y + \omega c_2 \cos \omega y                                                             \\
+  0                 & = Y(0)                                                                                                             \\
+                    & = c_1                                                                                                              \\
+  0                 & = Y'(1)                                                                                                            \\
+                    & = \omega c_2 \cos \omega                                                                                           \\
+  \omega            & = \frac{2 n - 1}{2} \pi,\ n = 1, 2, 3, \ldots                                                                      \\
+  Y                 & = c_2 \sin \frac{2 n - 1}{2} \pi y                                                                                 \\
+  X'' - \lambda X   & = 0                                                                                                                \\
+  X'(0)             & = 0                                                                                                                \\
+  X                 & = c_1 \cosh \frac{2 n - 1}{2} \pi x + c_2 \sinh \frac{2 n - 1}{2} \pi x                                            \\
+  X'                & = \frac{2 n - 1}{2} \pi \left( c_1 \sinh \frac{2 n - 1}{2} \pi x + c_2 \cosh \frac{2 n - 1}{2} \pi x \right)       \\
+  0                 & = X'(0)                                                                                                            \\
+                    & = \frac{2 n - 1}{2} \pi c_2                                                                                        \\
+                    & = c_2                                                                                                              \\
+  X                 & = c_1 \cosh \frac{2 n - 1}{2} \pi x                                                                                \\
+  u(x, y)           & = \sum_{n = 1}^\infty A_n \cosh \left( \frac{2 n - 1}{2} \pi x \right) \sin \left( \frac{2 n - 1}{2} \pi y \right)
+\end{align*}
+
+\begin{align*}
+  u_0                                            & = u(1, y)                                                                                                                                                                                       \\
+                                                 & = \sum_{n = 1}^\infty A_n \cosh \left( \frac{2 n - 1}{2} \pi \right) \sin \left( \frac{2 n - 1}{2} \pi y \right)                                                                                \\
+  A_n \cosh \left( \frac{2 n - 1}{2} \pi \right) & = \frac{\int_0^1 u_0 \sin \left( \frac{2 n - 1}{2} \pi y \right) \,d y}{\int_0^1 \sin^2 \left( \frac{2 n - 1}{2} \pi y \right) \,d y}                                                           \\
+                                                 & = \frac{4 u_0}{(2 n - 1) \pi}                                                                                                                                                                   \\
+  A_n                                            & = \frac{4 u_0}{(2 n - 1) \pi \cosh \left( \frac{2 n - 1}{2} \pi \right)}                                                                                                                        \\
+  u(x, y)                                        & = \frac{4 u_0}{\pi} \sum_{n = 1}^\infty \frac{1}{(2 n - 1) \cosh \left( \frac{2 n - 1}{2} \pi \right)} \cosh \left( \frac{2 n - 1}{2} \pi x \right) \sin \left( \frac{2 n - 1}{2} \pi y \right)
+\end{align*}
+
 \end{document}
