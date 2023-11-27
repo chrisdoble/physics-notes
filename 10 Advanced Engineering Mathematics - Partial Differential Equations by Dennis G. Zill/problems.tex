@@ -1408,4 +1408,96 @@ Hyperbolic
   u(x, y)                                        & = \frac{4 u_0}{\pi} \sum_{n = 1}^\infty \frac{1}{(2 n - 1) \cosh \left( \frac{2 n - 1}{2} \pi \right)} \cosh \left( \frac{2 n - 1}{2} \pi x \right) \sin \left( \frac{2 n - 1}{2} \pi y \right)
 \end{align*}
 
+\subsection{Fourier Series in Two Variables}
+
+\subsubsection{}
+
+\begin{align*}
+  k (u_{x x} + u_{y y})    & = u_t                                                                                    \\
+  u(0, y, t)               & = 0                                                                                      \\
+  u(\pi, y, t)             & = 0                                                                                      \\
+  u(x, 0, t)               & = 0                                                                                      \\
+  u(x, \pi, t)             & = 0                                                                                      \\
+  u(x, y, 0)               & = u_0                                                                                    \\
+  X'' + \lambda X          & = 0                                                                                      \\
+  X(0)                     & = 0                                                                                      \\
+  X(\pi)                   & = 0                                                                                      \\
+  X                        & = c_1 \cos \alpha x + c_2 \sin \alpha x                                                  \\
+  0                        & = X(0)                                                                                   \\
+                           & = c_1                                                                                    \\
+  0                        & = X(\pi)                                                                                 \\
+                           & = c_2 \sin \alpha \pi                                                                    \\
+  X                        & = c_2 \sin m x,\ m = 1, 2, 3, \ldots                                                     \\
+  Y'' + \mu Y              & = 0                                                                                      \\
+  Y(0)                     & = 0                                                                                      \\
+  Y(\pi)                   & = 0                                                                                      \\
+  Y                        & = c_3 \cos \beta y + c_4 \sin \beta y                                                    \\
+  0                        & = Y(0)                                                                                   \\
+                           & = c_3                                                                                    \\
+  0                        & = Y(\pi)                                                                                 \\
+                           & = c_4 \sin \beta \pi                                                                     \\
+  Y                        & = c_4 \sin n y,\ n = 1, 2, 3, \ldots                                                     \\
+  T' + k (\lambda + \mu) T & = 0                                                                                      \\
+  T                        & = c_5 e^{-k (m^2 + n^2) t}                                                               \\
+  u(x, y, t)               & = \sum_{m = 1}^\infty \sum_{n = 1}^\infty A_{m n} e^{-k (m^2 + n^2) t} \sin m x \sin n y \\
+  u_0                      & = u(x, y, 0)                                                                             \\
+                           & = \sum_{m = 1}^\infty \sum_{n = 1}^\infty A_{m n} \sin m x \sin n y
+\end{align*}
+
+\begin{align*}
+  A_{m n}    & = \frac{4 u_0}{\pi^2} \int_0^\pi \int_0^\pi \sin m x \sin n y \,d x \,d y                                                                  \\
+             & = \frac{4 u_0 [1 - (-1)^m] [1 - (-1)^n]}{\pi^2 m n}                                                                                        \\
+  u(x, y, t) & = \frac{4 u_0}{\pi^2} \sum_{m = 1}^\infty \sum_{n = 1}^\infty \frac{[1 - (-1)^m] [1 - (-1)^n]}{m n} e^{-k (m^2 + n^2) t} \sin m x \sin n y
+\end{align*}
+
+\setcounter{subsubsection}{2}
+\subsubsection{}
+
+\begin{align*}
+  a^2 (u_{x x} + u_{y y})                          & = u_{t t}                               \\
+  u(0, y, t)                                       & = 0                                     \\
+  u(\pi, y, t)                                     & = 0                                     \\
+  u(x, 0, t)                                       & = 0                                     \\
+  u(x, \pi, t)                                     & = 0                                     \\
+  u(x, y, 0)                                       & = x y (x - \pi) (y - \pi)               \\
+  u_t|_{t = 0}                                     & = 0                                     \\
+  a^2 (X'' Y T + X Y'' T)                          & = X Y T''                               \\
+  a^2 \left( \frac{X''}{X} + \frac{Y''}{Y} \right) & = \frac{T''}{T}                         \\
+  \frac{X''}{X}                                    & = -\frac{Y''}{Y} + \frac{T''}{a^2 T}    \\
+  X'' + \lambda X                                  & = 0                                     \\
+  X(0)                                             & = 0                                     \\
+  X(\pi)                                           & = 0                                     \\
+  X                                                & = c_1 \cos \alpha x + c_2 \sin \alpha x \\
+  0                                                & = X(0)                                  \\
+                                                   & = c_1                                   \\
+  0                                                & = X(\pi)                                \\
+                                                   & = c_2 \sin \alpha \pi                   \\
+  X                                                & = c_2 \sin m x,\ m = 1, 2, 3, \ldots    \\
+  Y'' + \mu Y                                      & = 0                                     \\
+  Y(0)                                             & = 0                                     \\
+  Y(\pi)                                           & = 0                                     \\
+  Y                                                & = c_3 \cos \beta y + c_4 \sin \beta y   \\
+  0                                                & = Y(0)                                  \\
+                                                   & = c_3                                   \\
+  0                                                & = Y(\pi)                                \\
+                                                   & = c_4 \sin \beta \pi                    \\
+  Y                                                & = c_4 \sin n y,\ n = 1, 2, 3, \ldots
+\end{align*}
+
+\begin{align*}
+  T'' + a^2 (\lambda + \mu) T & = 0                                                                                                                                              \\
+  T'(0)                       & = 0                                                                                                                                              \\
+  T                           & = c_5 \cos a \sqrt{m^2 + n^2} t + c_6 \sin a \sqrt{m^2 + n^2} t                                                                                  \\
+  T'                          & = a \sqrt{m^2 + n^2} (-c_5 \sin a \sqrt{m^2 + n^2} t + c_6 \cos a \sqrt{m^2 + n^2} t)                                                            \\
+  0                           & = T'(0)                                                                                                                                          \\
+                              & = c_6                                                                                                                                            \\
+  T                           & = c_5 \cos a \sqrt{m^2 + n^2} t                                                                                                                  \\
+  u(x, y, t)                  & = \sum_{m = 1}^\infty \sum_{n = 1}^\infty A_{m n} \sin m x \sin n y \cos a \sqrt{m^2 + n^2} t                                                    \\
+  x y (x - \pi) (y - \pi)     & = u(x, y, 0)                                                                                                                                     \\
+                              & = \sum_{m = 1}^\infty \sum_{n = 1}^\infty A_{m n} \sin m x \sin n y                                                                              \\
+  A_{m n}                     & = \frac{4}{\pi^2} \int_0^\pi \int_0^\pi x y (x - \pi) (y - \pi) \sin m x \sin n y \,d y \,d x                                                    \\
+                              & = \frac{16 [1 - (-1)^m] [1 - (-1)^n]}{m^3 n^3 \pi^2}                                                                                             \\
+  u(x, y, t)                  & = \frac{16}{\pi^2} \sum_{m = 1}^\infty \sum_{n = 1}^\infty \frac{[1 - (-1)^m] [1 - (-1)^n]}{m^3 n^3} \sin m x \sin n y \cos a \sqrt{m^2 + n^2} t
+\end{align*}
+
 \end{document}

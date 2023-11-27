@@ -299,4 +299,20 @@
   \item For certain types of boundary conditions, the method of separation of variables and the superposition principle can lead to infinite series that aren't Fourier series. If a series is a result of a Sturm-Liouville problem its eigenfunctions $\phi_n$ are orthogonal and can still be used to solve the BVP, but the coefficients must be calculated using the general formula \[A_n = \frac{(f, \phi_n)}{||\phi_n||^2}.\]
 \end{itemize}
 
+\subsection{Fourier Series in Two Variables}
+
+\begin{itemize}
+  \item Two-dimensional BVPs can also be solved via separation of variables. The process is similar, however when separating the variables you'll get something like \[\frac{X''}{X} = -\frac{Y''}{Y} + \frac{T'}{k T}.\] Introduction a constant leads to \begin{align*}
+          \frac{X''}{X}                   & = -\lambda \\
+          -\frac{Y''}{Y} + \frac{T'}{k T} & = -\lambda
+        \end{align*} and introduction of another constant leads to \begin{align*}
+          \frac{Y''}{Y}            & = -\mu  \\
+          \frac{T'}{k T} + \lambda & = -\mu.
+        \end{align*} These three BVPs can then be solved independently with the final resulting including a double sum over two infinite series.
+
+  \item If the result includes an infinite sine series (a \textbf{sine series in two variables} or a \textbf{double sine series}) the coefficients are \[A_{m n} = \frac{4}{b c} \int_0^c \int_0^b f(x, y) \sin \frac{m \pi}{b} x \sin \frac{n \pi}{c} y \,d x \,d y\] where $b$ is the width of the region and $c$ is its height.
+
+  \item If the result includes an infinite cosine series (a \textbf{cosine series in two variables} or a \textbf{double cosine series}) the coefficients are more complicated as there is an zero constant in each dimension, resulting in four equations for $A_{0 0}$, $A_{m 0}$, $A_{0 n}$, and $A_{m n}$.
+\end{itemize}
+
 \end{document}
