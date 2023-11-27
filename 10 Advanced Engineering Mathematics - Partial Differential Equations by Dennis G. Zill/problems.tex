@@ -1500,4 +1500,76 @@ Hyperbolic
   u(x, y, t)                  & = \frac{16}{\pi^2} \sum_{m = 1}^\infty \sum_{n = 1}^\infty \frac{[1 - (-1)^m] [1 - (-1)^n]}{m^3 n^3} \sin m x \sin n y \cos a \sqrt{m^2 + n^2} t
 \end{align*}
 
+\subsection{Chapter in Review}
+
+\subsubsection{}
+
+\begin{align*}
+  u_{x y}                  & = u                                \\
+  X' Y'                    & = X Y                              \\
+  \frac{X'}{X}             & = \frac{Y}{Y'}                     \\
+  X' + \lambda X           & = 0                                \\
+  X                        & = c_1 e^{-\lambda x}               \\
+  Y' + \frac{1}{\lambda} Y & = 0                                \\
+  Y                        & = c_2 e^{-y / \lambda}             \\
+  u                        & = c_3 e^{-\lambda x - y / \lambda}
+\end{align*}
+
+\setcounter{subsubsection}{2}
+\subsubsection{}
+
+\begin{align*}
+  k u_{x x}            & = u_t                               \\
+  u(0, t)              & = u_0                               \\
+  -u_x|_{x = \pi}      & = u(\pi, t) - u_1                   \\
+  u(x, 0)              & = 0                                 \\
+  u(x, t)              & = v(x, t) + \psi(x)                 \\
+  u_{x x}              & = v_{x x} + \psi''                  \\
+  u_t                  & = v_t                               \\
+  k (v_{x x} + \psi'') & = v_t                               \\
+  k v_{x x}            & = v_t                               \\
+  k \psi''             & = 0                                 \\
+  \psi(0)              & = u_0                               \\
+  -\psi'(\pi)          & = \psi(\pi) - u_1                   \\
+  \psi                 & = c_1 x + c_2                       \\
+  \psi'                & = c_1                               \\
+  u_0                  & = \psi(0)                           \\
+                       & = c_2                               \\
+  -c_1                 & = c_1 \pi + u_0 - u_1               \\
+  c_1                  & = \frac{u_1 - u_0}{\pi + 1}         \\
+  \psi                 & = \frac{u_1 - u_0}{\pi + 1} x + u_0
+\end{align*}
+
+\setcounter{subsubsection}{6}
+\subsubsection{}
+
+\begin{align*}
+  u_{x x} + u_{y y} & = 0                                                                                       \\
+  u(0, y)           & = 0                                                                                       \\
+  u(\pi, y)         & = 50                                                                                      \\
+  u(x, 0)           & = 0                                                                                       \\
+  u(x, \pi)         & = 0                                                                                       \\
+  X'' Y + X Y''     & = 0                                                                                       \\
+  -\frac{X''}{X}    & = \frac{Y''}{Y}                                                                           \\
+  Y'' + \lambda Y   & = 0                                                                                       \\
+  Y                 & = c_1 \cos \omega y + c_2 \sin \omega y                                                   \\
+  0                 & = Y(0)                                                                                    \\
+                    & = c_1                                                                                     \\
+  0                 & = Y(\pi)                                                                                  \\
+                    & = c_2 \sin \omega \pi                                                                     \\
+  Y                 & = c_2 \sin n y,\ n = 1, 2, 3, \ldots                                                      \\
+  X'' - n^2 X       & = 0                                                                                       \\
+  X                 & = c_3 \cosh n x + c_4 \sinh n x                                                           \\
+  0                 & = X(0)                                                                                    \\
+                    & = c_3                                                                                     \\
+  X                 & = c_4 \sinh n x                                                                           \\
+  u(x, y)           & = \sum_{n = 1}^\infty A_n \sinh n x \sin n y                                              \\
+  50                & = u(\pi, y)                                                                               \\
+                    & = \sum_{n = 1}^\infty A_n \sinh n \pi \sin n y                                            \\
+  A_n \sinh n \pi   & = \frac{100}{\pi} \int_0^\pi \sin n y \,d y                                               \\
+                    & = \frac{100}{\pi} \frac{1 - (-1)^n}{n}                                                    \\
+  A_n               & = \frac{100}{\pi} \frac{1 - (-1)^n}{n \sinh n \pi}                                        \\
+  u(x, y)           & = \frac{100}{\pi} \sum_{n = 1}^\infty \frac{1 - (-1)^n}{n \sinh n \pi} \sinh n x \sin n y
+\end{align*}
+
 \end{document}
