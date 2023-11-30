@@ -645,20 +645,20 @@ Not separable.
 \subsubsection{}
 
 \begin{align*}
-  k \frac{\partial^2 u}{\partial x^2} - u & = \frac{\partial u}{\partial t},\ k > 0                                                                                                                                                                                               \\
-  k T X'' - T X                           & = T' X                                                                                                                                                                                                                                \\
-  k \frac{X''}{X} - 1                     & = \frac{T'}{T}                                                                                                                                                                                                                        \\ \\
-  \frac{T'}{T}                            & = \lambda                                                                                                                                                                                                                             \\
-  T' - \lambda T                          & = 0                                                                                                                                                                                                                                   \\
-  T                                       & = c_1 e^{\lambda t}                                                                                                                                                                                                                   \\ \\
-  k \frac{X''}{X} - 1                     & = \lambda                                                                                                                                                                                                                             \\
-  X'' - \frac{\lambda + 1}{k} X           & = 0                                                                                                                                                                                                                                   \\
+  k \frac{\partial^2 u}{\partial x^2} - u & = \frac{\partial u}{\partial t},\ k > 0                                                                                                                                                                                                   \\
+  k T X'' - T X                           & = T' X                                                                                                                                                                                                                                    \\
+  k \frac{X''}{X} - 1                     & = \frac{T'}{T}                                                                                                                                                                                                                            \\ \\
+  \frac{T'}{T}                            & = \lambda                                                                                                                                                                                                                                 \\
+  T' - \lambda T                          & = 0                                                                                                                                                                                                                                       \\
+  T                                       & = c_1 e^{\lambda t}                                                                                                                                                                                                                       \\ \\
+  k \frac{X''}{X} - 1                     & = \lambda                                                                                                                                                                                                                                 \\
+  X'' - \frac{\lambda + 1}{k} X           & = 0                                                                                                                                                                                                                                       \\
   X                                       & = \begin{cases}
                                                 c_1 \cos \sqrt{\frac{\lambda + 1}{k}} x + c_2 \sin \sqrt{\frac{\lambda + 1}{k}} x   & \lambda < -1 \\
                                                 c_1 x + c_2                                                                         & \lambda = -1 \\
                                                 c_1 \cosh \sqrt{\frac{\lambda + 1}{k}} x + c_2 \sinh \sqrt{\frac{\lambda + 1}{k}} x & \lambda > -1
-                                              \end{cases}                                                                                                                                \\ \\
-  u                                       & = T X                                                                                                                                                                                                                                 \\
+                                              \end{cases}                                                                                                                                  \\ \\
+  u                                       & = T X                                                                                                                                                                                                                                     \\
                                           & = \begin{cases}
                                                 e^{\lambda t} \left( c_1 \cos \sqrt{\frac{\lambda + 1}{k}} x + c_2 \sin \sqrt{\frac{\lambda + 1}{k}} x \right)   & \lambda < -1 \\
                                                 e^{\lambda t} \left( c_1 x + c_2 \right)                                                                         & \lambda = -1 \\
@@ -670,24 +670,24 @@ Not separable.
 \subsubsection{}
 
 \begin{align*}
-  a^2 \frac{\partial^2 u}{\partial x^2} & = \frac{\partial^2 u}{\partial t^2}                                                                                                                                     \\
-  a^2 T X''                             & = T'' X                                                                                                                                                                 \\
-  a^2 \frac{X''}{X}                     & = \frac{T''}{T}                                                                                                                                                         \\ \\
-  \frac{T''}{T}                         & = \lambda                                                                                                                                                               \\
-  T'' - \lambda T                       & = 0                                                                                                                                                                     \\
+  a^2 \frac{\partial^2 u}{\partial x^2} & = \frac{\partial^2 u}{\partial t^2}                                                                                                                                       \\
+  a^2 T X''                             & = T'' X                                                                                                                                                                   \\
+  a^2 \frac{X''}{X}                     & = \frac{T''}{T}                                                                                                                                                           \\ \\
+  \frac{T''}{T}                         & = \lambda                                                                                                                                                                 \\
+  T'' - \lambda T                       & = 0                                                                                                                                                                       \\
   T                                     & = \begin{cases}
                                               c_1 \cos \sqrt{\lambda} t + c_2 \sin \sqrt{\lambda} t   & \lambda < 0 \\
                                               c_1 t + c_2                                             & \lambda = 0 \\
                                               c_1 \cosh \sqrt{\lambda} t + c_2 \sinh \sqrt{\lambda} t & \lambda > 0
-                                            \end{cases}                                                                                                 \\ \\
-  a^2 \frac{X''}{X}                     & = \lambda                                                                                                                                                               \\
-  X'' - \frac{\lambda}{a^2} X           & = 0                                                                                                                                                                     \\
+                                            \end{cases}                                                                                                   \\ \\
+  a^2 \frac{X''}{X}                     & = \lambda                                                                                                                                                                 \\
+  X'' - \frac{\lambda}{a^2} X           & = 0                                                                                                                                                                       \\
   X                                     & = \begin{cases}
                                               c_1 \cos \frac{\sqrt{\lambda}}{a} x + c_2 \sin \frac{\sqrt{\lambda}}{a} x   & \lambda < 0 \\
                                               c_1 x + c_2                                                                 & \lambda = 0 \\
                                               c_1 \cosh \frac{\sqrt{\lambda}}{a} x + c_2 \sinh \frac{\sqrt{\lambda}}{a} x & \lambda > 0
                                             \end{cases}                                                             \\ \\
-  u                                     & = T X                                                                                                                                                                   \\
+  u                                     & = T X                                                                                                                                                                     \\
                                         & = \begin{cases}
                                               (c_1 \cos \sqrt{\lambda} t + c_2 \sin \sqrt{\lambda} t) (c_3 \cos \frac{\sqrt{\lambda}}{a} x + c_4 \sin \frac{\sqrt{\lambda}}{a} x)     & \lambda < 0 \\
                                               (c_1 t + c_2) (c_3 x + c_4)                                                                                                             & \lambda = 0 \\
@@ -1570,6 +1570,150 @@ Hyperbolic
                     & = \frac{100}{\pi} \frac{1 - (-1)^n}{n}                                                    \\
   A_n               & = \frac{100}{\pi} \frac{1 - (-1)^n}{n \sinh n \pi}                                        \\
   u(x, y)           & = \frac{100}{\pi} \sum_{n = 1}^\infty \frac{1 - (-1)^n}{n \sinh n \pi} \sinh n x \sin n y
+\end{align*}
+
+\section{Boundary-Value Problems in Other Coordinate Systems}
+
+\subsection{Polar Coordinates}
+
+\subsubsection{}
+
+\begin{align*}
+  u(1, \theta)               & = \begin{cases}
+                                   u_0 & 0 < \theta < \pi     \\
+                                   0   & \pi < \theta < 2 \pi
+                                 \end{cases}                                                                     \\
+  \Theta(\theta)             & = \Theta(\theta + 2 \pi)                                                                         \\
+  \Theta'' + \lambda \Theta  & = 0                                                                                              \\
+  \Theta                     & = c_1                                                                                            \\
+  \Theta                     & = c_1 \cos n \theta + c_2 \sin n \theta,\ n = 1, 2, 3, \ldots                                    \\
+  r^2 R'' + r R' - \lambda R & = 0                                                                                              \\
+  % \lambda = 0
+  R'' + \frac{1}{r} R'       & = 0                                                                                              \\
+  R                          & = c_3 + c_4 \ln r                                                                                \\
+  % \lambda > 0
+  r^2 R'' + r R' - n^2 R     & = 0                                                                                              \\
+  R                          & = c_3 r^n + c_4 r^{-n}                                                                           \\
+  u_0                        & = A_0,\ n = 0                                                                                    \\
+  u_n                        & = r^n (A_n \cos n \theta + B_n \sin n \theta),\ n = 1, 2, 3, \ldots                              \\
+  u                          & = A_0 + \sum_{n = 1}^\infty r^n (A_n \cos n \theta + B_n \sin n \theta)                          \\
+  u(1, \theta)               & = A_0 + \sum_{n = 1}^\infty (A_n \cos n \theta + B_n \sin n \theta)                              \\
+  A_0                        & = \frac{a_0}{2}                                                                                  \\
+                             & = \frac{1}{2 \pi} \int_0^\pi u_0 \,d \theta                                                      \\
+                             & = \frac{u_0}{2}                                                                                  \\
+  A_n                        & = \frac{1}{\pi} \int_0^\pi u_0 \cos n \theta \,d \theta                                          \\
+                             & = 0                                                                                              \\
+  B_n                        & = \frac{1}{\pi} \int_0^\pi u_0 \sin n \theta \,d \theta                                          \\
+                             & = \frac{\mu_0}{\pi} \frac{1 - (-1)^n}{n}                                                         \\
+  u(r, \theta)               & = \frac{\mu_0}{2} + \frac{\mu_0}{\pi} \sum_{n = 1}^\infty r^n \frac{1 - (-1)^n}{n} \sin n \theta
+\end{align*}
+
+\setcounter{subsubsection}{4}
+\subsubsection{}
+
+\begin{align*}
+  \left. \frac{\partial u}{\partial \theta} \right|_{\theta = 0}   & = 0                                                                                                                                 \\
+  \left. \frac{\partial u}{\partial \theta} \right|_{\theta = \pi} & = 0                                                                                                                                 \\
+  u(2, \theta)                                                     & = \begin{cases}
+                                                                         u_0 & 0 < \theta < \pi / 2   \\
+                                                                         0   & \pi / 2 < \theta < \pi
+                                                                       \end{cases}                                                                                                      \\
+  \Theta'' + \lambda \Theta                                        & = 0                                                                                                                                 \\
+  \Theta'(0)                                                       & = 0                                                                                                                                 \\
+  \Theta'(\pi)                                                     & = 0                                                                                                                                 \\
+  % \lambda = 0
+  \Theta                                                           & = c_1                                                                                                                               \\
+  % \lambda > 0
+  \Theta                                                           & = c_1 \cos \omega \theta + c_2 \sin \omega \theta                                                                                   \\
+  \Theta'                                                          & = -\omega c_1 \sin \omega \theta + \omega c_2 \cos \omega \theta                                                                    \\
+  0                                                                & = \Theta'(0)                                                                                                                        \\
+                                                                   & = \omega c_2                                                                                                                        \\
+                                                                   & = c_2                                                                                                                               \\
+  0                                                                & = \Theta'(\pi)                                                                                                                      \\
+                                                                   & = -\omega c_1 \sin \omega \pi                                                                                                       \\
+  \omega                                                           & = n,\ n = 1, 2, 3, \ldots                                                                                                           \\
+  \Theta                                                           & = c_1,\ n = 0                                                                                                                       \\
+  \Theta                                                           & = c_1 \cos n \theta,\ n = 1, 2, 3, \ldots                                                                                           \\
+  r^2 R'' + r R' - \lambda R                                       & = 0                                                                                                                                 \\
+  R                                                                & = c_3,\ n = 0                                                                                                                       \\
+  R                                                                & = c_3 r^n,\ n = 1, 2, 3, \ldots                                                                                                     \\
+  u                                                                & = A_0 + \sum_{n = 1}^\infty A_n r^n \cos n \theta,\ n = 1, 2, 3, \ldots                                                             \\
+  A_0                                                              & = \frac{a_0}{2}                                                                                                                     \\
+                                                                   & = \frac{1}{\pi} \int_0^{\pi / 2} u_0 \,d \theta                                                                                     \\
+                                                                   & = \frac{u_0}{2}                                                                                                                     \\
+  2^n A_n                                                          & = \frac{2}{\pi} \int_0^{\pi / 2} u_0 \cos n \theta \,d \theta                                                                       \\
+  A_n                                                              & = \frac{2 u_0 \sin \frac{n \pi}{2}}{2^n \pi n}                                                                                      \\
+  u                                                                & = \frac{u_0}{2} + \frac{2 u_0}{\pi} \sum_{n = 1}^\infty \frac{1}{n} \sin \frac{n \pi}{2} \left( \frac{r}{2} \right)^n \cos n \theta
+\end{align*}
+
+\setcounter{subsubsection}{8}
+\subsubsection{}
+
+\begin{align*}
+  u(r, 0)                   & = 0                                                                                                                                                                                               \\
+  u(r, \beta)               & = 0                                                                                                                                                                                               \\
+  u(c, \theta)              & = f(\theta)                                                                                                                                                                                       \\
+  \Theta'' + \lambda \Theta & = 0                                                                                                                                                                                               \\
+  \Theta(0)                 & = 0                                                                                                                                                                                               \\
+  \Theta(\beta)             & = 0                                                                                                                                                                                               \\
+  \Theta                    & = c_1 \cos \omega \theta + c_2 \sin \omega \theta                                                                                                                                                 \\
+  0                         & = \Theta(0)                                                                                                                                                                                       \\
+                            & = c_1                                                                                                                                                                                             \\
+  0                         & = \Theta(\beta)                                                                                                                                                                                   \\
+                            & = c_2 \sin \omega \beta                                                                                                                                                                           \\
+  \omega \beta              & = n \pi                                                                                                                                                                                           \\
+  \omega                    & = \frac{n \pi}{\beta},\ n = 1, 2, 3, \ldots                                                                                                                                                       \\
+  \Theta                    & = c_2 \sin \frac{n \pi}{\beta} \theta,\ n = 1, 2, 3, \ldots                                                                                                                                       \\
+  R                         & = c_3 r^{n \pi / \beta},\ n = 1, 2, 3, \ldots                                                                                                                                                     \\
+  u                         & = \sum_{n = 1}^\infty A_n r^{n \pi / \beta} \sin \frac{n \pi}{\beta} \theta                                                                                                                       \\
+  A_n                       & = \frac{2}{\beta c^{n \pi / \beta}} \int_0^\beta f(\theta) \sin \frac{n \pi}{\beta} \theta \,d \theta                                                                                             \\
+  u                         & = \frac{2}{\beta} \sum_{n = 1}^\infty \left( \frac{r}{c} \right)^{n \pi / \beta} \left( \int_0^\beta f(\theta) \sin \frac{n \pi}{\beta} \theta \,d \theta \right) \sin \frac{n \pi}{\beta} \theta
+\end{align*}
+
+\setcounter{subsubsection}{10}
+\subsubsection{}
+
+\begin{align*}
+  u(a, \theta)               & = f(\theta)                                                                                                \\
+  u(b, \theta)               & = 0                                                                                                        \\
+  \Theta'' + \lambda \Theta' & = 0                                                                                                        \\
+  \Theta(\theta)             & = \Theta(\theta + 2 \pi)                                                                                   \\
+  \Theta                     & = c_1                                                                                                      \\
+  \Theta                     & = c_1 \cos \omega \theta + c_2 \sin \omega \theta                                                          \\
+  \omega                     & = n,\ n = 1, 2, 3, \ldots                                                                                  \\
+  R                          & = c_3 + c_4 \ln r                                                                                          \\
+  0                          & = R(b)                                                                                                     \\
+                             & = c_3 + c_4 \ln b                                                                                          \\
+  c_3                        & = -c_4 \ln b                                                                                               \\
+  R                          & = c_4 \ln \frac{r}{b}                                                                                      \\
+  R                          & = c_3 r^n + c_4 r^{-n}                                                                                     \\
+  0                          & = R(b)                                                                                                     \\
+                             & = c_3 b^n + c_4 b^{-n}                                                                                     \\
+  c_4                        & = -c_3 b^{2 n}                                                                                             \\
+  R                          & = c_3 (r^n - b^{2 n} r^{-n})                                                                               \\
+  u                          & = A_0 \ln \frac{r}{b} + \sum_{n = 1}^\infty (r^n - b^{2 n} r^{-n}) (A_n \cos n \theta + B_n \sin n \theta) \\
+  u(a, \theta)               & = A_0 \ln \frac{a}{b} + \sum_{n = 1}^\infty (a^n - b^{2 n} a^{-n}) (A_n \cos n \theta + B_n \sin n \theta) \\
+  A_0                        & = \frac{1}{2 \pi \ln a / b} \int_0^{2 \pi} f(\theta) \,d \theta                                            \\
+  A_n                        & = \frac{1}{\pi (a^n - b^{2 n} a^{-n})} \int_0^{2 \pi} f(\theta) \cos n \theta \,d \theta                   \\
+  B_n                        & = \frac{1}{\pi (a^n - b^{2 n} a^{-n})} \int_0^{2 \pi} f(\theta) \sin n \theta \,d \theta                   \\
+\end{align*}
+
+\setcounter{subsubsection}{18}
+\subsubsection{}
+
+\begin{align*}
+  u(c, \theta)      & = f(\theta)                                                                      \\
+  u(\infty, \theta) & = 0                                                                              \\
+  u(r, \theta)      & = u(r, \theta + 2 \pi)                                                           \\
+  \Theta            & = c_1                                                                            \\
+  \Theta            & = c_1 \cos n \theta + c_2 \sin n \theta                                          \\
+  R                 & = c_4 \ln r                                                                      \\
+  R                 & = c_4 r^{-n}                                                                     \\
+  u                 & = A_0 \ln r + \sum_{n = 1}^\infty r^{-n} (A_n \cos n \theta + B_n \sin n \theta) \\
+  u(c, \theta)      & = A_0 \ln c + \sum_{n = 1}^\infty c^{-n} (A_n \cos n \theta + B_n \sin n \theta) \\
+  A_0               & = \frac{1}{2 \pi \ln c} \int_0^{2 \pi} f(\theta) \,d \theta                      \\
+  A_n               & = \frac{c^n}{\pi} \int_0^{2 \pi} f(\theta) \cos n \theta \,d \theta              \\
+  B_n               & = \frac{c^n}{\pi} \int_0^{2 \pi} f(\theta) \sin n \theta \,d \theta
 \end{align*}
 
 \end{document}

@@ -315,4 +315,19 @@
   \item If the result includes an infinite cosine series (a \textbf{cosine series in two variables} or a \textbf{double cosine series}) the coefficients are more complicated as there is an zero constant in each dimension, resulting in four equations for $A_{0 0}$, $A_{m 0}$, $A_{0 n}$, and $A_{m n}$.
 \end{itemize}
 
+\section{Boundary-Value Problems in Other Coordinate Systems}
+
+\subsection{Polar Coordinates}
+
+\begin{itemize}
+  \item The Laplacian of a function $u(r, \theta)$ in polar coordinates is \[\nabla^2 u = \frac{\partial^2 u}{\partial r^2} + \frac{1}{r} \frac{\partial u}{\partial r} + \frac{1}{r^2} \frac{\partial^2 u}{\partial \theta^2}.\]
+
+  \item Thus, the Laplace equation in polar coordinates corresponds to two boundary value problems \begin{align*}
+          r^2 R'' + r R' - \lambda R & = 0  \\
+          \Theta'' + \lambda \Theta  & = 0.
+        \end{align*}
+
+  \item Some implicit constraints on a boundary value problem in polar coordinates are: $R(r)$ must be bounded at $r = 0$, and $\Theta(\theta)$ must be $2 \pi$ periodic (assuming the problem concerns a full circle).
+\end{itemize}
+
 \end{document}
