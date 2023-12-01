@@ -1716,4 +1716,117 @@ Hyperbolic
   B_n               & = \frac{c^n}{\pi} \int_0^{2 \pi} f(\theta) \sin n \theta \,d \theta
 \end{align*}
 
+\subsection{Cylindrical Coordinates}
+
+\subsubsection{}
+
+\begin{align*}
+  A_n     & = 0                                                                                                      \\
+  B_n     & = \frac{2}{a \alpha_n c^2 J_1^2(\alpha_n c)} \int_0^c r J_0(\alpha_n r) \,d r                            \\
+          & = \frac{2}{a \alpha_n^2 c J_1(\alpha_n c)}                                                               \\
+  u(r, t) & = \frac{2}{a c} \sum_{n = 1}^\infty \frac{\sin a \alpha_n t}{\alpha_n^2 J_1(\alpha_n c)} J_0(\alpha_n r)
+\end{align*}
+
+\setcounter{subsubsection}{2}
+\subsubsection{}
+
+\[u(r, z) = u_0 \sum_{n = 1}^\infty \frac{\sinh [\alpha_n (4 - z)]}{\alpha_n \sinh 4 \alpha_n J_1(2 \alpha_n)} J_0(\alpha_n r)\]
+
+\setcounter{subsubsection}{4}
+\subsubsection{}
+
+\begin{align*}
+  u(1, z)                                              & = z                                                                                                              \\
+  \left. \frac{\partial u}{\partial z} \right|_{z = 0} & = 0                                                                                                              \\
+  \left. \frac{\partial u}{\partial z} \right|_{z = 1} & = 0                                                                                                              \\
+  Z'' + \lambda Z                                      & = 0                                                                                                              \\
+  Z                                                    & = c_1                                                                                                            \\
+  Z                                                    & = c_1 \cos \alpha z + c_2 \sin \alpha z                                                                          \\
+  Z'                                                   & = -\alpha c_1 \sin \alpha z + \alpha c_2 \cos \alpha z                                                           \\
+  0                                                    & = Z'(0)                                                                                                          \\
+                                                       & = c_2                                                                                                            \\
+  0                                                    & = Z'(1)                                                                                                          \\
+                                                       & = -\alpha c_1 \sin \alpha                                                                                        \\
+  \alpha                                               & = n \pi                                                                                                          \\
+  r R'' + R' - \alpha^2 r R                            & = 0                                                                                                              \\
+  R                                                    & = c_3                                                                                                            \\
+  R                                                    & = c_3 I_0(n \pi r)                                                                                               \\
+  u(r, t)                                              & = A_0 + \sum_{n = 1}^\infty A_n I_0(n \pi r) \cos n \pi z                                                        \\
+  z                                                    & = u(1, z)                                                                                                        \\
+                                                       & = A_0 + \sum_{n = 1}^\infty A_n I_0(n \pi) \cos n \pi z                                                          \\
+  A_0                                                  & = \frac{1}{2}                                                                                                    \\
+  A_n I_0(n \pi)                                       & = 2 \int_0^1 z \cos n \pi z \,d z                                                                                \\
+  A_n                                                  & = \frac{2 [-1 + (-1)^n]}{n^2 \pi^2 I_0(n \pi)}                                                                   \\
+  u(r, t)                                              & = \frac{1}{2} + \frac{2}{\pi^2} \sum_{n = 1}^\infty \frac{-1 + (-1)^n}{n^2 I_0(n \pi)} I_0(n \pi r) \cos n \pi z
+\end{align*}
+
+\setcounter{subsubsection}{8}
+\subsubsection{}
+
+\begin{align*}
+  k \left( \frac{\partial^2 u}{\partial r^2} + \frac{1}{r} \frac{\partial u}{\partial r} \right) & = \frac{\partial u}{\partial t}                                         \\
+  u(c, t)                                                                                        & = 0                                                                     \\
+  u(r, 0)                                                                                        & = f(r)                                                                  \\
+  k R'' T + \frac{k}{r} R' T                                                                     & = R T'                                                                  \\
+  \frac{r R'' + R'}{r R}                                                                         & = \frac{T'}{k T}                                                        \\
+  r R'' + R' + \lambda r R                                                                       & = 0                                                                     \\
+  R                                                                                              & = c_1 J_0(\alpha r)                                                     \\
+  0                                                                                              & = R(c)                                                                  \\
+                                                                                                 & = c_1 J_0(\alpha c)                                                     \\
+  \alpha_n                                                                                       & = \frac{x_n}{c}                                                         \\
+  R                                                                                              & = c_1 J_0(\alpha_n r)                                                   \\
+  T' + k \lambda T                                                                               & = 0                                                                     \\
+  T                                                                                              & = c_3 e^{-k \alpha_n^2 t}                                               \\
+  u(r, t)                                                                                        & = \sum_{n = 1}^\infty A_n e^{-k \alpha_n t} J_0(\alpha_n r)             \\
+  f(r)                                                                                           & = u(r, 0)                                                               \\
+                                                                                                 & = \sum_{n = 1}^\infty A_n J_0(\alpha_n r)                               \\
+  A_n                                                                                            & = \frac{2}{c^2 J_1^2(\alpha_n c)} \int_0^c r J_0(\alpha_n r) f(r) \,d r
+\end{align*}
+
+\setcounter{subsubsection}{10}
+\subsubsection{}
+
+\begin{align*}
+  \frac{r R'' + R'}{r R}              & = \frac{T'}{k T}                                                                               \\
+  r R'' + R' + \lambda r R            & = 0                                                                                            \\
+  R                                   & = c_1 J_0(\alpha r)                                                                            \\
+  R'                                  & = -\alpha c_1 J_1(\alpha r)                                                                    \\
+  R'(1)                               & = -h R(1)                                                                                      \\
+  \alpha c_1 J_0'(\alpha)             & = -h c_1 J_0(\alpha)                                                                           \\
+  h J_0(\alpha) + \alpha J_0'(\alpha) & = 0                                                                                            \\
+  R                                   & = c_1 J_0(\alpha_n r)                                                                          \\
+  T' + \lambda k T                    & = 0                                                                                            \\
+  T                                   & = c_3 e^{-\alpha_n^2 k t}                                                                      \\
+  u(r, t)                             & = \sum_{n = 1}^\infty A_n e^{-\alpha_n^2 k t} J_0(\alpha_n r)                                  \\
+  f(r)                                & = u(r, 0)                                                                                      \\
+                                      & = \sum_{n = 1}^\infty A_n J_0(\alpha_n r)                                                      \\
+  A_n                                 & = \frac{2 \alpha_n^2}{(\alpha_n^2 +h^2) J_0^2(\alpha_n)} \int_0^1 r J_0(\alpha_n r) f(r) \,d r
+\end{align*}
+
+\setcounter{subsubsection}{12}
+\subsubsection{}
+
+\begin{align*}
+  \frac{\partial^2 u}{\partial r^2} + \frac{1}{r} \frac{\partial u}{\partial r} & = \frac{\partial u}{\partial t}                                                                                   \\
+  u(r, t)                                                                       & = v(r, t) + \psi(r)                                                                                               \\
+  R'' T + \psi'' + \frac{1}{r} (R' T + \psi')                                   & = R T'                                                                                                            \\
+  \psi'' + \frac{1}{r} \psi'                                                    & = 0                                                                                                               \\
+  \psi                                                                          & = 100                                                                                                             \\
+  \frac{r R'' + R'}{r R}                                                        & = \frac{T'}{T}                                                                                                    \\
+  r R'' + R' + \lambda r R                                                      & = 0                                                                                                               \\
+  R                                                                             & = c_1 J_0(\alpha r)                                                                                               \\
+  0                                                                             & = R(2)                                                                                                            \\
+                                                                                & = c_1 J_0(2 \alpha)                                                                                               \\
+  \alpha_n                                                                      & = \frac{x_n}{2}                                                                                                   \\
+  R                                                                             & = c_1 J_0(\alpha_n r)                                                                                             \\
+  T                                                                             & = c_2 e^{-\alpha_n^2 t}                                                                                           \\
+  v(r, t)                                                                       & = \sum_{n = 1}^\infty c_n e^{-\alpha_n^2 t} J_0(\alpha_n r)                                                       \\
+  f(r) - \psi(r)                                                                & = v(r, 0)                                                                                                         \\
+  f(r) - 100                                                                    & = \sum_{n = 1}^\infty c_n J_0(\alpha_n r)                                                                         \\
+  c_n                                                                           & = \frac{2}{4 J_1^2(2 \alpha_n)} \int_0^2 r J_0(\alpha_n r) [f(r) - 100] \,d r                                     \\
+                                                                                & = \frac{50}{J_1^2(2 \alpha_n)} \int_0^1 r J_0(\alpha_n r) \,d r                                                   \\
+                                                                                & = \frac{50 J_1(\alpha_n)}{\alpha_n J_1^2(2 \alpha_n)}                                                             \\
+  u(r, t)                                                                       & = 100 + 50 \sum_{n = 1}^\infty \frac{J_1(\alpha_n)}{\alpha_n J_1^2(2 \alpha_n)} e^{-\alpha_n^2 t} J_0(\alpha_n r)
+\end{align*}
+
 \end{document}

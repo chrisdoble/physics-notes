@@ -330,4 +330,20 @@
   \item Some implicit constraints on a boundary value problem in polar coordinates are: $R(r)$ must be bounded at $r = 0$, and $\Theta(\theta)$ must be $2 \pi$ periodic (assuming the problem concerns a full circle).
 \end{itemize}
 
+\subsection{Cylindrical Coordinates}
+
+\begin{itemize}
+  \item The two-dimensional heat and wave equations in polar coordinates are \begin{align*}
+          k \left( \frac{\partial^2 u}{\partial r^2} + \frac{1}{r} \frac{\partial u}{\partial r} + \frac{1}{r^2} \frac{\partial^2 u}{\partial \theta^2} \right)   & = \frac{\partial u}{\partial t} \text{, and} \\
+          a^2 \left( \frac{\partial^2 u}{\partial r^2} + \frac{1}{r} \frac{\partial u}{\partial r} + \frac{1}{r^2} \frac{\partial^2 u}{\partial \theta^2} \right) & = \frac{\partial^2 u}{\partial t^2}.
+        \end{align*} For problems with radial symmetry they reduce to \begin{align*}
+          k \left( \frac{\partial^2 u}{\partial r^2} + \frac{1}{r} \frac{\partial u}{\partial r} \right)   & = \frac{\partial u}{\partial t} \text{, and} \\
+          a^2 \left( \frac{\partial^2 u}{\partial r^2} + \frac{1}{r} \frac{\partial u}{\partial r} \right) & = \frac{\partial^2 u}{\partial t^2}.
+        \end{align*}
+
+  \item Differential equations of the form \[x^2 y'' + x y' + (\alpha^2 x^2 - p^2) y = 0,\ \alpha > 0\] are parametric Bessel equations of order $p$ and have solutions \[c_1 J_p(\alpha x) + c_2 Y_p(\alpha x)\] where $J_p$ and $Y_p$ are Bessel functions of the first- and second-kind, respectively.
+
+  \item The Laplacian in cylindrical coordinates is \[\nabla^2 u = \frac{\partial^2 u}{\partial r^2} + \frac{1}{r} \frac{\partial u}{\partial r} + \frac{1}{r^2} \frac{\partial^2 u}{\partial \theta^2} + \frac{\partial^2 u}{\partial z^2}.\]
+\end{itemize}
+
 \end{document}
