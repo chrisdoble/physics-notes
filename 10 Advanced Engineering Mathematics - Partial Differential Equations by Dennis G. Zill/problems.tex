@@ -1829,4 +1829,29 @@ Hyperbolic
   u(r, t)                                                                       & = 100 + 50 \sum_{n = 1}^\infty \frac{J_1(\alpha_n)}{\alpha_n J_1^2(2 \alpha_n)} e^{-\alpha_n^2 t} J_0(\alpha_n r)
 \end{align*}
 
+\subsection{Spherical Coordinates}
+
+\subsubsection{}
+
+\[u(r, \theta) = 25 P_0 (\cos \theta) + \frac{75}{2} \frac{r}{c} P_1(\cos \theta) - \frac{175}{8} \left( \frac{r}{c} \right)^3 P_3(\cos \theta) + \frac{275}{16} \left( \frac{r}{c} \right)^5 P_5(\cos \theta)\]
+
+\setcounter{subsubsection}{4}
+\subsubsection{}
+
+\begin{align*}
+  u(a, \theta) & = f(\theta)                                                                                                                 \\
+  u(b, \theta) & = 0                                                                                                                         \\
+  R(r)         & = c_1 r^n + c_2 r^{-(n + 1)}                                                                                                \\
+  0            & = R(b)                                                                                                                      \\
+               & = c_1 b^n + c_2 b^{-(n + 1)}                                                                                                \\
+  c_2          & = -c_1 b^{2 n + 1}                                                                                                          \\
+  R            & = c_1 (r^n - b^{2 n + 1} r^{-(n + 1)})                                                                                      \\
+               & = c_1 \left( r^n - \frac{b^{2 n + 1}}{r^{n + 1}} \right)                                                                    \\
+               & = c_1 \left[ \left( \frac{r}{b} \right)^n - \left( \frac{b}{r} \right)^{n + 1} \right]                                      \\
+  u(r, \theta) & = \sum_{n = 1}^\infty A_n \left[ \left( \frac{r}{b} \right)^n - \left( \frac{b}{r} \right)^{n + 1} \right] P_n(\cos \theta) \\
+  f(\theta)    & = u(a, \theta)                                                                                                              \\
+               & = \sum_{n = 1}^\infty A_n \left[ \left( \frac{a}{b} \right)^n - \left( \frac{b}{a} \right)^{n + 1} \right] P_n(\cos \theta) \\
+  A_n          & = \frac{1}{(a / b)^n - (b / a)^{n + 1}} \frac{2 n + 1}{2} \int_{-1}^1 f(\theta) P_n(\cos \theta) \,d \theta
+\end{align*}
+
 \end{document}
