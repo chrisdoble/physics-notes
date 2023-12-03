@@ -7,6 +7,8 @@
 \setlist[enumerate, 2]{label={(\roman*)}}
 
 \DeclareMathOperator{\csch}{csch}
+\DeclareMathOperator{\erf}{erf}
+\DeclareMathOperator{\erfc}{erfc}
 
 \title{Advanced Engineering Mathematics Partial Differential Equations by Dennis G. Zill Problems}
 \author{Chris Doble}
@@ -1873,6 +1875,54 @@ Hyperbolic
   A_n            & = 0                                                                                \\
   B_n            & = \frac{2 u_0 [1 - (-1)^n]}{c^n n \pi}                                             \\
   u(r, \theta)   & = \frac{2 u_0}{\pi} \sum_{n = 1}^\infty \frac{1 - (-1)^n}{c^n n} r^n \sin n \theta
+\end{align*}
+
+\section{Integral Transform Method}
+
+\subsection{Error Function}
+
+\subsubsection{}
+
+\begin{enumerate}
+  \item
+
+        \begin{align*}
+          \erf(\sqrt{t}) & = \frac{2}{\sqrt{\pi}} \int_0^{\sqrt{t}} e^{-u^2} \,d u                \\
+          \tau           & = u^2                                                                  \\
+          d \tau         & = 2 u \,d u                                                            \\
+          d u            & = \frac{d \tau}{2 \sqrt{\tau}}                                         \\
+          \erf(\sqrt{t}) & = \frac{1}{\sqrt{\pi}} \int_0^t \frac{e^{-\tau}}{\sqrt{\tau}} \,d \tau
+        \end{align*}
+
+  \item
+
+        \begin{align*}
+          \mathcal{L}\{t^{-1 / 2}\}     & = \frac{\sqrt{\pi}}{s^{1 / 2}}                                                                     \\
+          \mathcal{L}\{\erf(\sqrt{t})\} & = \mathcal{L}\left\{ \frac{1}{\sqrt{\pi}} \int_0^t \frac{e^{-\tau}}{\sqrt{\tau}} \,d \tau \right\} \\
+                                        & = \frac{1}{\sqrt{\pi}} \frac{1}{s} \frac{\Gamma(1 / 2)}{\sqrt{s + 1}}                              \\
+                                        & = \frac{1}{s \sqrt{s + 1}}
+        \end{align*}
+\end{enumerate}
+
+\setcounter{subsubsection}{8}
+\subsubsection{}
+
+\begin{align*}
+  y(t)                                         & = 1 - \int_0^t \frac{y(\tau)}{\sqrt{t - \tau}} \,d \tau \\
+  Y(s)                                         & = \frac{1}{s} - Y(s) \sqrt{\frac{\pi}{s}}               \\
+  \left( 1 + \sqrt{\frac{\pi}{s}} \right) Y(s) & = \frac{1}{s}                                           \\
+  Y(s)                                         & = \frac{1}{s (1 + \sqrt{\pi / s})}                      \\
+                                               & = \frac{1}{\sqrt{s} (\sqrt{s} + \sqrt{\pi})}            \\
+  y(t)                                         & = e^{\pi t} \erfc(\sqrt{\pi t})
+\end{align*}
+
+\setcounter{subsubsection}{10}
+\subsubsection{}
+
+\begin{align*}
+  \int_a^b e^{-u^2} \,d u & = \int_0^b e^{-u^2} \,du - \int_0^a e^{-u^2} \,d u                                                                                \\
+                          & = \frac{\sqrt{\pi}}{2} \left( \frac{2}{\sqrt{\pi}} \int_0^b e^{-u^2} \,d u - \frac{2}{\sqrt{\pi}} \int_0^a e^{-u^2} \,d u \right) \\
+                          & = \frac{\sqrt{\pi}}{2} [\erf(b) - \erf(a)]
 \end{align*}
 
 \end{document}

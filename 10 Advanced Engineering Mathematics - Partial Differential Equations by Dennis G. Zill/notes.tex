@@ -8,6 +8,9 @@
 \author{Chris Doble}
 \date{November 2023}
 
+\DeclareMathOperator{\erf}{erf}
+\DeclareMathOperator{\erfc}{erfc}
+
 \begin{document}
 
 \maketitle
@@ -344,6 +347,41 @@
   \item Differential equations of the form \[x^2 y'' + x y' + (\alpha^2 x^2 - p^2) y = 0,\ \alpha > 0\] are parametric Bessel equations of order $p$ and have solutions \[c_1 J_p(\alpha x) + c_2 Y_p(\alpha x)\] where $J_p$ and $Y_p$ are Bessel functions of the first- and second-kind, respectively.
 
   \item The Laplacian in cylindrical coordinates is \[\nabla^2 u = \frac{\partial^2 u}{\partial r^2} + \frac{1}{r} \frac{\partial u}{\partial r} + \frac{1}{r^2} \frac{\partial^2 u}{\partial \theta^2} + \frac{\partial^2 u}{\partial z^2}.\]
+\end{itemize}
+
+\section{Integral Transform Method}
+
+\subsection{Error Function}
+
+\begin{itemize}
+  \item The \textbf{error function} $\erf(x)$ and the \textbf{complementary error function} $\erfc(x)$ are defined as \begin{align*}
+          \erf(x)  & = \frac{2}{\sqrt{\pi}} \int_0^x e^{-u^2} \,du \text{, and} \\
+          \erfc(x) & = \frac{2}{\sqrt{\pi}} \int_x^\infty e^{-u^2} \,d u.
+        \end{align*}
+
+  \item The error function can be thought of as the area under the graph of $f(t) = (2 / \sqrt{\pi}) e^{-t^2}$ on the interval $[0, x]$ and the complementary error function can be thought of the area under the same graph on the interval $[x, \infty)$.
+
+  \item Some properties of $\erf$ and $\erfc$ include:
+
+        \begin{itemize}
+          \item their domains are $(-\infty, \infty)$,
+
+          \item they are continuous,
+
+          \item $\erf(x)$ is an odd function,
+
+          \item $\erf(0) = 0$,
+
+          \item $\erfc(0) = 1$,
+
+          \item $\lim_{x \rightarrow \infty} \erf(x) = 1$,
+
+          \item $\lim_{x \rightarrow \infty} \erfc(x) = 0$,
+
+          \item $\lim_{x \rightarrow -\infty} \erf(x) = -1$, and
+
+          \item $\lim_{x \rightarrow -\infty} \erfc(x) = 2$.
+        \end{itemize}
 \end{itemize}
 
 \end{document}
