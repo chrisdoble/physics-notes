@@ -409,4 +409,25 @@
         \end{enumerate}
 \end{itemize}
 
+\subsection{Fourier Integral}
+
+\begin{itemize}
+  \item The Fourier series can only be used to represent functions that are periodic on an interval $[-p, p]$ or $[0, L]$. The \textbf{Fourier integral} can be used to represent some nonperiodic functions on the interval $(-\infty, \infty)$.
+
+  \item The Fourier integral of a function $f$ defined on an interval $(-\infty, \infty)$ is given by \[f(x) = \frac{1}{\pi} \int_0^\infty [A(\alpha) \cos \alpha x + B(\alpha) \sin \alpha x] \,d \alpha\] where \begin{align*}
+          A(\alpha) & = \int_{-\infty}^\infty f(x) \cos \alpha x \,d x \text{, and} \\
+          B(\alpha) & = \int_{-\infty}^\infty f(x) \sin \alpha x \,d x.
+        \end{align*}
+
+  \item The Fourier integal of an even function on the interval $(-\infty, \infty)$ is the \textbf{cosine integral} \[f(x) = \frac{2}{\pi} \int_0^\infty A(\alpha) \cos \alpha x \,d \alpha\] where \[A(\alpha) = \int_0^\infty f(x) \cos \alpha x \,d x.\]
+
+  \item Taking the cosine integral of a function that isn't even effectively mirrors it around the $y$-axis.
+
+  \item The Fourier integal of an odd function on the interval $(-\infty, \infty)$ is the \textbf{sine integral} \[f(x) = \frac{2}{\pi} \int_0^\infty A(\alpha) \sin \alpha x \,d \alpha\] where \[A(\alpha) = \int_0^\infty f(x) \sin \alpha x \,d x.\]
+
+  \item Taking the sine integral of a function that isn't odd effectively mirrors it around the origin.
+
+  \item The Fourier integral can also be expressed in complex form \[f(x) = \frac{1}{2 \pi} \int_{-\infty}^\infty C(\alpha) e^{-i \alpha x} \,d \alpha\] where \[C(\alpha) = \int_{-\infty}^\infty f(x) e^{i \alpha x} \,d x.\]
+\end{itemize}
+
 \end{document}
