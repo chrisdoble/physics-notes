@@ -1925,4 +1925,86 @@ Hyperbolic
                           & = \frac{\sqrt{\pi}}{2} [\erf(b) - \erf(a)]
 \end{align*}
 
+\subsection{Applications of the Laplace Transform}
+
+\subsubsection{}
+
+\begin{align*}
+  a^2 \frac{\partial^2 u}{\partial x^2}                       & = \frac{\partial^2 u}{\partial t^2}                                                                                  \\
+  u(0, t)                                                     & = 0                                                                                                                  \\
+  u(L, t)                                                     & = 0                                                                                                                  \\
+  u(x, 0)                                                     & = A \sin \frac{\pi x}{L}                                                                                             \\
+  \left. \frac{\partial u}{\partial t} \right|_{t = 0}        & = 0                                                                                                                  \\
+  a^2 \frac{\partial^2 U}{\partial x^2}                       & = s^2 U(x, s) - s u(x, 0) - u_t(x, 0)                                                                                \\
+  \frac{\partial^2 U}{\partial x^2} - \frac{s^2}{a^2} U(x, s) & = -\frac{A s}{a^2} \sin \frac{\pi x}{L}                                                                              \\
+  U(0, s)                                                     & = 0                                                                                                                  \\
+  U(L, s)                                                     & = 0                                                                                                                  \\
+  U_c                                                         & = c_1 \cosh \frac{s}{a} x + c_2 \sinh \frac{s}{a} x                                                                  \\
+  U_p                                                         & = c_3 \cos \frac{\pi x}{L} + c_4 \sin \frac{\pi x}{L}                                                                \\
+  \frac{\partial U_p}{\partial x}                             & = -c_3 \frac{\pi}{L} \sin \frac{\pi x}{L} + c_4 \frac{\pi}{L} \cos \frac{\pi x}{L}                                   \\
+  \frac{\partial^2 U_p}{\partial x^2}                         & = -c_3 \left( \frac{\pi}{L} \right)^2 \cos \frac{\pi x}{L} - c_4 \left( \frac{\pi}{L} \right)^2 \sin \frac{\pi x}{L} \\
+  -\frac{A s}{a^2} \sin \frac{\pi x}{L}                       & = -\left( \frac{\pi}{L} \right)^2 \left( c_3 \cos \frac{\pi x}{L} + c_4 \sin \frac{\pi x}{L} \right)                 \\
+                                                              & \qquad - \left( \frac{s}{a} \right)^2 \left( c_3 \cos \frac{\pi x}{L} + c_4 \sin \frac{\pi x}{L} \right)             \\
+  \frac{A s}{a^2} \sin \frac{\pi x}{L}                        & = \left[ \left( \frac{\pi}{L} \right)^2 + \left( \frac{s}{a} \right)^2 \right] c_3 \cos \frac{\pi x}{L}              \\
+                                                              & \qquad + \left[ \left( \frac{\pi}{L} \right)^2 + \left( \frac{s}{a} \right)^2 \right] c_4 \sin \frac{\pi x}{L}       \\
+  c_3                                                         & = 0                                                                                                                  \\
+  c_4                                                         & = \frac{A s / a^2}{(\pi / L)^2 + (s / a)^2}                                                                          \\
+  U_p                                                         & = \frac{A s / a^2}{(\pi / L)^2 + (s / a)^2} \sin \frac{\pi x}{L}                                                     \\
+  U                                                           & = c_1 \cosh \frac{s}{a} x + c_2 \sinh \frac{s}{a} x + \frac{A s / a^2}{(\pi / L)^2 + (s / a)^2} \sin \frac{\pi x}{L} \\
+  0                                                           & = U(0, s)                                                                                                            \\
+                                                              & = c_1
+\end{align*}
+
+\begin{align*}
+  0       & = U(L, s)                                                        \\
+          & = c_2 \sinh \frac{s}{a} L                                        \\
+          & = c_2                                                            \\
+  U(x, s) & = \frac{A s / a^2}{(\pi / L)^2 + (s / a)^2} \sin \frac{\pi x}{L} \\
+          & = \frac{A s}{(\pi a / L)^2 + s^2} \sin \frac{\pi x}{L}           \\
+  u(x, t) & = \mathcal{L}^{-1}\{U(x, s)\}                                    \\
+          & = A \cos \frac{\pi a}{L} t \sin \frac{\pi x}{L}
+\end{align*}
+
+\setcounter{subsubsection}{2}
+\subsubsection{}
+
+\begin{align*}
+  U_{x x} - \left( \frac{s}{a} \right)^2 U & = 0                                   \\
+  U                                        & = c_1 e^{-(s / a) x}                  \\
+  U(0, s)                                  & = F(s)                                \\
+  U                                        & = F(s) e^{-(s / a) x}                 \\
+  u(x, t)                                  & = f(t - x / a) \mathcal{U}(t - x / a)
+\end{align*}
+
+\setcounter{subsubsection}{4}
+\subsubsection{}
+
+\begin{align*}
+  U(x, s) & = c_1 e^{-(x / a) s} - \frac{g}{s^3}                                                                                                                                          \\
+  F(s)    & = U(0, s)                                                                                                                                                                     \\
+          & = c_1 - \frac{g}{s^3}                                                                                                                                                         \\
+  c_1     & = F(s) + \frac{g}{s^3}                                                                                                                                                        \\
+  U(x, s) & = \left[ F(s) + \frac{g}{s^3} \right] e^{-(x / a) s} - \frac{g}{s^3}                                                                                                          \\
+  u(x, t) & = \left[ A \sin \omega \left( t - \frac{x}{a} \right) + \frac{1}{2} g \left( t - \frac{x}{a} \right)^2 \right] \mathcal{U} \left( t - \frac{x}{a} \right) - \frac{1}{2} g t^2
+\end{align*}
+
+\setcounter{subsubsection}{10}
+\subsubsection{}
+
+\begin{align*}
+  u_{x x}       & = u_t                                                         \\
+  U_{x x} - s U & = - u_1                                                       \\
+  U_c           & = c_1 e^{\sqrt{s} x} + c_2 e^{-\sqrt{s} x}                    \\
+  U_p           & = c_3                                                         \\
+  U_{p x x}     & = 0                                                           \\
+  0 - s c_3     & = - u_1                                                       \\
+  c_3           & = \frac{u_1}{s}                                               \\
+  U             & = c_2 e^{-\sqrt{s} x} + \frac{u_1}{s}                         \\
+  \frac{u_0}{s} & = U(0, s)                                                     \\
+                & = c_2 + \frac{u_1}{s}                                         \\
+  c_2           & = \frac{u_0 - u_1}{s}                                         \\
+  U             & = \frac{u_0 - u_1}{s} e^{-\sqrt{s} x} + \frac{u_1}{s}         \\
+  u(x, t)       & = (u_0 - u_1) \erfc \left( \frac{x}{2 \sqrt{t}} \right) + u_1
+\end{align*}
+
 \end{document}

@@ -384,4 +384,29 @@
         \end{itemize}
 \end{itemize}
 
+\subsection{Applications of the Laplace Transform}
+
+\begin{itemize}
+  \item Applying the Laplace transform to a PDE turns it into an ODE.
+
+  \item The Laplace transform of $u(x, t)$ with respect to $t$ is \[\mathcal{L}\{u(x, t)\} = \int_0^\infty e^{-s t} u(x, t) \,d t = U(x, s).\]
+
+  \item The properties of the Laplace transform when applied to single-valued functions also apply to multi-valued functions, e.g. \begin{align*}
+          \mathcal{L} \left\{ \frac{\partial u}{\partial t} \right\}     & = s U(x, s) - u(x, 0)                  \\
+          \mathcal{L} \left\{ \frac{\partial^2 u}{\partial t^2} \right\} & = s^2 U(s, x) - s u(x, 0) - u_t(x, 0).
+        \end{align*}
+
+  \item Since we are transforming with respect to $t$, it's valid that differentiation with respect to $x$ be ``pulled out the front'' \[\mathcal{L} \left\{ \frac{d^2 u}{d x^2} \right\} = \frac{d^2}{d x^2} \mathcal{L}\{u(x, t)\}.\]
+
+  \item The general procedure to solve a PDE BVP using the Laplace transform is:
+
+        \begin{enumerate}
+          \item Apply the Laplace transform to both sides of the equation and the boundary conditions.
+
+          \item Solve the resulting ODE for $U(x, s)$.
+
+          \item Apply the inverse laplace transform to $U(x, s)$ to find $u(x, t)$.
+        \end{enumerate}
+\end{itemize}
+
 \end{document}
