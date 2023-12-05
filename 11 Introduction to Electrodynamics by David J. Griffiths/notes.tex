@@ -4,6 +4,11 @@
 \usepackage{siunitx} % For units
 \graphicspath{{./images/}}
 
+\renewcommand{\vec}[1]{\boldsymbol{\mathbf{#1}}}
+\newcommand{\dvec}[1]{\dot{\vec{#1}}}
+\newcommand{\ddvec}[1]{\ddot{\vec{#1}}}
+\newcommand{\uvec}[1]{\hat{\vec{#1}}}
+
 \def\rcurs{{\mbox{$\resizebox{.09in}{.08in}{\includegraphics[trim= 1em 0 14em 0,clip]{ScriptR}}$}}}
 \def\brcurs{{\mbox{$\resizebox{.09in}{.08in}{\includegraphics[trim= 1em 0 14em 0,clip]{BoldR}}$}}}
 \def\hrcurs{{\mbox{$\hat \brcurs$}}}
@@ -17,5 +22,24 @@
 \maketitle
 
 \tableofcontents
+
+\section{Vector Algebra}
+
+\setcounter{subsection}{5}
+\subsection{The Theory of Vector Fields}
+
+\subsubsection{The Helmholtz Theorem}
+
+\begin{itemize}
+  \item The \textbf{Helmholtz theorem} states that a vector field $\vec{F}$ is uniquely determined if you're given its divergence $\nabla \cdot \vec{F}$, curl $\nabla \times \vec{F}$, and sufficient boundary conditions.
+\end{itemize}
+
+\subsubsection{Potentials}
+
+\begin{itemize}
+  \item If the curl of a vector field vanishes everywhere, then it can be expressed as the gradient of a \textbf{scalar potential} \[\nabla \times \vec{F} = \vec{0} \Leftrightarrow \vec{F} = -\nabla V.\]
+
+  \item If the divergence of a vector field vanishes everywhere, then it can be expressed as the curl of a \textbf{vector potential} \[\nabla \cdot \vec{F} = 0 \Leftrightarrow \vec{F} = \nabla \times \vec{A}.\]
+\end{itemize}
 
 \end{document}
