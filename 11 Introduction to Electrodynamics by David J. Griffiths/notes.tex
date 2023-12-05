@@ -9,6 +9,8 @@
 \newcommand{\ddvec}[1]{\ddot{\vec{#1}}}
 \newcommand{\uvec}[1]{\hat{\vec{#1}}}
 
+\newcommand{\ke}{\frac{1}{4 \pi \epsilon_0}}
+
 \def\rcurs{{\mbox{$\resizebox{.09in}{.08in}{\includegraphics[trim= 1em 0 14em 0,clip]{ScriptR}}$}}}
 \def\brcurs{{\mbox{$\resizebox{.09in}{.08in}{\includegraphics[trim= 1em 0 14em 0,clip]{BoldR}}$}}}
 \def\hrcurs{{\mbox{$\hat \brcurs$}}}
@@ -40,6 +42,31 @@
   \item If the curl of a vector field vanishes everywhere, then it can be expressed as the gradient of a \textbf{scalar potential} \[\nabla \times \vec{F} = \vec{0} \Leftrightarrow \vec{F} = -\nabla V.\]
 
   \item If the divergence of a vector field vanishes everywhere, then it can be expressed as the curl of a \textbf{vector potential} \[\nabla \cdot \vec{F} = 0 \Leftrightarrow \vec{F} = \nabla \times \vec{A}.\]
+\end{itemize}
+
+\section{Electrostatics}
+
+\subsection{The Electric Field}
+
+\setcounter{subsubsection}{1}
+\subsubsection{Coulomb's Law}
+
+\begin{itemize}
+  \item \textbf{Couloumb's law} gives the force between two point charges $q$ and $Q$ \[\vec{F} = \frac{1}{4 \pi \epsilon_0} \frac{q Q}{\rcurs} \hrcurs\] where \[\epsilon_0 = \qty{8.85e-12}{C^2/(N.m^2)}\] is the \textbf{permittivity of free space} and $\brcurs$ is the separation vector between the two charges.
+\end{itemize}
+
+\subsubsection{The Electric Field}
+
+\begin{itemize}
+  \item The \textbf{electric field} $\vec{E}$ is a vector field that varies from point to point and gives the force per unit charge that would be exerted on a test charge if placed at a particular point.
+
+  \item For a collection of $n$ source charges $q_i$ at displacements $\brcurs_i$ from a test charge, the electric field is \[\vec{E} = \frac{1}{4 \pi \epsilon_0} \sum_{i = 1}^n \frac{q_i}{\rcurs_i^2} \hrcurs.\]
+\end{itemize}
+
+\subsubsection{Continuous Charge Distributions}
+
+\begin{itemize}
+  \item Couloumb's law for a continuous charge distribution is \[\vec{E} = \ke \int \frac{1}{\rcurs^2} \hrcurs \,d q.\]
 \end{itemize}
 
 \end{document}

@@ -5,6 +5,13 @@
 \usepackage{enumitem} % For customisable list labels
 \graphicspath{{./images/}}
 
+\renewcommand{\vec}[1]{\boldsymbol{\mathbf{#1}}}
+\newcommand{\dvec}[1]{\dot{\vec{#1}}}
+\newcommand{\ddvec}[1]{\ddot{\vec{#1}}}
+\newcommand{\uvec}[1]{\hat{\vec{#1}}}
+
+\newcommand{\ke}{\frac{1}{4 \pi \epsilon_0}}
+
 \def\rcurs{{\mbox{$\resizebox{.09in}{.08in}{\includegraphics[trim= 1em 0 14em 0,clip]{ScriptR}}$}}}
 \def\brcurs{{\mbox{$\resizebox{.09in}{.08in}{\includegraphics[trim= 1em 0 14em 0,clip]{BoldR}}$}}}
 \def\hrcurs{{\mbox{$\hat \brcurs$}}}
@@ -21,5 +28,82 @@
 \maketitle
 
 \tableofcontents
+
+\setcounter{section}{1}
+\section{Electrostatics}
+
+\subsection{}
+
+\begin{enumerate}
+  \item $\vec{0}$
+
+  \item The same as if only the opposite charge were present — all others are cancelled out.
+\end{enumerate}
+
+\subsection{}
+
+\begin{align*}
+  \vec{E} & = \ke 2 \frac{q}{\rcurs^2} \cos \theta \uvec{x}      \\
+          & = \ke \frac{d q}{[(d / 2)^2 + z^2]^{3 / 2}} \uvec{x}
+\end{align*}
+
+\subsection{}
+
+\begin{align*}
+  \vec{r}  & = z \uvec{z}                                                                                                                          \\
+  \vec{r}' & = x \uvec{x}                                                                                                                          \\
+  \brcurs  & = z \uvec{z} - x \uvec{x}                                                                                                             \\
+  \rcurs   & = \sqrt{x^2 + z^2}                                                                                                                    \\
+  \hrcurs  & = \frac{z \uvec{z} - x \uvec{x}}{\sqrt{x^2 + z^2}}                                                                                    \\
+  \vec{E}  & = \ke \int_0^L \frac{\lambda}{x^2 + z^2} \frac{z \uvec{z} - x \uvec{x}}{\sqrt{x^2 + z^2}} \,d x                                       \\
+           & = \ke \lambda \left( z \uvec{z} \int_0^L \frac{1}{(x^2 + z^2)^{3 / 2}} \,d x - \uvec{x} \int_0^L \frac{x}{(x^2 + z^2)} \,d x \right)  \\
+           & = \ke \lambda \left[ \frac{L}{z \sqrt{L^2 + z^2}} \uvec{z} - \left( \frac{1}{z} - \frac{1}{\sqrt{L^2 + z^2}} \right) \uvec{x} \right] \\
+           & = \ke \frac{\lambda}{z} \left[ \left( -1 + \frac{z}{\sqrt{L^2 + z^2}} \right) \uvec{x} + \frac{L}{\sqrt{L^2 + z^2}} \uvec{z} \right]
+\end{align*}
+
+\subsection{}
+
+The electric field a distance $z$ above the midpoint of a line segment of length $2 L$ and uniform line charge $\lambda$ is \[\vec{E} = \ke \frac{2 \lambda L}{z \sqrt{z^2 + L^2}} \uvec{z}.\]
+
+Applying this to the four sides of the square, the horizontal components of opposite sides cancel leaving only the vertical component.
+
+\begin{align*}
+  \cos \theta & = \frac{z}{\rcurs}                                                                                                      \\
+              & = \frac{z}{\sqrt{(a / 2)^2 + z^2}}                                                                                      \\
+  \vec{E}     & = 4 \left( \ke \frac{\lambda a}{\sqrt{(a / 2)^2 + z^2} \sqrt{(a / 2)^2 + (a / 2)^2 + z^2}} \uvec{z} \right) \cos \theta \\
+              & = \ke \frac{4 a \lambda z}{[(a / 2)^2 + z^2] \sqrt{(a^2 / 2) + z^2}} \uvec{z}
+\end{align*}
+
+\subsection{}
+
+\begin{align*}
+  \vec{E} & = \ke \int_0^{2 \pi} \frac{\lambda r}{r^2 + z^2} \cos \alpha \,d \theta \,\uvec{z} \\
+          & = \ke \frac{2 \pi \lambda r z}{(r^2 + z^2)^{3 / 2}} \uvec{z}
+\end{align*}
+
+\subsection{}
+
+\begin{align*}
+  \vec{E} & = \ke \int \frac{d q}{\rcurs^2} \cos \theta \uvec{z}                                                          \\
+          & = \ke \int_0^{2 \pi} \int_0^R \frac{\sigma}{r^2 + z^2} \frac{z}{\sqrt{r^2 + z^2}} r \,d r \,d \theta \uvec{z} \\
+          & = \ke 2 \pi \sigma z \int_0^R \frac{r}{(r^2 + z^2)^{3 / 2}} \,d r \,\uvec{z}                                  \\
+          & = \ke 2 \pi \sigma z \left( \frac{1}{z} - \frac{1}{\sqrt{R^2 + z^2}} \right) \uvec{z}
+\end{align*}
+
+When $R \rightarrow \infty$ \[\vec{E} = \frac{\sigma}{2 \epsilon_0} \uvec{z}.\]
+
+\subsection{}
+
+\[\vec{E} = \begin{cases}
+    \ke \frac{q}{z^2} \uvec{z} & z > R \\
+    \vec{0}                    & z < R
+  \end{cases}\]
+
+\subsection{}
+
+\[\vec{E} = \begin{cases}
+    \ke \frac{q}{z^2} \uvec{z}   & z > R \\
+    \ke \frac{q z}{R^3} \uvec{z} & z < R
+  \end{cases}\]
 
 \end{document}
