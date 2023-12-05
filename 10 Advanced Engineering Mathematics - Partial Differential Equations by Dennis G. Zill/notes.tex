@@ -430,4 +430,34 @@
   \item The Fourier integral can also be expressed in complex form \[f(x) = \frac{1}{2 \pi} \int_{-\infty}^\infty C(\alpha) e^{-i \alpha x} \,d \alpha\] where \[C(\alpha) = \int_{-\infty}^\infty f(x) e^{i \alpha x} \,d x.\]
 \end{itemize}
 
+\subsection{Fourier Transform}
+
+\begin{itemize}
+  \item If $f(x)$ is transformed into $F(\alpha)$ by an \textbf{integral transform} \[F(\alpha) = \int_a^b f(x) K(\alpha, x) \,d x\] then the function $f$ can be recovered by another integral transform \[f(x) = \int_c^b F(\alpha) H(\alpha, x) \,d \alpha\] where $K(\alpha, x)$ and $H(\alpha, x)$ are called the \textbf{kernels} of their respective transforms.
+\end{itemize}
+
+\includegraphics[scale=0.45]{fourier-transforms}
+
+\begin{itemize}
+  \item If a function $f(x)$ and its derivatives meet certain criteria, then \[\mathcal{F}\{f^{(n)}(x)\} = (-i \alpha)^n \mathcal{F}\{f(x)\}.\]
+
+  \item The Fourier sine transform of the second derivative of a function is \[\mathcal{F}_\text{s}\{f''(x)\} = -\alpha^2 F(\alpha) + \alpha f(0).\]
+
+  \item The Fourier cosine transform of the second derivative of a function is \[\mathcal{F}_\text{c}\{f''(x)\} = -\alpha^2 F(\alpha) - f'(0).\]
+
+  \item In general, in order to apply the Fourier transform it is assumed that $u$ and its derivatives approach $0$ as the independent variable approaches infinity.
+
+  \item If the domain of the variable to eliminate (e.g. $x$) is $(-\infty, \infty)$, use the full Fourier transform. If it's $[0, \infty)$ use either the cosine or sine Fourier transform depending on what boundary conditions are provided — the former if $f'(0)$ is provided, the latter if $f(0)$.
+
+  \item The general procedure to solve a PDE BVP using the Fourier transform is:
+
+        \begin{enumerate}
+          \item Apply the appropriate Fourier transform to both sides of the equation and the boundary conditions.
+
+          \item Solve the resulting ODE for $U(x, s)$.
+
+          \item Apply the appropriate inverse Fourier transform to $U(x, s)$ to find $u(x, t)$.
+        \end{enumerate}
+\end{itemize}
+
 \end{document}

@@ -2047,4 +2047,105 @@ Hyperbolic
 
 \[f(x) = \frac{2}{\pi} \int_0^\infty e^{-\alpha} \cos \alpha x \,d \alpha = \frac{2}{\pi} \frac{1}{1 + x^2}\]
 
+\subsection{Fourier Transform}
+
+\subsubsection{}
+
+\begin{align*}
+  k u_{x x}              & = u_t                                                                                                \\
+  u(x, 0)                & = e^{-|x|}                                                                                           \\
+  -\alpha^2 k U          & = U_t                                                                                                \\
+  U(s, 0)                & = \int_{-\infty}^\infty e^{-|x| + i \alpha x} \,d x                                                  \\
+                         & = \frac{2}{1 + \alpha^2}                                                                             \\
+  U                      & = c e^{-\alpha^2 k t}                                                                                \\
+  \frac{2}{1 + \alpha^2} & = c                                                                                                  \\
+  U(s, t)                & = \frac{2}{1 + \alpha^2} e^{-\alpha^2 k t}                                                           \\
+  u(x, t)                & = \frac{1}{\pi} \int_{-\infty}^\infty \frac{e^{-\alpha^2 k t - i \alpha x}}{1 + \alpha^2} \,d \alpha
+\end{align*}
+
+\setcounter{subsubsection}{2}
+\subsubsection{}
+
+\begin{align*}
+  k u_{x x}                        & = u_t                                                                                           \\
+  u(0, t)                          & = u_0                                                                                           \\
+  u(x, 0)                          & = 0                                                                                             \\
+  k [-\alpha^2 U + \alpha u(0, t)] & = U_t                                                                                           \\
+  U_t + k \alpha^2 U               & = k \alpha u_0                                                                                  \\
+  U_c                              & = c_1 e^{-k \alpha^2 t}                                                                         \\
+  U_p                              & = c_2                                                                                           \\
+  -k \alpha^2 c_2 + k \alpha u_0   & = 0                                                                                             \\
+  c_2                              & = \frac{u_0}{\alpha}                                                                            \\
+  U                                & = c_1 e^{-k \alpha^2 t} + \frac{u_0}{\alpha}                                                    \\
+  0                                & = U(\alpha, 0)                                                                                  \\
+                                   & = c_1 + \frac{u_0}{\alpha}                                                                      \\
+  c_1                              & = -\frac{u_0}{\alpha}                                                                           \\
+  U                                & = \frac{u_0}{\alpha} (1 - e^{-k \alpha^2 t})                                                    \\
+  u                                & = \frac{2 u_0}{\pi} \int_0^\infty \frac{1 - e^{-k \alpha^2 t}}{\alpha} \sin \alpha x \,d \alpha
+\end{align*}
+
+\setcounter{subsubsection}{4}
+\subsubsection{}
+
+\begin{align*}
+  U_t + k \alpha^2 U             & = 0                                                                                                     \\
+  U                              & = c e^{-k \alpha^2 t}                                                                                   \\
+  U(\alpha, 0)                   & = \int_0^1 \sin \alpha x \,d x                                                                          \\
+                                 & = \frac{1}{\alpha} [-\cos \alpha x]_0^1                                                                 \\
+                                 & = \frac{1 - \cos \alpha}{\alpha}                                                                        \\
+  \frac{1 - \cos \alpha}{\alpha} & = c                                                                                                     \\
+  U                              & = \frac{1 - \cos \alpha}{\alpha} e^{-k \alpha^2 t}                                                      \\
+  u                              & = \frac{2}{\pi} \int_0^\infty \frac{1 - \cos \alpha}{\alpha} e^{-k \alpha^2 t} \sin \alpha x \,d \alpha
+\end{align*}
+
+\setcounter{subsubsection}{8}
+\subsubsection{}
+
+\begin{enumerate}
+  \item
+
+        \begin{align*}
+          a^2 u_{x x}              & = u_{t t}                                                                                                                                                \\
+          u(x, 0)                  & = f(x)                                                                                                                                                   \\
+          u_t|_{t = 0}             & = g(x)                                                                                                                                                   \\
+          U_{t t} + a^2 \alpha^2 U & = 0                                                                                                                                                      \\
+          U                        & = c_1 \cos a \alpha t + c_2 \sin a \alpha t                                                                                                              \\
+          F(\alpha)                & = U(\alpha, 0)                                                                                                                                           \\
+                                   & = c_1                                                                                                                                                    \\
+          G(\alpha)                & = U_t|_{t = 0}                                                                                                                                           \\
+                                   & = a \alpha c_2                                                                                                                                           \\
+          c_2                      & = \frac{G(\alpha)}{a \alpha}                                                                                                                             \\
+          U                        & = F(\alpha) \cos a \alpha t + G(\alpha) \frac{\sin a \alpha t}{a \alpha}                                                                                 \\
+          u                        & = \frac{1}{2 \pi} \int_{-\infty}^\infty \left[ F(\alpha) \cos a \alpha t + G(\alpha) \frac{\sin a \alpha t}{a \alpha} \right] e^{-i \alpha x} \,d \alpha
+        \end{align*}
+
+  \item
+
+        \begin{align*}
+          u & = \frac{1}{2 \pi} \int_{-\infty}^\infty F(\alpha) \cos a \alpha t \,e^{-i \alpha x} \,d \alpha                                                         \\
+            & = \frac{1}{2 \pi} \int_{-\infty}^\infty F(\alpha) \frac{1}{2} (e^{i \alpha a t} + e^{-i \alpha a t}) e^{-i \alpha x} \,d \alpha                        \\
+            & = \frac{1}{2 \pi} \int_{-\infty}^\infty \frac{1}{2} \left[ F(\alpha) e^{i \alpha a t} + F(\alpha) e^{-i \alpha a t} \right] e^{-i \alpha x} \,d \alpha \\
+            & = \frac{1}{2} [F(x + a t) + F(x - a t)]
+        \end{align*}
+\end{enumerate}
+
+\setcounter{subsubsection}{12}
+\subsubsection{}
+
+\begin{align*}
+  u_{x x} + u_{y y}             & = 0                                                                                               \\
+  u_{x}|_{x = 0}                & = 0                                                                                               \\
+  u(x, 0)                       & = \begin{cases}
+                                      50 & 0 < x < 1 \\
+                                      0  & x > 1
+                                    \end{cases}                                                                                  \\
+  U_{y y} - \alpha^2 U          & = 0                                                                                               \\
+  U                             & = c_1 e^{-\alpha y}                                                                               \\
+  U(\alpha, 0)                  & = \int_0^1 50 \cos \alpha x \,d x                                                                 \\
+                                & = \frac{50 \sin \alpha}{\alpha}                                                                   \\
+  \frac{50 \sin \alpha}{\alpha} & = c_1                                                                                             \\
+  U                             & = \frac{50 \sin \alpha}{\alpha} e^{-\alpha y}                                                     \\
+  u                             & = \frac{100}{\pi} \int_0^\infty \frac{\sin \alpha}{\alpha} e^{-\alpha y} \cos \alpha x \,d \alpha
+\end{align*}
+
 \end{document}
