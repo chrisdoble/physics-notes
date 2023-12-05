@@ -1,7 +1,13 @@
 \documentclass{article}
 \usepackage{amsfonts} % For open face letters
 \usepackage{amsmath} % For align*
+\usepackage{graphicx} % For images
 \usepackage{enumitem} % For customisable list labels
+\graphicspath{{./images/}}
+
+\def\rcurs{{\mbox{$\resizebox{.09in}{.08in}{\includegraphics[trim= 1em 0 14em 0,clip]{ScriptR}}$}}}
+\def\brcurs{{\mbox{$\resizebox{.09in}{.08in}{\includegraphics[trim= 1em 0 14em 0,clip]{BoldR}}$}}}
+\def\hrcurs{{\mbox{$\hat \brcurs$}}}
 
 \setlist[enumerate, 1]{label={(\alph*)}}
 \setlist[enumerate, 2]{label={(\roman*)}}
