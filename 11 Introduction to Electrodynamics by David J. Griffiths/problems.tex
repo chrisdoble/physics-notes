@@ -106,4 +106,131 @@ When $R \rightarrow \infty$ \[\vec{E} = \frac{\sigma}{2 \epsilon_0} \uvec{z}.\]
     \ke \frac{q z}{R^3} \uvec{z} & z < R
   \end{cases}\]
 
+\subsection{}
+
+\begin{enumerate}
+  \item
+
+        \begin{align*}
+          \rho & = \epsilon_0 \nabla \cdot \vec{E}                              \\
+               & = \epsilon_0 \frac{1}{r^2} \frac{\partial}{\partial r} (k r^5) \\
+               & = 5 \epsilon_0 k r^2
+        \end{align*}
+
+  \item
+
+        \begin{align*}
+          Q_\text{enc} & = \epsilon_0 \oint \vec{E} \cdot d \vec{a}                                                        \\
+                       & = \epsilon_0 \int_0^{2 \pi} \int_0^\pi k R^3 R \,d \theta R \sin \theta \,d \phi                  \\
+                       & = 2 \pi \epsilon_0 k R^5 [-\cos \theta]_0^\pi                                                     \\
+                       & = 4 \pi \epsilon_0 k R^5                                                                          \\
+          Q_\text{enc} & = \int_V \rho \,d \tau                                                                            \\
+                       & = \int_0^{2 \pi} \int_0^\pi \int_0^R 5 \epsilon_0 k r^2 \,d r r \,d \theta r \sin \theta \,d \phi \\
+                       & = 10 \pi \epsilon_0 k \int_0^\pi \int_0^R r^4 \sin \theta \,d r \,d \theta                        \\
+                       & = 2 \pi \epsilon_0 k R^5 [-\cos \theta]_0^\pi                                                     \\
+                       & = 4 \pi \epsilon_0 k R^5
+        \end{align*}
+\end{enumerate}
+
+\subsection{}
+
+If the charge was surrounded by $8$ such cubes the total flux through all the cubes would be $q / \epsilon_0$. There are $24$ outside faces to the larger cube, so the total flux through the shaded face is $q / (24 \epsilon_0)$.
+
+\subsection{}
+
+\begin{align*}
+  \int \vec{E}_\text{inside} \cdot d \vec{a}  & = \frac{Q_\text{enc}}{\epsilon_0}     \\
+                                              & = 0                                   \\
+  \vec{E}_\text{inside}                       & = \vec{0}                             \\
+  \int \vec{E}_\text{outside} \cdot d \vec{a} & = \frac{Q_\text{enc}}{\epsilon_0}     \\
+  4 \pi r^2 E_\text{outside}                  & = \frac{4 \pi R^2 \sigma}{\epsilon_0} \\
+  \vec{E}_\text{outside}                      & = \ke \frac{q}{r^2} \uvec{r}
+\end{align*}
+
+\subsection{}
+
+\begin{align*}
+  \int \vec{E} \cdot d \vec{a} & = \frac{Q_\text{enc}}{\epsilon_0}             \\
+  4 \pi r^2 E                  & = \frac{\frac{4}{3} \pi r^3 \rho}{\epsilon_0} \\
+  \vec{E}                      & = \frac{r \rho}{3 \epsilon_0} \uvec{r}
+\end{align*}
+
+\subsection{}
+
+\begin{align*}
+  \int \vec{E} \cdot d \vec{a} & = \frac{Q_\text{enc}}{\epsilon_0}                       \\
+  2 \pi s l E                  & = \frac{l \lambda}{\epsilon_0}                          \\
+  \vec{E}                      & = \frac{1}{2 \pi \epsilon_0} \frac{\lambda}{s} \uvec{s}
+\end{align*}
+
+\subsection{}
+
+\begin{align*}
+  Q_\text{enc}                 & = \int_V \rho \,d \tau                                                             \\
+                               & = \int_0^{2 \pi} \int_0^\pi \int_0^r k r'^3 \sin \theta \,d r' \,d \theta \,d \phi \\
+                               & = 2 \pi k \int_0^\pi \left[ \frac{1}{4} r'^4 \sin \theta \right]_0^r \,d \theta    \\
+                               & = \frac{1}{2} \pi k r^4 [-\cos \theta]_0^\pi                                       \\
+                               & = \pi k r^4                                                                        \\
+  \int \vec{E} \cdot d \vec{a} & = \frac{Q_\text{enc}}{\epsilon_0}                                                  \\
+  4 \pi r^2 E                  & = \frac{\pi k r^4}{\epsilon_0}                                                     \\
+  \vec{E}                      & = \frac{k r^2}{4 \epsilon_0} \uvec{r}
+\end{align*}
+
+\subsection{}
+
+\begin{enumerate}
+  \item $\vec{E} = \vec{0}$
+
+  \item
+
+        \begin{align*}
+          Q_\text{enc} & = \int_0^{2 \pi} \int_0^\pi \int_a^r k \sin \theta \,d r' \,d \theta \,d \phi \\
+                       & = 4 \pi k (r - a)                                                             \\
+          4 \pi r^2 E  & = \frac{4 \pi k (r - a)}{\epsilon_0}                                          \\
+          \vec{E}      & = \frac{k (r - a)}{\epsilon_0 r^2} \uvec{r}
+        \end{align*}
+
+  \item $\vec{E} = \frac{k (b - a)}{\epsilon_0 r^2} \uvec{r}$
+\end{enumerate}
+
+\subsection{}
+
+\begin{enumerate}
+  \item
+
+        \begin{align*}
+          Q_\text{enc} & = \pi s^2 l \rho                       \\
+          2 \pi s l E  & = \frac{\pi s^2 l \rho}{\epsilon_0}    \\
+          \vec{E}      & = \frac{s \rho}{2 \epsilon_0} \uvec{s}
+        \end{align*}
+
+  \item \[\vec{E} = \frac{a^2 \rho}{2 \epsilon_0 s} \uvec{s}\]
+
+  \item \[\vec{E} = \vec{0}\]
+\end{enumerate}
+
+\subsection{}
+
+\begin{align*}
+  2 A E_\text{inside}   & = \frac{2 A y \rho}{\epsilon_0}           \\
+  \vec{E}_\text{inside} & = \frac{y \rho}{\epsilon_0}               \\
+  \vec{E}               & = \begin{cases}
+                              \frac{d \rho}{\epsilon_0}  & d < y      \\
+                              \frac{y \rho}{\epsilon_0}  & 0 < y < d  \\
+                              -\frac{y \rho}{\epsilon_0} & -d < y < 0 \\
+                              -\frac{d \rho}{\epsilon_0} & y < -d
+                            \end{cases}
+\end{align*}
+
+\subsection{}
+
+The electric field inside a uniformly charged solid sphere is \[\vec{E} = \frac{r \rho}{3 \epsilon_0} \uvec{r}.\]
+
+\begin{align*}
+  \vec{d} & = \vec{r}_1 - \vec{r}_2                                                               \\
+  \vec{E} & = \frac{r_1 \rho}{3 \epsilon_0} \uvec{r}_1 - \frac{r_2 \rho}{3 \epsilon_0} \uvec{r}_2 \\
+          & = \frac{\rho}{3 \epsilon_0} (\vec{r}_1 - \vec{r}_2)                                   \\
+          & = \frac{\rho}{3 \epsilon_0} \vec{d}
+\end{align*}
+
 \end{document}
