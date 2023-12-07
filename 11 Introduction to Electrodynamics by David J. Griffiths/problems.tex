@@ -233,4 +233,112 @@ The electric field inside a uniformly charged solid sphere is \[\vec{E} = \frac{
           & = \frac{\rho}{3 \epsilon_0} \vec{d}
 \end{align*}
 
+\setcounter{subsection}{19}
+\subsection{}
+
+a is impossible because its curl is nonzero.
+
+\begin{align*}
+  V         & = -\int_0^y 2 k x y' \,d y' - \int_0^z 2 k y z' \,d z                                    \\
+            & = -2 k x \left[ \frac{1}{2} y'^2 \right]_0^y - 2 k y \left[ \frac{1}{2} z'^2 \right]_0^z \\
+            & = -k (x y^2 + y z^2)                                                                     \\
+  -\nabla V & = k [y^2 \uvec{x} + (2 x y + z^2) \uvec{y} + 2 y z \uvec{z}]                             \\
+            & = \vec{E}
+\end{align*}
+
+\subsection{}
+
+\begin{align*}
+  \vec{E}                  & = \begin{cases}
+                                 \ke \frac{q}{r^2}   & r > R \\
+                                 \ke \frac{q r}{R^3} & r < R
+                               \end{cases}                                                                    \\
+  V_\text{outside}(r)      & = -\int_\infty^r \ke \frac{q}{r'^2} \,d r'                                                       \\
+                           & = -\ke q \left[ -\frac{1}{r'} \right]_\infty^r                                                   \\
+                           & = \ke \frac{q}{r}                                                                                \\
+  -\nabla V_\text{outside} & = \ke \frac{q}{r^2} \uvec{r}                                                                     \\
+                           & = \vec{E}_\text{outside}                                                                         \\
+  V_\text{inside}(r)       & = -\left( \int_\infty^R \ke \frac{q}{r'^2} \,d r' + \int_R^r \ke \frac{q r'}{R^3} \,d r' \right) \\
+                           & = -\left( -\ke \frac{q}{R} + \ke \frac{q}{R^3} \left[ \frac{1}{2} r'^2 \right]_R^r \right)       \\
+                           & = \ke \frac{q}{2 R} \left[ 3 - \left( \frac{r}{R} \right)^2 \right]                              \\
+  -\nabla V_\text{inside}  & = \ke \frac{q r}{R^3} \uvec{r}                                                                   \\
+                           & = \vec{E}_\text{inside}
+\end{align*}
+
+\subsection{}
+
+\begin{align*}
+  \vec{E}   & = \frac{1}{2 \pi \epsilon_0} \frac{\lambda}{s} \uvec{s}          \\
+  V         & = -\int_O^s \frac{1}{2 \pi \epsilon_0} \frac{\lambda}{s'} \,d s' \\
+            & = -\frac{1}{2 \pi \epsilon_0} \lambda \ln \frac{s}{O}            \\
+  -\nabla V & = \frac{1}{2 \pi \epsilon_0} \frac{\lambda}{s} \uvec{s}
+\end{align*}
+
+\subsection{}
+
+\begin{align*}
+  \vec{E} & = \begin{cases}
+                \vec{0}                                   & r < a     \\
+                \frac{k (r - a)}{\epsilon_0 r^2} \uvec{r} & a < r < b \\
+                \frac{k (b - a)}{\epsilon_0 r^2} \uvec{r} & b < r
+              \end{cases}                                                                                           \\
+  V(0)    & = -\int_\infty^0 E \,d r                                                                                                                          \\
+          & = -\left( \int_\infty^b \frac{k (b - a)}{\epsilon_0 r^2} \,d r + \int_b^a \frac{k (r - a)}{\epsilon_0 r^2} \,d r \right)                          \\
+          & = -\left( \frac{k (b - a)}{\epsilon_0} \left[ -\frac{1}{r} \right]_\infty^b + \frac{k}{\epsilon_0} \left[ \ln r + \frac{a}{r} \right]_b^a \right) \\
+          & = -\left[ -\frac{k (b - a)}{\epsilon_0 b} + \frac{k}{\epsilon_0} \left( \ln a + 1 - \ln b - \frac{a}{b} \right) \right]                           \\
+          & = -\frac{k}{\epsilon_0} \left( -1 + \frac{a}{b} + \ln \frac{a}{b} + 1 - \frac{a}{b} \right)                                                       \\
+          & = \frac{k}{\epsilon_0} \ln \frac{b}{a}
+\end{align*}
+
+\subsection{}
+
+\begin{align*}
+  V(b) - V(0) & = -\int_0^b E \,d r                                                                                                            \\
+              & = -\left( \int_0^a \frac{s \rho}{2 \epsilon_0} \,d s + \int_a^b \frac{a^2 \rho}{2 \epsilon_0 s} \,d s \right)                  \\
+              & = -\left( \frac{\rho}{2 \epsilon_0} \left[ \frac{1}{2} s^2 \right]_0^a + \frac{a^2 \rho}{2 \epsilon_0} \ln \frac{b}{a} \right) \\
+              & = -\left( \frac{a^2 \rho}{4 \epsilon_0} + \frac{a^2 \rho}{2 \epsilon_0} \ln \frac{b}{a} \right)                                \\
+              & = -\frac{a^2 \rho}{4 \epsilon_0} \left( 1 + 2 \ln \frac{a}{b} \right)
+\end{align*}
+
+\subsection{}
+
+\begin{enumerate}
+  \item \[V = \ke \frac{2 q}{\sqrt{(d / 2)^2 + z^2}}\]
+
+  \item
+
+        \begin{align*}
+          V & = \ke \int_{-L}^L \frac{\lambda}{\sqrt{x^2 + z^2}} \,d x                    \\
+            & = \ke \lambda \ln \left( 1 + \frac{2 L (L + \sqrt{L^2 + z^2})}{z^2} \right)
+        \end{align*}
+
+  \item
+
+        \begin{align*}
+          V & = \ke \int_0^{2 \pi} \int_0^R \frac{\sigma}{\sqrt{r^2 + z^2}} r \,d r \,d \theta \\
+            & = \ke 2 \pi \sigma (\sqrt{R^2 + z^2} - z)
+        \end{align*}
+\end{enumerate}
+
+\subsection{}
+
+\begin{align*}
+  V_\text{bottom}                & = \ke \int_0^{2 \pi} \int_0^h \frac{\sqrt{2} \sigma z}{\sqrt{2} z} \,d \phi \,d z             \\
+                                 & = \frac{\sigma h}{2 \epsilon_0}                                                               \\
+  V_\text{top}                   & = \ke \int_0^{2 \pi} \int_0^h \frac{\sqrt{2} \sigma z}{\sqrt{z^2 + (h - z)^2}} \,d \phi \,d z \\
+                                 & = \frac{\sqrt{2} \sigma}{2 \epsilon_0} \int_0^h \frac{z}{\sqrt{z^2 + (h - z)^2}} \,d z        \\
+                                 & = \frac{\sigma h}{4 \epsilon_0} \ln (3 + 2 \sqrt{2})                                          \\
+  V_\text{bottom} - V_\text{top} & = \frac{\sigma h}{2 \epsilon_0} \left[ 1 - \frac{1}{2} \ln (3 + 2 \sqrt{2}) \right]           \\
+\end{align*}
+
+\setcounter{subsection}{27}
+\subsection{}
+
+\begin{align*}
+  V(r) & = \ke \int_0^{2 \pi} \int_0^\pi \int_0^R \frac{\rho r'^2 \sin \theta}{\sqrt{r^2 + r'^2 - 2 r r' \cos \theta}} \,d r' \,d \theta \,d \phi \\
+       & = \frac{\rho}{2 \epsilon_0} \int_0^\pi \int_0^R \frac{r'^2 \sin \theta}{\sqrt{r^2 + r'^2 - 2 r r' \cos \theta}} \,d r' \,d \theta        \\
+       & = \frac{\rho}{2 \epsilon_0} \left( R^2 - \frac{r^2}{3} \right)                                                                           \\
+       & = \frac{q}{8 \pi \epsilon_0 R} \left( 3 - \frac{r^2}{R^2} \right)
+\end{align*}
+
 \end{document}

@@ -1,5 +1,7 @@
 \documentclass{article}
+\usepackage{amsfonts} % For open face letters
 \usepackage{amsmath} % For align*
+\usepackage{float} % For the [H] option on figures
 \usepackage{graphicx} % For images
 \usepackage{siunitx} % For units
 \graphicspath{{./images/}}
@@ -82,6 +84,58 @@
 
 \begin{itemize}
   \item The curl of an electric field is $\vec{0}$ \[\nabla \times \vec{E} = \vec{0}.\]
+\end{itemize}
+
+\subsection{Electric Potential}
+
+\subsubsection{Introduction to Potential}
+
+\begin{itemize}
+  \item The \textbf{electric potential} at a point $\vec{r}$ is defined as \[V(\vec{r}) = -\int_\mathcal{O}^{\vec{r}} \vec{E} \cdot d \vec{l}\] where $\mathcal{O}$ is an agreed origin.
+
+  \item The potential difference between two points $\vec{a}$ and $\vec{b}$ is \[V(\vec{b}) - V(\vec{a}) = -\int_{\vec{a}}^{\vec{b}} \vec{E} \cdot d \vec{l}.\]
+
+  \item The electric field and potential are also related by the equation \[\vec{E} = -\nabla V.\]
+\end{itemize}
+
+\subsubsection{Comments on Potential}
+
+\begin{itemize}
+  \item The choice of origin $\mathcal{O}$ in the definiton of vector potential only affects the absolute potential values, not potential differences. Typically it is chosen to be ``at infinity'' unless the charge distribution itself extends to infinity.
+
+  \item Electric potential obeys the superposition principle.
+
+  \item The units of electric potential is $\unit{N.m/C} = \unit{J/C} = \unit{V}$.
+\end{itemize}
+
+\subsubsection{Poisson's Equation and Laplace's Equation}
+
+\begin{itemize}
+  \item If \[\nabla \cdot \vec{E} = \frac{\rho}{\epsilon_0}\] and \[\vec{E} = -\nabla V\] then \begin{align*}
+          \nabla \cdot (-\nabla V) & = \frac{\rho}{\epsilon_0}   \\
+          \nabla^2 V               & = -\frac{\rho}{\epsilon_0}.
+        \end{align*} This is known as \textbf{Poisson's equation}. In regions where $\rho = 0$ it reduces to \textbf{Laplace's equation} \[\nabla^2 V = 0.\]
+\end{itemize}
+
+\subsubsection{The Potential of a Localized Charge Distribution}
+
+\begin{itemize}
+  \item The potential of a continuous charge distribution is \[V(\vec{r}) = \ke \int \frac{\rho(\vec{r}')}{\rcurs} \,d \tau'\] where the reference is point is set to infinity.
+\end{itemize}
+
+\subsubsection{Boundary Conditions}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[scale=0.5]{electrostatic-relations}
+\end{figure}
+
+\begin{itemize}
+  \item The normal component of the electric field is discontinuous by an amount $\sigma / \epsilon_0$ at any boundary, i.e. \[E_\text{above} - E_\text{below} = \frac{\sigma}{\epsilon_0}.\]
+
+  \item The tangential component of the electric field is always continuous at any boundary.
+
+  \item The electric potential is always continuous at any boundary, however because $\vec{E} = -\nabla V$, the gradient of the electric potential inherits the discontinuity at boundaries with surface charge, i.e. \[\nabla V_\text{above} - \nabla V_\text{below} = -\frac{\sigma}{\epsilon_0} \uvec{n}\] or \[\frac{\partial V_\text{above}}{\partial n} - \frac{\partial V_\text{below}}{\partial n} = -\frac{\sigma}{\epsilon_0}\] where \[\frac{\partial V}{\partial n} = \nabla V \cdot \uvec{n}.\]
 \end{itemize}
 
 \end{document}
