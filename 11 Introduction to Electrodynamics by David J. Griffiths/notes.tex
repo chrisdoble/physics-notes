@@ -138,4 +138,33 @@
   \item The electric potential is always continuous at any boundary, however because $\vec{E} = -\nabla V$, the gradient of the electric potential inherits the discontinuity at boundaries with surface charge, i.e. \[\nabla V_\text{above} - \nabla V_\text{below} = -\frac{\sigma}{\epsilon_0} \uvec{n}\] or \[\frac{\partial V_\text{above}}{\partial n} - \frac{\partial V_\text{below}}{\partial n} = -\frac{\sigma}{\epsilon_0}\] where \[\frac{\partial V}{\partial n} = \nabla V \cdot \uvec{n}.\]
 \end{itemize}
 
+\subsection{Work and Energy in Electrostatics}
+
+\subsubsection{The Work It Takes to Move a Charge}
+
+\begin{itemize}
+  \item The work required to move a charge $Q$ from infinity to a point $\vec{r}$ is \[W = Q [V(\vec{r}) - V(\infty)] = Q V(\vec{r}).\] In that sense, the electric potential is the energy per unit charge required to assemble a system of point charges.
+\end{itemize}
+
+\subsubsection{The Energy of a Point Charge Distribution}
+
+\begin{itemize}
+  \item If you bring a first charge in from infinity you do no work because there are no other charges. If you bring a second charge in from inifnity you do work against the electric field of the first charge. The third does work against the first and second, and so on. Thus the total work required to assemble a collection of charges is \begin{align*}
+          W & = \ke \left( \frac{q_1 q_2}{\rcurs_{1 2}} + \frac{q_1 q_3}{\rcurs_{1 3}} + \ldots + \frac{q_1 q_n}{\rcurs{1 n}} + \frac{q_2 q_3}{\rcurs_{2 3}} + \ldots \right) \\
+            & = \ke \sum_{i = 1}^n \sum_{j > i}^n \frac{q_i q_j}{\rcurs_{i j}}
+        \end{align*} or if we count each pair of charges twice and divide by two \[W = \frac{1}{8 \pi \epsilon_0} \sum_{i = 1}^n \sum_{j \ne i}^n \frac{q_i q_j}{\rcurs_{i j}}.\] If we pull $q_i$ out the front we get \[W = \frac{1}{2} \sum_{i = 1}^n q_i \left( \sum_{j \ne i}^n \ke \frac{q_j}{\rcurs{i j}} \right) = \frac{1}{2} \sum_{i = 1}^n q_i V(\vec{r}_i).\]
+\end{itemize}
+
+\subsubsection{The Energy of a Continuous Charge Distribution}
+
+\begin{itemize}
+  \item For a volume charge density $\rho$ the work to assemble a continuous charge distribution is \[W = \frac{1}{2} \int \rho V \,d \tau\] or equivalently \[W = \frac{\epsilon_0}{2} \int E^2 \,d \tau\] where the integral is taken over all space.
+\end{itemize}
+
+\subsubsection{Comments on Electrostatic Energy}
+
+\begin{itemize}
+  \item The energy of an electrostatic field does not obey the superposition principle.
+\end{itemize}
+
 \end{document}

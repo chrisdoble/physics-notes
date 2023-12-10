@@ -341,4 +341,153 @@ a is impossible because its curl is nonzero.
        & = \frac{q}{8 \pi \epsilon_0 R} \left( 3 - \frac{r^2}{R^2} \right)
 \end{align*}
 
+\setcounter{subsection}{30}
+\subsection{}
+
+\begin{enumerate}
+  \item \[W = \frac{q^2}{4 \pi \epsilon_0 a} \left( \frac{1}{\sqrt{2}} - 2 \right)\]
+
+  \item
+
+        \begin{align*}
+          W & = \ke \left( -\frac{q^2}{a} + \frac{q^2}{\sqrt{2} a} - \frac{q^2}{a} - \frac{q^2}{a} + \frac{q^2}{\sqrt{2} a} - \frac{q^2}{a} \right) \\
+            & = \frac{q^2}{2 \pi \epsilon_0 a} \left( \frac{1}{\sqrt{2}} - 2 \right)
+        \end{align*}
+\end{enumerate}
+
+\subsection{}
+
+\begin{align*}
+  % Conservation of energy
+  W                                            & = \ke \frac{q_A q_B}{a}                                                           \\
+  W                                            & = K_1 + K_2                                                                       \\
+  \ke \frac{q_A q_B}{a}                        & = \frac{1}{2} m_A v_A^2 + \frac{1}{2} m_B v_B^2                                   \\
+  \frac{1}{2 \pi \epsilon_0} \frac{q_A q_B}{a} & = m_A v_A^2 + m_B v_B^2                                                           \\
+  % Conservation of momentum
+  0                                            & = m_B v_B - m_A v_A                                                               \\
+  v_B                                          & = \frac{m_A}{m_B} v_A                                                             \\
+  \frac{1}{2 \pi \epsilon_0} \frac{q_A q_B}{a} & = m_A v_A^2 + m_B \left( \frac{m_A}{m_B} v_A \right)^2                            \\
+                                               & = m_A v_A^2 + \frac{m_A^2}{m_B} v_A^2                                             \\
+                                               & = \frac{m_A (m_A + m_B)}{m_B} v_A^2                                               \\
+  v_A                                          & = \sqrt{\frac{1}{2 \pi \epsilon_0} \frac{q_A q_B}{(m_A + m_B) a} \frac{m_B}{m_A}} \\
+  v_B                                          & = \sqrt{\frac{1}{2 \pi \epsilon_0} \frac{q_A q_B}{(m_A + m_B) a} \frac{m_A}{m_B}}
+\end{align*}
+
+\subsection{}
+
+\begin{align*}
+  W & = \ke \left( -\frac{q^2}{a} + \frac{q^2}{2 a} - \frac{q^2}{3 a} + \ldots \right) \\
+    & = \ke \frac{q^2}{a} \sum_{n = 1}^\infty \frac{(-1)^n}{n}                         \\
+    & = -\ke \frac{q^2}{a} \ln 2
+\end{align*}
+
+\subsection{}
+
+\begin{enumerate}
+  \item
+
+        \begin{align*}
+          V & = \begin{cases}
+                  \ke \frac{q}{2 R} \left[ 3 - \left( \frac{r}{R} \right)^2 \right] & r < R \\
+                  \ke \frac{q}{r}                                                   & r > R
+                \end{cases}                                                                                       \\
+          W & = \frac{1}{2} \int \rho V \,d \tau                                                                                                                                \\
+            & = \frac{1}{2} \int_0^{2 \pi} \int_0^\pi \int_0^R \rho \ke \frac{q}{2 R} \left[ 3 - \left( \frac{r}{R} \right)^2 \right] r^2 \sin \theta \,d r \,d \theta \,d \phi \\
+            & = \frac{q \rho}{8 \epsilon_0 R} \int_0^\pi \int_0^R \left[ 3 - \left( \frac{r}{R} \right)^2 \right] r^2 \sin \theta \,d r \,d \theta                              \\
+            & = \frac{q \rho R^2}{5 \epsilon_0}                                                                                                                                 \\
+            & = \frac{q R^2}{5 \epsilon_0} \frac{q}{\frac{4}{3} \pi R^3}                                                                                                        \\
+            & = \ke \frac{3 q^2}{5 R}
+        \end{align*}
+
+  \item
+
+        \begin{align*}
+          \vec{E} & = \begin{cases}
+                        \ke \frac{q}{r^2} \uvec{r}   & r > R \\
+                        \ke \frac{q r}{R^3} \uvec{r} & r < R
+                      \end{cases}                                                                                                                                                                                 \\
+          E^2     & = \begin{cases}
+                        \frac{1}{16 \pi^2 \epsilon_0^2} \frac{q^2}{r^4}     & r > R \\
+                        \frac{1}{16 \pi^2 \epsilon_0^2} \frac{q^2 r^2}{R^6} & r < R
+                      \end{cases}                                                                                                                                                          \\
+          W       & = \frac{\epsilon_0}{2} \int E^2 \,d \tau                                                                                                                                                                               \\
+                  & = \frac{\epsilon_0}{2} \left( \int_0^{2 \pi} \int_0^\pi \int_0^R \frac{1}{16 \pi^2 \epsilon_0^2} \frac{q^2 r^2}{R^6} r^2 \sin \theta \,d r \,d \theta \,d \phi \right.                                                 \\
+                  & \qquad \left. + \int_0^{2 \pi} \int_0^\pi \int_R^\infty \frac{1}{16 \pi^2 \epsilon_0^2} \frac{q^2}{r^4} r^2 \sin \theta \,d r \,d \theta \,d \phi \right)                                                              \\
+                  & = \frac{\epsilon_0}{2} \frac{1}{16 \pi^2 \epsilon_0^2} 2 \pi q^2 \left( \int_0^\pi \int_0^R \frac{r^4}{R^6} \sin \theta \,d r \,d \theta + \int_0^\pi \int_R^\infty \frac{1}{r^2} \sin \theta \,d r \,d \theta \right) \\
+                  & = \frac{1}{16 \pi \epsilon_0} q^2 \left( \int_0^\pi \int_0^R \frac{r^4}{R^6} \sin \theta \,d r \,d \theta + \int_0^\pi \int_R^\infty \frac{1}{r^2} \sin \theta \,d r \,d \theta \right)                                \\
+                  & = \frac{1}{16 \pi \epsilon_0} q^2 \left( \frac{2}{5 R} + \frac{2}{R} \right)                                                                                                                                           \\
+                  & = \frac{1}{4 \pi \epsilon_0} \frac{3 q^2}{5 R}
+        \end{align*}
+
+  \item
+
+        \begin{align*}
+          W & = \frac{\epsilon_0}{2} \left( \int_V E^2 \,d \tau + \oint_S V \vec{E} \cdot d \vec{a} \right)                                                                         \\
+            & = \frac{\epsilon_0}{2} \left( \int_0^{2 \pi} \int_0^\pi \int_0^R \frac{1}{(4 \pi \epsilon_0)^2} \frac{q^2 r^2}{R^6} r^2 \sin \theta \,d r \,d \theta \,d \phi \right. \\
+            & \qquad + \int_0^{2 \pi} \int_0^\pi \int_R^a \frac{1}{(4 \pi \epsilon_0)^2} \frac{q^2}{r^4} r^2 \sin \theta \,d r \,d \theta \,d \phi                                  \\
+            & \qquad + \left. \int_0^{2 \pi} \int_0^\pi \ke \frac{q}{a} \frac{1}{4 \pi \epsilon_0} \frac{q}{a^2} a^2 \sin \theta \,d \theta \,d \phi \right)                        \\
+            & = \frac{\epsilon_0}{2} \frac{1}{(4 \pi \epsilon_0)^2} 2 \pi q^2 \left( \int_0^\pi \int_0^R \frac{r^4}{R^6} \sin \theta \,d r \,d \theta \right.                       \\
+            & \qquad + \int_0^\pi \int_R^a \frac{1}{r^2} \sin \theta \,d r \,d \theta + \left. \int_0^\pi \frac{1}{a} \sin \theta \,d \theta \right)                                \\
+            & = \frac{\epsilon_0}{2} \frac{1}{(4 \pi \epsilon_0)^2} 2 \pi q^2 \left[ \frac{2}{5 R} + 2 \left( \frac{1}{R} - \frac{1}{a} \right) + \frac{2}{a} \right]               \\
+            & = \frac{1}{8 \pi \epsilon_0} q^2 \left[ \frac{1}{5 R} + \frac{1}{R} \right]                                                                                           \\
+            & = \frac{1}{4 \pi \epsilon_0} \frac{3 q^2}{5 R}                                                                                                                        \\
+        \end{align*}
+\end{enumerate}
+
+\setcounter{subsection}{35}
+\subsection{}
+
+\begin{enumerate}
+  \item
+
+        \begin{align*}
+          \vec{E} & = \begin{cases}
+                        \vec{0}                    & r < a     \\
+                        \ke \frac{q}{r^2} \uvec{r} & a < r < b \\
+                        \vec{0}                    & b < r
+                      \end{cases}                                                                                                           \\
+          E^2     & = \begin{cases}
+                        0                                              & r < a     \\
+                        \frac{1}{(4 \pi \epsilon_0)^2} \frac{q^2}{r^4} & a < r < b \\
+                        0                                              & b < r
+                      \end{cases}                                                                                       \\
+          W       & = \frac{\epsilon_0}{2} \int E^2 \,d \tau                                                                                                           \\
+                  & = \frac{\epsilon_0}{2} \int_0^{2 \pi} \int_0^\pi \int_a^b \frac{1}{(4 \pi \epsilon_0)^2} \frac{q^2}{r^4} r^2 \sin \theta \,d r \,d \theta \,d \phi \\
+                  & = \frac{\epsilon_0}{2} \frac{1}{(4 \pi \epsilon_0)^2} 2 \pi q^2 \int_0^\pi \int_a^b \frac{\sin \theta}{r^2} \,d r \,d \theta                       \\
+                  & = \frac{q^2}{8 \pi \epsilon_0} \left( \frac{1}{a} - \frac{1}{b} \right)
+        \end{align*}
+
+  \item
+
+        \begin{align*}
+          W_\text{shell}            & = \frac{1}{8 \pi \epsilon_0} \frac{q^2}{R}                                                                                                                                                                            \\
+          \vec{E}                   & = \ke \frac{q}{r^2} \uvec{r}                                                                                                                                                                                          \\
+          \vec{E}_1 \cdot \vec{E}_2 & = -\frac{1}{(4 \pi \epsilon_0)^2} \frac{q^2}{r^4}                                                                                                                                                                     \\
+          W_\text{total}            & = W_1 + W_2 + \epsilon_0 \int \vec{E}_1 \cdot \vec{E}_2 \,d \tau                                                                                                                                                      \\
+                                    & = \frac{q^2}{8 \pi \epsilon_0} \left( \frac{1}{a} + \frac{1}{b} \right) - \epsilon_0 \int_0^{2 \pi} \int_0^\pi \int_b^\infty \frac{1}{(4 \pi \epsilon_0)^2} \frac{q^2}{r^4} r^2 \sin \theta \,d r \,d \theta \,d \phi \\
+                                    & = \frac{q^2}{8 \pi \epsilon_0} \left( \frac{1}{a} + \frac{1}{b} \right) - \frac{1}{8 \pi \epsilon_0} q^2 \int_0^\pi \int_b^\infty \frac{1}{r^2} \sin \theta \,d r \,d \theta                                          \\
+                                    & = \frac{q^2}{8 \pi \epsilon_0} \left( \frac{1}{a} + \frac{1}{b} \right) - \frac{1}{4 \pi \epsilon_0} q^2 \int_b^\infty \frac{1}{r^2} \,d r                                                                            \\
+                                    & = \frac{q^2}{8 \pi \epsilon_0} \left( \frac{1}{a} + \frac{1}{b} \right) - \frac{1}{4 \pi \epsilon_0} \frac{q^2}{b}                                                                                                    \\
+                                    & = \frac{q^2}{8 \pi \epsilon_0} \left( \frac{1}{a} + \frac{1}{b} - \frac{2}{b} \right)                                                                                                                                 \\
+                                    & = \frac{q^2}{8 \pi \epsilon_0} \left( \frac{1}{a} - \frac{1}{b} \right)
+        \end{align*}
+\end{enumerate}
+
+\subsection{}
+
+\begin{align*}
+  r_1                                                & = r                                                                                                                                                                                                           \\
+  E_1                                                & = \ke \frac{q_1}{r_1^2}                                                                                                                                                                                       \\
+                                                     & = \ke \frac{q_1}{r^2}                                                                                                                                                                                         \\
+  r_2                                                & = \sqrt{a^2 + r^2 - 2 a r \cos \theta}                                                                                                                                                                        \\
+  E_2                                                & = \ke \frac{q_2}{r_2^2}                                                                                                                                                                                       \\
+                                                     & = \ke \frac{q_2}{a^2 + r^2 - 2 a r \cos \theta}                                                                                                                                                               \\
+  \cos \alpha                                        & = \frac{r - a \cos \theta}{\sqrt{a^2 + r^2 - 2 a r \cos \theta}}                                                                                                                                              \\
+  \vec{E}_1 \cdot \vec{E}_2                          & = E_1 E_2 \cos \alpha                                                                                                                                                                                         \\
+                                                     & = \frac{1}{(4 \pi \epsilon_0)^2} \frac{q_1 q_2}{r^2 (a^2 + r^2 - 2 a r \cos \theta)} \frac{r - a \cos \theta}{\sqrt{a^2 + r^2 - 2 a r \cos \theta}}                                                           \\
+                                                     & = \frac{1}{(4 \pi \epsilon_0)^2} \frac{q_1 q_2 (r - a \cos \theta)}{r^2 (a^2 + r^2 - 2 a r \cos \theta)^{3 / 2}}                                                                                              \\
+  \epsilon_0 \int \vec{E}_1 \cdot \vec{E}_2 \,d \tau & = \epsilon_0 \int_0^{2 \pi} \int_0^\pi \int_0^\infty \frac{1}{(4 \pi \epsilon_0)^2} \frac{q_1 q_2 (r - a \cos \theta)}{r^2 (a^2 + r^2 - 2 a r \cos \theta)^{3 / 2}} r^2 \sin \theta \,d r \,d \theta \,d \phi \\
+                                                     & = \frac{q_1 q_2}{8 \pi \epsilon_0} \int_0^\pi \int_0^\infty \frac{(r - a \cos \theta) \sin \theta}{(a^2 + r^2 - 2 a r \cos \theta)^{3 / 2}} \,d r \,d \theta
+\end{align*}
+
 \end{document}
