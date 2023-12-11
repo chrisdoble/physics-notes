@@ -167,4 +167,46 @@
   \item The energy of an electrostatic field does not obey the superposition principle.
 \end{itemize}
 
+\subsection{Conductors}
+
+\subsubsection{Basic Properties}
+
+\begin{itemize}
+  \item $\vec{E} = \vec{0}$ inside a conductor because any net electric field causes charges to move, resulting in an induced charge that cancels the electric field.
+
+  \item $\rho = 0$ inside a conductor. By Gauss's law, if $\vec{E} = \vec{0}$ then $\rho$ must also be $0$.
+
+  \item Any net charge resides on the surface of a conductor.
+
+  \item A conductor is an equipotential, i.e. the electric potential is the same everywhere in the conductor.
+
+  \item $\vec{E}$ is perpendicular to the surface of the conductor. If there was a tangential component, charge would move to cancel it.
+\end{itemize}
+
+\subsubsection{Induced Charges}
+
+\begin{itemize}
+  \item If you hold a charge near an uncharged conductor, the two will attract one another. This is because the external charge causes charges within the conductor to move in order to cancel its magnetic field — like charges are repelled and unlike charges are attracted. This results in unlike charges being closer to the external charge and like charges being further away, resulting in a net attraction.
+
+  \item If you place a charge in a cavity within a conductor, a charge will be induced on the inner surface of the conductor to negate the charge's field within the conductor. If you apply Gauss's law to a Gassian surface that contains the inner charge and inner surface but not the outer surface, the enclosed charge must be $0$. Thus there must be an induced charge of $q$ on the outer surface which communicates the presence of the inner charge to the outside world.
+
+  \item If a cavity within a conductor contains no charge, $\vec{E} = \vec{0}$ within the cavity.
+\end{itemize}
+
+\subsubsection{Surface Charge and Force on a Conductor}
+
+\begin{itemize}
+  \item Because the field inside a conductor is zero, the boundary condition $E_\text{above} - E_\text{below} = \sigma / \epsilon_0$ requires that the field immediately outside the conductor is \[\vec{E} = \frac{\sigma}{\epsilon_0} \uvec{n}.\] In terms of potential this is \[\sigma = -\epsilon_0 \frac{\partial V}{\partial n}.\]
+
+  \item In the presence of an electric field, a surface charge will experience a force per unit area \[\vec{f} = \sigma \vec{E}_\text{average} = \frac{1}{2} \sigma (\vec{E}_\text{above} + \vec{E}_\text{below}).\] This applies to any surface charge, however for a conductor $\vec{E}_\text{below} = \vec{0}$ so \[\vec{f} = \frac{1}{2} \sigma \vec{E}_\text{above} = \frac{\sigma^2}{2 \epsilon_0} \uvec{n}.\] Notice that this is independent of the sign of $\sigma$. This results in an outward \textbf{electrostatic pressure} on the surface \[P = \frac{\epsilon_0}{2} E^2\] tending to draw the conductor into the field.
+\end{itemize}
+
+\subsubsection{Capacitors}
+
+\begin{itemize}
+  \item If you have two conductors and place a charge of $+Q$ on one and $-Q$ on the other, an electric field will be induced between them. By Couloumb's law the electric field is proportional to the charge so doubling the charge doubles the electric field and thus the electric potential. The constant of proportionality between the charge and the potential difference between the condutors is called their \textbf{capacitance} \[C = \frac{Q}{V}\] the unit of which is \textbf{farads} ($\unit{F}$).
+
+  \item The work required to fully charge a capacitor to potential difference $V$ is \[W = \frac{1}{2} C V^2.\]
+\end{itemize}
+
 \end{document}
