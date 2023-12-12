@@ -3,6 +3,7 @@
 \usepackage{amsmath} % For align*
 \usepackage{graphicx} % For images
 \usepackage{enumitem} % For customisable list labels
+\usepackage{siunitx} % For units
 \graphicspath{{./images/}}
 
 \renewcommand{\vec}[1]{\boldsymbol{\mathbf{#1}}}
@@ -601,5 +602,137 @@ So the capacitance per unit length is \[C = \frac{2 \pi \epsilon_0}{\ln b / a}.\
 
   \item \[\frac{\epsilon_0}{2} E^2 A \epsilon\]
 \end{enumerate}
+
+\setcounter{subsection}{45}
+\subsection{}
+
+\begin{align*}
+  \nabla \cdot \vec{E} & = \frac{1}{r^2} \frac{\partial}{\partial r} (r^2 3 \frac{k}{r}) + \frac{1}{r \sin \theta} \frac{\partial}{\partial \theta} \left( \sin \theta \frac{k}{r} 2 \sin \theta \cos \theta \sin \phi \right) \\
+                       & \qquad + \frac{1}{r \sin \theta} \frac{\partial}{\partial \phi} \left( \frac{k}{r} \sin \theta \cos \phi \right)                                                                                      \\
+                       & = \frac{3 k}{r^2} + \frac{1}{r \sin \theta} \frac{2 k}{r} \sin \phi (2 \sin \theta \cos^2 \theta - \sin^3 \theta) - \frac{1}{r \sin \theta} \frac{k}{r} \sin \theta \sin \phi                         \\
+                       & = \frac{3 k}{r^2} + \frac{2 k \sin \phi}{r^2} (2 \cos^2 \theta - \sin^2 \theta) - \frac{k}{r^2} \sin \phi                                                                                             \\
+                       & = \frac{k}{r^2} [3 + 2 \sin \phi (2 \cos^2 \theta - \sin^2 \theta) - \sin \phi]                                                                                                                       \\
+                       & = \frac{k}{r^2} [3 + \sin \phi (4 \cos^2 \theta - 2 \sin^2 \theta - 1)]                                                                                                                               \\
+                       & = \frac{k}{r^2} [3 + \sin \phi (6 \cos^2 \theta - 3)]                                                                                                                                                 \\
+                       & = \frac{3 k}{r^2} (1 + \cos 2 \theta \sin \phi)                                                                                                                                                       \\
+  \rho                 & = \epsilon_0 \nabla \cdot \vec{E}                                                                                                                                                                     \\
+                       & = \frac{3 k \epsilon_0}{r^2} (1 + \cos 2 \theta \sin \phi)
+\end{align*}
+
+\subsection{}
+
+\begin{align*}
+  \vec{E}      & = \ke \frac{Q r}{R^3} \uvec{r}                                                                                                                               \\
+  \rho         & = \frac{Q}{\frac{4}{3} \pi R^3}                                                                                                                              \\
+  \rho \vec{E} & = \frac{3 Q}{4 \pi R^3} \ke \frac{Q r}{R^3} \uvec{r}                                                                                                         \\
+               & = \frac{3 r}{\epsilon_0} \left( \frac{Q}{4 \pi R^3} \right)^2 \uvec{r}                                                                                       \\
+  F_z          & = \int_0^{2 \pi} \int_0^{\pi / 2} \int_0^R \frac{3 r}{\epsilon_0} \left( \frac{Q}{4 \pi R^3} \right)^2 \cos \theta r^2 \sin \theta \,d r \,d \theta \,d \phi \\
+               & = \frac{3 \pi}{\epsilon_0} \left( \frac{Q}{4 \pi R^3} \right)^2 \int_0^{\pi / 2} \int_0^R r^3 \sin 2 \theta \,d r \,d \theta                                 \\
+               & = \frac{3 \pi}{\epsilon_0} \left( \frac{Q}{4 \pi R^3} \right)^2 \frac{R^4}{4}                                                                                \\
+               & = \frac{3 Q^2}{64 \pi \epsilon_0 R^2}
+\end{align*}
+
+\setcounter{subsection}{48}
+\subsection{}
+
+\begin{align*}
+  Q_\text{enc}                  & = \int_0^{2 \pi} \int_0^\pi \int_0^r k r'^3 \sin \theta \,d r' \,d \theta \,d \phi                                                                                                                   \\
+                                & = 2 \pi k \int_0^\pi \int_0^r r'^3 \sin \theta \,d r' \,d \theta                                                                                                                                     \\
+                                & = \pi k r^4                                                                                                                                                                                          \\
+  \oint \vec{E} \cdot d \vec{a} & = \frac{Q_\text{enc}}{\epsilon_0}                                                                                                                                                                    \\
+  4 \pi r^2 E                   & = \frac{\pi k r^4}{\epsilon_0}                                                                                                                                                                       \\
+  \vec{E}                       & = \begin{cases}
+                                      \frac{k r^2}{4 \epsilon_0} \uvec{r}     & r < R \\
+                                      \frac{k R^4}{4 \epsilon_0 r^2} \uvec{r} & r > R
+                                    \end{cases}                                                                                                                                                    \\
+  W                             & = \frac{\epsilon_0}{2} \left( \int_0^{2 \pi} \int_0^\pi \int_0^R \frac{k^2 r^4}{16 \epsilon_0^2} r^2 \sin \theta \,d r \,d \theta \,d \phi \right.                                                   \\
+                                & \qquad \left. \int_0^{2 \pi} \int_0^\pi \int_R^\infty \frac{k^2 R^8}{16 \epsilon_0^2 r^4} r^2 \sin \theta \,d r \,d \theta \,d \phi \right)                                                          \\
+                                & = \frac{\epsilon_0}{2} 2 \pi \frac{k^2}{16 \epsilon_0^2} \left( \int_0^\pi \int_0^R r^6 \sin \theta \,d r \,d \theta + \int_0^\pi \int_R^\infty \frac{R^8 \sin \theta}{r^2} \,d r \,d \theta \right) \\
+                                & = \frac{\pi k^2}{16 \epsilon_0} \left( \frac{2 R^7}{7} + 2 R^7 \right)                                                                                                                               \\
+                                & = \frac{\pi k^2 R^7}{7 \epsilon_0}
+\end{align*}
+
+\subsection{}
+
+\begin{align*}
+  V(\vec{r}) & = A \frac{e^{-\lambda r}}{r}                                                                                                                                                       \\
+  \vec{E}    & = -\nabla V                                                                                                                                                                        \\
+             & = A e^{-\lambda r} (1 + \lambda r) \frac{\uvec{r}}{r^2}                                                                                                                            \\
+  \rho       & = \epsilon_0 \nabla \cdot \vec{E}                                                                                                                                                  \\
+             & = \epsilon_0 \left[ A e^{-\lambda r} (1 + \lambda r) \nabla \cdot \frac{\uvec{r}}{r^2} + \frac{\uvec{r}}{r^2} \cdot \nabla \left( A e^{-\lambda r} (1 + \lambda r) \right) \right] \\
+             & = A \epsilon_0 \left[ 4 \pi \delta(\vec{r}) + \frac{\uvec{r}}{r^2} \cdot (-\lambda^2 e^{-\lambda r} r \uvec{r}) \right]                                                            \\
+             & = A \epsilon_0 \left( 4 \pi \delta(\vec{r}) - \frac{\lambda^2 e^{-\lambda r}}{r} \right)
+\end{align*}
+
+\subsection{}
+
+\begin{align*}
+  V & = \int \ke \frac{\sigma}{\rcurs} \,d A                                                                                                                              \\
+    & = \frac{\sigma}{4 \pi \epsilon_0} \int_0^{2 \pi} \int_0^R \frac{r}{\sqrt{r^2 + R^2 - 2 r R \cos \theta}} \,d r \,d \theta                                           \\
+    & = \frac{R \sigma}{4 \pi \epsilon_0} \int_0^{2 \pi} \left[ \cos \theta \ln \left( 1 + \csc \frac{\theta}{2} \right) + 2 \sin \frac{\theta}{2} - 1 \right] \,d \theta \\
+    & = \frac{R \sigma}{\pi \epsilon_0}
+\end{align*}
+
+\subsection{}
+
+\begin{enumerate}
+  \item
+
+        \begin{align*}
+          V_- & = \frac{1}{2 \pi \epsilon_0} \lambda \ln \frac{s_-}{a}                           \\
+              & = \frac{1}{2 \pi \epsilon_0} \lambda \ln \frac{\sqrt{(y + a)^2 + z^2}}{a}        \\
+          V_+ & = -\frac{1}{2 \pi \epsilon_0} \lambda \ln \frac{s_+}{a}                          \\
+              & = -\frac{1}{2 \pi \epsilon_0} \lambda \ln \frac{\sqrt{(y - a)^2 + z^2}}{a}       \\
+          V   & = V_- + V_+                                                                      \\
+              & = \frac{1}{4 \pi \epsilon_0} \lambda \ln \frac{(y + a)^2 + z^2}{(y - a)^2 + z^2}
+        \end{align*}
+\end{enumerate}
+
+\subsection{}
+
+\begin{enumerate}
+  \item
+
+        \begin{align*}
+          \nabla^2 V                            & = -\frac{\rho}{\epsilon_0} \\
+          \nabla \cdot \nabla V                 & = -\frac{\rho}{\epsilon_0} \\
+          \nabla \cdot \frac{d V}{d x} \uvec{x} & = -\frac{\rho}{\epsilon_0} \\
+          \frac{d^2 V}{d x^2}                   & = -\frac{\rho}{\epsilon_0} \\
+        \end{align*}
+
+  \item
+
+        \begin{align*}
+          q V & = \frac{1}{2} m v^2      \\
+          v   & = \sqrt{\frac{2 q V}{m}}
+        \end{align*}
+
+  \item \[I = A \rho v\]
+
+  \item
+
+        \begin{align*}
+          \frac{d^2 V}{d x^2} & = -\frac{I}{A v \epsilon_0}                      \\
+                              & = -\frac{I}{A \epsilon_0} \sqrt{\frac{m}{2 q V}} \\
+                              & = \beta V^{-1 / 2}
+        \end{align*}
+\end{enumerate}
+
+\setcounter{subsection}{54}
+\subsection{}
+
+\begin{align*}
+  \rho & = \epsilon_0 \nabla \cdot \vec{E} \\
+       & = a \epsilon_0
+\end{align*}
+
+\subsection{}
+
+\begin{align*}
+  E            & = \frac{3 G M^2}{5 R}    \\
+  E_\text{sun} & = \qty{2.3e41}{J}        \\
+  t            & = \frac{E_\text{sun}}{P} \\
+               & = \qty{1.89e7}{years}
+\end{align*}
 
 \end{document}
