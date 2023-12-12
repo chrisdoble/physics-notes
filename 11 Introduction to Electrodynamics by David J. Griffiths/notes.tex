@@ -209,4 +209,54 @@
   \item The work required to fully charge a capacitor to potential difference $V$ is \[W = \frac{1}{2} C V^2.\]
 \end{itemize}
 
+\section{Potentials}
+
+\subsection{Laplace's Equation}
+
+\subsubsection{Introduction}
+
+\begin{itemize}
+  \item The primary task of electrostatics is to find the electric field of a stationary charge distribution. In theory this is possible using Couloumb's law, but the integrals are often too difficult. It's often easier to first calculate the potential, but sometimes these too are too difficult. In those cases we can instead try to solve Poisson's equation \[\nabla^2 V = -\frac{\rho}{\epsilon_0}\] or Laplace's equation \[\nabla^2 V = 0.\]
+\end{itemize}
+
+\subsubsection{Laplace's Equation in One Dimension}
+
+\begin{itemize}
+  \item The solution to Laplace's equation in one dimension \[\frac{d^2 V}{d x^2} = 0\] is \[V = m x + b.\]
+
+  \item Under this solution $V(x)$ is the average of $V(x + a)$ and $V(x - a)$ for any $a$ \[V(x) = \frac{1}{2} [V(x + a) + V(x - a)].\]
+
+  \item Laplace's equation tolerates no maxima or minima between the endpoints.
+\end{itemize}
+
+\subsubsection{Laplace's Equation in Two Dimensions}
+
+\begin{itemize}
+  \item If you draw a circle of radius $R$ about a point the average value of $V$ on the circle is equal to the value at the centre \[V = \frac{1}{2 \pi R} \oint_\text{circle} V \,d l.\]
+
+  \item $V$ has no maxima or minima — all extrema occur at the boundaries.
+\end{itemize}
+
+\subsubsection{Laplace's Equation in Three Dimensions}
+
+\begin{itemize}
+  \item The value of $V$ at a point $\vec{r}$ is the average value of $V$ over a spherical surface of radius $R$ centred at $\vec{r}$ \[V(\vec{r}) = \frac{1}{4 \pi R^2} \oint_\text{sphere} V \,d a.\]
+
+  \item $V$ has no maxima or minima — all extrema occur at the boundaries.
+\end{itemize}
+
+\subsubsection{Boundary Conditions and Uniqueness Theorems}
+
+\begin{itemize}
+  \item The \textbf{first uniqueness theorem} states that the solution to Laplace's equation in some volume $\mathcal{V}$ is uniquely determined if $V$ is specified on the boundary surface $\mathcal{S}$.
+
+  \item A corollary to the first uniqueness theorem is that the potential in a volume $\mathcal{V}$ is uniquely determined if (a) the charge density throughout the region, and (b) the value of $V$ on all boundaries, are specified.
+\end{itemize}
+
+\subsubsection{Conductors and the Second Uniqueness Theorem}
+
+\begin{itemize}
+  \item The \textbf{second uniqueness theorem} states that in a volume $\mathcal{V}$ surrounded by conductors and containing a specified charge density $\rho$, the electric field is uinquely determined if the total charge on each conductor is given.
+\end{itemize}
+
 \end{document}

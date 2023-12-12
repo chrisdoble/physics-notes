@@ -735,4 +735,37 @@ So the capacitance per unit length is \[C = \frac{2 \pi \epsilon_0}{\ln b / a}.\
                & = \qty{1.89e7}{years}
 \end{align*}
 
+\section{Potentials}
+
+\subsection{}
+
+\begin{align*}
+  V_\text{ave} & = \frac{q}{4 \pi \epsilon_0} \frac{1}{2 z R} \left. \sqrt{z^2 + R^2 - 2 z R \cos \theta} \right|_0^\pi          \\
+               & = \frac{q}{4 \pi \epsilon_0} \frac{1}{2 z R} \left( \sqrt{z^2 + R^2 + 2 z R} - \sqrt{z^2 + R^2 - 2 z R} \right) \\
+               & = \frac{q}{4 \pi \epsilon_0} \frac{1}{2 z R} \left( \sqrt{(z + R)^2} - \sqrt{(R - z)^2} \right)                 \\
+               & = \frac{q}{4 \pi \epsilon_0} \frac{1}{2 z R} (z + R - R + z)                                                    \\
+               & = \frac{1}{4 \pi \epsilon_0} \frac{q}{R}
+\end{align*}
+
+The average potential due to external charges is $V_\text{center}$ and the average potential due to internal charges is \[\ke \frac{Q_\text{enc}}{R}\] so \[V_\text{ave} = V_\text{center} + \ke \frac{Q_\text{enc}}{R}.\]
+
+\subsection{}
+
+A stable equilibrium is a minimum of potential energy. Laplace's equation doesn't allow for minimums, so they must be saddle points and the charge can escape.
+
+\subsection{}
+
+\begin{align*}
+  0 & = \nabla^2 V                                                                                             \\
+    & = \frac{1}{r^2} \frac{\partial}{\partial r} \left( r^2 \frac{\partial V}{\partial r} \right)             \\
+    & = \frac{1}{r^2} \left( 2 r \frac{\partial V}{\partial r} + r^2 \frac{\partial^2 V}{\partial r^2} \right) \\
+    & = \frac{2}{r} \frac{\partial V}{\partial r} + \frac{\partial^2 V}{\partial r^2}                          \\
+  V & = \frac{c_1}{r} + c_2                                                                                    \\
+  0 & = \nabla^2 V                                                                                             \\
+    & = \frac{1}{s} \frac{\partial}{\partial s} \left( s \frac{\partial V}{\partial s} \right)                 \\
+    & = \frac{1}{s} \left( \frac{\partial V}{\partial s} + s \frac{\partial^2 V}{\partial s^2} \right)         \\
+    & = \frac{1}{s} \frac{\partial V}{\partial s} + \frac{\partial^2 V}{\partial s^2}                          \\
+  V & = c_1 + c_2 \ln s
+\end{align*}
+
 \end{document}
