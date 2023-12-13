@@ -259,4 +259,34 @@
   \item The \textbf{second uniqueness theorem} states that in a volume $\mathcal{V}$ surrounded by conductors and containing a specified charge density $\rho$, the electric field is uinquely determined if the total charge on each conductor is given.
 \end{itemize}
 
+\subsection{The Method of Images}
+
+\subsubsection{The Classic Image Problem}
+
+\begin{itemize}
+  \item By the first uniqueness theorem for solutions to Poisson's equation and Laplace's equation, if we can construct a solution that meets the boundary conditions in the region of interest even if it's different outside the region of interest, that's the solution.
+
+  \item For example, if a point charge $q$ is placed a distance $a$ above an infinite grounded conducting plane it will induce some charge in the plane so it's difficult to calculate the potential. However if we consider an alternate scenario where there's a second point charge $-q$ a distance $a$ below the plane and the plane is removed, the potential is much easier to calculate. Because the boundary conditions in the region $z > 0$ are the same, this potential must be a solution to the original problem.
+\end{itemize}
+
+\subsubsection{Induced Surface Charge}
+
+\begin{itemize}
+  \item In the problem above, the suface charge induced on the plane can be calculated as \[\sigma = -\epsilon_0 \left. \frac{\partial V}{\partial z} \right|_{z = 0}.\]
+\end{itemize}
+
+\subsubsection{Force and Energy}
+
+\begin{itemize}
+  \item As potential is the same under the method of images, so is force. Energy however is not the same.
+\end{itemize}
+
+\subsubsection{Other Image Problems}
+
+\begin{itemize}
+  \item In general, \textbf{the method of images} can be applied when a stationary charge distribution is in the vicinity of an infinite grounding plane by mirroring the charges across the plane and negating their charges.
+
+  \item You can't place image charges in the region where you're trying to calculate the potential — that would change $\rho$ and thus you're solving Poisson's equation with different sources.
+\end{itemize}
+
 \end{document}

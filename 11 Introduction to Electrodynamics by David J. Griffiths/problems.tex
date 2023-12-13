@@ -6,6 +6,9 @@
 \usepackage{siunitx} % For units
 \graphicspath{{./images/}}
 
+\DeclareMathOperator{\arcosh}{arcosh}
+\DeclareMathOperator{\csch}{csch}
+
 \renewcommand{\vec}[1]{\boldsymbol{\mathbf{#1}}}
 \newcommand{\dvec}[1]{\dot{\vec{#1}}}
 \newcommand{\ddvec}[1]{\ddot{\vec{#1}}}
@@ -766,6 +769,104 @@ A stable equilibrium is a minimum of potential energy. Laplace's equation doesn'
     & = \frac{1}{s} \left( \frac{\partial V}{\partial s} + s \frac{\partial^2 V}{\partial s^2} \right)         \\
     & = \frac{1}{s} \frac{\partial V}{\partial s} + \frac{\partial^2 V}{\partial s^2}                          \\
   V & = c_1 + c_2 \ln s
+\end{align*}
+
+\setcounter{subsection}{6}
+\subsection{}
+
+\begin{align*}
+  \vec{E} & = \ke q^2 \left( -\frac{2}{(2 d)^2} + \frac{2}{(4 d)^2} - \frac{1}{(6 d)^2} \right) \uvec{z} \\
+          & = -\ke \frac{29 q^2}{72 d^2} \uvec{z}
+\end{align*}
+
+\subsection{}
+
+\begin{enumerate}
+  \item
+
+        \begin{align*}
+          V(r, \theta) & = \ke \left[ \frac{q}{\sqrt{r^2 + a^2 - 2 r a \cos \theta}} + \frac{q'}{\sqrt{r^2 + b^2 - 2 r b \cos \theta}} \right]                      \\
+                       & = \ke \left[ \frac{q}{\sqrt{r^2 + a^2 - 2 r a \cos \theta}} - \frac{R q / a}{\sqrt{r^2 + (R^2 / a)^2 - 2 r (R^2 / a) \cos \theta}} \right] \\
+                       & = \ke \left[ \frac{q}{\sqrt{r^2 + a^2 - 2 r a \cos \theta}} - \frac{q}{\sqrt{R^2 + (r a / R)^2 - 2 r a \cos \theta}} \right]
+        \end{align*}
+
+  \item
+
+        \begin{align*}
+          \sigma           & = -\epsilon_0 \left. \frac{\partial V}{\partial r} \right|_{r = R}                                            \\
+                           & = \frac{q}{4 \pi R} \frac{R^2 - a^2}{(a^2 + R^2 - 2 a R \cos \theta)^{3 / 2}}                                 \\
+          Q_\text{induced} & = \int_0^{2 \pi} \int_0^\pi \sigma R^2 \sin \theta \,d \theta \,d \phi                                        \\
+                           & = \frac{q R (R^2 - a^2)}{2} \int_0^\pi \frac{\sin \theta}{(a^2 + R^2 - 2 a R \cos \theta)^{3 / 2}} \,d \theta \\
+                           & = \frac{q R (R^2 - a^2)}{a (a^2 - R^2)}                                                                       \\
+                           & = -\frac{R}{a} q                                                                                              \\
+                           & = q'
+        \end{align*}
+
+  \item
+
+        \begin{align*}
+          W & = \frac{1}{2} q V                                           \\
+            & = \frac{1}{8 \pi \epsilon_0} \frac{q q'}{a - b}             \\
+            & = -\frac{1}{8 \pi \epsilon_0} \frac{q^2 R / a}{a - R^2 / a} \\
+            & = -\frac{1}{8 \pi \epsilon_0} \frac{q^2 R}{a^2 - R^2}
+        \end{align*}
+\end{enumerate}
+
+\subsection{}
+
+Place the second image charge at the centre of the sphere with charge \[q'' = 4 \pi \epsilon_0 R V_0.\]
+
+\begin{align*}
+  F & = \ke q \left( \frac{q'}{(a - b)^2} + \frac{q''}{a^2} \right)                                  \\
+    & = \frac{q q'}{4 \pi \epsilon_0} \left( \frac{1}{(a - b)^2} - \frac{1}{a^2} \right)             \\
+    & = \frac{q q'}{4 \pi \epsilon_0} \frac{a^2 - (a - b)^2}{a^2 (a - b)^2}                          \\
+    & = \frac{q q'}{4 \pi \epsilon_0} \frac{b (2 a - b)}{a^2 (a - b)^2}                              \\
+    & = \frac{q (-R q / a)}{4 \pi \epsilon_0} \frac{(R^2 / a) (2 a - R^2 / a)}{a^2 (a - R^2 / a)^2}  \\
+    & = -\frac{q^2}{4 \pi \epsilon_0} \left( \frac{R}{a} \right)^3 \frac{2 a^2 - R^2}{(a^2 - R^2)^2} \\
+\end{align*}
+
+\subsection{}
+
+\begin{enumerate}
+  \item \[V(x, y, z) = \ke \lambda \ln \frac{y^2 + (z + d)^2}{y^2 + (z - d)^2}\]
+
+  \item
+
+        \begin{align*}
+          \sigma & = -\epsilon_0 \left. \frac{\partial V}{\partial z} \right|_{z = 0} \\
+                 & = -\frac{d \lambda}{\pi (d^2 + y^2)}
+        \end{align*}
+\end{enumerate}
+
+\subsection{}
+
+You need three charges: $-q$ at $(-a, b)$, $-q$ at $(a, -b)$, and $q$ at $(-b, -a)$. The potential is \begin{align*}
+  V & = \ke q \left( \frac{1}{\sqrt{(x - a)^2 + (y - b)^2}} - \frac{1}{\sqrt{(x + a)^2 + (y - b)^2}} \right.   \\
+    & \qquad \left. - \frac{1}{\sqrt{(x - a)^2 + (y + b)^2}} + \frac{1}{\sqrt{(x + a)^2 + (y + b)^2}} \right).
+\end{align*}
+
+The force on $q$ is \[\vec{F} = \frac{q^2}{16 \pi \epsilon_0} \left[ \left( \frac{a}{(a^2 + b^2)^{3 / 2}} - \frac{1}{a^2} \right) \,\uvec{x} + \left( \frac{b}{(a^2 + b^2)^{3 / 2}} - \frac{1}{b^2} \right) \,\uvec{y} \right].\]
+
+The work to bring $q$ in from infinity is \begin{align*}
+  W & = \frac{q^2}{16 \pi \epsilon_0} \left( \frac{1}{\sqrt{a^2 + b^2}} - \frac{1}{a} - \frac{1}{b} \right).
+\end{align*}
+
+\subsection{}
+
+Two infinitely long wires running parallel to the $x$-axis a distance $2 a$ apart with charge densities $\lambda$ and $-\lambda$ have cylindrical equipotential surfaces with centres at \[y_0 = \pm a \coth \frac{2 \pi \epsilon_0 V_0}{\lambda}\] radii \[R = a \csch \frac{2 \pi \epsilon_0 V_0}{\lambda}.\]
+
+We know the equipotential surfaces (the pipes) and want to find the wires so we can find the potential, so \begin{align*}
+  d                   & = a \coth \frac{2 \pi \epsilon_0 V_0}{\lambda} \\
+  R                   & = a \csch \frac{2 \pi \epsilon_0 V_0}{\lambda} \\
+  \frac{d}{R}         & = \cosh \frac{2 \pi \epsilon_0 V_0}{\lambda}   \\
+  \arcosh \frac{d}{R} & = \frac{2 \pi \epsilon_0 V_0}{\lambda}         \\
+  \lambda             & = \frac{2 \pi \epsilon_0 V_0}{\arcosh d / R}   \\
+  R                   & = a \csch \arcosh \frac{d}{R}                  \\
+  a                   & = \frac{R}{\csch \arcosh d / R}                \\
+                      & = (d + R) \sqrt{\frac{2 d}{d + R} - 1}         \\
+                      & = \sqrt{d^2 - R^2}
+\end{align*} thus the potential is \begin{align*}
+  V & = \frac{V_0}{2 \arcosh d / R} \ln \frac{(y + d^2 - R^2)^2 + z^2}{(y - d^2 + R^2)^2 + z^2}.
 \end{align*}
 
 \end{document}
