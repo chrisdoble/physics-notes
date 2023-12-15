@@ -289,4 +289,21 @@
   \item You can't place image charges in the region where you're trying to calculate the potential — that would change $\rho$ and thus you're solving Poisson's equation with different sources.
 \end{itemize}
 
+\subsection{Separation of Variables}
+
+\begin{itemize}
+  \item The method of separation of variables can be used to solve Laplace's equation when the potential $V$ or the charge density $\sigma$ is specified on the boundaries of some region.
+\end{itemize}
+
+\setcounter{subsubsection}{1}
+\subsubsection{Spherical Coordinates}
+
+\begin{itemize}
+  \item We assume the problems have \textbf{azimuthal symmetry} so that $V$ is independent of $\phi$.
+
+  \item The solutions to the equation \[\frac{d}{d \theta} \left( \sin \theta \frac{d \Theta}{d \theta} \right) = -l (l + 1) \sin \theta \Theta\] are the \textbf{Legendre polynomials} in the variable $\cos \theta$ \[\Theta(\theta) = P_l(\cos \theta).\] Although there should be two solutions to $\Theta(\theta)$ for each value of $l$, the second set of solutions ``blow up'' at $\theta = 0$ and/or $\theta = \pi$ so can be excluded on physical grounds. If those values of $\theta$ are excluded from the region of interest, then these second solutions must be considered.
+
+  \item Thus, in the case of azimuthal symmetry, the most general separable solution to Laplace's equations is \[V(r, \theta) = \sum_{l = 0}^\infty \left( A r^l + \frac{B}{r^{l + 1}} \right) P_l (\cos \theta).\]
+\end{itemize}
+
 \end{document}
