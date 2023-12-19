@@ -1252,4 +1252,145 @@ We know the equipotential surfaces (the pipes) and want to find the wires so we 
          & = 2 \epsilon_0 E_0 \cos \phi
 \end{align*}
 
+\setcounter{subsection}{26}
+\subsection{}
+
+\begin{align*}
+  V(z) & = \ke \sum_{n = 0}^\infty \frac{1}{z^{(n + 1)}} \int (r')^n P_n(\cos \alpha) \rho(\vec{r}') \,d \tau'                                                                                              \\
+       & = \ke \sum_{n = 0}^\infty \frac{1}{z^{(n + 1)}} \int_0^R \int_0^\pi \int_0^{2 \pi} (r')^n P_n(\cos \theta) k \frac{R}{(r')^2} (R - 2 r') \sin \theta (r')^2 \sin \theta \,d r' \,d \theta \,d \phi \\
+       & = \frac{k R}{2 \epsilon_0} \sum_{n = 0}^\infty \frac{1}{z^{(n + 1)}} \int_0^R \int_0^\pi (r')^n (R - 2 r') \sin^2 \theta P_n(\cos \theta) \,d r' \,d \theta                                        \\
+       & \approx \ke \frac{k \pi^2 R^5}{48 z^3}                                                                                                                                                             \\
+\end{align*}
+
+\subsection{}
+
+\begin{align*}
+  V(r, \theta) & = \ke \sum_{n = 0}^\infty \frac{1}{r^{(n + 1)}} \int (r')^n P_n(\cos \alpha) \rho (\vec{r}') \,d \tau'                                \\
+               & = \frac{\lambda R}{4 \pi \epsilon_0} \sum_{n = 0}^\infty \frac{1}{r^{(n + 1)}} \int_0^{2 \pi} R^n P_n(\sin \phi \sin \theta) \,d \phi \\
+  V_0          & = \frac{\lambda R}{4 \pi \epsilon_0} \frac{2 \pi}{r}                                                                                  \\
+               & = \frac{\lambda R}{2 \epsilon_0 r}                                                                                                    \\
+  V_1          & = 0                                                                                                                                   \\
+  V_2          & = -\frac{\lambda R}{4 \pi \epsilon_0} \frac{1}{4 r^3} \pi R^2 (1 + 3 \cos 2 \theta)                                                   \\
+               & = -\frac{\lambda R^3}{8 \epsilon_0 r^3} (3 \cos^2 \theta - 1)
+\end{align*}
+
+\subsection{}
+
+\begin{align*}
+  \vec{p}               & = \sum^n q_i \vec{r}_i'             \\
+                        & = 2 a q \uvec{z}                    \\
+  V_\text{dip}(\vec{r}) & = \ke \frac{2 a q \cos \theta}{r^2}
+\end{align*}
+
+\subsection{}
+
+\begin{enumerate}
+  \item
+
+        \begin{align*}
+          \sigma  & = k \cos \theta                                                                                                                                                          \\
+          \vec{p} & = \int \vec{r}' \,\rho(\vec{r}') \,d \tau'                                                                                                                               \\
+                  & = \int_0^{2 \pi} \int_0^\pi R (\sin \theta \cos \phi \uvec{x} + \sin \theta \sin \phi \uvec{y} + \cos \theta \uvec{z}) k \cos \theta R^2 \sin \theta \,d \theta \,d \phi \\
+                  & = \frac{1}{2} k R^3 \int_0^{2 \pi} \int_0^\pi (\sin \theta \cos \phi \uvec{x} + \sin \theta \sin \phi \uvec{y} + \cos \theta \uvec{z}) \sin 2 \theta \,d \theta \,d \phi \\
+                  & = \frac{4}{3} \pi R^3 k \uvec{z}
+        \end{align*}
+
+  \item
+
+        \begin{align*}
+          V_\text{dip}(\vec{r})   & \approx \ke \frac{\vec{p} \cdot \uvec{r}}{r^2}         \\
+                                  & = \ke \frac{4 \pi R^3 k \cos \theta}{3 r^2}            \\
+                                  & = \frac{k R^3}{3 \epsilon_0} \frac{1}{r^2} \cos \theta \\
+          V_\text{dip}(r, \theta) & = \frac{k R^3}{3 \epsilon_0} \frac{1}{r^2} \cos \theta
+        \end{align*}
+
+        Higher multipoles are all $0$.
+\end{enumerate}
+
+\setcounter{subsection}{31}
+\subsection{}
+
+\begin{enumerate}
+  \item
+
+        \begin{align*}
+          Q       & = 2 q                                                                    \\
+          \vec{p} & = 3 a q \uvec{z}                                                         \\
+          V       & \approx \ke \left( \frac{2 q}{r} + \frac{3 a q \cos \theta}{r^2} \right)
+        \end{align*}
+
+  \item
+
+        \begin{align*}
+          Q       & = 2 q                                                                  \\
+          \vec{p} & = a q \uvec{z}                                                         \\
+          V       & \approx \ke \left( \frac{2 q}{r} + \frac{a q \cos \theta}{r^2} \right)
+        \end{align*}
+
+  \item
+
+        \begin{align*}
+          Q       & = 2 q                                                                              \\
+          \vec{p} & = 3 a q \uvec{y}                                                                   \\
+          V       & \approx \ke \left( \frac{2 q}{r} + \frac{3 a q \sin \theta \sin \phi}{r^2} \right)
+        \end{align*}
+\end{enumerate}
+
+\subsection{}
+
+\begin{enumerate}
+  \item
+
+        \begin{align*}
+          \vec{E} & = -\ke \frac{p}{a^3} \uvec{z}   \\
+          \vec{F} & = -\ke \frac{p q}{a^3} \uvec{z}
+        \end{align*}
+
+  \item
+
+        \begin{align*}
+          \vec{E} & = \ke \frac{2 p}{a^3} \uvec{z}   \\
+          \vec{F} & = \ke \frac{2 p q}{a^3} \uvec{z}
+        \end{align*}
+
+  \item
+
+        \begin{align*}
+          W & = \int \vec{F} \cdot d \vec{l}                                                                                   \\
+            & = \int_0^{\pi / 2} a q \vec{E} \cdot d \vec{\theta}                                                              \\
+            & = \ke \frac{p q}{a^2} \int_0^{\pi / 2} (2 \cos \theta \uvec{r} + \sin \theta \uvec{\theta}) \cdot d \vec{\theta} \\
+            & = \ke \frac{p q}{a^2} \int_0^{\pi / 2} \sin \theta \,d \theta                                                    \\
+            & = \ke \frac{p q}{a^2}
+        \end{align*}
+\end{enumerate}
+
+\subsection{}
+
+\begin{align*}
+  Q       & = -q                                                                               \\
+  \vec{p} & = q a \uvec{z}                                                                     \\
+  V       & = \ke q \left( -\frac{1}{r} + \frac{a \cos \theta}{r^2} \right)                    \\
+  \vec{E} & = -\nabla V                                                                        \\
+          & = \ke \frac{q}{r^3} [(2 a \cos \theta - r) \uvec{r} + a \sin \theta \uvec{\theta}]
+\end{align*}
+
+\subsection{}
+
+\begin{align*}
+  \vec{p}                       & = \int \vec{r}' \rho(\vec{r}') \,d \tau'                                                                                                                           \\
+                                & = \left( \int_0^{2 \pi} \int_0^{\pi / 2} \int_0^R r \cos \theta \rho_0 r^2 \sin \theta \,d r \,d \theta \,d \phi \right.                                           \\
+                                & \qquad \left. - \int_0^{2 \pi} \int_{\pi / 2}^\pi \int_0^R r \cos \theta \rho_0 r^2 \sin \theta \,d r \,d \theta \,d \phi \right) \uvec{z}                         \\
+                                & = \pi \rho_0 \left( \int_0^{\pi / 2} \int_0^R r^3 \sin 2 \theta \,d r \,d \theta - \int_{\pi / 2}^\pi \int_0^R r^3 \sin 2 \theta \,d r \,d \theta \right) \uvec{z} \\
+                                & = \frac{1}{2} \pi \rho_0 R^4 \uvec{z}                                                                                                                              \\
+  \vec{E}_\text{dip}(r, \theta) & = \ke \frac{\pi \rho_0 R^4}{2 r^3} (2 \cos \theta \uvec{r} + \sin \theta \uvec{\theta})
+\end{align*}
+
+\subsection{}
+
+The factor of $1 / 4 \pi \epsilon_0 r^3$ is the common, so the goal is to show that \begin{align*}
+  p (2 \cos \theta \uvec{r} + \sin \theta \uvec{\theta}) & = 2 (\vec{p} \cdot \uvec{r}) \uvec{r} + p \sin \theta \uvec{\theta}                 \\
+                                                         & = 2 (\vec{p} \cdot \uvec{r}) \uvec{r} - (\vec{p} \cdot \uvec{\theta}) \uvec{\theta} \\
+                                                         & = 3 (\vec{p} \cdot \uvec{r}) \uvec{r} - \uvec{p}.
+\end{align*}
+
 \end{document}

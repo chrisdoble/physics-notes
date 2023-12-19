@@ -306,4 +306,44 @@
   \item Thus, in the case of azimuthal symmetry, the most general separable solution to Laplace's equations is \[V(r, \theta) = \sum_{l = 0}^\infty \left( A r^l + \frac{B}{r^{l + 1}} \right) P_l (\cos \theta).\]
 \end{itemize}
 
+\subsection{Multipole Expansion}
+
+\subsubsection{Approximate Potentials at Large Distances}
+
+\begin{itemize}
+  \item A \textbf{physical electric dipole} consists of two equal and opposite charges $\pm q$ separated by a distance $d$.
+
+  \item The potential of a dipole at distance $r \gg d$ is \[V(\vec{r}) = \ke \frac{q d \cos \theta}{r^2}\] where $\theta$ is the angle between the line connecting the charges and the line from the centre of the charges to $\vec{r}$.
+
+  \item If we place a pair of dipoles next to each other to make a \textbf{quadrupole}, the potential goes like $1 / r^3$. A pair of quadrupoles back to back makes an \textbf{octopole}, and the potential goes like $1 / r^4$, etc.
+
+  \item The \textbf{multipole expansion} of a charge distribution is an expansion of its potential in terms of powers of $1 / r$ \[V(\vec{r}) = \ke \sum_{n = 0}^\infty \frac{1}{r^{(n + 1)}} \int (r')^n P_n(\cos \alpha) \rho(\vec{r}') \,d \tau'.\]
+\end{itemize}
+
+\subsubsection{The Monopole and Dipole Terms}
+
+\begin{itemize}
+  \item The dipole term in the multipole expansion is \[V_\text{dip}(\vec{r}) = \ke \frac{1}{r^2} \int r' \cos \alpha \,\rho (\vec{r}') \,d \tau'\] or, since $\cos \alpha$ is the angle between $\vec{r}$ and $\vec{r}'$ \[V_\text{dip}(\vec{r}) = \ke \frac{1}{r^2} \uvec{r} \cdot \int \vec{r}' \rho(\vec{r}') \,d \tau'.\] This integral (which doesn't depend on $\vec{r}$) is called the \textbf{dipole moment} of the distribution \[\vec{p} = \int \vec{r}' \rho(\vec{r}') \,d \tau',\] and the dipole term simplifies to \[V_\text{dip}(\vec{r}) = \ke \frac{\vec{p} \cdot \uvec{r}}{r^2}.\]
+
+  \item The dipole moment for a collection of point charges is \[\vec{p} = \sum^n q_i \vec{r_i}'\] and for physical dipole is \[\vec{p} = q \vec{d}\] where $\vec{d}$ is the vector from the negative charge to the positive charge.
+
+  \item A \textbf{perfect dipole} is one whose potential is described exactly by the dipole term (no higher terms are needed). This occurs when $d \rightarrow 0$ and $q \rightarrow \infty$ while maintaining $q d = p$.
+
+  \item Dipole moments are vectors and add accordingly, e.g. if you have two dipoles $\vec{p}_1$ and $\vec{p}_2$ the total dipole is $\vec{p}_1 + \vec{p}_2$.
+\end{itemize}
+
+\subsubsection{Origin of Coordinates in Multipole Expansions}
+
+\begin{itemize}
+  \item Because the multipole expansion is a power series in inverse powers of $r$ (the distance to the origin), moving the charge or the origin can affect the expansion. For example, a monopole $q$ at the origin has potential $q / 4 \pi \epsilon_0 r$ — exactly the monopole term in the multipole expansion — but if it is moved a distance $d$ from the origin it gains a dipole moment $q d$.
+
+  \item If the total charge is $0$ the dipole moment doesn't change when you move the distribution or the origin.
+\end{itemize}
+
+\subsubsection{The Electric Field of a Dipole}
+
+\begin{itemize}
+  \item The electric field of a dipole with $\vec{p}$ pointing in the $z$ direction is \[\vec{E}_\text{dip}(r, \theta) = \ke \frac{p}{r^3} (2 \cos \theta \uvec{r} + \sin \theta \uvec{\theta}).\]
+\end{itemize}
+
 \end{document}
