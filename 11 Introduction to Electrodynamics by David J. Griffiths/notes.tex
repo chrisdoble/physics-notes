@@ -346,4 +346,48 @@
   \item The electric field of a dipole with $\vec{p}$ pointing in the $z$ direction is \[\vec{E}_\text{dip}(r, \theta) = \ke \frac{p}{r^3} (2 \cos \theta \uvec{r} + \sin \theta \uvec{\theta}).\]
 \end{itemize}
 
+\section{Electric Fields in Matter}
+
+\subsection{Polarization}
+
+\subsubsection{Dielectrics}
+
+\begin{itemize}
+  \item \textbf{Conductors} have an effectively unlimited number of free electrons — typically one or two per atom aren't bound and can move around.
+
+  \item \textbf{Insulators} or \textbf{dielectrics} have no free electrons — they're all bound to atoms.
+\end{itemize}
+
+\subsubsection{Induced Dipoles}
+
+\begin{itemize}
+  \item When a neutral atom is placed in an electric field $\vec{E}$ the positive nucleus experiences a force in the direction of $\vec{E}$ and the negative electron cloud experiences a force in the opposite direction to $\vec{E}$. This causes them to separate slightly and the atom is said to be \textbf{polarized}. This also results in a small dipole moment \[\vec{p} = \alpha \vec{E}\] where $\alpha$ is called the \textbf{atomic polarizability}.
+
+  \item Molecules may have different atomic polarizability constants in different directions. In that case, to calculate the resulting dipole moment you must decompose $\vec{E}$ into the relevant directions and multiply them by the relevant constants.
+
+  \item The most general equation for the induced dipole moment of a molecule is \begin{align*}
+          p_x & = \alpha_{x x} E_x + \alpha_{x y} E_y + \alpha_{x z} E_z \\
+          p_y & = \alpha_{y x} E_x + \alpha_{y y} E_y + \alpha_{y z} E_z \\
+          p_z & = \alpha_{z x} E_x + \alpha_{z y} E_y + \alpha_{z z} E_z
+        \end{align*} where the set of nine constants $\alpha_{i j}$ constitute the \textbf{polarizability tensor}. The values of the polarizability tensor depend on the axes you choose, but it's always possible to choose axes such that it is a diagonal matrix.
+\end{itemize}
+
+\subsubsection{Alignment of Polar Molecules}
+
+\begin{itemize}
+  \item Some molecules have a ``built-in'' dipole moment. These are called \textbf{polar molecules}.
+
+  \item A dipole $\vec{p} = q \vec{d}$ in a uniform electric field $\vec{E}$ experiences a torque \[\vec{\tau} = \vec{p} \times \vec{E}.\] This aligns $\vec{p}$ with $\vec{E}$.
+
+  \item A dipole $\vec{p}$ in a nonuniform electric field $\vec{E}$ also experiences a net force \[\vec{F} = \vec{F}_+ + \vec{F}_- = q (\vec{E}_+ - \vec{E}_-) = q (\Delta \vec{E})\] where $\Delta \vec{E}$ is the difference in electric field between the ends of the dipole. If the dipole is very short then \[\vec{F} = (\vec{p} \cdot \nabla) \vec{E}.\]
+
+  \item The energy of an ideal dipole $\vec{p}$ in an electric field $\vec{E}$ is \[U = -\vec{p} \cdot \vec{E}.\]
+\end{itemize}
+
+\subsubsection{Polarization}
+
+\begin{itemize}
+  \item When an external electric field is applied to a material that consists of neutral atoms or nonpolar molecules, the field will induce in each a small dipole moment pointing in the same direction as the field. If the material consists of polar molecules each will experience a torque aligning it with the field. The net result is that there are many small dipoles pointing in the same direction — the material becomes \textbf{polarized}. A measure of this is \textbf{polarization} $\vec{P}$ which is the dipole moment per unit volume.
+\end{itemize}
+
 \end{document}

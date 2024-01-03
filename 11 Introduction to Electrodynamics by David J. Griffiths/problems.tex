@@ -1788,4 +1788,132 @@ Set $V = 0$ at $x = 0$. The cylinder is a conductor and is thus an equipotential
         \end{align*}
 \end{enumerate}
 
+\section{Electric Fields in Matter}
+
+\subsection{}
+
+\begin{align*}
+  V(x)        & = 500 \frac{x}{d} = \num{500000} x   \\
+  \vec{E}     & = -\nabla V = \qty{-500000}{N/C}     \\
+  \alpha      & = 4 \pi \epsilon_0 (\num{0.667e-30}) \\
+              & = \qty{7.42e-41}{C^2.m/N}            \\
+  \alpha E    & = q d                                \\
+  d           & = \frac{\alpha E}{q}                 \\
+              & = \qty{2.32e-16}{m}                  \\
+  \frac{d}{R} & = \num{4.6e-6}                       \\
+  % Ionisation
+  V           & = \qty{1.88e8}{V}
+\end{align*}
+
+\subsection{}
+
+\begin{align*}
+  \oint \vec{E} \cdot d \vec{a} & = \frac{Q_\text{enc}}{\epsilon_0}                                                                                 \\
+  4 \pi r^2 E                   & = \frac{1}{\epsilon_0} \int_0^{2 \pi} \int_0^\pi \int_0^r \rho(r') r'^2 \sin \theta \,d r' \,d \theta \,d \phi    \\
+                                & = \frac{4 \pi}{\epsilon_0} \int_0^r \frac{q}{\pi a^3} e^{-2 r' / a} r'^2 \,d r'                                   \\
+                                & = \frac{4 q}{\epsilon_0 a^3} \int_0^r e^{-2 r' / a} r'^2 \,d r'                                                   \\
+                                & = \frac{4 q}{\epsilon_0 a^3} \frac{1}{4} a \left[ a^2 - e^{-2 r / a} (a^2 + 2 a r + 2 r^2) \right]                \\
+                                & = \frac{q}{\epsilon_0 a^2} \left[ a^2 - e^{-2 r / a} (a^2 + 2 a r + 2 r^2) \right]                                \\
+  \vec{E}_e(r)                  & = \ke \frac{q}{r^2} \left[ 1 - e^{-2 r / a} \left( 1 + 2 \frac{r}{a} + 2 \frac{r^2}{a^2} \right) \right] \uvec{r} \\
+  E                             & = \ke \frac{q}{d^2} \left( \frac{4}{3} \frac{d^3}{a^3} \right)                                                    \\
+                                & = \ke \frac{4}{3 a^3} (q d)                                                                                       \\
+                                & = \ke \frac{4}{3 a^3} p                                                                                           \\
+                                & = \ke \frac{4}{3 a^3} \alpha E                                                                                    \\
+  \alpha                        & = 3 \pi \epsilon_0 a^3
+\end{align*}
+
+\subsection{}
+
+\begin{align*}
+  \rho(r)                       & = k r                                                                              \\
+  Q_\text{enc}                  & = \int_0^{2 \pi} \int_0^\pi \int_0^r k r'^3 \sin \theta \,d r' \,d \theta \,d \phi \\
+                                & = \pi k r^4                                                                        \\
+  \oint \vec{E} \cdot d \vec{a} & = \frac{Q_\text{enc}}{\epsilon_0}                                                  \\
+  4 \pi r^2 E                   & = \frac{\pi k r^4}{\epsilon_0}                                                     \\
+  \vec{E}                       & = \frac{k r^2}{4 \epsilon_0}                                                       \\
+  E                             & = \frac{k d^2}{4 \epsilon_0}                                                       \\
+  d                             & = \sqrt{\frac{4 \epsilon_0 E}{k}}                                                  \\
+  p                             & = e d                                                                              \\
+                                & = 2 e \sqrt{\frac{\epsilon_0}{k}} \sqrt{E}
+\end{align*}
+
+$p$ is proportional to $\sqrt{E}$.
+
+\subsection{}
+
+\begin{align*}
+  E_q                & = \ke \frac{q}{r^2}                                                      \\
+  p                  & = \alpha E_q                                                             \\
+                     & = \ke \frac{\alpha q}{r^2}                                               \\
+  \vec{E}_\text{dip} & = \ke \frac{p}{r^3} (2 \cos \theta \uvec{r} + \sin \theta \uvec{\theta}) \\
+  E_\text{dip}       & = \ke \frac{2 p}{r^3}                                                    \\
+                     & = \ke \frac{2}{r^3} \left( \ke \frac{\alpha q}{r^2} \right)              \\
+                     & = \left( \ke \right)^2 \frac{2 \alpha q}{r^5}                            \\
+  F                  & = \left( \ke \right)^2 \frac{2 \alpha q^2}{r^5}                          \\
+\end{align*}
+
+\subsection{}
+
+\begin{align*}
+  % Torque on p_1 due to p_2
+  \vec{E}_{p_1}    & = -\ke \frac{p_1}{r^3} \uvec{z}                       \\
+  \vec{\tau}_{p_2} & = \vec{p}_2 \times \vec{E}_{p_1}                      \\
+                   & = p_2 \uvec{x} \times -\ke \frac{p_1}{r^3} \uvec{z}   \\
+                   & = \ke \frac{p_1 p_2}{r^3} \uvec{y}                    \\
+  % Torque on p_2 due to p_1
+  \vec{E}_{p_2}    & = \ke \frac{2 p_2}{r^3} \uvec{x}                      \\
+  \vec{\tau}_{p_1} & = \vec{p}_1 \times \vec{E}_{p_2}                      \\
+                   & = p_1 \uvec{z} \times -\ke \frac{2 p_2}{r^3} \uvec{x} \\
+                   & = \ke \frac{2 p_1 p_2}{r^3} \uvec{y}
+\end{align*}
+
+\subsection{}
+
+\begin{align*}
+  \vec{E}_i  & = \ke \frac{p}{8 z^3} (\sin \theta \uvec{x} + 2 \cos \theta \uvec{y}) \\
+  \vec{\tau} & = \vec{p} \times \vec{E}_i                                            \\
+             & = p \begin{pmatrix}
+                     \sin \theta \\
+                     \cos \theta \\
+                     0
+                   \end{pmatrix} \times \ke \frac{p}{8 z^3} \begin{pmatrix}
+                                                              \sin \theta   \\
+                                                              2 \cos \theta \\
+                                                              0
+                                                            \end{pmatrix}           \\
+             & = \ke \frac{p^2 \sin 2 \theta}{16 z^3} \uvec{z}
+\end{align*}
+
+The dipole will come to rest at $\theta = n \pi, n \in \mathbb{Z}$.
+
+\setcounter{subsection}{7}
+\subsection{}
+
+\begin{align*}
+  U & = -\vec{p}_1 \cdot \vec{E}                                                                                \\
+    & = -\vec{p}_1 \cdot \ke \frac{1}{r^3} [3 (\vec{p}_2 \cdot \uvec{r}) \uvec{r} - \vec{p}_2]                  \\
+    & = \ke \frac{1}{r^3} [\vec{p}_1 \cdot \vec{p}_2 - 3 (\vec{p}_1 \cdot \uvec{r}) (\vec{p}_2 \cdot \uvec{r})]
+\end{align*}
+
+\subsection{}
+
+\begin{enumerate}
+  \item
+
+        \begin{align*}
+          \vec{E} & = \frac{q}{4 \pi \epsilon_0} \frac{x \uvec{x} + y \uvec{y} + z \uvec{z}}{(x^2 + y^2 + z^2)^{3 / 2}}                                                                                 \\
+          F_x     & = (\vec{p} \cdot \nabla) \vec{E}                                                                                                                                                    \\
+                  & = \left( p_x \frac{\partial}{\partial x} + p_y \frac{\partial}{\partial y} + p_z \frac{\partial}{\partial z} \right) \frac{q}{4 \pi \epsilon_0} \frac{x}{(x^2 + y^2 + z^2)^{3 / 2}} \\
+                  & = \frac{q}{4 \pi \epsilon_0} \left[ p_x \left( \frac{1}{(x^2 + y^2 + z^2)^{3 / 2}} - 3 x \frac{x}{(x^2 + y^2 + z^2)^{5 / 2}} \right) \right.                                        \\
+                  & \qquad \left. + p_y \left( -3x \frac{y}{(x^2 + y^2 + z^2)^{5 / 2}} \right) + p_z \left( -3 x \frac{z}{(x^2 + y^2 + z^2)^{5 / 2}} \right) \right]                                    \\
+                  & = \frac{q}{4 \pi \epsilon_0} \left( \frac{p_x}{r^3} - 3 x \frac{p_x x + p_y y + p_z z}{r^5} \right)                                                                                 \\
+                  & = \frac{q}{4 \pi \epsilon_0} \left[ \frac{\vec{p}}{r^3} - \frac{3 \vec{r} (\vec{p} \cdot \vec{r})}{r^5} \right]_x                                                                   \\
+          \vec{F} & = \ke \frac{q}{r^3} [\vec{p} - 3 (\vec{p} \cdot \uvec{r}) \uvec{r}]
+        \end{align*}
+
+  \item
+
+        \[\vec{F} = \ke \frac{q}{r^3} [3 (\vec{p} \cdot \uvec{r}) \uvec{r} - \vec{p}]\]
+\end{enumerate}
+
 \end{document}
