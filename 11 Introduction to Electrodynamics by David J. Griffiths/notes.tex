@@ -398,4 +398,35 @@
   \item The potential of a polarized object is equal to that produced by a surface charge density $\sigma_b = \vec{P} \cdot \uvec{n}$ and volume charge density $\rho_b = -\nabla \cdot \vec{P}$, i.e. \[V(\vec{r}) = \ke \oint_\mathcal{S} \frac{\sigma_b}{\rcurs} \,d a' + \ke \int_\mathcal{V} \frac{\rho_b}{\rcurs} \,d \tau'.\] These are called \textbf{bound charges}.
 \end{itemize}
 
+\subsection{The Electric Displacement}
+
+\subsubsection{Gauss's Law in the Presence of Dielectrics}
+
+\begin{itemize}
+  \item Any charge that is not a result of polarization is called \textbf{free charge} $\rho_f$.
+
+  \item The total charge density is thus \[\rho = \rho_b + \rho_f\] and Gauss's law reads \begin{align*}
+          \epsilon_0 \nabla \cdot \vec{E} & = \rho                            \\
+                                          & = \rho_b + \rho_f                 \\
+                                          & = -\nabla \cdot \vec{P} + \rho_f.
+        \end{align*} If we introduce the \textbf{electric displacement} \[\vec{D} = \epsilon_0 \vec{E} + \vec{P}\] then Gauss's law reads \[\nabla \cdot \vec{D} = \rho_f\] or \[\oint \vec{D} \cdot d \vec{a} = Q_{f_\text{enc}}.\]
+\end{itemize}
+
+\subsubsection{A Deceptive Parallel}
+
+\begin{itemize}
+  \item The curl of $\vec{D}$ is not always zero because \[\nabla \times \vec{D} = \epsilon_0 (\nabla \times \vec{E}) + (\nabla \times \vec{P}) = \nabla \times \vec{P}.\]
+
+  \item As it's curl isn't always zero, there is no scalar potential for $\vec{D}$. If a problem doesn't exhibit the required symmetry to apply Gauss's law for dielectrics we can't fall back on an equivalent of Couloumb's law.
+\end{itemize}
+
+\subsubsection{Boundary Conditions}
+
+\begin{itemize}
+  \item Like $\vec{E}$, $\vec{D}$ exhibits discontinuities across boundaries \begin{align*}
+          D_\text{above}^\perp - D_\text{below}^\perp                     & = \sigma_f                                                         \\
+          \vec{D}_\text{above}^\parallel - \vec{D}_\text{below}^\parallel & = \vec{P}_\text{above}^\parallel - \vec{P}_\text{below}^\parallel.
+        \end{align*}
+\end{itemize}
+
 \end{document}
