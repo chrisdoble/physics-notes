@@ -1916,4 +1916,74 @@ The dipole will come to rest at $\theta = n \pi, n \in \mathbb{Z}$.
         \[\vec{F} = \ke \frac{q}{r^3} [3 (\vec{p} \cdot \uvec{r}) \uvec{r} - \vec{p}]\]
 \end{enumerate}
 
+\subsection{}
+
+\begin{enumerate}
+  \item
+
+        \begin{align*}
+          \vec{P}  & = k \vec{r}                                          \\
+          \sigma_b & = \vec{P} \cdot \uvec{n}                             \\
+                   & = k R                                                \\
+          \rho_b   & = -\nabla \cdot \vec{P}                              \\
+                   & = -\frac{1}{r^2} \frac{\partial}{\partial r} (k r^3) \\
+                   & = -3 k
+        \end{align*}
+
+  \item
+
+        \begin{align*}
+          \oint \vec{E}_\text{inside} \cdot d \vec{a}  & = \frac{Q_\text{encl}}{\epsilon_0}                                                                                                   \\
+          4 \pi r^2 E_\text{inside}                    & = \frac{1}{\epsilon_0} \int_0^{2 \pi} \int_0^\pi \int_0^r -3 k r'^2 \sin \theta \,d r' \,d \theta \,d \phi                           \\
+                                                       & = -\frac{12 \pi k}{\epsilon_0} \int_0^r r'^2 \,d r'                                                                                  \\
+                                                       & = -\frac{4 \pi k r^3}{\epsilon_0}                                                                                                    \\
+          \vec{E}_\text{inside}                        & = -\frac{k r}{\epsilon_0} \uvec{r}                                                                                                   \\
+                                                       & = -\frac{k}{\epsilon_0} \vec{r}                                                                                                      \\
+          \oint \vec{E}_\text{outside} \cdot d \vec{a} & = \frac{Q_\text{encl}}{\epsilon_0}                                                                                                   \\
+          4 \pi r^2 E_\text{outside}                   & = \frac{1}{\epsilon_0} \left( 4 \pi k R^3 - \int_0^{2 \pi} \int_0^\pi \int_0^R 3 k r^2 \sin \theta \,d r \,d \theta \,d \phi \right) \\
+                                                       & = \frac{1}{\epsilon_0} \left( 4 \pi k R^3 - 4 \pi k R^3 \right)                                                                      \\
+          \vec{E}_\text{outside}                       & = \vec{0}
+        \end{align*}
+\end{enumerate}
+
+\subsection{}
+
+\begin{align*}
+  \sigma_b & = \vec{P} \cdot \uvec{n}       \\
+           & = \begin{cases}
+                 0  & \text{on the side}      \\
+                 P  & \text{on one end}       \\
+                 -P & \text{on the other end}
+               \end{cases} \\
+  \rho_b   & = -\nabla \cdot \vec{P}        \\
+           & = 0
+\end{align*}
+
+\setcounter{subsection}{12}
+\subsection{}
+
+\begin{align*}
+  % The field inside a uniformly charged cylinder
+  \oint \vec{E}_\text{inside} \cdot d \vec{a}  & = \frac{Q_\text{encl}}{\epsilon_0}                                                             \\
+  2 \pi s L E_\text{inside}                    & = \frac{\pi s^2 L \rho}{\epsilon_0}                                                            \\
+  \vec{E}_\text{inside}                        & = \frac{\rho s}{2 \epsilon_0} \uvec{s}                                                         \\
+  % For overlapping positive and negative cylinders
+  \vec{E}_\text{inside}                        & = \frac{\rho}{2 \epsilon_0} (\vec{s}_+ - \vec{s}_-)                                            \\
+                                               & = -\frac{\rho \vec{d}}{2 \epsilon_0}                                                           \\
+                                               & = -\frac{\vec{P}}{2 \epsilon_0}                                                                \\
+  % The field outside a uniformly charged cylidner
+  \oint \vec{E}_\text{outside} \cdot d \vec{a} & = \frac{Q_\text{encl}}{\epsilon_0}                                                             \\
+  2 \pi s L E_\text{outisde}                   & = \frac{\pi a^2 L \rho}{\epsilon_0}                                                            \\
+  \vec{E}_\text{outside}                       & = \frac{a^2 \rho}{2 \epsilon_0 s} \uvec{s}                                                     \\
+  % For overlapping positive and negative cylinders
+  \vec{E}_\text{outside}                       & = \frac{a^2 \rho}{2 \epsilon_0} \left( \frac{\uvec{s}_+}{s_+} - \frac{\uvec{s}_-}{s_-} \right)
+\end{align*}
+
+\subsection{}
+
+\begin{align*}
+  \oint_\mathcal{S} \vec{P} \cdot \uvec{n} - \int_\mathcal{V} \nabla \cdot \vec{P} \,d \tau' & = \oint_\mathcal{S} \vec{P} \cdot \uvec{n} - \oint_\mathcal{S} \vec{P} \cdot \uvec{n} \\
+                                                                                             & = 0
+\end{align*}
+
 \end{document}
