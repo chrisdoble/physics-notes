@@ -2042,4 +2042,298 @@ The dipole will come to rest at $\theta = n \pi, n \in \mathbb{Z}$.
         \end{align*}
 \end{enumerate}
 
+\setcounter{subsection}{17}
+\subsection{}
+
+\begin{enumerate}
+  \item
+
+        \begin{align*}
+          % Electric field of an infinite plane
+          \oint \vec{E} \cdot d \vec{a} & = \frac{Q_\text{enc}}{\epsilon_0}      \\
+          2 A E                         & = \frac{A \sigma}{\epsilon_0}          \\
+          \vec{E}                       & = \frac{\sigma}{2 \epsilon_0} \uvec{n} \\
+          % Electric field between the plates
+          \vec{E}_\text{vac}            & = -\frac{\sigma}{\epsilon_0} \uvec{y}  \\
+          % Displacement fields of the two slabs
+          \vec{D}                       & = \epsilon_0 \vec{E}_\text{vac}        \\
+                                        & = -\sigma \uvec{y}
+        \end{align*}
+
+  \item
+
+        \begin{align*}
+          \vec{E}_1 & = \frac{1}{\epsilon_1} \vec{D}            \\
+                    & = -\frac{\sigma}{2 \epsilon_0} \uvec{y}   \\
+          \vec{E}_2 & = \frac{1}{\epsilon_2} \vec{D}            \\
+                    & = -\frac{\sigma}{1.5 \epsilon_0} \uvec{y}
+        \end{align*}
+
+  \item
+
+        \begin{align*}
+          \vec{P}_1 & = \epsilon_0 \chi_{e 1} \vec{E}_1 \\
+                    & = -\frac{\sigma}{2} \uvec{y}      \\
+          \vec{P}_2 & = \epsilon_0 \chi_{e 2} \vec{E}_2 \\
+                    & = -\frac{\sigma}{3} \uvec{y}
+        \end{align*}
+
+  \item
+
+        \begin{align*}
+          V & = a \frac{\sigma}{2 \epsilon_0} + a \frac{2 \sigma}{3 \epsilon_0}      \\
+            & = \frac{a \sigma}{\epsilon_0} \left( \frac{3}{6} + \frac{4}{6} \right) \\
+            & = \frac{7 a \sigma}{6 \epsilon_0}
+        \end{align*}
+
+  \item
+
+        \begin{align*}
+          \sigma_{b1,\text{top}}    & = \vec{P}_1 \cdot \uvec{y}  \\
+                                    & = -\frac{\sigma}{2}         \\
+          \sigma_{b1,\text{bottom}} & = \vec{P}_1 \cdot -\uvec{y} \\
+                                    & = \frac{\sigma}{2}          \\
+          \sigma_{b2,\text{top}}    & = \vec{P}_2 \cdot \uvec{y}  \\
+                                    & = -\frac{\sigma}{3}         \\
+          \sigma_{b2,\text{bottom}} & = \vec{P}_2 \cdot -\uvec{y} \\
+                                    & = \frac{\sigma}{3}
+        \end{align*}
+
+  \item
+
+        \begin{align*}
+          \vec{E}_1 & = -\frac{\sigma}{\epsilon_0} \uvec{y} + \frac{\sigma}{2 \epsilon_0} \uvec{y} \\
+                    & = -\frac{\sigma}{2 \epsilon_0} \uvec{y}                                      \\
+          \vec{E}_2 & = -\frac{\sigma}{\epsilon_0} \uvec{y} + \frac{\sigma}{3 \epsilon_0} \uvec{y} \\
+                    & = -\frac{2 \sigma}{3 \epsilon_0} \uvec{y}
+        \end{align*}
+\end{enumerate}
+
+\subsection{}
+
+\begin{align*}
+  Q                       & = A \sigma                                                                 \\
+  E_\text{vac}            & = \frac{\sigma}{\epsilon_0}                                                \\
+  V_\text{vac}            & = \frac{d \sigma}{\epsilon_0}                                              \\
+  C_\text{vac}            & = \frac{Q}{V_\text{vac}}                                                   \\
+                          & = \frac{A \epsilon_0}{d}                                                   \\
+  E'                      & = \frac{1}{\epsilon_r} E_\text{vac}                                        \\
+                          & = \frac{\sigma}{\epsilon_0 \epsilon_r}                                     \\
+  V'                      & = \frac{d \sigma}{2 \epsilon_0} + \frac{d \sigma}{2 \epsilon_0 \epsilon_r} \\
+                          & = \frac{d \sigma}{2 \epsilon_0} \left( 1 + \frac{1}{\epsilon_r} \right)    \\
+                          & = \frac{d \sigma (1 + \epsilon_r)}{2 \epsilon_0 \epsilon_r}                \\
+  C'                      & = \frac{Q}{V'}                                                             \\
+                          & = \frac{2 A \epsilon_0 \epsilon_r}{d (1 + \epsilon_r)}                     \\
+  \frac{C'}{C_\text{vac}} & = \frac{2 \epsilon_r}{1 + \epsilon_r}
+\end{align*}
+
+\begin{align*}
+  % Assuming a fixed potential V
+  % Calculate sigma for the vacuum half
+  E                      & = \frac{\sigma}{\epsilon_0}                                                               \\
+  \sigma                 & = \epsilon_0 E                                                                            \\
+                         & = \epsilon_0 \frac{V}{d}                                                                  \\
+  % Calculate sigma for the dielectric half
+  P                      & = \epsilon_0 \chi_e E                                                                     \\
+                         & = \epsilon_0 \chi_e \frac{V}{d}                                                           \\
+  \sigma_b               & = -\epsilon_0 \chi_e \frac{V}{d}                                                          \\
+  \sigma_\text{total}    & = \sigma_f + \sigma_b                                                                     \\
+  \epsilon_0 \frac{V}{d} & = \sigma_f - \epsilon_0 \chi_e \frac{V}{d}                                                \\
+  \sigma_f               & = \epsilon_0 \frac{V}{d} + \epsilon_0 \chi_e \frac{V}{d}                                  \\
+                         & = \epsilon_0 \frac{V}{d} (1 + \chi_e)                                                     \\
+                         & = \frac{\epsilon_0 \epsilon_r V}{d}                                                       \\
+  C'                     & = \frac{Q'}{V}                                                                            \\
+                         & = \frac{1}{V} \left( \frac{A \sigma}{2} + \frac{A \sigma_f}{2} \right)                    \\
+                         & = \frac{A}{2 V} \left( \frac{\epsilon_0 V}{d} + \frac{\epsilon_0 \epsilon_r V}{d} \right) \\
+                         & = \frac{A \epsilon_0 (1 + \epsilon_r)}{2 d}                                               \\
+  \frac{C'}{C}           & = \frac{1 + \epsilon_r}{2}
+\end{align*}
+
+\subsection{}
+
+\begin{align*}
+  % Inside the sphere. Apply Gauss's law in a dielectric.
+  \oint \vec{D} \cdot d \vec{a} & = Q_\text{f}                                                                                                                                                   \\
+  4 \pi r^2 D                   & = \frac{4}{3} \pi r^3 \rho                                                                                                                                     \\
+  \vec{D}                       & = \frac{r \rho}{3} \uvec{r}                                                                                                                                    \\
+  \vec{D}                       & = \epsilon \vec{E}                                                                                                                                             \\
+  \vec{E}                       & = \frac{1}{\epsilon} \vec{D}                                                                                                                                   \\
+                                & = \frac{r \rho}{3 \epsilon_0 \epsilon_r} \uvec{r}, \,r < R                                                                                                     \\
+  % Outside the sphere. Apply Gauss's law.
+  \oint \vec{E} \cdot d \vec{a} & = \frac{Q_\text{enc}}{\epsilon_0}                                                                                                                              \\
+  4 \pi r^2 E                   & = \frac{1}{\epsilon_0} \frac{4}{3} \pi R^3 \rho                                                                                                                \\
+  \vec{E}                       & = \frac{R^3 \rho}{3 \epsilon_0 r^2} \uvec{r}, \,r > R                                                                                                          \\
+  % Calculate the potential at the origin.
+  V                             & = -\int_\infty^0 \vec{E} \cdot d \vec{l}                                                                                                                       \\
+                                & = -\left( \int_\infty^R \frac{R^3 \rho}{3 \epsilon_0 r^2} \,d r + \int_R^0 \frac{r \rho}{3 \epsilon_0 \epsilon_r} \,d r \right)                                \\
+                                & = -\left( \frac{R^3 \rho}{3 \epsilon_0} \left[ -\frac{1}{r} \right]_\infty^R + \frac{\rho}{3 \epsilon_0 \epsilon_r} \left[ \frac{1}{2} r^2 \right]_R^0 \right) \\
+                                & = -\left( -\frac{R^2 \rho}{3 \epsilon_0} - \frac{R^2 \rho}{6 \epsilon_0 \epsilon_r} \right)                                                                    \\
+                                & = \frac{R^2 \rho}{3 \epsilon_0} \left( 1 + \frac{1}{2 \epsilon_r} \right)
+\end{align*}
+
+\subsection{}
+
+\begin{align*}
+  % Electric field inside the cable without the dielectric
+  \oint \vec{E} \cdot d \vec{a} & = \frac{Q_\text{enc}}{\epsilon_0}                                                                                            \\
+  2 \pi s L E                   & = \frac{\pi a^2 L \rho}{\epsilon_0}                                                                                          \\
+  \vec{E}                       & = \frac{a^2 \rho}{2 \epsilon_0 s} \uvec{s}, \,a < s < b                                                                      \\
+  % Electric field inside the dielectric
+  \vec{E}                       & = \frac{\vec{E}_\text{vac}}{\epsilon_r}                                                                                      \\
+                                & = \frac{a^2 \rho}{2 \epsilon_0 \epsilon_r s} \uvec{s}, \,b < s < c                                                           \\
+  % Potential
+  V                             & = -\int_c^a \vec{E} \cdot d \vec{l}                                                                                          \\
+                                & = -\left( \int_c^b \frac{a^2 \rho}{2 \epsilon_0 \epsilon_r s} \,d s + \int_b^a \frac{a^2 \rho}{2 \epsilon_0 s} \,d s \right) \\
+                                & = -\left( \frac{a^2 \rho}{2 \epsilon_0 \epsilon_r} \ln \frac{b}{c} + \frac{a^2 \rho}{2 \epsilon_0} \ln \frac{a}{b} \right)   \\
+                                & = \frac{a^2 \rho}{2 \epsilon_0} \left( \ln \frac{b}{a} + \frac{1}{\epsilon_r} \ln \frac{c}{b} \right)                        \\
+  C                             & = \frac{Q}{V}                                                                                                                \\
+                                & = \frac{\pi a^2 \rho}{\frac{a^2 \rho}{2 \epsilon_0} \left( \ln \frac{b}{a} + \frac{1}{\epsilon_r} \ln \frac{c}{b} \right)}   \\
+                                & = \frac{2 \pi \epsilon_0}{\ln \frac{b}{a} + \frac{1}{\epsilon_r} \ln \frac{c}{b}}
+\end{align*}
+
+\subsection{}
+
+\begin{align*}
+  V_\text{in}(a, \phi)                                                                        & = V_\text{out}(a, \phi)                                                                                             \\
+  \epsilon \left. \frac{\partial V_\text{in}}{\partial s} \right|_{s = a}                     & = \epsilon_0 \left. \frac{\partial V_\text{out}}{\partial s} \right|_{s = a}                                        \\
+  V_\text{out}                                                                                & \rightarrow -E_0 s \cos \phi, \text{ for } s \gg a                                                                  \\
+  V_\text{in}                                                                                 & = \sum_{k = 1}^\infty s^k (a_k \cos k \phi + b_k \sin k \phi)                                                       \\
+  V_\text{out}                                                                                & = -E_0 s \cos \phi + \sum_{k = 1}^\infty s^{-k} (c_k \cos k \phi + d_k \sin k \phi)                                 \\
+  % Boundary condition 1
+  \sum_{k = 1}^\infty a^k (a_k \cos k \phi + b_k \sin k \phi)                                 & = -E_0 a \cos \phi + \sum_{k = 1}^\infty a^{-k} (c_k \cos k \phi + d_k \sin k \phi)                                 \\
+  a a_1                                                                                       & = \frac{c_1}{a} - E_0 a                                                                                             \\
+  a_1                                                                                         & = \frac{c_1}{a^2} - E_0                                                                                             \\
+  a^k a_k                                                                                     & = a^{-k} c_k                                                                                                        \\
+  a_k                                                                                         & = a^{-2 k} c_k, \text{ for } k \ne 1                                                                                \\
+  a^k b_k                                                                                     & = a^{-k} d_k                                                                                                        \\
+  b_k                                                                                         & = a^{-2 k} d_k                                                                                                      \\
+  % Boundary condition 2
+  \epsilon_0 (1 + \chi_e) \sum_{k = 1}^\infty k a^{k - 1} (a_k \cos k \phi + b_k \sin k \phi) & = \epsilon_0 \left( -E_0 \cos \phi - \sum_{k = 1}^\infty k a^{-(k + 1)} (c_k \cos k \phi + d_k \sin k \phi) \right) \\
+  (1 + \chi_e) a_1                                                                            & = -\left( E_0 + \frac{c_1}{a^2} \right)                                                                             \\
+  a_1                                                                                         & = -\frac{1}{1 + \chi_e} \left( E_0 + \frac{c_1}{a^2} \right)                                                        \\
+  \frac{c_1}{a^2} - E_0                                                                       & = -\frac{1}{1 + \chi_e} \left( E_0 + \frac{c_1}{a^2} \right)                                                        \\
+  c_1 - a^2 E_0                                                                               & = -\frac{1}{1 + \chi_e} (a^2 E_0 + c_1)                                                                             \\
+  c_1 \frac{2 + \chi_e}{1 + \chi_e}                                                           & = a^2 E_0 \frac{\chi_e}{1 + \chi_e}                                                                                 \\
+  c_1                                                                                         & = a^2 E_0 \frac{\chi_e}{2 + \chi_e}                                                                                 \\
+  a_1                                                                                         & = E_0 \left( \frac{\chi_e}{2 + \chi_e} - 1 \right)                                                                  \\
+                                                                                              & = -\frac{E_0}{1 + \chi_e / 2}
+\end{align*}
+
+\begin{align*}
+  (1 + \chi_e) a^{k - 1} a_k & = -a^{-(k + 1)} c_k                                 \\
+  a_k                        & = -\frac{1}{1 + \chi_e} a^{-2 k} c_k                \\
+  a^{-2 k} c_k               & = -\frac{1}{1 + \chi_e} a^{-2 k} c_k                \\
+  c_k                        & = 0                                                 \\
+  a_k                        & = 0                                                 \\
+  (1 + \chi_e) a^{k - 1} b_k & = -a^{-(k + 1)} d_k                                 \\
+  b_k                        & = -\frac{1}{1 + \chi_e} a^{-2 k} d_k                \\
+  a^{-2 k} d_k               & = -\frac{1}{1 + \chi_e} a^{-2 k} d_k                \\
+  d_k                        & = 0                                                 \\
+  b_k                        & = 0                                                 \\
+  V_\text{in}                & = -\frac{E_0}{1 + \chi_e / 2} s \cos \phi           \\
+                             & = -\frac{E_0}{1 + \chi_e / 2} x                     \\
+  \vec{E}_\text{in}          & = -\frac{\partial V_\text{in}}{\partial x} \uvec{x} \\
+                             & = \frac{\vec{E}_0}{1 + \chi_e / 2}
+\end{align*}
+
+\subsection{}
+
+\begin{align*}
+  \vec{P}_0 & = \epsilon_0 \chi_e \vec{E}_0                                      \\
+  \vec{E}_1 & = -\frac{1}{3 \epsilon_0} \vec{P}_0                                \\
+            & = -\frac{\chi_e}{3} \vec{E}_0                                      \\
+  \vec{P}_1 & = \epsilon_0 \chi_e \vec{E}_1                                      \\
+            & = -\frac{\epsilon_0 \chi_e^2}{3} \vec{E}_0                         \\
+  \vec{E}_2 & = -\frac{1}{3 \epsilon_0} \vec{P}_1                                \\
+            & = \frac{\chi_e^2}{9} \vec{E}_0                                     \\
+  \vec{E}_n & = \left( -\frac{\chi_e}{3} \right)^n \vec{E}_0                     \\
+  \vec{E}   & = \sum_{n = 0}^\infty \vec{E}_n                                    \\
+            & = \vec{E}_0 \sum_{n = 0}^\infty \left( -\frac{\chi_e}{3} \right)^n \\
+            & = \frac{3}{3 + \chi_e} \vec{E}_0                                   \\
+            & = \frac{3}{2 + \epsilon_r} \vec{E}_0
+\end{align*}
+
+\setcounter{subsection}{25}
+\subsection{}
+
+\begin{align*}
+  \vec{D}               & = \begin{cases}
+                              \vec{0}                      & r < a     \\
+                              \frac{Q}{4 \pi r^2} \uvec{r} & a < r < b \\
+                              \frac{Q}{4 \pi r^2} \uvec{r} & b < r
+                            \end{cases}                                                                                          \\
+  \vec{E}               & = \begin{cases}
+                              \vec{0}                                                        & r < a     \\
+                              \frac{1}{4 \pi \epsilon_0 (1 + \chi_e)} \frac{Q}{r^2} \uvec{r} & a < r < b \\
+                              \frac{1}{4 \pi \epsilon_0} \frac{Q}{r^2} \uvec{r}              & b < r
+                            \end{cases}                                                        \\
+  \vec{D} \cdot \vec{E} & = \begin{cases}
+                              0                                                & r < a     \\
+                              \frac{Q^2}{16 \pi^2 \epsilon_0 (1 + \chi_e) r^4} & a < r < b \\
+                              \frac{Q^2}{16 \pi^2 \epsilon_0 r^4}              & b < r
+                            \end{cases}                                                                      \\
+  W                     & = \frac{1}{2} \int \vec{D} \cdot \vec{E} \,d \tau                                                                                   \\
+                        & = \frac{1}{2} \int_0^{2 \pi} \int_0^\pi \int_0^\infty \vec{D} \cdot \vec{E} \ r^2 \sin \theta \,d r \,d \theta \,d \phi             \\
+                        & = \frac{Q^2}{8 \pi \epsilon_0} \left( \frac{1}{1 + \chi_e} \int_a^b \frac{1}{r^2} \,d r + \int_b^\infty \frac{1}{r^2} \,d r \right) \\
+                        & = \frac{Q^2}{8 \pi \epsilon_0} \left[ \frac{1}{1 + \chi_e} \left( \frac{1}{a} - \frac{1}{b} \right) + \frac{1}{b} \right]           \\
+                        & = \frac{Q^2}{8 \pi \epsilon_0 (1 + \chi_e)} \left( \frac{1}{a} + \frac{\chi_e}{b} \right)
+\end{align*}
+
+\subsection{}
+
+\begin{align*}
+  \vec{E} & = \begin{cases}
+                -\frac{\vec{P}}{3 \epsilon_0}                                                       & r < R \\
+                \frac{R^3 P}{3 \epsilon_0 r^3} (2 \cos \theta \uvec{r} + \sin \theta \uvec{\theta}) & r > R
+              \end{cases}                                                                                                                          \\
+  E^2     & = \begin{cases}
+                \frac{P^2}{9 \epsilon_0^2}                               & r < R \\
+                \frac{R^6 P^2}{9 \epsilon_0^2 r^6} (1 + 3 \cos^2 \theta) & r > R
+              \end{cases}                                                                                                                                                                     \\
+  W       & = \frac{\epsilon_0}{2} \int E^2 \,d \tau                                                                                                                                                                                               \\
+          & = \frac{\epsilon_0}{2} \int_0^{2 \pi} \int_0^\pi \int_0^\infty E^2 r^2 \sin \theta \,d r \,d \theta \,d \phi                                                                                                                           \\
+          & = \epsilon_0 \pi \left( \frac{P^2}{9 \epsilon_0^2} \int_0^\pi \int_0^R r^2 \sin \theta \,d r \,d \theta + \frac{R^6 P^2}{9 \epsilon_0^2} \int_0^\pi \int_R^\infty \frac{1 + 3 \cos^2 \theta}{r^4} \sin \theta \,d r \,d \theta \right) \\
+          & = \epsilon_0 \pi \left( \frac{2 P^2 R^3}{27 \epsilon_0^2} + \frac{4 P^2 R^3}{27 \epsilon_0^2} \right)                                                                                                                                  \\
+          & = \frac{2 \pi P^2 R^3}{9 \epsilon_0}                                                                                                                                                                                                   \\
+  W       & = \frac{1}{2} \int \vec{D} \cdot \vec{E} \,d \tau
+\end{align*}
+
+\subsection{}
+
+\begin{align*}
+  % Air
+  \oint \vec{E} \cdot d \vec{a}                   & = \frac{Q_\text{encl}}{\epsilon_0}                                       \\
+  2 \pi s L E                                     & = \frac{\lambda L}{\epsilon_0}                                           \\
+  \vec{E}                                         & = \frac{\lambda}{2 \pi \epsilon_0 s} \uvec{s}                            \\
+  V                                               & = \int_a^b \vec{E} \cdot d \vec{l}                                       \\
+                                                  & = \frac{\lambda}{2 \pi \epsilon_0} \ln \frac{b}{a}                       \\
+  % Oil
+  \oint \vec{D} \cdot d \vec{a}                   & = Q_\text{encl,f}                                                        \\
+  2 \pi s L D                                     & = \lambda' L                                                             \\
+  \vec{D}                                         & = \frac{\lambda'}{2 \pi s} \uvec{s}                                      \\
+  \vec{E}                                         & = \frac{\lambda'}{2 \pi \epsilon s} \uvec{s}                             \\
+  V                                               & = \int_a^b \vec{E} \cdot d \vec{l}                                       \\
+                                                  & = \frac{\lambda'}{2 \pi \epsilon} \ln \frac{b}{a}                        \\
+  % Potential is fixed, so…
+  \frac{\lambda'}{2 \pi \epsilon} \ln \frac{b}{a} & = \frac{\lambda}{2 \pi \epsilon_0} \ln \frac{b}{a}                       \\
+  \lambda'                                        & = \epsilon_r \lambda                                                     \\
+  Q                                               & = \lambda' h + \lambda (\ell - h)                                        \\
+                                                  & = (\epsilon_r h + \ell - h) \lambda                                      \\
+                                                  & = (\chi_e h + \ell) \lambda                                              \\
+  C                                               & = \frac{Q}{V}                                                            \\
+                                                  & = (\chi_e h + \ell) \lambda \frac{2 \pi \epsilon_0}{\lambda \ln (b / a)} \\
+                                                  & = 2 \pi \epsilon_0 \frac{\chi_e h + \ell}{\ln (b / a)}                   \\
+  \frac{d C}{d h}                                 & = \frac{2 \pi \epsilon_0 \chi_e}{\ln (b / a)}
+\end{align*}
+
+\begin{align*}
+  F_\text{up}              & = \frac{1}{2} V^2 \frac{d C}{d h}                              \\
+                           & = \frac{\pi \epsilon_0 \chi_e V^2}{\ln (b / a)}                \\
+  F_\text{down}            & = m g                                                          \\
+                           & = \pi (b^2 - a^2) h \rho g                                     \\
+  F_\text{down}            & = F_\text{up}                                                  \\
+  \pi (b^2 - a^2) h \rho g & = \frac{\pi \epsilon_0 \chi_e V^2}{\ln (b / a)}                \\
+  h                        & = \frac{\epsilon_0 \chi_e V^2}{\rho g (b^2 - a^2) \ln (b / a)}
+\end{align*}
+
 \end{document}

@@ -429,4 +429,39 @@
         \end{align*}
 \end{itemize}
 
+\subsection{Linear Dielectrics}
+
+\subsubsection{Susceptibility, Permittivity, Dielectric Constant}
+
+\begin{itemize}
+  \item A \textbf{linear dielectric} is a material whose polarization is linearly proportional to the applied electric field \[\vec{P} = \epsilon_0 \chi_e \vec{E}\] where $\chi_e$ is a dimensionless proportionality constant called the \textbf{electric susceptibility} of the material and $\vec{E}$ is the total electric field (including that produced by the polarization itself).
+
+  \item The displacement field in linear dielectrics is also proportional to the total electric field \begin{align*}
+          \vec{D} & = \epsilon_0 \vec{E} + \vec{P}                   \\
+                  & = \epsilon_0 \vec{E} + \epsilon_0 \chi_e \vec{E} \\
+                  & = \epsilon_0 (1 + \chi_e) \vec{E}                \\
+                  & = \epsilon \vec{E}
+        \end{align*} where $\epsilon = \epsilon_0 (1 + \chi_e)$ is the \textbf{permittivity} of the material.
+
+  \item Dividing the permittivity of a material by $\epsilon_0$ gives its \textbf{relative permittivity} or \textbf{dielectric constant} \[\epsilon_r = \frac{\epsilon}{\epsilon_0} = 1 + \chi_e.\]
+
+  \item The line integral of $\vec{P}$ around a closed path that crosses the boundary between two materials may not be zero (e.g. if one material is polarized and the other is not). By Stokes' theorem this means that the curl of $\vec{P}$ is nonzero and thus $\vec{D}$ is nonzero.
+
+  \item In a space filled by a homogeneous linear dielectric then the above doesn't apply and $\nabla \cdot \vec{D} = \rho_f$ and $\nabla \times \vec{D} = \vec{0}$ so $\vec{D}$ can be found from the free charge as if the dielectric weren't there \[\vec{D} = \epsilon_0 \vec{E}_\text{vac}\] and \[\vec{E} = \frac{1}{\epsilon} \vec{D} = \frac{1}{\epsilon_r} \vec{E}_\text{vac}.\]
+\end{itemize}
+
+\subsubsection{Boundary Value Problems with Linear Dielectrics}
+
+\begin{itemize}
+  \item In a linear dielectric the bound charge density is proportional to the free charge density \[\rho_b = -\nabla \cdot \vec{P} = -\nabla \cdot \left( \epsilon_0 \frac{\chi_e}{\epsilon} \vec{D} \right) = -\left( \frac{\chi_e}{1 + \chi_e} \right) \rho_f.\] This means that, unless charges are embedded in the material, $\rho = 0$, all the charge lies on the surface, and the electric potential within the material obeys Laplace's equation.
+
+  \item Rewriting the boundary conditions for linear dielectrics gives \[\epsilon_\text{above} E_\text{above}^\perp - \epsilon_\text{below} E_\text{below}^\perp = \sigma_f\] or \[\epsilon_\text{above} \frac{\partial V_\text{above}}{\partial n} - \epsilon_\text{below} \frac{\partial V_\text{below}}{\partial n} = -\sigma_f.\]
+\end{itemize}
+
+\subsubsection{Energy in Dielectric Systems}
+
+\begin{itemize}
+  \item The work required to assemble a system containing linear dielectric material is \[W = \frac{1}{2} \int \vec{D} \cdot \vec{E} \,d \tau.\]
+\end{itemize}
+
 \end{document}
