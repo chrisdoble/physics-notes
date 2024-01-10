@@ -2336,4 +2336,203 @@ The dipole will come to rest at $\theta = n \pi, n \in \mathbb{Z}$.
   h                        & = \frac{\epsilon_0 \chi_e V^2}{\rho g (b^2 - a^2) \ln (b / a)}
 \end{align*}
 
+\subsection{}
+
+\begin{enumerate}
+  \item
+
+        \begin{align*}
+          \vec{E}_1                                            & = -\ke \frac{p_1}{r^3} \uvec{z}                                                                                                          \\
+          \vec{F}_2                                            & = \ke \frac{3 p_1 p_2}{r^4} \uvec{z}                                                                                                     \\
+          \vec{E}_2                                            & = \ke \frac{1}{r^3} [3 (\vec{p_2} \cdot \uvec{r}) \uvec{r} - \vec{p_2}]                                                                  \\
+                                                               & = \ke \frac{1}{r^3} \left[ \frac{3 (\vec{p_2} \cdot \vec{r}) \vec{r}}{r^2} - \vec{p_2} \right]                                           \\
+                                                               & = \frac{p_2}{4 \pi \epsilon_0} \frac{3 y (x \uvec{x} + y \uvec{y} + z \uvec{z}) - (x^2 + y^2 + z^2) \uvec{y}}{(x^2 + y^2 + z^2)^{5 / 2}} \\
+                                                               & = \frac{p_2}{4 \pi \epsilon_0} \frac{3 x y \uvec{x} + (-x^2 + 2 y^2 - z^2) \uvec{y} + 3 y z \uvec{z}}{(x^2 + y^2 + z^2)^{5 / 2}}         \\
+          E_{2 z}                                              & = \frac{p_2}{4 \pi \epsilon_0} \frac{3 y z}{(x^2 + y^2 + z^2)^{5 / 2}}                                                                   \\
+          \left. \nabla E_{2 z} \right|_{x = 0, y = -r, z = 0} & = -\frac{3 p_2}{4 \pi \epsilon_0 r^4} \uvec{z}                                                                                           \\
+          \vec{F}_1                                            & = -\ke \frac{3 p_1 p_2}{r^4} \uvec{z}
+        \end{align*}
+
+        Newton's third law is obeyed.
+
+  \item
+
+        \begin{align*}
+          \vec{\tau}_2 & = \vec{r}_2 \times \vec{F}_2 + \vec{p}_1 \times \vec{E}_1                                 \\
+                       & = r \uvec{y} \times \ke \frac{3 p_1 p_2}{r^4} \uvec{z} - \ke \frac{p_1 p_2}{r^3} \uvec{x} \\
+                       & = \ke \frac{2 p_1 p_2}{r^3} \uvec{x}
+        \end{align*}
+
+        This is opposite to the torque experienced by $\vec{p}_1$.
+\end{enumerate}
+
+\subsection{}
+
+The electric field is perpendicular to each plate and ``curves'' towards the other. At $y = 0$ the electric field is purely vertical. $\vec{p}$ only has a $y$ component so $(\vec{p} \cdot \nabla) \vec{E} = p_y \nabla E_y$. The potential difference between the two plates is constant and as $x$ increases the distance between them also increases, meaning the magnitude of the electric field decreases. $E_y$ is negative at $y = 0$ so this means it increases with increasing $x$ and thus that the $x$ component of $\nabla E_y$ is positive. $E_y$ is constant for small changes in $y$ around $y = 0$ so the $y$ component of $\nabla E_y$ is $0$. We assume the plates are very long in the $z$ direction so the $z$ component of $\nabla E_y$ is also $0$. This means the dipole experiences a force in the $x$ direction.
+
+\subsection{}
+
+\begin{align*}
+  \vec{E}                                      & = \ke \frac{Q}{r^2} \uvec{r}                                                     \\
+                                               & = \ke \frac{Q (x \uvec{x} + y \uvec{y} + z \uvec{z})}{(x^2 + y^2 + z^2)^{3 / 2}} \\
+  E_y                                          & = \ke \frac{Q y}{(x^2 + y^2 + z^2)^{3 / 2}}                                      \\
+  \left. \nabla E_y \right|_{x = R, y = z = 0} & = \ke \frac{Q}{R^3} \uvec{y}                                                     \\
+  \vec{F}                                      & = (\vec{p} \cdot \nabla) \vec{E}                                                 \\
+                                               & = p_y \nabla E_y                                                                 \\
+                                               & = \frac{Q}{4 \pi \epsilon_0} \frac{\vec{p}}{R^3}
+\end{align*}
+
+\subsection{}
+
+\begin{enumerate}
+  \item
+
+        \begin{align*}
+          \vec{p}                        & = \alpha \vec{E}                                                              \\
+          \vec{F}                        & = (\vec{p} \cdot \nabla) \vec{E}                                              \\
+                                         & = (\alpha \vec{E} \cdot \nabla) \vec{E}                                       \\
+                                         & = \alpha (\vec{E} \cdot \nabla) \vec{E}                                       \\
+          \nabla (E^2)                   & = 2 \vec{E} \times (\nabla \times \vec{E}) + 2 (\vec{E} \cdot \nabla) \vec{E} \\
+          (\vec{E} \cdot \nabla) \vec{E} & = \frac{1}{2} \nabla (E^2)                                                    \\
+          \vec{F}                        & = \frac{1}{2} \alpha \nabla (E^2)
+        \end{align*}
+\end{enumerate}
+
+\subsection{}
+
+\begin{align*}
+  \vec{P}          & = k \vec{r}                                                                                                                              \\
+                   & = k (x \uvec{x} + y \uvec{y} + z \uvec{z})                                                                                               \\
+  \sigma_b         & = \vec{P} \cdot \uvec{n}                                                                                                                 \\
+  % Surface charge of a single face
+  Q_\text{face}    & = \int \sigma_b \,d a                                                                                                                    \\
+                   & = \int_{-a / 2}^{a / 2} \int_{-a / 2}^{a / 2} k \left( x \uvec{x} + y \uvec{y} + \frac{a}{2} \uvec{z} \right) \cdot \uvec{z} \,d x \,d y \\
+                   & = \frac{a k}{2} \int_{-a / 2}^{a / 2} \int_{-a / 2}^{a / 2} d x \,d y                                                                    \\
+                   & = \frac{a^3 k}{2}                                                                                                                        \\
+  % Surface charge of all six faces
+  Q_\text{surface} & = 3 a^3 k                                                                                                                                \\
+  \rho_b           & = -\nabla \cdot \vec{P}                                                                                                                  \\
+                   & = -3 k                                                                                                                                   \\
+  Q_\text{volume}  & = \rho V                                                                                                                                 \\
+                   & = -3 a^3 k                                                                                                                               \\
+  Q_\text{total}   & = 0
+\end{align*}
+
+\subsection{}
+
+\begin{align*}
+  % Permittivity
+  \epsilon                        & = \epsilon_0 \left( 1 + \frac{x}{d} \right)                      \\
+  % Displacement field
+  \oint \vec{D} \cdot d \vec{a}   & = Q_\text{enc,f}                                                 \\
+  A D                             & = A \sigma_f                                                     \\
+  \vec{D}                         & = \sigma_f \uvec{x}                                              \\
+  % Electric field
+  \vec{E}                         & = \frac{\vec{D}}{\epsilon}                                       \\
+                                  & = \frac{\sigma_f}{\epsilon_0 (1 + x / d)} \uvec{x}               \\
+  % Potential
+  V                               & = \int_0^d \vec{E} \cdot d \vec{l}                               \\
+                                  & = \frac{\sigma_f}{\epsilon_0} \int_0^f \frac{1}{1 + x / d} \,d x \\
+                                  & = \frac{\sigma_f}{\epsilon_0} d \ln 2                            \\
+  % Free surface charge
+  \sigma_f                        & = \frac{\epsilon_0 V}{d \ln 2}                                   \\
+  % Polarization
+  \vec{D}                         & = \epsilon_0 \vec{E} + \vec{P}                                   \\
+  \vec{P}                         & = \vec{D} - \epsilon_0 \vec{E}                                   \\
+                                  & = \sigma_f \uvec{x} - \frac{\sigma_f}{1 + x / d} \uvec{x}        \\
+                                  & = \sigma_f \left( 1 - \frac{1}{1 + x / d} \right) \uvec{x}       \\
+                                  & = \frac{\epsilon_0 V x}{d (d + x) \ln 2} \uvec{x}                \\
+  \left. \sigma_b \right|_{x = 0} & = \left. (\vec{P} \cdot -\uvec{x}) \right|_{x = 0}               \\
+                                  & = 0                                                              \\
+  \left. \sigma_b \right|_{x = d} & = \left. (\vec{P} \cdot \uvec{x}) \right|_{x = d}                \\
+                                  & = \frac{\epsilon_0 V}{2 d \ln 2}                                 \\
+  Q_\text{surface}                & = A \frac{\epsilon_0 V}{2 d \ln 2}                               \\
+  \rho_b                          & = -\nabla \cdot \vec{P}                                          \\
+                                  & = -\frac{\epsilon_0 V}{(d + x)^2 \ln 2}
+\end{align*}
+
+\begin{align*}
+  Q_\text{volume} & = \int_0^d A \rho_b \,d x                                          \\
+                  & = -A \frac{\epsilon_0 V}{\ln 2} \int_0^d \frac{1}{(d + x)^2} \,d x \\
+                  & = -A \frac{\epsilon_0 V}{2 d \ln 2}
+\end{align*}
+
+\subsection{}
+
+\begin{align*}
+  \oint \vec{D} \cdot d \vec{a} & = Q_\text{encl,f}                                                                       \\
+  4 \pi r^2 D                   & = q                                                                                     \\
+  \vec{D}                       & = \frac{q}{4 \pi r^2} \uvec{r}                                                          \\
+  \vec{E}                       & = \frac{\vec{D}}{\epsilon}                                                              \\
+                                & = \ke \frac{q}{(1 + \chi_e) r^2} \uvec{r}                                               \\
+  \vec{D}                       & = \epsilon_0 \vec{E} + \vec{P}                                                          \\
+  \vec{P}                       & = \vec{D} - \epsilon_0 \vec{E}                                                          \\
+                                & = \frac{q}{4 \pi r^2} \uvec{r} - \frac{q}{4 \pi (1 + \chi_e) r^2} \uvec{r}              \\
+                                & = \frac{q}{4 \pi r^2} \left( 1 - \frac{1}{1 + \chi_e} \right) \uvec{r}                  \\
+                                & = \frac{q \chi_e}{4 \pi (1 + \chi_e) r^2} \uvec{r}                                      \\
+  \rho_b                        & = -\nabla \cdot \vec{P}                                                                 \\
+                                & = -\frac{q \chi_e}{4 \pi (1 + \chi_e)} \nabla \cdot \left( \frac{\uvec{r}}{r^2} \right) \\
+                                & = -\frac{q \chi_e}{1 + \chi_e} \delta^3(\vec{r})                                        \\
+  \sigma_b                      & = \vec{P} \cdot \uvec{n}                                                                \\
+                                & = \frac{q \chi_e}{4 \pi (1 + \chi_e) R^2}                                               \\
+  Q_\text{surface}              & = A \sigma_b                                                                            \\
+                                & = \frac{q \chi_e}{1 + \chi_e}
+\end{align*}
+
+\subsection{}
+
+\begin{align*}
+  % Perpendicular
+  D_1^\perp - D_2^\perp                       & = \sigma_f                          \\
+  \epsilon_1 E_1^\perp - \epsilon_2 E_2^\perp & = 0                                 \\
+  \epsilon_1 E_1^\perp                        & = \epsilon_2 E_2^\perp              \\
+  % Parallel
+  E_1^\parallel - E_2^\parallel               & = 0                                 \\
+  E_1^\parallel                               & = E_2^\parallel                     \\
+  % Angles
+  \tan \theta_2                               & = 1                                 \\
+  \tan \theta_2                               & = \frac{1}{\epsilon_2 / \epsilon_1} \\
+                                              & = \frac{\epsilon_1}{\epsilon_2}     \\
+  \frac{\tan \theta_2}{\tan \theta_1}         & = \frac{\epsilon_2}{\epsilon_1}
+\end{align*}
+
+If an electric field moved from air to a convex dielectric lens, $\epsilon_2 / \epsilon_0 > 1$ meaning it would bend away from the normal. The lens would defocus the field.
+
+\setcounter{subsection}{38}
+\subsection{}
+
+\begin{enumerate}
+  \item
+
+        \begin{align*}
+          V                    & = \begin{cases}
+                                     V_0             & r \le R \\
+                                     V_0 \frac{R}{r} & r \ge R
+                                   \end{cases}                                                        \\
+          \vec{E}              & = -\nabla V                                                                        \\
+                               & = \begin{cases}
+                                     \vec{0}                    & r \le R \\
+                                     V_0 \frac{R}{r^2} \uvec{r} & r \ge R
+                                   \end{cases}                                             \\
+          \vec{P}              & = \epsilon_0 \chi_e V_0 \frac{R}{r^2} \uvec{r}, \,z < 0                            \\
+          \sigma_b             & = \vec{P} \cdot \uvec{n}                                                           \\
+                               & = -\frac{\epsilon_0 \chi_e V_0}{R}, \text{ on the surface that touches the sphere} \\
+          \oint \sigma_f \,d a & = Q_\text{total}                                                                   \\
+          4 \pi R^2 \sigma_f   & = 4 \pi \epsilon_0 V_0 R                                                           \\
+          \sigma_f             & = \begin{cases}
+                                     \epsilon_0 V_0 / R              & \text{northern hemisphere} \\
+                                     \epsilon_0 V_0 (1 + \chi_e) / R & \text{southern hemisphere}
+                                   \end{cases}
+        \end{align*}
+
+  \item
+
+        \begin{align*}
+          \sigma         & = \sigma_b + \sigma_f      \\
+                         & = \frac{\epsilon_0 V_0}{R} \\
+          Q_\text{total} & = 4 \pi \epsilon_0 V_0 R   \\
+          V              & = V_0 \frac{R}{r}
+        \end{align*}
+\end{enumerate}
+
 \end{document}
