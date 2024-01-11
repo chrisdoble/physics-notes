@@ -2535,4 +2535,136 @@ If an electric field moved from air to a convex dielectric lens, $\epsilon_2 / \
         \end{align*}
 \end{enumerate}
 
+\section{Magnetostatics}
+
+\subsection{}
+
+The charge is positive.
+
+\begin{align*}
+  % Calculate radius
+  a^2 + (R - d)^2         & = R^2                         \\
+  a^2 + R^2 - 2 d R + d^2 & = R^2                         \\
+  2 d R                   & = a^2 + d^2                   \\
+  R                       & = \frac{a^2 + d^2}{2 d}       \\
+  % Calculate momentum
+  p                       & = q B R                       \\
+                          & = \frac{q B (a^2 + d^2)}{2 d}
+\end{align*}
+
+\subsection{}
+
+\begin{align*}
+  y(t)  & = C_1 \cos \omega t + C_2 \sin \omega t + \frac{E}{B} t + C_3        \\
+  y'(t) & = -C_1 \omega \sin \omega t + C_2 \omega \cos \omega t + \frac{E}{B} \\
+  z(t)  & = C_2 \cos \omega t - C_1 \sin \omega t + C_4                        \\
+  z'(t) & = -C_2 \omega \sin \omega t - C_1 \omega \cos \omega t
+\end{align*}
+
+\begin{enumerate}
+  \item
+
+        \begin{align*}
+          % Constraints
+          0           & = C_1 + C_3                \\
+          \frac{E}{B} & = C_2 \omega + \frac{E}{B} \\
+          0           & = C_2 + C_4                \\
+          0           & = -C_1 \omega              \\
+          % Constants
+          C_1         & = 0                        \\
+          C_2         & = 0                        \\
+          C_3         & = 0                        \\
+          C_4         & = 0                        \\
+          % Solution
+          y(t)        & = \frac{E}{B} t            \\
+          z(t)        & = 0
+        \end{align*}
+
+  \item
+
+        \begin{align*}
+          % Constraints
+          0             & = C_1 + C_3                                                  \\
+          \frac{E}{2 B} & = C_2 \omega + \frac{E}{B}                                   \\
+          0             & = C_2 + C_4                                                  \\
+          0             & = -C_1 \omega                                                \\
+          % Constants
+          C_1           & = 0                                                          \\
+          C_2           & = -\frac{E}{2 B \omega}                                      \\
+          C_3           & = 0                                                          \\
+          C_4           & = \frac{E}{2 B \omega}                                       \\
+          % Solution
+          y(t)          & = -\frac{E}{2 B \omega} \sin \omega t + \frac{E}{B} t        \\
+          z(t)          & = -\frac{E}{2 B \omega} \cos \omega t + \frac{E}{2 B \omega}
+        \end{align*}
+
+  \item
+
+        \begin{align*}
+          % Constraints
+          0           & = C_1 + C_3                                                              \\
+          \frac{E}{B} & = C_2 \omega + \frac{E}{B}                                               \\
+          0           & = C_2 + C_4                                                              \\
+          \frac{E}{B} & = -C_1 \omega                                                            \\
+          % Constants
+          C_1         & = -\frac{E}{B \omega}                                                    \\
+          C_2         & = 0                                                                      \\
+          C_3         & = \frac{E}{B \omega}                                                     \\
+          C_4         & = 0                                                                      \\
+          % Solution
+          y(t)        & = -\frac{E}{B \omega} \cos \omega t + \frac{E}{B} t + \frac{E}{B \omega} \\
+          z(t)        & = \frac{E}{B \omega} \sin \omega t
+        \end{align*}
+\end{enumerate}
+
+\subsection{}
+
+\begin{enumerate}
+  \item
+
+        \begin{align*}
+          \vec{0} & = q (\vec{E} + \vec{v} \times \vec{B}) \\
+          0       & = E + v B                              \\
+          v       & = \frac{E}{B}
+        \end{align*}
+
+  \item
+
+        \begin{align*}
+          q B R       & = p               \\
+                      & = m v             \\
+                      & = m \frac{E}{B}   \\
+          \frac{q}{m} & = \frac{E}{B^2 R}
+        \end{align*}
+\end{enumerate}
+
+\subsection{}
+
+The forces on the sides at $y = \pm a / 2$ cancel, leaving the sides at $z = \pm a / 2$ which both experience an upwards force of $F = I B = a^2 I k / 2$ meaning the total force is $F_\text{total} = a^2 I k$ in the positive $z$ direction.
+
+\subsection{}
+
+\begin{enumerate}
+  \item \[K = \frac{I}{2 \pi a}\]
+
+  \item
+
+        \begin{align*}
+          J(s) & = \frac{k}{s}                                          \\
+          I    & = \int J(s) \,d a                                      \\
+               & = \int_0^a \int_0^{2 \pi} \frac{k}{s} s \,d \phi \,d s \\
+               & = 2 \pi a k                                            \\
+          k    & = \frac{I}{2 \pi a}                                    \\
+          J(s) & = \frac{I}{2 \pi a s}
+        \end{align*}
+\end{enumerate}
+
+\subsection{}
+
+\begin{enumerate}
+  \item \[K = \sigma \omega r\]
+
+  \item \[\vec{J} = \rho \omega r \sin \theta \uvec{\phi} = \frac{3 Q \omega r \sin \theta}{4 \pi R^3} \uvec{\phi}\]
+\end{enumerate}
+
 \end{document}
