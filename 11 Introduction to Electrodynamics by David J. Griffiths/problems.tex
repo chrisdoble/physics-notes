@@ -2667,4 +2667,71 @@ The forces on the sides at $y = \pm a / 2$ cancel, leaving the sides at $z = \pm
   \item \[\vec{J} = \rho \omega r \sin \theta \uvec{\phi} = \frac{3 Q \omega r \sin \theta}{4 \pi R^3} \uvec{\phi}\]
 \end{enumerate}
 
+\setcounter{subsection}{7}
+\subsection{}
+
+\begin{enumerate}
+  \item
+
+        \begin{align*}
+          \vec{B}_\text{side}  & = \frac{\mu_0 I}{4 \pi R} \left[ \sin \left( \frac{\pi}{4} \right) - \sin \left( -\frac{\pi}{4} \right) \right] \uvec{z} \\
+                               & = \sqrt{2} \frac{\mu_0 I}{4 \pi R} \uvec{z}                                                                              \\
+          \vec{B}_\text{total} & = \sqrt{2} \frac{\mu_0 I}{\pi R} \uvec{z}
+        \end{align*}
+
+  \item
+
+        \begin{align*}
+          \vec{B}_\text{side}  & = \frac{\mu_0 I}{4 \pi R} \left[ \sin \left( \frac{\pi}{n} \right) - \sin \left( -\frac{\pi}{n} \right) \right] \uvec{z} \\
+                               & = \frac{\mu_0 I}{2 \pi R} \sin \frac{\pi}{n} \uvec{z}                                                                    \\
+          \vec{B}_\text{total} & = \frac{n \mu_0 I}{2 \pi R} \sin \frac{\pi}{n} \uvec{z}
+        \end{align*}
+
+  \item
+
+        \begin{align*}
+          \vec{B}_\text{circle} & = \frac{\mu_0 I}{2 R} \uvec{z}                                                      \\
+          \vec{B}_\text{total}  & = \lim_{n \rightarrow \infty} \frac{n \mu_0 I}{2 \pi R} \sin \frac{\pi}{n} \uvec{z} \\
+                                & = \frac{\mu_0 I}{2 \pi R} \lim_{n \rightarrow \infty} n \sin \frac{\pi}{n} \uvec{z} \\
+                                & = \frac{\mu_0 I}{2 R} \uvec{z}
+        \end{align*}
+\end{enumerate}
+
+\subsection{}
+
+\begin{enumerate}
+  \item \[\vec{B} = \frac{\mu_0 I}{8} \left( \frac{1}{a} - \frac{1}{b} \right) \uvec{z}\]
+
+  \item \[B = \frac{\mu_0 I}{2 R} \left( \frac{1}{\pi} + \frac{1}{2} \right) \text{ into the page}\]
+\end{enumerate}
+
+\subsection{}
+
+\begin{enumerate}
+  \item
+
+        \begin{align*}
+          F & = a I B_\text{bottom} - a I B_\text{top}                                 \\
+            & = \frac{\mu_0 a I^2}{2 \pi} \left( \frac{1}{s} - \frac{1}{s + a} \right) \\
+            & = \frac{\mu_0 a I^2}{2 \pi} \frac{a}{s (s + a)}                          \\
+            & = \frac{\mu_0 a^2 I^2}{2 \pi s (s + a)} \text{ upwards}
+        \end{align*}
+
+  \item
+
+        \begin{align*}
+          F_\text{bottom} & = \frac{\mu_0 a I^2}{2 \pi s} \text{ upwards}                                                                           \\
+          % Distance from wire at length x along side
+          y               & = s + x \sin \frac{\pi}{3}                                                                                              \\
+                          & = s + \frac{\sqrt{3}}{2} x                                                                                              \\
+          % Magnetic field at length x along side
+          B               & = \frac{\mu_0 I}{2 \pi (s + \sqrt{3} x / 2)} \text{ out of page}                                                        \\
+          F_\text{side}   & = I \int d \vec{l} \times \vec{B}                                                                                       \\
+                          & = \frac{\mu_0 I^2}{2 \pi} \int_0^a \frac{1}{s + \sqrt{3} x / 2} \,d x                                                   \\
+                          & = \frac{\mu_0 I^2}{\sqrt{3} \pi} \ln \left( 1 + \frac{\sqrt{3} a}{2 s} \right)                                          \\
+          F_\text{total}  & = \frac{\mu_0 a I^2}{2 \pi s} - \frac{\mu_0 I^2}{\sqrt{3} \pi} \ln \left( 1 + \frac{\sqrt{3} a}{2 s} \right)            \\
+                          & = \frac{\mu_0 I^2}{2 \pi} \left[ \frac{a}{s} - \frac{2}{\sqrt{3}} \ln \left( 1 + \frac{\sqrt{3} a}{2 s} \right) \right]
+        \end{align*}
+\end{enumerate}
+
 \end{document}
