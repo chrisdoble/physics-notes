@@ -2734,4 +2734,161 @@ The forces on the sides at $y = \pm a / 2$ cancel, leaving the sides at $z = \pm
         \end{align*}
 \end{enumerate}
 
+\setcounter{subsection}{13}
+\subsection{}
+
+\begin{enumerate}
+  \item
+
+        \[\vec{B} = \begin{cases}
+            \vec{0}                             & s < a \\
+            \frac{\mu_0 I}{2 \pi s} \uvec{\phi} & s > a
+          \end{cases}\]
+
+  \item
+
+        \begin{align*}
+          \vec{J}(s)   & = k s \uvec{z}                                      \\
+          I            & = \int_0^a 2 \pi s' J(s') \,d s'                    \\
+                       & = 2 \pi k \int_0^a s'^2 \,d s'                      \\
+                       & = \frac{2}{3} \pi k a^3                             \\
+          k            & = \frac{3 I}{2 \pi a^3}                             \\
+          \vec{J}(s)   & = \frac{3 I s}{2 \pi a^3} \uvec{z}                  \\
+          I_\text{enc} & = \int_0^s 2 \pi s' J(s') \,d s'                    \\
+                       & = \frac{3 I}{a^3} \int_0^s s'^2 \,d s'              \\
+                       & = \frac{I s^3}{a^3}                                 \\
+          \vec{B}      & = \begin{cases}
+                             \frac{\mu_0 I s^2}{2 \pi a^3} \uvec{\phi} & s < a \\
+                             \frac{\mu_0 I}{2 \pi s} \uvec{\phi}       & s > a
+                           \end{cases}
+        \end{align*}
+\end{enumerate}
+
+\subsection{}
+
+\begin{align*}
+  % |z| < a
+  \oint \vec{B} \cdot d \vec{l} & = \mu_0 I_\text{enc}             \\
+  2 B L                         & = \mu_0 (2 J L z)                \\
+  \vec{B}                       & = -\mu_0 J z \uvec{y}, \,|z| < a \\
+  % |z| > a
+  \oint \vec{B} \cdot d \vec{l} & = m_0 I_\text{enc}               \\
+  2 B L                         & = \mu_0 (2 a J L)                \\
+  \vec{B}                       & = \begin{cases}
+                                      -\mu_0 J a \uvec{y} & z > a  \\
+                                      \mu_0 J a \uvec{y}  & z < -a
+                                    \end{cases}
+\end{align*}
+
+\subsection{}
+
+\begin{align*}
+  \vec{B}_\text{inner} & = \begin{cases}
+                             -\mu_0 n_1 I \uvec{z} & s < a \\
+                             \vec{0}               & s > a
+                           \end{cases}            \\
+  \vec{B}_\text{outer} & = \begin{cases}
+                             \mu_0 n_2 I \uvec{z} & s < b \\
+                             \vec{0}              & s > b
+                           \end{cases}             \\
+  \vec{B}              & = \begin{cases}
+                             \mu_0 I (n_2 - n_1) \uvec{z} & s < a     \\
+                             \mu_0 n_2 I \uvec{z}         & a < s < b \\
+                             \vec{0}                      & b < s
+                           \end{cases}
+\end{align*}
+
+\subsection{}
+
+\begin{enumerate}
+  \item
+
+        \begin{align*}
+          \vec{K}_\text{top}    & = \sigma v \uvec{x}                                 \\
+          \vec{B}_\text{top}    & = \begin{cases}
+                                      -\frac{\mu_0}{2} K \uvec{y} & \text{above} \\
+                                      \frac{\mu_0}{2} K \uvec{y}  & \text{below}
+                                    \end{cases}        \\
+                                & = \begin{cases}
+                                      -\frac{\mu_0 \sigma v}{2} \uvec{y} & \text{above} \\
+                                      \frac{\mu_0 \sigma v}{2} \uvec{y}  & \text{below}
+                                    \end{cases} \\
+          \vec{K}_\text{bottom} & = -\sigma v \uvec{x}                                \\
+          \vec{B}_\text{bottom} & = \begin{cases}
+                                      \frac{\mu_0 \sigma v}{2} \uvec{y}  & \text{above} \\
+                                      -\frac{\mu_0 \sigma v}{2} \uvec{y} & \text{below}
+                                    \end{cases} \\
+          \vec{B}               & = \begin{cases}
+                                      \mu_0 \sigma v \uvec{y} & \text{between}   \\
+                                      \vec{0}                 & \text{otherwise}
+                                    \end{cases}
+        \end{align*}
+
+        The magnetic field between the plates points into the page.
+
+  \item
+
+        \begin{align*}
+          \vec{f}_\text{magnetic} & = \sigma (\vec{v} \times \vec{B})         \\
+                                  & = \frac{1}{2} \mu_0 \sigma^2 v^2 \uvec{z}
+        \end{align*}
+
+  \item
+
+        \begin{align*}
+          \oint \vec{E} \cdot d \vec{a} & = \frac{Q_\text{enc}}{\epsilon_0}      \\
+          2 A E                         & = \frac{\sigma A}{\epsilon_0}          \\
+          \vec{E}                       & = \frac{\sigma}{2 \epsilon_0} \uvec{n} \\
+          f_\text{electric}             & = \frac{\sigma^2}{2 \epsilon_0}        \\
+          f_\text{electric}             & = f_\text{magnetic}                    \\
+          \frac{\sigma^2}{2 \epsilon_0} & = \frac{1}{2} \mu_0 \sigma^2 v^2       \\
+          v                             & = \frac{1}{\sqrt{\epsilon_0 \mu_0}}    \\
+                                        & = c
+        \end{align*}
+\end{enumerate}
+
+\setcounter{subsection}{18}
+\subsection{}
+
+It doesn't matter.
+
+\subsection{}
+
+\begin{enumerate}
+  \item
+
+        \begin{align*}
+          \rho_\text{copper} & = \qty{8960}{kg/m^3}                           \\
+          m_\text{copper}    & = \qty{1.0552e-25}{kg}                         \\
+          \rho               & = e \frac{\rho_\text{copper}}{m_\text{copper}} \\
+                             & = \qty{1.36e4}{C/cm^3}
+        \end{align*}
+
+  \item \[v = \qty{9.1e-3}{cm/s} = \qty{9.1e-5}{m/s}\]
+
+  \item
+
+        \begin{align*}
+          \vec{B}                 & = \frac{\mu_0 I}{2 \pi s} \uvec{\phi}         \\
+                                  & = \frac{50 \mu_0}{\pi} \uvec{\phi} \,\unit{T} \\
+          \vec{f}_\text{magnetic} & = \frac{50 \mu_0}{\pi} \unit{N}               \\
+                                  & \approx \qty{2.0e-5}{N/m}                     \\
+                                  & \approx \qty{2.0e-7}{N/cm}
+        \end{align*}
+
+  \item
+
+        \begin{align*}
+          \lambda                                     & = \qty{1.07e4}{C/m}                                     \\
+          \oint \vec{E} \cdot d \vec{a}               & = \frac{Q_\text{encl}}{\epsilon_0}                      \\
+          2 \pi s L E                                 & = \frac{\rho A L}{\epsilon_0}                           \\
+          \vec{E}                                     & = \frac{1}{2 \pi \epsilon_0} \frac{\lambda}{s} \uvec{s} \\
+                                                      & = \qty{1.92e16}{N/C}                                    \\
+          \vec{f}_\text{electric}                     & = \lambda \vec{E}                                       \\
+                                                      & = \qty{2e20}{N/m}                                       \\
+                                                      & = \qty{2e18}{N/cm}                                      \\
+          \frac{f_\text{electric}}{f_\text{magnetic}} & = 10^{25}
+        \end{align*}
+\end{enumerate}
+
 \end{document}
