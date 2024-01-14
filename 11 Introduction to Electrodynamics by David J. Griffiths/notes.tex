@@ -534,4 +534,76 @@
   \item \textbf{Ampère's law} gives the curl of a magnetic field \[\nabla \times \vec{B} = \mu_0 \vec{J}\] or in integral form \[\oint \vec{B} \cdot d \vec{l} = \mu_0 I_\text{enc}\] where $I_\text{enc}$ is the amount of current flowing through a surface enclosed by the integral path and the right-hand rule is used to determine what constitutes a positive current (if the fingers of the right hand wrap in the direction of integration then the thumb points in the direction of positive current).
 \end{itemize}
 
+\subsection{Magnetic Vector Potential}
+
+\subsubsection{The Vector Potential}
+
+\begin{itemize}
+  \item In the same way that $\nabla \times \vec{E} = 0$ permits a scalar electric potential $\vec{E} = -\nabla V$, $\nabla \cdot \vec{B} = 0$ permits a vector magnetic potential \[\vec{B} = \nabla \times \vec{A}.\]
+
+  \item This says nothing about the divergence of $\vec{A}$, however in the same way that you can add any constant to $V$ without affecting $\vec{E}$ you can add the gradient of any scalar to $\vec{A}$ without affecting $\vec{B}$ as the curl of a gradient is $0$. If $\nabla \cdot \vec{A} \ne 0$, adding $\nabla \lambda$ where $\nabla^2 \lambda = -\nabla \cdot \vec{A}$ (which can be solved using the same methods as Laplace or Poisson's equations) results in a divergence of $0$. This means it's always possible to choose $\vec{A}$ such that $\nabla \cdot \vec{A} = 0$.
+
+  \item With the condition that $\nabla \cdot \vec{A} = 0$, Ampère's law becomes \begin{align*}
+          \nabla \times \vec{B}                            & = \mu_0 \vec{J}   \\
+          \nabla \times (\nabla \times \vec{A})            & = \mu_0 \vec{J}   \\
+          \nabla (\nabla \cdot \vec{A}) - \nabla^2 \vec{A} & = \mu_0 \vec{J}   \\
+          \nabla^2 \vec{A}                                 & = -\mu_0 \vec{J}.
+        \end{align*} This is effectively Possion's equation three times — one for each dimension \begin{align*}
+          \nabla^2 A_x & = -\mu_0 J_x  \\
+          \nabla^2 A_y & = -\mu_0 J_y  \\
+          \nabla^2 A_z & = -\mu_0 J_z.
+        \end{align*} Note that in non-cartesian coordinates the unit vectors may also need to be differentiated, meaning the equation can't be split in three like this.
+
+  \item The integral form of Ampère's law using the magnetic potential is \[\oint \vec{A} \cdot d \vec{l} = \Phi\] where $\Phi$ is the flux of $\vec{B}$ through the loop formed by the integral path.
+
+  \item The solutions to Ampère's law using the magnetic potential for line, surface, and volume currents are \begin{align*}
+          \vec{A} & = \frac{\mu_0}{4 \pi} \int \frac{\vec{I}}{\rcurs} \,d l'     \\
+          \vec{A} & = \frac{\mu_0}{4 \pi} \int \frac{\vec{K}}{\rcurs} \,d a'     \\
+          \vec{A} & = \frac{\mu_0}{4 \pi} \int \frac{\vec{J}}{\rcurs} \,d \tau'.
+        \end{align*}
+
+  \item In general, the direction of $\vec{A}$ will match the direction of the current.
+\end{itemize}
+
+\subsubsection{Boundary Conditions}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[scale=0.5]{electrostatic-relations}
+\end{figure}
+
+\begin{itemize}
+  \item Just as the electric field experiences a discontinuity at a surface charge, the magnetic field experiences a discontinuity at a surface current. The continuity of each component can be described as:
+
+        \begin{itemize}
+          \item the components perpendicular to the surface are equal \[B_\text{above}^\perp = B_\text{below}^\perp,\]
+
+          \item the components parallel to the surface and parallel to the current are equal, and
+
+          \item the components parallel to the surface and perpendicular to the current experience a discontinuity of $\mu_0 K$.
+        \end{itemize}
+
+  \item The above can be summarised as \[\vec{B}_\text{above} - \vec{B}_\text{below} = \mu_0 (\vec{K} \times \uvec{n})\] where $\uvec{n}$ is a unit vector perpendicular to the surface.
+
+  \item Like the electric potential $V$, the magnetic potential $\vec{A}$ is continuous across all boundaries but its derivative is not \[\frac{\partial \vec{A}_\text{above}}{\partial n} - \frac{\partial \vec{A}_\text{below}}{\partial n} = -\mu_0 \vec{K}.\]
+\end{itemize}
+
+\subsubsection{Multipole Expansion of the Vector Potential}
+
+\begin{itemize}
+  \item The multipole expansion of a localised current distribution is \begin{align*}
+          \vec{A}(\vec{r}) & = \frac{\mu_0 I}{4 \pi} \oint \frac{1}{\rcurs} \,d \vec{l}                                                                     \\
+                           & = \frac{\mu_0 I}{4 \pi} \sum_{n = 0}^\infty \frac{1}{r^{n + 1}} \oint (r')^n P_n(\cos \alpha) \,d \vec{l}'                     \\
+                           & = \frac{\mu_0 I}{4 \pi} \left[ \frac{1}{r} \oint d \vec{l}' + \frac{1}{r^2} \oint r' \cos \alpha \,d \vec{l}' + \cdots \right]
+        \end{align*} where $\alpha$ is the angle between $\vec{r}$ and $\vec{r}'$.
+
+  \item In the multipole expansion of the vector potential, the term that goes like $1 / r$ is called the \textbf{monopole} term, $1 / r^2$ the \textbf{dipole} term, etc.
+
+  \item The magnetic monopole term is always zero because \[\oint d \vec{l}' = 0.\] This reflects the fact that magnetic monopoles don't exist.
+
+  \item That being the case, the magnetic dipole term dominates the expansion \[\vec{A}_\text{dip}(\vec{r}) = \frac{\mu_0}{4 \pi} \frac{\vec{m} \times \uvec{r}}{r^2}\] where \[\vec{m} = I \int d \vec{a} = I \vec{a}\] is the \textbf{magnetic dipole moment} and $\vec{a}$ is the vector area of the current loop.
+
+  \item The magnetic field of a dipole can be written as \[\vec{B}_\text{dip}(\vec{r}) = \frac{\mu_0 m}{4 \pi r^3} (2 \cos \theta \uvec{r} + \sin \theta \uvec{\theta})\] or in coordinate-free form \[\vec{B}_\text{dip}(\vec{r}) = \frac{\mu_0}{4 \pi} \frac{1}{r^3} [3 (\vec{m} \cdot \uvec{r}) \uvec{r} - \vec{m}].\]
+\end{itemize}
+
 \end{document}

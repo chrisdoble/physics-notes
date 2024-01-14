@@ -2891,4 +2891,187 @@ It doesn't matter.
         \end{align*}
 \end{enumerate}
 
+\setcounter{subsection}{22}
+\subsection{}
+
+\begin{align*}
+  \vec{A} & = \frac{\mu_0}{4 \pi} \int \frac{\vec{I}}{\rcurs} \,d l'                                                      \\
+          & = \frac{\mu_0 I}{4 \pi} \uvec{z} \int_{z_1}^{z_2} \frac{1}{\sqrt{s^2 + z^2}} \,d z                            \\
+          & = \frac{\mu_0 I}{4 \pi} \uvec{z} \left[ \ln \left( z + \sqrt{s^2 + z^2} \right) \right]_{z_1}^{z_2}           \\
+          & = \frac{\mu_0 I}{4 \pi} \ln \left( \frac{z_2 + \sqrt{s^2 + z_2^2}}{z_1 + \sqrt{s^2 + z_1^2}} \right) \uvec{z}
+\end{align*}
+
+\subsection{}
+
+\begin{align*}
+  \vec{A} & = k \uvec{\phi}                           \\
+  \vec{B} & = \nabla \times \vec{A}                   \\
+          & = \frac{k}{s} \uvec{z}                    \\
+  \vec{J} & = \frac{1}{\mu_0} (\nabla \times \vec{B}) \\
+          & = \frac{k}{\mu_0 s^2} \uvec{\phi}
+\end{align*}
+
+\subsection{}
+
+\begin{align*}
+  \nabla \cdot \vec{A}  & = \nabla \cdot \left[ -\frac{1}{2} (\vec{r} \times \vec{B}) \right]                                                                                \\
+                        & = -\frac{1}{2} \nabla \cdot (\vec{r} \times \vec{B})                                                                                               \\
+                        & = -\frac{1}{2} \left[ \vec{B} \cdot (\nabla \times \vec{r}) - \vec{r} \cdot (\nabla \times \vec{B}) \right]                                        \\
+                        & = 0                                                                                                                                                \\
+  \nabla \times \vec{A} & = \nabla \times \left[ -\frac{1}{2} (\vec{r} \times \vec{B}) \right]                                                                               \\
+                        & = -\frac{1}{2} \nabla \times (\vec{r} \times \vec{B})                                                                                              \\
+                        & = -\frac{1}{2} [(\vec{B} \cdot \nabla) \vec{r} - (\vec{r} \cdot \nabla) \vec{B} + \vec{r} (\nabla \cdot \vec{B}) - \vec{B} (\nabla \cdot \vec{A})] \\
+                        & = -\frac{1}{2} [\vec{B} - 3 \vec{B}]                                                                                                               \\
+                        & = \vec{B}
+\end{align*}
+
+You could add the gradient of any scalar function and this would still hold.
+
+\subsection{}
+
+\begin{enumerate}
+  \item
+
+        \begin{align*}
+          \vec{A}                             & = A(s) \uvec{z}                                \\
+          \vec{B}                             & = \nabla \times \vec{A}                        \\
+          \frac{\mu_0 I}{2 \pi s} \uvec{\phi} & = -\frac{\partial A_z}{\partial s} \uvec{\phi} \\
+          \frac{\mu_0 I}{2 \pi s}             & = -\frac{d A}{d s}                             \\
+          A                                   & = -\frac{\mu_0 I}{2 \pi} \ln s \,\uvec{z}      \\
+          \nabla \cdot \vec{A}                & = \frac{\partial A_z}{\partial z}              \\
+                                              & = 0                                            \\
+          \nabla \times \vec{A}               & = -\frac{\partial A_z}{\partial s} \uvec{\phi} \\
+                                              & = \frac{\mu_0 I}{2 \pi s} \uvec{\phi}
+        \end{align*}
+
+        \begin{align*}
+          \oint \vec{B} \cdot d \vec{l}           & = \mu_0 I_\text{enc}                      \\
+          2 \pi s B                               & = \mu_0 I \left( \frac{s}{R} \right)^2    \\
+          \vec{B}                                 & = \frac{\mu_0 I s}{2 \pi R^2} \uvec{\phi} \\
+          \vec{A}                                 & = A(s) \uvec{z}                           \\
+          \vec{B}                                 & = \nabla \times \vec{A}                   \\
+          \frac{\mu_0 I s}{2 \pi R^2} \uvec{\phi} & = -\frac{d A}{d s} \uvec{\phi}            \\
+          A(s)                                    & = -\frac{\mu_0 I s^2}{4 \pi R^2}          \\
+          \vec{A}                                 & = -\frac{\mu_0 I s^2}{4 \pi R^2} \uvec{z}
+        \end{align*}
+\end{enumerate}
+
+\subsection{}
+
+\begin{align*}
+  \vec{A}                     & = A(z) \uvec{x}                 \\
+  \vec{B}                     & = \nabla \times \vec{A}         \\
+  -\frac{\mu_0 K}{2} \uvec{y} & = \frac{d A}{d z} \uvec{y}      \\
+  A(z)                        & = -\frac{\mu_0 K z}{2}          \\
+  \vec{A}                     & = -\frac{\mu_0 K z}{2} \uvec{x}
+\end{align*}
+
+\setcounter{subsection}{29}
+\subsection{}
+
+\begin{align*}
+  \vec{B}_\text{in}  & = \frac{2 \mu_0 R \omega \sigma}{3} (\cos \theta \uvec{r} - \sin \theta \uvec{\theta})                                                                                                                                                           \\
+  \vec{B}_\text{out} & = \frac{\mu_0 R^4 \omega \sigma}{3 r^3} (2 \cos \theta \uvec{r} + \sin \theta \uvec{\theta})                                                                                                                                                     \\
+  \vec{B}            & = \int_0^r \vec{B}_\text{out} \,d R + \int_r^R \vec{B}_\text{in} \,d R                                                                                                                                                                           \\
+                     & = \int_0^r \frac{\mu_0 R'^4 \omega \rho}{3 r^3} (2 \cos \theta \uvec{r} + \sin \theta \uvec{\theta}) \,d R' + \int_r^R \frac{2 \mu_0 R' \omega \rho}{3} (\cos \theta \uvec{r} - \sin \theta \uvec{\theta}) \,d R'                                \\
+                     & = \frac{\mu_0 \omega \rho}{3 r^3} (2 \cos \theta \uvec{r} + \sin \theta \uvec{\theta}) \left[ \frac{1}{5} R^5 \right]_0^r + \frac{2 \mu_0 \omega \rho}{3} (\cos \theta \uvec{r} - \sin \theta \uvec{\theta}) \left[ \frac{1}{2} R'^2 \right]_r^R \\
+                     & = \frac{\mu_0 \omega \rho r^2}{15} (2 \cos \theta \uvec{r} + \sin \theta \uvec{\theta}) + \frac{\mu_0 \omega \rho (R^2 - r^2)}{3} (\cos \theta \uvec{r} - \sin \theta \uvec{\theta})                                                             \\
+                     & = \frac{\mu_0 \omega \rho}{3} \left[ \left( R^2 - \frac{3 r^2}{5} \right) \cos \theta \uvec{r} + \left( \frac{6 r^2}{5} - R^2 \right) \sin \theta \uvec{\theta} \right]
+\end{align*}
+
+\setcounter{subsection}{31}
+\subsection{}
+
+\begin{enumerate}
+  \item
+
+        \begin{align*}
+          \vec{B}_\text{above} - \vec{B}_\text{below} & = -\mu_0 n I \uvec{z}                     \\
+          \mu_0 (\vec{K} \times \uvec{n})             & = \mu_0 (n I \uvec{\phi} \times \uvec{s}) \\
+                                                      & = -\mu_0 n I \uvec{z}
+        \end{align*}
+
+  \item
+
+        \begin{align*}
+          \vec{A}_\text{above}(R)                                                                                                                           & = \frac{\mu_0 R \sigma}{3} (\vec{\omega} \times \vec{r})                   \\
+          \vec{A}_\text{below}(R)                                                                                                                           & = \frac{\mu_0 R \sigma}{3} (\vec{\omega} \times \vec{r})                   \\
+          \vec{A}_\text{above}                                                                                                                              & = \vec{A}_\text{below}                                                     \\
+          \frac{\partial \vec{A}_\text{above}}{\partial r}                                                                                                  & = -\frac{2 \mu_0 R^4 \omega \sigma}{3} \frac{\sin \theta}{r^3} \uvec{\phi} \\
+          \frac{\partial \vec{A}_\text{below}}{\partial r}                                                                                                  & = \frac{\mu_0 R \omega \sigma}{3} \sin \theta \uvec{\phi}                  \\
+          \left. \frac{\partial \vec{A}_\text{above}}{\partial r} \right|_{r = R} - \left. \frac{\partial \vec{A}_\text{below}}{\partial r} \right|_{r = R} & = -\mu_0 R \omega \sigma \sin \theta \uvec{\phi}                           \\
+                                                                                                                                                            & = -\mu_0 \sigma \vec{v}                                                    \\
+                                                                                                                                                            & = -\mu_0 \vec{K}
+        \end{align*}
+\end{enumerate}
+
+\setcounter{subsection}{33}
+\subsection{}
+
+\begin{align*}
+  \uvec{m}                    & = \cos \theta \uvec{r} - \sin \theta \uvec{\theta}                                                        \\
+  \vec{B}_\text{dip}(\vec{r}) & = \frac{\mu_0}{4 \pi} \frac{1}{r^3} [3 (\vec{m} \cdot \uvec{r}) \uvec{r} - \vec{m}]                       \\
+                              & = \frac{\mu_0 m}{4 \pi r^3} [3 (\uvec{m} \cdot \uvec{r}) \uvec{r} - \uvec{m}]                             \\
+                              & = \frac{\mu_0 m}{4 \pi r^3} [3 \cos \theta \uvec{r} - (\cos \theta \uvec{r} - \sin \theta \uvec{\theta})] \\
+                              & = \frac{\mu_0 m}{4 \pi r^3} (2 \cos \theta \uvec{r} + \sin \theta \uvec{\theta})
+\end{align*}
+
+\subsection{}
+
+\begin{enumerate}
+  \item \[\vec{m} = I \vec{a} = I \pi R^2 \uvec{z}\]
+
+  \item \[\vec{B}_\text{dip}(\vec{r}) \approx \frac{\mu_0 I \pi R^2}{4 \pi r^3} (2 \cos \theta \uvec{r} + \sin \theta \uvec{\theta})\]
+
+  \item
+
+        \begin{align*}
+          \vec{B}(z)            & = \frac{\mu_0 I}{2} \frac{R^2}{(R^2 + z^2)^{3 / 2}} \uvec{z} \\
+                                & \approx \frac{\mu_0 I}{2} \frac{R^2}{z^3} \uvec{z}, z \gg R  \\
+          \vec{B}_\text{dip}(z) & = \frac{\mu_0 I}{2} \frac{R^2}{z^3} \uvec{z}
+        \end{align*}
+\end{enumerate}
+
+\subsection{}
+
+\begin{align*}
+  s                           & = \sqrt{(w / 2)^2 + z^2}                                                          \\
+  \sin \theta_1               & = -\frac{w / 2}{\sqrt{(w / 2)^2 + s^2}}                                           \\
+                              & = -\frac{w / 2}{\sqrt{w^2 / 2 + z^2}}                                             \\
+  \sin \theta_2               & = \frac{w / 2}{\sqrt{w^2 / 2 + z^2}}                                              \\
+  B_\text{side}               & = \frac{\mu_0 I}{4 \pi} \frac{w}{\sqrt{(w^2 / 2 + z^2) (w^2 / 4 + z^2)}}          \\
+  \vec{B}_\text{total}        & = 4 B_\text{side} \cos \theta \uvec{z}                                            \\
+                              & = 4 B_\text{side} \frac{w / 2}{\sqrt{w^2 / 4 + z^2}} \uvec{z}                     \\
+                              & = \frac{\mu_0 I}{\pi} \frac{w^2}{2 (w^2 / 4 + z^2) \sqrt{w^2 / 2 + z^2}} \uvec{z} \\
+                              & = \frac{\mu_0 I w^2}{2 \pi z^3} \text{ for } z \gg w                              \\
+  \vec{m}                     & = I w^2 \uvec{z}                                                                  \\
+  \vec{B}_\text{dip}(\vec{r}) & = \frac{\mu_0 m}{4 \pi r^3} (2 \cos \theta \uvec{r} + \sin \theta \uvec{\theta})  \\
+                              & = \frac{\mu_0 I w^2}{2 \pi z^3} \uvec{z}
+\end{align*}
+
+\subsection{}
+
+\begin{enumerate}
+  \item
+
+        \begin{align*}
+          \vec{m} & = \int I \,d \vec{a}                                            \\
+                  & = \int_0^R \sigma r \omega \pi r^2 \,d r \uvec{z}               \\
+                  & = \pi \sigma \omega \left[ \frac{1}{4} r^4 \right]_0^R \uvec{z} \\
+                  & = \frac{1}{4} \pi \sigma \omega R^4 \uvec{z}
+        \end{align*}
+
+  \item
+
+        \begin{align*}
+          \vec{m}                     & = \int I \,d \vec{a}                                                                   \\
+                                      & = \int_0^\pi \sigma \omega R \sin \theta R \pi (R \sin \theta)^2 \,d \theta \,\uvec{z} \\
+                                      & = \pi \sigma \omega R^4 \int_0^\pi \sin^3 \theta \,d \theta \,\uvec{z}                 \\
+                                      & = \frac{4}{3} \pi \sigma \omega R^4 \uvec{z}                                           \\
+          \vec{A}(\vec{r})            & = \frac{\mu_0 R^4 \omega \sigma}{3} \frac{\sin \theta}{r^2} \uvec{\phi}                \\
+          \vec{A}_\text{dip}(\vec{r}) & = \frac{\mu_0}{4 \pi} \frac{\vec{m} \times \uvec{r}}{r^2}                              \\
+                                      & = \frac{\mu_0 R^4 \omega \sigma}{3} \frac{\sin \theta}{r^2} \uvec{\phi}
+        \end{align*}
+\end{enumerate}
+
 \end{document}
