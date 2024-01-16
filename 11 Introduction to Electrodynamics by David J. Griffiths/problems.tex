@@ -3372,4 +3372,63 @@ Initially the particle has no angular momentum and its change in angular momentu
         \end{align*}
 \end{enumerate}
 
+\section{Magnetic Fields in Matter}
+
+\subsection{}
+
+\begin{align*}
+  \vec{m}_\text{circle}          & = I \pi a^2 \uvec{z}                                 \\
+  \vec{B}_\text{circle}(\vec{r}) & = -\frac{\mu_0 I \pi a^2}{4 \pi r^3} \uvec{z}        \\
+  \vec{m}_\text{square}          & = I b^2 \,\uvec{y}                                   \\
+  \vec{\tau}                     & = \vec{m}_\text{square} \times \vec{B}_\text{circle} \\
+                                 & = -\frac{\mu_0}{4} \frac{(a b I)^2}{r^3} \uvec{x}
+\end{align*}
+
+Its equilibrium orientation is down.
+
+\setcounter{subsection}{2}
+\subsection{}
+
+\begin{enumerate}
+  \setcounter{enumi}{1}
+  \item
+
+        \begin{align*}
+          \vec{m}_1               & = m_1 \uvec{x}                                                                                \\
+          \vec{B}                 & = \frac{\mu_0}{4 \pi} \frac{1}{r^3} [3 (\vec{m}_1 \cdot \uvec{x}) \uvec{x} - \vec{m}_1]       \\
+                                  & = \frac{\mu_0}{4 \pi} \frac{1}{r^3} [3 (m_1 \uvec{x} \cdot \uvec{x}) \uvec{x} - m_1 \uvec{x}] \\
+                                  & = \frac{\mu_0}{4 \pi} \frac{2 m_1}{r^3} \uvec{x}                                              \\
+          \vec{m}_2               & = m_2 \uvec{x}                                                                                \\
+          \vec{m}_2 \cdot \vec{B} & = m_2 \uvec{x} \cdot \frac{\mu_0}{4 \pi} \frac{2 m_1}{r^3} \uvec{x}                           \\
+                                  & = \frac{\mu_0}{4 \pi} \frac{2 m_1 m_2}{r^3}                                                   \\
+          \vec{F}                 & = \nabla (\vec{m} \cdot \vec{B})                                                              \\
+                                  & = -\frac{\mu_0}{4 \pi} \frac{6 m_1 m_2}{r^4} \uvec{x}
+        \end{align*}
+\end{enumerate}
+
+\setcounter{subsection}{4}
+\subsection{}
+
+\begin{enumerate}
+  \item
+
+        \begin{align*}
+          \vec{B} & = \begin{cases}
+                        \mu_0 J_0 x \,\uvec{y} & |x| \le a \\
+                        \mu_0 J_0 a \,\uvec{y} & |x| \ge a
+                      \end{cases}                   \\
+          \vec{F} & = \nabla (\vec{m} \cdot \vec{B})                       \\
+                  & = \nabla (m_0 \,\uvec{x} \cdot \mu_0 J_0 x \,\uvec{y}) \\
+                  & = \vec{0}
+        \end{align*}
+
+  \item
+
+        \begin{align*}
+          \vec{F} & = \nabla (\vec{m} \cdot \vec{B})                       \\
+                  & = \nabla (m_0 \,\uvec{y} \cdot \mu_0 J_0 x \,\uvec{y}) \\
+                  & = \mu_0 J_0 m_0 \,\uvec{x}
+        \end{align*}
+\end{enumerate}
+
 \end{document}
