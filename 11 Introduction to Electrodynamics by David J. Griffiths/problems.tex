@@ -3074,4 +3074,302 @@ You could add the gradient of any scalar function and this would still hold.
         \end{align*}
 \end{enumerate}
 
+\setcounter{subsection}{38}
+\subsection{}
+
+\begin{enumerate}
+  \item Yes, because magnetic fields do no work.
+
+  \item
+
+        \begin{align*}
+          \vec{B} & = \frac{\mu_0 I}{2 \pi s} \uvec{\phi}                              \\
+          \vec{v} & = \dot{s} \uvec{s} + s \dot{\phi} \uvec{\phi} + \dot{z} \uvec{z}   \\
+          \vec{F} & = q \vec{v} \times \vec{B}                                         \\
+                  & = q \begin{vmatrix}
+                          \uvec{s} & \uvec{\phi}             & \uvec{z} \\
+                          \dot{s}  & s \dot{\phi}            & \dot{z}  \\
+                          0        & \frac{\mu_0 I}{2 \pi s} & 0
+                        \end{vmatrix}                  \\
+                  & = \frac{\mu_0 I q}{2 \pi s} (-\dot{z} \uvec{s} + \dot{s} \uvec{z})
+        \end{align*}
+
+  \item
+
+        \begin{align*}
+          \vec{a}                              & = \frac{d \vec{v}}{d t}                                                                                         \\
+                                               & = (\ddot{s} - s \dot{\phi}^2) \uvec{s} + (2 \dot{s} \dot{\phi} + s \ddot{\phi}) \uvec{\phi} + \ddot{z} \uvec{z} \\
+          \vec{F}                              & = m \vec{a}                                                                                                     \\
+          \ddot{s} - s \dot{\phi}^2            & = -\alpha \frac{\dot{z}}{s}                                                                                     \\
+          2 \dot{s} \dot{\phi} + s \ddot{\phi} & = 0                                                                                                             \\
+          \ddot{z}                             & = \alpha \frac{\dot{s}}{s}
+        \end{align*}
+
+  \item
+
+        \begin{align*}
+          \ddot{s} - s \dot{\phi}^2            & = -\alpha \frac{\dot{z}}{s} \\
+          2 \dot{s} \dot{\phi} + s \ddot{\phi} & = 0                         \\
+          0                                    & = \alpha \frac{\dot{s}}{s}  \\
+          \dot{s}                              & = 0                         \\
+          \ddot{s}                             & = 0                         \\
+          s                                    & = c_1                       \\
+          s \ddot{\phi}                        & = 0                         \\
+          \dot{\phi}                           & = c_2                       \\
+          \phi                                 & = c_2 t + c_3               \\
+          z                                    & = c_4 t + c_5
+        \end{align*}
+
+        Helix
+\end{enumerate}
+
+\setcounter{subsection}{40}
+\subsection{}
+
+\begin{enumerate}
+  \item Downwards
+
+  \item
+
+        \begin{align*}
+          q E & = q v B \\
+          E   & = v B   \\
+          V   & = E t   \\
+              & = v B t
+        \end{align*}
+
+  \item The voltage would be reversed (higher potential at the top).
+\end{enumerate}
+
+\subsection{}
+
+\begin{align*}
+  \vec{F} & = I \int d \vec{l} \times \vec{B}                \\
+          & = I \left( \int d \vec{l} \right) \times \vec{B} \\
+  F       & = I B w
+\end{align*}
+
+\subsection{}
+
+\begin{align*}
+  \vec{B}    & = B(s) \,\uvec{z}                                            \\
+  0          & = \int \vec{B} \cdot d \vec{a}                               \\
+             & = \int (B(s) \,\uvec{z}) \cdot (s \,d s \,d \phi \,\uvec{z}) \\
+             & = \int_0^R B(s) s \,d s \,d \phi                             \\
+             & = 2 \pi \int_0^R B(s) s \,d s                                \\
+             & = \int_0^R B(s) s \,d s                                      \\
+  \vec{v}    & = \dot{s} \uvec{s} + s \dot{\phi} \uvec{\phi}                \\
+  \vec{F}    & = q \vec{v} \times \vec{B}                                   \\
+             & = q \begin{vmatrix}
+                     \uvec{s} & \uvec{\phi}  & \uvec{z} \\
+                     \dot{s}  & s \dot{\phi} & 0        \\
+                     0        & 0            & B(s)
+                   \end{vmatrix}                       \\
+             & = B(s) q (s \dot{\phi} \uvec{s} - \dot{s} \uvec{\phi})       \\
+  \vec{r}    & = s \uvec{s}                                                 \\
+  \vec{\tau} & = \vec{r} \times \vec{F}                                     \\
+             & = B(s) q s \begin{vmatrix}
+                            \uvec{s}     & \uvec{\phi} & \uvec{z} \\
+                            s            & 0           & 0        \\
+                            s \dot{\phi} & -\dot{s}    & 0
+                          \end{vmatrix}             \\
+             & = -B(s) q s \dot{s} \uvec{z}                                 \\
+  \Delta L   & = \int_{t_0}^t \tau \,d t                                    \\
+             & = -\int_{t_0}^t B(s) q s \dot{s} \,d t                       \\
+             & = -q \int_0^R B(s) s \,d s                                   \\
+             & = 0
+\end{align*}
+
+Initially the particle has no angular momentum and its change in angular momentum when it leaves is zero, so it still has no angular momentum and must be moving radially.
+
+\setcounter{subsection}{46}
+\subsection{}
+
+\begin{enumerate}
+  \item
+
+        \begin{align*}
+          \vec{B}                                              & = \frac{\mu_0 I}{2} \frac{R^2}{(R^2 + z^2)^{3 / 2}} \uvec{z}                                                                    \\
+          \vec{B}                                              & = \frac{\mu_0 I R^2}{2} \left( \frac{1}{[R^2 + (d / 2 + z)^2]^{3/2}} + \frac{1}{[R^2 + (d / 2 - z)^2]^{3 / 2}} \right) \uvec{z} \\
+          \left. \frac{\partial B}{\partial z} \right|_{z = 0} & = 0
+        \end{align*}
+
+  \item
+
+        \begin{align*}
+          d & = R                              \\
+          B & = \frac{8 \mu_0 I}{5 \sqrt{5} R}
+        \end{align*}
+\end{enumerate}
+
+\subsection{}
+
+\begin{align*}
+  B                           & = \frac{\mu_0 I}{2} \frac{R^2}{(R^2 + z^2)^{3 / 2}}                                       \\
+  B                           & = \int B \,d r s                                                                          \\
+                              & = \frac{\mu_0 \sigma \omega}{2} \int_0^R \frac{r^3}{(r^2 + z^2)^{3 / 2}} \,d r            \\
+                              & = \frac{\mu_0 \sigma \omega}{2} \frac{(z - \sqrt{R^2 + z^2})^2}{\sqrt{R^2 + z^2}}         \\
+                              & = \frac{\mu_0 \sigma \omega}{2} \left( \frac{R^2 + 2 z^2}{\sqrt{R^2 + z^2}} - 2 z \right) \\
+  \vec{m}                     & = \frac{1}{4} \pi \sigma \omega R^4 \uvec{z}                                              \\
+  \vec{B}_\text{dip}(\vec{r}) & = \frac{\mu_0 m}{4 \pi r^3} (2 \cos \theta \uvec{r} + \sin \theta \uvec{\theta})          \\
+                              & = \frac{\mu_0 \sigma \omega R^4}{8 z^3} \uvec{z}
+\end{align*}
+
+\subsection{}
+
+\begin{align*}
+  \vec{B}                  & = \frac{\mu_0}{4 \pi} I \int \frac{d \vec{l}' \times \hrcurs}{\rcurs^2}                                               \\
+  \vec{r}                  & = y \uvec{y} + z \uvec{z}                                                                                             \\
+  \vec{r}'                 & = R (\cos \phi \uvec{x} + \sin \phi \uvec{y})                                                                         \\
+  \brcurs                  & = \vec{r} - \vec{r}'                                                                                                  \\
+                           & = -R \cos \phi \uvec{x} + (y - R \sin \phi) \uvec{y} + z \uvec{z}                                                     \\
+  \rcurs^2                 & = R^2 \cos^2 \phi + (y - R \sin \phi)^2 + z^2                                                                         \\
+                           & = R^2 + y^2 + z^2 - 2 y R \sin \phi                                                                                   \\
+  x                        & = R \cos \phi                                                                                                         \\
+  d x                      & = -R \sin \phi \,d \phi                                                                                               \\
+  y                        & = R \sin \phi                                                                                                         \\
+  d y                      & = R \cos \phi \,d \phi                                                                                                \\
+  d \vec{l}                & = -R \sin \phi \,d \phi \,\uvec{x} + R \cos \phi \,d \phi \,\uvec{y}                                                  \\
+  d \vec{l} \times \brcurs & = \begin{vmatrix}
+                                 \uvec{x}              & \uvec{y}             & \uvec{z} \\
+                                 -R \sin \phi \,d \phi & R \cos \phi \,d \phi & 0        \\
+                                 -R \cos \phi          & y - R \sin \phi      & z
+                               \end{vmatrix}                                                             \\
+                           & = z R \cos \phi \,d \phi \,\uvec{x} + z R \sin \phi \,d \phi \,\uvec{y}                                               \\
+                           & \qquad + [R \sin \phi \,d \phi (R \sin \phi - y) + R^2 \cos^2 \phi \,d \phi] \uvec{z}                                 \\
+                           & = z R \cos \phi \,d \phi \,\uvec{x} + z R \sin \phi \,d \phi \,\uvec{y}                                               \\
+                           & \qquad + [R^2 \,d \phi - y R \sin \phi \,d \phi] \uvec{z}                                                             \\
+  B_x                      & = \frac{\mu_0 I R z}{4 \pi} \int_0^{2 \pi} \frac{\cos \phi}{(R^2 + y^2 + z^2 - 2 y R \sin \phi)^{3 / 2}} \,d \phi     \\
+                           & = 0                                                                                                                   \\
+  B_y                      & = \frac{\mu_0 I R z}{4 \pi} \int_0^{2 \pi} \frac{\sin \phi}{(R^2 + y^2 + z^2 - 2 y R \sin \phi)^{3 / 2}} \,d \phi     \\
+  B_z                      & = \frac{\mu_0 I R}{4 \pi} \int_0^{2 \pi} \frac{R - y \sin \phi}{(R^2 + y^2 + z^2 - 2 y R \sin \phi)^{3 / 2}} \,d \phi
+\end{align*}
+
+\subsection{}
+
+\begin{align*}
+  \vec{F}_2 & = I_2 \oint d \vec{l}_2 \times \vec{B}_1                                                                                                                                                  \\
+            & = I_2 \oint d \vec{l}_2 \times \left( \frac{\mu_0}{4 \pi} I_1 \oint \frac{d \vec{l}_1 \times \hrcurs}{\rcurs^2} \right)                                                                   \\
+            & = \frac{\mu_0}{4 \pi} I_1 I_2 \oint \oint d \vec{l}_2 \times \left( d \vec{l}_1 \times \frac{\hrcurs}{\rcurs^2} \right)                                                                   \\
+            & = \frac{\mu_0}{4 \pi} I_1 I_2 \oint \oint \left[ d \vec{l}_1 \left( d \vec{l}_2 \cdot \frac{\hrcurs}{\rcurs^2} \right) - \frac{\hrcurs}{\rcurs^2} (d \vec{l}_2 \cdot d \vec{l}_1) \right] \\
+            & = -\frac{\mu_0}{4 \pi} I_1 I_2 \oint \oint \frac{\hrcurs}{\rcurs^2} (d \vec{l}_2 \cdot d \vec{l}_1)
+\end{align*}
+
+\subsection{}
+
+\begin{enumerate}
+  \item
+
+        \begin{align*}
+          \vec{B} & = \frac{\mu_0 I}{4 \pi} \oint \frac{d \vec{l} \times \hrcurs}{\rcurs^2} \\
+                  & = -\frac{\mu_0 I}{4 \pi} \oint \frac{d \vec{l} \times \uvec{r}}{r^2}    \\
+                  & = \frac{\mu_0 I}{4 \pi} \oint \frac{\sin \phi \,d l \,\uvec{z}}{r^2}    \\
+                  & = \frac{\mu_0 I}{4 \pi} \oint \frac{r \,d \theta \,\uvec{z}}{r^2}       \\
+                  & = \frac{\mu_0 I}{4 \pi} \oint \frac{d \theta}{r} \uvec{z}
+        \end{align*}
+
+  \item
+
+        \begin{align*}
+          \vec{B} & = \frac{\mu_0 I}{4 \pi} \oint_0^{2 \pi} \frac{d \theta}{R} \uvec{z} \\
+                  & = \frac{\mu_0 I}{2 R} \uvec{z}
+        \end{align*}
+
+  \item
+
+        \begin{align*}
+          \vec{B} & = \frac{\mu_0 I}{4 \pi} \oint_0^{2 \pi} \frac{\sqrt{\theta}}{a} \,d \theta \,\uvec{z}    \\
+                  & = \frac{\mu_0 I}{4 \pi a} \left[ \frac{2}{3} \theta^{3 / 2} \right]_0^{2 \pi} \,\uvec{z} \\
+                  & = \frac{\mu_0 I \sqrt{2 \pi}}{3 a} \,\uvec{z}
+        \end{align*}
+
+  \item
+
+        \begin{align*}
+          \vec{B} & = \frac{\mu_0 I}{4 \pi} \oint_0^{2 \pi} \frac{1 + e \cos \theta}{p} \,d \theta \,\uvec{z} \\
+                  & = \frac{\mu_0 I}{4 \pi p} [\theta + e \sin \theta]_0^{2 \pi} \,\uvec{z}                   \\
+                  & = \frac{\mu_0 I}{2 p} \uvec{z}
+        \end{align*}
+\end{enumerate}
+
+\subsection{}
+
+\begin{enumerate}
+  \item \[\vec{A} = \frac{1}{4 \pi} \int \frac{\vec{B} \times \hrcurs}{\rcurs^2} \,d \tau\]
+\end{enumerate}
+
+\setcounter{subsection}{56}
+\subsection{}
+
+\begin{align*}
+  \vec{B}_0              & = -B_0 \uvec{z}                                                                                                                                          \\
+                         & = -B_0 (\cos \theta \,\uvec{r} - \sin \theta \,\uvec{\theta})                                                                                            \\
+  \vec{m}                & = m_0 \uvec{z}                                                                                                                                           \\
+  \vec{B}_m              & = \frac{\mu_0 m_0}{4 \pi r^3} (2 \cos \theta \,\uvec{r} + \sin \theta \,\uvec{\theta})                                                                   \\
+  \vec{B}                & = \vec{B}_0 + \vec{B}_m                                                                                                                                  \\
+                         & = \left( \frac{\mu_0 m_0}{2 \pi r^3} - B_0 \right) \cos \theta \,\uvec{r} + \left( \frac{\mu_0 m_0}{4 \pi r^3} + B_0 \right) \sin \theta \,\uvec{\theta} \\
+  \vec{B} \cdot \uvec{r} & = \left( \frac{\mu_0 m_0}{2 \pi r^3} - B_0 \right) \cos \theta                                                                                           \\
+  0                      & = \frac{\mu_0 m_0}{2 \pi R^3} - B_0                                                                                                                      \\
+  R                      & = \left( \frac{\mu_0 m_0}{2 \pi B_0} \right)^{1 / 3}
+\end{align*}
+
+\subsection{}
+
+\begin{enumerate}
+  \item
+
+        \begin{align*}
+          \vec{m}                 & = \frac{Q}{2 \pi R} \omega R \pi R^2 \,\uvec{z}   \\
+                                  & = \frac{1}{2} \omega Q R^2 \,\uvec{z}             \\
+          J                       & = \int_0^{2 \pi} \frac{M}{2 \pi R} R^3 \,d \theta \\
+                                  & = M R^2                                           \\
+          \vec{L}                 & = J \vec{\omega}                                  \\
+                                  & = M R^2 \omega \,\uvec{z}                         \\
+          \frac{\vec{m}}{\vec{L}} & = \frac{\omega Q R^2 / 2}{M R^2 \omega}           \\
+                                  & = \frac{Q}{2 M}
+        \end{align*}
+
+  \item
+
+        \begin{align*}
+          \vec{m}                 & = \int_0^\pi \frac{1}{2} \omega 2 \pi (R \sin \theta) R \frac{Q}{4 \pi R^2} (R \sin \theta)^2 \,d \theta \,\uvec{z} \\
+                                  & = \frac{1}{4} \omega Q R^2 \int_0^\pi \sin^3 \theta \,d \theta \,\uvec{z}                                           \\
+                                  & = \frac{1}{3} \omega Q R^2 \,\uvec{z}                                                                               \\
+          \vec{J}                 & = \frac{2}{3} M R^2                                                                                                 \\
+          \vec{L}                 & = J \vec{\omega}                                                                                                    \\
+                                  & = \frac{2}{3} M R^2 \omega                                                                                          \\
+          \frac{\vec{m}}{\vec{L}} & = \frac{\omega Q R^2 / 3}{2 M R^2 \omega / 3}                                                                       \\
+                                  & = \frac{Q}{2 M}
+        \end{align*}
+\end{enumerate}
+
+\setcounter{subsection}{59}
+\subsection{}
+
+\begin{enumerate}
+  \item
+
+        \begin{align*}
+          \vec{m}_\text{plate}  & = \int I \,d \vec{a}                                                                           \\
+                                & = \int_0^R \omega r \sigma \pi r^2 \,d r \,\uvec{z}                                            \\
+                                & = \frac{1}{4} \pi \omega \sigma R^4 \,\uvec{z}                                                 \\
+          \vec{m}_\text{sphere} & = \int_0^\pi \vec{m}_\text{plate} \,d \theta                                                   \\
+                                & = \int_0^\pi \frac{1}{4} \pi \omega \rho R \sin \theta (R \sin \theta)^4 \,d \theta \,\uvec{z} \\
+                                & = \frac{1}{4} \pi \omega \rho R^5 \int_0^\pi \sin^5 \theta \,d \theta \,\uvec{z}               \\
+                                & = \frac{4}{15} \pi \omega \rho R^5 \,\uvec{z}                                                  \\
+                                & = \frac{1}{5} \omega Q R^2 \,\uvec{z}                                                          \\
+        \end{align*}
+
+  \item
+
+        \[\vec{B}_\text{ave} = \frac{\mu_0 \omega Q}{10 \pi R} \,\uvec{z}\]
+
+  \item
+
+        \begin{align*}
+          \vec{A}_\text{dip}(\vec{r}) & = \frac{\mu_0}{4 \pi} \frac{\vec{m} \times \uvec{r}}{r^2}                        \\
+                                      & = \frac{\mu_0}{4 \pi} \frac{\omega Q R^2}{5} \frac{\sin \theta}{r^2} \uvec{\phi}
+        \end{align*}
+\end{enumerate}
+
 \end{document}
