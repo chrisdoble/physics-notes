@@ -3431,4 +3431,40 @@ Its equilibrium orientation is down.
         \end{align*}
 \end{enumerate}
 
+\setcounter{subsection}{6}
+\subsection{}
+
+\begin{align*}
+  \vec{J}_b & = \nabla \times \vec{M}          \\
+            & = \vec{0}                        \\
+  \vec{K}_b & = \vec{M} \times \uvec{n}        \\
+            & = M \uvec{\phi}                  \\
+  \vec{B}   & = \begin{cases}
+                  \mu_0 \vec{M} & \text{inside}  \\
+                  \vec{0}       & \text{outside}
+                \end{cases}
+\end{align*}
+
+\subsection{}
+
+\begin{align*}
+  \vec{M}                       & = k s^2 \,\uvec{\phi}                                                                 \\
+  \vec{J}_b                     & = \nabla \times \vec{M}                                                               \\
+                                & = \frac{1}{s} \frac{\partial}{\partial s} (k s^3) \,\uvec{z}                          \\
+                                & = 3 k s \,\uvec{z}                                                                    \\
+  \vec{K}_b                     & = \vec{M} \times \uvec{n}                                                             \\
+                                & = -k R^2 \,\uvec{z}                                                                   \\
+  % Inside
+  \oint \vec{B} \cdot d \vec{l} & = \mu_0 Q_\text{enc}                                                                  \\
+  2 \pi s B                     & = \mu_0 \int_0^{2 \pi} \int_0^s 3 k s'^2 \,d s' \,d \theta                            \\
+                                & = 2 \pi \mu_0 k s^3                                                                   \\
+  \vec{B}                       & = \mu_0 k s^2 \,\uvec{\phi}                                                           \\
+                                & = \mu_0 \vec{M}                                                                       \\
+  % Outside
+  \oint \vec{B} \cdot d \vec{l} & = \mu_0 Q_\text{enc}                                                                  \\
+  2 \pi s B                     & = \mu_0 \left( \int_0^{2 \pi} \int_0^R 3 k s^2 \,d s \,d \theta - 2 \pi k R^3 \right) \\
+                                & = 0                                                                                   \\
+  \vec{B}                       & = \vec{0}
+\end{align*}
+
 \end{document}
