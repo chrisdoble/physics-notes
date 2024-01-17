@@ -3467,4 +3467,58 @@ Its equilibrium orientation is down.
   \vec{B}                       & = \vec{0}
 \end{align*}
 
+\setcounter{subsection}{11}
+\subsection{}
+
+\begin{enumerate}
+  \item
+
+        \begin{align*}
+          \vec{M}           & = k s \,\uvec{z}                     \\
+          \vec{J}_b         & = \nabla \times \vec{M}              \\
+                            & = -k \,\uvec{\phi}                   \\
+          \vec{K}_b         & = \vec{M} \times \uvec{n}            \\
+                            & = k R \,\uvec{\phi}                  \\
+          \vec{B}_J         & = \int_s^R -\mu_0 k \,d s \,\uvec{z} \\
+                            & = -\mu_0 k (R - s) \,\uvec{z}        \\
+          \vec{B}_K         & = \mu_0 k R \,\uvec{z}               \\
+          \vec{B}_\text{in} & = \mu_0 k [R - (R - s)] \,\uvec{z}   \\
+                            & = \mu_0 k s \,\uvec{z}               \\
+          \vec{B}           & = \begin{cases}
+                                  \mu_0 k s \,\uvec{z} & s < R \\
+                                  \vec{0}              & s > R
+                                \end{cases}
+        \end{align*}
+
+  \item
+
+        \begin{align*}
+          \oint \vec{H} \cdot d \vec{l} & = I_{f_\text{enc}}                  \\
+          \vec{H}                       & = \vec{0}                           \\
+          \vec{0}                       & = \frac{1}{\mu_0} \vec{B} - \vec{M} \\
+          \vec{B}                       & = \mu_0 \vec{M}                     \\
+                                        & = \begin{cases}
+                                              \mu_0 k s \,\uvec{z} & s < R \\
+                                              \vec{0}              & s > R
+                                            \end{cases}
+        \end{align*}
+\end{enumerate}
+
+\subsection{}
+
+\begin{enumerate}
+  \item
+
+        \begin{align*}
+          \vec{B} & = \vec{B}_0 - \frac{2}{3} \mu_0 \vec{M}           \\
+          \vec{H} & = \frac{1}{\mu_0} \vec{B}                         \\
+                  & = \frac{1}{\mu_0} \vec{B}_0 + \frac{1}{3} \vec{M} \\
+                  & = \vec{H}_0 + \frac{1}{3} \vec{M}
+        \end{align*}
+\end{enumerate}
+
+\subsection{}
+
+\subsection{}
+
 \end{document}

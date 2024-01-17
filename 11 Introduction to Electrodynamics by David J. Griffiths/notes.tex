@@ -648,4 +648,27 @@
   \item The potential of a magnetised object is the same as would be produced by a volume current \[\vec{J}_b = \nabla \times \vec{M}\] and a surface current \[\vec{K}_b = \vec{M} \times \uvec{n},\] i.e. \[\vec{A}(\vec{r}) = \frac{\mu_0}{4 \pi} \int_\mathcal{V} \frac{\vec{J}_b(\vec{r}')}{\rcurs} \,d \tau' + \frac{\mu_0}{4 \pi} \oint_\mathcal{S} \frac{\vec{K}_b(\vec{r}')}{\rcurs} \,d a'.\] The terms $\vec{J}_b$ and $\vec{K}_b$ are called the bound volume and surface current, respectively.
 \end{itemize}
 
+\subsection{The Auxiliary Field H}
+
+\subsubsection{Ampère's Law in Magnetised Materials}
+
+\begin{itemize}
+  \item In a magnetised material the total current is \[\vec{J} = \vec{J}_f + \vec{J}_b\] and thus Ampère's law can be written \[\frac{1}{\mu_0} (\nabla \times \vec{B}) = \vec{J} = \vec{J}_f + \vec{J}_b = \vec{J}_f + \nabla \times \vec{M}.\] Moving the curls to one side gives \begin{align*}
+          \nabla \times \left( \frac{1}{\mu_0} \vec{B} - \vec{M} \right) & = \vec{J}_f \\
+          \nabla \times \vec{H}                                          & = \vec{J}_f
+        \end{align*} where $\vec{H} = \vec{B} / \mu_0 - \vec{M}$.
+
+  \item The integral form of Ampère's law in a material is \[\oint \vec{H} \cdot d \vec{l} = I_{f_\text{enc}}.\]
+\end{itemize}
+
+\setcounter{subsubsection}{2}
+\subsubsection{Boundary Conditions}
+
+\begin{itemize}
+  \item The boundary conditions on $\vec{H}$ are \begin{align*}
+          H_\text{above}^\perp - H_\text{below}^\perp                     & = -(M_\text{above}^\perp - M_\text{below}^\perp) \\
+          \vec{H}_\text{above}^\parallel - \vec{H}_\text{below}^\parallel & = \vec{K}_f \times \uvec{n}
+        \end{align*}
+\end{itemize}
+
 \end{document}
