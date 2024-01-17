@@ -3517,8 +3517,94 @@ Its equilibrium orientation is down.
         \end{align*}
 \end{enumerate}
 
+\setcounter{subsection}{15}
 \subsection{}
 
+\begin{align*}
+  \oint \vec{H} \cdot d \vec{l} & = I_{f_\text{enc}}                                          \\
+  2 \pi s H                     & = I                                                         \\
+  \vec{H}                       & = \frac{I}{2 \pi s} \uvec{\phi}                             \\
+  \vec{B}                       & = \mu \vec{H}                                               \\
+                                & = \mu_0 (1 + \chi_m) \frac{I}{2 \pi s} \uvec{\phi}          \\
+  \vec{M}                       & = \chi_m \vec{H}                                            \\
+                                & = \chi_m \frac{I}{2 \pi s} \uvec{\phi}                      \\
+  \vec{J}_b                     & = \nabla \times \vec{M}                                     \\
+                                & = \vec{0}                                                   \\
+  \vec{K}_b                     & = \vec{M} \times \uvec{n}                                   \\
+                                & = \begin{cases}
+                                      \frac{\chi_m I}{2 \pi a} \uvec{z}  & s = a \\
+                                      -\frac{\chi_m I}{2 \pi b} \uvec{z} & s = b
+                                    \end{cases}                \\
+  \oint \vec{B} \cdot d \vec{l} & = \mu_0 I_\text{enc}                                        \\
+  2 \pi s B                     & = \mu_0 \left( I + \frac{\chi_m I}{2 \pi a} 2 \pi a \right) \\
+                                & = \mu_0 (1 + \chi_m) I                                      \\
+  \vec{B}                       & = \mu_0 (1 + \chi_m) \frac{1}{2 \pi s} \uvec{\phi}
+\end{align*}
+
 \subsection{}
+
+\begin{align*}
+  \oint \vec{H}_\text{in} \cdot d \vec{l} & = I_{f_\text{enc}}                                                                               \\
+  2 \pi s H_\text{in}                     & = I \left( \frac{s}{a} \right)^2                                                                 \\
+  \vec{H}_\text{in}                       & = \frac{I s}{2 \pi a^2} \uvec{\phi}                                                              \\
+  \vec{H}                                 & = \begin{cases}
+                                                \frac{I s}{2 \pi a^2} \uvec{\phi} & s < a \\
+                                                \frac{I}{2 \pi s} \uvec{\phi}     & s > a
+                                              \end{cases}                                                      \\
+  \vec{B}                                 & = \mu \vec{H}                                                                                    \\
+                                          & = \begin{cases}
+                                                \mu_0 (1 + \chi_m) \frac{I s}{2 \pi a^2} \uvec{\phi} & s < a \\
+                                                \mu_0 \frac{I}{2 \pi s} \uvec{\phi}                  & s > a
+                                              \end{cases}                                   \\
+  \vec{M}                                 & = \chi_m \vec{H}                                                                                 \\
+                                          & = \begin{cases}
+                                                \chi_m \frac{I s}{2 \pi a^2} \uvec{\phi} & s < a \\
+                                                \vec{0}                                  & s > a
+                                              \end{cases}                                               \\
+  \vec{J}_b                               & = \nabla \times \vec{M}                                                                          \\
+                                          & = \frac{1}{s} \frac{\partial}{\partial s} \left( s \chi_m \frac{I s}{2 \pi a^2} \right) \uvec{z} \\
+                                          & = \frac{\chi_m I}{\pi a^2} \uvec{z}                                                              \\
+  \vec{K}_b                               & = \vec{M} \times \uvec{n}                                                                        \\
+                                          & = -\frac{\chi_m I}{2 \pi a} \uvec{z}                                                             \\
+  I_b                                     & = J_b \pi a^2 + K_b 2 \pi a                                                                      \\
+                                          & = 0
+\end{align*}
+
+\setcounter{subsection}{19}
+\subsection{}
+
+Heat it up above the Curie point and let it cool.
+
+\subsection{}
+
+\begin{enumerate}
+  \item
+
+        \begin{align*}
+          U & = -\int_\infty^{\vec{r}} \vec{F} \cdot d \vec{l}                        \\
+            & = -\int_\infty^{\vec{r}} \nabla (\vec{m} \cdot \vec{B}) \cdot d \vec{l} \\
+            & = -[\vec{m} \cdot \vec{B}(\vec{r}) - \vec{m} \cdot \vec{B}(\infty)]     \\
+            & = -\vec{m} \cdot \vec{B}(\vec{r})
+        \end{align*}
+
+  \item
+
+        \begin{align*}
+          \vec{B}_1 & = \frac{\mu_0}{4 \pi} \frac{1}{r^3} [3 (\vec{m}_1 \cdot \uvec{r}) \uvec{r} - \vec{m}_1]                                   \\
+          U         & = -\vec{m}_2 \cdot \vec{B}_1                                                                                              \\
+                    & = \frac{\mu_0}{4 \pi} \frac{1}{r^3} [\vec{m}_1 \cdot \vec{m}_2 - 3 (\vec{m}_1 \cdot \uvec{r}) (\vec{m}_2 \cdot \uvec{r})]
+        \end{align*}
+
+  \item
+
+        \begin{align*}
+          U & = \frac{\mu_0}{4 \pi} \frac{1}{r^3} [m_1 m_2 \cos (\theta_1 - \theta_2) - 3 m_1 m_2 \cos \theta_1 \cos \theta_2] \\
+            & = \frac{\mu_0}{4 \pi} \frac{m_1 m_2}{r^3} (\sin \theta_1 \sin \theta_2 - 2 \cos \theta_1 \cos \theta_2)
+        \end{align*}
+
+        The stable configuration is when the two dipoles are parallel along the line joining them.
+
+  \item All in a line.
+\end{enumerate}
 
 \end{document}

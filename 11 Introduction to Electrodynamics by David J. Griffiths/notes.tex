@@ -671,4 +671,39 @@
         \end{align*}
 \end{itemize}
 
+\subsection{Linear and Nonlinear Media}
+
+\subsubsection{Magnetic Susceptibility and Permeability}
+
+\begin{itemize}
+  \item For many materials, magnetisation is proportional to the strength of the applied magnetic field. You would expect this to be expressed as a relation between $\vec{M}$ and $\vec{B}$ but it is typically written \[\vec{M} = \chi_m \vec{H}\] where $\chi_m$ is called the \textbf{magnetic susceptibility} of the material — positive for paramagnetic materials, negative for diamagnetic.
+
+  \item Materials that obey the above relation are called \textbf{linear media}.
+
+  \item For linear media \begin{align*}
+          \vec{H} & = \frac{1}{\mu_0} \vec{B} - \vec{M} \\
+          \vec{B} & = \mu_0 (\vec{H} + \vec{M})         \\
+                  & = \mu_0 (1 + \chi_m) \vec{H}        \\
+                  & = \mu \vec{H}
+        \end{align*} and thus $\vec{B}$ is also proportional to $\vec{H}$ where $\mu$ is called the \textbf{permeability} of the material and $\mu_r = \mu / \mu_0$ is called the \textbf{relative permeability} of the material.
+
+  \item In a homogeneous linear material the volume bound current density is proportional to the free current density \[\vec{J}_b = \chi_m \vec{J}_f.\]
+\end{itemize}
+
+\subsubsection{Ferromagnetism}
+
+\begin{itemize}
+  \item Ferromagnetic materials have several properties that result in the \\ macroscale behaviour:
+
+        \begin{itemize}
+          \item Their alignment of magnetic dipoles persists after the external magnetic field is removed — it is ``frozen in.''
+
+          \item Each dipole ``likes'' to point in the same direction as its neighbors.
+
+          \item The material contains many \textbf{domains} in which the dipoles are \\ aligned, however the dipoles of different domains are not aligned. This is why not all objects made of ferromagnetic materials exhibit magnetic properties — the random orientation of the domains cancel each other out.
+
+          \item When the material is placed in an external magnetic field, domains whose dipoles are closely aligned with the field grow by ``converting'' dipoles from neighboring domains. Once all dipoles are aligned with the external field the material is said to be \textbf{saturated}. This is how you create a permanent magnet.
+        \end{itemize}
+\end{itemize}
+
 \end{document}
