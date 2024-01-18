@@ -3607,4 +3607,73 @@ Heat it up above the Curie point and let it cool.
   \item All in a line.
 \end{enumerate}
 
+\setcounter{subsection}{22}
+\subsection{}
+
+\begin{enumerate}
+  \item
+
+        \begin{align*}
+          \vec{B}_1 & = \frac{\mu_0 m}{2 \pi z^3} \uvec{z}                                         \\
+          \vec{F}_2 & = \nabla (\vec{m} \cdot \vec{B}_1)                                           \\
+                    & = \nabla \left( -m \uvec{z} \cdot \frac{\mu_0 m}{2 \pi z^3} \uvec{z} \right) \\
+                    & = \nabla \left( -\frac{\mu_0 m^2}{2 \pi z^3} \uvec{z} \right)                \\
+                    & = \frac{3 \mu_0 m^2}{2 \pi z^4} \uvec{z}                                     \\
+          m_d g     & = \frac{3 \mu_0 m^2}{2 \pi z^4}                                              \\
+          z         & = \sqrt[4]{\frac{3 \mu_0 m^2}{2 \pi m_d g}}
+        \end{align*}
+
+  \item
+
+        \begin{align*}
+          m_d g                            & = \frac{3 \mu_0 m^2}{2 \pi} \left( \frac{1}{x^4} - \frac{1}{y^4} \right)       \\
+          m_d g                            & = \frac{3 \mu_0 m^2}{2 \pi} \left( \frac{1}{y^4} - \frac{1}{(x + y)^4} \right) \\
+          \frac{1}{x^4} - \frac{1}{y^4}    & = \frac{1}{y^4} - \frac{1}{(x + y)^4}                                          \\
+          1 - \left( \frac{x}{y} \right)^4 & = \left( \frac{x}{y} \right)^4 - \frac{x^4}{(x + y)^4}                         \\
+          1                                & = 2 \left( \frac{x}{y} \right)^4 - \left( \frac{x}{x + y} \right)^4            \\
+                                           & = 2 \left( \frac{x}{y} \right)^4 - \left( \frac{x / y}{1 + x / y} \right)^4    \\
+                                           & = 2 \alpha^4 - \left( \frac{\alpha}{1 + \alpha} \right)^4                      \\
+          \alpha                           & \approx 0.8501
+        \end{align*}
+\end{enumerate}
+
+\subsection{}
+
+\begin{enumerate}
+  \item
+
+        \begin{align*}
+          \vec{F}_e           & = \ke \frac{q^2}{r^2} \uvec{z}                                              \\
+          \vec{F}_b           & = \nabla (\vec{m} \cdot \vec{B})                                            \\
+                              & = \nabla \left( m \uvec{z} \cdot \frac{\mu_0 m}{2 \pi r^3} \uvec{z} \right) \\
+                              & = \nabla \left( \frac{\mu_0 m^2}{2 \pi r^3} \right)                         \\
+                              & = -\frac{3 \mu_0 m^2}{2 \pi r^4} \uvec{z}                                   \\
+          F_e                 & = F_b                                                                       \\
+          \ke \frac{q^2}{r^2} & = \frac{3 \mu_0 m^2}{2 \pi r^4}                                             \\
+          r                   & = \sqrt{6 \epsilon_0 \mu_0} \frac{m}{q}                                     \\
+                              & = \frac{\sqrt{6} m}{c q}
+        \end{align*}
+
+  \item \[\qty{4.72e-13}{m}\]
+\end{enumerate}
+
+\setcounter{subsection}{26}
+\subsection{}
+
+Let $B_1^\parallel = 1$ and $B_1^\perp = 1$, then
+
+\begin{align*}
+  B_\text{above}^\perp - B_\text{below}^\perp                     & = 0                                 \\
+  B_\text{above}^\perp                                            & = B_\text{below}^\perp              \\
+  B_2^\perp                                                       & = B_1^\perp                         \\
+                                                                  & = 1                                 \\
+  \vec{H}_\text{above}^\parallel - \vec{H}_\text{below}^\parallel & = \vec{K}_f \times \uvec{n}         \\
+  \frac{1}{\mu_2} B_2^\parallel - \frac{1}{\mu_1} B_1^\parallel   & = 0                                 \\
+  B_2^\parallel                                                   & = \frac{\mu_2}{\mu_1} B_1^\parallel \\
+                                                                  & = \frac{\mu_2}{\mu_1}               \\
+  \tan \theta_1                                                   & = 1                                 \\
+  \tan \theta_2                                                   & = \frac{\mu_2}{\mu_2}               \\
+  \frac{\tan \theta_2}{\tan \theta_1}                             & = \frac{\mu_2}{\mu_1}
+\end{align*}
+
 \end{document}
