@@ -706,4 +706,42 @@
         \end{itemize}
 \end{itemize}
 
+\section{Electrodynamics}
+
+\subsection{Electromotive Force}
+
+\subsubsection{Ohm's Law}
+
+\begin{itemize}
+  \item To make a current flow, you have to push on the charges. In most substances the current density $\vec{J}$ is proportional to the force per unit charge $\vec{f}$ \[\vec{J} = \sigma \vec{f}\] where $\sigma$ is a proportionality constant that differs between materials called the \textbf{conductivity}.
+
+  \item The reciprocal of conductivity is \textbf{resistivity} \[\rho = \frac{1}{\sigma}.\]
+
+  \item For practical purposes, perfect conductors like metals can be considered to have have $\sigma = \infty$ ($\rho = 0$) and insulators can be considered to have $\sigma = 0$ ($\rho = \infty$).
+
+  \item For our purposes the force per unit charge $\vec{f}$ is the electromagnetic force and \[\vec{J} = \sigma (\vec{E} + \vec{v} \times \vec{B}).\] However $\vec{v}$ is usually very small and the second term can be ignored leaving \[\vec{J} = \sigma \vec{E}.\] This is called \textbf{Ohm's law}.
+
+  \item A more familiar version of Ohm's law reads \[V = I R\] where $V$ is the potential difference between the two electrodes, $I$ is the current between them, and $R$ is the resistance between them (a proportionality constant determined by the geometry and properties of the medium).
+
+  \item Resistance is measured in \textbf{Ohms} where \[\qty{1}{\ohm} = \qty{1}{V/A}.\]
+
+  \item The \textbf{Joule heating law} states that the power delivered by a current $I$ travelling across a potential difference $V$ is \[P = V I = I^2 R.\]
+\end{itemize}
+
+\subsubsection{Electromotive Force}
+
+\begin{itemize}
+  \item There are two forces responsible for driving current around a circuit: the source $\vec{f}_s$ (e.g. inside a battery), and the electrostatic force $\vec{E}$ that ``communicates'' the force from the battery to the rest of the circuit.
+
+  \item The net effect of these forces are described by their line integral around the circuit \[\mathcal{E} = \oint \vec{f} \cdot d \vec{l} = \oint \vec{f}_s \cdot d \vec{l}\] where $\vec{f}$ can be replaced with $\vec{f}_s$ because $\oint \vec{E} \cdot d \vec{l} = 0$. This is called the \textbf{electromotive force} of the circuit and can be thought of as the energy transferred to the circuit per unit charge.
+\end{itemize}
+
+\subsubsection{Motional emf}
+
+\begin{itemize}
+  \item The \textbf{flux rule} for motional emf states that when the magnetic flux through a loop of wire changes, an emf is generated \[\mathcal{E} = -\frac{d \Phi}{d t}.\]
+
+  \item The direction of these quantities is determined by the right-hand rule: if the fingers of your right hand define the positive direction of the loop, then your thumb indicates the direction of $d \vec{a}$. If the emf is positive it's in the same direction as the loop, negative is opposite.
+\end{itemize}
+
 \end{document}

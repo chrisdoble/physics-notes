@@ -3676,4 +3676,245 @@ Let $B_1^\parallel = 1$ and $B_1^\perp = 1$, then
   \frac{\tan \theta_2}{\tan \theta_1}                             & = \frac{\mu_2}{\mu_1}
 \end{align*}
 
+\section{Electrodynamics}
+
+\subsection{}
+
+\begin{enumerate}
+  \item
+
+        \begin{align*}
+          \vec{E} & = \ke \frac{Q}{r^2} \uvec{r}                                                               \\
+          I       & = \int \vec{J} \cdot d \vec{a}                                                             \\
+                  & = \int \sigma \vec{E} \cdot d \vec{a}                                                      \\
+                  & = \ke Q \sigma \int_0^{2 \pi} \int_0^\pi \frac{1}{r^2} r^2 \sin \theta \,d \theta \,d \phi \\
+                  & = \frac{Q \sigma}{\epsilon_0}                                                              \\
+          V       & = -\int_b^a \vec{E} \cdot d \vec{l}                                                        \\
+                  & = \ke Q \int_a^b \frac{1}{r^2} \,d r                                                       \\
+                  & = \ke Q \left[ -\frac{1}{r} \right]_a^b                                                    \\
+                  & = \ke Q \left( \frac{1}{a} - \frac{1}{b} \right)                                           \\
+          Q       & = \frac{4 \pi \epsilon_0 V}{1 / a - 1 / b}                                                 \\
+          I       & = \frac{4 \pi \sigma V}{1 / a - 1 / b}
+        \end{align*}
+
+  \item \[R = \frac{1 / a - 1 / b}{4 \pi \sigma}\]
+
+  \item
+
+        \begin{align*}
+          R & = \frac{1}{2 \pi a \sigma} \\
+          I & = \frac{V}{R}              \\
+            & = 2 \pi a \sigma V
+        \end{align*}
+\end{enumerate}
+
+\subsection{}
+
+\begin{enumerate}
+  \item
+
+        \begin{align*}
+          C                           & = \frac{Q}{V}                \\
+          V                           & = \frac{Q}{C}                \\
+          V                           & = I R                        \\
+          \frac{Q}{C}                 & = I R                        \\
+          \frac{Q}{C}                 & = -\frac{d Q}{d t} R         \\
+          \frac{1}{Q} \frac{d Q}{d t} & = -\frac{1}{C R}             \\
+          \ln Q                       & = -\frac{1}{C R} t + c       \\
+          Q                           & = A e^{-t / C R}             \\
+                                      & = C V_0 e^{-t / C R}         \\
+          I                           & = -\frac{d Q}{d t}           \\
+                                      & = \frac{V_0}{R} e^{-t / C R}
+        \end{align*}
+
+  \item
+
+        \begin{align*}
+          W & = \frac{1}{2} C V_0^2                                                   \\
+          W & = \int P \,d t                                                          \\
+            & = \int I^2 R \,d t                                                      \\
+            & = \int_0^\infty \left( \frac{V_0}{R} e^{-t / C R} \right)^2 R \,d t     \\
+            & = \frac{V_0^2}{R} \left[ -\frac{C R}{2} e^{-2 t / C R} \right]_0^\infty \\
+            & = \frac{1}{2} C V_0^2
+        \end{align*}
+
+  \item
+
+        \begin{align*}
+          V_0                               & = \frac{Q}{C} + \frac{d Q}{d t} R \\
+          \frac{d Q}{d t} + \frac{1}{C R} Q & = \frac{V_0}{R}                   \\
+          Q_c                               & = c_1 e^{-t / C R}                \\
+          Q_p                               & = c_2                             \\
+                                            & = C V_0                           \\
+          Q                                 & = Q_c + Q_p                       \\
+                                            & = c_1 e^{-t / C R} + C V_0        \\
+                                            & = C V_0 (1 - e^{-t / C R})        \\
+          I                                 & = \frac{V_0}{R} e^{-t / C R}
+        \end{align*}
+
+  \item
+
+        \begin{align*}
+          E_\text{battery}   & = \int V_0 I \,d t                                                    \\
+                             & = \frac{V_0^2}{R} \left[ -C R e^{-t / C R} \right]_0^\infty           \\
+                             & = C V_0^2                                                             \\
+          E_\text{resistor}  & = \int I^2 R \,d t                                                    \\
+                             & = \frac{V_0^2}{R} \left[ -\frac{C R}{2} e^{-t / C R} \right]_0^\infty \\
+                             & = \frac{1}{2} C V_0^2                                                 \\
+          E_\text{capacitor} & = \frac{1}{2} C V_0^2
+        \end{align*}
+
+        Half of the work done by the battery goes into the resistor.
+\end{enumerate}
+
+\subsection{}
+
+\begin{enumerate}
+  \item
+
+        \begin{align*}
+          I & = \oint \vec{J} \cdot d \vec{a}         \\
+            & = \oint \sigma \vec{E} \cdot d \vec{a}  \\
+            & = \frac{\sigma}{\epsilon_0} Q           \\
+          V & = I R                                   \\
+            & = \frac{\sigma}{\epsilon_0} Q R         \\
+          R & = \frac{\sigma}{\epsilon_0} \frac{V}{Q} \\
+            & = \frac{\sigma}{\epsilon_0 C}
+        \end{align*}
+
+  \item
+
+        \begin{align*}
+          V    & = V_0 e^{-t / C R}          \\
+          \tau & = C R                       \\
+               & = \frac{\epsilon_0}{\sigma}
+        \end{align*}
+\end{enumerate}
+
+\setcounter{subsection}{4}
+\subsection{}
+
+\begin{align*}
+  \mathcal{E}                   & = I (r + R)                                                                \\
+  I                             & = \frac{\mathcal{E}}{r + R}                                                \\
+  P                             & = I^2 R                                                                    \\
+                                & = \frac{\mathcal{E}^2 R}{(r + R)^2}                                        \\
+  \frac{\partial P}{\partial R} & = \mathcal{E}^2 \left( \frac{1}{(r + R)^2} - \frac{2 R}{(r + R)^2} \right) \\
+  0                             & = \mathcal{E}^2 \left( \frac{1}{(r + R)^2} - \frac{2 R}{(r + R)^2} \right) \\
+  R                             & = r
+\end{align*}
+
+\subsection{}
+
+\begin{align*}
+  \mathcal{E} & = \oint \vec{f} \cdot d \vec{l}               \\
+              & = \oint (\vec{f}_s + \vec{E}) \cdot d \vec{l} \\
+              & = \oint \vec{E} \cdot d \vec{l}               \\
+              & = 0
+\end{align*}
+
+Because the closed line integral of all electrostatic fields is $0$.
+
+\subsection{}
+
+\begin{enumerate}
+  \item
+
+        \begin{align*}
+          I & = \frac{1}{R} \mathcal{E}        \\
+            & = \frac{1}{R} \frac{d \Phi}{d t} \\
+            & = \frac{B L v}{R}
+        \end{align*}
+
+        It flows counter-clockwise.
+
+  \item $F = B I L = B^2 L^2 v / R$ to the left
+
+  \item
+
+        \begin{align*}
+          m a                         & = -\frac{B^2 L^2 v}{R}       \\
+          \frac{1}{v} \frac{d v}{d t} & = -\frac{B^2 L^2}{m R}       \\
+          \ln v                       & = -\frac{B^2 L^2}{m R} t + c \\
+          v                           & = v_0 e^{-B^2 L^2 t / m R}
+        \end{align*}
+
+  \item
+
+        \begin{align*}
+          E & = \int P \,d t                                                                                  \\
+            & = \int I^2 R \,d t                                                                              \\
+            & = \frac{B^2 L^2 v_0^2}{R} \int_0^\infty e^{-2 B^2 L^2 t / m R} \,d t                            \\
+            & = \frac{B^2 L^2 v_0^2}{R} \left[ -\frac{m R}{2 B^2 L^2} e^{-2 B^2 L^2 t / m R} \right]_0^\infty \\
+            & = \frac{1}{2} m v_0^2
+        \end{align*}
+\end{enumerate}
+
+\subsection{}
+
+\begin{enumerate}
+  \item
+
+        \begin{align*}
+          \oint \vec{B} \cdot d \vec{l} & = \mu_0 I_\text{enc}                                         \\
+          2 \pi s B                     & = \mu_0 I                                                    \\
+          \vec{B}                       & = \frac{\mu_0 I}{2 \pi s} \uvec{\phi}                        \\
+          \Phi                          & = \int_s^{s + a} a B \,d s'                                  \\
+                                        & = \frac{\mu_0 a I}{2 \pi} \int_s^{s + a} \frac{1}{s'} \,d s' \\
+                                        & = \frac{\mu_0 a I}{2 \pi} \ln \frac{s + a}{s}
+        \end{align*}
+
+  \item
+
+        \begin{align*}
+          \frac{d \phi}{d t} & = -\frac{\mu_0 a^2 I v}{2 \pi s (s + a)} \\
+          \mathcal{E}        & = -\frac{d \phi}{d t}
+        \end{align*}
+
+        The current flows counter-clockwise.
+
+  \item If the loop is pulled to the right the magnetic flux doesn't change so no emf is generated.
+\end{enumerate}
+
+\subsection{}
+
+\[\oint \vec{B} \cdot d \vec{a} = \oint (\nabla \times \vec{A}) \cdot d \vec{a}\] and from corollary 1 in section 1.3.5 we know that $\int (\nabla \times \vec{v}) \cdot d \vec{a}$ depends only on the boundary line, not on the particular surface used.
+
+\subsection{}
+
+\begin{align*}
+  \Phi        & = \vec{B} \cdot d \vec{a}    \\
+              & = a^2 B \cos \theta          \\
+  \mathcal{E} & = -\frac{d \Phi}{d t}        \\
+              & = a^2 B \omega \sin \theta   \\
+              & = a^2 B \omega \sin \omega t
+\end{align*}
+
+\subsection{}
+
+\begin{align*}
+  \frac{d \Phi}{d t}                     & = -B l v                                \\
+  \mathcal{E}                            & = B l v                                 \\
+  I R                                    & = B l v                                 \\
+  I                                      & = \frac{B l v}{R}                       \\
+  F_\text{magnetic}                      & = B I l                                 \\
+                                         & = \frac{B^2 l^2 v}{R}                   \\
+  F                                      & = F_\text{magnetic} - F_\text{gravity}  \\
+  m a                                    & = \frac{B^2 l^2 v}{R} - m g             \\
+  v_\text{terminal}                      & = \frac{m g R}{B^2 l^2}                 \\
+  \frac{d v}{d t}                        & = g - \frac{B^2 l^2}{m R} v             \\
+                                         & = g - \alpha v                          \\
+  \frac{1}{g - \alpha v} \frac{d v}{d t} & = 1                                     \\
+  -\frac{1}{\alpha} \ln (g - \alpha v)   & = t + c                                 \\
+  g - \alpha v                           & = c e^{-\alpha t}                       \\
+  v                                      & = \frac{g}{\alpha} - c e^{-\alpha t}    \\
+                                         & = \frac{g}{\alpha} (1 - e^{-\alpha t})  \\
+                                         & = v_\text{terminal} (1 - e^{-\alpha t}) \\
+  1 - e^{-\alpha t}                      & = 0.9                                   \\
+  e^{-\alpha t}                          & = 0.1                                   \\
+  -\alpha t                              & = \ln 0.1                               \\
+  t                                      & = -\frac{\ln 0.1}{\alpha}               \\
+                                         & = \frac{v_\text{terminal}}{g} \ln 10
+\end{align*}
+
 \end{document}
