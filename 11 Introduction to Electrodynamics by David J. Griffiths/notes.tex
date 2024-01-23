@@ -744,4 +744,63 @@
   \item The direction of these quantities is determined by the right-hand rule: if the fingers of your right hand define the positive direction of the loop, then your thumb indicates the direction of $d \vec{a}$. If the emf is positive it's in the same direction as the loop, negative is opposite.
 \end{itemize}
 
+\subsection{Electromagnetic Induction}
+
+\subsubsection{Faraday's Law}
+
+\begin{itemize}
+  \item \textbf{Faraday's law} states that a changing magnetic field induces an electric field. The integral form is \[\oint \vec{E} \cdot d \vec{l} = - \int \frac{\partial \vec{B}}{\partial t} \cdot d \vec{a}\] and the differential form is \[\nabla \times \vec{E} = -\frac{\partial \vec{B}}{\partial t}.\]
+
+  \item When a loop of wire moves through a stationary magnetic field the mobile charges in the wire experience an electromagnetic force which causes an emf.
+
+  \item When a magnetic field moves over a stationary loop of wire, the changing magnetic field induces an electric field which causes an emf.
+
+  \item When a loop of wire is in a magnetic field and the strength of the magnetic field changes, the changing magnetic field induces an electric field which causes an emf.
+
+  \item All three cases above can be described by the \textbf{universal flux rule}: whenever (and for whatever reason) the magnetic flux through a loop changes, an emf \[\mathcal{E} = -\frac{d \Phi}{d t}\] will appear in the loop.
+
+  \item \textbf{Lenz's law} states that nature abhors a change in flux. This helps determine the direction of induced emf — the flux it produces will be such to cancel the original change.
+\end{itemize}
+
+\subsubsection{The Induced Electric Field}
+
+\begin{itemize}
+  \item The divergence of $\vec{E}$ is given by Gauss's law \[\nabla \cdot \vec{E} = \frac{1}{\epsilon_0} \rho\] and the curl of $\vec{E}$ is given by Faraday's law \[\nabla \times \vec{E} = -\frac{\partial \vec{B}}{\partial t}.\]
+
+  \item If $\vec{E}$ is a pure Faraday field, i.e. $\rho = 0$, then \[\nabla \cdot \vec{E} = 0 \text{ and } \nabla \times \vec{E} = -\frac{\partial \vec{B}}{\partial t}\] which is mathematically identical to magnetostatics \[\nabla \cdot \vec{B} = 0 \text{ and } \nabla \times \vec{B} = \mu_0 \vec{J}.\] This means we can use the same techniques to solve for a pure Faraday field $\vec{E}$ as we do for a magnetostatic field $\vec{B}$.
+
+  \item The analog to the Biot-Savart law is \[\vec{E} = -\frac{1}{4 \pi} \int \frac{(\partial \vec{B} / \partial t) \times \hrcurs}{\rcurs^2} \,d \tau = -\frac{1}{4 \pi} \frac{\partial}{\partial t} \int \frac{\vec{B} \times \hrcurs}{\rcurs^2} \,d \tau.\]
+
+  \item If symmetry permits we can use the tricks of Ampère's law in integral form, but now it's Faraday's law in integral form \[\oint \vec{E} \cdot d \vec{l} = -\frac{d \Phi}{d t}.\]
+\end{itemize}
+
+\subsubsection{Inductance}
+
+\begin{itemize}
+  \item If you have two wire loops and run a current through one of them, it will generate a magnetic field and thus a magnetic flux through the other loop. Because the magnetic field of the first loop is proportional to its current, so too is the magnetic flux through the second loop \[\Phi_2 = M I_1\] where $M$ is known as the \textbf{mutual inductance} of the two loops.
+
+  \item The mutual inductance is a proportionality constant that is a purely geometrical quantity, having to do with the sizes, shapes, and relative positions of the two loops. It's also the case that when you swap the roles of the two loops, i.e. run a current through the second loop, the first loop sees the same flux.
+
+  \item If you vary the current through one of the loops the flux through the other will change and an emf will be generated \[\mathcal{E}_2 = -\frac{d \Phi_2}{d t} = -M \frac{d I_1}{d t}.\]
+
+  \item A current through a loop generates a flux in itself \[\Phi = L I\] where $L$ is known as the \textbf{self inductance} of the loop and, again, it depends only on the geometry of the loop.
+
+  \item If the current changes through the loop a \textbf{back emf} is generated \[\mathcal{E} = -\frac{d \Phi}{d t} = -L \frac{d I}{d t}.\]
+
+  \item Inductance is measured in \textbf{henries} where \[\qty{1}{H} = \qty{1}{V.s/A}.\]
+\end{itemize}
+
+\subsubsection{Energy in Magnetic Fields}
+
+\begin{itemize}
+  \item The following equations give the energy stored in the magnetic fields of a circuit \begin{align*}
+          W & = \frac{1}{2} L I^2                                             \\
+          W & = \frac{1}{2} \oint (\vec{A} \cdot \vec{I}) \,d l               \\
+          W & = \frac{1}{2} \int_\mathcal{V} (\vec{A} \cdot \vec{J}) \,d \tau \\
+          W & = \frac{1}{2 \mu_0} \int_\text{all space} B^2 \,d \tau.
+        \end{align*}
+
+  \item In some situations the last equation above provides an easier way to calculate the self inductance of a circuit $L$: you first calculate the energy stored in the circuit's magnetic fields, then equate the result to the expression $W = \frac{1}{2} L I^2$ to determine $L$.
+\end{itemize}
+
 \end{document}

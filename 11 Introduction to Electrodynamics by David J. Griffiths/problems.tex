@@ -3917,4 +3917,333 @@ Because the closed line integral of all electrostatic fields is $0$.
                                          & = \frac{v_\text{terminal}}{g} \ln 10
 \end{align*}
 
+\subsection{}
+
+\begin{align*}
+  \Phi        & = \frac{1}{4} \pi a^2 B_0 \cos \omega t        \\
+  \mathcal{E} & = -\frac{d \Phi}{d t}                          \\
+              & = \frac{1}{4} \pi a^2 B_0 \omega \sin \omega t \\
+  I           & = \frac{\mathcal{E}}{R}                        \\
+              & = \frac{\pi a^2 B_0 \omega \sin \omega t}{4 R}
+\end{align*}
+
+\subsection{}
+
+\begin{align*}
+  \vec{B}     & = k y^3 t^2 \,\uvec{z}       \\
+  \Phi        & = \int_0^a a k y^3 t^2 \,d y \\
+              & = \frac{1}{4} a^5 k t^2      \\
+  \mathcal{E} & = -\frac{d \Phi}{d t}        \\
+              & = -\frac{1}{2} a^5 k t
+\end{align*}
+
+\subsection{}
+
+The moving magnetic field of the bar magnet induces eddy currents in the aluminium pipe. Those currents produce their own magnetic fields that oppose the movement of the bar magnet.
+
+\subsection{}
+
+\begin{align*}
+  \vec{B}                       & = \mu_0 I n \uvec{z}                                                      \\
+  \Phi                          & = \begin{cases}
+                                      \pi s^2 \mu_0 I n & s \le a \\
+                                      \pi a^2 \mu_0 I n & s \ge a
+                                    \end{cases}                                             \\
+  \frac{d \Phi}{d t}            & = \begin{cases}
+                                      \pi s^2 \mu_0 \frac{d I}{d t} n & s \le a \\
+                                      \pi a^2 \mu_0 \frac{d I}{d t} n & s \ge a
+                                    \end{cases}                               \\
+  \oint \vec{E} \cdot d \vec{l} & = -\frac{d \Phi}{d t}                                                     \\
+  \vec{E}                       & = \begin{cases}
+                                      -\frac{1}{2} s \mu_0 \frac{d I}{d t} n \,\uvec{\phi}   & s \le a \\
+                                      -\frac{a^2 \mu_0 \frac{d I}{d t} n}{2 s} \,\uvec{\phi} & s \ge a
+                                    \end{cases}
+\end{align*}
+
+\subsection{}
+
+\begin{enumerate}
+  \item Longitudinal
+
+  \item
+
+        \begin{align*}
+          \oint \vec{B} \cdot d \vec{l} & = \mu_0 I_\text{enc}                                                                       \\
+          2 \pi s B                     & = \mu_0 I_0 \cos \omega t                                                                  \\
+          \vec{B}                       & = \begin{cases}
+                                              \frac{\mu_0 I_0 \cos \omega t}{2 \pi s} \,\uvec{\phi} & s < a \\
+                                              \vec{0}                                               & s > a
+                                            \end{cases}                            \\
+          \Phi                          & = \int_{s_0}^a \frac{\mu_0 I_0 \cos \omega t}{2 \pi s} L \,d s                             \\
+                                        & = \frac{\mu_0 L I_0 \cos \omega t}{2 \pi} \ln \frac{a}{s_0}                                \\
+          \oint \vec{E} \cdot d \vec{l} & = -\frac{d \Phi}{d t}                                                                      \\
+          L E(s_0) - L E(\infty)        & = \frac{\mu_0 L I_0 \omega \sin \omega t}{2 \pi} \ln \frac{a}{s_0}                         \\
+          \vec{E}(s)                    & = \frac{\mu_0 I_0 \omega}{2 \pi} \sin (\omega t) \ln \left( \frac{a}{s} \right) \,\uvec{z}
+        \end{align*}
+\end{enumerate}
+
+\subsection{}
+
+\begin{enumerate}
+  \item
+
+        \begin{align*}
+          \vec{B}            & = \begin{cases}
+                                   \mu_0 I n \,\uvec{z} & s < a \\
+                                   \vec{0}              & s > a
+                                 \end{cases} \\
+          \Phi               & = \pi a^2 \mu_0 I n            \\
+          \frac{d \Phi}{d t} & = \pi a^2 \mu_0 k n            \\
+          \mathcal{E}        & = -\frac{d \Phi}{d t}          \\
+                             & = -\pi a^2 \mu_0 k n           \\
+          I                  & = \frac{\mathcal{E}}{R}        \\
+                             & = \frac{\pi a^2 \mu_0 k n}{R}
+        \end{align*}
+
+        The current flows through the resistor to the right (out of the page).
+
+  \item
+
+        \begin{align*}
+          \int_0^\infty I_\text{resistor} \,d t & = \int_0^\infty \frac{\pi a^2 \mu_0 n}{R} \frac{d I}{d t} \,d t \\
+                                                & = \frac{\pi a^2 \mu_0 n}{R} \int_I^0 d I                        \\
+                                                & = -\frac{\pi a^2 \mu_0 n I}{R}
+        \end{align*}
+\end{enumerate}
+
+\subsection{}
+
+The induced current flows counterclockwise.
+
+\begin{align*}
+  \vec{B}            & = \frac{\mu_0 I}{2 \pi s} \,d \uvec{\phi}                                          \\
+  I                  & = \begin{cases}
+                           (1 - \alpha t) I_0 & 0 \le t \le 1 / \alpha \\
+                           0                  & t > 1 / \alpha
+                         \end{cases}                                      \\
+  \frac{d I}{d t}    & = \begin{cases}
+                           -\alpha I_0 & 0 \le t \le 1 / \alpha \\
+                           0           & t > 1 / \alpha
+                         \end{cases}                                             \\
+  \Phi               & = \int_s^{s + a} a \frac{\mu_0 I}{2 \pi s'} \,d s'                                 \\
+                     & = \frac{\mu_0 a I}{2 \pi} \ln \frac{s + a}{s}                                      \\
+  \frac{d \Phi}{d t} & = \begin{cases}
+                           -\frac{\mu_0 a \alpha I_0}{2 \pi} \ln \frac{s + a}{s} & 0 \le t \le 1 / \alpha \\
+                           0                                                     & t > 1 / \alpha
+                         \end{cases}   \\
+  \mathcal{E}        & = -\frac{d \Phi}{d t}                                                              \\
+                     & = \begin{cases}
+                           \frac{\mu_0 a \alpha I_0}{2 \pi} \ln \frac{s + a}{s} & 0 \le t \le 1 / \alpha \\
+                           0                                                    & t > 1 / \alpha
+                         \end{cases}    \\
+  I                  & = \frac{\mathcal{E}}{R}                                                            \\
+  Q                  & = \int I \,d t                                                                     \\
+                     & = \int_0^{1 / \alpha} \frac{\mu_0 a \alpha I_0}{2 \pi R} \ln \frac{s + a}{s} \,d t \\
+                     & = \frac{\mu_0 a I_0}{2 \pi R} \ln \frac{s + a}{s}
+\end{align*}
+
+\setcounter{subsection}{19}
+\subsection{}
+
+At the sides of the magnetic field. On the left side it's positive, on the right side it's negative.
+
+\setcounter{subsection}{21}
+\subsection{}
+
+\begin{enumerate}
+  \item
+
+        \begin{align*}
+          \vec{B}_b & = \frac{\mu_0 I}{2} \frac{b^2}{(b^2 + z^2)^{3 / 2}} \,\uvec{z} \\
+          \Phi_a    & = \pi a^2 B_b                                                  \\
+                    & = \pi a^2 \frac{\mu_0 I}{2} \frac{b^2}{(b^2 + z^2)^{3 / 2}}
+        \end{align*}
+
+  \item
+
+        \begin{align*}
+          \vec{m}_a & = \pi a^2 I                                                                                                  \\
+          \vec{B}_a & = \frac{\mu_0 m}{4 \pi r^3} (2 \cos \theta \,\uvec{r} + \sin \theta \,\uvec{\theta})                         \\
+                    & = \frac{\mu_0 a^2 I}{4 r^3} (2 \cos \theta \,\uvec{r} + \sin \theta \,\uvec{\theta})                         \\
+          \Phi_b    & = \int \vec{B}_a \cdot d \vec{a}                                                                             \\
+                    & = \frac{\mu_0 a^2 I}{4 r^3} \int_0^{2 \pi} \int_0^\alpha 2 \cos \theta \,r^2 \sin \theta \,d \theta \,d \phi \\
+                    & = \frac{\mu_0 \pi a^2 I}{r} \int_0^\alpha \cos \theta \sin \theta \,d \theta                                 \\
+                    & = \frac{\mu_0 \pi a^2 I}{r} \left[ \frac{1}{2} \left( \sin^2 \theta - 1 \right) \right]_0^\alpha             \\
+                    & = \frac{\mu_0 \pi a^2 I}{2r} \left( \frac{b}{r} \right)^2                                                    \\
+                    & = \frac{\mu_0 \pi a^2 I}{2} \frac{b^2}{(b^2 + z^2)^{3 / 2}}
+        \end{align*}
+
+  \item
+
+        \begin{align*}
+          M_{b a} & = \frac{\mu_0 \pi a^2 b^2}{2 (b^2 + z^2)^{3 / 2}} \\
+          M_{a b} & = \frac{\mu_0 \pi a^2 b^2}{2 (b^2 + z^2)^{3 / 2}} \\
+          M_{b a} & = M_{a b}
+        \end{align*}
+\end{enumerate}
+
+\subsection{}
+
+It's tricky to calculate the flux of the small loop's magnetic field through the big loop, so let's calculate the other way around.
+
+\begin{align*}
+  B              & = \frac{\mu_0 I}{2 \pi s}                                                                   \\
+  B_\text{total} & = \frac{\mu_0 I}{2 \pi} \left( \frac{1}{s} + \frac{1}{3 a - s} \right)                      \\
+  \Phi           & = \frac{\mu_0 a I}{2 \pi} \int_a^{2 a} \left( \frac{1}{s} + \frac{1}{3 a - s} \right) \,d s \\
+                 & = \frac{\mu_0 a I}{2 \pi} [\ln s - \ln (3 a - s)]_a^{2 a}                                   \\
+                 & = \frac{\mu_0 a I}{2 \pi} [\ln 2 a - \ln a - \ln a + \ln 2 a]                               \\
+                 & = \frac{\mu_0 a I}{\pi} \ln 2                                                               \\
+  M              & = \frac{\mu_0 a \ln 2}{\pi}                                                                 \\
+  \mathcal{E}    & = -M \frac{d I}{d t}                                                                        \\
+                 & = -\frac{\mu_0 a k \ln 2}{\pi}
+\end{align*}
+
+If the current in the larger loop flows counterclockwise the current in the smaller loop flows clockwise, so the answer is counterclockwise.
+
+\subsection{}
+
+\begin{align*}
+  B    & = \mu_0 I n           \\
+  \Phi & = \pi R^2 n \mu_0 I n \\
+       & = \mu_0 \pi I n^2 R^2 \\
+  L    & = \mu_0 \pi n^2 R^2
+\end{align*}
+
+\setcounter{subsection}{25}
+\subsection{}
+
+\begin{enumerate}
+  \item
+
+        \begin{align*}
+          I(t)              & = I_0 \cos \omega t                                                  \\
+          \vec{B}           & = \frac{\mu_0 I}{2 \pi s} \,\uvec{\phi}                              \\
+          \Phi              & = \frac{\mu_0 h I}{2 \pi} \int_a^b \frac{1}{s} \,d s                 \\
+                            & = \frac{\mu_0 h I}{2 \pi} \ln \frac{b}{a}                            \\
+          \Phi_\text{total} & = \frac{500 \mu_0 h I}{\pi} \ln \frac{b}{a}                          \\
+          \mathcal{E}       & = -\frac{d \Phi_\text{total}}{d t}                                   \\
+                            & = \frac{500 \mu_0 h I_0 \omega \sin \omega t}{\pi} \ln \frac{b}{a}   \\
+          I_R(t)            & = \frac{\mathcal{E}}{R}                                              \\
+                            & = \frac{500 \mu_0 h I_0 \omega \sin \omega t}{\pi R} \ln \frac{b}{a} \\
+                            & = (\num{5.22e-7}) \sin \omega t
+        \end{align*}
+
+  \item
+
+        \begin{align*}
+          \vec{B}                                     & = \frac{500 \mu_0 I_R}{\pi s} \,\uvec{\phi}                                        \\
+          \Phi                                        & = \frac{500000 \mu_0 h I_R}{\pi} \int_a^b \frac{1}{s} \,d s                        \\
+                                                      & = \frac{500000 \mu_0 h I_R}{\pi} \ln \frac{b}{a}                                   \\
+          \mathcal{E}_\text{back}                     & = -\frac{d \Phi}{d t}                                                              \\
+                                                      & = -\frac{500000 (\num{5.22e-7}) \mu_0 h \omega \cos \omega t}{\pi} \ln \frac{b}{a} \\
+                                                      & = -(\num{2.73e-7}) \cos \omega t                                                   \\
+          \frac{\mathcal{E}_\text{back}}{\mathcal{E}} & = \frac{\num{2.73e-7}}{\num{2.61e-4}}                                              \\
+                                                      & = \num{1.05e-3}
+        \end{align*}
+\end{enumerate}
+
+\subsection{}
+
+\begin{align*}
+  0   & = \mathcal{E}_C + \mathcal{E}_L                                                                            \\
+  0   & = \frac{Q}{C} - L \frac{d I}{d t}                                                                          \\
+  0   & = \frac{Q}{C} + L \frac{d^2 Q}{d t^2}                                                                      \\
+  0   & = \frac{d^2 Q}{d t^2} + \frac{1}{C L} Q                                                                    \\
+  Q   & = c_1 \cos \frac{1}{\sqrt{C L}} t + c_2 \sin \frac{1}{\sqrt{C L}} t                                        \\
+  C V & = Q(0)                                                                                                     \\
+      & = c_1                                                                                                      \\
+  Q   & = C V \cos \frac{1}{\sqrt{C L}} t + c_2 \sin \frac{1}{\sqrt{C L}} t                                        \\
+  I   & = -\frac{C V}{\sqrt{C L}} \sin \frac{1}{\sqrt{C L}} t + \frac{c_2}{\sqrt{C L}} \cos \frac{1}{\sqrt{C L}} t \\
+  0   & = I(0)                                                                                                     \\
+      & = \frac{c_2}{\sqrt{C L}}                                                                                   \\
+      & = c_2                                                                                                      \\
+  I   & = -V \sqrt{\frac{C}{L}} \sin \frac{1}{\sqrt{C L}} t
+\end{align*}
+
+\setcounter{subsection}{27}
+\subsection{}
+
+\begin{enumerate}
+  \item
+
+        \begin{align*}
+          L & = \mu_0 \pi n^2 R^2 l                 \\
+          W & = \frac{1}{2} L I^2                   \\
+            & = \frac{1}{2} \mu_0 \pi n^2 R^2 l I^2
+        \end{align*}
+
+  \item
+
+        \begin{align*}
+          \vec{A} & = \begin{cases}
+                        \frac{\mu_0 n I}{2} s \,\uvec{\phi}             & s \le R \\
+                        \frac{\mu_0 n I}{2} \frac{R^2}{s} \,\uvec{\phi} & s \ge R
+                      \end{cases}             \\
+          W       & = \frac{1}{2} \oint (\vec{A} \cdot \vec{I}) \,d l                       \\
+                  & = \frac{1}{2} \int_0^{2 \pi} \frac{1}{2} \mu_0 n^2 I^2 R^2 l \,d \theta \\
+                  & = \frac{1}{2} \mu_0 \pi n^2 R^2 l I^2
+        \end{align*}
+
+  \item
+
+        \begin{align*}
+          \vec{B} & = \mu_0 I n \,\uvec{z}                      \\
+          W       & = \frac{1}{2 \mu_0} \int B^2 \,d \tau       \\
+                  & = \frac{1}{2 \mu_0} (\mu_0 I n)^2 \pi R^2 l \\
+                  & = \frac{1}{2} \mu_0 \pi n^2 R^2 l I^2
+        \end{align*}
+\end{enumerate}
+
+\subsection{}
+
+\begin{align*}
+  \vec{B} & = \begin{cases}
+                \frac{\mu_0 N I}{2 \pi s} \,\uvec{\phi} & \text{inside}  \\
+                \vec{0}                                 & \text{outside}
+              \end{cases}                                                  \\
+  W       & = \frac{1}{2 \mu_0} \int B^2 \,d \tau                                                                       \\
+          & = \frac{1}{2 \mu_0} \int_0^{2 \pi} \int_a^b \left( \frac{\mu_0 N I}{2 \pi s} \right)^2 h s \,d s \,d \theta \\
+          & = \frac{\mu_0 N^2 I^2 h}{4 \pi} \int_a^b \frac{1}{s} \,d s                                                  \\
+          & = \frac{\mu_0 N^2 I^2 h}{4 \pi} \ln \frac{b}{a}                                                             \\
+  W       & = \frac{1}{2} L I^2                                                                                         \\
+  L       & = \frac{2 W}{I^2}                                                                                           \\
+          & = \frac{\mu_0 N^2 h}{2 \pi} \ln \frac{b}{a}
+\end{align*}
+
+\subsection{}
+
+\begin{align*}
+  \vec{B} & = \frac{\mu_0 I s}{2 \pi R^2} \,\uvec{\phi}                                                                 \\
+  W       & = \frac{1}{2 \mu_0} \int B^2 \,d \tau                                                                       \\
+          & = \frac{1}{2 \mu_0} \int_0^{2 \pi} \int_0^R \left( \frac{\mu_0 I s}{2 \pi R^2} \right)^2 s \,d s \,d \theta \\
+          & = \frac{\mu_0 I^2}{4 \pi R^4} \int_0^R s^3 \,d s                                                            \\
+          & = \frac{\mu_0 I^2}{16 \pi}                                                                                  \\
+  W       & = \frac{1}{2} L I^2                                                                                         \\
+  L       & = \frac{2 W}{I^2}                                                                                           \\
+          & = \frac{\mu_0}{8 \pi}
+\end{align*}
+
+\subsection{}
+
+\begin{enumerate}
+  \item
+
+        \begin{align*}
+          I_0 & = \frac{\mathcal{E}_0}{R}                \\
+          0   & = L \frac{d I}{d t} + R I                \\
+              & = \frac{d I}{d t} + \frac{R}{L} I        \\
+          I   & = \frac{\mathcal{E}_0}{R} e^{-(R / L) t} \\
+        \end{align*}
+
+  \item
+
+        \begin{align*}
+          \int_0^\infty I^2 R \,d t & = \int_0^\infty \left( \frac{\mathcal{E}_0}{R} e^{-(R / L) t} \right)^2 R \,d t       \\
+                                    & = \left( \frac{\mathcal{E}_0}{R} \right)^2 R \left[ e^{-2 (R / L) t} \right]_0^\infty \\
+                                    & = \frac{1}{2} L \left( \frac{\mathcal{E}_0}{R} \right)^2
+        \end{align*}
+
+  \item \[W = \frac{1}{2} L I^2 = \frac{1}{2} L \left( \frac{\mathcal{E}_0}{R} \right)^2\]
+\end{enumerate}
+
 \end{document}
