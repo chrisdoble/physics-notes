@@ -4246,4 +4246,80 @@ If the current in the larger loop flows counterclockwise the current in the smal
   \item \[W = \frac{1}{2} L I^2 = \frac{1}{2} L \left( \frac{\mathcal{E}_0}{R} \right)^2\]
 \end{enumerate}
 
+\setcounter{subsection}{33}
+\subsection{}
+
+\begin{align*}
+  E                             & = \frac{\sigma}{\epsilon_0}                 \\
+                                & = \frac{Q}{\epsilon_0 \pi a^2}              \\
+  \frac{\partial E}{\partial t} & = \frac{I}{\epsilon_0 \pi a^2}              \\
+  \oint \vec{B} \cdot d \vec{l} & = \mu_0 (I_\text{enc} + I_{d,\text{enc}})   \\
+  2 \pi s B                     & = \mu_0 \frac{I}{\pi a^2} \pi s^2           \\
+  \vec{B}                       & = \frac{\mu_0 I s}{2 \pi a^2} \,\uvec{\phi}
+\end{align*}
+
+\subsection{}
+
+\begin{enumerate}
+  \item
+
+        \begin{align*}
+          E & = \frac{\sigma}{\epsilon_0}      \\
+            & = \frac{Q}{\epsilon_0 \pi a^2}   \\
+            & = \frac{I t}{\epsilon_0 \pi a^2}
+        \end{align*}
+
+  \item
+
+        \begin{align*}
+          \frac{\partial E}{\partial t} & = \frac{I}{\epsilon_0 \pi a^2}              \\
+          \oint \vec{B} \cdot d \vec{l} & = \mu_0 (I_\text{enc} + I_{d,\text{enc}})   \\
+          2 \pi s B                     & = \mu_0 \frac{I}{\pi a^2} \pi s^2           \\
+          \vec{B}                       & = \frac{\mu_0 I s}{2 \pi a^2} \,\uvec{\phi}
+        \end{align*}
+
+  \item
+
+        \begin{align*}
+          \oint \vec{B} \cdot d \vec{l} & = \mu_0 (I_\text{enc} + I_{d,\text{enc}})                      \\
+          2 \pi s B                     & = \mu_0 \left( I - \frac{\pi a^2 - \pi s^2}{\pi a^2} I \right) \\
+                                        & = \frac{\mu_0 I s^2}{a^2}                                      \\
+          \vec{B}                       & = \frac{\mu_0 I s}{2 \pi a^2} \,\uvec{\phi}
+        \end{align*}
+\end{enumerate}
+
+\subsection{}
+
+\begin{enumerate}
+  \item
+
+        \begin{align*}
+          \vec{J}_d & = \epsilon_0 \frac{\partial \vec{E}}{\partial t}                                                        \\
+                    & = \frac{\epsilon_0 \mu_0 I_0 \omega^2}{2 \pi} \cos (\omega t) \ln \left( \frac{a}{s} \right) \,\uvec{z} \\
+                    & = \frac{\epsilon_0 \mu_0}{2 \pi} \omega^2 I \ln \left( \frac{a}{s} \right) \,\uvec{z}                   \\
+        \end{align*}
+
+  \item
+
+        \begin{align*}
+          I_d & = \int \vec{J}_d \cdot d \vec{a}                                                                  \\
+              & = \frac{\epsilon_0 \mu_0}{2 \pi} \omega^2 I \int_0^a \ln \left( \frac{a}{s} \right) 2 \pi s \,d s \\
+              & = \epsilon_0 \mu_0 \omega^2 I \int_0^a \ln \left( \frac{a}{s} \right) s \,d s                     \\
+              & = \frac{1}{4} \epsilon_0 \mu_0 a^2 \omega^2 I
+        \end{align*}
+
+  \item
+
+        \begin{align*}
+          \frac{I_d}{I}                             & = \frac{\epsilon_0 \mu_0 a^2 \omega^2 I_0 \cos (\omega t) / 4}{I_0 \cos \omega t} \\
+                                                    & = \frac{1}{4} \epsilon_0 \mu_0 a^2 \omega^2                                       \\
+          \frac{1}{4} \epsilon_0 \mu_0 a^2 \omega^2 & > 0.01                                                                            \\
+          \left( \frac{a \omega}{2 c} \right)^2     & > 0.01                                                                            \\
+          \frac{a \omega}{2 c}                      & > 0.1                                                                             \\
+          \omega                                    & > \frac{0.2 c}{a}                                                                 \\
+                                                    & > \qty{6e10}{rad/s}                                                               \\
+          f                                         & > \qty{1e10}{Hz}
+        \end{align*}
+\end{enumerate}
+
 \end{document}

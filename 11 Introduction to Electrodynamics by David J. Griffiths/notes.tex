@@ -1,10 +1,17 @@
 \documentclass{article}
 \usepackage{amsfonts} % For open face letters
 \usepackage{amsmath} % For align*
+\usepackage{bookmark} % For links
 \usepackage{float} % For the [H] option on figures
 \usepackage{graphicx} % For images
 \usepackage{siunitx} % For units
+
 \graphicspath{{./images/}}
+\hypersetup{
+  colorlinks=true,
+  linkcolor=blue,
+  urlcolor=blue
+}
 
 \renewcommand{\vec}[1]{\boldsymbol{\mathbf{#1}}}
 \newcommand{\dvec}[1]{\dot{\vec{#1}}}
@@ -395,7 +402,7 @@
 \subsubsection{Bound Charges}
 
 \begin{itemize}
-  \item The potential of a polarized object is equal to that produced by a surface charge density $\sigma_b = \vec{P} \cdot \uvec{n}$ and volume charge density $\rho_b = -\nabla \cdot \vec{P}$, i.e. \[V(\vec{r}) = \ke \oint_\mathcal{S} \frac{\sigma_b}{\rcurs} \,d a' + \ke \int_\mathcal{V} \frac{\rho_b}{\rcurs} \,d \tau'.\] These are called \textbf{bound charges}.
+\item The potential of a polarized object is equal to that produced by a surface charge density \[\sigma_b = \vec{P} \cdot \uvec{n}\] and volume charge density \[\rho_b = -\nabla \cdot \vec{P}\], i.e. \[V(\vec{r}) = \ke \oint_\mathcal{S} \frac{\sigma_b}{\rcurs} \,d a' + \ke \int_\mathcal{V} \frac{\rho_b}{\rcurs} \,d \tau'.\] These are called \textbf{bound charges}.
 \end{itemize}
 
 \subsection{The Electric Displacement}
@@ -801,6 +808,66 @@
         \end{align*}
 
   \item In some situations the last equation above provides an easier way to calculate the self inductance of a circuit $L$: you first calculate the energy stored in the circuit's magnetic fields, then equate the result to the expression $W = \frac{1}{2} L I^2$ to determine $L$.
+\end{itemize}
+
+\subsection{Maxwell's equations}
+
+\subsubsection{Electrodynamics Before Maxwell}
+
+\begin{itemize}
+  \item Before Maxwell, Ampère's law read \[\nabla \times \vec{B} = \mu_0 \vec{J}.\] Taking the divergence of both sides gives \[\nabla \cdot (\nabla \times \vec{B}) = \mu_0 (\nabla \cdot \vec{J}).\] The left side is zero because the divergence of a curl is zero, but the right side isn't necessarily zero for nonsteady currents.
+
+  \item Another way to see this problem is to imagine a circuit containing a capacitor. Applying Ampère's law to an Amperian loop around the wire near one of the plates of the capacitor, the value of $I_\text{enc}$ depends on the surface you choose. If you choose the simplest surface — flat within the loop — $I_\text{enc} = I$. However if you choose a surface that goes between the plates of the capacitor $I_\text{enc} = 0$. Something is wrong here.
+\end{itemize}
+
+\subsubsection{How Maxwell Fixed Ampère's Law}
+
+\begin{itemize}
+  \item Applying the continuity equation and Gauss's law gives \[\nabla \cdot \vec{J} = -\frac{\partial \rho}{\partial t} = -\frac{\partial}{\partial t} (\epsilon_0 \nabla \cdot \vec{E}) = -\nabla \cdot \left( \epsilon_0 \frac{\partial \vec{E}}{\partial t} \right).\] So if we change Ampère's law to \begin{align*}
+          \nabla \times \vec{B} & = \mu_0 \vec{J} + \mu_0 \epsilon_0 \frac{\partial \vec{E}}{\partial t} \\
+                                & = \mu_0 (\vec{J} + \vec{J}_d)
+        \end{align*} the second term negates the excess divergence and preserves Ampère's Law under magnetostatics because $\nabla \cdot \vec{E} = 0$. The term \[\vec{J}_d = \epsilon_0 \frac{\partial \vec{E}}{\partial t}\] is called the \textbf{displacement current}.
+
+  \item The implication of this is that a changing electric field induces a magnetic field.
+\end{itemize}
+
+\setcounter{subsubsection}{4}
+\subsubsection{Maxwell's Equations in Matter}
+
+\begin{itemize}
+  \item When the polarisation of an object changes, bound charges move. This movement is called the \textbf{polarisation current} \[\vec{J}_p = \frac{\partial \vec{P}}{\partial t}.\]
+
+  \item Charge density can be separated into two parts \begin{align*}
+          \rho & = \rho_f + \rho_b               \\
+               & = \rho_f - \nabla \cdot \vec{P}
+        \end{align*} and Gauss's law can be written as \[\nabla \cdot \vec{E} = \frac{1}{\epsilon_0} (\rho_f - \nabla \cdot \vec{P})\] or \[\nabla \cdot \vec{D} = \frac{1}{\epsilon_0} \rho_f.\]
+
+  \item Current density can be separated into three parts \begin{align*}
+          \vec{J} & = \vec{J}_f + \vec{J}_b + \vec{J}_p                                       \\
+                  & = \vec{J}_f + \nabla \times \vec{M} + \frac{\partial \vec{P}}{\partial t}
+        \end{align*} and Ampère's law can be written as \[\nabla \times \vec{B} = \mu_0 \left( \vec{J}_f + \nabla \times \vec{M} + \frac{\partial \vec{P}}{\partial t} \right) + \mu_0 \epsilon_0 \frac{\partial \vec{E}}{\partial t}\] or \[\nabla \times \vec{H} = \vec{J}_f + \frac{\partial \vec{D}}{\partial t}.\]
+\end{itemize}
+
+\subsubsection{Boundary Conditions}
+
+\begin{itemize}
+  \item In general, the fields $\vec{E}$, $\vec{B}$, $\vec{D}$, and $\vec{H}$ will be discontinuous at a boundary between two different media, or at a surface that carries a charge density $\rho$ or a current density $\vec{K}$.
+
+  \item If a surface carries a free charge density $\rho_f$, the component of $\vec{D}$ that is perpendicular to the surface suffers a discontinuity \[D_1^\perp - D_2^\perp = \sigma_f\] but the component of $\vec{B}$ that is perpendicular to the surface suffers no discontinuity \[B_1^\perp - B_2^\perp = 0.\]
+
+  \item If a surface carries a free current density $\vec{K}_f$, the component of $\vec{E}$ parallel to the surface and perpendicular to $\vec{K}_f$ suffers no discontinuity \[\vec{E}_1^\parallel - \vec{E}_2^\parallel = \vec{0}\] but the component of $\vec{H}$ parallel to the surface and perpendicular to $\vec{K}_f$ suffers a discontinuity of \[\vec{H}_1^\parallel - \vec{H}_2^\parallel = \vec{K}_f \times \uvec{n}.\]
+
+  \item In the case of linear media, the above boundary conditions can be expressed as \begin{align*}
+          \epsilon_1 E_1^\perp - \epsilon_2 E_2^\perp                               & = \sigma_f                  \\
+          B_1^\perp - B_2^\perp                                                     & = 0                         \\
+          \vec{E}_1^\parallel - \vec{E}_2^\parallel                                 & = \vec{0}                   \\
+          \frac{1}{\mu_1} \vec{B}_1^\parallel - \frac{1}{\mu_2} \vec{B}_2^\parallel & = \vec{K}_f \times \uvec{n}
+        \end{align*} and if there's no free charge or current at the interface then \begin{align*}
+          \epsilon_1 E_1^\perp - \epsilon_2 E_2^\perp                               & = 0        \\
+          B_1^\perp - B_2^\perp                                                     & = 0        \\
+          \vec{E}_1^\parallel - \vec{E}_2^\parallel                                 & = \vec{0}  \\
+          \frac{1}{\mu_1} \vec{B}_1^\parallel - \frac{1}{\mu_2} \vec{B}_2^\parallel & = \vec{0}.
+        \end{align*}
 \end{itemize}
 
 \end{document}
