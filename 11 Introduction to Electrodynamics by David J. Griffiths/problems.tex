@@ -1,10 +1,17 @@
 \documentclass{article}
 \usepackage{amsfonts} % For open face letters
 \usepackage{amsmath} % For align*
+\usepackage{bookmark} % For links
 \usepackage{graphicx} % For images
 \usepackage{enumitem} % For customisable list labels
 \usepackage{siunitx} % For units
+
 \graphicspath{{./images/}}
+\hypersetup{
+  colorlinks=true,
+  linkcolor=blue,
+  urlcolor=blue
+}
 
 \DeclareMathOperator{\arcosh}{arcosh}
 \DeclareMathOperator{\csch}{csch}
@@ -4321,5 +4328,289 @@ If the current in the larger loop flows counterclockwise the current in the smal
           f                                         & > \qty{1e10}{Hz}
         \end{align*}
 \end{enumerate}
+
+\setcounter{subsection}{42}
+\subsection{}
+
+\begin{enumerate}
+  \item
+
+        \begin{align*}
+          0                       & = \nabla^2 V                                                                              \\
+                                  & = \frac{1}{s} \frac{\partial}{\partial s} (s z f'(s)) + \frac{\partial^2 V}{\partial z^2} \\
+                                  & = z f'(s) + s z f''(s)                                                                    \\
+                                  & = s f''(s) + f'(s)                                                                        \\
+                                  & = s g'(s) + g(s)                                                                          \\
+          g(s)                    & = c_1 s^{-1}                                                                              \\
+          f(s)                    & = c_1 \ln s + c_2                                                                         \\
+          0                       & = f(b)                                                                                    \\
+                                  & = c_1 \ln b + c_2                                                                         \\
+          c_2                     & = -c_1 \ln b                                                                              \\
+          f(s)                    & = c_1 \ln \frac{s}{b}                                                                     \\
+          -\frac{I \rho}{\pi a^2} & = c_1 \ln \frac{a}{b}                                                                     \\
+          c_1                     & = -\frac{I \rho}{\pi a^2 \ln (a / b)}                                                     \\
+          f(s)                    & = -\frac{I \rho}{\pi a^2} \frac{\ln (s / b)}{\ln (a / b)}
+        \end{align*}
+
+  \item
+
+        \begin{align*}
+          \vec{E} & = -\nabla V                                                                                             \\
+                  & = -\nabla \left( -\frac{I \rho z}{\pi a^2} \frac{\ln (s / b)}{\ln (a / b)} \right)                      \\
+                  & = \frac{I \rho}{\pi a^2 \ln (a / b)} \left( \frac{z}{s} \,\uvec{s} + \ln \frac{s}{b} \,\uvec{z} \right)
+        \end{align*}
+
+  \item
+
+        \begin{align*}
+          \frac{1}{\epsilon_0} Q_\text{enc}     & = \oint \vec{E} \cdot d \vec{a}                                                                   \\
+                                                & = \frac{I \rho}{\pi a^2 \ln (a / b)} \int_0^{2 \pi} \int_z^{z + L} \frac{z'}{s} s \,d \phi \,d z' \\
+                                                & = \frac{2 I \rho}{a^2 \ln (a / b)} \left[ \frac{1}{2} z'^2 \right]_z^{z + L}                      \\
+          \frac{1}{\epsilon_0} 2 \pi a L \sigma & = \frac{I \rho (2 L z + L^2)}{a^2 \ln (a / b)}                                                    \\
+          \sigma                                & = \frac{\epsilon_0 I \rho (2 z + L)}{2 \pi a^3 \ln (a / b)}                                       \\
+          \lim_{L \rightarrow 0} \sigma         & = \frac{\epsilon_0 I \rho z}{\pi a^3 \ln (a / b)}
+        \end{align*}
+\end{enumerate}
+
+\subsection{}
+
+\begin{enumerate}
+  \item
+
+        \begin{align*}
+          -\frac{\partial \vec{B}}{\partial t} & = \nabla \times \vec{E} \\
+                                               & = \nabla \times \vec{0} \\
+                                               & = \vec{0}
+        \end{align*}
+
+        Therefore $\vec{B}$ is independent of $t$.
+
+  \item Use Faraday's law, integrating over a path centred on the circumferential axis of the wire
+
+        \begin{align*}
+          -\frac{\partial}{\partial t} \int \vec{B} \cdot d \vec{a} & = \oint \vec{E} \cdot d \vec{l} \\
+          -\frac{d \Phi_b}{d t}                                     & = 0
+        \end{align*}
+
+  \item Ampère's law with Maxwell's correction is \[\nabla \times \vec{B} = \mu_0 \vec{J} + \mu_0 \epsilon_0 \frac{\partial \vec{E}}{\partial t}\] but $\vec{B}$ and $\vec{E}$ are both $0$ so \[\vec{J} = \vec{0}.\]
+
+  \item The magnetic field inside a sphere of radius $R$ and surface charge density $\sigma$ rotating at angular velocity $\omega$ is \[\vec{B} = \frac{2}{3} \mu_0 \sigma R \omega \,\uvec{z}.\] In order to cancel the external magnetic field it must be the case that \[B_0 + \frac{2}{3} \mu_0 \sigma R \omega = 0.\] The surface charge density of the rotating sphere is \begin{align*}
+          \vec{K} & = \sigma \vec{v}                            \\
+                  & = \sigma \omega R \sin \theta \,\uvec{\phi}
+        \end{align*} but \[\sigma \omega R \sin \theta = -\frac{3 B_0 \sin \theta}{2 \mu_0}\] so \[\vec{K} = -\frac{3 B_0 \sin \theta}{2 \mu_0} \,\uvec{\phi}.\]
+\end{enumerate}
+
+\subsection{}
+
+\begin{enumerate}
+  \item $-z$
+
+  \item
+
+        \begin{align*}
+          F   & = \frac{\mu_0}{4 \pi} \frac{6 m^2}{(2 z)^4}                        \\
+              & = \frac{3 \mu_0 m^2}{32 \pi z^4}                                   \\
+          M g & = \frac{3 \mu_0 m^2}{32 \pi h^4}                                   \\
+          h   & = \frac{1}{2} \left( \frac{3 \mu_0 m^2}{2 \pi M g} \right)^{1 / 4}
+        \end{align*}
+
+  \item
+
+        \begin{align*}
+          \rcurs                        & = \sqrt{r^2 + h^2}                                                                                                                                         \\
+          \vec{B}_\text{total}(\vec{r}) & = \frac{\mu_0}{4 \pi} \frac{1}{\rcurs^5} \{3 [m \uvec{z} \cdot (x \uvec{x} + y \uvec{y} - h \uvec{z})] (x \uvec{x} + y \uvec{y} - h \uvec{z}) - m \uvec{z} \\
+                                        & \qquad 3 [-m \uvec{z} \cdot (x \uvec{x} + y \uvec{y} + h \uvec{z})] (x \uvec{x} + y \uvec{y} + h \uvec{z}) + m \uvec{z}\}                                  \\
+                                        & = -\frac{\mu_0}{4 \pi} \frac{6 m h (x \uvec{x} + y \uvec{y})}{\rcurs^5}                                                                                    \\
+                                        & = -\frac{3 \mu_0 m r h}{2 \pi (r^2 + h^2)^{5 / 3}} \,\uvec{r}                                                                                              \\
+          \vec{B}                       & = \mu_0 (\vec{K} \times \uvec{z})                                                                                                                          \\
+          \vec{K}                       & = -\frac{3 m r h}{2 \pi (r^2 + h^2)^{5 / 3}} \,\uvec{\phi}
+        \end{align*}
+\end{enumerate}
+
+\setcounter{subsection}{46}
+\subsection{}
+
+\begin{align*}
+  \vec{v}                                           & = \omega a \sin \theta \,\uvec{\phi}                                                                       \\
+  \vec{f}                                           & = \vec{v} \times \vec{B}                                                                                   \\
+                                                    & = \omega a B_0 \sin \theta (\uvec{\phi} \times \uvec{z})                                                   \\
+  d \vec{l}                                         & = a \,d \theta \,\uvec{\theta}                                                                             \\
+  \mathcal{E}                                       & = \int \vec{f} \cdot d \vec{l}                                                                             \\
+                                                    & = \omega a^2 B_0 \int_0^{\pi / 2} \sin \theta (\uvec{\phi} \times \uvec{z}) \cdot \uvec{\theta} \,d \theta \\
+  \uvec{\theta} \cdot (\uvec{\phi} \times \uvec{z}) & = \uvec{z} \cdot (\uvec{\theta} \cdot \uvec{\phi})                                                         \\
+                                                    & = \uvec{z} \cdot \uvec{r}                                                                                  \\
+                                                    & = \cos \theta                                                                                              \\
+  \mathcal{E}                                       & = \omega a^2 B_0 \int_0^{\pi / 2} \sin \theta \cos \theta \,d \theta                                       \\
+                                                    & = \frac{1}{2} \omega a^2 B_0
+\end{align*}
+
+\setcounter{subsection}{48}
+\subsection{}
+
+\begin{enumerate}
+  \item
+
+        \begin{align*}
+          \vec{A} & = \frac{1}{4 \pi} \int \frac{\vec{B} \times \hrcurs}{\rcurs^2} \,d \tau                                             \\
+          \vec{E} & = -\frac{1}{4 \pi} \frac{\partial}{\partial t} \int \frac{\vec{B} \times \hrcurs}{\rcurs^2} \,d \tau                \\
+                  & = -\frac{\partial}{\partial t} \left( \frac{1}{4 \pi} \int \frac{\vec{B} \times \hrcurs}{\rcurs^2} \,d \tau \right) \\
+                  & = -\frac{\partial \vec{A}}{\partial t}
+        \end{align*}
+
+  \item
+
+        \begin{align*}
+          \vec{E}_\text{coloumb}              & = \begin{cases}
+                                                    \vec{0}                                      & r < R \\
+                                                    \frac{R^2 \sigma}{\epsilon_0 r^2} \,\uvec{r} & r > R
+                                                  \end{cases}                                                                                            \\
+          \vec{A}                             & = \begin{cases}
+                                                    \frac{\mu_0 R \omega \sigma}{3} r \sin \theta \,\uvec{\phi}             & r \le R \\
+                                                    \frac{\mu_0 R^4 \omega \sigma}{3} \frac{\sin \theta}{r^2} \,\uvec{\phi} & r \ge R
+                                                  \end{cases}                                                               \\
+          \frac{\partial \vec{A}}{\partial t} & = \begin{cases}
+                                                    \frac{\mu_0 R \dot{\omega} \sigma}{3} r \sin \theta \,\uvec{\phi}             & r \le R \\
+                                                    \frac{\mu_0 R^4 \dot{\omega} \sigma}{3} \frac{\sin \theta}{r^2} \,\uvec{\phi} & r \ge R
+                                                  \end{cases}                                              \\
+          \vec{E}_\text{total}                & = \vec{E}_\text{coulomb} - \frac{\partial \vec{V}}{\partial t}                                                                                    \\
+                                              & = \begin{cases}
+                                                    -\frac{\mu_0 R \dot{\omega} \sigma}{3} r \sin \theta \,\uvec{\phi}                                                           & r < R \\
+                                                    \frac{R^2 \sigma}{\epsilon_0 r^2} \,\uvec{r} - \frac{\mu_0 R^4 \dot{\omega} \sigma}{3} \frac{\sin \theta}{r^2} \,\uvec{\phi} & r > R
+                                                  \end{cases}
+        \end{align*}
+\end{enumerate}
+
+\subsection{}
+
+\begin{align*}
+  \frac{1}{\pi R^2} \int \vec{B} \cdot d \vec{a}            & = 2 B(R)                                                                \\
+  \Phi_B                                                    & = 2 \pi R^2 B(R)                                                        \\
+  \frac{d \Phi_B}{d t}                                      & = 2 \pi R^2 \left. \frac{\partial B}{\partial t} \right|_{s = R}        \\
+  \nabla \times \vec{E}                                     & = -\frac{\partial \vec{B}}{\partial t}                                  \\
+  \oint \vec{E} \cdot d \vec{l}                             & = -\frac{d \Phi_B}{d t}                                                 \\
+  2 \pi R E                                                 & = -2 \pi R^2 \left. \frac{\partial B}{\partial t} \right|_{s = R}       \\
+  \vec{E}                                                   & = -R \left. \frac{\partial B}{\partial t} \right|_{s = R} \,\uvec{\phi} \\
+  p                                                         & = -q R B(R)                                                             \\
+  \frac{d p}{d t}                                           & = -q R \left. \frac{\partial B}{\partial t} \right|_{s = R}             \\
+  F                                                         & = \frac{d p}{d t}                                                       \\
+  q E                                                       & = -q R \left. \frac{d B}{d t} \right|_{s = R}                           \\
+  -q R \left. \frac{\partial B}{\partial t} \right|_{s = R} & = -q R \left. \frac{\partial B}{\partial t} \right|_{s = R}
+\end{align*}
+
+\subsection{}
+
+\begin{align*}
+  \vec{B}                             & = \frac{\mu_0 I}{2 \pi s} \,\uvec{\phi}                                                                                        \\
+  s                                   & = \sqrt{x^2 + y^2}                                                                                                             \\
+  \frac{d s}{d t}                     & = \frac{1}{2} 2 y \frac{d y}{d t} (x^2 + y^2)^{-1 / 2}                                                                         \\
+                                      & = -\frac{y v}{s}                                                                                                               \\
+                                      & = -\frac{s v \sin \phi}{s}                                                                                                     \\
+                                      & = -v \sin \phi                                                                                                                 \\
+  \uvec{\phi}                         & = -\sin \phi \,\uvec{x} + \cos \phi \,\uvec{y}                                                                                 \\
+                                      & = -\frac{y}{s} \,\uvec{x} + \frac{x}{s} \,\uvec{y}                                                                             \\
+  \frac{d \uvec{\phi}}{d t}           & = \left( \frac{v}{s} - \frac{y}{s^2} v \sin \phi \right) \uvec{x} + \frac{x}{s^2} v \sin \phi \,\uvec{y}                       \\
+                                      & = \left( \frac{v}{s} - \frac{s \sin \phi}{s^2} v \sin \phi \right) \,\uvec{x} + \frac{s \cos \phi}{s^2} v \sin \phi \,\uvec{y} \\
+                                      & = \frac{v}{s} [(1 - \sin^2 \phi) \,\uvec{x} + \cos \phi \sin \phi \,\uvec{y}]                                                  \\
+                                      & = \frac{v}{s} (\cos^2 \phi \,\uvec{x} + \cos \phi \sin \phi \,\uvec{y})                                                        \\
+                                      & = \frac{v}{s} \cos \phi (\cos \phi \,\uvec{x} + \sin \phi \,\uvec{y})                                                          \\
+                                      & = \frac{v}{s} \cos \phi \,\uvec{s}                                                                                             \\
+  \frac{\partial \vec{B}}{\partial t} & = \frac{\mu_0 I}{2 \pi} \left[ \frac{v \cos \phi}{s^2} \,\uvec{s} + \frac{v \sin \phi}{s^2} \,\uvec{\phi} \right]              \\
+                                      & = \frac{\mu_0 I v}{2 \pi s^2} (\cos \phi \,\uvec{s} + \sin \phi \,\uvec{\phi})                                                 \\
+  \nabla \times \vec{E}               & = -\frac{\partial \vec{B}}{\partial t}                                                                                         \\
+                                      & = -\frac{\mu_0 I v}{2 \pi s^2} (\cos \phi \,\uvec{s} + \sin \phi \,\uvec{\phi})
+\end{align*}
+
+\begin{align*}
+  \vec{E}                                                                  & = -\frac{\mu_0 I v}{2 \pi} E(s, \phi) \,\uvec{z}    \\
+  \frac{1}{s} \frac{\partial E(s, \phi)}{\partial \phi}                    & = \frac{\cos \phi}{s^2}                             \\
+  E(s, \phi)                                                               & = \frac{\sin \phi}{s} + c_1(s)                      \\
+  -\frac{\partial}{\partial s} \left[ \frac{\sin \phi}{s} + c_1(s) \right] & = \frac{\sin \phi}{s^2}                             \\
+  -\left[ -\frac{\sin \phi}{s^2} + c_1'(s) \right]                         & = \frac{\sin \phi}{s^2}                             \\
+  E(s, \phi)                                                               & = \frac{\sin \phi}{s}                               \\
+  \vec{E}                                                                  & = -\frac{\mu_0 I v}{2 \pi s^2} \sin \phi \,\uvec{z}
+\end{align*}
+
+\subsection{}
+
+\begin{align*}
+  % Before
+  F_\text{coulomb}              & = \ke \frac{Q q}{r^2}                           \\
+  T_1                           & = \ke \frac{Q q}{2 r}                           \\
+  % After
+  F_\text{mag}                  & = q v \,d B                                     \\
+  T_2                           & = \ke \frac{Q q}{2 r} + \frac{1}{2} q r v \,d B \\
+  T_2 - T_1                     & = \frac{1}{2} q r v \,d B                       \\
+  % Electric field
+  \nabla \times \vec{E}         & = -\frac{\partial \vec{B}}{\partial t}          \\
+  \oint \vec{E} \cdot d \vec{l} & = -\frac{\partial \Phi_B}{\partial t}           \\
+  2 \pi r E                     & = -\pi r^2 \frac{d B}{d t}                      \\
+  E                             & = \frac{1}{2} r \frac{d B}{d t}                 \\
+  \Delta T                      & = F \,d x                                       \\
+                                & = q E \frac{d x}{d t} \,d t                     \\
+                                & = \frac{1}{2} q r v \,d B
+\end{align*}
+
+\subsection{}
+
+\begin{align*}
+  \mathcal{E} & = \frac{d \Phi_B}{d t}          \\
+              & = \alpha                        \\
+  \mathcal{E} & = I R                           \\
+  \alpha      & = I (R_1 + R_2)                 \\
+  I           & = \frac{\alpha}{R_1 + R_2}      \\
+  V_1         & = I R_1                         \\
+              & = \frac{\alpha R_1}{R_1 + R_2}  \\
+  V_2         & = -I R_2                        \\
+              & = -\frac{\alpha R_2}{R_1 + R_2}
+\end{align*}
+
+\subsection{}
+
+\begin{enumerate}
+  \item
+
+        \begin{align*}
+          \Phi_B               & = \pi r^2 B                \\
+          \frac{d \Phi_B}{d t} & = \pi r^2 \alpha           \\
+          \mathcal{E}          & = I R                      \\
+          I                    & = \frac{\pi r^2 \alpha}{R}
+        \end{align*}
+
+  \item
+
+        \begin{align*}
+          V + I R' - \alpha A & = 0                                                                                            \\
+          V                   & = \alpha A - I R'                                                                              \\
+                              & = \alpha \frac{r^2}{2} \left( \frac{\pi}{2} - 1 \right) - \frac{\pi r^2 \alpha}{R} \frac{R}{4} \\
+                              & = -\frac{1}{2} \alpha R^2
+        \end{align*}
+\end{enumerate}
+
+\subsection{}
+
+\begin{align*}
+  \mathcal{E}_m         & = B h v                                         \\
+  \mathcal{E}_b         & = -L \frac{d I}{d t}                            \\
+  \mathcal{E}_m         & = \mathcal{E}_b                                 \\
+  B h v                 & = -L \frac{d I}{d t}                            \\
+  m \frac{d v}{d t}     & = B h I                                         \\
+  m \frac{d^2 v}{d t^2} & = B h \frac{d I}{d t}                           \\
+  \frac{d^2 v}{d t^2}   & = \frac{B h}{m} \left( -\frac{B h v}{L} \right) \\
+                        & = -\frac{(B h)^2}{L m} v                        \\
+  \omega                & = \frac{B h}{\sqrt{L m}}
+\end{align*}
+
+\setcounter{subsection}{56}
+\subsection{}
+
+\begin{align*}
+  \Phi_1                              & = N_1 B \pi R^2               \\
+  \mathcal{E}_1                       & = \frac{d \Phi_1}{d t}        \\
+                                      & = N_1 \pi R^2 \frac{d B}{d t} \\
+  \Phi_2                              & = N_2 B \pi R^2               \\
+  \mathcal{E}_2                       & = \frac{d \Phi_2}{d t}        \\
+                                      & = N_2 \pi R^2 \frac{d B}{d t} \\
+  \frac{\mathcal{E}_2}{\mathcal{E}_1} & = \frac{N_2}{N_1}
+\end{align*}
 
 \end{document}
