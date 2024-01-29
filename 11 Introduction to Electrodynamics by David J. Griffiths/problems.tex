@@ -4613,4 +4613,74 @@ If the current in the larger loop flows counterclockwise the current in the smal
   \frac{\mathcal{E}_2}{\mathcal{E}_1} & = \frac{N_2}{N_1}
 \end{align*}
 
+\section{Conservation Laws}
+
+\subsection{}
+
+\begin{enumerate}
+  \item
+
+        \begin{align*}
+          \oint \vec{E} \cdot d \vec{a} & = \frac{1}{\epsilon_0} Q_\text{enc}                               \\
+          2 \pi s L E                   & = \frac{\lambda L}{\epsilon_0}                                    \\
+          \vec{E}                       & = \frac{\lambda}{2 \pi \epsilon_0 s} \,\uvec{s}                   \\
+          \oint \vec{B} \cdot d \vec{l} & = \mu_0 I                                                         \\
+          2 \pi s B                     & = \mu_0 I                                                         \\
+          \vec{B}                       & = \frac{\mu_0 I}{2 \pi s} \,\uvec{\phi}                           \\
+          \vec{S}                       & = \frac{1}{\mu_0} (\vec{E} \times \vec{B})                        \\
+                                        & = \frac{I \lambda}{4 \pi^2 \epsilon_0 s^2} \,\uvec{z}             \\
+          \int \vec{S} \cdot d \vec{a}  & = \int_a^b \frac{I \lambda}{4 \pi^2 \epsilon_0 s^2} 2 \pi s \,d s \\
+                                        & = \frac{I \lambda}{2 \pi \epsilon_0} \ln \frac{b}{a}              \\
+          V                             & = \int_a^b \frac{\lambda}{2 \pi \epsilon_0 s} \,d s               \\
+                                        & = \frac{\lambda}{2 \pi \epsilon_0} \ln \frac{b}{a}                \\
+          \lambda                       & = \frac{2 \pi \epsilon_0 V}{\ln b / a}                            \\
+          \int \vec{S} \cdot d \vec{a}  & = I V
+        \end{align*}
+
+  \item
+
+        \begin{align*}
+          \vec{E}                      & = \frac{\sigma}{\epsilon_0} \,\uvec{z}     \\
+          V                            & = \int_0^h \frac{\sigma}{\epsilon_0} \,d z \\
+                                       & = \frac{\sigma h}{\epsilon_0}              \\
+          \sigma                       & = \frac{\epsilon_0 V}{h}                   \\
+          \vec{E}                      & = \frac{V}{h} \,\uvec{z}                   \\
+          \vec{B}                      & = \frac{\mu_0 I}{w} \,\uvec{x}             \\
+          \vec{S}                      & = \frac{1}{\mu_0} (\vec{E} \times \vec{B}) \\
+                                       & = \frac{I V}{h w} \,\uvec{y}               \\
+          \int \vec{S} \cdot d \vec{a} & = I V
+        \end{align*}
+\end{enumerate}
+
+\subsection{}
+
+\begin{enumerate}
+  \item
+
+        \begin{align*}
+          \vec{E} & = \frac{I t}{\epsilon_0 \pi a^2} \,\uvec{z} \\
+          \vec{B} & = \frac{\mu_0 I s}{2 \pi a^2} \,\uvec{\phi}
+        \end{align*}
+
+  \item
+
+        \begin{align*}
+          u_{cm}  & = \frac{1}{2} \left( \epsilon_0 E^2 + \frac{1}{\mu_0} B^2 \right) \\
+                  & = \frac{\mu_0 I^2}{2 \pi^2 a^4} [(c t)^2 + (s / 2)^2]             \\
+          \vec{S} & = \frac{1}{\mu_0} (\vec{E} \times \vec{B})                        \\
+                  & = -\frac{I^2 s t}{2 \pi^2 \epsilon_0 a^4} \,\uvec{s}
+        \end{align*}
+
+  \item
+
+        \begin{align*}
+          \int u \,d \tau                & = \frac{\mu_0 I^2}{2 \pi^2 a^4} \int_0^b [(c t)^2 + (s / 2)^2] 2 \pi s w \,d s \\
+                                         & = \frac{\mu_0 I^2 w b^2}{2 \pi a^4} [(c t)^2 + (b^2 / 8)]                      \\
+          P_\text{in}                    & = -\int \vec{S} \cdot d \vec{a}                                                \\
+                                         & = \frac{I^2 b t}{2 \pi^2 \epsilon_0 a^4} 2 \pi b w                             \\
+                                         & = \frac{I^2 w t b^2}{\epsilon_0 \pi a^4}                                       \\
+          -\frac{d}{d t} \int u \,d \tau & = -\frac{I^2 w t b^2}{\epsilon_0 \pi a^4}
+        \end{align*}
+\end{enumerate}
+
 \end{document}

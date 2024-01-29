@@ -870,4 +870,25 @@
         \end{align*}
 \end{itemize}
 
+\section{Conservation Laws}
+
+\subsection{Charge and Energy}
+
+\subsubsection{The Continuity Equation}
+
+\begin{itemize}
+  \item Global conservation of charge states that the total charge in the universe is constant. Local conservation of charge states that if the charge in some region changes, exactly that amount of charge must have passed through the surface. This is formalised by the \textbf{continuity equation} \[\frac{\partial \rho}{\partial t} = -\nabla \cdot \vec{J}.\]
+\end{itemize}
+
+\subsubsection{Poynting's Theorem}
+
+\begin{itemize}
+  \item \textbf{Poynting's theorem} defines the rate at which work is done on a collection of charges to be \begin{align*}
+          \frac{d W}{d t} & = -\frac{d}{d t} \int_\mathcal{V} \frac{1}{2} \left( \epsilon_0 E^2 + \frac{1}{\mu_0} B^2 \right) \,d \tau - \frac{1}{\mu_0} \oint_\mathcal{S} (\vec{E} \times \vec{B}) \cdot d \vec{a} \\
+                          & = -\frac{d}{d t} \int_\mathcal{V} u \,d \tau - \oint_\mathcal{S} \vec{S} \cdot d \vec{a}.
+        \end{align*} where the first term is the total energy stored in the fields and the second term is the rate at which energy is transported out of $\mathcal{V}$ through its surface $\mathcal{S}$. In other words, the work done on the collection of charges is equal to the decrease in the energy in the fields minus the energy that flowed out through the surface.
+
+  \item The quantity \[u = \frac{1}{2} \left( \epsilon_0 E^2 + \frac{1}{\mu_0} B^2 \right)\] is the energy stored in the electromagnetic fields per unit volume and \[\vec{S} = \frac{1}{\mu_0} (\vec{E} \times \vec{B})\] is the \textbf{Poynting vector} or the \textbf{energy flux density} such that $\vec{S} \cdot d \vec{a}$ is the amount of energy crossing the infinitesimal surface $d \vec{a}$ in unit time.
+\end{itemize}
+
 \end{document}
