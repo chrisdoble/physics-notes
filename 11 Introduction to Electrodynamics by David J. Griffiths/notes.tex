@@ -17,6 +17,7 @@
 \newcommand{\dvec}[1]{\dot{\vec{#1}}}
 \newcommand{\ddvec}[1]{\ddot{\vec{#1}}}
 \newcommand{\uvec}[1]{\hat{\vec{#1}}}
+\newcommand{\tensor}[1]{\overleftrightarrow{\boldsymbol{\mathbf{#1}}}}
 
 \newcommand{\ke}{\frac{1}{4 \pi \epsilon_0}}
 
@@ -889,6 +890,46 @@
         \end{align*} where the first term is the total energy stored in the fields and the second term is the rate at which energy is transported out of $\mathcal{V}$ through its surface $\mathcal{S}$. In other words, the work done on the collection of charges is equal to the decrease in the energy in the fields minus the energy that flowed out through the surface.
 
   \item The quantity \[u = \frac{1}{2} \left( \epsilon_0 E^2 + \frac{1}{\mu_0} B^2 \right)\] is the energy stored in the electromagnetic fields per unit volume and \[\vec{S} = \frac{1}{\mu_0} (\vec{E} \times \vec{B})\] is the \textbf{Poynting vector} or the \textbf{energy flux density} such that $\vec{S} \cdot d \vec{a}$ is the amount of energy crossing the infinitesimal surface $d \vec{a}$ in unit time.
+\end{itemize}
+
+\subsection{Momentum}
+
+\subsubsection{Newton's Third Law in Electrodynamics}
+
+\begin{itemize}
+  \item Newton's third law holds under electrostatics and magnetostatics but not under electrodynamics.
+
+  \item If you only consider the forces between particles momentum isn't conserved under electrodynamics. However, if you consider the fields themselves to have momentum then it is conserved.
+\end{itemize}
+
+\subsubsection{Maxwell's Stress Tensor}
+
+\begin{itemize}
+  \item \textbf{Maxwell's stress tensor} is defined as \[T_{i j} = \epsilon_0 \left( E_i E_j - \frac{1}{2} \delta_{i j} E^2 \right) + \frac{1}{\mu_0} \left( B_i B_j - \frac{1}{2} \delta_{i j} B^2 \right)\] where $i$ and $j$ take on the dimensions $x$, $y$, and $z$. A component $T_{i j}$ represents the force in the $i$th direction on an area oriented in the $j$th direction, for example $T_{x x}$ is the force in the $x$ direction experienced by an area oriented in the $x$ direction (pressure) while $T_{x y}$ is the force in the $x$ direction experienced by an area oriented in the $y$ direction (shear).
+
+  \item The total electromagnetic force on the charges in a volume $\mathcal{V}$ is \[\vec{F} = \oint_\mathcal{S} \tensor{T} \cdot d \vec{a} - \epsilon_0 \mu_0 \frac{d}{d t} \int_\mathcal{V} \vec{S} \,d \tau\] or in the static case \[\vec{F} = \oint_\mathcal{S} \tensor{T} \cdot d \vec{a}.\]
+\end{itemize}
+
+\subsubsection{Conservation of Momentum}
+
+\begin{itemize}
+  \item Newton's second law says that the force on an object is equal to the rate of change of its momentum, so the above equation can be rewritten as \[\frac{d \vec{p}_\text{mech}}{d t} = -\epsilon_0 \mu_0 \frac{d}{d t} \int_\mathcal{V} \vec{S} \,d \tau + \oint_\mathcal{S} \tensor{T} \cdot d \vec{a}\] where $\vec{p}_\text{mech}$ is the mechanical momentum of the particles in the volume. The first integral represents the momentum stored in the fields \[\vec{p} = \mu_0 \epsilon_0 \int_\mathcal{V} \vec{S} \,d \tau\] and the second integral represents the momentum per unit time flowing in through the surface.
+
+  \item The momentum density of the fields is thus \[\vec{g} = \mu_0 \epsilon_0 \vec{S} = \epsilon_0 (\vec{E} \times \vec{B})\] and the momentum flux transported by the fields is $-\tensor{T}$.
+
+  \item If the mehcanical momentum in a region isn't changing then \begin{align*}
+          \int \frac{\partial \vec{g}}{\partial t} \,d \tau & = \oint \tensor{T} \cdot d \vec{a}        \\
+                                                            & = \int (\nabla \cdot \tensor{T}) \,d \tau \\
+          \frac{\partial \vec{g}}{\partial t}               & = \nabla \cdot \tensor{T}.
+        \end{align*} This is the continuity equation for electromagnetic momentum — the change in momentum density of the fields is equal to the momentum flowing in through the surface.
+
+  \item In general, the field momentum and mechanical momentum aren't conserved on their own. Only the total amount of momentum is conserved.
+\end{itemize}
+
+\subsubsection{Angular Momentum}
+
+\begin{itemize}
+  \item The angular momentum density of electromagnetic fields is \[\ell = \vec{r} \times \vec{g} = \epsilon_0 [\vec{r} \times (\vec{E} \times \vec{B})].\]
 \end{itemize}
 
 \end{document}

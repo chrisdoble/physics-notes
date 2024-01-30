@@ -4683,4 +4683,105 @@ If the current in the larger loop flows counterclockwise the current in the smal
         \end{align*}
 \end{enumerate}
 
+\setcounter{subsection}{4}
+\subsection{}
+
+\begin{enumerate}
+  \item
+
+        \begin{align*}
+          \vec{E} & = -\frac{\sigma}{\epsilon_0} \,\uvec{z}    \\
+          \vec{B} & = -\frac{1}{2} \mu_0 \sigma v \,\uvec{x}   \\
+          \vec{S} & = \frac{\sigma^2 v}{\epsilon_0} \,\uvec{y} \\
+          \vec{p} & = \mu_0 \epsilon_0 \int \vec{S} \,d \tau   \\
+                  & = \mu_0 \sigma^2 v d A \,\uvec{y}
+        \end{align*}
+\end{enumerate}
+
+\subsection{}
+
+\begin{enumerate}
+  \item
+
+        \begin{align*}
+          \vec{S} & = \frac{1}{\mu_0} (\vec{E} \times \vec{B}) \\
+                  & = \frac{B E}{\mu_0} \,\uvec{y}             \\
+          \vec{p} & = \mu_0 \epsilon_0 \int \vec{S} \,d \tau   \\
+                  & = \epsilon_0 B E A d \,\uvec{y}
+        \end{align*}
+
+  \item
+
+        \begin{align*}
+          \vec{I} & = \int_0^\infty \vec{F} \,d t                                       \\
+                  & = \int_0^\infty I (\vec{l} \times \vec{B}) \,d t                    \\
+                  & = \int_0^\infty B d I (\uvec{z} \times \uvec{x}) \,d t              \\
+                  & = B d \int_0^\infty \left(-\frac{d Q}{d t} \right) \,d t \,\uvec{y} \\
+                  & = B d Q \,\uvec{y}                                                  \\
+                  & = \epsilon_0 A B d E \,\uvec{y}
+        \end{align*}
+\end{enumerate}
+
+\setcounter{subsection}{7}
+\subsection{}
+
+\begin{align*}
+  \vec{B}        & = \mu_0 n I \,\uvec{z}                                                             \\
+  I'             & = -\frac{d Q}{d t}                                                                 \\
+  \vec{F}        & = I' (d \vec{l} \times \vec{B})                                                    \\
+                 & = -\mu_0 I n \frac{d Q}{d t} (\uvec{s} \times \uvec{z}) \,d s                      \\
+                 & = \mu_0 I n \frac{d Q}{d t} \,\uvec{\phi}                                          \\
+  \vec{\tau}     & = \int_a^R (\vec{s} \times \vec{F}) \,d s                                          \\
+                 & = \mu_0 I n \frac{d Q}{d t} \int_a^R s (\uvec{s} \times \uvec{\phi}) \,d s         \\
+                 & = \frac{1}{2} \mu_0 I n \frac{d Q}{d t} (R^2 - a^2) \,\uvec{z}                     \\
+  \Delta \vec{L} & = \int_0^\infty \vec{\tau} \,d t                                                   \\
+                 & = \frac{1}{2} \mu_0 I n (R^2 - a^2) \int_0^\infty \frac{d Q}{d t} \,d t \,\uvec{z} \\
+                 & = -\frac{1}{2} \mu_0 Q n I (R^2 - a^2) \,\uvec{z}
+\end{align*}
+
+\subsection{}
+
+\begin{enumerate}
+  \item
+
+        \begin{align*}
+          \vec{E}                                 & = \ke \frac{Q}{r^2} \,\uvec{r}                                                                                                                                                           \\
+          \vec{B}                                 & = B_0 \,\uvec{z}                                                                                                                                                                         \\
+          \vec{E} \times \vec{B}                  & = \ke \frac{Q}{r^2} B_0 (\uvec{r} \times \uvec{z})                                                                                                                                       \\
+                                                  & = -\ke \frac{Q}{r^2} B_0 \sin \theta \,\uvec{\phi}                                                                                                                                       \\
+          \vec{r} \times (\vec{E} \times \vec{B}) & = \ke \frac{Q}{r} B_0 \sin \theta (\uvec{r} \times -\uvec{\phi})                                                                                                                         \\
+                                                  & = \ke \frac{Q}{r} B_0 \sin \theta \,\uvec{\theta}                                                                                                                                        \\
+          \ell                                    & = \epsilon_0 [\vec{r} \times (\vec{E} \times \vec{B})]                                                                                                                                   \\
+                                                  & = \frac{B_0 Q \sin \theta}{4 \pi r} \,\uvec{\theta}                                                                                                                                      \\
+          \vec{L}                                 & = \int \ell \,d \tau                                                                                                                                                                     \\
+                                                  & = \frac{B_0 Q}{4 \pi} \int_0^{2 \pi} \int_0^\pi r \sin^2 \theta [\cos \theta \cos \phi \,\uvec{x} + \cos \theta \sin \phi \,\uvec{y} - \sin \theta \,\uvec{z}] \,d r \,d \theta \,d \phi \\
+                                                  & = -\frac{1}{3} B_0 Q (b^2 - a^2) \,\uvec{z}
+        \end{align*}
+
+  \item
+
+        If a circular loop of radius $R$ is in a uniform magnetic field in the $z$ direction and that magnetic field changes, the induced electric field is \[\vec{E} = -\frac{1}{2} R \frac{d B}{d t} \,\uvec{\phi}.\]
+
+        A sphere can be considered a stack of circular loops, so the torque on the sphere as the magnetic field changes is \begin{align*}
+          \vec{\tau} & = \int_0^\pi 2 \pi s (\vec{s} \times \vec{F}) R \,d \theta                                          \\
+                     & = \int_0^\pi 2 \pi s^2 \sigma \left( -\frac{1}{2} s \frac{d B}{d t} \right) R \,d \theta \,\uvec{z} \\
+                     & = -\pi \sigma R \frac{d B}{d t} \int_0^\pi (R \sin \theta)^3 \,d \theta \,\uvec{z}                  \\
+                     & = -\frac{4}{3} \pi \sigma R^4 \frac{d B}{d t} \,\uvec{z}.
+        \end{align*}
+
+        The surface charge density and torque of sphere $a$ is \begin{align*}
+          \sigma_a     & = \frac{Q}{4 \pi a^2}                           \\
+          \vec{\tau}_a & = -\frac{1}{3} Q a^2 \frac{d B}{d t} \,\uvec{z}
+        \end{align*} and the same for sphere $b$ is \begin{align*}
+          \sigma_b     & = -\frac{Q}{4 \pi b^2}                         \\
+          \vec{\tau}_b & = \frac{1}{3} Q b^2 \frac{d B}{d t} \,\uvec{z}
+        \end{align*} so the total torque is \[\vec{\tau} = \frac{1}{3} Q \frac{d B}{d t} (b^2 - a^2) \,\uvec{z}.\]
+
+        Integrating this over all time to find the change in angular momentum gives \begin{align*}
+          \vec{L} & = \int_0^\infty \vec{\tau} \,d t                                           \\
+                  & = \frac{1}{3} Q (b^2 - a^2) \int_0^\infty \frac{d B}{d t} \,d t \,\uvec{z} \\
+                  & = -\frac{1}{3} B_0 Q (b^2 - a^2) \,\uvec{z}.
+        \end{align*}
+\end{enumerate}
+
 \end{document}
