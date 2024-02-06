@@ -992,4 +992,58 @@
   \item A transverse wave can be considered a superposition of two waves — one vertically polarized and one horizontally polarized \[\tvec{f}(z, t) = (\tilde{A} \cos \theta) e^{i (k z - \omega t)} \,\uvec{x} + (\tilde{A} \sin \theta) e^{i (k z - \omega t)} \,\uvec{y}.\]
 \end{itemize}
 
+\subsection{Electromagnetic Waves in Vacuum}
+
+\subsubsection{The Wave Equation for E and B}
+
+\begin{itemize}
+  \item Maxwell's equations in a region of space where there is no charge or current form a set of coupled, first-order, partial differential equations in $\vec{E}$ and $\vec{B}$. They can be decoupled by taking the curl of Faraday's law and Ampère's law, giving \[\nabla^2 \vec{E} = \mu_0 \epsilon_0 \frac{\partial^2 \vec{E}}{\partial t^2}, \quad \nabla^2 \vec{B} = \mu_0 \epsilon_0 \frac{\partial^2 \vec{B}}{\partial t^2}.\] Thus, in a vacuum, each Cartesian component of $\vec{E}$ and $\vec{B}$ satisfies the threed-dimensional wave equation \[\nabla^2 f = \frac{1}{v^2} \frac{\partial^2 f}{\partial t^2}\] where \[\frac{1}{v^2} = \mu_0 \epsilon_0 \Rightarrow v^2 = \frac{1}{\mu_0 \epsilon_0} = c^2.\]
+\end{itemize}
+
+\subsubsection{Monochromatic Plane Waves}
+
+\begin{itemize}
+  \item Waves comprised of a single frequency $\omega$ are called \textbf{monochromatic}. This is because different frequencies in the visible spectrum correspond to different colours.
+
+  \item Waves travelling in the $z$ direction with no $x$ or $y$ dependence are called \textbf{plane waves} because the fields are uniform over every plane perpendicular to the direction of propagation.
+
+  \item Gauss's laws in the absence of charge and current apply additional conditions on electromagnetic waves, namely \begin{align*}
+          0 & = \nabla \cdot \tvec{E}                            \\
+            & = \nabla \cdot [\tvec{E}_0 e^{i (k z - \omega t)}] \\
+            & = i z (\tvec{E}_0)_z e^{i (k z - \omega t)}
+        \end{align*} and a similar condition on $\tvec{B}$. This implies that the $z$ components of $\tvec{E}_0$ and $\tvec{B}_0$ are both $0$ — electromagnetic waves are transverse.
+
+  \item Faraday's law $\nabla \times \vec{E} = -\partial \vec{B} / \partial t$ implies a relation between the amplitudes of the electric and magnetic fields \[\tvec{B}_0 = \frac{k}{\omega} (\uvec{z} \times \tvec{E}_0).\] $\vec{E}$ and $\vec{B}$ are in phase and mutually perpendicular, with their (real) amplitudes related by \[B_0 = \frac{k}{\omega} E_0 = \frac{1}{c} E_0.\]
+
+  \item We can describe waves travelling in an arbitrary direction by introducing the \textbf{propagation} (or \textbf{wave}) \textbf{vector} $\vec{k}$ which points in the direction of propagation and whose magnitude is the wave number $k$. Thus \begin{align*}
+          \tvec{E}(\vec{r}, t) & = \tilde{E}_0 e^{i (\vec{k} \cdot \vec{r} - \omega t)} \,\uvec{n}                 \\
+          \tvec{B}(\vec{r}, t) & = \tilde{B}_0 e^{i (\vec{k} \cdot \vec{r} - \omega t)} (\uvec{k} \times \uvec{n}) \\
+                               & = \frac{1}{c} \uvec{k} \times \vec{E}
+        \end{align*}
+\end{itemize}
+
+\subsubsection{Energy and Momentum in Electromagnetic Waves}
+
+\begin{itemize}
+  \item In a monochromatic wave travelling in the $z$ direction
+
+        \begin{itemize}
+          \item the energy per unit volume is \[u = \epsilon_0 E^2 = \epsilon_0 E_0^2 \cos^2 (k z - \omega t + \delta),\]
+
+          \item the energy flux density (energy per unit area per unit time, aka the Poynting vector) is \[\vec{S} = c u \,\uvec{z},\] and
+
+          \item the momentum density is \[\vec{g} = \frac{1}{c} u \,\uvec{z}.\]
+        \end{itemize}
+
+  \item In the case of light, the time periods and wavelengths involved are so small that we're mostly interested in the average value of these quantities. The average value of $\cos^2 x$ over any number of cycles is $\frac{1}{2}$ so \begin{align*}
+          \langle u \rangle       & = \frac{1}{2} \epsilon_0 E_0^2               \\
+          \langle \vec{S} \rangle & = \frac{1}{2} \epsilon_0 c E_0^2 \,\uvec{z}  \\
+          \langle \vec{g} \rangle & = \frac{1}{2 c} \epsilon_0 E_0^2 \,\uvec{z}.
+        \end{align*}
+
+  \item The average power per unit area tansported by an electromagnetic wave is called the \textbf{intensity} \[I = \langle S \rangle = \frac{1}{2} \epsilon_0 c E_0^2.\]
+
+  \item When light falls at perfect incidence on a perfect absorber it delivers all of its momentum. In a time $\Delta t$ on a surface of area $A$ the momentum transfer is \[\Delta \vec{p} = \langle \vec{g} \rangle A c \Delta t\] so the \textbf{radiation pressure} (average force per unit area) is \[P = \frac{1}{A} \frac{\Delta p}{\Delta t} = g c = \frac{I}{c}.\] On a perfect reflector the pressure is twice as great because the momentum changes twice as much (once to ``stop'' the light and again to reflect it).
+\end{itemize}
+
 \end{document}

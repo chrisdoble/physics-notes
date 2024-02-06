@@ -4927,4 +4927,106 @@ If the current in the larger loop flows counterclockwise the current in the smal
   \item Shake it in a circle
 \end{enumerate}
 
+\subsection{}
+
+\begin{enumerate}
+  \item
+
+        \begin{align*}
+          \vec{k}  & = -k \vec{x}                                                               \\
+          \uvec{n} & = \uvec{z}                                                                 \\
+          \vec{E}  & = E_0 \cos \left( \frac{\omega}{c} x + \omega t \right) \uvec{z}           \\
+          \vec{B}  & = \frac{E_0}{c} \cos \left( \frac{\omega}{c} x + \omega t \right) \uvec{y}
+        \end{align*}
+
+  \item
+
+        \begin{align*}
+          \vec{k}                  & = \frac{\omega}{c \sqrt{3}} (\uvec{x} + \uvec{y} + \uvec{z})                                                                      \\
+          \uvec{n}                 & = \frac{1}{\sqrt{2}} (\uvec{x} - \uvec{z})                                                                                        \\
+          \vec{k} \cdot \vec{r}    & = \frac{\omega}{c \sqrt{3}} (x + y + z)                                                                                           \\
+          \vec{E}(\vec{r}, t)      & = \frac{E_0}{\sqrt{2}} \cos \left[ \frac{\omega}{c \sqrt{3}} (x + y + z) - \omega t \right] (\uvec{x} - \uvec{z})                 \\
+          \uvec{k} \times \uvec{n} & = \frac{1}{\sqrt{6}} (-\uvec{x} + 2 \uvec{y} - \uvec{z})                                                                          \\
+          \vec{B}(\vec{r}, t)      & = \frac{E_0}{c \sqrt{6}} \cos \left[ \frac{\omega}{c \sqrt{3}} (x + y + z) - \omega t \right] (-\uvec{x} + 2 \uvec{y} - \uvec{z})
+        \end{align*}
+\end{enumerate}
+
+\subsection{}
+
+\begin{align*}
+  P   & = \frac{I}{c}        \\
+      & = \qty{4.3}{\mu Pa}  \\
+  2 P & = \qty{8.6}{\mu Pa}  \\
+      & = \qty{8.4e-11}{atm}
+\end{align*}
+
+\subsection{}
+
+\begin{enumerate}
+  \item
+
+        \begin{align*}
+          \vec{E}(z, t)         & = E_0 \cos (k z - \omega t) \,\uvec{x}          \\
+          m \frac{d^2 x}{d t^2} & = q E_0 \cos (k z - \omega t)                   \\
+          \frac{d x}{d t}       & = -\frac{E_0 q}{m \omega} \sin (k z - \omega t)
+        \end{align*}
+
+  \item
+
+        \begin{align*}
+          \vec{B}(z, t) & = \frac{1}{c} E_0 \cos (k z - \omega t) \,\uvec{y}                                     \\
+          \vec{F}       & = q \vec{v} \times \vec{B}                                                             \\
+                        & = -\frac{E_0^2 q^2}{c m \omega} \cos (k z - \omega t) \sin (k z - \omega t) \,\uvec{z} \\
+        \end{align*}
+
+  \item
+
+        \begin{align*}
+          \vec{F}                 & = -\frac{E_0^2 q^2}{2 c m \omega} \sin [2 (k z - \omega t)] \,\uvec{z} \\
+          \langle \vec{F} \rangle & = \vec{0}
+        \end{align*}
+
+  \item
+
+        \begin{align*}
+          \vec{F}                                  & = q \vec{E} - \gamma m \vec{v}                                                                                         \\
+          m \frac{d v}{d t}                        & = q E_0 \cos (k z - \omega t) - \gamma m v                                                                             \\
+          \frac{d v}{d t} + \gamma v               & = \frac{E_0 q}{m} \cos (k z - \omega t)                                                                                \\
+          v_p                                      & = c_2 \cos (k z - \omega t) + c_3 \sin (k z - \omega t)                                                                \\
+          \frac{d v_p}{d t}                        & = \omega c_2 \sin (k z - \omega t) - \omega c_2 \cos (k z - \omega t)                                                  \\
+          \frac{d v_p}{d t} + \gamma v             & = (\gamma c_2 - \omega c_3) \cos (k z - \omega t) + (\gamma c_3 + \omega c_2) \sin (k z - \omega t)                    \\
+          \gamma c_3 + \omega c_2                  & = 0                                                                                                                    \\
+          c_3                                      & = -\frac{\omega}{\gamma} c_2                                                                                           \\
+          \gamma c_2 - \omega c_3                  & = \frac{E_0 q}{m}                                                                                                      \\
+          \gamma c_2 + \frac{\omega^2}{\gamma} c_2 & = \frac{E_0 q}{m}                                                                                                      \\
+          c_2                                      & = \frac{E_0 q \gamma}{m (\gamma^2 + \omega^2)}                                                                         \\
+          c_3                                      & = -\frac{E_0 q \omega}{m (\gamma^2 + \omega^2)}                                                                        \\
+          v_p                                      & = \frac{E_0 q}{m (\gamma^2 + \omega^2)} [\gamma \cos (k z - \omega t) - \omega \sin (k z - \omega t)]                  \\
+                                                   & = \frac{E_0 q}{m \sqrt{\gamma^2 + \omega^2}} \cos (k z - \omega t + \theta)                                            \\
+          \theta                                   & = \arctan \frac{\omega}{\gamma}                                                                                        \\
+          \vec{F}                                  & = q \vec{v} \times \vec{B}                                                                                             \\
+                                                   & = \frac{E_0^2 q^2}{c m \sqrt{\gamma^2 + \omega^2}} \cos (k z - \omega t + \theta) \cos (k z - \omega t) \,\uvec{z}     \\
+          \langle \vec{F} \rangle                  & = \frac{E_0^2 q^2}{c m \sqrt{\gamma^2 + \omega^2}} \int_0^T \cos (k z - \omega t + \theta) \cos (k z - \omega t) \,d t \\
+                                                   & = \frac{E_0^2 q^2}{c m \sqrt{\gamma^2 + \omega^2}} \cos \theta \int_0^T \cos^2 (k z - \omega t) \,d t                  \\
+                                                   & = \frac{\pi \gamma E_0^2 q^2}{c m \omega (\gamma^2 + \omega^2)} \,\uvec{z}
+        \end{align*}
+\end{enumerate}
+
+\subsection{}
+
+\begin{align*}
+  \langle f g \rangle                     & = \frac{A B}{T} \int_0^T \cos (\vec{k} \cdot \vec{r} - \omega t + \delta_a) \cos (\vec{k} \cdot \vec{r} - \omega t + \delta_b) \,d t    \\
+                                          & = \frac{A B}{2 T} \int_0^T \{ \cos [\delta_a - \delta_b] + \cos [2 (\vec{k} \cdot \vec{r} - \omega t) + \delta_a + \delta_b]\} \,d t    \\
+                                          & = \frac{1}{2} A B \cos (\delta_a - \delta_b)                                                                                            \\
+  \tilde{f}                               & = \tilde{A} e^{i (\vec{k} \cdot \vec{r} - \omega t)}                                                                                    \\
+  \tilde{g}^*                             & = \tilde{B}^* e^{-i (\vec{k} \cdot \vec{r} - \omega t)}                                                                                 \\
+  \tilde{f} \tilde{g}^*                   & = \tilde{A} \tilde{B}^*                                                                                                                 \\
+  \Re (\tilde{f} \tilde{g}^*)             & = \Re (\tilde{A} \tilde{B}^*)                                                                                                           \\
+                                          & = \Re [A (\cos \delta_a + i \sin \delta_a) B (\cos \delta_b - i \sin \delta_b)]                                                         \\
+                                          & = \Re [A B (\cos \delta_a \cos \delta_b - i \cos \delta_a \sin \delta_b + i \sin \delta_a \cos \delta_b + \sin \delta_a \sin \delta_b)] \\
+                                          & = A B (\cos \delta_a \cos \delta_b + \sin \delta_a \sin \delta_b)                                                                       \\
+                                          & = A B \cos (\delta_a - \delta_b)                                                                                                        \\
+  \frac{1}{2} \Re (\tilde{f} \tilde{g}^*) & = \frac{1}{2} A B \cos (\delta_a - \delta_b)
+\end{align*}
+
 \end{document}
