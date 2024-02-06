@@ -13,9 +13,11 @@
   urlcolor=blue
 }
 
+\renewcommand{\Re}{\operatorname{Re}}
 \renewcommand{\vec}[1]{\boldsymbol{\mathbf{#1}}}
 \newcommand{\dvec}[1]{\dot{\vec{#1}}}
 \newcommand{\ddvec}[1]{\ddot{\vec{#1}}}
+\newcommand{\tvec}[1]{\tilde{\vec{#1}}}
 \newcommand{\uvec}[1]{\hat{\vec{#1}}}
 \newcommand{\tensor}[1]{\overleftrightarrow{\boldsymbol{\mathbf{#1}}}}
 
@@ -930,6 +932,64 @@
 
 \begin{itemize}
   \item The angular momentum density of electromagnetic fields is \[\ell = \vec{r} \times \vec{g} = \epsilon_0 [\vec{r} \times (\vec{E} \times \vec{B})].\]
+\end{itemize}
+
+\section{Electromagnetic Waves}
+
+\subsection{Waves in One Dimension}
+
+\subsubsection{The Wave Equation}
+
+\begin{itemize}
+  \item The \textbf{classical wave equation} \[\frac{\partial^2 f}{\partial z^2} = \frac{1}{v^2} \frac{\partial^2 f}{\partial t^2}\] describes all functions of the form \[f(z, t) = g(z - v t)\] i.e. functions that have a particular shape at $t = 0$ and are subsequently translated along the $z$ axis at speed $v$.
+
+  \item Small disturbances on a string with mass per unit length $\mu$ under tension $T$ satisfy the wave equation with \[v = \sqrt{\frac{T}{\mu}}.\]
+
+  \item Because the velocity is squared in the wave equation its sign doesn't matter and functions of the form \[f(z, t) = g(z + v t)\] are also solutions to the wave equation, i.e. functions that ``move to the left.''
+
+  \item The wave equation is linear so the sum of any two solutions is itself a solution. Every solution can be expressed in this form.
+\end{itemize}
+
+\subsubsection{Sinusoidal Waves}
+
+\begin{itemize}
+  \item Using Euler's formula, a wave function \[f(z, t) = A \cos (k z - \omega t + \delta)\] can be written in complex notation as \[f(z, t) = \Re \left[ A e^{i (k z - \omega t + \delta)} \right].\] This invites the \textbf{complex wave function} \[\tilde{f}(z, t) = \tilde{A} e^{i (k z - \omega t)}\] where \[\tilde{A} = A e^{i \delta}\] is the \textbf{complex amplitude} that has absorbed the phase constant.
+\end{itemize}
+
+\subsubsection{Boundary Conditions: Reflection and Transmission}
+
+\begin{itemize}
+  \item If an \textbf{incident wave} \[\tilde{f}(z, t) = \tilde{A}_I e^{i (k_1 z - \omega t)}\] encounters a boundary, e.g. where a string with one mass per unit length is tied to a string with a different mass per unit length, this gives rise to a \textbf{reflected wave} \[\tilde{f}_R(z, t) = \tilde{A}_R e^{i (-k_1 z - \omega t)}\] and a \textbf{transmitted wave} \[\tilde{f}_T(z, t) = \tilde{A}_T e^{i (k_2 z - \omega t)}.\]
+
+  \item The three waves all oscillate at the same frequency.
+
+  \item The relationship between the wavelengths, wavenumbers, and velocities of the waves on the two strings is \[\frac{\lambda_1}{\lambda_2} = \frac{k_2}{k_1} = \frac{v_1}{v_2}.\]
+
+  \item The strings are joined at $z = 0$ so it must be the case that \[f(0^-, t) = f(0^+, t).\]
+
+  \item If the knot is of negligible mass, then the derivative of $f$ must also be continuous \[\left. \frac{\partial f}{\partial z} \right|_{0^-} = \left. \frac{\partial f}{\partial z} \right|_{0+}\] otherwise there would be a net force on the knot and thus infinite acceleration.
+
+  \item These boundary conditions also apply to the complex form of the wave equations and allow us to calculate the reflected and transmitted amplitudes in terms of the incident \[\tilde{A}_R = \left( \frac{k_1 - k_2}{k_1 + k_2} \right) \tilde{A}_I, \quad \tilde{A}_T = \left( \frac{2 k_1}{k_1 + k_2} \right) \tilde{A}_I\] or in terms of the wave velocities \[\tilde{A}_R = \left( \frac{v_2 - v_1}{v_2 + v_1} \right) \tilde{A}_I, \quad \tilde{A}_T = \left( \frac{2 v_2}{v_2 + v_1} \right) \tilde{A}_I.\]
+
+  \item If the second string is lighter than the first ($\mu_2 < \mu_1$), all three waves have the same phase angle and \[A_R = \left( \frac{v_2 - v_1}{v_2 + v_1} \right) A_I, \quad A_T \left( \frac{2 v_2}{v_2 + v_1} \right) A_I.\]
+
+  \item If the second string is heavier than the first ($\mu_2 > \mu_1$) the reflected wave is ``upside down'' and \[A_R = \left( \frac{v_1 - v_2}{v_2 + v_1} \right) A_I, \quad A_T \left( \frac{2 v_2}{v_2 + v_1} \right) A_I.\]
+
+  \item If the second string is infinitely massive or, equivalently, that end of the string is nailed down, there is no transmitted wave and all the energy is reflected back.
+\end{itemize}
+
+\subsubsection{Polarization}
+
+\begin{itemize}
+  \item Waves in which the displacement is perpendicular to the direction of propagation are called \textbf{transverse}.
+
+  \item Waves in which the displacement is parallel to the direction of propagation are called \textbf{longitudinal}.
+
+  \item If a transverse wave travels in the $\uvec{z}$ direction, the displacement could be in the $\uvec{x}$ direction (``vertical''), the $\uvec{y}$ direction (``horizontal''), or any combination thereof. This is called the \textbf{polarization} of the wave.
+
+  \item The \textbf{polarization vector} $\uvec{n}$ defines the plane of vibration. It can be expressed in terms of the \textbf{polarization angle} \[\uvec{n} = \cos \theta \,\uvec{x} + \sin \theta \,\uvec{y}.\]
+
+  \item A transverse wave can be considered a superposition of two waves — one vertically polarized and one horizontally polarized \[\tvec{f}(z, t) = (\tilde{A} \cos \theta) e^{i (k z - \omega t)} \,\uvec{x} + (\tilde{A} \sin \theta) e^{i (k z - \omega t)} \,\uvec{y}.\]
 \end{itemize}
 
 \end{document}

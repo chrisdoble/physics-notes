@@ -17,9 +17,11 @@
 \DeclareMathOperator{\csch}{csch}
 \DeclareSIUnit\angstrom{\text{Å}}
 
+\renewcommand{\Re}{\operatorname{Re}}
 \renewcommand{\vec}[1]{\boldsymbol{\mathbf{#1}}}
 \newcommand{\dvec}[1]{\dot{\vec{#1}}}
 \newcommand{\ddvec}[1]{\ddot{\vec{#1}}}
+\newcommand{\tvec}[1]{\tilde{\vec{#1}}}
 \newcommand{\uvec}[1]{\hat{\vec{#1}}}
 
 \newcommand{\ke}{\frac{1}{4 \pi \epsilon_0}}
@@ -4874,6 +4876,55 @@ If the current in the larger loop flows counterclockwise the current in the smal
                   & = -\frac{\mu_0 h N q w}{4 \pi a^2} \int_0^\infty \frac{d I}{d t} \,d t \,\uvec{z} \\
                   & = \frac{\mu_0 h I N q w}{4 \pi a^2} \,\uvec{z}
         \end{align*}
+\end{enumerate}
+
+\section{Electromagnetic Waves}
+
+\setcounter{subsection}{1}
+\subsection{}
+
+\begin{align*}
+  f(z, t)                           & = A \sin (k z) \cos (k v t)                               \\
+  \frac{\partial f}{\partial t}     & = -k v A \sin (k z) \sin (k v t)                          \\
+  \frac{\partial^2 f}{\partial t^2} & = -(k v)^2 A \sin (k z) \cos (k v t)                      \\
+  \frac{\partial f}{\partial z}     & = k A \cos (k z) \cos (k v t)                             \\
+  \frac{\partial^2 f}{\partial z^2} & = -k^2 A \sin (k z) \cos (k v t)                          \\
+                                    & = \frac{1}{v^2} \frac{\partial^2 f}{\partial t^2}         \\
+  f(z, t)                           & = \frac{1}{2} A [\sin (k z + k v t) + \sin (k z - k v t)] \\
+                                    & = \frac{1}{2} A [\sin k (z + v t) + \sin k (z - v t)]
+\end{align*}
+
+\setcounter{subsection}{5}
+\subsection{}
+
+\begin{enumerate}
+  \item
+
+        \begin{align*}
+          m a                                 & = T (\sin \theta' - \sin \theta)                                                                                         \\
+          m \frac{\partial^2 f}{\partial t^2} & = T \left( \left. \frac{\partial f}{\partial z} \right|_{0+} - \left. \frac{\partial f}{\partial z} \right|_{0-} \right)
+        \end{align*}
+\end{enumerate}
+
+\setcounter{subsection}{7}
+\subsection{}
+
+\begin{enumerate}
+  \item
+
+        \begin{align*}
+          \tvec{f}(z, t) & = A e^{i (k z - \omega t)} \uvec{x} + A e^{i \pi / 2} e^{i (k z - \omega t)} \uvec{y} \\
+                         & = A e^{i (k z - \omega t)} (\uvec{x} + i \uvec{y})                                    \\
+          f(z, t)        & = \Re (\tvec{f})                                                                      \\
+                         & = A [\cos (k z - \omega t) \,\uvec{x} - \sin (k z - \omega t) \,\uvec{y}]
+        \end{align*}
+
+        The wave circles counterclockwise as you look down the $z$ axis.
+
+        To make it circle the other way, set $\delta_h = \ang{-90}$.
+
+        \setcounter{enumi}{2}
+  \item Shake it in a circle
 \end{enumerate}
 
 \end{document}
