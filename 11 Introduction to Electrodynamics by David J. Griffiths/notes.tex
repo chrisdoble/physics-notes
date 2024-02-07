@@ -1046,4 +1046,54 @@
   \item When light falls at perfect incidence on a perfect absorber it delivers all of its momentum. In a time $\Delta t$ on a surface of area $A$ the momentum transfer is \[\Delta \vec{p} = \langle \vec{g} \rangle A c \Delta t\] so the \textbf{radiation pressure} (average force per unit area) is \[P = \frac{1}{A} \frac{\Delta p}{\Delta t} = g c = \frac{I}{c}.\] On a perfect reflector the pressure is twice as great because the momentum changes twice as much (once to ``stop'' the light and again to reflect it).
 \end{itemize}
 
+\subsection{Electromagnetic Waves in Matter}
+
+\subsubsection{Propagation in Linear Media}
+
+\begin{itemize}
+  \item In a linear, homogeneous region containing no free charge or free current:
+
+        \begin{itemize}
+          \item electromagnetic waves propagate at speed $v = c / n$ where \[n = \sqrt{\frac{\epsilon \mu}{\epsilon_0 \mu_0}}\] is the \textbf{index of refraction} which can be approximated as $\sqrt{\epsilon_r}$,
+
+          \item the energy density is \[u = \frac{1}{2} \left( \epsilon E^2 + \frac{1}{\mu} B^2 \right),\]
+
+          \item the Poynting vector is \[\vec{S} = \frac{1}{\mu} (\vec{E} \times \vec{B}),\] and
+
+          \item the intensity is \[I = \frac{1}{2} \epsilon v E_0^2.\]
+        \end{itemize}
+\end{itemize}
+
+\subsubsection{Reflection and Transmission at Normal Incidence}
+
+\begin{itemize}
+  \item If a plane wave meets the intersection between two linear, homogenous media at a perpendicular angle the boundary conditions of the $\vec{E}$ and $\vec{B}$ fields between those media determine the amplitudes of the reflected and transmitted waves \[\tilde{E}_{0_R} = \left( \frac{1 - \beta}{1 + \beta} \right) \tilde{E}_{0_I}, \text{ and } \tilde{E}_{0_T} = \left( \frac{2}{1 + \beta} \right) \tilde{E}_{0_I}\] where \[\beta = \frac{\mu_1 v_1}{\mu_2 v_2} = \frac{\mu_1 n_2}{\mu_2 n_1}.\]
+
+  \item If the permeabilities of the media are close to their values in a vacuum (as is the case for most media) then $\beta = v_1 / v_2$ and \[\tilde{E}_{0_R} = \left( \frac{v_2 - v_1}{v_2 + v_1} \right) \tilde{E}_{0_I}, \text{ and } \tilde{E}_{0_T} = \left( \frac{2 v_2}{v_2 + v_1} \right) \tilde{E}_{0_I}.\]
+
+  \item If $v_2 > v_1$ then the reflected wave is in phase. If $v_2 < v_1$ it's out of phase (``upside down'').
+
+  \item If $\mu_1 = \mu_2 = \mu_0$ the ratio of the reflected intensity to the incident intensity is \[R = \frac{I_R}{I_I} = \left( \frac{n_1 - n_2}{n_1 + n_2} \right)^2\] and the ratio of the transmitted intensity to the incident intensity is \[T = \frac{I_T}{I_I} = \frac{4 n_1 n_2}{(n_1 + n_2)^2}.\] $R$ is called the \textbf{reflection coefficient}, $T$ is called the \textbf{transmission coefficient}, and $R + T = 1$.
+\end{itemize}
+
+\subsubsection{Reflection and Transission at Oblique Incidence}
+
+\begin{itemize}
+  \item The three fundamental laws of geometric optics state:
+
+        \begin{enumerate}
+          \item The indicent, reflected, and transmitted wave vectors form a plane (called the \textbf{plane of incidence}) which also includes the normal to the surface.
+
+          \item The angle of incidence is equal to the angle of reflection \[\theta_I = \theta_R.\]
+
+          \item The relationship between the angles of incidence and transmission is given by \[\frac{\sin \theta_T}{\sin \theta_I} = \frac{n_1}{n_2}.\]
+        \end{enumerate}
+
+  \item \textbf{Fresnel's equations} for the case of polarisation in the plane of incidence are \[\tilde{E}_{0_R} = \left( \frac{\alpha - \beta}{\alpha + \beta} \right) \tilde{E}_{0_I}, \quad \tilde{E}_{0_T} = \left( \frac{2}{\alpha + \beta} \right) \tilde{E}_{0_I}\] where \[\alpha = \frac{\cos \theta_T}{\cos \theta_I} \text{ and } \beta = \frac{\mu_1 v_1}{\mu_2 v_2} = \frac{\mu_1 n_2}{\mu_2 n_1}.\]
+
+  \item \textbf{Fresnel's equations} for the case of polarisation perpendicular to the plane of incidence are \[\tilde{E}_{0_R} = \left| \frac{1 - \alpha \beta}{1 + \alpha \beta} \right| E_{0_I}, \quad \tilde{E}_{0_T} = \left( \frac{1 - \alpha \beta}{1 + \alpha \beta} \right) E_{0_I}\] where \[\alpha = \frac{\cos \theta_T}{\cos \theta_I} \text{ and } \beta = \frac{\mu_1 v_1}{\mu_2 v_2}.\]
+
+  \item At normal incidence ($\theta_I = 0$), $\alpha = 1$ and we recover the equation at normal incidence. At grazing incidence ($\theta_I = \ang{90}$), $\alpha$ diverges and the wave is totally reflected. There is an intermediate angle $\theta_B$ called \textbf{Brewster's angle} at which the reflected wave is totally extinguished. This occurs when $\alpha = \beta$ or \[\sin^2 \theta_B = \frac{1 - \beta^2}{(n_1 / n_2)^2 - \beta^2}.\]
+\end{itemize}
+
 \end{document}
