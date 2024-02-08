@@ -5047,4 +5047,120 @@ If the current in the larger loop flows counterclockwise the current in the smal
         & = 1
 \end{align*}
 
+\setcounter{subsection}{19}
+\subsection{}
+
+\begin{enumerate}
+  \item
+
+        \begin{align*}
+          \tau & = \frac{\epsilon}{\sigma}              \\
+               & = \frac{\epsilon_0 \epsilon_r}{\sigma} \\
+               & \approx \epsilon_0 n^2 \rho            \\
+               & \approx \qty{20}{s}
+        \end{align*}
+
+  \item
+
+        \begin{align*}
+          \kappa & = \omega \sqrt{\frac{\epsilon \mu}{2}} \left[ \sqrt{1 + \left( \frac{\sigma}{\epsilon \omega} \right)^2} - 1 \right]^{1 / 2} \\
+                 & \approx \num{6.16e4}                                                                                                         \\
+          d      & = \frac{1}{\kappa}                                                                                                           \\
+                 & \approx \qty{0.001}{mm}
+        \end{align*}
+
+  \item
+
+        \begin{align*}
+          k       & = \omega \sqrt{\frac{\epsilon \mu}{2}} \left[ \sqrt{1 + \left( \frac{\sigma}{\epsilon \omega} \right)^2} + 1 \right]^{1 / 2} \\
+                  & \approx \num{1.53e4}                                                                                                         \\
+          \lambda & = \frac{2 \pi}{k}                                                                                                            \\
+                  & = \qty{0.4}{mm}                                                                                                              \\
+          f       & = \qty{1}{MHz}                                                                                                               \\
+          \omega  & = 2 \pi \,\unit{MHz}                                                                                                         \\
+          v       & = \frac{\omega}{k}                                                                                                           \\
+                  & = \qty{409}{m/s}
+        \end{align*}
+\end{enumerate}
+
+\subsection{}
+
+\begin{enumerate}
+  \item
+
+        \begin{align*}
+          \kappa         & = \omega \sqrt{\frac{\epsilon \mu}{2}} \left[ \sqrt{1 + \left( \frac{\sigma}{\epsilon \omega} \right)^2} - 1 \right]^{1 / 2}            \\
+                         & \approx \omega \sqrt{\frac{\epsilon \mu}{2}} \left[ 1 + \frac{1}{2} \left( \frac{\sigma}{\epsilon \omega} \right)^2 - 1 \right]^{1 / 2} \\
+                         & = \frac{\sigma}{2} \sqrt{\frac{\mu}{\epsilon}}                                                                                          \\
+          d              & = \frac{1}{\kappa}                                                                                                                      \\
+                         & = \frac{2}{\sigma} \sqrt{\frac{\epsilon}{\mu}}                                                                                          \\
+          d_\text{water} & \approx \qty{1.19e4}{m}
+        \end{align*}
+
+  \item
+
+        \begin{align*}
+          \kappa         & = k                     \\
+          d              & = \frac{1}{\kappa}      \\
+                         & = \frac{1}{k}           \\
+                         & = \frac{\lambda}{2 \pi} \\
+          d_\text{metal} & = \qty{12.6}{nm}
+        \end{align*}
+
+        Metals are opaque because the skin depth is so small for visible light.
+
+  \item
+
+        \begin{align*}
+          \phi            & = \arctan \frac{\kappa}{k}         \\
+                          & = \arctan 1                        \\
+                          & = \ang{45}                         \\
+          \frac{B_0}{E_0} & = \sqrt{\frac{\mu \sigma}{\omega}} \\
+                          & \approx \num{1.1e-7}
+        \end{align*}
+\end{enumerate}
+
+\setcounter{subsection}{22}
+\subsection{}
+
+\begin{enumerate}
+  \item
+
+        \begin{align*}
+          v_\text{group} & = \frac{d \omega}{d k}                       \\
+          v_\text{deep}  & = c_1 \sqrt{c_2 \lambda}                     \\
+                         & = c_1 \sqrt{\frac{2 \pi c_2}{k}}             \\
+          v_\text{phase} & = \frac{\omega}{k}                           \\
+                         & = c_1 \sqrt{\frac{2 \pi c_2}{k}}             \\
+          \omega         & = c_1 \sqrt{2 \pi c_2 k}                     \\
+          v_\text{group} & = \frac{d \omega}{d k}                       \\
+                         & = \frac{1}{2} c_1 \sqrt{\frac{2 \pi c_2}{k}} \\
+                         & = \frac{1}{2} v_\text{phase}
+        \end{align*}
+
+  \item
+
+        \begin{align*}
+          \Psi(x, t)     & = A e^{i (p x - E t) / \hbar}                   \\
+                         & = A e^{i [(p / \hbar) x - (p^2 / 2 \hbar m) t]} \\
+          k              & = \frac{p}{\hbar}                               \\
+          \omega         & = \frac{p^2}{2 \hbar m}                         \\
+                         & = \frac{\hbar k^2}{2 m}                         \\
+          v_\text{phase} & = \frac{\omega}{k}                              \\
+                         & = \frac{\hbar k}{2 m}                           \\
+          v_\text{group} & = \frac{d \omega}{d k}                          \\
+                         & = \frac{\hbar k}{m}                             \\
+                         & = 2 v_\text{phase}
+        \end{align*}
+\end{enumerate}
+
+\subsection{}
+
+\begin{align*}
+  \omega_0 & = \sqrt{\frac{q^2}{4 \pi \epsilon_0 a^3 m}} \\
+           & \approx \qty{4.50e16}{Hz}
+\end{align*}
+
+Ultraviolet
+
 \end{document}
