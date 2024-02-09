@@ -5187,4 +5187,132 @@ Ultraviolet
         \end{align*}
 \end{enumerate}
 
+\section{Potentials and Fields}
+
+\subsection{}
+
+\begin{align*}
+  \square^2 V + \frac{\partial L}{\partial t}                                                                                                                                                     & = -\frac{1}{\epsilon_0} \rho \\
+  \left( \nabla^2 - \mu_0 \epsilon_0 \frac{\partial^2}{\partial t^2} \right) V + \frac{\partial}{\partial t} \left( \nabla \cdot \vec{A} + \mu_0 \epsilon_0 \frac{\partial V}{\partial t} \right) & = -\frac{1}{\epsilon_0} \rho \\
+  \nabla^2 V + \frac{\partial}{\partial t} (\nabla \cdot \vec{A})                                                                                                                                 & = -\frac{1}{\epsilon_0} \rho \\ \\
+  \square^2 \vec{A} - \nabla L                                                                                                                                                                    & = -\mu_0 \vec{J}             \\
+  \left( \nabla^2 - \mu_0 \epsilon_0 \frac{\partial^2}{\partial t^2} \right) \vec{A} - \nabla \left( \nabla \cdot \vec{A} + \mu_0 \epsilon_0 \frac{\partial V}{\partial t} \right)                & = -\mu_0 \vec{J}             \\
+  \left( \nabla^2 \vec{A} - \mu_0 \epsilon_0 \frac{\partial^2 \vec{A}}{\partial t^2} \right) - \nabla \left( \nabla \cdot \vec{A} + \mu_0 \epsilon_0 \frac{\partial V}{\partial t} \right)        & = -\mu_0 \vec{J}
+\end{align*}
+
+\subsection{}
+
+\begin{enumerate}
+  \item
+
+        \begin{align*}
+          \vec{E} & = -\frac{\mu_0 k}{2} (c t - x) \,\uvec{z}                                                                       \\
+          \vec{B} & = \frac{\mu_0 k}{2 c} (c t - x) \,\uvec{y}                                                                      \\
+          E_{t_1} & = 0                                                                                                             \\
+          u       & = \frac{1}{2} \left( \epsilon_0 E^2 + \frac{1}{\mu_0} B^2 \right)                                               \\
+                  & = \frac{1}{2} \left[ \frac{\epsilon_0 \mu_0^2 k^2}{4} (c t - x)^2 + \frac{\mu_0 k^2}{4 c^2} (c t - x)^2 \right] \\
+                  & = \frac{\mu_0 k^2}{4 c^2} (c t - x)^2                                                                           \\
+          E_{t_2} & = \int u \,d \tau                                                                                               \\
+                  & = \frac{\mu_0 k^2 l w}{4 c^2} \int_d^{d + h} (d + h - x)^2 \,d x                                                \\
+                  & = \frac{\mu_0 h^3 k^2 l w}{12 c^2}                                                                              \\
+                  & = \frac{\epsilon_0 \mu_0^2 h^3 k^2 l w}{12}
+        \end{align*}
+
+  \item
+
+        \begin{align*}
+          \vec{S} & = \frac{1}{\mu_0} (\vec{E} \times \vec{B})     \\
+                  & = \frac{\mu_0 k^2}{4 c} (c t - x)^2 \,\uvec{x} \\
+          W       & = \frac{\mu_0 k^2 l w}{4 c} (c t - d)^2
+        \end{align*}
+
+  \item
+
+        \begin{align*}
+          W & = \frac{\mu_0 k^2 l w}{4 c} \int_{d / c}^{(d + h) / c} (c t - d)^2 \,d t \\
+            & = \frac{\epsilon_0 \mu_0^2 h^3 k^2 l w}{12}
+        \end{align*}
+\end{enumerate}
+
+\subsection{}
+
+\begin{enumerate}
+  \item
+
+        \begin{align*}
+          \vec{B} & = \nabla \times \vec{A}                           \\
+                  & = \vec{0}                                         \\
+          \vec{E} & = -\nabla V - \frac{\partial \vec{A}}{\partial t} \\
+                  & = \ke \frac{q}{r^2} \,\uvec{r}
+        \end{align*}
+
+        There is a charge $q$ at the origin and no current.
+
+  \item
+
+        \begin{align*}
+          \vec{A}' & = \vec{A} + \nabla \lambda                \\
+                   & = \vec{0}                                 \\
+          V'       & = V - \frac{\partial \lambda}{\partial t} \\
+                   & = \ke \frac{q}{r}
+        \end{align*}
+
+        These are the more typical potentials for the same configuration.
+\end{enumerate}
+
+\subsection{}
+
+\begin{align*}
+  \vec{B}                                                              & = \nabla \times \vec{A}                                                          \\
+                                                                       & = A_0 k \cos (k x - \omega t) \,\uvec{z}                                         \\
+  \vec{E}                                                              & = -\nabla V - \frac{\partial \vec{A}}{\partial t}                                \\
+                                                                       & = A_0 \omega \cos (k x - \omega t) \,\uvec{y}                                    \\
+  \nabla \cdot \vec{E}                                                 & = 0                                                                              \\
+  \nabla \cdot \vec{B}                                                 & = 0                                                                              \\
+  \nabla \times \vec{E}                                                & = -A_0 k \omega \sin (k x - \omega t) \,\uvec{z}                                 \\
+                                                                       & = -\frac{\partial \vec{B}}{\partial t}                                           \\
+  \mu_0 \vec{J} + \mu_0 \epsilon_0 \frac{\partial \vec{E}}{\partial t} & = \mu_0 \vec{J} + \mu_0 \epsilon_0 A_0 \omega^2 \sin (k x - \omega t) \,\uvec{y} \\
+  \nabla \times \vec{B}                                                & = A_0 k^2 \sin (k x - \omega t) \,\uvec{y}                                       \\
+  \vec{J}                                                              & = 0                                                                              \\
+  \mu_0 \epsilon_0 \omega^2                                            & = k^2                                                                            \\
+  \omega                                                               & = c k
+\end{align*}
+
+\subsection{}
+
+\begin{itemize}
+  \item Example 10.1: Couloumb and Lorenz
+
+  \item Problem 10.3: Neither
+
+  \item Problem 10.4: Couloumb and Lorenz
+\end{itemize}
+
+\setcounter{subsection}{6}
+\subsection{}
+
+\begin{enumerate}
+  \item
+
+        \begin{align*}
+          \oint \vec{J} \cdot d \vec{a} & = -\frac{\dot{q}}{4 \pi} \int_0^{2 \pi} \int_0^\pi \frac{1}{r^2} r^2 \sin \theta \,d \theta \,d \phi \\
+                                        & = -\dot{q}
+        \end{align*}
+
+  \item
+
+        \begin{align*}
+          V       & = \ke \frac{q(t)}{r} \\
+          \vec{B} & = \vec{0}            \\
+          \vec{A} & = \vec{0}
+        \end{align*}
+
+  \item
+
+        \begin{align*}
+          \vec{E} & = \ke \frac{q(t)}{r^2} \,\uvec{r} \\
+          \vec{B} & = \vec{0}
+        \end{align*}
+\end{enumerate}
+
 \end{document}

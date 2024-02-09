@@ -1175,4 +1175,39 @@
   \item The \textbf{cutoff frequency} of a waveguide is the frequency below which transmission isn't possible because the waves are attenuated.
 \end{itemize}
 
+\section{Potentials and Fields}
+
+\subsection{The Potential Formulation}
+
+\subsubsection{Scalar and Vector Potentials}
+
+\begin{itemize}
+  \item Under electrostatics $\nabla \times \vec{E} = \vec{0}$ so it was possible to express $\vec{E}$ as the gradient of a scalar potential $\vec{E} = -\nabla V$ but that's not possible under electrodynamics.
+
+  \item Under electrodynamics it's still the case that $\nabla \times \vec{B} = \vec{0}$ so we can still express $\vec{B}$ as the curl of a vector potential $\vec{B} = \nabla \times \vec{A}$.
+
+  \item Substituting $\vec{B} = \nabla \times \vec{A}$ into Faraday's law gives \[\nabla \times \vec{E} = -\frac{\partial}{\partial t} (\nabla \times \vec{A})\] and if we rearrange we find \[\nabla \times \left( \vec{E} + \frac{\partial \vec{A}}{\partial t} \right) = \vec{0}.\] This is a quantity whose curl vanishes, so it can be expressed as the gradient of a scalar potential \[\vec{E} + \frac{\partial \vec{A}}{\partial t} = -\nabla V\] or \[\vec{E} = -\nabla V - \frac{\partial \vec{A}}{\partial t}.\]
+
+  \item Substituting this into Gauss's law gives \[\nabla^2 V + \frac{\partial}{\partial t} (\nabla \cdot \vec{A}) = -\frac{1}{\epsilon_0} \rho\] and into Ampère's law gives \[\left( \nabla^2 \vec{A} - \mu_0 \epsilon_0 \frac{\partial^2 \vec{A}}{\partial t^2} \right) - \nabla \left( \nabla \cdot \vec{A} + \mu_0 \epsilon_0 \frac{\partial V}{\partial t} \right) = -\mu_0 \vec{J}.\]
+\end{itemize}
+
+\subsubsection{Gauge Transformations}
+
+\begin{itemize}
+  \item The equations above are quite ugly. Can we make any adjustments to $\vec{A}$ and $V$ to simplify them? It turns out we can take any scalar function $\lambda(\vec{r}, t)$ and add $\nabla \lambda$ to $\vec{A}$ providing we also subtract $\partial \lambda / \partial t$ from $V$ without changing $\vec{E}$ or $\vec{B}$. This is called a \textbf{guage transformation}.
+\end{itemize}
+
+\subsubsection{Couloumb Gauge and Lorenz Gauge}
+
+\begin{itemize}
+  \item Under \textbf{the Couloumb gauge}, as under magnetostatics, we pick \[\nabla \cdot \vec{A} = 0\] and \[\nabla^2 V = -\frac{1}{\epsilon_0} \rho.\] This makes $V$ easy to calculate as it was under electrostatics (just solve Poisson's equation), but it makes $\vec{A}$ hard to calculate.
+
+  \item Under the \textbf{Lorenz gauge} we choose \[\nabla \cdot \vec{A} = -\mu_0 \epsilon_0 \frac{\partial V}{\partial t}\] which eliminates the middle term in Ampère's law above, resulting in similar equations for $\vec{A}$ and $V$ \begin{align*}
+          \square^2 V       & = -\frac{1}{\epsilon_0} \rho \\
+          \square^2 \vec{A} & = -\mu_0 \vec{J}
+        \end{align*} where \[\square^2 = \nabla^2 - \mu_0 \epsilon_0 \frac{\partial^2}{\partial t^2}\] is called the \textbf{d'Alembertian}.
+
+  \item In the Lorenz gauge $V$ and $\vec{A}$ satisfy the \textbf{inhomogeneous wave equation} with a ``source'' term in place of $0$ on the right.
+\end{itemize}
+
 \end{document}
