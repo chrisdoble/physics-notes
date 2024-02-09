@@ -5315,4 +5315,37 @@ Ultraviolet
         \end{align*}
 \end{enumerate}
 
+\setcounter{subsection}{11}
+\subsection{}
+
+\begin{align*}
+  \vec{A}_b & = 2 \frac{\mu_0}{4 \pi} \int_0^{\pi / 2} -\frac{k (t - b / c)}{b} b \cos \theta \,d \theta \,\uvec{x} \\
+            & = -\frac{\mu_0}{2 \pi} k (t - b / c) \,\uvec{x}                                                       \\
+  \vec{A}_a & = \frac{\mu_0}{2 \pi} k (t - a / c) \,\uvec{x}                                                        \\
+  \vec{A}_h & = 2 \frac{\mu_0}{4 \pi} \int_a^b \frac{k (t - x / c)}{x} \,d x \,\uvec{x}                             \\
+            & = \frac{\mu_0}{2 \pi} k \frac{a - b + c t \ln (b / a)}{c} \,\uvec{x}                                  \\
+  \vec{A}   & = \frac{\mu_0}{2 \pi} k t \ln \frac{b}{a} \,\uvec{x}                                                  \\
+  \vec{E}   & = -\frac{\partial \vec{A}}{\partial t}                                                                \\
+            & = -\frac{\mu_0}{2 \pi} k \ln \frac{b}{a} \,\uvec{x}
+\end{align*}
+
+\subsection{}
+
+\begin{align*}
+  \vec{E}(\vec{r}, t) & = \ke \int \left[ \frac{\rho(\vec{r}', t_r)}{\rcurs^2} \,\hrcurs + \frac{\dot{\rho}(\vec{r}', t_r)}{c \rcurs} \,\hrcurs - \frac{\dvec{J}(\vec{r}', t_r)}{c^2 \rcurs} \right] \,d \tau'                                                            \\
+                      & = \ke \int \left[ \frac{\rho(\vec{r}', 0)}{\rcurs^2} \,\hrcurs + \frac{\dot{\rho}(\vec{r}', 0) t_r}{\rcurs^2} \,\hrcurs + \frac{\dot{\rho}(\vec{r}', 0)}{c \rcurs} \,\hrcurs \right] \,d \tau'                                                    \\
+                      & = \ke \int \left[ \frac{\rho(\vec{r}', 0)}{\rcurs^2} \,\hrcurs + \frac{\dot{\rho}(\vec{r}', 0) t}{\rcurs^2} \,\hrcurs - \frac{\dot{\rho}(\vec{r}', 0)}{c \rcurs} \,\hrcurs + \frac{\dot{\rho}(\vec{r}', 0)}{c \rcurs} \,\hrcurs \right] \,d \tau' \\
+                      & = \ke \int \frac{\rho(\vec{r}', t)}{\rcurs^2} \,\hrcurs \,d \tau'                                                                                                                                                                                 \\
+\end{align*}
+
+\subsection{}
+
+\begin{align*}
+  \vec{J}(t_r)        & = \vec{J}(t) + (t_r - t) \dvec{J}(t)                                                                                                                                                       \\
+                      & = \vec{J}(t) - \frac{\rcurs}{c} \dvec{J}(t)                                                                                                                                                \\
+  \vec{B}(\vec{r}, t) & = \frac{\mu_0}{4 \pi} \int \left[ \frac{\vec{J}(\vec{r}', t_r)}{\rcurs^2} + \frac{\dvec{J}(\vec{r}', t_r)}{c \rcurs} \right] \times \hrcurs \,d \tau'                                      \\
+                      & = \frac{\mu_0}{4 \pi} \int \left[ \frac{\vec{J}(\vec{r}', t)}{\rcurs^2} - \frac{\dvec{J}(\vec{r}', t)}{c \rcurs} + \frac{\dvec{J}(\vec{r}', t)}{c \rcurs} \right] \times \hrcurs \,d \tau' \\
+                      & = \frac{\mu_0}{4 \pi} \int \frac{\vec{J}(\vec{r}', t)}{\rcurs^2} \times \hrcurs \,d \tau'                                                                                                  \\
+\end{align*}
+
 \end{document}

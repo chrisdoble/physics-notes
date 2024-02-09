@@ -1210,4 +1210,26 @@
   \item In the Lorenz gauge $V$ and $\vec{A}$ satisfy the \textbf{inhomogeneous wave equation} with a ``source'' term in place of $0$ on the right.
 \end{itemize}
 
+\subsection{Continuous Distributions}
+
+\subsubsection{Retarded Potentials}
+
+\begin{itemize}
+  \item Electromagnetic ``news'' travels at the speed of light, so in a time-varying distribution the fields at point $\vec{r}$ are determined by the state of the source points at time \[t_r = t - \frac{\rcurs}{c}\] the \textbf{retarded time}.
+
+  \item The potentials at point $\vec{r}$ are also determined by the state of the source points in the past \begin{align*}
+          V(\vec{r}, t)       & = \ke \int \frac{\rho(\vec{r}', t_r)}{\rcurs} \,d \tau'                    \\
+          \vec{A}(\vec{r}, t) & = \frac{\mu_0}{4 \pi} \int \frac{\vec{J}(\vec{r'}, t_r)}{\rcurs} \,d \tau'
+        \end{align*} the \textbf{retarded potentials}.
+\end{itemize}
+
+\subsubsection{Jefimenko's Equations}
+
+\begin{itemize}
+  \item \textbf{Jerimenko's equations} are the time-dependent versions of Couloumb's law and the Biot-Savart law \begin{align*}
+          \vec{E}(\vec{r}, t) & = \ke \int \left[ \frac{\rho(\vec{r}', t_r)}{\rcurs^2} \,\uvec{r} + \frac{\dot{\rho}(\vec{r}', t_r)}{c \rcurs} \,\uvec{r} - \frac{\dvec{J}(\vec{r}'), t_r}{c^2 \rcurs} \right] \,d \tau' \\
+          \vec{B}(\vec{r}, t) & = \frac{\mu_0}{4 \pi} \int \left[ \frac{\vec{J}(\vec{r}', t_r)}{\rcurs^2} + \frac{\dvec{J}(\vec{r}', t_r)}{r \rcurs} \right] \times \hrcurs \,d \tau'
+        \end{align*} however it's usually easier to calculate then differentiate the retarded potentials.
+\end{itemize}
+
 \end{document}
