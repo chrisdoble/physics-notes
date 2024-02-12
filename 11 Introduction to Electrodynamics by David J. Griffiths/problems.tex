@@ -5415,4 +5415,21 @@ Ultraviolet
         \end{align*}
 \end{enumerate}
 
+\setcounter{subsection}{23}
+\subsection{}
+
+\begin{align*}
+  V(t)                 & = \ke \frac{q}{a}                                                                                                                                                                                        \\
+  V_\text{total}(t)    & = \int_0^{2 \pi} \ke \frac{\lambda_0 \sin \theta / 2}{a} a \,d \theta                                                                                                                                    \\
+                       & = \frac{\lambda_0}{\pi \epsilon_0}                                                                                                                                                                       \\
+  \vec{w}(t, \theta)   & = a [\cos (\omega t + \theta) \,\uvec{x} + \sin (\omega t + \theta) \,\uvec{y}]                                                                                                                          \\
+  \vec{v}(t, \theta)   & = a \omega [-\sin (\omega t + \theta) \,\uvec{x} + \cos (\omega t + \theta) \,\uvec{y}]                                                                                                                  \\
+  \vec{A}(\vec{r}, t)  & = \frac{\vec{v}}{c^2} V(\vec{r}, t)                                                                                                                                                                      \\
+  \vec{A}_\text{total} & = \int_0^{2 \pi} \frac{a \omega [-\sin (\omega t_r + \theta) \,\uvec{x} + \cos (\omega t_r + \theta) \,\uvec{y}]}{c^2} \ke \frac{\lambda_0 \sin \theta / 2}{a} a \,d \theta                              \\
+                       & = \ke \frac{a \lambda_0 \omega}{c^2} \int_0^{2 \pi} \left[ -\sin \frac{\theta}{2} \sin (\omega t_r + \theta) \,\uvec{x} + \sin \frac{\theta}{2} \cos (\omega t_r + \theta) \,\uvec{y} \right] \,d \theta \\
+                       & = \ke \frac{a \lambda_0 \omega}{c^2} \left[ \frac{4}{3} \sin \omega t_r \,\uvec{x} - \frac{4}{3} \cos \omega t_r \,\uvec{y} \right]                                                                      \\
+                       & = \frac{\mu_0 a \lambda_0 \omega}{3 \pi} [\sin \omega t_r \,\uvec{x} - \cos \omega t_r \,\uvec{y}]                                                                                                       \\
+                       & = \frac{\mu_0 a \lambda_0 \omega}{3 \pi} \{ \sin [\omega (t - a / c)] \,\uvec{x} - \cos [\omega (t - a / c)] \,\uvec{y} \}                                                                               \\
+\end{align*}
+
 \end{document}
