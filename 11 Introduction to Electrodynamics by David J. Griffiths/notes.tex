@@ -1226,10 +1226,37 @@
 \subsubsection{Jefimenko's Equations}
 
 \begin{itemize}
-  \item \textbf{Jerimenko's equations} are the time-dependent versions of Couloumb's law and the Biot-Savart law \begin{align*}
+\item \textbf{Jefimenko's equations} are the time-dependent versions of Couloumb's law and the Biot-Savart law \begin{align*}
           \vec{E}(\vec{r}, t) & = \ke \int \left[ \frac{\rho(\vec{r}', t_r)}{\rcurs^2} \,\uvec{r} + \frac{\dot{\rho}(\vec{r}', t_r)}{c \rcurs} \,\uvec{r} - \frac{\dvec{J}(\vec{r}'), t_r}{c^2 \rcurs} \right] \,d \tau' \\
           \vec{B}(\vec{r}, t) & = \frac{\mu_0}{4 \pi} \int \left[ \frac{\vec{J}(\vec{r}', t_r)}{\rcurs^2} + \frac{\dvec{J}(\vec{r}', t_r)}{r \rcurs} \right] \times \hrcurs \,d \tau'
         \end{align*} however it's usually easier to calculate then differentiate the retarded potentials.
+\end{itemize}
+
+\subsection{Point Charges}
+
+\subsubsection{Liénard-Weichert Potentials}
+
+\begin{itemize}
+  \item When evaluating the retarded potentials of a moving point charge the retarded time differs for each point in the volume integral, distorting the apparent total charge (it looks like it's ``in multiple places at once''). This introduces a factor of $(1 - \hrcurs \cdot \vec{v} / c)^{-1}$ and the potentials are \begin{align*}
+          V(\vec{r}, t)       & = \ke \frac{q c}{(\rcurs c - \brcurs \cdot \vec{v})} \\
+          \vec{A}(\vec{r}, t) & = \frac{\vec{v}}{c^2} V(\vec{r}, t).
+        \end{align*} These are known as the \textbf{Liénard-Weichert potentials} for a moving point charge.
+\end{itemize}
+
+\subsubsection{The Fields of a Moving Point Charge}
+
+\begin{itemize}
+  \item The electric and magnetic fields of a point charge in arbitrary motion are \begin{align*}
+          \vec{E}(\vec{r}, t) & = \frac{q}{4 \pi \epsilon_0} \frac{\rcurs}{(\brcurs \cdot \vec{u})^3} \left[ (c^2 - v^2) \vec{u} + \brcurs \times (\vec{u} \times \vec{a}) \right] \\
+          \vec{B}(\vec{r}, t) & = \frac{1}{c} \hrcurs \times \vec{E}(\vec{r}, t)
+        \end{align*} where \[\vec{u} = c \hrcurs - \vec{v}\] and $\brcurs$, $\vec{u}$, $\vec{v}$, and $\vec{a}$ are all evaluated at the retarded time.
+
+  \item The above equation for $\vec{B}$ shows that the magnetic field of a point charge is always perpendicular to the electric field and to the vector from the retarded point.
+
+  \item The electric and magnetic fields of a point charge with constant velocity $\vec{v}$ are \begin{align*}
+          \vec{E}(\vec{r}, t) & = \frac{q}{4 \pi \epsilon_0} \frac{1 - v^2 / c^2}{(1 - v^2 \sin^2 \theta / c^2)^{3 / 2}} \frac{\uvec{R}}{R^2} \\
+          \vec{B}             & = \frac{1}{c^2} (\vec{v} \times \vec{E}).
+        \end{align*}
 \end{itemize}
 
 \end{document}

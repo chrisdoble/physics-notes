@@ -5348,4 +5348,71 @@ Ultraviolet
                       & = \frac{\mu_0}{4 \pi} \int \frac{\vec{J}(\vec{r}', t)}{\rcurs^2} \times \hrcurs \,d \tau'                                                                                                  \\
 \end{align*}
 
+\subsection{}
+
+\begin{align*}
+  \vec{w}(t)                    & = a [\cos (\omega t) \,\uvec{x} + \sin (\omega t) \,\uvec{y}]                                                \\
+  \dvec{w}(t)                   & = a \omega [-\sin (\omega t) \,\uvec{x} + \cos (\omega t) \,\uvec{y}]                                        \\
+  |\vec{r} - \vec{\omega}(t_r)| & = c (t - t_r)                                                                                                \\
+  \sqrt{a^2 + z^2}              & = c (t - t_r)                                                                                                \\
+  t_r                           & = t - \frac{\sqrt{a^2 + z^2}}{c}                                                                             \\
+  \rcurs                        & = \sqrt{a^2 + z^2}                                                                                           \\
+  \brcurs \cdot \vec{v}         & = 0                                                                                                          \\
+  V(\vec{r}, t)                 & = \ke \frac{q}{\sqrt{a^2 + z^2}}                                                                             \\
+  \vec{A}(\vec{r}, t)           & = \frac{\vec{v}}{c^2} V(\vec{r}, t)                                                                          \\
+                                & = \ke \frac{a q \omega}{c^2 \sqrt{a^2 + z^2}} [-\sin (\omega t_r) \,\uvec{x} + \cos (\omega t_r) \,\uvec{y}]
+\end{align*}
+
+\setcounter{subsection}{19}
+\subsection{}
+
+\begin{align*}
+  % Right
+  \hrcurs               & = \uvec{x}                                                                                                                                                               \\
+  \brcurs               & = \rcurs \uvec{x}                                                                                                                                                        \\
+  \vec{v}               & = v \uvec{x}                                                                                                                                                             \\
+  \vec{u}               & = c \hrcurs - \vec{v}                                                                                                                                                    \\
+                        & = (c - v) \uvec{x}                                                                                                                                                       \\
+  \brcurs \cdot \vec{u} & = \rcurs (c - v)                                                                                                                                                         \\
+  \vec{E}               & = \frac{q}{4 \pi \epsilon_0} \frac{\rcurs}{[\rcurs (c - v)]^3} \left[ (c^2 - v^2) (c - v) \uvec{x} + \rcurs \uvec{x} \times ((c - v) \uvec{x} \times a \uvec{x}) \right] \\
+                        & = \frac{q}{4 \pi \epsilon_0} \frac{1}{\rcurs^2} \frac{c + v}{c - v} \,\uvec{x}                                                                                           \\
+  \vec{B}               & = \frac{1}{c} \hrcurs \times \vec{E}(\vec{r}, t)                                                                                                                         \\
+                        & = \vec{0}                                                                                                                                                                \\
+  % Left
+  \vec{E}               & = -\frac{q}{4 \pi \epsilon_0} \frac{1}{\rcurs^2} \frac{c - v}{c + v} \,\uvec{x}                                                                                          \\
+  \vec{B}               & = \vec{0}
+\end{align*}
+
+\subsection{}
+
+\begin{align*}
+  \Phi & = \int \vec{E} \cdot d \vec{a}                                                                                                                     \\
+       & = \int_0^{2 \pi} \int_0^\pi \frac{q}{4 \pi \epsilon_0} \frac{1 - v^2 / c^2}{(1 - c^2 \sin^2 \theta / c^2)^{3 / 2}} \sin \theta \,d \theta \,d \phi \\
+       & = \frac{q}{2 \epsilon_0} \frac{c^2 - v^2}{c^2} \int_0^\pi \frac{\sin \theta}{(1 - v^2 \sin^2 \theta / c^2)^{3 / 2}} \,d \theta                     \\
+       & = \frac{q}{2 \epsilon_0} \frac{c^2 - v^2}{c^2} \frac{2 c^2}{c^2 - v^2}                                                                             \\
+       & = \frac{q}{\epsilon_0}
+\end{align*}
+
+\subsection{}
+
+\begin{enumerate}
+  \item
+
+        \begin{align*}
+          \vec{E} & = 2 \int_0^\infty \frac{\lambda}{4 \pi \epsilon_0} \frac{1 - v^2 / c^2}{(1 - v^2 \sin^2 \theta / c^2)^{3 / 2}} \sin \theta \frac{1}{\rcurs^2} \,d x \,\uvec{y} \\
+                  & = \frac{\lambda}{2 \pi \epsilon_0} \frac{c^2 - v^2}{c^2} \int_0^\infty \frac{\sin \theta}{\rcurs^2 (1 - v^2 \sin^2 \theta / c^2)^{3 / 2}} \,d x \,\uvec{y}     \\
+                  & = \frac{\lambda}{2 \pi \epsilon_0} \frac{c^2 - v^2}{c^2} \int_0^\infty \frac{d}{[x^2 + d^2 (1 - v^2 / c^2)]^{3 / 2}} \,d x \,\uvec{y}                          \\
+                  & = \frac{\lambda}{2 \pi \epsilon_0} \frac{c^2 - v^2}{c^2} \frac{c^2}{d (c^2 - v^2)} \,\uvec{y}                                                                  \\
+                  & = \frac{1}{2 \pi \epsilon_0} \frac{\lambda}{d} \,\uvec{y}
+        \end{align*}
+
+  \item
+
+        \begin{align*}
+          \vec{B} & = \frac{1}{c^2} \vec{v} \times \vec{E}                             \\
+                  & = \frac{1}{2 \pi \epsilon_0} \frac{\lambda v}{d c^2} \,\uvec{\phi} \\
+                  & = \frac{\mu_0}{2 \pi} \frac{I}{d} \,\uvec{\phi}
+        \end{align*}
+\end{enumerate}
+
 \end{document}
