@@ -1259,4 +1259,38 @@
         \end{align*}
 \end{itemize}
 
+\section{Radiation}
+
+\subsection{Dipole Radiation}
+
+\subsubsection{What is Radiation?}
+
+\begin{itemize}
+  \item When charges accelerate their fields can transport energy irreversibly out to infinity. This process is called \textbf{radiation}.
+
+  \item To determine the amount of energy radiated away from a source you take the surface integral of the Poynting vector over a sphere with large $r$ \[P = \oint \vec{S} \cdot d \vec{a} = \frac{1}{\mu_0} \oint (\vec{E} \times \vec{B}) \cdot d \vec{a}.\] The surface area of the sphere is $4 \pi r^2$ so in order for the radiated energy to be nonzero at large $r$ the Poynting vector must decrease no faster than $1 / r^2$.
+
+  \item Both electrostatic and magnetostatic fields are proportional to $1 / r^2$ so their Poynting vector is proportional to $1 / r^4$ and no energy is radiated at large $r$.
+
+  \item The time-dependent terms in Jefimenko's equations are proportional to $1 / r$ so the corresponding terms in the Poynting vector are proportional to $1 / r^2$ and do result in radiation of energy.
+\end{itemize}
+
+\subsubsection{Electric Dipole Radiation}
+
+\begin{itemize}
+  \item If we join two small metal spheres at a distance $d$ with a fine conducting wire and set the charge of the upper sphere to be $q(t)$ and the lower sphere $-q(t)$ where \[q(t) = q_0 \cos (\omega t)\] then they act as an electric dipole with dipole moment \[\vec{p}(t) = p_0 \cos (\omega t) \,\uvec{z}.\]
+
+  \item The scalar potential of the above setup is \[V(r, \theta, t) = -\frac{p_0 \omega}{4 \pi \epsilon_0 c} \left( \frac{\cos \theta}{r} \right) \sin [\omega (t - r / c)]\] the vector potential is \[\vec{A}(r, \theta, t) = -\frac{\mu_0 p_0 \omega}{4 \pi r} \sin [\omega (t - r / c)] \,\uvec{z}\] the electric field is \[\vec{E} = -\frac{\mu_0 p_0 \omega^2}{4 \pi} \left( \frac{\sin \theta}{r} \right) \cos [\omega (t - r / c)] \,\uvec{\theta}\] and the magnetic field is \[\vec{B} = -\frac{\mu_0 p_0 \omega^2}{4 \pi c} \left( \frac{\sin \theta}{r} \right) \cos [\omega (t - r / c)] \,\uvec{\phi}.\]
+
+  \item Those fields represent electromagnetic waves travelling radially away from the source with intensity \[\langle \vec{S} \rangle = \left( \frac{\mu_0 p_0^2 \omega^4}{32 \pi^2 c} \right) \frac{\sin^2 \theta}{r^2} \,\uvec{r}\] and total radiated power of \[\langle P \rangle = \frac{\mu_0 p_0^2 \omega^4}{12 \pi c}.\]
+\end{itemize}
+
+\subsubsection{Magnetic Dipole Radiation}
+
+\begin{itemize}
+  \item A wire loop of radius $b$ driven with an alternating current $I(t) = I_0 \cos (\omega t)$ forms an oscillating magnetic dipole \[\vec{m}(t) = \pi b^2 I(t) \,\uvec{z} = m_0 \cos (\omega t) \,\uvec{z}.\]
+
+  \item Like an oscillating electric dipole, the above configuration also radiates electromagnetic waves but its power is much less than electric dipoles.
+\end{itemize}
+
 \end{document}

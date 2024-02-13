@@ -5432,4 +5432,108 @@ Ultraviolet
                        & = \frac{\mu_0 a \lambda_0 \omega}{3 \pi} \{ \sin [\omega (t - a / c)] \,\uvec{x} - \cos [\omega (t - a / c)] \,\uvec{y} \}                                                                               \\
 \end{align*}
 
+\section{Radiation}
+
+\subsection{}
+
+\begin{align*}
+  V(r, \theta, t)               & = \frac{p_0 \cos \theta}{4 \pi \epsilon_0 r} \left\{ -\frac{\omega}{c} \sin [\omega (t - r / c)] + \frac{1}{r} \cos [\omega (t - r / c)] \right\}        \\
+  \frac{\partial V}{\partial t} & = -\frac{p_0 \omega \cos \theta}{4 \pi \epsilon_0 r} \left\{ \frac{\omega}{c} \cos [\omega (t - r / c)] + \frac{1}{r} \sin [\omega (t - r / c)] \right\} \\
+  \vec{A}(r, \theta, t)         & = -\frac{\mu_0 p_0 \omega}{4 \pi r} \sin [\omega (t - r / c)] \,\uvec{z}                                                                                 \\
+                                & = -\frac{\mu_0 p_0 \omega}{4 \pi r} \sin [\omega (t - r / c)] (\cos \theta \,\uvec{r} - \sin \theta \,\uvec{\theta})                                     \\
+  \nabla \cdot \vec{A}          & = \frac{\mu_0 p_0 \omega \cos \theta}{4 \pi r} \left\{ \frac{\omega}{c} \cos [\omega (t - r / c)] + \frac{1}{r} \sin [\omega (t - r / c)] \right\}       \\
+                                & = -\mu_0 \epsilon_0 \frac{\partial V}{\partial t}                                                                                                        \\
+\end{align*}
+
+\subsection{}
+
+\begin{align*}
+  V(r, \theta, t)         & = -\frac{\omega}{4 \pi \epsilon_0 c} \frac{\vec{p}_0 \cdot \uvec{r}}{r} \sin [\omega (t - r / c)]               \\
+  \vec{A}(r, \theta, t)   & = -\frac{\mu_0 \omega}{4 \pi} \frac{\vec{p}_0}{r} \sin [\omega (t - r / c)]                                     \\
+  \vec{E}                 & = \frac{\mu_0 \omega^2}{4 \pi} \frac{\uvec{r} \times (\uvec{p}_0 \times \uvec{r})}{r} \cos [\omega (t - r / c)] \\
+  \vec{B}                 & = -\frac{\mu_0 \omega^2}{4 \pi c} \frac{\vec{p}_0 \times \uvec{r}}{r} \cos [\omega (t - r / c)]                 \\
+  \langle \vec{S} \rangle & = \frac{\mu_0 \omega^4}{32 \pi^2 c} \frac{(\vec{p}_0 \times \uvec{r})^2}{r^2} \,\uvec{r}
+\end{align*}
+
+\subsection{}
+
+\begin{align*}
+  I & = \frac{d q}{d t}                                                                                   \\
+    & = -\omega q_0 \sin (\omega t)                                                                       \\
+  P & = I^2 R                                                                                             \\
+  R & = \frac{P}{I^2}                                                                                     \\
+    & = \frac{\frac{\mu_0 p_0^2 \omega^4}{12 \pi c}}{\omega^2 q_0^2 \sin^2 (\omega t)}                    \\
+    & = \frac{\mu_0 d^2 \omega^2}{12 \pi c \sin^2 (\omega t)}                                             \\
+    & = \frac{\sqrt{\mu_0} d^2 \omega^2}{12 \pi \sqrt{\epsilon_0} c^2 \sin^2 (\omega t)}                  \\
+    & = \frac{4 \pi^2 \sqrt{\mu_0} d^2}{12 \pi \sqrt{\epsilon_0} \lambda^2 \sin^2 (\omega t)}             \\
+    & = \frac{\pi \sqrt{\mu_0}}{3 \sqrt{\epsilon_0} \sin^2 (\omega t)} \left( \frac{d}{\lambda} \right)^2 \\
+    & \approx 790 \left( \frac{d}{\lambda} \right)^2 \,\unit{\ohm}
+\end{align*}
+
+In the radio $R \approx \qty{2}{\mu \ohm}$ so no you shouldn't worry.
+
+\setcounter{subsection}{4}
+\subsection{}
+
+\begin{align*}
+  \vec{A}(r, \theta, t) & = \frac{\mu_0 m_0}{4 \pi} \left( \frac{\sin \theta}{r} \right) \left\{ \frac{1}{r} \cos [\omega (t - r / c)] - \frac{\omega}{c} \sin [\omega (t - r / c)] \right\} \,\uvec{\phi}        \\
+  \vec{E}               & = -\frac{\partial \vec{A}}{\partial t}                                                                                                                                                  \\
+                        & = \frac{\mu_0 m_0 \omega}{4 \pi} \left( \frac{\sin \theta}{r} \right) \left\{ \frac{1}{r} \sin [\omega (t - r / c)] + \frac{\omega}{c} \cos [\omega (t - r / c)] \right\} \,\uvec{\phi}
+\end{align*}
+
+\subsection{}
+
+\begin{align*}
+  P & = I^2 R                                                                                                 \\
+  R & = \frac{P}{I^2}                                                                                         \\
+    & = \frac{\frac{\mu_0 m_0^2 \omega^4}{12 \pi c^3}}{I_0^2 \cos^2 (\omega t)}                               \\
+    & = \frac{\mu_0 m_0^2 \omega^4}{12 \pi c^3 I_0^2 \cos^2 (\omega t)}                                       \\
+    & = \frac{\mu_0 \pi^2 b^4 \omega^4}{12 \pi c^3 \cos^2 (\omega t)}                                         \\
+    & = \frac{\sqrt{\mu_0} \pi^2}{12 \pi \sqrt{\epsilon_0} \cos^2 (\omega t)} \frac{b^4 \omega^4}{c^4}        \\
+    & = \frac{4 \pi^5 \sqrt{\mu_0}}{3 \sqrt{\epsilon_0} \cos^2 (\omega t)} \left( \frac{b}{\lambda} \right)^4 \\
+    & \approx (\num{3e5}) \left( \frac{b}{\lambda} \right)^4 \,\unit{\ohm}
+\end{align*}
+
+\setcounter{subsection}{7}
+\subsection{}
+
+\begin{enumerate}
+  \item
+
+        \begin{align*}
+          p(t)                               & = Q(t) d                                                                                                   \\
+                                             & = Q_0 e^{-t / R C} d                                                                                       \\
+          \dot{p}(t)                         & = -\frac{Q_0}{R C} e^{-t / R C} d                                                                          \\
+          \ddot{p}(t)                        & = \frac{Q_0}{(R C)^2} e^{-t / R C} d                                                                       \\
+          P_\text{total}                     & = \int P \,d t                                                                                             \\
+                                             & = \int_{r / c}^\infty \frac{\mu_0}{6 \pi c} \left[ \ddot{p} \left( t - \frac{r}{c} \right) \right]^2 \,d t \\
+                                             & = \frac{\mu_0}{6 \pi c} \frac{Q_0^2 d^2}{R^4 C^4} \int_{r / c}^\infty e^{-2 (t - r / c) / R C} \,d t       \\
+                                             & = \frac{\mu_0}{6 \pi c} \frac{Q_0^2 d^2}{R^4 C^4} \frac{R C}{2}                                            \\
+                                             & = \frac{\mu_0 Q_0^2 d^2}{12 \pi c R^3 C^3}                                                                 \\
+          \frac{P_\text{total}}{Q_0^2 / 2 C} & = \frac{\mu_0 d^2}{6 \pi c R^3 C^2}
+        \end{align*}
+
+  \item
+
+        The fraction ratiated away is $\num{2.2e-9}$. It's reasonable to ignore this.
+\end{enumerate}
+
+\setcounter{subsection}{9}
+\subsection{}
+
+\begin{align*}
+  \lambda(\phi) & = \lambda_0 \sin \phi                                                                           \\
+  \vec{r}(\phi) & = b (\cos \phi \,\uvec{x} + \sin \phi \,\uvec{y})                                               \\
+  \vec{p}       & = \int_0^{2 \pi} \lambda(\phi) \vec{r}(\phi) d \,d \phi                                         \\
+                & = \lambda_0 b^2 \int_0^{2 \pi} \sin \phi (\cos \phi \,\uvec{x} + \sin \phi \,\uvec{y}) \,d \phi \\
+                & = \pi \lambda_0 b^2 \,\uvec{y}                                                                  \\
+  \vec{p}(t)    & = \pi \lambda_0 b^2 [-\sin (\omega t) \,\uvec{x} + \cos (\omega t) \,\uvec{y}]                  \\
+  \dvec{p}(t)   & = \pi \lambda_0 b^2 \omega [-\cos (\omega t) \,\uvec{x} - \sin (\omega t) \,\uvec{y}]           \\
+  \ddvec{p}(t)  & = -\pi \lambda_0 b^2 \omega^2 [\sin (\omega t) \,\uvec{x} - \cos (\omega t) \,\uvec{y}]         \\
+                & = -\omega^2 \vec{p}(t)                                                                          \\
+  P_\text{rad}  & = \frac{\mu_0}{6 \pi c} [\ddot{p}]^2                                                            \\
+                & = \frac{\mu_0}{6 \pi c} \omega^4 \pi^2 \lambda_0^2 b^4                                          \\
+                & = \frac{\mu_0 \omega^4 \pi \lambda_0^2 b^4}{6 c}
+\end{align*}
+
 \end{document}
