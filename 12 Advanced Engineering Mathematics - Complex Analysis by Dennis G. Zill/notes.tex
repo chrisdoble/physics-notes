@@ -4,6 +4,9 @@
 
 \graphicspath{{./images/}}
 
+\renewcommand{\Im}{\operatorname{Im}}
+\renewcommand{\Re}{\operatorname{Re}}
+
 \title{Advanced Engineering Mathematics Complex Analysis by Dennis G. Zill Notes}
 \author{Chris Doble}
 \date{February 2024}
@@ -13,5 +16,54 @@
 \maketitle
 
 \tableofcontents
+
+\setcounter{section}{16}
+\section{Functions of a Complex Variable}
+
+\subsection{Complex Numbers}
+
+\begin{itemize}
+  \item A \textbf{complex number} is any number of the form \[z = a + i b\] where $a$ and $b$ are real numbers and $i$ is the imaginary unit such that $i^2 = -1$.
+
+  \item The real number $a$ in the above complex number $z$ is called the \textbf{real part} of $z$ and the real number $b$ (not $i b$) is called the \textbf{imaginary part} of $z$.
+
+  \item The real and imaginary parts of a complex number $z$ are denoted $\Re(z)$ and $\Im(z)$, respectively.
+
+  \item A real constant multiple of the imaginary unit, e.g. $6 i$ is called a \textbf{pure imaginary number}.
+
+  \item Two complex numbers are equal if their real and imaginary parts are equal.
+
+  \item The addition and subtraction of complex numbers occur between the real and imaginary parts, e.g. \[(a + b i) + (c + d i) = (a + c) + (b + d) i.\]
+
+  \item The multiplication of complex numbers occurs elementwise as normal, e.g. \[(a + b i) (c + d i) = a c + a d i + b c i - b d.\]
+
+  \item The \textbf{conjugate} of a complex number $z = a + i b$ is \[\overline{z} = a - i b.\]
+
+  \item The division of complex numbers occurs by multiplying the numerator and denominator by the conjugate of the denominator, e.g. \begin{align*}
+          \frac{a + b i}{c + d i} & = \frac{(a + b i) (c - d i)}{(c + d i) (c - d i)}              \\
+                                  & = \frac{a c - a d i + b c i + b d}{c^2 + d^2}                  \\
+                                  & = \frac{a c + b d}{c^2 + d^2} + i \frac{b c - a d}{c^2 + d^2}.
+        \end{align*}
+
+  \item Conjugates have several interesting properties: \begin{align*}
+          \overline{z_1 + z_2} & = \overline{z_1} + \overline{z_2}        \\
+          \overline{z_1 - z_2} & = \overline{z_1} - \overline{z_2}        \\
+          \overline{z_1 z_2}   & = \overline{z_1} \, \overline{z_2}       \\
+          \frac{z_1}{z_2}      & = \frac{\overline{z_1}}{\overline{z_2}}.
+        \end{align*}
+
+  \item The sum and product of a complex number $z = x + i y$ with its conjugate are real numbers \begin{align*}
+          z + \overline{z} & = 2 x       \\
+          z \overline{z}   & = x^2 + y^2
+        \end{align*} while the difference between a complex number and its conjugate is a purre imaginary number \[z - \overline{z} = 2 i y.\]
+
+  \item The above properties let us define \[\Re(z) = \frac{z + \overline{z}}{2} \text{ and } \Im(z) = \frac{z - \overline{z}}{2 i}.\]
+
+  \item The \textbf{complex plane} or \textbf{$z$-plane} is a coordinate system where the horizontal or $x$-axis is called the \textbf{real axis} and the vertical or $y$-axis is called the \textbf{imaginary axis}. Complex numbers can be plotted in this coordinate system by considering their real and imaginary parts an ordered pair corresponding their position.
+
+  \item The \textbf{modulus} or \textbf{absolute value} of a complex number $z = x + i y$ denoted by $|z|$ is the real number \[|z| = \sqrt{x^2 + y^2} = \sqrt{z \overline{z}}.\] This is the distance between $z$ and the origin in the complex plane.
+
+  \item If you consider two numbers in the complex plane as vectors, the length of their sum can't be longer than their individual lengths combined \[|z_1 + z_2| \le |z_1| + |z_2|.\] This extends to any finite sum \[|z_1 + z_2 + \cdots + z_n| \le |z_1| + |z_2| + \cdots + |z_n|\] and is known as the \textbf{triangle inequality}.
+\end{itemize}
 
 \end{document}
