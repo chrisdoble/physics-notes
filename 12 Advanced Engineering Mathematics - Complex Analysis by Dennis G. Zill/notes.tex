@@ -178,8 +178,52 @@
 
 \begin{itemize}
   \item Analyticity at a point is a neighborhood property. A function can be differentiable at a point but if the neighboring points aren't also differentiable, it's not analytic at that point.
+  
+\item A function is analytic in a domain $D$ if it is analytic at every point in $D$.
 
   \item A function that is analytic everywhere is called an \textbf{entire function}.
+\end{itemize}
+
+\subsection{Cauchy-Riemann Equations}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=\textwidth]{cauchy-riemann-equations}
+\end{figure}
+
+\begin{itemize}
+  \item If a complex function $f(z) = u(x, y) + i v(x, y)$ is analytic throughout a domain $D$, then the real functions $u$ and $v$ must satisfy the Cauchy-Riemann equations at every point in $D$.
+\end{itemize}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=\textwidth]{criterion-for-analyticity}
+\end{figure}
+
+\begin{itemize}
+  \item The Cauchy-Riemann equations are derived assuming the function is differentiable at a particular point. That being the case, they can also be used as a formula for the derivative of the function \[f'(z) = \frac{\partial u}{\partial x} + i \frac{\partial v}{\partial x} = \frac{\partial v}{\partial y} - i \frac{\partial u}{\partial y}.\]
+
+  \item Because analyticity implies differentiability, theorem 17.5.2 can also be used to determine if a function is differentiable at a point.
+
+  \item A real-valued function $\phi(x, y)$ that has continuous second-order partial derivatives in a domain $D$ and satisfies Laplace's equation is said to be \textbf{harmonic} in $D$.
+
+  \item If a function $f(z) = u(x, y) + i v(x, y)$ is analytic in a domain $D$ then the functions $u(x, y)$ and $v(x, y)$ are harmonic functions.
+
+  \item If a given function $u(x, y)$ is harmonic in a domain $D$ it is sometimes possible to find another function $v(x, y)$ that is harmonic in $D$ such that $u(x, y) + i v(x, y)$ is analytic in $D$. The function $v$ is called the \textbf{harmonic conjugate function} of $u$.
+
+  \item To find the harmonic conjugate function of a given function $u$:
+
+        \begin{enumerate}
+          \item Take the first-order partial derivatives of $u$ with respect to $x$ and $y$.
+
+          \item If $u(x, y) + i v(x, y)$ is analytic in a domain $D$ then $u$ and $v$ must satisfy the Cauchy-Riemann equations in $D$ from which we can find expressions for $\partial v / \partial x$ and $\partial v / \partial y$.
+
+          \item Integrate $\partial v / \partial x$ with respect to $x$ to get an expression for $v$ with an unknown constant $h(y)$.
+
+          \item Take the first-order partial derivative of $v$ with respect to $y$, equate it with the other expression for $\partial v / \partial y$, and solve for $h'(y)$.
+
+          \item Integrate $h'(y)$ and substitute the result to find $v$.
+        \end{enumerate}
 \end{itemize}
 
 \end{document}

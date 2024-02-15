@@ -495,4 +495,164 @@ $\pm 2 i$
   y               & = c_2 x
 \end{align*}
 
+\subsection{Cauchy-Riemann Equations}
+
+\subsubsection{}
+
+\begin{align*}
+  f(z)                          & = z^3                                                 \\
+                                & = (x + i y)^3                                         \\
+                                & = (x^2 + 2 i x y - y^2) (x + i y)                     \\
+                                & = x^3 + i x^2 y + 2 i x^2 y - 2 x y^2 - x y^2 - i y^3 \\
+                                & = (x^3 - 3 x y^2) + i (3 x^2 y - y^3)                 \\
+  \frac{\partial u}{\partial x} & = 3 x^2 - 3 y^2                                       \\
+                                & = \frac{\partial v}{\partial y}                       \\
+  \frac{\partial u}{\partial y} & = -6 x y                                              \\
+                                & = -\frac{\partial v}{\partial x}
+\end{align*}
+
+\setcounter{subsubsection}{2}
+\subsubsection{}
+
+\begin{align*}
+  f(z)                          & = \Re (z)                         \\
+                                & = x                               \\
+  \frac{\partial u}{\partial x} & = 1                               \\
+                                & \ne \frac{\partial v}{\partial y}
+\end{align*}
+
+\setcounter{subsubsection}{4}
+\subsubsection{}
+
+\begin{align*}
+  f(z)                          & = 4 z - 6 \overline{z} + 3        \\
+                                & = 4 (x + i y) - 6 (x - i y) + 3   \\
+                                & = (-2 x + 3) + 10 i y             \\
+  \frac{\partial u}{\partial x} & = -2                              \\
+                                & \ne \frac{\partial v}{\partial y}
+\end{align*}
+
+\setcounter{subsubsection}{6}
+\subsubsection{}
+
+\begin{align*}
+  f(z)                          & = x^2 + y^2                       \\
+  \frac{\partial u}{\partial x} & = 2 x                             \\
+                                & \ne \frac{\partial v}{\partial y}
+\end{align*}
+
+\setcounter{subsubsection}{8}
+\subsubsection{}
+
+\begin{align*}
+  f(z)                          & = e^x \cos y + i e^x \sin y \\
+  u                             & = e^x \cos y                \\
+  \frac{\partial u}{\partial x} & = e^x \cos y                \\
+  \frac{\partial u}{\partial y} & = -e^x \sin y               \\
+  v                             & = e^x \sin y                \\
+  \frac{\partial v}{\partial x} & = e^x \sin y                \\
+  \frac{\partial v}{\partial y} & = e^x \cos y                \\
+\end{align*}
+
+Analytic everywhere.
+
+\setcounter{subsubsection}{10}
+\subsubsection{}
+
+\begin{align*}
+  f(z)                          & = x + \sin x \cosh y + i (y + \cos x \sinh y) \\
+  u                             & = x + \sin x \cosh y                          \\
+  \frac{\partial u}{\partial x} & = 1 + \cos x \cosh y                          \\
+  \frac{\partial u}{\partial y} & = \sin x \sinh y                              \\
+  v                             & = y + \cos x \sinh y                          \\
+  \frac{\partial v}{\partial x} & = -\sin x \sinh y                             \\
+  \frac{\partial v}{\partial y} & = 1 + \cos x \cosh y
+\end{align*}
+
+Analytic everywhere.
+
+\setcounter{subsubsection}{14}
+\subsubsection{}
+
+\begin{align*}
+  f(z)                          & = 3 x - y + 5 + i (a x + b y - 3) \\
+  u                             & = 3 x - y + 5                     \\
+  \frac{\partial u}{\partial x} & = 3                               \\
+  \frac{\partial u}{\partial y} & = -1                              \\
+  v                             & = a x + b y - 3                   \\
+  \frac{\partial v}{\partial x} & = a                               \\
+  \frac{\partial v}{\partial y} & = b                               \\
+  a                             & = 1                               \\
+  b                             & = 3
+\end{align*}
+
+\setcounter{subsubsection}{16}
+\subsubsection{}
+
+\begin{align*}
+  f(z)                          & = x^2 + y^2 + 2 i x y \\
+  u                             & = x^2 + y^2           \\
+  \frac{\partial u}{\partial x} & = 2 x                 \\
+  \frac{\partial u}{\partial y} & = 2 y                 \\
+  v                             & = 2 x y               \\
+  \frac{\partial v}{\partial x} & = 2 y                 \\
+  \frac{\partial v}{\partial y} & = 2 x
+\end{align*}
+
+Only differentiable when $y = 0$.
+
+\setcounter{subsubsection}{18}
+\subsubsection{}
+
+\begin{align*}
+  f(z)                          & = x^3 + 3 x y^2 - x + i (y^3 + 3 x^2 y - y) \\
+  u                             & = x^3 + 3 x y^2 - x                         \\
+  \frac{\partial u}{\partial x} & = 3 x^2 + 3 y^2 - 1                         \\
+  \frac{\partial u}{\partial y} & = 6 x y                                     \\
+  v                             & = y^3 + 3 x^2 y - y                         \\
+  \frac{\partial v}{\partial x} & = 6 x y                                     \\
+  \frac{\partial v}{\partial y} & = 3 y^2 + 3 x^2 - 1
+\end{align*}
+
+Only differentiable when $x = 0$ or $y = 0$.
+
+\setcounter{subsubsection}{20}
+\subsubsection{}
+
+\begin{align*}
+  f(z)  & = e^x \cos y + i e^x \sin y                                       \\
+  f'(z) & = \frac{\partial u}{\partial x} + i \frac{\partial v}{\partial x} \\
+        & = e^x \cos y + i e^x \sin y
+\end{align*}
+
+\setcounter{subsubsection}{22}
+\subsubsection{}
+
+\begin{align*}
+  u                                 & = x             \\
+  \frac{\partial^2 u}{\partial x^2} & = 0             \\
+  \frac{\partial^2 u}{\partial y^2} & = 0             \\
+  \frac{\partial v}{\partial y}     & = 1             \\
+  v                                 & = y + h(x)      \\
+  h'(x)                             & = 0             \\
+  v                                 & = y + c         \\
+  f(z)                              & = x + i (y + c)
+\end{align*}
+
+\setcounter{subsubsection}{24}
+\subsubsection{}
+
+\begin{align*}
+  u                                 & = x^2 - y^2                   \\
+  \frac{\partial^2 u}{\partial x^2} & = 2                           \\
+  \frac{\partial^2 u}{\partial y^2} & = -2                          \\
+  \frac{\partial v}{\partial y}     & = 2 x                         \\
+  v                                 & = 2 x y + h(x)                \\
+  2 y                               & = 2 y + h'(x)                 \\
+  h'(x)                             & = 0                           \\
+  h(x)                              & = c                           \\
+  v                                 & = 2 x y + c                   \\
+  f(z)                              & = (x^2 - y^2) + i (2 x y + c)
+\end{align*}
+
 \end{document}
