@@ -6,6 +6,7 @@
 \graphicspath{{./images/}}
 
 \newcommand{\Arg}{\operatorname{Arg}}
+\newcommand{\Ln}{\operatorname{Ln}}
 \renewcommand{\Im}{\operatorname{Im}}
 \renewcommand{\Re}{\operatorname{Re}}
 
@@ -224,6 +225,33 @@
 
           \item Integrate $h'(y)$ and substitute the result to find $v$.
         \end{enumerate}
+\end{itemize}
+
+\subsection{Exponential and Logarithmic Functions}
+
+\begin{itemize}
+  \item The exponential function for complex numbers is defined as \[e^z = e^{x + i y} = e^x (\cos y + i \sin y).\]
+
+  \item $e^z$ is analytic for all $z$, i.e. it's an entire function.
+
+  \item Like its real-valued counterpart, \begin{align*}
+          \frac{d}{d z} e^z & = e^z,           \\
+          e^{z_1} e^{z_2}   & = e^{z_1 + z_2},
+        \end{align*} and \[\frac{e^{z_1}}{e^{z_2}} = e^{z_1 - z_2}.\]
+
+  \item Since \[e^{2 \pi i} = \cos (2 \pi) + i \sin (2 \pi) = 1\] and \[e^{z + 2 \pi i} = e^z e^{2 \pi i} = e^z\] the complex function $f(z) = e^z$ is \textbf{periodic} with complex period $2 \pi i$. Because of this complex periodicity an infinite horizontal strip of height $2 \pi$ contains all possible values for the function. The strip $-\pi < y \le \pi$ is called the \textbf{fundamental region}.
+
+  \item For $z \ne 0$ and $\theta = \arg z$, \[\ln z = \log_e |z| + i (\theta + 2 n \pi),\ n = 0, \,\pm 1, \,\pm 2, \,\ldots\] This means there are infinitely many values of the logarithm of a complex number $z$. This makes sense as the complex exponential is periodic.
+
+  \item The \textbf{principal value} of $\ln z$ is the complex logarithm corresponding to $n = 0$ and $\theta = \Arg z$. It is denoted $\Ln z$.
+
+  \item Some familiar properties of the real-valued logarithm hold for the complex-valued logarithm, e.g. \[\ln (z_1 z_2) = \ln z_1 + \ln z_2\] and \[\ln \left( \frac{z_1}{z_2} \right) = \ln z_1 - \ln z_2,\] however they don't necessarily hold for the principal value.
+
+  \item $\Ln z$ is discontinuous and thus not analytic at $z = 0$ because $\ln z$ is undefined at $z = 0$ and on the negative real axis because $\Arg z$ is discontinuous there.
+
+  \item The derivative of $\Ln z$ is \[\frac{d}{d z} \Ln z = \frac{1}{z}.\]
+
+  \item The complex power of a complex number is defined as \[z^\alpha = e^{\alpha \ln z}, \ z \ne 0.\] In general this is multiple-valued because $\ln z$ is multiple-valued — only if $\alpha = n,\ n = 0, \ \pm 1, \,\pm 2, \,\ldots$ is it single-valued. If $\ln z$ is replaced with $\Ln z$ then we get the \textbf{principle value} of $z^\alpha$.
 \end{itemize}
 
 \end{document}

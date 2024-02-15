@@ -3,6 +3,7 @@
 \usepackage{enumitem} % For customisable list labels
 
 \renewcommand{\Im}{\operatorname{Im}}
+\newcommand{\Ln}{\operatorname{Ln}}
 \renewcommand{\Re}{\operatorname{Re}}
 
 \setlist[enumerate, 1]{label={(\alph*)}}
@@ -654,5 +655,210 @@ Only differentiable when $x = 0$ or $y = 0$.
   v                                 & = 2 x y + c                   \\
   f(z)                              & = (x^2 - y^2) + i (2 x y + c)
 \end{align*}
+
+\subsection{Exponential and Logarithmic Functions}
+
+\subsubsection{}
+
+\[\frac{\sqrt{3}}{2} + \frac{1}{2} i\]
+
+\setcounter{subsubsection}{2}
+\subsubsection{}
+
+\[e^{-1} \frac{\sqrt{2}}{2} (1 + i)\]
+
+\setcounter{subsubsection}{4}
+\subsubsection{}
+
+\[-e^\pi\]
+
+\setcounter{subsubsection}{6}
+\subsubsection{}
+
+\[e^{1.5} (\cos 2 + i \sin 2) = -1.865 + 4.075 i\]
+
+\setcounter{subsubsection}{8}
+\subsubsection{}
+
+\[\cos 5 + i \sin 5 = 0.2836 - 0.9589 i\]
+
+\setcounter{subsubsection}{10}
+\subsubsection{}
+
+\begin{align*}
+  e^{1 + 5 \pi i / 4} e^{-1 - \pi i / 3} & = e^{11 \pi i / 12}                                 \\
+                                         & = \cos \frac{11 \pi}{12} + i \sin \frac{11 \pi}{12} \\
+                                         & = -0.9659 + 0.2588 i
+\end{align*}
+
+\setcounter{subsubsection}{12}
+\subsubsection{}
+
+\begin{align*}
+  f(z) & = e^{-i z}                \\
+       & = e^{-i (x + i y)}        \\
+       & = e^{y - i x}             \\
+       & = e^y (\cos x - i \sin x)
+\end{align*}
+
+\setcounter{subsubsection}{14}
+\subsubsection{}
+
+\begin{align*}
+  f(z) & = e^{z^2}                                       \\
+       & = e^{x^2 - y^2 + 2 i x y}                       \\
+       & = e^{x^2 - y^2} [\cos (2 x y) + i \sin (2 x y)]
+\end{align*}
+
+\setcounter{subsubsection}{16}
+\subsubsection{}
+
+\begin{align*}
+  e^z   & = e^{x + i y}                          \\
+        & = e^x (\cos y + i \sin y)              \\
+  |e^z| & = \sqrt{e^{2 x} [\cos^2 y + \sin^2 y]} \\
+        & = e^x
+\end{align*}
+
+\setcounter{subsubsection}{18}
+\subsubsection{}
+
+\begin{align*}
+  e^{z + \pi i} & = e^{x + i (y + \pi)}                     \\
+                & = e^x [\cos (y + \pi) + i \sin (y + \pi)] \\
+                & = e^x [-\cos y - i \sin y]                \\
+                & = -e^x (\cos y + i \sin y)                \\
+  e^{z - \pi i} & = e^{x + i (y - \pi)}                     \\
+                & = e^x [\cos (y - \pi) + i \sin (y - \pi)] \\
+                & = e^x (-\cos y - i \sin y)                \\
+                & = -e^x (\cos y + i \sin y)
+\end{align*}
+
+\setcounter{subsubsection}{20}
+\subsubsection{}
+
+\begin{align*}
+  e^{\overline{z}}              & = e^{x - i y}                     \\
+                                & = e^x (\cos y - i \sin y)         \\
+  u                             & = e^x \cos y                      \\
+  v                             & = -e^x \sin y                     \\
+  \frac{\partial u}{\partial x} & = e^x \cos y                      \\
+                                & \ne \frac{\partial v}{\partial y}
+\end{align*}
+
+\setcounter{subsubsection}{22}
+\subsubsection{}
+
+\[\log_e 5 + i (\pi + 2 n \pi) = 1.6094 + i (\pi + 2 n \pi)\]
+
+\setcounter{subsubsection}{24}
+\subsubsection{}
+
+\[\log_e (2 \sqrt{2}) + i \left( \frac{3}{4} \pi + 2 n \pi \right) = 1.0397 + i \left( \frac{3}{4} \pi + 2 n \pi \right)\]
+
+\setcounter{subsubsection}{26}
+\subsubsection{}
+
+\[\log_e (2 \sqrt{2}) + i \left( \frac{1}{3} \pi + 2 n \pi \right) = 1.0397 + i \left( \frac{1}{3} \pi + 2 n \pi \right)\]
+
+\setcounter{subsubsection}{28}
+\subsubsection{}
+
+\[\log_e (6 \sqrt{2}) - \frac{\pi}{4} i = 2.1383 - \frac{\pi}{4} i\]
+
+\setcounter{subsubsection}{30}
+\subsubsection{}
+
+\[\log_e 13 + 2.7468 i = 2.5649 + 2.7468 i\]
+
+\setcounter{subsubsection}{32}
+\subsubsection{}
+
+\[5 \left( \log_e 2 + \frac{\pi}{3} i \right) = 3.4657 - \frac{\pi}{3} i\]
+
+\setcounter{subsubsection}{34}
+\subsubsection{}
+
+\[z = \log_e 4 + i \left( \frac{\pi}{2} + 2 n \pi \right) = 1.3863 + i \left( \frac{\pi}{2} + 2 n \pi \right)\]
+
+\setcounter{subsubsection}{36}
+\subsubsection{}
+
+\begin{align*}
+  z - 1 & = 2 + i \left( -\frac{\pi}{2} + 2 n \pi \right) \\
+  z     & = 3 + i \left( -\frac{\pi}{2} + 2 n \pi \right)
+\end{align*}
+
+\setcounter{subsubsection}{38}
+\subsubsection{}
+
+\begin{align*}
+  \ln (-i)   & = i \left( -\frac{\pi}{2} + 2 n \pi \right) \\
+  (-i)^{4 i} & = e^{4 i \ln (-i)}                          \\
+             & = e^{4 i \times i (-\pi / 2 + 2 n \pi)}     \\
+             & = e^{2 \pi (1 - 4 n)}
+\end{align*}
+
+\setcounter{subsubsection}{40}
+\subsubsection{}
+
+\begin{align*}
+  \ln (1 + i)       & = \log_e \sqrt{2} + i \left( \frac{\pi}{4} + 2 n \pi \right)                            \\
+  (1 + i)^{(1 + i)} & = e^{(1 + i) \ln (1 + i)}                                                               \\
+                    & = e^{(1 + i) [\log_e \sqrt{2} + i (\pi / 4 + 2 n \pi)]}                                 \\
+                    & = e^{\log_e \sqrt{2} + i (\pi / 4 + 2 n \pi) + i \log_e \sqrt{2} - (\pi / 4 + 2 n \pi)} \\
+                    & = e^{(\log_e \sqrt{2} - \pi / 4 - 2 n \pi) + i (\log_e \sqrt{2} + \pi / 4 + 2 n \pi)}   \\
+                    & = e^{-2 n \pi} e^{(\log_e \sqrt{2} - \pi / 4) + i (\log_e \sqrt{2} + \pi / 4)}          \\
+                    & = e^{-2 n \pi} e^{\log_e \sqrt{2} - \pi / 4} e^{i (\log_e \sqrt{2} + \pi / 4)}          \\
+                    & = e^{-2 n \pi} (0.2739 + 0.5837 i)
+\end{align*}
+
+\setcounter{subsubsection}{42}
+\subsubsection{}
+
+\begin{align*}
+  \Ln (-1)            & = \pi i                     \\
+  (-1)^{(-2 i / \pi)} & = e^{(-2 i / \pi) \Ln (-1)} \\
+                      & = e^{(-2 i / \pi) (\pi i)}  \\
+                      & = e^2
+\end{align*}
+
+\setcounter{subsubsection}{46}
+\subsubsection{}
+
+\begin{enumerate}
+  \item
+
+        \begin{align*}
+          (-1 + i)^2     & = -2 i                                  \\
+          \Ln (-1 + i)^2 & = \Ln (-2 i)                            \\
+                         & = \log_e 2 - \frac{\pi}{2} i            \\
+          2 \Ln (-1 + i) & = 2 \log_e \sqrt{2} + \frac{3 \pi}{2} i \\
+                         & \ne \Ln (-1 + i)^2
+        \end{align*}
+
+        Not true
+
+  \item
+
+        \begin{align*}
+          \Ln i^3 & = \Ln (-i)          \\
+                  & = -\frac{\pi}{2} i  \\
+          3 \Ln i & = \frac{3 \pi}{2} i \\
+                  & \ne \Ln i^3
+        \end{align*}
+
+        Not true
+
+  \item
+
+        \begin{align*}
+          \ln i^3 & = i \left( -\frac{\pi}{2} + 2 n \pi \right)  \\
+          3 \ln i & = 3 i \left( \frac{\pi}{2} + 2 n \pi \right) \\
+                  & \ne \ln i^3
+        \end{align*}
+
+        Not true
+\end{enumerate}
 
 \end{document}
