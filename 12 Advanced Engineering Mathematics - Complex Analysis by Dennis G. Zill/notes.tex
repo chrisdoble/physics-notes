@@ -1,5 +1,6 @@
 \documentclass{article}
 \usepackage{amsmath} % For align*
+\usepackage{float} % For the [H] option on figures
 \usepackage{graphicx} % For images
 
 \graphicspath{{./images/}}
@@ -110,6 +111,75 @@
   \item An open connected set is called a \textbf{domain}.
 
   \item A \textbf{region} is a set in the complex plane with all, some, or none of its boundary points. A region containing all of its boundary points is said to be \textbf{closed}.
+\end{itemize}
+
+\subsection{Functions of a Complex Variable}
+
+\begin{itemize}
+  \item A \textbf{function} $f$ from a set $A$ to a set $B$ is a rule of correspondence that assigns to each element of $A$ one and only one element of $B$.
+
+  \item If $b$ is the element of $B$ assigned to the element $a$ of $A$, $b$ is said to be the \textbf{image} of $a$ and is denoted $b = f(a)$.
+
+  \item The set $A$ is called the \textbf{domain} of $f$.
+
+  \item The set of all images in $B$ is called the \textbf{range} of $f$.
+
+  \item If $A$ is a set of real numbers, $f$ is said to be a \textbf{function of a real variable $\boldsymbol{x}$}.
+
+  \item If $A$ is a set of complex numbers, $f$ is said to be a \textbf{function of a complex varibale $\boldsymbol{z}$} or a \textbf{complex function}.
+
+  \item The image $w$ of a complex number $z$ is \[w = f(z) = u(x, y) + i v(x, y)\] where $u$ and $v$ are the real and imaginary parts of $w$ and are real-valued functions.
+
+  \item Although we cannot draw a graph of a complex function $w = f(z)$ (because it would require a four-dimensional coordinate system), it can be interpreted as a \textbf{mapping} or \textbf{transformation} from the $z$ plane to the $w$ plane.
+
+  \item A complex function may be interpreted as a two-dimensional fluid flow by considering $w = f(z)$ as the fluid velocity vector at the point $z$. In that case, if $x(t) + i y(t)$ is a parametric representation of a particle's position over time then \begin{align*}
+          \frac{d x}{d t} & = u(x, y) \\
+          \frac{d y}{d t} & = v(x, y)
+        \end{align*} and the family of solutions to this system of differential equations are called the \textbf{streamlines} of the flow associated with $f(z)$.
+\end{itemize}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=\textwidth]{limit-of-a-function}
+\end{figure}
+
+\begin{itemize}
+  \item For a function $f$ of a real variable $x$, the limit $\lim_{x \rightarrow x_0} f(x) = L$ means $f$ approaches $L$ as you approach from both the left and right. If however $f$ is a function of a complex variable it means $f$ approaches $L$ as you approach from any direction in the complex plane.
+\end{itemize}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=\textwidth]{limit-properties}
+\end{figure}
+
+\begin{itemize}
+  \item A function $f$ is continuous at a point $z_0$ if \[\lim_{z \rightarrow z_0} f(z) = f(z_0).\]
+
+  \item A function $f$ defined by \[f(z) = a_n z^n + a_{n - 1} z^{n - 1} + \cdots + a_2 z^2 + a_1 z + a_0,\ a_n \ne 0\] where $n$ is a nonnegative integer and the coefficients $a_i$, $i = 0, 1, \ldots, n$, are complex constants is called a \textbf{polynomial} of degree $n$.
+
+  \item Polynomials are continuous on the entire complex plane.
+
+  \item A \textbf{rational function} \[f(z) = \frac{g(z)}{h(z)}\] is continuous everywhere $h(z) \ne 0$.
+\end{itemize}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=\textwidth]{derivative}
+\end{figure}
+
+\begin{itemize}
+  \item In order for a complex function to be differentiable, the limit must approach the same value from every direction. This is a greater demand than in real variables. If you take an arbitrary complex function, there's a good chance it isn't differentiable.
+\end{itemize}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=\textwidth]{analyticity}
+\end{figure}
+
+\begin{itemize}
+  \item Analyticity at a point is a neighborhood property. A function can be differentiable at a point but if the neighboring points aren't also differentiable, it's not analytic at that point.
+
+  \item A function that is analytic everywhere is called an \textbf{entire function}.
 \end{itemize}
 
 \end{document}
