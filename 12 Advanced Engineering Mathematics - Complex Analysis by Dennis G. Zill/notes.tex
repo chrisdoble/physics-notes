@@ -1,5 +1,6 @@
 \documentclass{article}
 \usepackage{amsmath} % For align*
+\usepackage{amsfonts} % For open face letters
 \usepackage{float} % For the [H] option on figures
 \usepackage{graphicx} % For images
 
@@ -252,6 +253,45 @@
   \item The derivative of $\Ln z$ is \[\frac{d}{d z} \Ln z = \frac{1}{z}.\]
 
   \item The complex power of a complex number is defined as \[z^\alpha = e^{\alpha \ln z}, \ z \ne 0.\] In general this is multiple-valued because $\ln z$ is multiple-valued — only if $\alpha = n,\ n = 0, \ \pm 1, \,\pm 2, \,\ldots$ is it single-valued. If $\ln z$ is replaced with $\Ln z$ then we get the \textbf{principle value} of $z^\alpha$.
+\end{itemize}
+
+\subsection{Trigonometric and Hyperbolic Functions}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=\textwidth]{sine-and-cosine}
+\end{figure}
+
+\begin{itemize}
+  \item The other trigonometric functions ($\tan z$, etc.) are defined as usual.
+
+  \item Because $e^{i z}$ and $e^{-i z}$ are entire functions, $\sin z$ and $\cos z$ are also entire functions.
+
+  \item $\sin z = 0$ for the real numbers $z = n \pi, \,n \in \mathbb{Z}$ and $\cos z = 0$ for the real numbers $z = (2 n + 1) \pi / 2, \,n \in \mathbb{Z}$. This means that $\tan z$ and $\sec z$ are analytic except at the points where $\cos z = 0$ and $\cot z$ and $\sec z$ are analytic except at the points where $\sin z = 0$.
+
+  \item The usual derivatives and trigonometric functions are still valid in the complex case.
+
+  \item $\sin z$ can be expressed as \[\sin z = \sin x \cosh y + i \cos x \sinh y\] and $\cos z$ can be expressed as \[\cos z = \cos x \cosh y - i \sin x \sinh y.\]
+
+  \item The only zeroes of $\sin z$ are the real numbers $z = n \pi, \,n \in \mathbb{Z}$ and the only zeroes of $\cos z$ are the real numbers $z = (2 n + 1) \pi / 2, \,n \in \mathbb{Z}$.
+\end{itemize}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=\textwidth]{hyperbolic-sine-and-cosine}
+\end{figure}
+
+\begin{itemize}
+  \item The complex trigonometric functions can be expressed in terms of the complex hyperbolic functions and vice versa \begin{align*}
+          \sin z  & = -i \sinh (i z), & \cos z  & = \cosh (i z) \\
+          \sinh z & = -i \sin (i z),  & \cosh z & = \cos (i z).
+        \end{align*}
+
+  \item $\sinh z$ can be expressed as \[\sinh z = \sinh x \cos y + i \cosh x \sin y\] and $\cosh z$ can be expressed as \[\cosh z = \cosh x \cos y + i \sinh x \sin y.\]
+
+  \item The zeroes of $\sinh z$ are $z = n \pi i, \,n \in \mathbb{Z}$ and the zeroes of $\cosh z$ are $z = (2 n + 1) \pi i / 2, \,n \in \mathbb{Z}$.
+
+  \item $\sin z$ and $\cos z$ are $2 \pi$ periodic while $\sinh z$ and $\cosh z$ are $2 \pi i$ periodic.
 \end{itemize}
 
 \end{document}

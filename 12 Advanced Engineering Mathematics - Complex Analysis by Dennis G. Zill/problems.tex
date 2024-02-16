@@ -861,4 +861,118 @@ Only differentiable when $x = 0$ or $y = 0$.
         Not true
 \end{enumerate}
 
+\subsection{Trigonometric and Hyperbolic Functions}
+
+\subsubsection{}
+
+\begin{align*}
+  \cos (3 i) & = \cos 0 \cosh 3 - i \sin 0 \sinh 3 \\
+             & = \cosh 3                           \\
+             & = 10.0677
+\end{align*}
+
+\setcounter{subsubsection}{2}
+\subsubsection{}
+
+\begin{align*}
+  \sin (\pi / 4 + i) & = \sin \frac{\pi}{4} \cosh 1 + i \cos \frac{\pi}{4} \sinh 1 \\
+                     & = 1.0911 + 0.8309 i
+\end{align*}
+
+\setcounter{subsubsection}{4}
+\subsubsection{}
+
+\begin{align*}
+  \tan i & = \frac{\sin i}{\cos i}                                                       \\
+         & = \frac{\sin 0 \cosh 1 + i \cos 0 \sinh 1}{\cos 0 \cosh 1 + i \sin 0 \sinh 1} \\
+         & = \frac{i \sinh 1}{\cosh 1}                                                   \\
+         & = i \tanh 1                                                                   \\
+         & = 0.7615 i
+\end{align*}
+
+\setcounter{subsubsection}{6}
+\subsubsection{}
+
+\begin{align*}
+  \sec (\pi + i) & = \frac{1}{\cos (\pi + i)}                      \\
+                 & = \frac{1}{\cos \pi \cosh 1 + \sin \pi \sinh 1} \\
+                 & = -\frac{1}{\cosh 1}                            \\
+                 & = -0.6480
+\end{align*}
+
+\setcounter{subsubsection}{8}
+\subsubsection{}
+
+\begin{align*}
+  \cosh (\pi i) & = \cosh 0 \cos \pi + i \sinh 0 \sin \pi \\
+                & = -1
+\end{align*}
+
+\setcounter{subsubsection}{10}
+\subsubsection{}
+
+\begin{align*}
+  \sinh (1 + \pi i / 3) & = \sinh 1 \cos (\pi / 3) + i \cosh 1 \sin (\pi / 3) \\
+                        & = 0.5876 + 1.3363 i
+\end{align*}
+
+\setcounter{subsubsection}{14}
+\subsubsection{}
+
+\begin{align*}
+  \sin z                         & = 2                                               \\
+  \frac{e^{i z} - e^{-i z}}{2 i} & = 2                                               \\
+  e^{i z} - e^{-i z}             & = 4 i                                             \\
+  e^{2 i z} - 1                  & = 4 i e^{i z}                                     \\
+  e^{2 i z} - 4 i e^{i z} - 1    & = 0                                               \\
+  e^{i z}                        & = \frac{4 i \pm \sqrt{-16 + 4}}{2}                \\
+                                 & = (2 \pm \sqrt{3}) i                              \\
+  i z                            & = \log_e (2 \pm \sqrt{3}) + i (\pi / 2 + 2 n \pi) \\
+  z                              & = (\pi / 2 + 2 n \pi) - i \log_e (2 \pm \sqrt{3}) \\
+\end{align*}
+
+\setcounter{subsubsection}{16}
+\subsubsection{}
+
+\begin{align*}
+  \sinh z                & = -i                                        \\
+  \frac{e^z - e^{-z}}{2} & = -i                                        \\
+  e^{2 z} + 2 i e^z - 1  & = 0                                         \\
+  e^z                    & = \frac{-2 i \pm \sqrt{-4 + 4}}{2}          \\
+                         & = -i                                        \\
+  z                      & = \ln (-i)                                  \\
+                         & = i \left( -\frac{\pi}{2} + 2 n \pi \right)
+\end{align*}
+
+\setcounter{subsubsection}{18}
+\subsubsection{}
+
+\begin{align*}
+  \cos z                       & = \sin z                                   \\
+  \frac{e^{i z} + e^{-i z}}{2} & = \frac{e^{i z} - e^{-i z}}{2 i}           \\
+  e^{i z} + e^{-i z}           & = \frac{e^{i z} - e^{-i z}}{i}             \\
+                               & = -i (e^{i z} - e^{-i z})                  \\
+  e^{2 i z} + 1                & = -i (e^{2 i z} - 1)                       \\
+  e^{2 i z} (1 + i)            & = -1 + i                                   \\
+  e^{2 i z}                    & = \frac{-1 + i}{1 + i}                     \\
+                               & = \frac{(-1 + i)(1 - i)}{(1 + i) (1 - i)}  \\
+                               & = \frac{-1 + i + i + 1}{1 - i + i + 1}     \\
+                               & = \frac{2 i}{2}                            \\
+                               & = i                                        \\
+  2 i z                        & = \ln i                                    \\
+                               & = i \left( \frac{\pi}{2} + 2 n \pi \right) \\
+  z                            & = \frac{\pi}{4} + n \pi
+\end{align*}
+
+\setcounter{subsubsection}{20}
+\subsubsection{}
+
+\begin{align*}
+  \cos z                            & = \cosh 2         \\
+  \cos x \cosh y - i \sin x \sinh y & = \cosh 2         \\
+  y                                 & = \pm 2           \\
+  x                                 & = 2 n \pi         \\
+  z                                 & = 2 n \pi \pm 2 i
+\end{align*}
+
 \end{document}
