@@ -2,6 +2,7 @@
 \usepackage{amsmath} % For align*
 \usepackage{enumitem} % For customisable list labels
 
+\newcommand{\arcsinh}{\operatorname{arcsinh}}
 \renewcommand{\Im}{\operatorname{Im}}
 \newcommand{\Ln}{\operatorname{Ln}}
 \renewcommand{\Re}{\operatorname{Re}}
@@ -973,6 +974,83 @@ Only differentiable when $x = 0$ or $y = 0$.
   y                                 & = \pm 2           \\
   x                                 & = 2 n \pi         \\
   z                                 & = 2 n \pi \pm 2 i
+\end{align*}
+
+\subsection{Inverse Trigonometric and Hyperbolic Functions}
+
+\subsubsection{}
+
+\begin{align*}
+  \arcsin z            & = -i \ln [i z + (1 - z^2)^{1 / 2}]             \\
+  \arcsin (-i)         & = -i \ln [i (-i) + (1 - (-i)^2)^{1 / 2}]       \\
+                       & = -i \ln [1 \pm \sqrt{2}]                      \\
+  \ln (1 + \sqrt{2})   & = \log_e (1 + \sqrt{2}) + 2 n \pi i            \\
+  \ln (1 - \sqrt{2})   & = \ln \left( -\frac{1}{1 + \sqrt{2}} \right)   \\
+                       & = -\ln [-(1 + \sqrt{2})]                       \\
+                       & = -[\log_e (1 + \sqrt{2}) + i (\pi + 2 n \pi)] \\
+                       & = -\log_e (1 + \sqrt{2}) + i (\pi + 2 n \pi)   \\
+  \ln (1 \pm \sqrt{2}) & = (-1)^n \log_e (1 + \sqrt{2}) + n \pi i       \\
+  \arcsin (-i)         & = -i [(-1)^n \log_e (1 + \sqrt{2}) + n \pi i]  \\
+                       & = n \pi - (-1)^n i \log_e (1 + \sqrt{2})       \\
+                       & = n \pi + (-1)^{n + 1} i \log_e (1 + \sqrt{2})
+\end{align*}
+
+\setcounter{subsubsection}{2}
+\subsubsection{}
+
+\begin{align*}
+  \arcsin 0 & = -i \ln (\pm 1) \\
+            & = -i (n \pi i)   \\
+            & = n \pi
+\end{align*}
+
+\setcounter{subsubsection}{4}
+\subsubsection{}
+
+\begin{align*}
+  \arccos 2            & = -i \ln [2 + i (1 - 2^2)^{1 / 2}]      \\
+                       & = -i \ln [2 \pm \sqrt{3}]               \\
+  \ln (2 + \sqrt{3})   & = \log_e (2 + \sqrt{3}) + 2 n \pi i     \\
+  \ln (2 - \sqrt{3})   & = \log_e (2 - \sqrt{3}) + 2 n \pi i     \\
+                       & = -\log_e (2 + \sqrt{3}) + 2 n \pi i    \\
+  \ln (2 \pm \sqrt{3}) & = \pm \log_e (2 + \sqrt{3}) + 2 n \pi i \\
+  \arccos 2            & = 2 n \pi \pm i \log_e (2 + \sqrt{3})
+\end{align*}
+
+\setcounter{subsubsection}{6}
+\subsubsection{}
+
+\begin{align*}
+  \arccos \frac{1}{2}                                     & = -i \ln \left\{ \frac{1}{2} + i \left[ 1 - \left( \frac{1}{2} \right)^2 \right]^{1 / 2} \right\} \\
+                                                          & = -i \ln \left( \frac{1}{2} \pm \frac{\sqrt{3}}{2} i \right)                                      \\
+  \ln \left( \frac{1}{2} \pm \frac{\sqrt{3}}{2} i \right) & = i \left( \pm \frac{\pi}{3} + 2 n \pi \right)                                                    \\
+  \arccos \frac{1}{2}                                     & = \pm \frac{\pi}{3} + 2 n \pi
+\end{align*}
+
+\setcounter{subsubsection}{8}
+\subsubsection{}
+
+\begin{align*}
+  \arctan 1            & = \frac{i}{2} \ln \frac{1 + i}{-1 + i}       \\
+  \frac{1 + i}{-1 + i} & = \frac{(1 + i) (-1 - i)}{(-1 + i) (-1 - i)} \\
+                       & = -i                                         \\
+  \ln (-i)             & = i \left( -\frac{\pi}{2} + 2 n \pi \right)  \\
+  \arctan 1            & = \frac{\pi}{4} + n \pi
+\end{align*}
+
+\setcounter{subsubsection}{10}
+\subsubsection{}
+
+\begin{align*}
+  \arcsinh \frac{4}{3}                         & = \ln \left\{ \frac{4}{3} + \left[ \left( \frac{4}{3} \right)^2 + 1 \right]^{1 / 2} \right\} \\
+                                               & = \ln \left( \frac{4}{3} \pm \frac{5}{3} \right)                                             \\
+  \ln \left( \frac{4}{3} + \frac{5}{3} \right) & = \ln \frac{9}{3}                                                                            \\
+                                               & = \ln 3                                                                                      \\
+                                               & = \log_e 3 + 2 n \pi i                                                                       \\
+  \ln \left( \frac{4}{3} - \frac{5}{3} \right) & = \ln \left( -\frac{1}{3} \right)                                                            \\
+                                               & = \log_e \frac{1}{3} + i (\pi + 2 n \pi)                                                     \\
+                                               & = -\log_e 3 + i (\pi + 2 n \pi)                                                              \\
+  \arcsinh \frac{4}{3}                         & = (-1)^n \log_e 3 + n \pi i                                                                  \\
 \end{align*}
 
 \end{document}

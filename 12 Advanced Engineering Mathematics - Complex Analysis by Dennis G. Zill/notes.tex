@@ -294,4 +294,29 @@
   \item $\sin z$ and $\cos z$ are $2 \pi$ periodic while $\sinh z$ and $\cosh z$ are $2 \pi i$ periodic.
 \end{itemize}
 
+\subsection{Inverse Trigonometric and Hyperbolic Functions}
+
+\begin{itemize}
+  \item Because the complex trigonometric functions are multi-valued, their inverse functions are also multi-valued.
+
+  \item The definitions of those inverse functions are \begin{align*}
+          \arcsin z & = -i \ln [i z + (1 - z^2)^{1 / 2}],             \\
+          \arccos z & = -i \ln [z + i (1 - z^2)^{1 / 2}], \text{ and} \\
+          \arctan z & = \frac{i}{2} \ln \frac{i + z}{i - z}.
+        \end{align*}
+
+  \item The derivatives of the inverse trigonometric functions are \begin{align*}
+          \frac{d}{d z} \arcsin z & = \frac{1}{(1 - z^2)^{1 / 2}},              \\
+          \frac{d}{d z} \arccos z & = \frac{-1}{(1 - z^2)^{1 / 2}}, \text{ and} \\
+          \frac{d}{d z} \arctan z & = \frac{1}{1 + z^2}.
+        \end{align*}
+
+  \item The definitions of the hyperbolic inverse functions and their derivatives are
+
+        \begin{figure}[H]
+          \centering
+          \includegraphics[width=0.4 \textwidth]{inverse-hyperbolic-functions}
+        \end{figure}
+\end{itemize}
+
 \end{document}
