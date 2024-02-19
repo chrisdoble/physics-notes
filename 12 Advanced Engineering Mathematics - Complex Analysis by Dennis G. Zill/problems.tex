@@ -1143,4 +1143,172 @@ False
   x_3 & = -0.2127 - 1.0695 i
 \end{align*}
 
+\section{Integration in the Complex Plane}
+
+\subsection{Contour Integrals}
+
+\subsubsection{}
+
+\begin{align*}
+  z(t)              & = 2 t + i (4 t - 1)                                                     \\
+  z'(t)             & = 2 + 4 i                                                               \\
+  f(z(t))           & = (2 t + 3) + i (4 t - 1)                                               \\
+  f(z(t)) z'(t)     & = [(2 t + 3) + i (4 t - 1)] (2 + 4 i)                                   \\
+                    & = (2 t + 3) (2) + (2 t + 3) (4 i) + i (4 t - 1) (2) + i (4 t - 1) (4 i) \\
+                    & = 4 t + 6 + 8 i t + 12 i + 8 i t - 2 i - 16 t + 4                       \\
+                    & = (-12 t + 10) + i (16 t + 10)                                          \\
+  \int_C f(z) \,d z & = \int_1^3 f(z(t)) z'(t) \,d t                                          \\
+                    & = \int_1^3 (-12 t + 10) \,d t + i \int_1^3 (16 t + 10) \,d t            \\
+                    & = -28 + 84 i
+\end{align*}
+
+\setcounter{subsubsection}{2}
+\subsubsection{}
+
+\begin{align*}
+  z(t)              & = 3 t + 2 i t                                 \\
+  z'(t)             & = 3 + 2 i                                     \\
+  \int_C f(z) \,d z & = \int_{-2}^2 (3 t + 2 i t)^2 (3 + 2 i) \,d t \\
+                    & = \int_{-2}^2 [(3 + 2 i) t]^2 (3 + 2 i) \,d t \\
+                    & = (3 + 2 i)^3 \int_{-2}^2 t^2 \,d t           \\
+                    & = (-9 + 46 i) \frac{16}{3}                    \\
+                    & = -48 + \frac{736}{3} i
+\end{align*}
+
+\setcounter{subsubsection}{4}
+\subsubsection{}
+
+\begin{align*}
+  z(t)              & = e^{i t}                                                                             \\
+  z'(t)             & = i e^{i t}                                                                           \\
+  \int_C f(z) \,d z & = \int_{-\pi / 2}^{\pi / 2} \frac{1 + e^{i t}}{e^{i t}} i e^{i t} \,d t               \\
+                    & = i \int_{-\pi / 2}^{\pi / 2} (1 + e^{i t}) \,d t                                     \\
+                    & = i \left[ t + \frac{1}{i} e^{i t} \right]_{-\pi / 2}^{\pi / 2}                       \\
+                    & = i [t - i e^{i t}]_{-\pi / 2}^{\pi / 2}                                              \\
+                    & = i \left( \frac{\pi}{2} - i e^{\pi i / 2} + \frac{\pi}{2} + i e^{-\pi i / 2} \right) \\
+                    & = i (\pi + 2)
+\end{align*}
+
+\setcounter{subsubsection}{6}
+\subsubsection{}
+
+\begin{align*}
+  z(t)              & = \cos t + i \sin t                                                      \\
+  z'(t)             & = -\sin t + i \cos t                                                     \\
+  \int_C f(z) \,d z & = \int_0^{2 \pi} \cos t (-\sin t + i \cos t) \,d t                       \\
+                    & = \int_0^{2 \pi} \left( -\frac{1}{2} \sin 2 t + i \cos^2 t \right) \,d t \\
+                    & = \pi i
+\end{align*}
+
+\setcounter{subsubsection}{8}
+\subsubsection{}
+
+\begin{align*}
+  z(t)              & = (1 - t) + i t                                                                  \\
+  z'(t)             & = -1 + i                                                                         \\
+  \int_C f(z) \,d z & = \int_0^1 [(1 - t)^2 + i t^3] (-1 + i) \,d t                                    \\
+                    & = \int_0^1 (1 - 2 t + t^2 + i t^3) (-1 + i) \,d t                                \\
+                    & = \int_0^1 (-1 + i + 2 t - 2 i t - t^2 + i t^2 - i t^3 - t^3) \,d t              \\
+                    & = \int_0^1 (-1 + 2 t - t^2 - t^3) \,d t + i \int_0^1 (1 - 2 t + t^2 - t^3) \,d t \\
+                    & = -\frac{7}{12} + \frac{1}{12} i
+\end{align*}
+
+\setcounter{subsubsection}{16}
+\subsubsection{}
+
+\begin{align*}
+  % 1
+  z(t)                  & = 1 + i t                           \\
+  z'(t)                 & = i                                 \\
+  \int_{C_1} f(z) \,d z & = \int_0^1 i \,d t                  \\
+                        & = i                                 \\
+  % 2
+  z(t)                  & = (1 - t) + i (1 - t)               \\
+  z'(t)                 & = -(1 + i)                          \\
+  \int_{C_2} f(z) \,d z & = -\int_0^1 (1 - t) (1 + i) \,d t   \\
+                        & = -\int_0^1 (1 + i - t - i t) \,d t \\
+                        & = -\frac{1}{2} - \frac{1}{2} i      \\
+  % 3
+  z(t)                  & = t                                 \\
+  z'(t)                 & = 1                                 \\
+  \int_{C_3} f(z) \,d z & = \int_0^1 t \,d t                  \\
+                        & = \frac{1}{2}                       \\
+  % Total
+  \int_C f(z) \,d z     & = \frac{1}{2} i
+\end{align*}
+
+\setcounter{subsubsection}{18}
+\subsubsection{}
+
+\begin{align*}
+  % 1
+  z(t)                  & = 1 + i t                                     \\
+  z'(t)                 & = i                                           \\
+  \int_{C_1} f(z) \,d z & = \int_0^1 (1 + i t)^2 i \,d t                \\
+                        & = i \int_0^1 (1 + 2 i t - t^2) \,d t          \\
+                        & = -1 + \frac{2}{3} i                          \\
+  % 2
+  z(t)                  & = (1 + i) (1 - t)                             \\
+  z'(t)                 & = -(1 + i)                                    \\
+  \int_{C_2} f(z) \,d z & = -\int_0^1 [(1 + i) (1 - t)]^2 (1 + i) \,d t \\
+                        & = -\int_0^1 (1 - t + i - i t)^2 (1 + i) \,d t \\
+                        & = \frac{2}{3} - \frac{2}{3} i                 \\
+  % 3
+  z(t)                  & = t                                           \\
+  z'(t)                 & = 1                                           \\
+  \int_{C_3} f(z) \,d z & = \int_0^1 t^2 \,d t                          \\
+                        & = \frac{1}{3}                                 \\
+  % Total
+  \int_C f(z) \,d z     & = 0
+\end{align*}
+
+\setcounter{subsubsection}{22}
+\subsubsection{}
+
+\begin{align*}
+  z(t)              & = t + i (1 - t^2)             \\
+  z'(t)             & = 1 - 2 i t                   \\
+  \int_C f(z) \,d z & = \frac{4}{3} - \frac{5}{3} i
+\end{align*}
+
+\setcounter{subsubsection}{24}
+\subsubsection{}
+
+\begin{align*}
+  L                                              & = 10 \pi                    \\
+  |z^2 + 1|                                      & \ge |z^2| - 1               \\
+  \left| \frac{e^z}{z^2 + 1} \right|             & \le \frac{|e^z|}{|z^2| - 1} \\
+                                                 & = \frac{e^5}{24}            \\
+                                                 & = M                         \\
+  \left| \oint \frac{e^z}{z^2 + 1} \,d z \right| & \le M L                     \\
+                                                 & = \frac{5 \pi e^5}{12}
+\end{align*}
+
+\setcounter{subsubsection}{26}
+\subsubsection{}
+
+\begin{align*}
+  z(t)                                 & = (1 + i) t, \ 0 \le t \le 1 \\
+  L                                    & = \sqrt{2}                   \\
+  |z^2 + 4|                            & = |2 i t^2 + 4|              \\
+                                       & \le |2 i + 4|                \\
+                                       & = \sqrt{20}                  \\
+                                       & = 2 \sqrt{5}                 \\
+                                       & = M                          \\
+  \left| \oint (z^2 + 4) \,d z \right| & \le M L                      \\
+                                       & = 2 \sqrt{10}
+\end{align*}
+
+\setcounter{subsubsection}{32}
+\subsubsection{}
+
+\begin{align*}
+  z(t)                        & = e^{i t}                                   \\
+  z'(t)                       & = i e^{i t}                                 \\
+  \oint \overline{f(z)} \,d z & = \int_0^{2 \pi} 2 e^{-i t} i e^{i t} \,d t \\
+                              & = 4 \pi i
+\end{align*}
+
+The circulation is $0$ and the flux is $4 \pi$.
+
 \end{document}

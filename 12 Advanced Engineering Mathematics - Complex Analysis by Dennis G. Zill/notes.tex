@@ -1,6 +1,7 @@
 \documentclass{article}
 \usepackage{amsmath} % For align*
 \usepackage{amsfonts} % For open face letters
+\usepackage{esint} % For contour integrals
 \usepackage{float} % For the [H] option on figures
 \usepackage{graphicx} % For images
 
@@ -10,6 +11,7 @@
 \newcommand{\Ln}{\operatorname{Ln}}
 \renewcommand{\Im}{\operatorname{Im}}
 \renewcommand{\Re}{\operatorname{Re}}
+\renewcommand{\vec}[1]{\boldsymbol{\mathbf{#1}}}
 
 \title{Advanced Engineering Mathematics Complex Analysis by Dennis G. Zill Notes}
 \author{Chris Doble}
@@ -317,6 +319,32 @@
           \centering
           \includegraphics[width=0.4 \textwidth]{inverse-hyperbolic-functions}
         \end{figure}
+\end{itemize}
+
+\section{Integration in the Complex Plane}
+
+\subsection{Contour Integrals}
+
+\begin{itemize}
+  \item In complex variables, a piecewise smooth curve $C$ is called a \textbf{contour} or \textbf{path}. An integral of a complex function $f(z)$ on $C$ is denoted $\int_C f(z) \,d z$ or $\oint_C f(z) \,d z$ if $C$ is closed — this is called a \textbf{contour integral} or a \textbf{complex integral}.
+\end{itemize}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=\textwidth]{contour-integral}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=\textwidth]{contour-integral-evaluation}
+\end{figure}
+
+\begin{itemize}
+  \item If a complex function $f$ is continuous on a smooth curve $C$ and if $|f(z)| \le M$ for all $z$ on $C$, then \[\left| \int_C f(z) \,d z \right| \le M L,\] where \[L = \int_a^b |z'(t)| \,d t\] is the length of $C$. This is sometimes called the \textbf{ML-intequality}.
+
+  \item If $\vec{T}$ is the unit tangent vector to a positively oriented simple closed curve $C$ then \[\varointctrclockwise_C f \cdot \vec{T} \,d s = \Re \left( \varointctrclockwise \overline{f(z)} \,d z \right)\] is called the \textbf{circulation} around $C$ and measures the tendency of the flow to rotate the curve $C$.
+
+  \item If $\vec{N}$ is the normal vector to a positive oriented simple closed curve $C$ then \[\varointctrclockwise_C f \cdot \vec{N} \,d s = \Im \left( \varointctrclockwise \overline{f(z)} \,d z \right)\] is called the \textbf{net flux} across $C$ and measures the difference between the rates at which fluid enters and exits the region bounded by $C$.
 \end{itemize}
 
 \end{document}
