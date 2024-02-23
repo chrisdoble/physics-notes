@@ -1,11 +1,17 @@
 \documentclass{article}
 \usepackage{amsmath} % For align*
 \usepackage{amsfonts} % For open face letters
+\usepackage{bookmark} % For links
 \usepackage{esint} % For contour integrals
 \usepackage{float} % For the [H] option on figures
 \usepackage{graphicx} % For images
 
 \graphicspath{{./images/}}
+\hypersetup{
+  colorlinks=true,
+  linkcolor=blue,
+  urlcolor=blue
+}
 
 \newcommand{\Arg}{\operatorname{Arg}}
 \newcommand{\Ln}{\operatorname{Ln}}
@@ -346,5 +352,34 @@
 
   \item If $\vec{N}$ is the normal vector to a positive oriented simple closed curve $C$ then \[\varointctrclockwise_C f \cdot \vec{N} \,d s = \Im \left( \varointctrclockwise \overline{f(z)} \,d z \right)\] is called the \textbf{net flux} across $C$ and measures the difference between the rates at which fluid enters and exits the region bounded by $C$.
 \end{itemize}
+
+\subsection{Cauchy-Goursat Theorem}
+
+\begin{itemize}
+  \item A domain $D$ is said to be \textbf{simply connected} if every simple closed contour $C$ lying entirely in $D$ can be shrunk to a point without leaving $D$, i.e. the domain has no holes in it.
+
+  \item A domain that is not simply connected is called a \textbf{multiply connected domain}. A domain with one hole is called \textbf{doubly connected}, a domain with two holes \textbf{triply connected}, etc.
+\end{itemize}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=\textwidth]{cauchy-goursat-theorem}
+\end{figure}
+
+\begin{itemize}
+  \item An alternative way of stating the Cauchy-Goursat Theorem is: if $f$ is analytic at all points on and within a simple closed contour $C$, then $\oint_C f(z) \,d z = 0$.
+
+  \item If $D$ is a double connected domain and $C$ and $C_1$ are simple closed contours such that $C_1$ surrounds the ``hole'' in the domain and is interior to $C$, then \[\varointctrclockwise_C f(z) \,d z = \varointctrclockwise_{C_1} f(z) \,d z.\] This is called the principle of \textbf{deformation of contours} since $C_1$ can be considered a continuous deformation of the contour $C$ (or vice versa) under which the value of the integal doesn't change.
+
+  \item If $z_0$ is a constant complex number interior to a simple closed contour $C$, then \[\varointctrclockwise_C \frac{d z}{(z - z_0)^n} = \begin{cases}
+            2 \pi i & n = 1                      \\
+            0       & n \text{ an integer} \ne 1
+          \end{cases}.\]
+\end{itemize}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=\textwidth]{cauchy-goursat-theorem-multiply-connected-domains}
+\end{figure}
 
 \end{document}

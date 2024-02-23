@@ -1,6 +1,14 @@
 \documentclass{article}
 \usepackage{amsmath} % For align*
+\usepackage{bookmark} % For links
 \usepackage{enumitem} % For customisable list labels
+\usepackage{esint} % For contour integrals
+
+\hypersetup{
+  colorlinks=true,
+  linkcolor=blue,
+  urlcolor=blue
+}
 
 \newcommand{\arcsinh}{\operatorname{arcsinh}}
 \renewcommand{\Im}{\operatorname{Im}}
@@ -1310,5 +1318,110 @@ False
 \end{align*}
 
 The circulation is $0$ and the flux is $4 \pi$.
+
+\subsection{Cauchy-Goursat Theorem}
+
+\subsubsection{}
+
+\begin{align*}
+  z                          & = e^{i t},\ 0 \le t \le 2 \pi                                                     \\
+  z'                         & = i e^{i t}                                                                       \\
+  \int (z^3 - 1 + 3 i) \,d z & = \int_0^{2 \pi} [(e^{i t})^3 - 1 + 3 i] i e^{i t} \,d t                          \\
+                             & = i \int_0^{2 \pi} (e^{4 i t} - e^{i t} + 3 i e^{i t}) \,d t                      \\
+                             & = \left[ \frac{1}{4} e^{4 i t} - e^{i t} + 3 i e^{i t} \right]_0^{2 \pi}          \\
+                             & = \frac{1}{4} e^{8 \pi i} - e^{2 \pi i} + 3 i e^{2 \pi i} - \frac{1}{4} + 1 - 3 i \\
+                             & = \frac{1}{4} - 1 + 3 i - \frac{1}{4} + 1 - 3 i                                   \\
+                             & = 0
+\end{align*}
+
+\setcounter{subsubsection}{8}
+\subsubsection{}
+
+\begin{align*}
+  \int_C \frac{1}{z} \,d z & = \int_0^{2 \pi} \frac{1}{e^{i t}} i e^{i t} \,d t \\
+                           & = 2 \pi i
+\end{align*}
+
+\setcounter{subsubsection}{10}
+\subsubsection{}
+
+\begin{align*}
+  \varointctrclockwise_C \left( z + \frac{1}{z} \right) \,d z & = \varointctrclockwise_C \frac{1}{z^{-1}} \,d z + \varointctrclockwise_C \frac{1}{z} \,d z \\
+                                                              & = 0 + 2 \pi i                                                                              \\
+                                                              & = 2 \pi i
+\end{align*}
+
+\setcounter{subsubsection}{12}
+\subsubsection{}
+
+\begin{align*}
+  z^2 - \pi^2                                        & = (z + \pi) (z - \pi)                                                                         \\
+  \frac{z}{z^2 - \pi^2}                              & = \frac{1 / 2}{z + \pi} + \frac{1 / 2}{z - \pi}                                               \\
+  \varointctrclockwise_C \frac{z}{z^2 - \pi^2} \,d z & = \frac{1}{2} \varointctrclockwise \left( \frac{1}{z + \pi} + \frac{1}{z - \pi} \right) \,d z \\
+                                                     & = 0
+\end{align*}
+
+\setcounter{subsubsection}{14}
+\subsubsection{}
+
+\begin{enumerate}
+  \item
+
+        \begin{align*}
+          \frac{2 z + 1}{z^2 + z}                              & = \frac{2 z + 1}{z (z + 1)}                                                 \\
+                                                               & = \frac{1}{z} + \frac{1}{z + 1}                                             \\
+          \varointctrclockwise_C \frac{2 z + 1}{z^2 + z} \,d z & = \varointctrclockwise_C \frac{2 z + 1}{z (z + 1)} \,d z                    \\
+                                                               & = \varointctrclockwise_C \left( \frac{1}{z} + \frac{1}{z + 1} \right) \,d z \\
+                                                               & = 2 \pi i
+        \end{align*}
+
+  \item $4 \pi i$
+
+  \item $0$
+\end{enumerate}
+
+\setcounter{subsubsection}{16}
+\subsubsection{}
+
+\begin{enumerate}
+  \item
+
+        \begin{align*}
+          \frac{-3 z + 2}{z^2 - 8 z + 12}                              & = \frac{1}{z - 1} - \frac{4}{z - 6}                                           \\
+          \varointctrclockwise_C \frac{-3 z + 2}{z^2 - 8 z + 12} \,d z & = \varointctrclockwise \left( \frac{1}{z - 1} - \frac{4}{z - 6} \right) \,d z \\
+                                                                       & = -8 \pi i
+        \end{align*}
+
+  \item $-6 \pi i$
+\end{enumerate}
+
+\setcounter{subsubsection}{18}
+\subsubsection{}
+
+\begin{align*}
+  \frac{z - 1}{z (z - i) (z - 3 i)}                              & = \frac{1}{3 z} - \frac{1/2 - i / 2}{z - i} + \frac{1 / 6 - i / 2}{z - 3 i} \\
+  \varointctrclockwise_C \frac{z - 1}{z (z - i) (z - 3 i)} \,d z & = -\left( \frac{1}{2} - \frac{i}{2} \right) 2 \pi i                         \\
+                                                                 & = -\pi (1 + i)
+\end{align*}
+
+\setcounter{subsubsection}{20}
+\subsubsection{}
+
+\begin{align*}
+  \frac{8 z - 3}{z^2 - z}           & = \frac{3}{z} + \frac{5}{z - 1}                                                                                                                                 \\
+  \varointctrclockwise_C f(z) \,d z & = \varointctrclockwise_{C_1} f(z) \,d z - \varointctrclockwise_{C_2} f(z) \,d z                                                                                 \\
+                                    & = \varointctrclockwise_{C_1} \left( \frac{3}{z} + \frac{5}{z - 1} \right) \,d z - \varointctrclockwise_{C_2} \left( \frac{3}{z} + \frac{5}{z - 1} \right) \,d z \\
+                                    & = 6 \pi i - 10 \pi i                                                                                                                                            \\
+                                    & = -4 \pi i
+\end{align*}
+
+\setcounter{subsubsection}{22}
+\subsubsection{}
+
+\begin{align*}
+  \varointctrclockwise_C \left( \frac{e^z}{z + 3} - 3 \overline{z} \right) \,d z & = \varointctrclockwise_C \frac{e^z}{z + 3} \,d z - 3 \varointctrclockwise_C \overline{z} \,d z \\
+                                                                                 & = -3 \varointctrclockwise_0^{2 \pi} e^{-i t} i e^{i t} \,d t                                   \\
+                                                                                 & = -6 \pi i
+\end{align*}
 
 \end{document}
