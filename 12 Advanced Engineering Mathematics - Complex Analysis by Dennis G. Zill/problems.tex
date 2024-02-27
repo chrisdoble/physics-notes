@@ -1424,4 +1424,132 @@ The circulation is $0$ and the flux is $4 \pi$.
                                                                                  & = -6 \pi i
 \end{align*}
 
+\subsection{Independence of the Path}
+
+\subsubsection{}
+
+\begin{enumerate}
+  \item
+
+        \begin{align*}
+          z(t)                   & = i (t - 1),\ 0 \le t \le 2                                     \\
+          z'(t)                  & = i                                                             \\
+          \int_C (4 z - 1) \,d z & = \int_0^2 \{4 [i (t - 1)] - 1\} i \,d t                        \\
+                                 & = \int_0^2 [4 (1 - t) - i] \,d t                                \\
+                                 & = \left[ 4 \left( t - \frac{1}{2} t^2 \right) - i t \right]_0^2 \\
+                                 & = -2 i
+        \end{align*}
+
+  \item
+
+        \begin{align*}
+          F(z)                   & = 2 z^2 - z                           \\
+          \int_C (4 z - 1) \,d z & = F(i) - F(-i)                        \\
+                                 & = [2 (i)^2 - (i)] - [2 (-i)^2 - (-i)] \\
+                                 & = -2 - i + 2 - i                      \\
+                                 & = -2 i
+        \end{align*}
+\end{enumerate}
+
+\setcounter{subsubsection}{2}
+\subsubsection{}
+
+\begin{align*}
+  z(-1)            & = -2 + 7 i                 \\
+  z(1)             & = 2 - i                    \\
+  \int_C 2 z \,d z & = z^2|_{-2 + 7 i}^{2 - i}  \\
+                   & = (2 - i)^2 - (-2 + 7 i)^2 \\
+                   & = 48 + 24 i
+\end{align*}
+
+\setcounter{subsubsection}{4}
+\subsubsection{}
+
+\begin{align*}
+  \int_0^{3 + i} z^2 \,d z & = \left. \frac{1}{3} z^3 \right|_0^{3 + i} \\
+                           & = \frac{1}{3} (3 + i)^3                    \\
+                           & = 6 + \frac{26}{3} i
+\end{align*}
+
+\setcounter{subsubsection}{6}
+\subsubsection{}
+
+\begin{align*}
+  \int_{1 - i}^{1 + i} z^3 \,d z & = \left. \frac{1}{4} z^4 \right|_{1 - i}^{1 + i} \\
+                                 & = \frac{1}{4} [(1 + i)^4 - (1 - i)^4]            \\
+                                 & = 0
+\end{align*}
+
+\setcounter{subsubsection}{8}
+\subsubsection{}
+
+\begin{align*}
+  \int_{-i / 2}^{1 - i} (2 z + 1)^2 \,d z & = \left. z + 2 z^2 + \frac{4}{3} z^3 \right|_{-i / 2}^{1 - i} \\
+                                          & = -\frac{7}{6} - \frac{22}{3} i
+\end{align*}
+
+\setcounter{subsubsection}{10}
+\subsubsection{}
+
+\begin{align*}
+  \int_{i / 2}^i e^{\pi z} \,d z & = \left. \frac{1}{\pi} e^{\pi z} \right|_{i / 2}^i \\
+                                 & = -\frac{1}{\pi} (1 + i)
+\end{align*}
+
+\setcounter{subsubsection}{12}
+\subsubsection{}
+
+\begin{align*}
+  \int_{\pi}^{\pi + 2 i} \sin \frac{z}{2} \,d z & = \left. -2 \cos \frac{z}{2} \right|_\pi^{\pi + 2 i} \\
+                                                & = -2 \cos \left( \frac{\pi}{2} + i \right)           \\
+                                                & = 2 i \sinh 1                                        \\
+                                                & \approx 2.3504 i
+\end{align*}
+
+\setcounter{subsubsection}{14}
+\subsubsection{}
+
+\begin{align*}
+  \int_{\pi i}^{2 \pi i} \cosh z \,d z & = \sinh (2 \pi i) - \sinh (\pi i) \\
+                                       & = 0
+\end{align*}
+
+\setcounter{subsubsection}{16}
+\subsubsection{}
+
+\begin{align*}
+  \int_C \frac{1}{z} \,d z & = \Ln 4 e^{\pi i / 2} - \Ln 4 e^{-\pi i / 2}              \\
+                           & = \log_e 4 + \frac{\pi}{2} i - \log_e 4 + \frac{\pi}{2} i \\
+                           & = \pi i
+\end{align*}
+
+\setcounter{subsubsection}{18}
+\subsubsection{}
+
+\begin{align*}
+  \int_{-4 i}^{4 i} \frac{1}{z^2} \,d z & = \left. -\frac{1}{z} \right|_{-4 i}^{4 i} \\
+                                        & = -\frac{1}{4 i} - \frac{1}{4 i}           \\
+                                        & = -\frac{1}{2 i}                           \\
+                                        & = \frac{i}{2}
+\end{align*}
+
+\setcounter{subsubsection}{20}
+\subsubsection{}
+
+\begin{align*}
+  \int_\pi^i e^z \cos z \,d z & = \frac{1}{2} \int_\pi^i [e^{z (1 + i)} + e^{z (1 - i)}] \,d z                                              \\
+                              & = \frac{1}{2} \left( \left. \frac{e^{z (1 + i)}}{1 + i} + \frac{e^{z (1 - i)}}{1 - i} \right|_\pi^i \right) \\
+                              & \approx 11.4928 + 0.9667 i
+\end{align*}
+
+\setcounter{subsubsection}{22}
+\subsubsection{}
+
+\begin{align*}
+  \int_i^{1 + i} z e^z \,d z & = z e^z|_i^{1 + i} - \int_i^{1 + i} e^z \,d z \\
+                             & = (1 + i) e^{1 + i} - i e^i - [e^z]_i^{1 + i} \\
+                             & = (1 + i) e^{1 + i} - i e^i - e^{1 + i} + e^i \\
+                             & \approx -0.9055 + 1.7698 i
+\end{align*}
+
 \end{document}

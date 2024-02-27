@@ -382,4 +382,24 @@
   \includegraphics[width=\textwidth]{cauchy-goursat-theorem-multiply-connected-domains}
 \end{figure}
 
+\subsection{Independence of the Path}
+
+\begin{itemize}
+  \item Let $z_0$ and $z_1$ be points in a domain $D$. A contour integral $\int_C f(z) \,d z$ is said to be \textbf{independent of the path} if its value is the same for all contours $C$ in $D$ with an initial point $z_0$ and a terminal point $z_1$.
+
+  \item If $f$ is an analytic function in a simply connected domain $D$, then \\ $\int_C f(z) \,d z$ is independent of path $C$.
+
+  \item Suppose $f$ is continuous in a domain $D$. If there exists a function $F$ such that $F'(z) = f(z)$ for each $z$ in $D$, then $F$ is called the \textbf{antiderivative} of $f$.
+
+  \item The general antiderivative of a complex function includes a complex integration constant.
+
+  \item Suppose $f$ is continuous in a domain $D$ and $F$ is an antiderivative of $f$ in $D$. Then for any contour $C$ in $D$ with initial point $z_0$ and terminal point $z_1$, \[\int_C f(z) \,d z = F(z_1) - F(z_0).\]
+
+  \item A consequence of the above is that if $C$ is closed, then \[\varointctrclockwise_C f(z) \,d z = 0.\]
+
+  \item If $f$ is analytic in a simply connected domain $D$, then $f$ has an antiderivative in $D$; this, there exists a function $F$ such that $F'(z) = f(z)$ for all $z$ in $D$.
+
+  \item Suppose $f$ and $g$ are analytic in a simply connected domain $D$ that contains the contour $C$. If $z_0$ and $z_1$ are the initial and terminal points of $C$, then the \textbf{integration by parts} formula is valid in $D$: \[\int_{z_0}^{z_1} f(z) g'(z) \,d z = f(z) g(z)|_{z_0}^{z_1} - \int_{z_0}^{z_1} f'(z) g(z) \,d z.\]
+\end{itemize}
+
 \end{document}
