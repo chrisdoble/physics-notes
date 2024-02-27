@@ -402,4 +402,26 @@
   \item Suppose $f$ and $g$ are analytic in a simply connected domain $D$ that contains the contour $C$. If $z_0$ and $z_1$ are the initial and terminal points of $C$, then the \textbf{integration by parts} formula is valid in $D$: \[\int_{z_0}^{z_1} f(z) g'(z) \,d z = f(z) g(z)|_{z_0}^{z_1} - \int_{z_0}^{z_1} f'(z) g(z) \,d z.\]
 \end{itemize}
 
+\subsection{Cauchy's Integral Formulas}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=\textwidth]{cauchys-integral-formula}
+\end{figure}
+
+\begin{itemize}
+  \item Cauchy's integral formula is useful when a contour integral has the form \[\varointctrclockwise \frac{f(z)}{z - z_0} \,d z\] in which case you know its value is $2 \pi i f(z_0)$.
+\end{itemize}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=\textwidth]{cauchys-integral-formula-for-derivatives}
+\end{figure}
+
+\begin{itemize}
+  \item Cauchy's integral formula for derivatives is useful when a contour integral has the form \[\varointctrclockwise \frac{f(z)}{(z - z_0)^{n + 1}} \,d z\] in which case you know its value is $\frac{2 \pi i}{n!} f^{(n)}(z_0)$.
+
+  \item \textbf{Liouville's theorem} states that the only bounded entire functions are constants.
+\end{itemize}
+
 \end{document}

@@ -1552,4 +1552,101 @@ The circulation is $0$ and the flux is $4 \pi$.
                              & \approx -0.9055 + 1.7698 i
 \end{align*}
 
+\subsection{Cauchy's Integral Formulas}
+
+\subsubsection{}
+
+$8 \pi i$
+
+\setcounter{subsubsection}{2}
+\subsubsection{}
+
+$2 \pi i e^{\pi i} = -2 \pi i$
+
+\setcounter{subsubsection}{4}
+\subsubsection{}
+
+$2 \pi i [(-2 i)^2 - 3 (-2 i) + 4 i] = 2 \pi i (-4 + 10 i) = -20 \pi - 8 \pi i$
+
+\setcounter{subsubsection}{6}
+\subsubsection{}
+
+\begin{enumerate}
+  \item
+
+
+        \begin{align*}
+          \varointctrclockwise_C \frac{z^2}{z^2 + 4} \,d z & = \varointctrclockwise_C \frac{\frac{z^2}{z + 2 i}}{z - 2 i} \,d z \\
+                                                           & = 2 \pi i \frac{(2 i)^2}{(2 i) + 2 i}                              \\
+                                                           & = -2 \pi
+        \end{align*}
+
+  \item
+
+        \begin{align*}
+          \varointctrclockwise_C \frac{z^2}{z^2 + 4} \,d z & = \varointctrclockwise_C \frac{\frac{z^2}{z - 2 i}}{z + 2 i} \,d z \\
+                                                           & = 2 \pi i \frac{(-2 i)^2}{(-2 i) - 2 i}                            \\
+                                                           & = 2 \pi i \frac{-4}{-4 i}                                          \\
+                                                           & = 2 \pi
+        \end{align*}
+\end{enumerate}
+
+\setcounter{subsubsection}{8}
+\subsubsection{}
+
+\begin{align*}
+  \varointctrclockwise_C \frac{z^2 + 4}{z^2 - 5 i z - 4} \,d z & = \varointctrclockwise_C \frac{z^2 + 4}{(z - i) (z - 4 i)} \,d z     \\
+                                                               & = \varointctrclockwise_C \frac{\frac{z^2 + 4}{z - i}}{z - 4 i} \,d z \\
+                                                               & = -8 \pi
+\end{align*}
+
+\setcounter{subsubsection}{10}
+\subsubsection{}
+
+\begin{align*}
+  \frac{2 \pi i}{2!} \left. \frac{d^2}{d z^2} (e^{z^2}) \right|_{z = i} & = \pi i \left. \frac{d}{d z} (2 z e^{z^2}) \right|_{z = i} \\
+                                                                        & = \pi i \left. (2 e^{z^2} + 4 z^2 e^{z^2}) \right|_{z = i} \\
+                                                                        & = \pi i (2 e^{-1} - 4 e^{-1})                              \\
+                                                                        & = -\frac{2 \pi}{e} i
+\end{align*}
+
+\setcounter{subsubsection}{12}
+\subsubsection{}
+
+\begin{align*}
+  \varointctrclockwise_C \frac{\cos 2 z}{z^5} \,d z & = \frac{2 \pi i}{4!} \left. \frac{d^4}{d z^4} (\cos 2 z) \right|_{z = 0} \\
+                                                    & = \frac{\pi}{12} i (16 \cos 2 z)|_{z = 0}                                \\
+                                                    & = \frac{4}{3} \pi i
+\end{align*}
+
+\setcounter{subsubsection}{18}
+\subsubsection{}
+
+\begin{align*}
+  \varointctrclockwise_C \left( \frac{e^{2 i z}}{z^4} - \frac{z^4}{(z - i)^3} \right) \,d z & = \frac{2 \pi i}{3!} \left. \frac{d^3}{d z^3} (e^{2 i z}) \right|_{z = 0} - \frac{2 \pi i}{2!} \left. \frac{d^2}{d z^2} (z^4) \right|_{z = i} \\
+                                                                                            & = \frac{\pi}{3} i (-8 i e^{2 i z})|_{z = 0} - \pi i (12 z^2)|_{z = i}                                                                         \\
+                                                                                            & = \frac{8}{3} \pi + 12 \pi i
+\end{align*}
+
+\setcounter{subsubsection}{20}
+\subsubsection{}
+
+\begin{align*}
+  \varointctrclockwise_C \frac{1}{z^3 (z - 1)^2} \,d z & = \varointclockwise_{C_1} \frac{\frac{1}{(z - 1)^2}}{z^3} \,d z + \varointctrclockwise_{C_2} \frac{\frac{1}{z^3}}{(z - 1)^2} \,d z \\
+                                                       & = \frac{2 \pi i}{2!} \left. \frac{d^2}{d z^2} \left( \frac{1}{(z - 1)^2} \right) \right|_{z = 0}                                   \\
+                                                       & \qquad + 2 \pi i \left. \frac{d}{d z} \left( \frac{1}{z^3} \right) \right|_{z = 1}                                                 \\
+                                                       & = 6 \pi i - 6 \pi i                                                                                                                \\
+                                                       & = 0
+\end{align*}
+
+\setcounter{subsubsection}{22}
+\subsubsection{}
+
+\begin{align*}
+  \varointctrclockwise_C \frac{3 z + 1}{z (z - 2)^2} \,d z & = \varointctrclockwise_{C_1} \frac{\frac{3 z + 1}{z}}{(z - 2)^2} \,d z - \varointctrclockwise_{C_2} \frac{\frac{3 z + 1}{(z - 2)^2}}{z} \,d z \\
+                                                           & = 2 \pi i \left. \frac{d}{d z} \left( \frac{3 z + 1}{z} \right) \right|_{z = 2} - 2 \pi i \left. \frac{3 z + 1}{(z - 2)^2} \right|_{z = 0}    \\
+                                                           & = -\frac{1}{2} pi i - \frac{1}{2} \pi i                                                                                                       \\
+                                                           & = -\pi i
+\end{align*}
+
 \end{document}
