@@ -1649,4 +1649,116 @@ $2 \pi i [(-2 i)^2 - 3 (-2 i) + 4 i] = 2 \pi i (-4 + 10 i) = -20 \pi - 8 \pi i$
                                                            & = -\pi i
 \end{align*}
 
+\subsection{Chapter in Review}
+
+\subsubsection{}
+
+True
+
+\setcounter{subsubsection}{2}
+\subsubsection{}
+
+True
+
+\setcounter{subsubsection}{4}
+\subsubsection{}
+
+$0$
+
+\setcounter{subsubsection}{6}
+\subsubsection{}
+
+\begin{align*}
+  \varointctrclockwise_C \frac{z^3 + e^z}{(z + \pi i)^3} \,d z & = \frac{2 \pi i}{2!} \left. \frac{d^2}{d z^2} (z^3 + e^z) \right|_{z = -\pi i} \\
+                                                               & = \pi i (6 z + e^z)|_{z = -\pi i}                                              \\
+                                                               & = \pi i (-6 \pi i - 1)                                                         \\
+                                                               & = 6 \pi^2 - \pi i
+\end{align*}
+
+\setcounter{subsubsection}{8}
+\subsubsection{}
+
+\begin{align*}
+  \varointctrclockwise_C \frac{1}{(z - z_0) (z - z_1)} \,d z & = \varointctrclockwise_{C_1} \frac{\frac{1}{z - z_0}}{z - z_1} \,d z + \varointctrclockwise_{C_2} \frac{\frac{1}{z - z_1}}{z - z_0} \,d z \\
+                                                             & = 2 \pi i \frac{1}{z_1 - z_0} + 2 \pi i \frac{1}{z_0 - z_1}                                                                               \\
+                                                             & = 0
+\end{align*}
+
+True
+
+\setcounter{subsubsection}{10}
+\subsubsection{}
+
+$2 \pi i$ if $n = -1$, $0$ otherwise.
+
+\setcounter{subsubsection}{12}
+\subsubsection{}
+
+\begin{align*}
+  z_1                    & = -4 + i y, \ 0 \le y \le 2                                                                                                                      \\
+  z_1'                   & = i                                                                                                                                              \\
+  z_2                    & = x + 2 i, \ -4 \le x \le 3                                                                                                                      \\
+  z_2'                   & = 1                                                                                                                                              \\
+  z_3                    & = 3 + i (2 - y), \ 0 \le y \le 2                                                                                                                 \\
+  z_3'                   & = -i                                                                                                                                             \\
+  \int_C (x + i y) \,d z & = \int_0^2 (-4 + i y) i \,d y + \int_{-4}^3 (x + 2 i) \,d x + \int_0^2 [3 + i (2 - y)] (-i) \,d y                                                \\
+                         & = \int_0^2 (-y - 4 i) \,d y + \int_{-4}^3 (x + 2 i) \,d x - \int_0^2 [(y - 2) + 3 i] \,d y                                                       \\
+                         & = \left[ -\frac{1}{2} y^2 - 4 i y \right]_0^2 + \left[ \frac{1}{2} x^2 + 2 i x \right]_{-4}^3 - \left[ \frac{1}{2} y^2 - 2 y + 3 i y \right]_0^2 \\
+                         & = -2 - 8 i + \frac{9}{2} + 6 i - 8 + 8 i - 2 + 4 - 6 i                                                                                           \\
+                         & = -\frac{7}{2}
+\end{align*}
+
+\setcounter{subsubsection}{14}
+\subsubsection{}
+
+\begin{align*}
+  \int_C |z^2| \,d z & = \int_0^2 |(t + i t^2)^2| (1 + 2 i t) \,d t \\
+                     & = \int_0^2 (t^2 + t^4) (1 + 2 i t) \,d t     \\
+                     & = \frac{136}{15} + \frac{88}{3} i
+\end{align*}
+
+\setcounter{subsubsection}{16}
+\subsubsection{}
+
+$0$
+
+\setcounter{subsubsection}{18}
+\subsubsection{}
+
+\begin{align*}
+  z(-1)               & = 1                          \\
+  z(1)                & = 1 + 4 i                    \\
+  \int_C \sin z \,d z & = -\cos z|_1^{1 + 4 i}       \\
+                      & = \cos 1 - \cos (1 + 4 i)    \\
+                      & \approx -14.2144 + 22.9637 i
+\end{align*}
+
+\setcounter{subsubsection}{20}
+\subsubsection{}
+
+$2 \pi i$
+
+\setcounter{subsubsection}{22}
+\subsubsection{}
+
+\begin{align*}
+  \varointctrclockwise_C \frac{e^{-2 z}}{z^4} \,d z & = \frac{2 \pi i}{3!} \left. \frac{d^3}{d z^3} (e^{-2 z}) \right|_{z = 0} \\
+                                                    & = -\frac{8}{3} \pi i
+\end{align*}
+
+\setcounter{subsubsection}{24}
+\subsubsection{}
+
+\begin{align*}
+  \varointctrclockwise_C \frac{1}{2 z^2 + 7 z + 3} \,d z & = \varointctrclockwise_C \frac{\frac{1}{z + 3}}{2 z + 1} \,d z             \\
+                                                         & = \varointctrclockwise_C \frac{\frac{1}{2 (z + 3)}}{z + \frac{1}{2}} \,d z \\
+                                                         & = 2 \pi i \frac{1}{2 \left( -\frac{1}{2} + 3 \right)}                      \\
+                                                         & = \frac{2}{5} \pi i
+\end{align*}
+
+\setcounter{subsubsection}{26}
+\subsubsection{}
+
+$2 \pi$
+
 \end{document}
