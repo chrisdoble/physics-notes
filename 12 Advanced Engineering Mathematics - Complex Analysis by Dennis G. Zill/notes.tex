@@ -424,4 +424,50 @@
   \item \textbf{Liouville's theorem} states that the only bounded entire functions are constants.
 \end{itemize}
 
+\section{Series and Residues}
+
+\subsection{Sequences and Series}
+
+\begin{itemize}
+  \item A \textbf{sequence} is a function whose domain is the set of positive integers, i.e. for each integer $n = 1, 2, 3, \ldots$ we assign a complex number $z_n$.
+
+  \item If $\lim_{n \rightarrow \infty} z_n = L$ we say the sequence $\{ z_n \}$ is \textbf{convergent}. In otherwords, $\{ z_n \}$ converges to the number $L$ if, for every positive number $\varepsilon$, an $N$ can be found such that $|z_n - L| < \varepsilon$ whenever $n > N$.
+
+  \item A sequence $\{ z_n \}$ converges to a complex number $L$ if and only if $\Re (z_n)$ converges to $\Re (L)$ and $\Im (z_n)$ converges to $\Im (L)$.
+
+  \item An \textbf{infinite series} of complex numbers \[\sum_{k = 1}^\infty z_k = z_1 + z_2 + \cdots\] is \textbf{convergent} if the sequence of partial sums $\{ S_n \}$, where \[S_n = z_1 + z_2 + \cdots + z_n\] converges. If $S_n \rightarrow L$ as $n \rightarrow \infty$, we say that the \textbf{sum} of the series is $L$.
+
+  \item The sum of the geometric series \[\sum_{k = 1}^\infty a z^{k - 1} = a + a z + a z^2 + \cdots\] converges to \[\frac{a}{1 - z}\] when $|z| < 1$ and diverges otherwise.
+
+  \item If $\sum_{k = 1}^\infty z_k$ converges, then $\lim_{n \rightarrow \infty} z_n = 0$.
+
+  \item If $\lim_{n \rightarrow \infty} z_n \ne 0$ then the series $\sum_{k = 1}^\infty z_k$ diverges.
+
+  \item An infinite series $\sum_{k = 1}^\infty z_k$ is said to be \textbf{absolutely convergent} if \\ $\sum_{k = 1}^\infty |z_k|$ converges. Absolute convergence implies convergence.
+\end{itemize}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=\textwidth]{ratio-test}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=\textwidth]{root-test}
+\end{figure}
+
+\begin{itemize}
+  \item An infinite series of the form \[\sum_{k = 0}^\infty a_k (z - z_0)^k = a_0 + a_1 (z - z_0) + a_2 (z - z_0)^2 + \cdots\] where the coefficients $a_k$ are complex constants is called a \textbf{power series} in $z - z_0$. The power series is said to be \textbf{centred at $\boldsymbol{z_0}$}, and the complex point $z_0$ is referred to as the \textbf{centre} of the series.
+
+  \item Every complex power series has a \textbf{radius of convergence $\boldsymbol{R}$} where $R$ is a real number. The power series converges for all $z$ within the \textbf{circle of convergence} $|z - z_0| < R$ and diverges for $|z - z_0| > R$. The series may converge at some, all, or none of the points on the actual circle of convergence.
+
+  \item For a power series \[\sum_{k = 0}^\infty a_k (z - z_0)^k\] the ratio test depends only on the coefficients $a_k$. If \begin{enumerate}
+          \item $\lim_{n \rightarrow \infty} \left| \frac{a_{n + 1}}{a_n} \right| = L \ne 0$, the radius of convergence is $R = 1 / L$;
+
+          \item $\lim_{n \rightarrow \infty} \left| \frac{a_{n + 1}}{a_n} \right| = 0$, the radius of convergence is $\infty$;
+
+          \item $\lim_{n \rightarrow \infty} \left| \frac{a_{n + 1}}{a_n} \right| = \infty$, the radius of convergence is $R = 0$.
+        \end{enumerate}
+\end{itemize}
+
 \end{document}

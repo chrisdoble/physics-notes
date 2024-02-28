@@ -1761,4 +1761,149 @@ $2 \pi i$
 
 $2 \pi$
 
+\section{Series and Residues}
+
+\subsection{Sequences and Series}
+
+\subsubsection{}
+
+$5 i, -5, -5 i, 5, 5 i$
+
+\setcounter{subsubsection}{2}
+\subsubsection{}
+
+$0, 2, 0, 2, 0$
+
+\setcounter{subsubsection}{4}
+\subsubsection{}
+
+\[\lim_{n \rightarrow \infty} \frac{3 n i + 2}{n + n i} = \frac{3 i}{1 + i}\]
+
+Converges
+
+\setcounter{subsubsection}{6}
+\subsubsection{}
+
+\begin{align*}
+  \lim_{n \rightarrow \infty} \frac{(n i + 2)^2}{n^2 i} & = \lim_{n \rightarrow \infty} \frac{-n^2 + 4 n i + 4}{n^2 i}   \\
+                                                        & = \lim_{n \rightarrow \infty} \frac{-1 + 4 i / n + 4 / n^2}{i} \\
+                                                        & = -\frac{1}{i}
+\end{align*}
+
+Converges
+
+\setcounter{subsubsection}{8}
+\subsubsection{}
+
+Diverges
+
+\setcounter{subsubsection}{10}
+\subsubsection{}
+
+\begin{align*}
+  \frac{4 n + 3 i n}{2 n + i}                               & = \frac{(4 n + 3 i n) (2 n - i)}{(2 n + i) (2 n - i)}             \\
+                                                            & = \frac{8n^2 - 4 i n + 6 i n^2 + 3 n}{4 n^2 + 1}                  \\
+                                                            & = \frac{8 n^2 + 3 n}{4 n^2 + 1} + i \frac{6 n^2 - 4 n}{4 n^2 + 1} \\
+  \lim_{n \rightarrow \infty} \frac{8 n^2 + 3 n}{4 n^2 + 1} & = 2                                                               \\
+  \lim_{n \rightarrow \infty} \frac{6 n^2 - 4 n}{4 n^2 + 1} & = \frac{3}{2}
+\end{align*}
+
+\setcounter{subsubsection}{12}
+\subsubsection{}
+
+\begin{align*}
+  S_1                             & = \frac{1}{1 + 2 i} - \frac{1}{2 + 2i}                                         \\
+  S_2                             & = \frac{1}{1 + 2 i} - \frac{1}{2 + 2i} + \frac{1}{2 + 2 i} - \frac{1}{3 + 2 i} \\
+  S_n                             & = \frac{1}{1 + 2 i} - \frac{1}{n + 1 + 2 i}                                    \\
+  \lim_{n \rightarrow \infty} S_n & = \frac{1}{1 + 2 i}
+\end{align*}
+
+\setcounter{subsubsection}{14}
+\subsubsection{}
+
+\[|1 - i| = \sqrt{2}\]
+
+Divergent
+
+\setcounter{subsubsection}{16}
+\subsubsection{}
+
+\begin{align*}
+  \left| \frac{i}{2} \right| & = \frac{1}{2}                       \\
+  \frac{i / 2}{1 - i / 2}    & = \frac{i}{2 - i}                   \\
+                             & = \frac{i (2 + i)}{(2 - i) (2 + i)} \\
+                             & = \frac{-1 + 2 i}{5}
+\end{align*}
+
+\setcounter{subsubsection}{18}
+\subsubsection{}
+
+\begin{align*}
+  \frac{2}{1 + 2 i}                & = \frac{2 (1 - 2 i)}{(1 + 2 i) (1 - 2 i)}                            \\
+                                   & = \frac{2 - 4 i}{5}                                                  \\
+  \left| \frac{2}{1 + 2 i} \right| & = \sqrt{\left( \frac{2}{5} \right)^2 + \left( \frac{4}{5} \right)^2} \\
+                                   & = \sqrt{\frac{4}{25} + \frac{16}{25}}                                \\
+                                   & = \sqrt{\frac{20}{25}}                                               \\
+                                   & = \sqrt{\frac{4}{5}}                                                 \\
+                                   & = \frac{2}{\sqrt{5}}                                                 \\
+                                   & = \frac{2 \sqrt{5}}{5}                                               \\
+  \frac{3}{1 - \frac{2}{1 + 2 i}}  & = \frac{3 (1 + 2 i)}{1 + 2 i - 2}                                    \\
+                                   & = \frac{3 + 6 i}{-1 + 2 i}                                           \\
+                                   & = \frac{(3 + 6 i) (-1 - 2 i)}{(-1 + 2 i) (-1 - 2 i)}                 \\
+                                   & = \frac{-3 - 6 i - 6 i + 12}{5}                                      \\
+                                   & = \frac{9 - 12 i}{5}
+\end{align*}
+
+\setcounter{subsubsection}{20}
+\subsubsection{}
+
+\begin{align*}
+  a_k                                                              & = \frac{1}{(1 - 2 i)^{k + 1}}                                                            \\
+  \lim_{n \rightarrow \infty} \left| \frac{a_{n + 1}}{a_n} \right| & = \lim_{n \rightarrow \infty} \left| \frac{(1 - 2 i)^{n + 1}}{(1 - 2 i)^{n + 2}} \right| \\
+                                                                   & = \left| \frac{1}{1 - 2 i} \right|                                                       \\
+                                                                   & = \left| \frac{1 + 2 i}{(1 - 2 i) (1 + 2 i)} \right|                                     \\
+                                                                   & = \left| \frac{1 + 2 i}{5} \right|                                                       \\
+                                                                   & = \frac{\sqrt{5}}{5}                                                                     \\
+  R                                                                & = \sqrt{5}
+\end{align*}
+
+The circle of convergence is $|z - 2 i| = \sqrt{5}$.
+
+\setcounter{subsubsection}{22}
+\subsubsection{}
+
+\begin{align*}
+  a_k                                                              & = \frac{(-1)^k}{k 2^k}                                                                                     \\
+  \lim_{n \rightarrow \infty} \left| \frac{a_{n + 1}}{a_n} \right| & = \lim_{n \rightarrow \infty} \left| \frac{(-1)^{n + 1} / [(n + 1) 2^{(n + 1)}]}{(-1)^n / (n 2^n)} \right| \\
+                                                                   & = \lim_{n \rightarrow \infty} \left| \frac{n 2^n}{(n + 1) 2^{(n + 1)}} \right|                             \\
+                                                                   & = \lim_{n \rightarrow \infty} \left| \frac{n}{2 (n + 1)} \right|                                           \\
+                                                                   & = \frac{1}{2}                                                                                              \\
+  R                                                                & = 2
+\end{align*}
+
+The circle of convergence is $|z - 1 - i| = 2$.
+
+\setcounter{subsubsection}{24}
+\subsubsection{}
+
+\begin{align*}
+  a_k                                                                              & = (1 + 3 i)^k                           \\
+  \lim_{n \rightarrow \infty} \left| \frac{(1 + 3 i)^{n + 1}}{(1 + 3 i)^n} \right| & = \lim_{n \rightarrow \infty} |1 + 3 i| \\
+                                                                                   & = \sqrt{10}                             \\
+  R                                                                                & = \frac{1}{\sqrt{10}}
+\end{align*}
+
+The circle of convergence is $|z - i| = \frac{1}{\sqrt{10}}$.
+
+\setcounter{subsubsection}{26}
+\subsubsection{}
+
+\begin{align*}
+  a_k                                                                      & = \frac{1}{5^{2 k}} \\
+  \lim_{n \rightarrow \infty} \left| \frac{5^{2 n}}{5^{2 (n + 1)}} \right| & = \frac{1}{25}      \\
+  R                                                                        & = 25
+\end{align*}
+
+The circle of convergence is $|z - 4 - 3 i| = 25$.
+
 \end{document}
