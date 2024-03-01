@@ -1906,4 +1906,166 @@ The circle of convergence is $|z - i| = \frac{1}{\sqrt{10}}$.
 
 The circle of convergence is $|z - 4 - 3 i| = 25$.
 
+\subsection{Taylor Series}
+
+\subsubsection{}
+
+\begin{align*}
+  f(z) & = \frac{z}{1 + z}                      \\
+       & = z (1 - z + z^2 - z^3 + \cdots)       \\
+       & = z - z^2 + z^3 - z^4 + \cdots         \\
+       & = \sum_{k = 1}^\infty (-1)^{k + 1} z^k \\
+  R    & = 1
+\end{align*}
+
+\setcounter{subsubsection}{2}
+\subsubsection{}
+
+\begin{align*}
+  f(z)                            & = \frac{1}{(1 + 2 z)^2}                            \\
+  \frac{1}{1 + 2 z}               & = 1 - 2 z + 4 z^2 - 8 z^3 + 16 z^4 - \cdots        \\
+                                  & = \sum_{k = 0}^\infty (-1)^k (2 z)^k               \\
+  \frac{d}{d z} \frac{1}{1 + 2 z} & = -\frac{2}{(1 + 2 z)^2}                           \\
+                                  & = \sum_{k = 1}^\infty (-1)^k 2 k (2 z)^{k - 1}     \\
+  f(z)                            & = \sum_{k = 1}^\infty (-1)^{k - 1} k (2 z)^{k - 1} \\
+  R                               & = \frac{1}{2}
+\end{align*}
+
+\setcounter{subsubsection}{4}
+\subsubsection{}
+
+\begin{align*}
+  f(z) & = e^{-2 z}                                \\
+       & = \sum_{k = 0}^\infty \frac{(-2 z)^k}{k!} \\
+  R    & = \infty
+\end{align*}
+
+\setcounter{subsubsection}{6}
+\subsubsection{}
+
+\begin{align*}
+  f(z) & = \sinh z                                                 \\
+       & = \frac{e^z - e^{-z}}{2}                                  \\
+       & = \frac{1}{2} \sum_{k = 0}^\infty \frac{z^k - (-z)^k}{k!} \\
+       & = \sum_{k = 0}^\infty \frac{z^{2 k + 1}}{(2 k + 1)!}      \\
+  R    & = \infty
+\end{align*}
+
+\setcounter{subsubsection}{8}
+\subsubsection{}
+
+\begin{align*}
+  f(z) & = \cos \frac{z}{2}                                        \\
+       & = \sum_{k = 0}^\infty (-1)^k \frac{(z / 2)^{2 k}}{(2 k)!} \\
+  R    & = \infty
+\end{align*}
+
+\setcounter{subsubsection}{10}
+\subsubsection{}
+
+\begin{align*}
+  f(z) & = \sin z^2                                                  \\
+       & = \sum_{k = 0}^\infty (-1)^k \frac{z^{4 k + 2}}{(2 k + 1)!} \\
+  R    & = \infty
+\end{align*}
+
+\setcounter{subsubsection}{12}
+\subsubsection{}
+
+\begin{align*}
+  f(z)       & = \frac{1}{z}                                          \\
+  f'(z)      & = -\frac{1}{z^2}                                       \\
+  f''(z)     & = \frac{2}{z^3}                                        \\
+  f'''(z)    & = -\frac{6}{z^4}                                       \\
+  f^{(n)}(z) & = (-1)^n \frac{n!}{z^{n + 1}}                          \\
+  f(z)       & = \sum_{k = 0}^\infty \frac{f^{(k)} (1)}{k!} (z - 1)^k \\
+             & = \sum_{k = 0}^\infty (-1)^k (z - 1)^k                 \\
+  R          & = 1
+\end{align*}
+
+\setcounter{subsubsection}{14}
+\subsubsection{}
+
+\begin{align*}
+  f(z)       & = \frac{1}{3 - z}                                             \\
+  f'(z)      & = \frac{1}{(3 - z)^2}                                         \\
+  f''(z)     & = \frac{2}{(3 - z)^3}                                         \\
+  f^{(n)}(z) & = \frac{n!}{(3 - z)^{n + 1}}                                  \\
+  f(z)       & = \sum_{k = 0}^\infty \frac{f^{(k)} (2 i)}{k!} (z - 2 i)^k    \\
+             & = \sum_{k = 0}^\infty \frac{1}{(3 - 2 i)^{k + 1}} (z - 2 i)^k \\
+  R          & = \sqrt{13}
+\end{align*}
+
+\setcounter{subsubsection}{16}
+\subsubsection{}
+
+\begin{align*}
+  f(z)       & = \frac{z - 1}{3 - z}                                               \\
+  f^{(n)}(z) & = (-1)^{n + 1} \frac{2 n!}{(z - 3)^{n + 1}}                         \\
+  f(z)       & = \sum_{k = 1}^\infty \frac{f^{(k)} (1)}{k!} (z - 1)^k              \\
+             & = \sum_{k = 1}^\infty (-1)^{k + 1} \frac{2}{(-2)^{k + 1}} (z - 1)^k \\
+             & = \sum_{k = 1}^\infty \frac{(z - 1)^k}{2^k}                         \\
+  R          & = 2
+\end{align*}
+
+\setcounter{subsubsection}{18}
+\subsubsection{}
+
+\begin{align*}
+  f(z)       & = \cos z                                                                                                                                                  \\
+  f'(z)      & = -\sin z                                                                                                                                                 \\
+  f''(z)     & = -\cos z                                                                                                                                                 \\
+  f'''(z)    & = \sin z                                                                                                                                                  \\
+  f^{(4)}(z) & = \cos z                                                                                                                                                  \\
+  f(z)       & = \sum_{k = 0}^\infty \frac{f^{(k)} (\pi / 4)}{k!} (z - \pi / 4)^k                                                                                        \\
+             & = \frac{\sqrt{2}}{2} - \frac{\sqrt{2}}{2 (1!)} (z - \pi / 4) - \frac{\sqrt{2}}{2 (2!)} (z - \pi / 4)^2 + \frac{\sqrt{2}}{2 (3!)} (z - \pi / 4)^3 + \cdots \\
+  R          & = \infty
+\end{align*}
+
+\setcounter{subsubsection}{20}
+\subsubsection{}
+
+\begin{align*}
+  f(z) & = e^z                                                     \\
+       & = \sum_{k = 0}^\infty \frac{f^{(k)}(3 i)}{k!} (z - 3 i)^k \\
+       & = e^{3 i} \sum_{k = 0}^\infty \frac{(z - 3 i)^k}{k!}      \\
+  R    & = \infty
+\end{align*}
+
+\setcounter{subsubsection}{22}
+\subsubsection{}
+
+\[f(z) = z + \frac{1}{3} z^3 + \frac{2}{15} z^5 + \cdots\]
+
+\setcounter{subsubsection}{24}
+\subsubsection{}
+
+\begin{align*}
+  f(z)       & = \frac{i}{(z - i) (z - 2 i)}                                                      \\
+             & = \frac{1}{z - 2 i} - \frac{1}{z - i}                                              \\
+  f^{(n)}(z) & = (-1)^n n! \left( \frac{1}{(z - 2 i)^{n + 1}} - \frac{1}{(z - i)^{n + 1}} \right) \\
+  f^{(n)}(0) & = (-1)^n n! \left( \frac{1}{(-2 i)^{n + 1}} - \frac{1}{(-i)^{n + 1}} \right)       \\
+             & = n! \left( \frac{1}{i^{n + 1}} - \frac{1}{(2 i)^{n + 1}} \right)                  \\
+             & = \frac{n!}{i^{n + 1}} \left( 1 - \frac{1}{2^{n + 1}} \right)                      \\
+  f(z)       & = \sum_{k = 0}^\infty \frac{1 - \frac{1}{2^{k + 1}}}{i^{k + 1}} z^k                \\
+  R          & = 1
+\end{align*}
+
+\setcounter{subsubsection}{26}
+\subsubsection{}
+
+$R = \sqrt{20} = 2 \sqrt{5}$
+
+\setcounter{subsubsection}{28}
+\subsubsection{}
+
+\begin{align*}
+  f(z)       & = \frac{1}{z + 2}                                              \\
+  f^{(n)}(z) & = (-1)^n \frac{n!}{(z + 2)^{n + 1}}                            \\
+  f_1(z)     & = \sum_{k = 0}^\infty (-1)^k (z + 1)^k                         \\
+  R_1        & = 1                                                            \\
+  f_2(z)     & = \sum_{k = 0}^\infty (-1)^k \frac{(z - i)^k}{(2 + i)^{k + 1}} \\
+  R_2        & = \sqrt{5}
+\end{align*}
+
 \end{document}
