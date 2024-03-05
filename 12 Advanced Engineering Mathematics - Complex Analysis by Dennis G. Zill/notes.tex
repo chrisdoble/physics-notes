@@ -490,4 +490,25 @@
   \item The radius of convergence of a Taylor series is the distance from the centre $z_0$ to the nearest isolated singularity: a point at which the series fails to be analytic but is analytic at all points in some neighborhood of the point.
 \end{itemize}
 
+\subsection{Laurent Series}
+
+\begin{itemize}
+  \item If a complex function $f$ fails to be analytic at a point $z = z_0$, then this point is said to be a \textbf{singularity} or a \textbf{singular point} of the function.
+
+  \item Suppose $z = z_0$ is a singularity of a complex function $f$. It is said to be an \textbf{isolated singularity} if there exists some \textbf{deleted neighborhood}, or \textbf{punctured open disk}, $0 < |z - z_0| < R$ of $z_0$ in which $f$ is analytic.
+
+  \item A singular point $z = z_0$ of a complex function $f$ is said to be \textbf{nonisolated} if every neighborhood of $z_0$ contains at least one singularity of $f$ other than $z_0$.
+\end{itemize}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=\textwidth]{laurents-theorem}
+\end{figure}
+
+\begin{itemize}
+  \item Under Laurent's theorem, the part of $f(z)$ with negative powers of $z - z_0$ is called the \textbf{principle part} and the part with positive powers is called the \textbf{analytic part}.
+
+  \item The coefficient formula of theorem 19.3.1 isn't used often. Generally $f$ is decomposed into functions for which the series are known (e.g. $\cos z$, $e^z$, etc.), and those series are combined to find the Laurent series.
+\end{itemize}
+
 \end{document}

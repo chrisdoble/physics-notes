@@ -2068,4 +2068,113 @@ $R = \sqrt{20} = 2 \sqrt{5}$
   R_2        & = \sqrt{5}
 \end{align*}
 
+\subsection{Laurent Series}
+
+\subsubsection{}
+
+\begin{align*}
+  f(z) & = \frac{\cos z}{z}                                                        \\
+       & = \frac{1}{z} \left( 1 - \frac{z^2}{2!} + \frac{z^4}{4!} + \cdots \right) \\
+       & = \frac{1}{z} - \frac{z}{2!} + \frac{z^3}{4!} + \cdots
+\end{align*}
+
+\setcounter{subsubsection}{2}
+\subsubsection{}
+
+\begin{align*}
+  f(z) & = e^{-1 / z^2}                                                        \\
+       & = 1 - \frac{1}{1! z^2} + \frac{1}{2! z^4} - \frac{1}{3! z^6} + \cdots
+\end{align*}
+
+\setcounter{subsubsection}{4}
+\subsubsection{}
+
+\begin{align*}
+  f(z) & = \frac{e^z}{z - 1}                                                                                          \\
+       & = \frac{e^{1 + z - 1}}{z - 1}                                                                                \\
+       & = \frac{e}{z - 1} \left( 1 + \frac{z - 1}{1!} + \frac{(z - 1)^2}{2!} + \frac{(z - 1)^3}{3!} + \cdots \right) \\
+       & = \frac{e}{z - 1} + e + \frac{e (z - 1)}{2!} + \frac{e (z - 1)^2}{3!} + \cdots
+\end{align*}
+
+\setcounter{subsubsection}{6}
+\subsubsection{}
+
+\begin{align*}
+  f(z) & = \frac{1}{z (z - 3)}                                                                     \\
+       & = -\frac{1}{3 z} \frac{1}{1 - \frac{z}{3}}                                                \\
+       & = -\frac{1}{3 z} \left( 1 + \frac{z}{3} + \frac{z^2}{9} + \frac{z^3}{27} + \cdots \right) \\
+       & = -\frac{1}{3 z} - \frac{1}{9} - \frac{z}{27} - \frac{z^2}{81} - \cdots
+\end{align*}
+
+\setcounter{subsubsection}{8}
+\subsubsection{}
+
+\begin{align*}
+  f(z) & = \frac{1}{z (z - 3)}                                                                                                                   \\
+       & = \frac{1}{z - 3} \frac{1}{3 + z - 3}                                                                                                   \\
+       & = \frac{1}{3 (z - 3)} \frac{1}{1 + \frac{z - 3}{3}}                                                                                     \\
+       & = \frac{1}{3 (z - 3)} \left[ 1 - \frac{z - 3}{3} + \left( \frac{z - 3}{3} \right)^2 - \left( \frac{z - 3}{3} \right)^3 + \cdots \right] \\
+       & = \frac{1}{3 (z - 3)} - \frac{1}{3^2} + \frac{z - 3}{3^3} - \frac{(z - 3)^2}{3^4} + \cdots
+\end{align*}
+
+\setcounter{subsubsection}{10}
+\subsubsection{}
+
+\begin{align*}
+  f(z) & = \frac{1}{z (z - 3)}                                                                                                                      \\
+       & = \frac{1}{3 (z - 3)} - \frac{1}{3 z}                                                                                                      \\
+       & = \frac{1}{3 (1 + z - 4)} - \frac{1}{3 (4 + z - 4)}                                                                                        \\
+       & = \frac{1}{3 (z - 4)} \frac{1}{1 + \frac{1}{z - 4}} - \frac{1}{12} \frac{1}{1 + \frac{z - 4}{4}}                                           \\
+       & = \frac{1}{3 (z - 4)} \left( 1 - \frac{1}{z - 4} + \frac{1}{(z - 4)^2} - \frac{1}{(z - 4)^3} + \cdots \right)                              \\
+       & \qquad - \frac{1}{12} \left[ 1 - \frac{z - 4}{4} + \left( \frac{z - 4}{4} \right)^2 - \left( \frac{z - 4}{4} \right)^3 + \cdots \right]    \\
+       & = \cdots - \frac{1}{3 (z - 4)^2} + \frac{1}{3 (z - 4)} - \frac{1}{12} + \frac{z - 4}{3 \cdot 4^2} - \frac{(z - 4)^2}{3 \cdot 4^3} + \cdots
+\end{align*}
+
+\setcounter{subsubsection}{12}
+\subsubsection{}
+
+\begin{align*}
+  f(z) & = \frac{1}{(z - 1) (z - 2)}                                                                      \\
+       & = \frac{1}{1 - z} - \frac{1}{2 - z}                                                              \\
+       & = -\frac{1}{z} \frac{1}{1 - \frac{1}{z}} - \frac{1}{2} \frac{1}{1 - \frac{z}{2}}                 \\
+       & = -\frac{1}{z} \left( 1 + \frac{1}{z} + \frac{1}{z^2} + \frac{1}{z^3} + \cdots \right)           \\
+       & \qquad - \frac{1}{2} \left( 1 + \frac{z}{2} + \frac{z^2}{2^2} + \frac{z^3}{2^3} + \cdots \right) \\
+       & = \cdots - \frac{1}{z^2} - \frac{1}{z} - \frac{1}{2} - \frac{z}{2^2} - \frac{z^2}{2^3} - \cdots
+\end{align*}
+
+\setcounter{subsubsection}{14}
+\subsubsection{}
+
+\begin{align*}
+  f(z) & = \frac{1}{(z - 1) (z - 2)}                           \\
+       & = -\frac{1}{z - 1} + \frac{1}{z - 2}                  \\
+       & = -\frac{1}{z - 1} + \frac{1}{-1 + z - 1}             \\
+       & = -\frac{1}{z - 1} - \frac{1}{1 - (z - 1)}            \\
+       & = -\frac{1}{z - 1} - 1 - (z - 1) - (z - 1)^2 - \cdots
+\end{align*}
+
+\setcounter{subsubsection}{16}
+\subsubsection{}
+
+\begin{align*}
+  f(z) & = \frac{z}{(z + 1) (z - 2)}                                                                                                                           \\
+       & = \frac{1}{3 (z + 1)} + \frac{2}{3 (z - 2)}                                                                                                           \\
+       & = \frac{1}{3 (z + 1)} + \frac{2}{3 (-3 + z + 1)}                                                                                                      \\
+       & = \frac{1}{3 (z + 1)} - \frac{2}{9 \left( 1 - \frac{z + 1}{3} \right)}                                                                                \\
+       & = \frac{1}{3 (z + 1)} - \frac{2}{9} \left[ 1 + \frac{z + 1}{3} + \left( \frac{z + 1}{3} \right)^2 + \left( \frac{z + 1}{3} \right)^3 + \cdots \right] \\
+       & = \frac{1}{3 (z + 1)} - \frac{2}{3^2} - \frac{2 (z + 1)}{3^3} - \frac{2 (z + 1)^2}{3^4} - \cdots
+\end{align*}
+
+\setcounter{subsubsection}{18}
+\subsubsection{}
+
+\begin{align*}
+  f(z) & = \frac{z}{(z + 1) (z - 2)},\ 1 < |z| < 2                                                                         \\
+       & = \frac{2}{3 (z - 2)} + \frac{1}{3 (z + 1)}                                                                       \\
+       & = -\frac{1}{3 \left( 1 - \frac{z}{2} \right)} + \frac{1}{3 z \left( 1 + \frac{1}{z} \right)}                      \\
+       & = -\frac{1}{3} \left[ 1 + \frac{z}{2} + \left( \frac{z}{2} \right)^2 + \cdots \right]                             \\
+       & \qquad + \frac{1}{3 z} \left( 1 - \frac{1}{z} + \frac{1}{z^2} - \cdots \right)                                    \\
+       & = \cdots - \frac{1}{3 z^2} + \frac{1}{3 z} - \frac{1}{3} - \frac{z}{3 \cdot 2} - \frac{z^2}{3 \cdot 2^2} - \cdots
+\end{align*}
+
 \end{document}
