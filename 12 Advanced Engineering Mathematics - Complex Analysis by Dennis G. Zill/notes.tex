@@ -511,4 +511,38 @@
   \item The coefficient formula of theorem 19.3.1 isn't used often. Generally $f$ is decomposed into functions for which the series are known (e.g. $\cos z$, $e^z$, etc.), and those series are combined to find the Laurent series.
 \end{itemize}
 
+\subsection{Zeroes and Poles}
+
+\begin{itemize}
+  \item An isolated singularity $z = z_0$ can be categorised based on the number of terms contained in the principal part of its Laurent expansion (the part with negative powers).
+
+        \begin{itemize}
+          \item If the principal part is zero, i.e. the Laurent expansion consists only of parts with nonnegative powers, then $z = z_0$ is called a \textbf{removable singularity}.
+
+          \item If the principal part contains a finite number of nonzero terms, then $z = z_0$ is called a \textbf{pole}. If the last nonzero coefficient of the principal part is $a_{-n}, n \ge 1$ then we say that $z = z_0$ is a \textbf{pole of order $\boldsymbol{n}$}. A pole of order $1$ is called a \textbf{simple pole}.
+
+          \item If the principal part contains infinitely many nonzero terms, then $z = z_0$ is called an \textbf{essential singularity}.
+        \end{itemize}
+\end{itemize}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=\textwidth]{classification-of-isolated-singular-points}
+\end{figure}
+
+\begin{itemize}
+  \item A point $z_0$ is said to be a \textbf{zero} of a function $f$ if $f(z_0) = 0$.
+
+  \item A point $z_0$ is said to be a \textbf{zero of order $\boldsymbol{n}$} of a function $f$ if $f(z_0) = 0,\ f'(z_0) = 0,\ \ldots,\ f^{(n - 1)}(z_0) = 0$ but $f^{(n)}(z_0) \ne 0$.
+\end{itemize}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=\textwidth]{pole-of-order-n}
+\end{figure}
+
+\begin{itemize}
+  \item Theorem 19.4.1 can sometimes be used to determine the poles of a function by inspection, e.g. in \[F(z) = \frac{2 z + 5}{z - 1}\] the denominator has a zero of order $1$ at $z = 1$ and the numerator is nonzero at that point so $F$ has a simple pole at $z = 1$.
+\end{itemize}
+
 \end{document}
