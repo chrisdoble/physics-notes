@@ -15,6 +15,7 @@
 \renewcommand{\Im}{\operatorname{Im}}
 \newcommand{\Ln}{\operatorname{Ln}}
 \renewcommand{\Re}{\operatorname{Re}}
+\newcommand{\Res}{\operatorname{Res}}
 
 \setlist[enumerate, 1]{label={(\alph*)}}
 \setlist[enumerate, 2]{label={(\roman*)}}
@@ -2262,5 +2263,165 @@ Poles are $z = -2$ order $1$, and $z = -i$ order $4$.
 \end{align*}
 
 Poles are $z = \frac{\pi}{2} + n \pi,\, n \in \mathbb{R}$ order $1$.
+
+\subsection{Residues and Residue Theorem}
+
+\subsubsection{}
+
+\begin{align*}
+  f(z)          & = \frac{2}{(z - 1) (z + 4)}                                                                          \\
+                & = \frac{2}{z - 1} \frac{1}{5 + z - 1}                                                                \\
+                & = \frac{2}{5 (z - 1)} \frac{1}{1 + \frac{z - 1}{5}}                                                  \\
+                & = \frac{2}{5 (z - 1)} \left[ 1 - \frac{z - 1}{5} + \left( \frac{z - 1}{5} \right)^2 - \cdots \right] \\
+                & = \frac{2}{5 (z - 1)} - \frac{2}{5^2} + \frac{2 (z - 1)}{5^3} - \cdots                               \\
+  \Res(f(z), 1) & = \frac{2}{5}
+\end{align*}
+
+\setcounter{subsubsection}{2}
+\subsubsection{}
+
+\begin{align*}
+  f(z)          & = \frac{4 z - 6}{z (2 - z)}                                                                             \\
+                & = \frac{4 z - 6}{2 z} \frac{1}{1 - \frac{z}{2}}                                                         \\
+                & = \left( 2 - \frac{3}{z} \right) \left[ 1 + \frac{z}{2} + \left( \frac{z}{2} \right)^2 + \cdots \right] \\
+  \Res(f(z), 0) & = -3
+\end{align*}
+
+\setcounter{subsubsection}{4}
+\subsubsection{}
+
+\begin{align*}
+  f(z)          & = e^{-2 / z^2}                                        \\
+                & = 1 - \frac{2}{z^2} + \frac{4}{2! \cdot z^4} + \cdots \\
+  \Res(f(z), 0) & = 0
+\end{align*}
+
+\setcounter{subsubsection}{6}
+\subsubsection{}
+
+\begin{align*}
+  f(z)             & = \frac{z}{z^2 + 16}                                                \\
+                   & = \frac{z}{(z + 4 i) (z - 4 i)}                                     \\
+  \Res(f(z), -4 i) & = \lim_{z \rightarrow -4 i} (z + 4 i) \frac{z}{(z + 4 i) (z - 4 i)} \\
+                   & = \frac{-4 i}{-8 i}                                                 \\
+                   & = \frac{1}{2}                                                       \\
+  \Res(f(z), 4 i)  & = \frac{1}{2}
+\end{align*}
+
+\setcounter{subsubsection}{8}
+\subsubsection{}
+
+\begin{align*}
+  f(z)           & = \frac{1}{z^4 + z^3 - 2 z^2}                                    \\
+                 & = \frac{1}{z^2 (z^2 + z - 2)}                                    \\
+                 & = \frac{1}{z^2 (z - 1) (z + 2)}                                  \\
+  \Res(f(z), 1)  & = \frac{1}{3}                                                    \\
+  \Res(f(z), -2) & = -\frac{1}{12}                                                  \\
+  \Res(f(z), 0)  & = \lim_{z \rightarrow 0} \frac{d}{d z} \frac{1}{(z - 1) (z + 2)} \\
+                 & = -\frac{1}{4}
+\end{align*}
+
+\setcounter{subsubsection}{10}
+\subsubsection{}
+
+\begin{align*}
+  f(z)           & = \frac{5 z^2 - 4 z + 3}{(z + 1) (z + 2) (z + 3)} \\
+  \Res(f(z), -1) & = 6                                               \\
+  \Res(f(z), -2) & = -31                                             \\
+  \Res(f(z), -3) & = 30
+\end{align*}
+
+\setcounter{subsubsection}{12}
+\subsubsection{}
+
+\begin{align*}
+  f(z)            & = \frac{\cos z}{z^2 (z - \pi)^3}                               \\
+  \Res(f(z), 0)   & = -\frac{3}{\pi^4}                                             \\
+  \Res(f(z), \pi) & = \frac{1}{2} \left( \frac{1}{\pi^2} - \frac{6}{\pi^4} \right)
+\end{align*}
+
+\setcounter{subsubsection}{14}
+\subsubsection{}
+
+\begin{align*}
+  f(z)                                            & = \sec z                                               \\
+                                                  & = \frac{1}{\cos z}                                     \\
+  \Res \left( f(z), \frac{\pi}{2} + n \pi \right) & = \frac{1}{-\sin \left( \frac{\pi}{2} + n \pi \right)} \\
+                                                  & = (-1)^{n + 1}
+\end{align*}
+
+\setcounter{subsubsection}{16}
+\subsubsection{}
+
+\begin{enumerate}
+  \item $0$
+
+  \item
+
+        \begin{align*}
+          \Res(f(z), 1)                                            & = \frac{1}{9}       \\
+          \varointctrclockwise_C \frac{1}{(z - 1) (z + 2)^2} \,d z & = \frac{2}{9} \pi i
+        \end{align*}
+
+  \item
+
+        \begin{align*}
+          \Res(f(z), -2)                                           & = -\frac{1}{9} \\
+          \varointctrclockwise_C \frac{1}{(z - 1) (z + 2)^2} \,d z & = 0
+        \end{align*}
+\end{enumerate}
+
+\setcounter{subsubsection}{18}
+\subsubsection{}
+
+\begin{enumerate}
+  \item
+
+        \begin{align*}
+          f(z)                              & = z^3 e^{-1 / z^2}                                                                                         \\
+                                            & = z^3 \left( 1 - \frac{1}{1! \cdot z^2} + \frac{1}{2! \cdot z^4} - \frac{1}{3! \cdot z^6} + \cdots \right) \\
+                                            & = z^3 - \frac{z}{1!} + \frac{1}{2! \cdot z} - \frac{1}{3! \cdot z^3} + \cdots                              \\
+          \Res(f(z), 0)                     & = \frac{1}{2}                                                                                              \\
+          \varointctrclockwise_C f(z) \,d z & = \pi i
+        \end{align*}
+
+  \item $\pi i$
+
+  \item $0$
+\end{enumerate}
+
+\setcounter{subsubsection}{20}
+\subsubsection{}
+
+\begin{align*}
+  f(z)                              & = \frac{1}{z^2 + 4 z + 13}                         \\
+                                    & = \frac{1}{(z + 2 + 3 i) (z + 2 - 3 i)}            \\
+  \Res(f(z), -2 + 3 i)              & = \lim_{z \rightarrow -2 + 3 i} (z + 2 - 3 i) f(z) \\
+                                    & = \frac{1}{6 i}                                    \\
+                                    & = -\frac{1}{6} i                                   \\
+  \varointctrclockwise_C f(z) \,d z & = \frac{\pi}{3}
+\end{align*}
+
+\setcounter{subsubsection}{22}
+\subsubsection{}
+
+\begin{align*}
+  f(z)                              & = \frac{z}{z^4 - 1}                                                             \\
+                                    & = \frac{z}{(z^2 + 1) (z^2 - 1)}                                                 \\
+                                    & = \frac{z}{(z + i) (z - i) (z + 1) (z - 1)}                                     \\
+  \varointctrclockwise_C f(z) \,d z & = 2 \pi i \left( -\frac{1}{4} - \frac{1}{4} + \frac{1}{4} + \frac{1}{4} \right) \\
+                                    & = 0
+\end{align*}
+
+\setcounter{subsubsection}{24}
+\subsubsection{}
+
+\begin{align*}
+  f(z)                              & = \frac{z e^z}{z^2 - 1}                              \\
+                                    & = \frac{z e^z}{(z + 1) (z - 1)}                      \\
+  \varointctrclockwise_C f(z) \,d z & = 2 \pi i \left( \frac{1}{2 e} + \frac{e}{2} \right) \\
+                                    & = 2 \pi i \frac{e + e^{-1}}{2}                       \\
+                                    & = 2 \pi i \cosh 1
+\end{align*}
 
 \end{document}

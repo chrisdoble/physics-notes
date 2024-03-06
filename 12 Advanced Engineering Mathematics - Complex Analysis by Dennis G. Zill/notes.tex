@@ -17,6 +17,7 @@
 \newcommand{\Ln}{\operatorname{Ln}}
 \renewcommand{\Im}{\operatorname{Im}}
 \renewcommand{\Re}{\operatorname{Re}}
+\newcommand{\Res}{\operatorname{Res}}
 \renewcommand{\vec}[1]{\boldsymbol{\mathbf{#1}}}
 
 \title{Advanced Engineering Mathematics Complex Analysis by Dennis G. Zill Notes}
@@ -543,6 +544,35 @@
 
 \begin{itemize}
   \item Theorem 19.4.1 can sometimes be used to determine the poles of a function by inspection, e.g. in \[F(z) = \frac{2 z + 5}{z - 1}\] the denominator has a zero of order $1$ at $z = 1$ and the numerator is nonzero at that point so $F$ has a simple pole at $z = 1$.
+\end{itemize}
+
+\subsection{Residues and Residue Theorem}
+
+\begin{itemize}
+  \item If a complex function $f$ has an isolated singularity at a point $z_0$ then it has a Laurent series representation \[f(z) = \sum_{k = -\infty}^\infty a_k (z - z_0)^k.\] The coefficient $a_{-1}$ of $1 / (z - z_0)$ is called the \textbf{residue} of $f$ at $z_0$ and is denoted \[a_{-1} = \Res(f(z), z_0).\]
+\end{itemize}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=\textwidth]{residue-of-a-simple-pole}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=\textwidth]{residue-of-a-pole-of-order-n}
+\end{figure}
+
+\begin{itemize}
+  \item Suppose a complex function $f$ can be written as a quotient $f(z) = g(z) / h(z)$ where $g$ and $h$ are analytic at $z = z_0$. If $g(z_0) \ne 0$ and $h$ has a zero of order $1$ at $z_0$, then $f$ has a simple pole at $z = z_0$ and \[\Res(f(z), z_0) = \frac{g(z)}{h'(z)}.\]
+\end{itemize}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=\textwidth]{cauchys-residue-theorem}
+\end{figure}
+
+\begin{itemize}
+  \item L'Hôpital's rule is valid for complex analysis.
 \end{itemize}
 
 \end{document}
