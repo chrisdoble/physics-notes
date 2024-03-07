@@ -2521,4 +2521,175 @@ Poles are $z = \frac{\pi}{2} + n \pi,\, n \in \mathbb{R}$ order $1$.
                                                            & = \pi
 \end{align*}
 
+\subsection{Chapter in Review}
+
+\subsubsection{}
+
+True
+
+\setcounter{subsubsection}{2}
+\subsubsection{}
+
+\begin{align*}
+  f(z) & = \frac{1}{z - 3}                                                                       \\
+       & = -\frac{1}{3} \frac{1}{1 - \frac{z}{3}}                                                \\
+       & = -\frac{1}{3} \left( 1 + \frac{z}{3} + \frac{z^2}{9} + \frac{z^3}{27} + \cdots \right) \\
+       & = -\frac{1}{3} - \frac{z}{9} - \frac{z^2}{27} - \frac{z^3}{81} - \cdots
+\end{align*}
+
+False
+
+\setcounter{subsubsection}{4}
+\subsubsection{}
+
+\begin{align*}
+  f(z) & = e^{1 / (z - 1)}                                                                                       \\
+       & = 1 + \frac{1}{1! \cdot (z - 1)} + \frac{1}{2! \cdot (z - 1)^2} + \frac{1}{3! \cdot (z - 1)^3} + \cdots
+\end{align*}
+
+True
+
+\setcounter{subsubsection}{6}
+\subsubsection{}
+
+True
+
+\setcounter{subsubsection}{8}
+\subsubsection{}
+
+\begin{align*}
+  f(z)          & = \cot \pi z                    \\
+                & = \frac{\cos \pi z}{\sin \pi z} \\
+  \Res(f(z), 0) & = \frac{\cos 0}{\pi \cos 0}     \\
+                & = \frac{1}{\pi}
+\end{align*}
+
+\setcounter{subsubsection}{10}
+\subsubsection{}
+
+\begin{align*}
+  \lim_{n \rightarrow \infty} \left| \frac{\frac{(z - i)^{n + 1}}{(2 + i)^{n + 2}}}{\frac{(z - i)^n}{(2 + i)^{n + 1}}} \right| & = \left| \frac{z - i}{2 + i} \right| \\
+  \left| \frac{z - i}{2 + i} \right|                                                                                           & = 1                                  \\
+  \frac{|z - i|}{\sqrt{5}}                                                                                                     & = 1                                  \\
+  |z - i|                                                                                                                      & = \sqrt{5}
+\end{align*}
+
+\setcounter{subsubsection}{12}
+\subsubsection{}
+
+\begin{align*}
+  f(z)       & = e^z \cos z                                                           \\
+             & = e^z \frac{e^{i z} + e^{-i z}}{2}                                     \\
+             & = \frac{e^{z (1 + i)} + e^{z (1 - i)}}{2}                              \\
+  f^{(n)}(z) & = \frac{(1 + i)^n e^{z (1 + i)} + (1 - i)^n e^{z (1 - i)}}{2}          \\
+  f^{(n)}(0) & = \frac{(1 + i)^n + (1 - i)^n}{2}                                      \\
+             & = (\sqrt{2})^n \cos \frac{n \pi}{4}                                    \\
+  f(z)       & = 1 + \sum_{k = 1}^\infty \frac{(\sqrt{2})^k \cos (k \pi / 4)}{k!} z^k
+\end{align*}
+
+\setcounter{subsubsection}{14}
+\subsubsection{}
+
+\begin{align*}
+  f(z) & = \frac{1 - e^{i z}}{z^4}                                                                                                       \\
+       & = \frac{1}{z^4} - \frac{1}{z^4} \left( 1 + \frac{i z}{1!} - \frac{z^2}{2!} - \frac{i z^3}{3!} + \frac{z^4}{4!} + \cdots \right) \\
+       & = -\frac{i}{1! \cdot z^3} + \frac{1}{2! \cdot z^2} + \frac{i}{3! \cdot z} - \frac{1}{4!} - \frac{i z}{5!} + \cdots
+\end{align*}
+
+\setcounter{subsubsection}{16}
+\subsubsection{}
+
+\begin{align*}
+  f(z) & = (z - i)^2 \sin \frac{1}{z - i}                                                                                  \\
+       & = (z - i)^2 \left[ \frac{1}{z - i} - \frac{1}{3! \cdot (z - i)^3} + \frac{1}{5! \cdot (z - i)^5} - \cdots \right] \\
+       & = (z - i) - \frac{1}{3! \cdot (z - i)} + \frac{1}{5! \cdot (z - i)^3} - \cdots
+\end{align*}
+
+\setcounter{subsubsection}{18}
+\subsubsection{}
+
+\begin{enumerate}
+  \item
+
+        \begin{align*}
+          f(z) & = \frac{2}{z^2 - 4 z + 3}                                                                      \\
+               & = \frac{1}{1 - z} - \frac{1}{3} \frac{1}{1 - \frac{z}{3}}                                      \\
+               & = (1 + z + z^2 + \cdots) - \frac{1}{3} \left( 1 + \frac{z}{3} + \frac{z^2}{9} + \cdots \right) \\
+               & = \frac{2}{3} + \frac{8}{9} z + \frac{26}{27} z^2 + \cdots
+        \end{align*}
+
+  \item
+
+        \begin{align*}
+          f(z) & = \frac{2}{z^2 - 4 z + 3}                                                                                                                      \\
+               & = -\frac{1}{3} \frac{1}{1 - \frac{z}{3}} - \frac{1}{z} \frac{1}{1 - \frac{1}{z}}                                                               \\
+               & = -\frac{1}{3} \left( 1 + \frac{z}{3} + \frac{z^2}{3^2} + \cdots \right) - \frac{1}{z} \left( 1 + \frac{1}{z} + \frac{1}{z^2} + \cdots \right) \\
+               & = \cdots - \frac{1}{z^2} - \frac{1}{z} - \frac{1}{3} - \frac{z}{3^2} - \frac{z^2}{3^3} - \cdots
+        \end{align*}
+
+  \item
+
+        \begin{align*}
+          f(z) & = \frac{2}{z^2 - 4 z + 3}                                                                                                                     \\
+               & = \frac{1}{z - 3} - \frac{1}{z - 1}                                                                                                           \\
+               & = \frac{1}{z} \frac{1}{1 - \frac{3}{z}} - \frac{1}{z} \frac{1}{1 - \frac{1}{z}}                                                               \\
+               & = \frac{1}{z} \left( 1 + \frac{3}{z} + \frac{3^2}{z^2} + \cdots \right) - \frac{1}{z} \left( 1 + \frac{1}{z} + \frac{1}{z^2} + \cdots \right) \\
+               & = \frac{1}{z} \left( \frac{2}{z} + \frac{8}{z^2} + \frac{26}{z^3} + \cdots \right)                                                            \\
+               & = \frac{2}{z^2} + \frac{8}{z^3} + \frac{26}{z^4} + \cdots
+        \end{align*}
+
+  \item
+
+        \begin{align*}
+          f(z) & = \frac{2}{z^2 - 4 z + 3}                                                              \\
+               & = \frac{2}{(z - 1) (z - 3)}                                                            \\
+               & = \frac{2}{(z - 1) (-2 + z - 1)}                                                       \\
+               & = -\frac{1}{z - 1} \frac{1}{1 - \frac{z - 1}{2}}                                       \\
+               & = -\frac{1}{z - 1} \left[ 1 + \frac{z - 1}{2} + \frac{(z - 1)^2}{2^2} + \cdots \right] \\
+               & = -\frac{1}{z - 1} - \frac{1}{2} - \frac{z - 1}{2^2} - \cdots
+        \end{align*}
+\end{enumerate}
+
+\setcounter{subsubsection}{20}
+\subsubsection{}
+
+\begin{align*}
+  \varointctrclockwise_C \frac{2 z + 5}{z (z + 2) (z - 1)^4} \,d z & = 2 \pi i [\Res(f(z), 0) + \Res(f(z), -2)]           \\
+                                                                   & = 2 \pi i \left( \frac{5}{2} - \frac{1}{162} \right) \\
+                                                                   & = \frac{404}{81} \pi i
+\end{align*}
+
+\setcounter{subsubsection}{22}
+\subsubsection{}
+
+\begin{align*}
+  2 \sin z - 1                                        & = 0                                               \\
+  \sin z                                              & = \frac{1}{2}                                     \\
+  z                                                   & = \frac{\pi}{6}                                   \\
+  \varointctrclockwise_C \frac{1}{2 \sin z - 1} \,d z & = 2 \pi i \Res \left( f(z), \frac{\pi}{6} \right) \\
+                                                      & = 2 \pi i \frac{1}{2 \cos \frac{\pi}{6}}          \\
+                                                      & = \frac{2}{\sqrt{3}} \pi i
+\end{align*}
+
+\setcounter{subsubsection}{24}
+\subsubsection{}
+
+\begin{align*}
+  \varointctrclockwise_C \frac{e^{2 z}}{z^4 + 2 z^3 + 2 z^2} \,d z & = \varointctrclockwise_C \frac{e^{2 z}}{z^2 (z^2 + 2 z + 2)} \,d z                             \\
+                                                                   & = \varointctrclockwise_C \frac{e^{2 z}}{z^2 (z + 1 + i) (z + 1 - i)} \,d z                     \\
+                                                                   & = 2 \pi i [\Res(f(z), 0) + \Res(f(z), -1 - i) + \Res(f(z), -1 + i)]                            \\
+                                                                   & = 2 \pi i \left( \frac{1}{2} + \frac{1}{4} e^{-2 (1 + i)} + \frac{1}{4} e^{-2 (1 - i)} \right) \\
+                                                                   & = (\pi + \pi e^{-2} \cos 2) i
+\end{align*}
+
+\setcounter{subsubsection}{30}
+\subsubsection{}
+
+\begin{align*}
+  \int_{-\infty}^\infty \frac{x^2}{(x^2 + 2 x + 2) (x^2 + 1)^2} \,d x & = \varointctrclockwise_C \frac{z^2}{(z + 1 + i) (z + 1 - i) (z + i)^2 (z - i)^2} \,d z  \\
+                                                                      & = 2 \pi i [\Res(f(z), -1 + i) + \Res(f(z), i)]                                          \\
+                                                                      & = 2 \pi i \left( \frac{3}{25} - \frac{4}{25} i - \frac{3}{25} + \frac{9}{100} i \right) \\
+                                                                      & = \frac{7}{50} \pi
+\end{align*}
+
 \end{document}
