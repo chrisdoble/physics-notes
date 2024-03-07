@@ -575,4 +575,45 @@
   \item L'Hôpital's rule is valid for complex analysis.
 \end{itemize}
 
+\subsection{Evaluation of Real Integrals}
+
+\begin{itemize}
+  \item An integral of the form \[\int_0^{2 \pi} F(\cos \theta, \sin \theta) \,d \theta\] where $F$ is a rational function can be evaluated by converting it to a complex integral where the contour is the unit circle centred at the origin \[\varointctrclockwise_C F \left( \frac{1}{2}(z + z^{-1}), \frac{1}{2 i} (z - z^{-1}) \right) \frac{d z}{i z}\] where $C$ is $|z| = 1$.
+
+  \item An improper integral of the form $\int_{-\infty}^\infty f(x) \,d x$ is defined in terms of two limits \[\int_{-\infty}^\infty f(x) \,d x = \lim_{r \rightarrow \infty} \int_{-r}^0 f(x) \,d x + \lim_{R \rightarrow \infty} \int_0^R f(x) \,d x.\] If both limits exist, the integral is said to be \textbf{convergent}. If one or both of the limits fail to exist the integral is said to be \textbf{divergent}.
+
+  \item If we know a priori that an improper integral converges we can evaluate it with a single limit \[\int_{-\infty}^\infty f(x) \,d x = \lim_{R \rightarrow \infty} \int_{-R}^R f(x) \,d x.\] However, this limit may exist even if the improper integral is divergent in which case it is called the \textbf{Cauchy principal value} and is denoted \[\text{P.V.} \int_{-\infty}^\infty f(x) \,d x.\]
+
+  \item An integral of the form \[\int_{-\infty}^\infty f(x) \,d x\] where $f(x) = P(x) / Q(x)$ is continuous on $(-\infty, \infty)$ can be evaluated by replacing $x$ with the complex variable $z$ and integrating over a closed contour $C$ consisting of the interval $[-R, R]$ on the real axis and a semicircle $C_R$ of radius large enough to enclose all the poles of $f(z) = P(z) / Q(z)$ in the upper half-plane $\Re(z) > 0$. By Cauchy's residue theorem we have \[\varointctrclockwise_C f(z) \,d z = \int_{C_R} f(z) \,d z + \int_{-R}^R f(x) \,d x = 2 \pi i \sum_{k = 1}^n \Res(f(z), z_k)\] and if we assume $\int_{C_R} f(z) \,d z \rightarrow 0$ as $R \rightarrow \infty$ we get \[\text{P.V.} \int_{-\infty}^\infty f(x) \,d x = 2 \pi i \sum_{k = 1}^n \Res(f(z), z_k).\]
+\end{itemize}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=\textwidth]{theorem-19.6.1}
+\end{figure}
+
+\begin{itemize}
+  \item Integrals of the form $\int_{-\infty}^\infty f(x) \cos \alpha x \,d x$ and $\int_{-\infty}^\infty f(x) \sin \alpha x \,d x, \,\alpha > 0$ are referred to as \textbf{Fourier integrals}. They appear as the real an imaginary parts in the improper integal $\int_{-\infty}^\infty f(x) e^{i \alpha x} \,d x$.
+
+  \item When $f(x) = P(x) / Q(x)$ is continuous on $(-\infty, \infty)$ we can evaluate both forms of Fourier integrals at the same time by considering the integral $\int_C f(z) e^{i \alpha z} \,d z$ where $\alpha > 0$ and and the contour $C$ consists of the interval $[-R, R]$ on the real axis and a semicircular contour $C_R$ with radius large enough to enclose the poles of $f(z)$ in the upper half-plane.
+\end{itemize}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=\textwidth]{theorem-19.6.2}
+\end{figure}
+
+\begin{itemize}
+  \item The above approaches to evaluating integrals of the form $\int_{-\infty}^\infty f(x) \,d x$, $\int_{-\infty}^\infty f(x) \cos \alpha x \,d x$, and $\int_{-\infty}^\infty f(x) \sin \alpha x \,d x$ all assume $f(x)$ is continuous on $(-\infty, \infty)$. If that's not the case and $f(x)$ has a pole at $z = c$ we instead use an \textbf{indented contour} where a semicircular contour centred at $z = c$ is included to bypass the pole.
+\end{itemize}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=\textwidth]{theorem-19.6.3}
+\end{figure}
+
+\begin{itemize}
+  \item Using the above theorem we can evaluate an integral where $f(x)$ has a pole on the real axis at $z = c$ by replacing $x$ with the complex variable $z$ and integrating over a closed contour $C$ consisting of the interval $[-R, c - r]$, a positively-oriented semicircle $C_r$ of radius $r$ centred at $z = c$, the interval $[c + r, R]$, and a semicircle $C_R$ of radius $R$ centred at $z = 0$. By Cauchy's residue theorem we have \[\varointctrclockwise_C = \int_{-R}^{c - r} + \int_{-C_r} + \int_{c + r}^R + \int_{C_R} = 2 \pi i \sum_{k = 1}^n \Res(f(z), z_k)\] and by theorem 19.6.3 as we take the limit $R \rightarrow \infty$ and $r \rightarrow 0$ we get \[\text{P.V.} \int_{-\infty}^\infty f(x) \,d x = \pi i \Res(f(z), c) + 2 \pi i \sum_{k = 1}^n \Res(f(z), z_k).\]
+\end{itemize}
+
 \end{document}

@@ -2424,4 +2424,101 @@ Poles are $z = \frac{\pi}{2} + n \pi,\, n \in \mathbb{R}$ order $1$.
                                     & = 2 \pi i \cosh 1
 \end{align*}
 
+\subsection{Evaluation of Real Integrals}
+
+\subsubsection{}
+
+\begin{align*}
+  \int_0^{2 \pi} \frac{1}{1 + 0.5 \sin \theta} \,d \theta & = \varointctrclockwise_C \frac{1}{1 + \frac{1}{2} \frac{1}{2 i} (z - z^{-1})} \frac{d z}{i z} \\
+                                                          & = \varointctrclockwise_C \frac{1}{i z + \frac{1}{4} z^2 - \frac{1}{4}} \,d z                  \\
+                                                          & = 4 \varointctrclockwise_C \frac{1}{z^2 + 4 i z - 1} \,d z                                    \\
+                                                          & = 4 \varointctrclockwise_C \frac{1}{[z + (2 + \sqrt{3}) i] [z + (2 - \sqrt{3}) i]} \,d z      \\
+                                                          & = 4 \cdot 2 \pi i \Res(f(z), (-2 + \sqrt{3}) i)                                               \\
+                                                          & = \frac{4 \pi}{\sqrt{3}}
+\end{align*}
+
+\setcounter{subsubsection}{2}
+\subsubsection{}
+
+\begin{align*}
+  \int_0^{2 \pi} \frac{\cos \theta}{3 + \sin \theta} \,d \theta & = \varointctrclockwise_C \frac{\frac{1}{2} (z + z^{-1})}{3 + \frac{1}{2 i} (z - z^{-1})} \frac{d z}{i z} \\
+                                                                & = \varointctrclockwise_C \frac{z + z^{-1}}{z^2 + 6 i z - 1} \,d z                                        \\
+                                                                & = \varointctrclockwise_C \frac{z^2 + 1}{z (z^2 + 6 i z - 1)} \,d z                                       \\
+                                                                & = \varointctrclockwise_C \frac{z^2 + 1}{z [z + (3 + 2 \sqrt{2}) i] [z + (3 - 2 \sqrt{2}) i]} \,d z       \\
+                                                                & = 2 \pi i [\Res(f(z), 0) + \Res(f(z), (-3 + 2 \sqrt{2}) i)]                                              \\
+                                                                & = 2 \pi i (-1 + 1)                                                                                       \\
+                                                                & = 0
+\end{align*}
+
+\setcounter{subsubsection}{4}
+\subsubsection{}
+
+\begin{align*}
+  \int_0^\pi \frac{1}{2 - \cos \theta} \,d \theta & = \frac{1}{2} \int_{-\pi}^\pi \frac{1}{2 - \cos \theta} \,d \theta                          \\
+                                                  & = \frac{1}{2} \int_0^{2 \pi} \frac{1}{2 + \cos t} \,d t                                     \\
+                                                  & = \frac{1}{2} \varointctrclockwise_C \frac{1}{2 + \frac{1}{2} (z + z^{-1})} \frac{d z}{i z} \\
+                                                  & = \frac{1}{i} \varointctrclockwise_C \frac{1}{z^2 + 4 z + 1} \,d z                          \\
+                                                  & = \frac{1}{i} \varointctrclockwise_C \frac{1}{(z + 2 + \sqrt{3}) (z + 2 - \sqrt{3})} \,d z  \\
+                                                  & = \frac{1}{i} 2 \pi i \Res(f(z), -2 + \sqrt{3})                                             \\
+                                                  & = \frac{\pi}{\sqrt{3}}
+\end{align*}
+
+\setcounter{subsubsection}{10}
+\subsubsection{}
+
+\begin{align*}
+  \int_{-\infty}^\infty \frac{1}{x^2 - 2 x + 2} \,d x & = \varointctrclockwise_C \frac{1}{(z - 1 - i) (z - 1 + i)} \,d z \\
+                                                      & = 2 \pi i \Res(f(z), 1 + i)                                      \\
+                                                      & = \pi
+\end{align*}
+
+\setcounter{subsubsection}{12}
+\subsubsection{}
+
+\begin{align*}
+  \int_{-\infty}^\infty \frac{1}{(x^2 + 4)^2} \,d x & = \varointctrclockwise_C \frac{1}{(z + 2 i)^2 (z - 2 i)^2} \,d z       \\
+                                                    & = 2 \pi i \Res(f(z), 2 i)                                              \\
+                                                    & = 2 \pi i \lim_{z \rightarrow 2 i} \frac{d}{d z} \frac{1}{(z + 2 i)^2} \\
+                                                    & = \frac{\pi}{16}
+\end{align*}
+
+\setcounter{subsubsection}{14}
+\subsubsection{}
+
+\begin{align*}
+  \int_{-\infty}^\infty \frac{1}{(x^2 + 1)^3} \,d x & = \varointctrclockwise_C \frac{1}{(z + i)^3 (z - i)^3} \,d z                       \\
+                                                    & = 2 \pi i \Res(f(z), i)                                                            \\
+                                                    & = 2 \pi i \frac{1}{2} \lim_{z \rightarrow i} \frac{d^2}{d z^2} \frac{1}{(z + i)^3} \\
+                                                    & = \frac{3 \pi}{8}
+\end{align*}
+
+\setcounter{subsubsection}{20}
+\subsubsection{}
+
+\begin{align*}
+  \int_{-\infty}^\infty \frac{\cos x}{x^2 + 1} \,d x & = \Re \left( \varointctrclockwise_C \frac{1}{z^2 + 1} e^{i z} \,d z \right)         \\
+                                                     & = \Re \left( \varointctrclockwise_C \frac{1}{(z + i) (z - i)} e^{i z} \,d z \right) \\
+                                                     & = \Re [2 \pi i \Res(f(z), i)]                                                       \\
+                                                     & = \frac{\pi}{e}
+\end{align*}
+
+\setcounter{subsubsection}{22}
+\subsubsection{}
+
+\begin{align*}
+  \int_{-\infty}^\infty \frac{x \sin x}{x^2 + 1} \,d x & = \Im \left( \varointctrclockwise_C \frac{z}{z^2 + 1} e^{i z} \,d z \right) \\
+                                                       & = \Im \left( \frac{z}{(z + i) (z - i)} e^{i z} \,d z \right)                \\
+                                                       & = \Im [2 \pi i \Res(f(z), i)]                                               \\
+                                                       & = \frac{\pi}{e}
+\end{align*}
+
+\setcounter{subsubsection}{30}
+\subsubsection{}
+
+\begin{align*}
+  \text{P.V.} \int_{-\infty}^\infty \frac{\sin x}{x} \,d x & = \Im \left( \varointctrclockwise_C \frac{e^{i z}}{z} \,d z \right) \\
+                                                           & = \Im [\pi i \Res(f(z), 0)]                                         \\
+                                                           & = \pi
+\end{align*}
+
 \end{document}
