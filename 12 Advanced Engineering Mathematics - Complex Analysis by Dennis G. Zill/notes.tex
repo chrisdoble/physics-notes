@@ -616,4 +616,22 @@
   \item Using the above theorem we can evaluate an integral where $f(x)$ has a pole on the real axis at $z = c$ by replacing $x$ with the complex variable $z$ and integrating over a closed contour $C$ consisting of the interval $[-R, c - r]$, a positively-oriented semicircle $C_r$ of radius $r$ centred at $z = c$, the interval $[c + r, R]$, and a semicircle $C_R$ of radius $R$ centred at $z = 0$. By Cauchy's residue theorem we have \[\varointctrclockwise_C = \int_{-R}^{c - r} + \int_{-C_r} + \int_{c + r}^R + \int_{C_R} = 2 \pi i \sum_{k = 1}^n \Res(f(z), z_k)\] and by theorem 19.6.3 as we take the limit $R \rightarrow \infty$ and $r \rightarrow 0$ we get \[\text{P.V.} \int_{-\infty}^\infty f(x) \,d x = \pi i \Res(f(z), c) + 2 \pi i \sum_{k = 1}^n \Res(f(z), z_k).\]
 \end{itemize}
 
+\section{Conformal Mappings}
+
+\subsection{Complex Functions as Mappings}
+
+\begin{itemize}
+  \item A complex function can be considered a geometric mapping from the $z$ plane where $z = x + i y$ to the $w$ plane where $w = f(z) = u(x, y) + i v(x, y) = u + i v$. In this case, $f$ is called a \textbf{planar transformation} and $w$ is the \textbf{image} of $z$ under $f$.
+
+  \item The function $f(z) = z + z_0$ can be interpreted as a translation in the $z$-plane.
+
+  \item The function $f(z) = e^{i \theta_0} z$ can be interprested as a rotation in the $z$-plane.
+
+  \item The function $f(z) = e^{i \theta_0} z + z_0$ can be interpreted as a rotation followed by a translation in the $z$-plane.
+
+  \item The function $f(z) = \alpha z$ can be interpreted as a magnification in the $z$-plane.
+
+  \item A complex function of the form $f(z) = z^\alpha$ where $\alpha$ is a fixed positive real number is called a \textbf{real power function}. If $z = r e^{i \theta}$ then $w = f(z) = r^\alpha e^{i \alpha \theta}$.
+\end{itemize}
+
 \end{document}

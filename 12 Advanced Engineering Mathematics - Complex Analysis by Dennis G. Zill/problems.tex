@@ -12,6 +12,7 @@
 }
 
 \newcommand{\arcsinh}{\operatorname{arcsinh}}
+\newcommand{\Arg}{\operatorname{Arg}}
 \renewcommand{\Im}{\operatorname{Im}}
 \newcommand{\Ln}{\operatorname{Ln}}
 \renewcommand{\Re}{\operatorname{Re}}
@@ -2691,5 +2692,96 @@ True
                                                                       & = 2 \pi i \left( \frac{3}{25} - \frac{4}{25} i - \frac{3}{25} + \frac{9}{100} i \right) \\
                                                                       & = \frac{7}{50} \pi
 \end{align*}
+
+\section{Conformal Mappings}
+
+\subsection{Complex Functions as Mappings}
+
+\subsubsection{}
+
+\begin{align*}
+  z    & = x + i x               \\
+  f(z) & = \frac{1}{z}           \\
+       & = \frac{1}{x + i x}     \\
+       & = \frac{x - i x}{2 x^2} \\
+       & = \frac{1 - i}{2 x}     \\
+       & = \frac{1}{2 x} (1 - i) \\
+  v    & = -u
+\end{align*}
+
+\setcounter{subsubsection}{2}
+\subsubsection{}
+
+\begin{align*}
+  z    & = x + i \frac{1}{x}         \\
+  f(z) & = z^2                       \\
+       & = x^2 - \frac{1}{x^2} + 2 i \\
+  v    & = 2
+\end{align*}
+
+\setcounter{subsubsection}{4}
+\subsubsection{}
+
+\begin{align*}
+  |z|  & = 1, \,y > 0          \\
+  f(z) & = \Ln z               \\
+       & = \log_e 1 + i \theta \\
+  v    & = t, \,0 < t < \pi
+\end{align*}
+
+\setcounter{subsubsection}{6}
+\subsubsection{}
+
+\[\theta = \frac{\theta_0}{2}\]
+
+\setcounter{subsubsection}{10}
+\subsubsection{}
+
+$f(z) = z^{-1}$ so $w = r^{-1} e^{-i \theta}$ which is the fourth quadrant.
+
+\setcounter{subsubsection}{12}
+\subsubsection{}
+
+The segment $\pi / 4 \le \theta \le \pi / 2$.
+
+\setcounter{subsubsection}{14}
+\subsubsection{}
+
+The circle $|w - 4 i| = 1$.
+
+\setcounter{subsubsection}{16}
+\subsubsection{}
+
+The strip $-1 \le u \le 0$.
+
+\setcounter{subsubsection}{18}
+\subsubsection{}
+
+Wedge $0 \le \Arg w \le 3 \pi / 4$.
+
+\setcounter{subsubsection}{20}
+\subsubsection{}
+
+\[w = -i z - 1\]
+
+\setcounter{subsubsection}{22}
+\subsubsection{}
+
+\[w = 2 z - 2\]
+
+\setcounter{subsubsection}{24}
+\subsubsection{}
+
+\[w = (e^{-\pi i / 4} z)^4 = e^{-\pi i} z^4 = -z^4\]
+
+\setcounter{subsubsection}{26}
+\subsubsection{}
+
+\[w = (e^z)^{3 / 2} = e^{3 z / 2}\]
+
+\setcounter{subsubsection}{28}
+\subsubsection{}
+
+\[w = -z + i\]
 
 \end{document}
