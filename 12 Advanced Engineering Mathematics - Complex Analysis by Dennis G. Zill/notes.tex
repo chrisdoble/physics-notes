@@ -13,6 +13,7 @@
   urlcolor=blue
 }
 
+\newcommand{\adj}{\operatorname{adj}}
 \newcommand{\Arg}{\operatorname{Arg}}
 \newcommand{\Ln}{\operatorname{Ln}}
 \renewcommand{\Im}{\operatorname{Im}}
@@ -659,6 +660,54 @@
 
           \item The solution to the original Dirichlet problem is $u(x, y) = U(f(z))$.
         \end{enumerate}
+\end{itemize}
+
+\subsection{Linear Fractional Transformations}
+
+\begin{itemize}
+  \item If $a$, $b$, $c$, and $d$ are complex constants with $a d - b c \ne 0$, then the complex function defined by \[T(z) = \frac{a z + b}{c z + d}\] is called a \textbf{linear fractional transformation}.
+
+  \item Since \[T'(z) = \frac{a d - b c}{(c z + d)^2}\] $T$ is conformal at $z$ provided $\Delta = a d - b c \ne 0$ and $z \ne -d / c$.
+
+  \item When $c \ne 0$, $T(z)$ has a simple pole at $z_0 = -d / c$ and so \[\lim_{z \rightarrow z_0} |T(z)| = \infty\] or $T(z_0) = \infty$.
+
+  \item When $c \ne 0$ \[\lim_{|z| \rightarrow \infty} T(z) = \lim_{|z| \rightarrow \infty} \frac{a + b / z}{c + d / z} = \frac{a}{c}\] or $T(\infty) = \frac{a}{c}$.
+\end{itemize}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=\textwidth]{circle-preserving-property}
+\end{figure}
+
+\begin{itemize}
+  \item A linear fractional transformation \[T(z) = \frac{a z + b}{c z + d}\] can be associated with the matrix \[\vec{A} = \begin{pmatrix}
+            a & b \\
+            c & d
+          \end{pmatrix}.\]
+
+  \item Given two linear fractional transformations \[T_1(z) = \frac{a_1 z + b_1}{c_1 z + d_1}\] and \[T_2(z) = \frac{a_2 z + b_2}{c_2 z + d_2}\] the composite function $T(z) = T_2(T_1(z))$ can be described by the matrix \[\begin{pmatrix}
+            a & b \\
+            c & d
+          \end{pmatrix} = \begin{pmatrix}
+            a_2 & b_2 \\
+            c_2 & d_2
+          \end{pmatrix} \begin{pmatrix}
+            a_1 & b_1 \\
+            c_1 & d_1
+          \end{pmatrix}.\]
+
+  \item If $w = T(z) = (a z + b) / (c z + d)$ then $z = T^{-1}(w) = (d w - b) / (-c w + a)$ which has the associated matrix \[\begin{pmatrix}
+            d  & -b \\
+            -c & a
+          \end{pmatrix} = \adj \vec{A}.\]
+
+  \item Linear fractional transformations are useful for mapping circular regions to other regions in which Dirichlet problems are easier to solve. A circular boundary is defined by three of its points, so it's sufficient for the transformation to map three points to three other points.
+
+  \item The linear fractional transformation \[T(z) = \frac{z - z_1}{z - z_3} \frac{z_2 - z_3}{z_2 - z_1}\] maps $z_1$ to $0$, $z_2$ to $1$, and $z_3$ to $\infty$. The transformation \[S(w) = \frac{w - w_1}{w - w_3} \frac{w_2 - w_3}{w_2 - w_1}\] maps $w_1$, $w_2$, and $w_3$ similarly, but $S^{-1}$ maps $0$ to $w_1$, $1$ to $w_2$, and $\infty$ to $w_3$ so $w = S^{-1}(T(z))$ or $S(w) = T(z)$ maps $z_1$ to $w_1$, $z_2$ to $w_2$, and $z_3$ to $w_3$. This is what we need to map a circle to another region.
+
+  \item You can use the above to determine a transformation that maps a circle to another region by either substituting $w_n$ and $z_n$ into the equation or use matrix methods to calculate $w = S^{-1}(T(z))$.
+
+  \item If a $z_n = \infty$ each factor that contains $z_n$ is replaced by $1$.
 \end{itemize}
 
 \end{document}
