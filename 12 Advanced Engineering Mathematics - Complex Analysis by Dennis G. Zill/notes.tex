@@ -634,4 +634,31 @@
   \item A complex function of the form $f(z) = z^\alpha$ where $\alpha$ is a fixed positive real number is called a \textbf{real power function}. If $z = r e^{i \theta}$ then $w = f(z) = r^\alpha e^{i \alpha \theta}$.
 \end{itemize}
 
+\subsection{Conformal Mappings}
+
+\begin{itemize}
+  \item A complex mapping $w = f(z)$ defined on a domain $D$ is called \textbf{conformal at $z = z_0$} in $D$ when $f$ preserves the angles between any two curves in $D$ that intersect at $z_0$.
+
+  \item If $f(z)$ is analytic in the domain $D$ and $f'(z_0) \ne 0$, then $f$ is conformal at $z = z_0$.
+\end{itemize}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=\textwidth]{transformation-theorem-for-harmonic-functions}
+\end{figure}
+
+\begin{itemize}
+  \item Conformal mappings can be used to solve Dirichlet problems by:
+
+        \begin{enumerate}
+          \item Finding a conformal mapping $w = f(z)$ that transforms the original region $R$ onto the image region $R'$ in which the problem is easier to solve.
+
+          \item Transfer the boundary conditions from the boundary of $R$ to the boundary of $R'$. The value $u$ at a boundary point $\xi$ of $R$ is assigned as the value of $U$ at the corresponding boundary point $f(\xi)$.
+
+          \item Solve the corresponding Dirichlet problem in $R'$.
+
+          \item The solution to the original Dirichlet problem is $u(x, y) = U(f(z))$.
+        \end{enumerate}
+\end{itemize}
+
 \end{document}

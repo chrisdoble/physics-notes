@@ -4,6 +4,7 @@
 \usepackage{bookmark} % For links
 \usepackage{enumitem} % For customisable list labels
 \usepackage{esint} % For contour integrals
+\usepackage{siunitx} % For units
 
 \hypersetup{
   colorlinks=true,
@@ -2783,5 +2784,107 @@ Wedge $0 \le \Arg w \le 3 \pi / 4$.
 \subsubsection{}
 
 \[w = -z + i\]
+
+\subsection{Conformal Mappings}
+
+\subsubsection{}
+
+\begin{align*}
+  f(z)  & = z^3 - 3 z + 1 \\
+  f'(z) & = 3 z^2 - 3
+\end{align*}
+
+Conformal except at $z = \pm 1$.
+
+\setcounter{subsubsection}{2}
+\subsubsection{}
+
+\begin{align*}
+  f(z)  & = z + e^z + 1 \\
+  f'(z) & = 1 + e^z
+\end{align*}
+
+Conformal except at $z = (\pi + 2 \pi n) i, \,n \in \mathbb{R}$.
+
+\setcounter{subsubsection}{6}
+\subsubsection{}
+
+\begin{align*}
+  w & = \cos z             \\
+    & = \sin (\pi / 2 - z)
+\end{align*}
+
+The image is the same as in example 2 except rotated $\ang{180}$.
+
+A horizontal line $z(t) = t + i b$ is mapped onto either the upper or lower portion of the ellipse \[\frac{u^2}{\cosh^2 b} + \frac{v^2}{\sinh^2 b} = 1\] according to whether $b < 0$ or $b > 0$, respectively.
+
+\setcounter{subsubsection}{8}
+\subsubsection{}
+
+The image is the wedge $0 \le \Arg z \le \frac{\pi}{4}$. The line segment $[-\pi / 2, 0]$ maps to the line from the origin to $(\sqrt{2} / 2, \sqrt{2} / 2)$ and the line segment $[0, \pi / 2]$ maps to the line from the origin to $(1, 0)$.
+
+\setcounter{subsubsection}{10}
+\subsubsection{}
+
+\[w = \cos \left( \frac{\pi z}{2} \right)\]
+
+$B A$ maps to the range $[1, \infty)$ on the $u$-axis.
+
+        \setcounter{subsubsection}{12}
+        \subsubsection{}
+
+        \[w = \left( \frac{1 + z}{1 - z} \right)^{1 / 2}\]
+
+      $A B$ maps to the line from $e^{\pi i / 4}$ out to infinite on the same ray from the origin.
+
+        \setcounter{subsubsection}{14}
+        \subsubsection{}
+
+        \[w = \left( \frac{e^{\pi / z} + e^{-\pi / z}}{e^{\pi / z} - e^{-\pi z}} \right)^{1 / 2}\]
+
+      $B C$ is mapped to a vertical line on the $v$-axis from the origin to $i$.
+
+        \setcounter{subsubsection}{16}
+        \subsubsection{}
+
+        \[w = \sin \left( -i \Ln z - \frac{\pi}{2} \right)\]
+
+      $A B$ maps to the line $(-\infty, -1]$ on the $u$-axis.
+
+\setcounter{subsubsection}{18}
+\subsubsection{}
+
+\begin{align*}
+  w & = z^4                      \\
+  U & = \frac{1}{\pi} \Arg w     \\
+  u & = \frac{1}{\pi} \Arg (z^4)
+\end{align*}
+
+\setcounter{subsubsection}{20}
+\subsubsection{}
+
+\begin{align*}
+  w & = i \frac{1 - z}{1 + z}                                   \\
+  U & = \frac{1}{\pi} \Arg w                                    \\
+  u & = \frac{1}{\pi} \Arg \left( i \frac{1 - z}{1 + z} \right)
+\end{align*}
+
+\setcounter{subsubsection}{22}
+\subsubsection{}
+
+\begin{align*}
+  w & = z^2                                             \\
+  U & = \frac{1}{\pi} [\Arg (w - 1) - \Arg (w + 1)]     \\
+  u & = \frac{1}{\pi} [\Arg (z^2 - 1) - \Arg (z^2 + 1)]
+\end{align*}
+
+\setcounter{subsubsection}{24}
+\subsubsection{}
+
+\begin{align*}
+  w & = e^{\pi z}                                                    \\
+  U & = \frac{10}{\pi} [\Arg (w - 1) - \Arg (w + 1)]                 \\
+  u & = \frac{10}{\pi} [\Arg (e^{\pi z} - 1) - \Arg (e^{\pi z} + 1)]
+\end{align*}
 
 \end{document}
