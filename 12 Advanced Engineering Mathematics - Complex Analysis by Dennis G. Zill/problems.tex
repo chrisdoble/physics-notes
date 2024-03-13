@@ -13,6 +13,7 @@
 }
 
 \newcommand{\adj}{\operatorname{adj}}
+\newcommand{\arccosh}{\operatorname{arccosh}}
 \newcommand{\arcsinh}{\operatorname{arcsinh}}
 \newcommand{\Arg}{\operatorname{Arg}}
 \renewcommand{\Im}{\operatorname{Im}}
@@ -2997,6 +2998,81 @@ $1$, $i$, $-i$ to $0$, $1$, $-1$
   \frac{w - 0}{w + 1} \frac{1 + 1}{1 - 0} & = \frac{z - 1}{z + i} \frac{i + i}{i - 1} \\
   \frac{2 w}{w + 1}                       & = (1 - i) \frac{z - 1}{z + i}             \\
   w                                       & = i \frac{1 - z}{1 + z}
+\end{align*}
+
+\subsection{Schwarz-Christoffel Transformations}
+
+\subsubsection{}
+
+First quadrant
+
+\setcounter{subsubsection}{2}
+\subsubsection{}
+
+\begin{align*}
+  \arg f'(t) & = \Arg 1 - \frac{1}{2} \Arg (z + 1) + \frac{1}{2} \Arg (z - 1) \\
+             & = -\frac{1}{2} \Arg (z + 1) + \frac{1}{2} \Arg (z - 1)         \\
+             & = \begin{cases}
+                   0             & z < -1     \\
+                   \frac{\pi}{2} & -1 < z < 1 \\
+                   0             & z > 1
+                 \end{cases}
+\end{align*}
+
+$(-\infty, -1]$ maps to $(-\infty, 0]$, $[-1, 1]$ maps to $[0, a i]$, and $[1, \infty)$ maps to $[a i, \infty + a i)$.
+
+\setcounter{subsubsection}{4}
+\subsubsection{}
+
+\[f'(t) = A (z + 1)^{-1 / 2} z^{-1 / 2} (z - 1)^{-1 / 2}\]
+
+\setcounter{subsubsection}{6}
+\subsubsection{}
+
+\[f'(t) = A (z + 1)^{-1 / 3} z^{-1 / 3}\]
+
+\setcounter{subsubsection}{8}
+\subsubsection{}
+
+\begin{align*}
+  f'(z) & = A (z + 1)^{-1 / 2} (z - 1)^{-1 / 2} \\
+        & = \frac{A}{\sqrt{(z + 1) (z - 1)}}    \\
+        & = \frac{A}{\sqrt{z^2 - 1}}            \\
+  f(z)  & = \int \frac{A}{\sqrt{z^2 - 1}} \,d z \\
+        & = A \arccosh z + B                    \\
+  \pi i & = A \arccosh (-1) + B                 \\
+        & = \pi i A + B                         \\
+  0     & = A \arccosh (1) + B                  \\
+        & = B                                   \\
+  A     & = 1                                   \\
+  f(z)  & = \arccosh z
+\end{align*}
+
+\setcounter{subsubsection}{10}
+\subsubsection{}
+
+\begin{align*}
+  f'(z)                               & = (z + 1)^{(\alpha_1 / \pi) - 1} z^{(\alpha_2 / \pi) - 1} (z - 1)^{(\alpha_1 / \pi) - 1} \\
+  \lim_{z_1 \rightarrow \infty} f'(z) & = z^{-1}                                                                                 \\
+  f(z)                                & = \Ln z + B                                                                              \\
+  \pi i                               & = \Ln (-1) + B                                                                           \\
+                                      & = \pi i + B                                                                              \\
+  B                                   & = 0                                                                                      \\
+  f(z)                                & = \Ln z
+\end{align*}
+
+\setcounter{subsubsection}{12}
+\subsubsection{}
+
+\begin{align*}
+  f'(z)                          & = A (z + 1)^{(\alpha_1 / \pi) - 1} z^{(\alpha_2 / \pi) - 1} (z - 1)^{(\alpha_1 / \pi) - 1} \\
+  \lim_{u_1 \rightarrow 0} f'(z) & = A (z + 1)^{-1 / 2} z (z - 1)^{-1 / 2}                                                    \\
+                                 & = \frac{A z}{\sqrt{z^2 - 1}}                                                               \\
+  f(z)                           & = A \sqrt{z^2 - 1} + B                                                                     \\
+  0                              & = B                                                                                        \\
+  a i                            & = A i                                                                                      \\
+  A                              & = a                                                                                        \\
+  f(z)                           & = a \sqrt{z^2 - 1}
 \end{align*}
 
 \end{document}

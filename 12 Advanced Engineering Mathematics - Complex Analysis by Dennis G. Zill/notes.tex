@@ -710,4 +710,25 @@
   \item If a $z_n = \infty$ each factor that contains $z_n$ is replaced by $1$.
 \end{itemize}
 
+\subsection{Schwarz-Christoffel Transformations}
+
+\begin{itemize}
+  \item The \textbf{Riemann mapping theorem} asserts the existence of an analytic function $g$ that conformally maps the unit open disk $|z| < 1$ onto any simply connected domain $D'$ with at least one boundary point.
+
+  \item Since it's possible to map the upper half-plane $y > 0$ onto the unit open disk using a linear fractional transformation, there exists a conformal mapping $f$ between the upper half-plane and $D'$.
+
+  \item The \textbf{Scwarz-Christoffel formula} specifies the form for the derivative $f'(z)$ of a conformal mapping from the upper half-plane to a bounded or unbounded polygonal region.
+\end{itemize}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=\textwidth]{schwarz-christoffel-formula}
+\end{figure}
+
+\begin{itemize}
+  \item A general formula for $f(z)$ is \[f(z) = A \left( \int (z - x_z)^{(\alpha_1 / \pi) - 1} (z - x_2)^{(\alpha_2 / \pi) - 1} \cdots (z - x_n)^{(\alpha_n / \pi) - 1} \,d z \right) + B\] and therefore $f(z)$ can be considered the composite of the conformal mapping \[g(z) = \int (z - x_z)^{(\alpha_1 / \pi) - 1} (z - x_2)^{(\alpha_2 / \pi) - 1} \cdots (z - x_n)^{(\alpha_n / \pi) - 1} \,d z\] and the linear function $w = A z + B$. The linear function allows us to magnify, rotate, and translate the image polygon produced by $g(z)$.
+
+  \item If the polygonal region is bounded, only $n - 1$ of the $n$ interior angles should be included in the Schwarz-Christoffel formula.
+\end{itemize}
+
 \end{document}
