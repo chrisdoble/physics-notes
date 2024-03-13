@@ -3075,4 +3075,51 @@ $(-\infty, -1]$ maps to $(-\infty, 0]$, $[-1, 1]$ maps to $[0, a i]$, and $[1, \
   f(z)                           & = a \sqrt{z^2 - 1}
 \end{align*}
 
+\subsection{Poisson Integral Formulas}
+
+\subsubsection{}
+
+\begin{align*}
+  u(x, y) & = -\frac{1}{\pi} [\Arg z - \Arg (z + 1)] + \frac{1}{\pi} [\Arg (z - 1) - \Arg z] \\
+          & = \frac{1}{\pi} [\Arg (z - 1) + \Arg (z + 1) - 2 \Arg z]                         \\
+          & = \frac{1}{\pi} \Arg \left[ \frac{(z - 1) (z + 1)}{z^2} \right]                  \\
+          & = \frac{1}{\pi} \Arg \left( \frac{z^2 - 1}{z^2} \right)                          \\
+          & = \frac{1}{\pi} \Arg \left( 1 - \frac{1}{z^2} \right)
+\end{align*}
+
+\setcounter{subsubsection}{2}
+\subsubsection{}
+
+\begin{align*}
+  u(x, y) & = -\frac{1}{\pi} [\Arg (z + 1) - \Arg (z + 2)] + \frac{1}{\pi} [\Arg z - \Arg (z + 1)] \\
+          & \qquad + \frac{5}{\pi} [\pi - \Arg (z - 1)]                                            \\
+          & = 5 + \frac{1}{\pi} [\Arg z + \Arg (z + 2) - 2 \Arg (z + 1) - \Arg (z - 1)]            \\
+          & = 5 + \frac{1}{\pi} \Arg \left[ \frac{z (z + 2)}{(z - 1) (z + 1)^2} \right]
+\end{align*}
+
+\setcounter{subsubsection}{4}
+\subsubsection{}
+
+\begin{align*}
+  u(x, 0) & = \begin{cases}
+                x^2 & 0 < x < 1        \\
+                0   & \text{otherwise}
+              \end{cases}                                                                                                                                                                         \\
+  u(x, y) & = \frac{y}{\pi} \int_{-\infty}^\infty \frac{u(t, 0)}{(x - t)^2 + y^2} \,d t                                                                                                                      \\
+          & = \frac{y}{\pi} \int_0^1 \frac{t^2}{(x - t)^2 + y^2} \,d t                                                                                                                                       \\
+          & = \frac{y}{\pi} \left\{ 1 + \frac{y^2 - x^2}{y} \left[ \arctan \left( \frac{x - 1}{y} \right) - \arctan \frac{x}{y} \right] + x \log_e \left[ \frac{(x - 1)^2 + y^2}{x^2 + y^2} \right] \right\}
+\end{align*}
+
+\setcounter{subsubsection}{6}
+\subsubsection{}
+
+\begin{align*}
+  f(z)    & = z^2                                                                 \\
+  U(w)    & = \frac{5}{\pi} \Arg (w + 1) + \frac{1}{\pi} [\Arg (w - 1) - \Arg w]  \\
+          & = \frac{1}{\pi} [5 \Arg (w + 1) + \Arg (w - 1) - \Arg w]              \\
+          & = \frac{1}{\pi} \Arg \left[ \frac{(w + 1)^5 (w - 1)}{w} \right]       \\
+  u(x, y) & = U(f(z))                                                             \\
+          & = \frac{1}{\pi} \Arg \left[ \frac{(z^2 + 1)^5 (z^2 - 1)}{z^2} \right] \\
+\end{align*}
+
 \end{document}
