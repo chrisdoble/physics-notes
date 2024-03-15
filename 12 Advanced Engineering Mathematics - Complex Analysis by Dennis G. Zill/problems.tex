@@ -20,6 +20,7 @@
 \newcommand{\Ln}{\operatorname{Ln}}
 \renewcommand{\Re}{\operatorname{Re}}
 \newcommand{\Res}{\operatorname{Res}}
+\renewcommand{\vec}[1]{\boldsymbol{\mathbf{#1}}}
 
 \setlist[enumerate, 1]{label={(\alph*)}}
 \setlist[enumerate, 2]{label={(\roman*)}}
@@ -3121,5 +3122,101 @@ $(-\infty, -1]$ maps to $(-\infty, 0]$, $[-1, 1]$ maps to $[0, a i]$, and $[1, \
   u(x, y) & = U(f(z))                                                             \\
           & = \frac{1}{\pi} \Arg \left[ \frac{(z^2 + 1)^5 (z^2 - 1)}{z^2} \right] \\
 \end{align*}
+
+\subsection{Applications}
+
+\subsubsection{}
+
+\begin{align*}
+  g(z)       & = e^{-i \theta_0}                                                           \\
+  G(z)       & = e^{-i \theta_0} z                                                         \\
+             & = (\cos \theta_0 - i \sin \theta_0) (x + i y)                               \\
+             & = x \cos \theta_0 + i y \cos \theta_0 - i x \sin \theta_0 + y \sin \theta_0 \\
+             & = x \cos \theta_0 + y \sin \theta_0 + i (y \cos \theta_0 - x \sin \theta_0) \\
+  \phi(x, y) & = x \cos \theta_0 + y \sin \theta_0                                         \\
+\end{align*}
+
+\setcounter{subsubsection}{2}
+\subsubsection{}
+
+\begin{align*}
+  g(x, y) & = \frac{x}{x^2 + y^2} - i \frac{y}{x^2 + y^2} \\
+  g(z)    & = \frac{\overline{z}}{|z|^2}                  \\
+          & = \frac{\overline{z}}{z \overline{z}}         \\
+          & = \frac{1}{z}                                 \\
+  G(z)    & = \Ln z                                       \\
+          & = \log_e |z| + i \Arg z                       \\
+  \phi(z) & = \log_e |z|
+\end{align*}
+
+\setcounter{subsubsection}{4}
+\subsubsection{}
+
+\begin{align*}
+  \phi(z)         & = \frac{4}{\pi} \Arg z                                                  \\
+  \phi(r, \theta) & = \frac{4}{\pi} \theta                                                  \\
+  G(z)            & = \frac{4}{\pi} \Ln z                                                   \\
+                  & = \frac{4}{\pi} (\ln |z| + i \theta)                                    \\
+  g(z)            & = G'(z)                                                                 \\
+                  & = \frac{4}{\pi} \frac{1}{z}                                             \\
+                  & = \frac{4}{\pi} \frac{\overline{z}}{|z|^2}                              \\
+  g(x, y)         & = \frac{4}{\pi} \frac{x - i y}{x^2 + y^2}                               \\
+  \vec{F}         & = \frac{4}{\pi} \left( \frac{x}{x^2 + y^2}, \frac{y}{x^2 + y^2} \right)
+\end{align*}
+
+\setcounter{subsubsection}{6}
+\subsubsection{}
+
+\begin{align*}
+  w       & = \left( \frac{z - 1}{z + 1} \right)^2               \\
+  U(w)    & = \frac{1}{\pi} [\Arg z - \Arg (z + \infty)]         \\
+          & = \frac{1}{\pi} \Arg z                               \\
+  \phi(z) & = \frac{1}{\pi} \left( \frac{z - 1}{z + 1} \right)^2
+\end{align*}
+
+\setcounter{subsubsection}{8}
+\subsubsection{}
+
+\begin{enumerate}
+  \item
+
+        \begin{align*}
+          G(z)       & = z^4                   \\
+          \psi(x, y) & = 4 x (x - y) y (x + y) \\
+          \psi(x, 0) & = 0                     \\
+          \psi(x, y) & = 0
+        \end{align*}
+
+  \item
+
+        \begin{align*}
+          \vec{V} & = \overline{G'(z)}                        \\
+                  & = 4 \overline{z}^3                        \\
+                  & = 4 (x^3 - 3 x y^2) + 4 i y (y^2 - 3 x^2)
+        \end{align*}
+\end{enumerate}
+
+\setcounter{subsubsection}{10}
+\subsubsection{}
+
+\begin{enumerate}
+  \item
+
+        \begin{align*}
+          G(z)              & = \sin z                            \\
+                            & = \sin x \cosh y + i \cos x \sinh y \\
+          \psi(x, y)        & = \cos x \sinh y                    \\
+          \psi(-\pi / 2, y) & = 0                                 \\
+          \psi(x, 0)        & = 0                                 \\
+          \psi(\pi / 2, y)  & = 0
+        \end{align*}
+
+  \item
+
+        \begin{align*}
+          \vec{V} & = \overline{G'(z)}                  \\
+                  & = \cos x \cosh y + i \sin x \sinh y
+        \end{align*}
+\end{enumerate}
 
 \end{document}

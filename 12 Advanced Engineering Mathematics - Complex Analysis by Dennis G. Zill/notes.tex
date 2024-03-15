@@ -15,11 +15,14 @@
 
 \newcommand{\adj}{\operatorname{adj}}
 \newcommand{\Arg}{\operatorname{Arg}}
+\newcommand{\curl}{\operatorname{curl}}
+\renewcommand{\div}{\operatorname{div}}
 \newcommand{\Ln}{\operatorname{Ln}}
 \renewcommand{\Im}{\operatorname{Im}}
 \renewcommand{\Re}{\operatorname{Re}}
 \newcommand{\Res}{\operatorname{Res}}
 \renewcommand{\vec}[1]{\boldsymbol{\mathbf{#1}}}
+\newcommand{\uvec}[1]{\hat{\vec{#1}}}
 
 \title{Advanced Engineering Mathematics Complex Analysis by Dennis G. Zill Notes}
 \author{Chris Doble}
@@ -745,6 +748,38 @@
 \begin{figure}[H]
   \centering
   \includegraphics[width=\textwidth]{poisson-integral-formula-for-the-unit-disk}
+\end{figure}
+
+\subsection{Applications}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=\textwidth]{vector-fields-and-analyticity}
+\end{figure}
+
+\begin{itemize}
+  \item Suppose $\vec{F}(x, y) = P(x, y) + i Q(x, y)$ is a vector field in a simply connected domain $D$ with both $\curl \vec{F} = \vec{0}$ and $\div \vec{F} = 0$. The analytic function $g(z) = P(x, y) - i Q(x, y)$ has an antiderivative \[G(z) = \phi(x, y) + i \psi(x, y)\] in $D$ called the \textbf{complex potential} for the vector field $\vec{F}$. By the Cauchy-Riemann equations \begin{align*}
+          g(z) & = G'(z)                                                                                                                             \\
+               & = \frac{\partial \phi}{\partial z} + i \frac{\partial \psi}{\partial z}                                                             \\
+               & = \frac{\partial \phi}{\partial x} \frac{\partial x}{\partial z} + i \frac{\partial \psi}{\partial x} \frac{\partial x}{\partial z} \\
+               & = \frac{\partial \phi}{\partial x} + i \frac{\partial \psi}{\partial x}                                                             \\
+               & = \frac{\partial \phi}{\partial x} - i \frac{\partial \phi}{\partial y}
+        \end{align*} and so $\partial \phi / \partial x = P$ and $\partial \phi / \partial y = Q$.
+
+  \item To summarise the previous item:
+
+        \begin{itemize}
+          \item If the curl and divergence of a vector field are both $0$, it has an associated complex potential.
+
+          \item If you're given a complex potential $G(z) = \phi(x, y) + i \psi(x, y)$ the associated vector field is given by \[\vec{F}(x, y) = \frac{\partial \phi}{\partial x} \uvec{x} + \frac{\partial \phi}{\partial y} \uvec{y} = \nabla \phi.\]
+        \end{itemize}
+
+  \item A vector field $\vec{V}(x, y)$ can be interpreted as the velocity field of a steady-state fluid flow. If $\curl \vec{V} = \vec{0}$ and $\div \vec{V} = 0$ the field has an associated complex potential $G(z) = \phi(x, y) + i \psi(x, y)$. The function $\psi(x, y)$ is called the \textbf{stream function} and the level curves $\psi(x, y) = c$ are \textbf{streamlines} for the flow.
+\end{itemize}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=\textwidth]{streamlining}
 \end{figure}
 
 \end{document}
