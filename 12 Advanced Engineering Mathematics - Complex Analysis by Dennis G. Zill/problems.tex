@@ -3219,4 +3219,102 @@ $(-\infty, -1]$ maps to $(-\infty, 0]$, $[-1, 1]$ maps to $[0, a i]$, and $[1, \
         \end{align*}
 \end{enumerate}
 
+\subsection{Chapter in Review}
+
+\subsubsection{}
+
+\begin{align*}
+  x y & = 2                         \\
+  y   & = \frac{2}{x}               \\
+  z   & = x + 2 i \frac{1}{x}       \\
+  z^2 & = x^2 - \frac{4}{x^2} + 4 i \\
+  v   & = 4
+\end{align*}
+
+\setcounter{subsubsection}{2}
+\subsubsection{}
+
+The wedge $0 \le \Arg w \le 2 \pi / 3$.
+
+\setcounter{subsubsection}{4}
+\subsubsection{}
+
+True
+
+\setcounter{subsubsection}{6}
+\subsubsection{}
+
+$0$, $1$, $\infty$
+
+\setcounter{subsubsection}{8}
+\subsubsection{}
+
+False
+
+\setcounter{subsubsection}{10}
+\subsubsection{}
+
+\begin{align*}
+  w         & = \Ln z                                \\
+  \Ln x     & = \log_e |x| + i \Arg x                \\
+            & = \begin{cases}
+                  \log_e |x| + \pi i & x < 0 \\
+                  \log_e |x|         & x > 0
+                \end{cases}           \\
+  \Ln (i y) & = \log_e |y| + i \Arg (i y)            \\
+            & = \begin{cases}
+                  \log_e |y| - \frac{\pi}{2} i & y < 0 \\
+                  \log_e |y| + \frac{\pi}{2} i & y > 0
+                \end{cases}
+\end{align*}
+
+The image of the first quadrant is $0 < v < \pi / 2$.
+
+\begin{align*}
+  f(t)  & = k t e^{i \theta_0}        \\
+  \Ln f & = \log_e |k t| + i \theta_0
+\end{align*}
+
+The image of the ray $\theta = \theta_0$ is $v = \theta_0$.
+
+\setcounter{subsubsection}{12}
+\subsubsection{}
+
+\[w = \frac{i - \cos (\pi z)}{i + \cos (\pi z)}\]
+
+\setcounter{subsubsection}{14}
+\subsubsection{}
+
+\begin{align*}
+  a       & = \frac{1}{2}                                                         \\
+  w       & = (1 - i) \frac{e^{\pi i / 2} (z - i) - i}{e^{\pi i / 2} (z - i) - 1} \\
+          & = 1 - i - \frac{2}{z}                                                 \\
+  U(w)    & = 1 - \Im w                                                           \\
+  u(z)    & = 1 - \Im \left( 1 - i - \frac{2}{z} \right)                          \\
+          & = 2 + 2 \Im \frac{1}{z}                                               \\
+          & = 2 + 2 \Im \frac{\overline{z}}{z \overline{z}}                       \\
+  u(x, y) & = 2 + 2 \Im \left( \frac{x - i y}{x^2 + y^2} \right)                  \\
+          & = 2 + \frac{2 y}{x^2 + y^2}
+\end{align*}
+
+\setcounter{subsubsection}{16}
+\subsubsection{}
+
+\begin{enumerate}
+  \item
+
+        \begin{align*}
+          f'(z) & = A (z + 1)^{(\alpha_1 / \pi) - 1} z^{(\alpha_2 / \pi) - 1} (z - 1)^{(\alpha_1 / \pi) - 1} \\
+                & = A (z^2 - 1)^{(\alpha_1 / \pi) - 1} z^{(\alpha_2 / \pi) - 1}                              \\
+        \end{align*}
+
+  \item
+
+        \begin{align*}
+          \lim_{u_1 \rightarrow \infty} f'(z) & = A \frac{z}{z^2 - 1}                                            \\
+                                              & = A \frac{z}{(z + 1) (z - 1)}                                    \\
+                                              & = \frac{1}{2} A \left[ \frac{1}{z + 1} + \frac{1}{z - 1} \right]
+        \end{align*}
+\end{enumerate}
+
 \end{document}
