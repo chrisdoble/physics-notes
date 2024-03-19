@@ -10,6 +10,8 @@
   urlcolor=blue
 }
 
+\newcommand{\ev}[1]{\langle #1 \rangle}
+
 \setlist[enumerate, 1]{label={(\alph*)}}
 \setlist[enumerate, 2]{label={(\roman*)}}
 
@@ -187,5 +189,34 @@
                                                                     & \approx 0.243
         \end{align*}
 \end{enumerate}
+
+\subsection{}
+
+The chain rule requires that you apply it to both $x$ and $|\Psi|^2$ which gives the same result
+
+\begin{align*}
+  \frac{d \ev{x}}{d t} & = \frac{d}{d t} \int x |\Psi|^2 \,d x                                                 \\
+                       & = \int \frac{d}{d t} (x |\Psi|^2) \,d x                                               \\
+                       & = \int \left( 0 \cdot |\Psi|^2 + x \frac{\partial |\Psi|^2}{\partial t} \right) \,d x \\
+                       & = \int x \frac{\partial |\Psi|^2}{\partial t} \,d x
+\end{align*}
+
+\setcounter{subsection}{7}
+\subsection{}
+
+\begin{align*}
+  i \hbar \frac{\partial}{\partial t} \left( e^{-i V_0 t / \hbar} \Psi \right)                                                  & = -\frac{\hbar^2}{2 m} \frac{\partial^2}{\partial x^2} \left( e^{-i V_0 t / \hbar} \Psi \right) + (V + V_0) \left( e^{-i V_0 t / \hbar} \Psi \right) \\
+  i \hbar \left( -\frac{i V_0}{\hbar} e^{-i V_0 t / \hbar} \Psi + e^{-i V_0 t / \hbar} \frac{\partial \Psi}{\partial t} \right) & = -\frac{\hbar^2}{2 m} e^{-i V_0 t / \hbar} \frac{\partial^2 \Psi}{\partial x^2} + V e^{-i V_0 t / \hbar} \Psi + V_0 e^{-i V_0 t / \hbar} \Psi       \\
+  V_0 \Psi + i \hbar \frac{\partial \Psi}{\partial t}                                                                           & = -\frac{\hbar^2}{2 m} \frac{\partial^2 \Psi}{\partial x^2} + V \Psi + V_0 \Psi                                                                      \\
+  i \hbar \frac{\partial \Psi}{\partial t}                                                                                      & = -\frac{\hbar^2}{2 m} \frac{\partial^2 \Psi}{\partial x^2} + V \Psi                                                                                 \\
+\end{align*}
+
+\begin{align*}
+  \ev{Q(x, p)} & = \int \left( e^{-i V_0 t / \hbar} \Psi \right)^* \left[ Q(x, -i \hbar \partial / \partial x) \right] e^{-i V_0 t / \hbar} \Psi \,d x \\
+               & = \int e^{i V_0 t / \hbar} \Psi^* \left[ Q(x, -i \hbar \partial / \partial x) \right] e^{-i V_0 t / \hbar} \Psi \,d x                 \\
+               & = \int \Psi^* [Q(x, -i \hbar \partial / \partial x)] \Psi \,d x
+\end{align*}
+
+No effect on the expectation value.
 
 \end{document}

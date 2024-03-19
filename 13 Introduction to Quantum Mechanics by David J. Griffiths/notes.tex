@@ -11,6 +11,8 @@
   urlcolor=blue
 }
 
+\newcommand{\ev}[1]{\langle #1 \rangle}
+
 \title{Introduction to Quantum Mechanics by David J. Griffiths Notes}
 \author{Chris Doble}
 \date{March 2024}
@@ -58,16 +60,16 @@
 \subsubsection{Discrete Variables}
 
 \begin{itemize}
-  \item The average value of a discrete variable $j$ is \[\langle j \rangle = \frac{\sum j N(j)}{N} = \sum_{j = 0}^\infty j P(j)\] where $N$ is the size of the population, $N(j)$ is the number of $j$s in the population, and $P(j)$ is the probability of randomly selecting a $j$ from the population.
+\item The average value of a discrete variable $j$ is \[\ev{j} = \frac{\sum j N(j)}{N} = \sum_{j = 0}^\infty j P(j)\] where $N$ is the size of the population, $N(j)$ is the number of $j$s in the population, and $P(j)$ is the probability of randomly selecting a $j$ from the population.
 
   \item In quantum mechanics the average is usually the quantity of interest and it is called the \textbf{expectation value} (even though it may not be the most probable value).
 
-  \item The average value of a function $f$ of a discrete variable $j$ is \[\langle f(j) \rangle = \sum_{j = 0}^\infty f(j) P(j).\]
+\item The average value of a function $f$ of a discrete variable $j$ is \[\ev{f(j)} = \sum_{j = 0}^\infty f(j) P(j).\]
 
-  \item Two distributions could have the same median, mean, mode, and size but be spread out differently. One way to quantify this could be to calculate how far each element is from the average \[\Delta j = j - \langle j \rangle\] and calculate the average of $\Delta j$. However, it ends up being zero \begin{align*}
-          \langle \Delta j \rangle & = \sum (j - \langle j \rangle) P(j)         \\
-                                   & = \sum j P(j) - \langle j \rangle \sum P(j) \\
-                                   & = \langle j \rangle - \langle j \rangle     \\
+\item Two distributions could have the same median, mean, mode, and size but be spread out differently. One way to quantify this could be to calculate how far each element is from the average \[\Delta j = j - \ev{j}\] and calculate the average of $\Delta j$. However, it ends up being zero \begin{align*}
+\langle \Delta j \rangle & = \sum (j - \ev{j}) P(j)         \\
+& = \sum j P(j) - \ev{j} \sum P(j) \\
+& = \ev{j} - \ev{j}     \\
                                    & = 0.
         \end{align*} To avoid this we calculate the average of the square of $\Delta j$ \[\sigma^2 = \langle (\Delta j)^2 \rangle\] which is known as the \textbf{variance} of the distribution.
 
@@ -76,12 +78,12 @@
   \item A useful theorem on variances is \begin{align*}
           \sigma^2 & = \langle (\Delta j)^2 \rangle                                                    \\
                    & = \sum (\Delta j)^2 P(j)                                                          \\
-                   & = \sum (j - \langle j \rangle)^2 P(j)                                             \\
-                   & = \sum (j^2 - 2 j \langle j \rangle + \langle j \rangle^2) P(j)                   \\
-                   & = \sum j^2 P(j) - 2 \langle j \rangle \sum j P(j) + \langle j \rangle^2 \sum P(j) \\
-                   & = \langle j^2 \rangle - 2 \langle j \rangle^2 + \langle j \rangle^2               \\
-                   & = \langle j^2 \rangle - \langle j \rangle^2
-        \end{align*} and thus the standard deviation can be calculated as \[\sigma = \sqrt{\langle j^2 \rangle - \langle j \rangle^2}\] which is usually easier than the full formula.
+& = \sum (j - \ev{j})^2 P(j)                                             \\
+& = \sum (j^2 - 2 j \ev{j} + \ev{j}^2) P(j)                   \\
+& = \sum j^2 P(j) - 2 \ev{j} \sum j P(j) + \ev{j}^2 \sum P(j) \\
+& = \ev{j^2} - 2 \ev{j}^2 + \ev{j}^2               \\
+& = \ev{j^2} - \ev{j}^2
+\end{align*} and thus the standard deviation can be calculated as \[\sigma = \sqrt{\ev{j^2} - \ev{j}^2}\] which is usually easier than the full formula.
 \end{itemize}
 
 \subsubsection{Continuous Variables}
@@ -90,9 +92,9 @@
   \item The equations above translate as expected to continuous variables: \begin{align*}
           P_{a b}              & = \int_a^b \rho(x) \,d x                     \\
           1                    & = \int_{-\infty}^{+\infty} \rho(x) \,d x     \\
-          \langle x \rangle    & = \int_{-\infty}^{+\infty} x \rho(x) \,d x   \\
-          \langle f(x) \rangle & = \int{-\infty}^{+\infty} f(x) \rho(x) \,d x \\
-          \sigma^2             & = \langle x^2 \rangle - \langle x \rangle^2
+\ev{x}    & = \int_{-\infty}^{+\infty} x \rho(x) \,d x   \\
+\ev{f(x)} & = \int{-\infty}^{+\infty} f(x) \rho(x) \,d x \\
+\sigma^2             & = \ev{x^2} - \ev{x}^2
         \end{align*}
 \end{itemize}
 
@@ -106,6 +108,21 @@
   \item For some solutions to the Schrödinger equation, the integral is infinite in which case there is no $A$ that normalizes the wavefunction. The same goes for $\Psi = 0$. Such \textbf{non-normalizable} solutions can't represent particles so they must be rejected.
 
   \item But if we normalize the wavefunction at $t = 0$, how do we know it stays normalized? It turns out that the integral \[\int_{-\infty}^\infty |\Psi(x, t)|^2 \,d x\] is constant (independent of time) so if it's normalized at $t = 0$ it stays normalized.
+\end{itemize}
+
+\subsection{Momentum}
+
+\begin{itemize}
+  \item What does \[\ev{x} = \int_{-\infty}^\infty x |\Psi(x, t)|^2 \,d x\] mean? It doesn't mean that if you measure the position of a particle over and over again and take the average of the results you'll get $\int x |\Psi|^2 \,d x$. The first measurement causes the wavefunction to collapse so you'll get the same measurement each time. Instead, it means if you have a large number of particles all in the same state $\Psi$, measure the position of each of them, and take the average of the results you'll get $\int x |\Psi|^2 \,d x$.
+
+  \item The expectation value of the velocity is equal to the time derivative of the expectation value of the position \[\ev{v} = \frac{d \ev{x}}{d t} = -\frac{i \hbar}{m} \int \Psi^* \frac{\partial \Psi}{\partial x} \,d x\] however it is customary to work with momentum $p = m v$ rather than velocity \[\ev{p} = m \frac{d \ev{x}}{d t} = -i \hbar \int \Psi^* \frac{\partial \Psi}{\partial x} \,d x.\]
+
+  \item The above can be rewritten in the form \begin{align*}
+          \ev{x} & = \int \Psi^* [x] \Psi \,d x                                                  \\
+          \ev{p} & = \int \Psi^* \left[ -i \hbar \frac{\partial}{\partial x} \right] \Psi \,d x.
+        \end{align*} The values in the square brackets are called \textbf{operators} and we say that the operator $x$ ``represents'' position and the operator $-i \hbar (\partial / \partial x)$ ``represents'' momentum. To calculate expectation values we place the appropriate operator between $\Psi^*$ and $\Psi$ and integrate.
+
+  \item All other values of interest can be expressed in terms of position and momentum, e.g. kinetic energy is \[T = \frac{1}{2} m v^2 = \frac{p^2}{2 m}.\] Their operators can be determined by substituting $p = -i \hbar (\partial / \partial x)$, e.g. kinetic energy is \[-\frac{\hbar^2}{2 m} \frac{\partial^2}{\partial x^2}\] such that \[\ev{T} = -\frac{\hbar^2}{2 m} \int \Psi^* \frac{\partial^2 \Psi}{\partial x^2} \,d x.\] In general \[\ev{Q(x, p)} = \int \Psi^* \left[ Q(x, -i \hbar \partial / \partial x) \right] \Psi \,d x.\]
 \end{itemize}
 
 \end{document}
