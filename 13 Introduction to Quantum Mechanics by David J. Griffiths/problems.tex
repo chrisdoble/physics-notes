@@ -27,6 +27,88 @@
 
 \section{The Wave Function}
 
-\subsection{The Shrödinger Equation}
+\subsection{}
+
+\begin{enumerate}
+  \item
+
+        \begin{align*}
+          \langle j^2 \rangle & = \sum j^2 P(j)                                                                                                         \\
+                              & = 14^2 \frac{1}{14} + 15^2 \frac{1}{14} + 16^2 \frac{3}{14} + 22^2 \frac{2}{14} + 24^2 \frac{2}{14} + 25^2 \frac{5}{14} \\
+                              & = \frac{3217}{7}                                                                                                        \\
+                              & \approx 459.571                                                                                                         \\
+          \langle j \rangle^2 & = \left( \sum j P(j) \right)^2                                                                                          \\
+                              & = 441
+        \end{align*}
+
+  \item
+
+        \begin{align*}
+          \Delta j_{14} & = -7                     \\
+          \Delta j_{15} & = -6                     \\
+          \Delta j_{16} & = -5                     \\
+          \Delta j_{22} & = 1                      \\
+          \Delta j_{24} & = 3                      \\
+          \Delta j_{25} & = 4                      \\
+          \sigma^2      & = \sum (\Delta j)^2 P(j) \\
+                        & = \frac{130}{7}          \\
+                        & \approx 18.571
+        \end{align*}
+
+  \item \[\sigma^2 = \sqrt{\langle j^2 \rangle - \langle j \rangle^2} = 18.571\]
+\end{enumerate}
+
+\subsection{}
+
+\begin{enumerate}
+  \item
+
+        \begin{align*}
+          \langle x^2 \rangle & = \int_0^h x^2 \rho(x) \,d x                                    \\
+                              & = \int_0^h \frac{x^{3 / 2}}{2 \sqrt{h}} \,d x                   \\
+                              & = \frac{1}{2 \sqrt{h}} \left[ \frac{2}{5} x^{5 / 2} \right]_0^h \\
+                              & = \frac{h^2}{5}                                                 \\
+          \langle x \rangle^2 & = \frac{h^2}{9}                                                 \\
+          \sigma              & = \sqrt{\langle x^2 \rangle - \langle x \rangle^2}              \\
+                              & = \sqrt{\frac{h^2}{5} - \frac{h^2}{9}}                          \\
+                              & = h \sqrt{\frac{4}{45}}                                         \\
+                              & = \frac{2}{3 \sqrt{5}} h
+        \end{align*}
+
+  \item
+
+        \begin{align*}
+          1 - \int_{\langle x \rangle - \sigma}^{\langle x \rangle + \sigma} \rho(x) \,d x & = 1 - \frac{1}{2 \sqrt{h}} [2 \sqrt{x}]_{\langle x \rangle - \sigma}^{\langle x \rangle + \sigma}                                     \\
+                                                                                           & = 1 - \frac{1}{\sqrt{h}} \left( \sqrt{\frac{1}{3} h + \frac{2}{3 \sqrt{5}} h} - \sqrt{\frac{1}{3} h - \frac{2}{3 \sqrt{5}} h} \right) \\
+                                                                                           & = 1 - \left( \sqrt{\frac{1}{3} + \frac{2}{3 \sqrt{5}}} - \sqrt{\frac{1}{3} - \frac{2}{3 \sqrt{5}}} \right)                            \\
+                                                                                           & \approx 0.393
+        \end{align*}
+\end{enumerate}
+
+\subsection{}
+
+\begin{enumerate}
+  \item
+
+        \begin{align*}
+          \rho(x) & = A e^{-\lambda (x - a)^2}                             \\
+          1       & = \int_{-\infty}^\infty \rho(x) \,d x                  \\
+                  & = A \int_{-\infty}^\infty e^{-\lambda (x - a)^2} \,d x \\
+                  & = A \sqrt{\frac{\pi}{\lambda}}                         \\
+          A       & = \sqrt{\frac{\lambda}{\pi}}
+        \end{align*}
+
+  \item
+
+        \begin{align*}
+          \langle x \rangle   & = \sqrt{\frac{\lambda}{\pi}} \int_{-\infty}^\infty x e^{-\lambda (x - a)^2} \,d x   \\
+                              & = a                                                                                 \\
+          \langle x^2 \rangle & = \sqrt{\frac{\lambda}{\pi}} \int_{-\infty}^\infty x^2 e^{-\lambda (x - a)^2} \,d x \\
+                              & = a^2 + \frac{1}{2 \lambda}                                                         \\
+          \sigma              & = \sqrt{\langle x^2 \rangle - \langle x \rangle^2}                                  \\
+                              & = \sqrt{a^2 + \frac{1}{2 \lambda} - a^2}                                            \\
+                              & = \frac{1}{\sqrt{2 \lambda}}
+        \end{align*}
+\end{enumerate}
 
 \end{document}

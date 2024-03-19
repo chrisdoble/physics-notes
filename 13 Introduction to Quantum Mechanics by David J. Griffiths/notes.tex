@@ -53,4 +53,47 @@
   \item If we take two consecutive measurements of a particle, they will both yield the same result. The first measurement causes the wavefunction to \textbf{collapse} such that it is peaked only at the particle's measured location. If the system is allowed to evolve between the measurements the wavefunction will ``spread out'' but if done in quick succession the result won't change.
 \end{itemize}
 
+\subsection{Probability}
+
+\subsubsection{Discrete Variables}
+
+\begin{itemize}
+  \item The average value of a discrete variable $j$ is \[\langle j \rangle = \frac{\sum j N(j)}{N} = \sum_{j = 0}^\infty j P(j)\] where $N$ is the size of the population, $N(j)$ is the number of $j$s in the population, and $P(j)$ is the probability of randomly selecting a $j$ from the population.
+
+  \item In quantum mechanics the average is usually the quantity of interest and it is called the \textbf{expectation value} (even though it may not be the most probable value).
+
+  \item The average value of a function $f$ of a discrete variable $j$ is \[\langle f(j) \rangle = \sum_{j = 0}^\infty f(j) P(j).\]
+
+  \item Two distributions could have the same median, mean, mode, and size but be spread out differently. One way to quantify this could be to calculate how far each element is from the average \[\Delta j = j - \langle j \rangle\] and calculate the average of $\Delta j$. However, it ends up being zero \begin{align*}
+          \langle \Delta j \rangle & = \sum (j - \langle j \rangle) P(j)         \\
+                                   & = \sum j P(j) - \langle j \rangle \sum P(j) \\
+                                   & = \langle j \rangle - \langle j \rangle     \\
+                                   & = 0.
+        \end{align*} To avoid this we calculate the average of the square of $\Delta j$ \[\sigma^2 = \langle (\Delta j)^2 \rangle\] which is known as the \textbf{variance} of the distribution.
+
+  \item The square root of the variance is called the \textbf{standard deviation}.
+
+  \item A useful theorem on variances is \begin{align*}
+          \sigma^2 & = \langle (\Delta j)^2 \rangle                                                    \\
+                   & = \sum (\Delta j)^2 P(j)                                                          \\
+                   & = \sum (j - \langle j \rangle)^2 P(j)                                             \\
+                   & = \sum (j^2 - 2 j \langle j \rangle + \langle j \rangle^2) P(j)                   \\
+                   & = \sum j^2 P(j) - 2 \langle j \rangle \sum j P(j) + \langle j \rangle^2 \sum P(j) \\
+                   & = \langle j^2 \rangle - 2 \langle j \rangle^2 + \langle j \rangle^2               \\
+                   & = \langle j^2 \rangle - \langle j \rangle^2
+        \end{align*} and thus the standard deviation can be calculated as \[\sigma = \sqrt{\langle j^2 \rangle - \langle j \rangle^2}\] which is usually easier than the full formula.
+\end{itemize}
+
+\subsubsection{Continuous Variables}
+
+\begin{itemize}
+  \item The equations above translate as expected to continuous variables: \begin{align*}
+          P_{a b}              & = \int_a^b \rho(x) \,d x                     \\
+          1                    & = \int_{-\infty}^{+\infty} \rho(x) \,d x     \\
+          \langle x \rangle    & = \int_{-\infty}^{+\infty} x \rho(x) \,d x   \\
+          \langle f(x) \rangle & = \int{-\infty}^{+\infty} f(x) \rho(x) \,d x \\
+          \sigma^2             & = \langle x^2 \rangle - \langle x \rangle^2
+        \end{align*}
+\end{itemize}
+
 \end{document}
