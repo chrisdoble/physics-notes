@@ -111,4 +111,81 @@
         \end{align*}
 \end{enumerate}
 
+\subsection{}
+
+\begin{enumerate}
+  \item
+
+        \begin{align*}
+          1 & = \int_{-\infty}^\infty |\Psi(x, 0)|^2 \,d x                                                                  \\
+            & = \left( \frac{A}{a} \right)^2 \int_0^a x^2 \,d x + \left( \frac{A}{b - a} \right)^2 \int_a^b (b - x)^2 \,d x \\
+            & = \frac{1}{3} A^2 a + \left( \frac{A}{b - a} \right)^2 \left[ -\frac{1}{3} (b - x)^3 \right]_a^b              \\
+            & = \frac{1}{3} A^2 a + \frac{1}{3} A^2 (b - a)                                                                 \\
+            & = \frac{1}{3} A^2 b                                                                                           \\
+          A & = \sqrt{\frac{3}{b}}
+        \end{align*}
+
+        \setcounter{enumi}{2}
+  \item $x = a$
+
+  \item
+
+        \begin{align*}
+          \int_0^a |\Psi(x, 0)|^2 \,d x & = \frac{3}{a^2 b} \left[ \frac{1}{3} x^3 \right]_0^a \\
+                                        & = \frac{a}{b}
+        \end{align*}
+
+  \item
+
+        \begin{align*}
+          \langle x \rangle & = \int_{-\infty}^\infty x |\Psi(x, 0)|^2 \,d x                                                                                                                             \\
+                            & = \frac{3}{a^2 b} \left[ \frac{1}{4} x^4 \right]_0^a + \frac{3}{b (b - a)^2} \int_a^b x (b - x)^2 \,d x                                                                    \\
+                            & = \frac{3 a^2}{4 b} + \frac{3}{b (b - a)^2} \int_a^b (b^2 x - 2 b x^2 + x^3) \,d x                                                                                         \\
+                            & = \frac{3 a^2}{4 b} + \frac{3}{b (b - a)^2} \left[ \frac{1}{2} b^2 x^2 - \frac{2}{3} b x^3 + \frac{1}{4} x^4 \right]_a^b                                                   \\
+                            & = \frac{3 a^2}{4 b} + \frac{3}{b (b - a)^2} \left( \frac{1}{2} b^4 - \frac{2}{3} b^4 + \frac{1}{4} b^4 - \frac{1}{2} a^2 b^2 + \frac{2}{3} a^3 b - \frac{1}{4} a^4 \right) \\
+                            & = \frac{3 a^2}{4 b} + \frac{3}{b (b - a)^2} \frac{1}{12} (b - a)^3 (3 a + b)                                                                                               \\
+                            & = \frac{3 a^2}{4 b} + \frac{1}{4 b} (3 a b + b^2 - 3 a^2 - a b)                                                                                                            \\
+                            & = \frac{1}{2} a + \frac{1}{4} b
+        \end{align*}
+\end{enumerate}
+
+\subsection{}
+
+\begin{enumerate}
+  \item
+
+        \begin{align*}
+          \Psi(x, t) & = A e^{-\lambda |x|} e^{-i \omega t}                                  \\
+          \Psi(x, 0) & = A e^{-\lambda |x|}                                                  \\
+          1          & = A^2 \int_{-\infty}^\infty e^{-2 \lambda |x|} \,d x                  \\
+                     & = 2 A^2 \int_0^\infty e^{-2 \lambda x} \,d x                          \\
+                     & = 2 A^2 \left[ -\frac{1}{2 \lambda} e^{-2 \lambda x} \right]_0^\infty \\
+                     & = \frac{A^2}{\lambda}                                                 \\
+          A          & = \sqrt{\lambda}
+        \end{align*}
+
+  \item
+
+        \begin{align*}
+          \langle x \rangle   & = \int_{-\infty}^\infty x \lambda e^{-2 \lambda |x|} \,d x   \\
+                              & = \lambda \int_{-\infty}^\infty x e^{-2 \lambda |x|} \,d x   \\
+                              & = 0                                                          \\
+          \langle x^2 \rangle & = \int_{-\infty}^\infty x^2 \lambda e^{-2 \lambda |x|} \,d x \\
+                              & = 2 \lambda \int_0^\infty x^2 e^{-2 \lambda x} \,d x         \\
+                              & = \frac{1}{2 \lambda^2}
+        \end{align*}
+
+  \item
+
+        \begin{align*}
+          \sigma                                                    & = \sqrt{\langle x^2 \rangle - \langle x \rangle^2}                            \\
+                                                                    & = \frac{1}{\sqrt{2} \lambda}                                                  \\
+          1 - \int_{-\sigma}^\sigma \lambda e^{-2 \lambda |x|} \,dx & = 1 - 2 \lambda \int_0^\sigma e^{-2 \lambda x} \,d x                          \\
+                                                                    & = 1 - 2 \lambda \left[ -\frac{1}{2 \lambda} e^{-2 \lambda x} \right]_0^\sigma \\
+                                                                    & = e^{-2 \lambda \sigma}                                                       \\
+                                                                    & = e^{-\sqrt{2}}                                                               \\
+                                                                    & \approx 0.243
+        \end{align*}
+\end{enumerate}
+
 \end{document}
