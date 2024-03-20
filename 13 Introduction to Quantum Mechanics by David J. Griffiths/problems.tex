@@ -219,4 +219,64 @@ The chain rule requires that you apply it to both $x$ and $|\Psi|^2$ which gives
 
 No effect on the expectation value.
 
+\subsection{}
+
+\begin{enumerate}
+  \item
+
+        \begin{align*}
+          \Psi(x, t) & = A e^{-a [(m x^2 / \hbar) + i t]}                         \\
+          1          & = A^2 \int_{-\infty}^\infty e^{-2 a (m x^2 / \hbar)} \,d x \\
+                     & = A^2 \int_{-\infty}^\infty e^{-2 a (m x^2 / \hbar)} \,d x \\
+                     & = A^2 \sqrt{\frac{\pi \hbar}{2 a m}}                       \\
+          A^2        & = \sqrt{\frac{2 a m}{\pi \hbar}}                           \\
+          A          & = \left( \frac{2 a m}{\pi \hbar} \right)^{1 / 4}
+        \end{align*}
+
+  \item
+
+        \begin{align*}
+          \Psi                                 & = A e^{-a [(m x^2 / \hbar) + i t]}                                                                    \\
+          \frac{\partial \Psi}{\partial t}     & = -i a \Psi                                                                                           \\
+          \frac{\partial \Psi}{\partial x}     & = -\frac{2 a m x}{\hbar} \Psi                                                                         \\
+          \frac{\partial^2 \Psi}{\partial x^2} & = -\frac{2 a m}{\hbar} \left( \Psi + x \frac{\partial \Psi}{\partial x} \right)                       \\
+                                               & = -\frac{2 a m}{\hbar} \left( 1 - \frac{2 a m x^2}{\hbar} \right) \Psi                                \\
+          V \Psi                               & = i \hbar \frac{\partial \Psi}{\partial t} + \frac{\hbar^2}{2 m} \frac{\partial^2 \Psi}{\partial x^2} \\
+                                               & = a \hbar \Psi - a \hbar \left( 1 - \frac{2 a m x^2}{\hbar} \right) \Psi                              \\
+          V                                    & = a \hbar - a \hbar + 2 a^2 m x^2                                                                     \\
+                                               & = 2 a^2 m x^2
+        \end{align*}
+
+  \item
+
+        \begin{align*}
+          \ev{x}   & = A^2 \int_{-\infty}^\infty e^{-2 a (m x^2 / \hbar)} x \,d x                                                                                                                            \\
+                   & = 0                                                                                                                                                                                     \\
+          \ev{x^2} & = A^2 \int_{-\infty}^\infty e^{-2 a (m x^2 / \hbar)} x^2 \,d x                                                                                                                          \\
+                   & = 2 A^2 \int_0^\infty e^{-2 a (m x^2 / \hbar)} x^2 \,d x                                                                                                                                \\
+                   & = \frac{\hbar}{4 a m}                                                                                                                                                                   \\
+          \ev{p}   & = \int_{-\infty}^\infty \Psi^* \left[ -i \hbar \frac{\partial}{\partial x} \right] \Psi \,d x                                                                                           \\
+                   & = -i \hbar \int_{-\infty}^\infty A e^{-a [(m x^2 / \hbar) - i t]} \left( -\frac{2 a m x}{\hbar} A e^{-a [(m x^2 / \hbar) + i t]} \right) \,d x                                          \\
+                   & = 2 i A^2 a m \int_{-\infty}^\infty x e^{-2 a m x^2 / \hbar} \,d x                                                                                                                      \\
+                   & = 0                                                                                                                                                                                     \\
+          \ev{p^2} & = \int_{-\infty}^\infty \Psi^* \left[ -\hbar^2 \frac{\partial^2}{\partial x^2} \right] \Psi \,d x                                                                                       \\
+                   & = -\hbar^2 \int_{-\infty}^\infty A e^{-a [(m x^2 / \hbar) - i t]} \left[ -\frac{2 a m}{\hbar} \left( 1 - \frac{2 a m x^2}{\hbar} \right) A e^{-a [(m x^2 / \hbar) + i t]} \right] \,d x \\
+                   & = 2 A^2 a m \hbar \int_{-\infty}^\infty e^{-2 a m x^2 / \hbar} \left( 1 - \frac{2 a m x^2}{\hbar} \right) \,d x                                                                         \\
+                   & = a m \hbar
+        \end{align*}
+
+  \item
+
+        \begin{align*}
+          \sigma_x          & = \sqrt{\ev{x^2} - \ev{x}^2} \\
+                            & = \sqrt{\frac{\hbar}{4 a m}} \\
+          \sigma_p          & = \sqrt{a m \hbar}           \\
+          \sigma_x \sigma_p & = \sqrt{\frac{1}{4} \hbar^2} \\
+                            & = \frac{1}{2} \hbar          \\
+                            & \ge \frac{1}{2} \hbar
+        \end{align*}
+
+        Yes, this is consistent with Heisenberg's uncertainty principle.
+\end{enumerate}
+
 \end{document}
