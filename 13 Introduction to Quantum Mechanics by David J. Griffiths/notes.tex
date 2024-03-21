@@ -135,4 +135,34 @@
   \item If a wavefunction is periodic its position isn't well defined but its wavelength is and thus so is its momentum. If a wavefunction is localised its position is well defined but its wavelength isn't and thus neither is its momentum. This is formalised by the \textbf{Hiesenberg uncertainty principle} \[\sigma_x \sigma_p \ge \frac{\hbar}{2}\] where $\sigma_x$ and $\sigma_p$ are the standard deviations in $x$ and $p$, respectively.
 \end{itemize}
 
+\section{Time-Independent Schrödinger Equation}
+
+\subsection{Stationary States}
+
+\begin{itemize}
+  \item The Schrödinger equation \[i \hbar \frac{\partial \Psi}{\partial t} = -\frac{\hbar^2}{2 m} \frac{\partial^2 \Psi}{\partial x^2} + V \Psi\] can be solved via separation of variables if $V$ is independent of $t$. In that case we assume $\Psi(x, t) = \psi(x) \varphi(t)$ and separation gives the two ODEs \[i \hbar \frac{1}{\varphi} \frac{d \varphi}{d t} = E\] which has no name and \[-\frac{\hbar^2}{2 m} \frac{\partial^2 \psi}{d x^2} + V \psi = E \psi\] which is called the \textbf{time-independent Schrödinger equation}. The solution to the former is \[\varphi(t) = C e^{-i E t / \hbar}\] but the constant $C$ can be absorbed into $\psi$. The latter can't be solved until $V$ is specified.
+
+  \item While there are many solutions to the Schrödinger equation that don't have the form $\psi(x) \varphi(t)$, those that do have three interesting properties:
+
+        \begin{enumerate}
+          \item They are stationary states. The wave function has the form \[\Psi(x, t) = \psi(x) e^{-i E t / \hbar}\] so the probability density is \[|\Psi|^2 = \Psi^* \Psi = \psi^* e^{i E t / \hbar} \psi e^{-i E t / \hbar} = |\psi|^2,\] i.e. it's constant in time. Similarly, time dependence drops out of the expectation value formula so they're also constant in time.
+
+          \item They are states of definite total energy. In classical mechanics the total energy is called the Hamiltonian \[H(x, p) = \frac{p^2}{2 m} + V(x).\] The equivalent quantum operator is \[\hat{H} = -\frac{\hbar^2}{2 m} \frac{\partial^2}{\partial x^2} + V(x)\] thus the time-independent Schrödinger equation can be written \[\hat{H} \psi = E \psi\] and the expectation value of the total energy can be written \[\ev{H} = \int \psi^* \hat{H} \psi \,d x = E \int |\psi|^2 \,d x = E \int |\Psi|^2 \,d x = E.\] Moreover, \[\hat{H}^2 \psi = \hat{H} (\hat{H} \psi) = \hat{H} (E \psi) = E (\hat{H} \psi) = E^2 \psi\] so \[\ev{H^2} = \int \psi^* \hat{H}^2 \psi \,d x = E^2 \int |\psi|^2 \,d x = E^2 \int |\Psi|^2 \,dx = E^2.\] Thus the variance of $H$ is \[\sigma_H^2 = \ev{H^2} - \ev{H}^2 = 0\] meaning every measurement of the total energy of the system will return the same value $E$.
+
+          \item The general solution to the time-dependent Schrödinger equation is a linear combination of separable solutions. The time-independent Schrödinger equation yields an infinite number of solutions $\psi_1(x)$, $\psi_2(x)$, $\ldots$, $\psi_n(x)$ each with its associated separation constant $E_1$, $E_2$, $\ldots$, $E_n$ — one for each \textbf{allowed energy}. The general solution is then given by \[\Psi(x, t) = \sum_{n = 1}^\infty c_n \psi_n(x) e^{-i E_n t / \hbar}\] with appropriate choice of $c_n$ to fit the initial conditions.
+        \end{enumerate}
+
+  \item The general approach to solving the time-dependent Schrödinger equation with given initial conditions and potential energy function is:
+
+        \begin{enumerate}
+          \item Solve the time-independent Schrödinger equation to get an infinite set of solutions $\psi_n(x)$.
+
+          \item Fit the linear combination of those solutions \[\Psi(x, 0) = \sum_{n = 1}^\infty c_n \psi_n(x)\] to the initial conditions.
+
+          \item Multiply each term in the sum by its associated time dependence \[\Psi(x, t) = \sum_{n = 1}^\infty c_n \psi_n(x) e^{-i E_n t / \hbar} = \sum_{n = 1}^\infty c_n \Psi_n(x, t).\]
+        \end{enumerate}
+
+  \item The physical meaning of the constants $c_n$ is thus: $|c_n|^2$ is the probability that a measurement of the system's energy would return the value $E_n$. This means that \[\sum_{n = 1}^\infty |c_n|^2 = 1\] and \[\ev{H} = \sum_{n = 1}^\infty |c_n|^2 E_n.\] The probability of measuring any particular energy is constant in time and thus the expectation value of $H$ — this is part of energy conservation.
+\end{itemize}
+
 \end{document}

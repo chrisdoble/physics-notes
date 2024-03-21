@@ -451,4 +451,28 @@ No effect on the expectation value.
         \end{align*}
 \end{enumerate}
 
+\section{Time-Independent Schrödinger Equation}
+
+\subsection{}
+
+\begin{enumerate}
+  \item
+
+        \begin{align*}
+          \int_{-\infty}^\infty |\Psi|^2 \,d x & = \int_{-\infty}^\infty \Psi^* \Psi \,d x                                                                    \\
+                                               & = \int_{-\infty}^\infty \psi^* e^{i (E_0 - i \Gamma) t / \hbar} \psi e^{-i (E_0 + i \Gamma) t / \hbar} \,d x \\
+                                               & = e^{2 \Gamma t / \hbar} \int_{-\infty}^\infty |\psi|^2 \,d x
+        \end{align*}
+
+        In order for this to equal $1$ for all $t$, $\Gamma$ must be $0$.
+
+  \item If $\psi(x)$ is a complex solution to the time-independent Schrödinger equation then so is $\psi^*(x)$ and $\psi(x) + \psi^*(x)$ which is real.
+\end{enumerate}
+
+\subsection{}
+
+If $\psi$ and its second derivative always have the same sign, $\psi$ will increase or decrease without bound forever. This means there is no non-zero choice of constant $A$ such that \[\int_{-\infty}^\infty |A \Psi|^2 \,d x = 1\] and thus the equation can't be normalised.
+
+The classical analog of this is statements is that the potential energy of a system can't exceed its total energy.
+
 \end{document}
