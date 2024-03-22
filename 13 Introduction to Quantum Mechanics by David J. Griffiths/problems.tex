@@ -1,5 +1,6 @@
 \documentclass{article}
 \usepackage{amsmath} % For align*
+\usepackage{amsfonts} % For mathbb
 \usepackage{bookmark} % For links
 \usepackage{enumitem} % For customisable list labels
 \usepackage{siunitx} % For units
@@ -474,5 +475,182 @@ No effect on the expectation value.
 If $\psi$ and its second derivative always have the same sign, $\psi$ will increase or decrease without bound forever. This means there is no non-zero choice of constant $A$ such that \[\int_{-\infty}^\infty |A \Psi|^2 \,d x = 1\] and thus the equation can't be normalised.
 
 The classical analog of this is statements is that the potential energy of a system can't exceed its total energy.
+
+\subsection{}
+
+The time-independent Schrödinger equation in an infinite square well is \[-\frac{\hbar^2}{2 m} \frac{d^2 \psi}{d x^2} = E \psi.\]
+
+If $E = 0$ then $\psi = A x + B$ which isn't normalisable.
+
+If $E < 0$ then $\psi = A e^{k t} + B e^{-k t}$ where $k \in \mathbb{R}$ which also isn't normalisable.
+
+\subsection{}
+
+\begin{align*}
+  \Psi_n(x, t) & = \sqrt{\frac{2}{a}} \sin \left( \frac{n \pi}{a} x \right) e^{-i (n^2 \pi^2 \hbar / 2 m a^2) t}                           \\
+  \ev{x}       & = \int_0^a \Psi_n^* x \Psi_n \,d x                                                                                        \\
+               & = \frac{2}{a} \int_0^a x \sin^2 \left( \frac{n \pi}{a} x \right) \,d x                                                    \\
+               & = \frac{a}{2}                                                                                                             \\
+  \ev{x^2}     & = \int_0^a \Psi_n^* x^2 \Psi_n \,d x                                                                                      \\
+               & = \frac{2}{a} \int_0^a x^2 \sin^2 \left( \frac{n \pi}{a} x \right) \,d x                                                  \\
+               & = a^2 \left( \frac{1}{3} - \frac{1}{2 n^2 \pi^2} \right)                                                                  \\
+  \ev{p}       & = \int_0^a \Psi_n^* \left( -i \hbar \frac{\partial}{\partial x} \right) \Psi_n \,d x                                      \\
+               & = -i \frac{2 \hbar n \pi}{a^2} \int_0^a \sin \left( \frac{n \pi}{a} x \right) \cos \left( \frac{n \pi}{a} x \right) \,d x \\
+               & = 0                                                                                                                       \\
+  \ev{p^2}     & = \int_0^a \Psi_n^* \left( -\hbar^2 \frac{\partial^2}{\partial x^2} \right) \Psi_n \,d x                                  \\
+               & = \frac{2 \hbar^2 n^2 \pi^2}{a^3} \int_0^a \sin^2 \left( \frac{n \pi}{a} x \right) \,d x                                  \\
+               & = \left( \frac{n \pi \hbar}{a} \right)^2                                                                                  \\
+  \sigma_x     & = \sqrt{\ev{x^2} - \ev{x}^2}                                                                                              \\
+               & = \frac{a}{2} \sqrt{\frac{1}{3} - \frac{2}{n^2 \pi^2}}                                                                    \\
+  \sigma_p     & = \sqrt{\ev{p^2} - \ev{p}^2}                                                                                              \\
+               & = \frac{n \pi \hbar}{a}
+\end{align*}
+
+\subsection{}
+
+\begin{enumerate}
+  \item
+
+        \begin{align*}
+          1 & = \int_0^a A^2 (\psi_1 + \psi_2)^2 \,d x                                                                                                       \\
+            & = A^2 \int_0^a (\psi_1^2 + 2 \psi_1 \psi_2 + \psi_2^2) \,d x                                                                                   \\
+            & = \frac{2 A^2}{a} \left[ \int_0^a \sin^2 \left( \frac{\pi}{a} x \right) \,d x + \int_0^a \sin^2 \left( \frac{2 \pi}{a} x \right) \,d x \right] \\
+            & = 2 A^2                                                                                                                                        \\
+          A & = \frac{1}{\sqrt{2}}
+        \end{align*}
+
+  \item
+
+        \begin{align*}
+          \Psi(x, t)     & = \frac{1}{\sqrt{2}} \left[ \sqrt{\frac{2}{a}} \sin \left( \frac{\pi}{a} x \right) e^{-i \omega t} + \sqrt{\frac{2}{a}} \sin \left( \frac{2 \pi}{a} x \right) e^{-4 i \omega t} \right] \\
+          |\Psi(x, t)|^2 & = \Psi^* \Psi                                                                                                                                                                           \\
+                         & = \frac{1}{a} \left[ \sin \left( \frac{\pi}{a} x \right) e^{i \omega t} + \sin \left( \frac{2 \pi}{a} x \right) e^{4 i \omega t} \right]                                                \\
+                         & \qquad \left[ \sin \left( \frac{\pi}{a} x \right) e^{-i \omega t} + \sin \left( \frac{2 \pi}{a} x \right) e^{-4 i \omega t} \right]                                                     \\
+                         & = \frac{1}{a} \left[ \sin^2 \left( \frac{\pi}{a} x \right) + \sin \left( \frac{\pi}{a} x \right) \sin \left( \frac{2 \pi}{a} x \right) e^{-3 i \omega t} \right.                        \\
+                         & \qquad \left. + \sin \left( \frac{\pi}{a} x \right) \sin \left( \frac{2 \pi}{a} x \right) e^{3 i \omega t} + \sin^2 \left( \frac{2 \pi}{a} x \right) \right]                            \\
+                         & = \frac{1}{a} \left[ \sin^2 \left( \frac{\pi}{a} x \right) + \sin^2 \left( \frac{2 \pi}{a} x \right) \right.                                                                            \\
+                         & \qquad \left. + 2 \sin \left( \frac{\pi}{a} x \right) \sin \left( \frac{2 \pi}{a} x \right) \cos (3 \omega t) \right]
+        \end{align*}
+
+  \item
+
+        \begin{align*}
+          \ev{x} & = \int_0^a \Psi^* x \Psi \,d x                                        \\
+                 & = \int_0^a x |\Psi|^2 \,d x                                           \\
+                 & = \frac{a}{2} \left[ 1 - \frac{32}{9 \pi^2} \cos (3 \omega t) \right]
+        \end{align*}
+
+  \item
+
+        \begin{align*}
+          \ev{p} & = m \frac{d \ev{x}}{d t}                          \\
+                 & = \frac{16 a m \omega}{3 \pi^2} \sin (3 \omega t) \\
+                 & = \frac{8 \hbar}{3 a} \sin (3 \omega t)
+        \end{align*}
+
+  \item You can get $E_1$ or $E_2$ and the probability of getting each is $1 / 2$.
+
+        $H = \frac{1}{2} (E_1 + E_2)$ is the mean of the two possible energy values.
+\end{enumerate}
+
+\subsection{}
+
+\begin{align*}
+  \Psi(x, 0) & = A [\psi_1 + e^{i \phi} \psi_2]                                                                                                                                       \\
+  1          & = \int_0^a |\Psi|^2 \,d x                                                                                                                                              \\
+             & = \int_0^a \Psi^* \Psi \,d x                                                                                                                                           \\
+             & = A^2 \int_0^a (\psi_1 + e^{-i \phi} \psi_2) (\psi_1 + e^{i \phi} \psi_2) \,d x                                                                                        \\
+             & = A^2 \int_0^a (\psi_1^2 + e^{i \phi} \psi_1 \psi_2 + e^{-i \phi} \psi_1 \psi_2 + \psi_2^2) \,d x                                                                      \\
+             & = \frac{2 A^2}{a} \int_0^a \left[ \sin^2 \left( \frac{\pi}{a} x \right) + e^{i \phi} \sin \left( \frac{\pi}{a} x \right) \sin \left( \frac{2 \pi}{a} x \right) \right. \\
+             & \qquad \left. e^{-i \phi} \sin \left( \frac{\pi}{a} x \right) \sin \left( \frac{2 \pi}{a} x \right) + \sin^2 \left( \frac{2 \pi}{a} x \right) \right] \,d x            \\
+             & = \frac{2 A^2}{a} \int_0^a \left[ \sin^2 \left( \frac{\pi}{a} x \right) + \sin \left( \frac{\pi}{a} x \right) \sin \left( \frac{2 \pi}{a} x \right) \cos \phi \right.  \\
+             & \qquad \left. + \sin^2 \left( \frac{2 \pi}{a} x \right) \right] \,d x                                                                                                  \\
+             & = 2 A^2                                                                                                                                                                \\
+  A          & = \frac{1}{\sqrt{2}}                                                                                                                                                   \\
+  \Psi(x, t) & = \frac{1}{\sqrt{a}} \left[ \sin \left( \frac{\pi}{a} x \right) e^{-i \omega t} + \sin \left( \frac{2 \pi}{a} x \right) e^{i (\phi - 4 \omega t)} \right]
+\end{align*}
+
+\begin{align*}
+  |\Psi|^2 & = \Psi^* \Psi                                                                                                                                                            \\
+           & = \frac{1}{a} \left[ \sin \left( \frac{\pi}{a} x \right) e^{i \omega t} + \sin \left( \frac{2 \pi}{a} x \right) e^{-i (\phi - 4 \omega t)} \right]                       \\
+           & \qquad \left[ \sin \left( \frac{\pi}{a} x \right) e^{-i \omega t} + \sin \left( \frac{2 \pi}{a} x \right) e^{i (\phi - 4 \omega t)} \right]                              \\
+           & = \frac{1}{a} \left[ \sin^2 \left( \frac{\pi}{a} x \right) + \sin \left( \frac{\pi}{a} x \right) \sin \left( \frac{2 \pi}{a} x \right) e^{i (\phi - 3 \omega t)} \right. \\
+           & \qquad \left. \sin \left( \frac{\pi}{a} x \right) \sin \left( \frac{2 \pi}{a} x \right) e^{-i (\phi - 3 \omega t)} + \sin^2 \left( \frac{2 \pi}{a} x \right) \right]     \\
+           & = \frac{1}{a} \left[ \sin^2 \left( \frac{\pi}{a} x \right) + \sin^2 \left( \frac{2 \pi}{a} x \right) \right.                                                             \\
+           & \qquad \left. + 2 \sin \left( \frac{\pi}{a} x \right) \sin \left( \frac{2 \pi}{a} x \right) \cos (\phi - 3 \omega t) \right]                                             \\
+  \ev{x}   & = \int_0^a \Psi^* x \Psi \,d x                                                                                                                                           \\
+           & = \int_0^a x |\Psi|^2 \,d x                                                                                                                                              \\
+           & = \frac{a}{2} \left[ 1 - \frac{32}{9 \pi^2} \cos (3 \omega t - \phi) \right]
+\end{align*}
+
+\subsection{}
+
+\begin{enumerate}
+  \item
+
+        \begin{align*}
+          1 & = \int_0^a |\Psi|^2 \,d x                                                                                         \\
+            & = A^2 \left[ \int_0^{a / 2} x^2 \,d x + \int_{a / 2}^a (a - x)^2 \,d x \right]                                    \\
+            & = A^2 \left\{ \frac{1}{3} \left[ \frac{a}{2} \right]^3 + \left[ -\frac{1}{3} (a - x)^3 \right]_{a / 2}^a \right\} \\
+            & = A^2 \left( \frac{a^3}{24} + \frac{a^3}{24} \right)                                                              \\
+            & = \frac{A^2 a^3}{12}                                                                                              \\
+          A & = \frac{2 \sqrt{3}}{\sqrt{a^3}}
+        \end{align*}
+
+  \item
+
+        \begin{align*}
+          c_n        & = \sqrt{\frac{2}{a}} \int_0^a \sin \left( \frac{n \pi}{a} x \right) \Psi(x, 0) \,d x                                                                                                        \\
+                     & = \sqrt{\frac{2}{a}} \left[ \int_0^{a / 2} \sin \left( \frac{n \pi}{a} x \right) A x \,d x + \int_{a / 2}^a \sin \left( \frac{n \pi}{a} x \right) A (a - x) \,d x \right]                   \\
+                     & = \frac{2 \sqrt{6}}{a^2} \left[ \int_0^{a / 2} x \sin \left( \frac{n \pi}{a} x \right) \,d x + \int_{a / 2}^a (a - x) \sin \left( \frac{n \pi}{a} x \right) \,d x \right]                   \\
+                     & = \frac{8 \sqrt{6}}{n^2 \pi^2} \sin^2 \left( \frac{n \pi}{4} \right) \sin \left( \frac{n \pi}{2} \right)                                                                                    \\
+                     & = \begin{cases}
+                           0                                               & n \text{ even} \\
+                           (-1)^{(n - 1) / 2} \frac{4 \sqrt{6}}{n^2 \pi^2} & n \text{ odd}
+                         \end{cases}                                                                                                           \\
+          \Psi(x, t) & = \frac{4 \sqrt{6}}{\pi^2} \sqrt{\frac{2}{a}} \sum_{n = 1, 3, 5, \ldots}^\infty (-1)^{(n - 1) / 2} \frac{1}{n^2} \sin \left( \frac{n \pi}{a} x \right) e^{-i (n^2 \pi^2 \hbar / 2 m a^2) t} \\
+        \end{align*}
+
+  \item
+
+        \begin{align*}
+          |c_1|^2 & = \left( \frac{4 \sqrt{6}}{\pi^2} \right)^2 \\
+                  & \approx 0.985
+        \end{align*}
+
+  \item
+
+        \begin{align*}
+          E_n    & = \frac{n^2 \pi^2 \hbar^2}{2 m a^2}                                                                                   \\
+          \ev{H} & = \sum_{n = 0}^\infty |c_{2 n + 1}|^2 E_{2 n + 1}                                                                     \\
+                 & = \sum_{n = 0}^\infty \left( \frac{4 \sqrt{6}}{(2 n + 1)^2 \pi^2} \right)^2 \frac{(2 n + 1)^2 \pi^2 \hbar^2}{2 m a^2} \\
+                 & = \sum_{n = 0}^\infty \frac{48 \hbar^2}{(2 n + 1)^2 m a^2 \pi^2}                                                      \\
+                 & = \frac{48 \hbar^2}{m a^2 \pi^2} \sum_{n = 0}^\infty \frac{1}{(2 n + 1)^2}                                            \\
+                 & = \frac{6 \hbar^2}{m a^2}
+        \end{align*}
+\end{enumerate}
+
+\subsection{}
+
+\begin{align*}
+  1       & = \int_0^{a / 2} |\Psi|^2 \,d x                                          \\
+          & = A^2 \int_0^{a / 2} \,d x                                               \\
+          & = \frac{a A^2}{2}                                                        \\
+  A       & = \sqrt{\frac{2}{a}}                                                     \\
+  c_n     & = \frac{2}{a} \int_0^{a / 2} \sin \left( \frac{n \pi}{a} x \right) \,d x \\
+  |c_1|^2 & = \left( \frac{2}{\pi} \right)^2                                         \\
+          & \approx 0.405
+\end{align*}
+
+\subsection{}
+
+\begin{align*}
+  \Psi(x, 0) & = A x (a - x)                                                                                                \\
+  \ev{H}     & = \int_0^a \Psi(x, 0)^* \hat{H} \Psi(x, 0) \,d x                                                             \\
+             & = \int_0^a \Psi(x, 0)^* \left( -\frac{\hbar^2}{2 m} \frac{\partial^2}{\partial x^2} \right) \Psi(x, 0) \,d x \\
+             & = \frac{A^2 \hbar^2}{m} \int_0^a x (a - x) \,d x                                                             \\
+             & = \frac{30 \hbar^2}{m a^5} \frac{a^3}{6}                                                                     \\
+             & = \frac{5 \hbar^2}{m a^2}
+\end{align*}
 
 \end{document}
