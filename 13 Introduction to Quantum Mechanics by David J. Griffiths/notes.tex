@@ -61,41 +61,41 @@
 \subsubsection{Discrete Variables}
 
 \begin{itemize}
-\item The average value of a discrete variable $j$ is \[\ev{j} = \frac{\sum j N(j)}{N} = \sum_{j = 0}^\infty j P(j)\] where $N$ is the size of the population, $N(j)$ is the number of $j$s in the population, and $P(j)$ is the probability of randomly selecting a $j$ from the population.
+  \item The average value of a discrete variable $j$ is \[\ev{j} = \frac{\sum j N(j)}{N} = \sum_{j = 0}^\infty j P(j)\] where $N$ is the size of the population, $N(j)$ is the number of $j$s in the population, and $P(j)$ is the probability of randomly selecting a $j$ from the population.
 
   \item In quantum mechanics the average is usually the quantity of interest and it is called the \textbf{expectation value} (even though it may not be the most probable value).
 
-\item The average value of a function $f$ of a discrete variable $j$ is \[\ev{f(j)} = \sum_{j = 0}^\infty f(j) P(j).\]
+  \item The average value of a function $f$ of a discrete variable $j$ is \[\ev{f(j)} = \sum_{j = 0}^\infty f(j) P(j).\]
 
-\item Two distributions could have the same median, mean, mode, and size but be spread out differently. One way to quantify this could be to calculate how far each element is from the average \[\Delta j = j - \ev{j}\] and calculate the average of $\Delta j$. However, it ends up being zero \begin{align*}
-\langle \Delta j \rangle & = \sum (j - \ev{j}) P(j)         \\
-& = \sum j P(j) - \ev{j} \sum P(j) \\
-& = \ev{j} - \ev{j}     \\
+  \item Two distributions could have the same median, mean, mode, and size but be spread out differently. One way to quantify this could be to calculate how far each element is from the average \[\Delta j = j - \ev{j}\] and calculate the average of $\Delta j$. However, it ends up being zero \begin{align*}
+          \langle \Delta j \rangle & = \sum (j - \ev{j}) P(j)         \\
+                                   & = \sum j P(j) - \ev{j} \sum P(j) \\
+                                   & = \ev{j} - \ev{j}                \\
                                    & = 0.
         \end{align*} To avoid this we calculate the average of the square of $\Delta j$ \[\sigma^2 = \langle (\Delta j)^2 \rangle\] which is known as the \textbf{variance} of the distribution.
 
   \item The square root of the variance is called the \textbf{standard deviation}.
 
   \item A useful theorem on variances is \begin{align*}
-          \sigma^2 & = \langle (\Delta j)^2 \rangle                                                    \\
-                   & = \sum (\Delta j)^2 P(j)                                                          \\
-& = \sum (j - \ev{j})^2 P(j)                                             \\
-& = \sum (j^2 - 2 j \ev{j} + \ev{j}^2) P(j)                   \\
-& = \sum j^2 P(j) - 2 \ev{j} \sum j P(j) + \ev{j}^2 \sum P(j) \\
-& = \ev{j^2} - 2 \ev{j}^2 + \ev{j}^2               \\
-& = \ev{j^2} - \ev{j}^2
-\end{align*} and thus the standard deviation can be calculated as \[\sigma = \sqrt{\ev{j^2} - \ev{j}^2}\] which is usually easier than the full formula.
+          \sigma^2 & = \langle (\Delta j)^2 \rangle                              \\
+                   & = \sum (\Delta j)^2 P(j)                                    \\
+                   & = \sum (j - \ev{j})^2 P(j)                                  \\
+                   & = \sum (j^2 - 2 j \ev{j} + \ev{j}^2) P(j)                   \\
+                   & = \sum j^2 P(j) - 2 \ev{j} \sum j P(j) + \ev{j}^2 \sum P(j) \\
+                   & = \ev{j^2} - 2 \ev{j}^2 + \ev{j}^2                          \\
+                   & = \ev{j^2} - \ev{j}^2
+        \end{align*} and thus the standard deviation can be calculated as \[\sigma = \sqrt{\ev{j^2} - \ev{j}^2}\] which is usually easier than the full formula.
 \end{itemize}
 
 \subsubsection{Continuous Variables}
 
 \begin{itemize}
   \item The equations above translate as expected to continuous variables: \begin{align*}
-          P_{a b}              & = \int_a^b \rho(x) \,d x                     \\
-          1                    & = \int_{-\infty}^{+\infty} \rho(x) \,d x     \\
-\ev{x}    & = \int_{-\infty}^{+\infty} x \rho(x) \,d x   \\
-\ev{f(x)} & = \int{-\infty}^{+\infty} f(x) \rho(x) \,d x \\
-\sigma^2             & = \ev{x^2} - \ev{x}^2
+          P_{a b}   & = \int_a^b \rho(x) \,d x                     \\
+          1         & = \int_{-\infty}^{+\infty} \rho(x) \,d x     \\
+          \ev{x}    & = \int_{-\infty}^{+\infty} x \rho(x) \,d x   \\
+          \ev{f(x)} & = \int{-\infty}^{+\infty} f(x) \rho(x) \,d x \\
+          \sigma^2  & = \ev{x^2} - \ev{x}^2
         \end{align*}
 \end{itemize}
 
@@ -165,39 +165,39 @@
 
   \item The physical meaning of the constants $c_n$ is thus: $|c_n|^2$ is the probability that a measurement of the system's energy would return the value $E_n$. This means that \[\sum_{n = 1}^\infty |c_n|^2 = 1\] and \[\ev{H} = \sum_{n = 1}^\infty |c_n|^2 E_n.\] The probability of measuring any particular energy is constant in time and thus the expectation value of $H$ — this is part of energy conservation.
 
-\item For a solution to the Schrödinger equation to be normalisable, $E$ must be real and must exceed the minimum value of $V$.
+  \item For a solution to the Schrödinger equation to be normalisable, $E$ must be real and must exceed the minimum value of $V$.
 \end{itemize}
 
 \subsection{The Infinite Square Well}
 
 \begin{itemize}
-\item The potential of an infinite square well is \[V(x) = \begin{cases}
-    0      & 0 \le x \le a    \\
-    \infty & \text{otherwise}
-  \end{cases}\] and thus $\Psi(x, t) = 0$ for $x$ outside $[0, a]$.
+  \item The potential of an infinite square well is \[V(x) = \begin{cases}
+            0      & 0 \le x \le a    \\
+            \infty & \text{otherwise}
+          \end{cases}\] and thus $\Psi(x, t) = 0$ for $x$ outside $[0, a]$.
 
-\item Inside such a well the time-independent Schrödinger equation reads \[-\frac{\hbar^2}{2 m} \frac{d^2 \psi}{d x^2} = E \Psi\] where $E$ must be real and greater than $0$. This can be rearranged to \[\frac{d^2 \psi}{d x^2} = -k^2 \psi\] where \[k = \frac{\sqrt{2 m E}}{\hbar}.\] This has the form of a simple harmonic oscillator and has the solution \[\psi = A \sin (k x) + B \cos (k x).\] Applying the boundary condition $\psi(0) = 0$ gives $B = 0$ and thus \[\psi = A \sin (k x).\] Applying the boundary condition $\psi(a) = 0$ gives $A \sin (k a) = 0$. We must reject $A = 0$ as that would result in the non-normalisable solution $\psi = 0$, so $\sin (k a) = 0$ and thus $k a = 0, \,\pm \pi, \,\pm 2 \pi, \,\ldots$ Again, $k = 0$ results in $\psi = 0$ so it must be rejected and we're left with \[\psi = A \sin (k_n x)\] where \[k_n = \frac{n \pi}{a}, \,n \in \mathbb{Z}^+.\]
+  \item Inside such a well the time-independent Schrödinger equation reads \[-\frac{\hbar^2}{2 m} \frac{d^2 \psi}{d x^2} = E \Psi\] where $E$ must be real and greater than $0$. This can be rearranged to \[\frac{d^2 \psi}{d x^2} = -k^2 \psi\] where \[k = \frac{\sqrt{2 m E}}{\hbar}.\] This has the form of a simple harmonic oscillator and has the solution \[\psi = A \sin (k x) + B \cos (k x).\] Applying the boundary condition $\psi(0) = 0$ gives $B = 0$ and thus \[\psi = A \sin (k x).\] Applying the boundary condition $\psi(a) = 0$ gives $A \sin (k a) = 0$. We must reject $A = 0$ as that would result in the non-normalisable solution $\psi = 0$, so $\sin (k a) = 0$ and thus $k a = 0, \,\pm \pi, \,\pm 2 \pi, \,\ldots$ Again, $k = 0$ results in $\psi = 0$ so it must be rejected and we're left with \[\psi = A \sin (k_n x)\] where \[k_n = \frac{n \pi}{a}, \,n \in \mathbb{Z}^+.\]
 
-\item From the above, the possible values of $E$ are \[E_n = \frac{\hbar^2 k_n^2}{2 m} = \frac{n^2 \pi^2 \hbar^2}{2 m a^2}, \,n \in \mathbb{Z}^+.\] In other words, unlike in classical mechanics, a quantum particle in an infinite square well can't have any energy — it must be one of these values.
+  \item From the above, the possible values of $E$ are \[E_n = \frac{\hbar^2 k_n^2}{2 m} = \frac{n^2 \pi^2 \hbar^2}{2 m a^2}, \,n \in \mathbb{Z}^+.\] In other words, unlike in classical mechanics, a quantum particle in an infinite square well can't have any energy — it must be one of these values.
 
-\item To determine the value of the constant $A$ above we normalise $\psi$ \[\int_0^a |A|^2 \sin^2 (k x) \,d x = |A|^2 \frac{a}{2} = 1.\] This only determines the magnitude of $A$ but the phase doesn't affect anything so we might as well pick \[A = \sqrt{\frac{2}{a}}\] and the solutions to the time-independent Schrödinger equation inside the infinite square well are \[\psi_n(x) = \sqrt{\frac{2}{a}} \sin \left( \frac{n \pi}{a} x \right).\]
+  \item To determine the value of the constant $A$ above we normalise $\psi$ \[\int_0^a |A|^2 \sin^2 (k x) \,d x = |A|^2 \frac{a}{2} = 1.\] This only determines the magnitude of $A$ but the phase doesn't affect anything so we might as well pick \[A = \sqrt{\frac{2}{a}}\] and the solutions to the time-independent Schrödinger equation inside the infinite square well are \[\psi_n(x) = \sqrt{\frac{2}{a}} \sin \left( \frac{n \pi}{a} x \right).\]
 
-\item The solutions $\psi_n$ have some interesting properties:
+  \item The solutions $\psi_n$ have some interesting properties:
 
-\begin{enumerate}
-  \item They alternate even and odd with respect to the centre of the well.
+        \begin{enumerate}
+          \item They alternate even and odd with respect to the centre of the well.
 
-  \item Each subsequent solution has one more node (crossing of the axis).
+          \item Each subsequent solution has one more node (crossing of the axis).
 
-  \item They are mutually orthogonal, i.e. \[\int \psi_m^* \psi_n \,d x = \begin{cases}
-            0 & m \ne n \\
-            1 & m = n
-          \end{cases}.\]
+          \item They are mutually orthogonal, i.e. \[\int \psi_m^* \psi_n \,d x = \begin{cases}
+                    0 & m \ne n \\
+                    1 & m = n
+                  \end{cases}.\]
 
-  \item The are complete, in that any other function $f(x)$ can be expressed as a linear combination of them \[f(x) = \sum_{n = 1}^\infty c_n \psi_n(x) = \sqrt{\frac{2}{a}} \sum_{n = 1}^\infty c_n \sin \left( \frac{n \pi}{a} x \right)\] where \[c_n = \int \psi_n(x)^* f(x) \,d x.\]
-\end{enumerate}
+          \item The are complete, in that any other function $f(x)$ can be expressed as a linear combination of them \[f(x) = \sum_{n = 1}^\infty c_n \psi_n(x) = \sqrt{\frac{2}{a}} \sum_{n = 1}^\infty c_n \sin \left( \frac{n \pi}{a} x \right)\] where \[c_n = \int \psi_n(x)^* f(x) \,d x.\]
+        \end{enumerate}
 
-\item The stationary states of the infinite square well are thus \[\Psi_n(x, t) = \sqrt{\frac{2}{a}} \sin \left( \frac{n \pi}{a} x \right) e^{-i (n^2 \pi^2 \hbar / 2 m a^2) t}\] and the general solution to the time-dependent Schrödinger equation is \[\Psi(x, t) = \sum_{n = 1}^\infty c_n \Psi_n(x, t)\] where $c_n$ are given by \[c_n = \sqrt{\frac{2}{a}} \int_0^a \sin \left( \frac{n \pi}{a} x \right) \Psi(x, 0) \,d x.\]
+  \item The stationary states of the infinite square well are thus \[\Psi_n(x, t) = \sqrt{\frac{2}{a}} \sin \left( \frac{n \pi}{a} x \right) e^{-i (n^2 \pi^2 \hbar / 2 m a^2) t}\] and the general solution to the time-dependent Schrödinger equation is \[\Psi(x, t) = \sum_{n = 1}^\infty c_n \Psi_n(x, t)\] where $c_n$ are given by \[c_n = \sqrt{\frac{2}{a}} \int_0^a \sin \left( \frac{n \pi}{a} x \right) \Psi(x, 0) \,d x.\]
 \end{itemize}
 
 \end{document}
