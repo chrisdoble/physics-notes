@@ -200,4 +200,45 @@
   \item The stationary states of the infinite square well are thus \[\Psi_n(x, t) = \sqrt{\frac{2}{a}} \sin \left( \frac{n \pi}{a} x \right) e^{-i (n^2 \pi^2 \hbar / 2 m a^2) t}\] and the general solution to the time-dependent Schrödinger equation is \[\Psi(x, t) = \sum_{n = 1}^\infty c_n \Psi_n(x, t)\] where $c_n$ are given by \[c_n = \sqrt{\frac{2}{a}} \int_0^a \sin \left( \frac{n \pi}{a} x \right) \Psi(x, 0) \,d x.\]
 \end{itemize}
 
+\subsection{The Harmonic Oscillator}
+
+\begin{itemize}
+  \item The equation of motion for a harmonic oscillator is \[\frac{d^2 x}{d t^2} = -k x\] where $k$ is the force constant and $x$ is the displacement from equilibrium. The solution to this differential equation is \[x = A \sin (\omega t) + B \cos (\omega t)\] where $\omega = \sqrt{k / m}$ is the angular frequency of oscillation.
+
+  \item The potential energy of a harmonic oscillator is \[V(x) = \frac{1}{2} k x^2\] which is a parabola.
+
+  \item Any potential function can be approximated by a parabola in the neighborhood of a local minimum $x_0$ providing the amplitude is small by expanding it as a Taylor series, dropping the first term as it's constant and doesn't affect the force, dropping the second term because $V'(x_0) = 0$, keeping the third term, and dropping higher order terms.
+
+  \item The quantum problem is to solve the Schrödinger equation for potential \[V(x) = \frac{1}{2} m \omega^2 x^2\] where $k$ has been replaced with $m \omega^2$. The first step is to solve the time-independent Schrödinger equation: \[-\frac{\hbar^2}{2 m} \frac{d^2 \psi}{d x^2} + \frac{1}{2} m \omega^2 x^2 \psi = E \psi.\] This is typically done in one of two ways: a clever algebraic technique using ladder-operators, and a more straightforward ``brute-force'' technique using power series.
+\end{itemize}
+
+\subsubsection{Algebraic Method}
+
+\begin{itemize}
+  \item We can factor the time-independent Schrödinger equation above as \[\frac{1}{2 m} \left[ -\hbar^2 \frac{d^2}{d x^2} + (m \omega x)^2 \right] \psi = \frac{1}{2 m} [\hat{p}^2 + (m \omega x)^2] = E \psi.\] As the Hamiltonian is equal to the total energy of the system, this means \[\hat{H} = \frac{1}{2 m} [\hat{p}^2 + (m \omega x)^2].\]
+
+  \item This form invites factorisation of the form $u^2 + v^2 = (i u + v) (-i u + v)$ however $\hat{p}$ and $x$ are operators and they do not, in general, commute (i.e. $\hat{p} x \ne x \hat{p}$). We can try anyway by introducing the quantities \[\hat{a}_\pm = \frac{1}{\sqrt{2 \hbar m \omega}} (\mp i \hat{p} + m \omega x).\] Their product is \begin{align*}
+          \hat{a}_- \hat{a}+ & = \frac{1}{2 \hbar m \omega} (i \hat{p} + m \omega x) (-i \hat{p} + m \omega x)                 \\
+                             & = \frac{1}{2 \hbar m \omega} [\hat{p}^2 + (m \omega x)^2 - i m \omega (x \hat{p} - \hat{p} x)].
+        \end{align*} The extra term involving $x \hat{p} - \hat{p} x$ is called the \textbf{commutator} of $x$ and $\hat{p}$ — it's a measure of how badly they fail to commute.
+
+  \item In general, the commutator of two operators $\hat{A}$ and $\hat{B}$ is \[[\hat{A}, \hat{B}] = \hat{A} \hat{B} - \hat{B} \hat{A}.\] It's often easier to calculate the commutator of two operators if you introduce a test function $f$, expand, and remove $f$ at the end.
+
+  \item Using this notation, the product above can be rewritten \[\hat{a}_- \hat{a}_+ = \frac{1}{2 \hbar m \omega} [\hat{p}^2 + (m \omega x)^2] - \frac{i}{2 \hbar} [x, \hat{p}].\]
+
+  \item It turns out that \[[x, \hat{p}] = i \hbar.\] This equation is called the \textbf{canonical commutation relation} and using it we find \[\hat{a}_- \hat{a}_+ = \frac{1}{\hbar \omega} \hat{H} + \frac{1}{2}\] or \[\hat{H} = \hbar \omega \left( \hat{a}_- \hat{a}_+ - \frac{1}{2} \right).\]
+
+  \item Note that the order of the operators is important. Going through the same process for $\hat{a}_+ \hat{a}_-$ gives \[\hat{a}_+ \hat{a}_- = \frac{1}{\hbar \omega} \hat{H} - \frac{1}{2}\] and \[\hat{H} = \hbar \omega \left( \hat{a}_+ \hat{a}_- + \frac{1}{2} \right).\]
+
+  \item If $\psi$ satisfies the Schrödinger equation with energy $E$, i.e. $\hat{H} \psi = E \psi$, then $\hat{a}_+ \psi$ satisfies it with energy $E + h \omega$ \[\hat{H} (\hat{a}_+ \psi) = (E + h \omega) \psi\] and $\hat{a}_- \psi$ satisfies it with energy $E - h \omega$ \[\hat{H} (\hat{a}_- \psi) = (E - h \omega) \psi.\]
+
+  \item $\hat{a}_\pm$ are called \textbf{ladder operators} because, if we know one solution to the Schrödinger equation, they can be used to climb up and down the energy ladder.
+
+  \item However, we can't apply the lowering operator $\hat{a}_-$ an infinite number of times — eventually we'll reach a state of zero energy. The ``lowest rung'' $\psi_0$ occurs when $\hat{a}_- \psi_0 = 0$. Solving this equation we find \[\psi_0(x) = \left( \frac{m \omega}{\pi \hbar} \right)^{1 / 4} e^{-\frac{m \omega}{2 \hbar} x^2}\] and \[E_0 = \frac{1}{2} \hbar \omega.\]
+
+  \item From here we can apply the raising operator $\hat{a}_+$ to find higher energy states \[\psi_n(x) = \frac{1}{\sqrt{n!}} (\hat{a}_+)^n \psi_0 \text{ with } E_n = \left( n + \frac{1}{2} \right) \hbar \omega.\]
+
+  \item In the case of the infinite square well, the stationary states of the harmonic oscillator are orthogonal \[\int_{-\infty}^\infty \psi_m^* \psi_n \,d x = \delta_{m n}.\]
+\end{itemize}
+
 \end{document}

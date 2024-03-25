@@ -11,7 +11,7 @@
   urlcolor=blue
 }
 
-\newcommand{\ev}[1]{\langle #1 \rangle}
+\newcommand{\ev}[1]{\left< #1 \right>}
 
 \setlist[enumerate, 1]{label={(\alph*)}}
 \setlist[enumerate, 2]{label={(\roman*)}}
@@ -652,5 +652,175 @@ If $E < 0$ then $\psi = A e^{k t} + B e^{-k t}$ where $k \in \mathbb{R}$ which a
              & = \frac{30 \hbar^2}{m a^5} \frac{a^3}{6}                                                                     \\
              & = \frac{5 \hbar^2}{m a^2}
 \end{align*}
+
+\subsection{}
+
+\begin{enumerate}
+  \item
+
+        \begin{align*}
+          \psi_2(x) & = \frac{1}{\sqrt{2!}} (\hat{a}_+) \psi_1                                                                                                                                                                                                                            \\
+                    & = \frac{1}{\sqrt{2}} \frac{1}{\sqrt{2 \hbar m \omega}} \left( -\hbar \frac{d}{d x} + m \omega x \right) \left( \frac{m \omega}{\pi \hbar} \right)^{1 / 4} \sqrt{\frac{2 m \omega}{\hbar}} x e^{-\frac{m \omega}{2 \hbar} x^2}                                       \\
+                    & = \frac{1}{\sqrt{2} \hbar} \left( \frac{m \omega}{\pi \hbar} \right)^{1 / 4} \left( -\hbar \frac{d}{d x} + m \omega x \right) x e^{-\frac{m \omega}{2 \hbar} x^2}                                                                                                   \\
+                    & = \frac{1}{\sqrt{2} \hbar} \left( \frac{m \omega}{\pi \hbar} \right)^{1 / 4} \left[ -\hbar \left( e^{-\frac{m \omega}{2 \hbar} x^2} - \frac{m \omega}{\hbar} x^2 e^{-\frac{m \omega}{2 \hbar} x^2} \right) + m \omega x^2 e^{-\frac{m \omega}{2 \hbar} x^2} \right] \\
+                    & = \frac{1}{\sqrt{2}} \left( \frac{m \omega}{\pi \hbar} \right)^{1 / 4} \left( \frac{2 m \omega}{\hbar} x^2 - 1 \right) e^{-\frac{m \omega}{2 \hbar} x^2}
+        \end{align*}
+\end{enumerate}
+
+\subsection{}
+
+\begin{enumerate}
+  \item
+
+        % \psi_0
+        \begin{align*}
+          \ev{x}   & = \int_{-\infty}^\infty \psi_0^* x \psi_0 \,d x                                                                                                                                                                                                                  \\
+                   & = \alpha^2 \int_{-\infty}^\infty x e^{-\frac{m \omega}{\hbar} x^2} \,d x                                                                                                                                                                                         \\
+                   & = 0                                                                                                                                                                                                                                                              \\
+          \ev{p}   & = m \frac{d \ev{x}}{d t}                                                                                                                                                                                                                                         \\
+                   & = 0                                                                                                                                                                                                                                                              \\
+          \ev{x^2} & = \int_{-\infty}^\infty \psi_0^* x^2 \psi_0 \,d x                                                                                                                                                                                                                \\
+                   & = \alpha^2 \int_{-\infty}^\infty x^2 e^{-\frac{m \omega}{\hbar} x^2} \,d x                                                                                                                                                                                       \\
+                   & = \frac{\hbar}{2 m \omega}                                                                                                                                                                                                                                       \\
+          \ev{p^2} & = \int_{-\infty}^\infty \psi_0^* \left( -\hbar^2 \frac{d^2}{d x^2} \right) \psi_0 \,d x                                                                                                                                                                          \\
+                   & = -\hbar^2 \left( \frac{m \omega}{\pi \hbar} \right)^{1 / 2} \int_{-\infty}^\infty e^{-\frac{m \omega}{2 \hbar} x^2} \frac{d}{d x} \left( -\frac{m \omega}{\hbar} x e^{-\frac{m \omega}{2 \hbar} x^2} \right) \,d x                                              \\
+                   & = \hbar^2 \left( \frac{m \omega}{\pi \hbar} \right)^{1 / 2} \frac{m \omega}{\hbar} \int_{-\infty}^\infty e^{-\frac{m \omega}{2 \hbar} x^2} \left( e^{-\frac{m \omega}{2 \hbar} x^2} - \frac{m \omega}{\hbar} x^2 e^{-\frac{m \omega}{2 \hbar} x^2} \right) \,d x \\
+                   & = \hbar^2 \left( \frac{m \omega}{\pi \hbar} \right)^{1 / 2} \frac{m \omega}{\hbar} \int_{-\infty}^\infty \left( 1 - \frac{m \omega}{\hbar} x^2 \right) e^{-\frac{m \omega}{\hbar} x^2} \,d x                                                                     \\
+                   & = \hbar^2 \left( \frac{m \omega}{\pi \hbar} \right)^{1 / 2} \frac{m \omega}{\hbar} \frac{\hbar \sqrt{\pi}}{2 \sqrt{\hbar m \omega}}                                                                                                                              \\
+                   & = \frac{1}{2} m \hbar \omega
+        \end{align*}
+
+        % \psi_1
+        \begin{align*}
+          \psi_1(x) & = \left( \frac{m \omega}{\pi \hbar} \right)^{1 / 4} \sqrt{\frac{2 m \omega}{\hbar}} x e^{-\frac{m \omega}{2 \hbar} x^2}                                                                                                                                                             \\
+          \ev{x}    & = 0                                                                                                                                                                                                                                                                                 \\
+          \ev{p}    & = m \frac{d \ev{x}}{d t}                                                                                                                                                                                                                                                            \\
+                    & = 0                                                                                                                                                                                                                                                                                 \\
+          \ev{x^2}  & = \int_{-\infty}^\infty \psi_1^* x^2 \psi_1 \,d x                                                                                                                                                                                                                                   \\
+                    & = \left( \frac{m \omega}{\pi \hbar} \right)^{1 / 2} \frac{2 m \omega}{\hbar} \int_{-\infty}^\infty x^4 e^{-\frac{m \omega}{\hbar} x^2} \,d x                                                                                                                                        \\
+                    & = \left( \frac{m \omega}{\pi \hbar} \right)^{1 / 2} \frac{2 m \omega}{\hbar} \frac{3}{4} \sqrt{\pi} \left( \frac{\hbar}{m \omega} \right)^{5 / 2}                                                                                                                                   \\
+                    & = \frac{3}{2} \frac{\hbar}{m \omega}                                                                                                                                                                                                                                                \\
+          \ev{p^2}  & = \int_{-\infty}^\infty \psi_1^* \left( -\hbar^2 \frac{d^2}{d x^2} \right) \psi_1 \,d x                                                                                                                                                                                             \\
+                    & = -\hbar^2 \left( \frac{m \omega}{\pi \hbar} \right)^{1 / 2} \frac{2 m \omega}{\hbar} \int_{-\infty}^\infty x e^{-\frac{m \omega}{2 \hbar} x^2} \frac{d}{d x} \left( e^{-\frac{m \omega}{2 \hbar} x^2} - \frac{m \omega}{\hbar} x^2 e^{-\frac{m \omega}{2 \hbar} x^2} \right) \,d x \\
+                    & = -\hbar^2 \left( \frac{m \omega}{\pi \hbar} \right)^{1 / 2} \frac{2 m \omega}{\hbar} \int_{-\infty}^\infty x e^{-\frac{m \omega}{2 \hbar} x^2} \left[ -\frac{m \omega}{\hbar} x e^{-\frac{m \omega}{2 \hbar} x^2} \right.                                                          \\
+                    & \qquad \left. - \frac{2 m \omega}{\hbar} x e^{-\frac{m \omega}{2 \hbar} x^2} + \left( \frac{m \omega}{\hbar} \right)^2 x^3 e^{-\frac{m \omega}{2 \hbar} x^2} \right] \,d x                                                                                                          \\
+                    & = 2 \hbar^2 \left( \frac{m \omega}{\pi \hbar} \right)^{1 / 2} \left( \frac{m \omega}{\hbar} \right)^2 \int_{-\infty}^\infty x^2 e^{-\frac{m \omega}{\hbar} x^2} \left( 3 - \frac{m \omega}{\hbar} x^2 \right) \,d x                                                                 \\
+                    & = 2 \hbar^2 \left( \frac{m \omega}{\pi \hbar} \right)^{1 / 2} \left( \frac{m \omega}{\hbar} \right)^2 \frac{3}{4} \sqrt{\pi} \left( \frac{h}{m \omega} \right)^{3 / 2}                                                                                                              \\
+                    & = \frac{3}{2} m \hbar \omega
+        \end{align*}
+
+  \item
+
+        \begin{align*}
+          % \psi_0
+          \sigma_x          & = \sqrt{\ev{x^2} - \ev{x}^2}        \\
+                            & = \sqrt{\frac{\hbar}{2 m \omega}}   \\
+          \sigma_p          & = \sqrt{\ev{p^2} - \ev{p}^2}        \\
+                            & = \sqrt{\frac{m \hbar \omega}{2}}   \\
+          \sigma_x \sigma_p & = \frac{\hbar}{2}                   \\
+          % \psi_1
+          \sigma_x          & = \sqrt{\frac{3 \hbar}{2 m \omega}} \\
+          \sigma_p          & = \sqrt{\frac{3 m \hbar \omega}{2}} \\
+          \sigma_x \sigma_p & = \frac{3}{2} \hbar
+        \end{align*}
+
+  \item
+
+        \begin{align*}
+          % \psi_0
+          \ev{T} & = \frac{\ev{p^2}}{2 m}            \\
+                 & = \frac{\hbar \omega}{4}          \\
+          \ev{V} & = \frac{1}{2} m \omega^2 \ev{x^2} \\
+                 & = \frac{1}{4} \hbar \omega        \\
+          % \psi_1
+          \ev{T} & = \frac{\ev{p^2}}{2 m}            \\
+                 & = \frac{3}{4} \hbar \omega        \\
+          \ev{V} & = \frac{1}{2} m \omega^2 \ev{x^2} \\
+                 & = \frac{3}{4} \hbar \omega
+        \end{align*}
+\end{enumerate}
+
+\subsection{}
+
+\begin{align*}
+  \ev{x}   & = \int_{-\infty}^\infty \psi_n^* x \psi_n \,d x                                                                                                \\
+           & = \sqrt{\frac{\hbar}{2 m \omega}} \int_{-\infty}^\infty \psi_n^* (\hat{a}_+ + \hat{a}_-) \psi_n \,d x                                          \\
+           & = \sqrt{\frac{\hbar}{2 m \omega}} \int_{-\infty}^\infty \psi_n^* (\sqrt{n + 1} \psi_{n + 1} + \sqrt{n} \psi_{n - 1}) \,d x                     \\
+           & = 0                                                                                                                                            \\
+  \ev{p}   & = \int_{-\infty}^\infty \psi_n^* p \psi_n \,d x                                                                                                \\
+           & = i \sqrt{\frac{\hbar m \omega}{2}} \int_{-\infty}^\infty \psi_n^* (\hat{a}_+ - \hat{a}_-) \psi_n \,d x                                        \\
+           & = i \sqrt{\frac{\hbar m \omega}{2}} \int_{-\infty}^\infty \psi_n^* (\sqrt{n + 1} \psi_{n + 1} - \sqrt{n} \psi_{n - 1}) \,d x                   \\
+           & = 0                                                                                                                                            \\
+  \ev{x^2} & = \int_{-\infty}^\infty \psi_n^* x^2 \psi_n \,d x                                                                                              \\
+           & = \frac{\hbar}{2 m \omega} \int_{-\infty}^\infty \psi_n^* (\hat{a}_+^2 + \hat{a}_+ \hat{a}_- + \hat{a}_- \hat{a}_+ + \hat{a}_-^2) \psi_n \,d x \\
+           & = \frac{\hbar}{2 m \omega} (2 n + 1) \int_{-\infty}^\infty |\psi_n|^2 \,d x                                                                    \\
+           & = \frac{\hbar}{m \omega} \left( n + \frac{1}{2} \right)                                                                                        \\
+  \ev{p^2} & = \int_{-\infty}^\infty \psi_n^* p^2 \psi_n \,d x                                                                                              \\
+           & = -\frac{\hbar m \omega}{2} \int_{-\infty}^\infty \psi_n^* (\hat{a}_+^2 - \hat{a}_+ \hat{a}_- - \hat{a}_- \hat{a}- + \hat{a}_-^2) \psi_n \,d x \\
+           & = \frac{\hbar m \omega}{2} (2 n + 1) \int_{-\infty}^\infty |\psi_n|^2 \,d x                                                                    \\
+           & = \hbar m \omega \left( n + \frac{1}{2} \right)                                                                                                \\
+  \ev{T}   & = \ev{\frac{p^2}{2 m}}                                                                                                                         \\
+           & = \frac{1}{2} \hbar \omega \left( n + \frac{1}{2} \right)
+\end{align*}
+
+\begin{align*}
+  \sigma_x          & = \sqrt{\ev{x^2} - \ev{x}^2}                                   \\
+                    & = \sqrt{\frac{\hbar}{m \omega} \left( n + \frac{1}{2} \right)} \\
+  \sigma_p          & = \sqrt{\hbar m \omega \left( n + \frac{1}{2} \right)}         \\
+  \sigma_x \sigma_p & = (2 n + 1) \frac{\hbar}{2}                                    \\
+                    & \ge \frac{\hbar}{2}
+\end{align*}
+
+\subsection{}
+
+\begin{enumerate}
+  \item
+
+        \begin{align*}
+          \Psi(x, 0) & = A [3 \psi_0(x) + 4 \psi_1(x)]                                                             \\
+          1          & = \int_{-\infty}^\infty |\Psi(x, 0)|^2 \,d x                                                \\
+                     & = A^2 \int_{-\infty}^\infty [9 \psi_0(x)^2 + 24 \psi_0(x) \psi_1(x) + 16 \psi_1(x)^2] \,d x \\
+                     & = 25 A^2                                                                                    \\
+          A          & = \frac{1}{5}
+        \end{align*}
+
+  \item
+
+        \begin{align*}
+          \Psi(x, t)     & = \frac{1}{5} [3 \psi_0(x) e^{-i \omega t / 2} + 4 \psi_1(x) e^{-3 i \omega t / 2}]                                                                      \\
+          |\Psi(x, t)|^2 & = \Psi(x, t)^* \Psi(x, t)                                                                                                                                \\
+                         & = \frac{1}{25} [3 \psi_0(x) e^{i \omega t / 2} + 4 \psi_1(x) e^{3 i \omega t / 2}] [3 \psi_0(x) e^{-i \omega t / 2} + 4 \psi_1(x) e^{-3 i \omega t / 2}] \\
+                         & = \frac{1}{25} [9 \psi_0(x)^2 + 12 \psi_0(x) \psi_1(x) e^{-i \omega t} + 12 \psi_0(x) \psi_1(x) e^{i \omega t} + 16 \psi_1(x)^2]                         \\
+                         & = \frac{1}{25} [9 \psi_0(x)^2 + 16 \psi_1(x)^2 + 24 \psi_0(x) \psi_1(x) \cos \omega t]
+        \end{align*}
+
+  \item
+
+        \begin{align*}
+          \ev{x}                              & = \int_{-\infty}^\infty \Psi^* x \Psi \,d x                                                                                                                                            \\
+                                              & = \frac{1}{25} \int_{-\infty}^\infty x (9 \psi_0^2 + 16 \psi_1^2 + 24 \psi_0 \psi_1 \cos \omega t) \,d x                                                                               \\
+                                              & = \frac{24}{25} \int_{-\infty}^\infty x \psi_0 \psi_1 \cos (\omega t) \,d x                                                                                                            \\
+                                              & = \frac{24}{25} \left( \frac{m \omega}{\pi \hbar} \right)^{1 / 2} \sqrt{\frac{2 m \omega}{\hbar}} \cos (\omega t) \int_{-\infty}^\infty x^2 e^{-\frac{m \omega}{\hbar} x^2} \,d x      \\
+                                              & = \frac{24}{25} \left( \frac{m \omega}{\pi \hbar} \right)^{1 / 2} \sqrt{\frac{2 m \omega}{\hbar}} \cos (\omega t) \frac{1}{2} \sqrt{\pi} \left( \frac{\hbar}{m \omega} \right)^{3 / 2} \\
+                                              & = \frac{24}{25} \sqrt{\frac{\hbar}{2 m \omega}} \cos (\omega t)                                                                                                                        \\
+          \ev{p}                              & = m \frac{d \ev{x}}{d t}                                                                                                                                                               \\
+                                              & = -\frac{24}{25} \sqrt{\frac{\hbar m \omega}{2}} \sin (\omega t)                                                                                                                       \\
+          \frac{d \ev{p}}{d t}                & = -\frac{24}{25} \sqrt{\frac{\hbar m \omega}{2}} \omega \cos (\omega t)                                                                                                                \\
+          V                                   & = \frac{1}{2} m \omega^2 x^2                                                                                                                                                           \\
+          \frac{\partial V}{d \partial}       & = m \omega^2 x                                                                                                                                                                         \\
+          \ev{-\frac{\partial V}{\partial x}} & = -m \omega^2 \ev{x}                                                                                                                                                                   \\
+                                              & = -\frac{24}{25} \sqrt{\frac{\hbar m \omega}{2}} \omega \cos (\omega t)                                                                                                                \\
+                                              & = \frac{d \ev{p}}{d t}
+        \end{align*}
+
+  \item
+
+        \begin{align*}
+          E_0    & = \frac{\hbar \omega}{2}   \\
+          P(E_0) & = \frac{9}{25}             \\
+          E_1    & = \frac{3 \hbar \omega}{2} \\
+          P(E_1) & = \frac{16}{25}
+        \end{align*}
+\end{enumerate}
 
 \end{document}
