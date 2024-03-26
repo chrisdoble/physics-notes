@@ -255,4 +255,28 @@
   \item By convention the arbitrary multiplicative factor is chosen such that the coefficient of the highest power of $\xi$ is $2^n$. With this convention, the normalised stationary states for the harmonic oscillator are \[\psi_n = \left( \frac{m \omega}{\pi \hbar} \right)^{1 / 4} \frac{1}{\sqrt{2^n n!}} H_n(\xi) e^{-\xi^2 / 2}.\]
 \end{itemize}
 
+\subsection{The Free Particle}
+
+\begin{itemize}
+  \item For a free particle, $V = 0$ everywhere. This gives a time-independent Schrödinger equation of \[-\frac{\hbar^2}{2 m} \frac{d^2 \psi}{d x^2} = E \psi\] or \[\frac{d^2 \psi}{d x^2} = -k^2 \psi \text{ where } k = \frac{\sqrt{2 m E}}{\hbar}\] the solution to which is \[\psi(x) = A e^{i k x} + B e^{-i k x}.\]
+
+  \item Introducing the standard time dependence gives \[\Psi(x, t) = A e^{i k \left( x - \frac{\hbar k}{2 m} t \right)} + B e^{-i k \left( x + \frac{\hbar k}{2 m} t \right)}.\] The first term represents a wave travelling to the left and the second term represents a wave travellign to the right. We can combine them \[\Psi_k(x, t) = A e^{i \left( k x - \frac{\hbar k^2}{2 m} t \right)}\] if we let $k$ go negative \[k = \pm \frac{\sqrt{2 m E}}{\hbar} \text{ with } \begin{cases}
+            k > 0 & \text{travelling to the right,} \\
+            k < 0 & \text{travelling to the left.}
+          \end{cases}\]
+
+  \item Unfortunately this wavefunction can't be normalised \[\int_{-\infty}^\infty \Psi_k^* \Psi_k = |A|^2 \int_{-\infty}^\infty \,d x = |A|^2 (\infty).\] This means that it doesn't represent a physically realisable state. In other words, there's no such thing as a free particle with a definite energy.
+
+  \item The solution is still a linear combination of separable solutions, but it's an integral over the continuous variable $k$ instead of a sum over the discrete variable $n$ \[\Psi(x, t) = \frac{1}{\sqrt{2 \pi}} \int_{-\infty}^\infty \phi(k) e^{i \left( k x - \frac{\hbar k^2}{2 m} t \right)} \,d k\] where $(1 / \sqrt{2 \pi}) \phi(k) \,d k$ plays the role of the coefficient $c_n$ in previous wavefunctions. This wavefunction can be normalised but it carries a range of $k$s and thus a range of energies and speeds. This is called a \textbf{wave packet}.
+
+  \item In a typicaly quantum problem you'll be given $\Psi(x, 0)$ and be asked to find $\Psi(x, t)$. How do you determine $\phi(k)$ to match the initial wave function \[\Psi(x, 0) = \frac{1}{\sqrt{2 \pi}} \int_{-\infty}^\infty \phi(k) e^{i k x} \,d k.\] The answer is given by \textbf{Plancherel's theorem} \[f(x) = \frac{1}{\sqrt{2 \pi}} \int_{-\infty}^\infty F(k) e^{i k x} \,d k \Longleftrightarrow F(k) = \frac{1}{\sqrt{2 \pi}} \int_{-\infty}^\infty f(x) e^{-i k x} \,d x\] where $F(k)$ is the \textbf{Fourier transform} of $f(x)$. Thus \[\phi(k) = \frac{1}{\sqrt{2 \pi}} \int_{-\infty}^\infty \Psi(x, 0) e^{-i k x} \,d x.\]
+
+  \item A wave packet is comprised of multiple constituent waves that have different velocities and wavelengths. The velocity of a constituent wave is called the \textbf{phase velocity} while the velocity of the packet as a whole is called the \textbf{group velocity}.
+
+  \item The relationship between $\omega$ and $k$ (in the equation above it's $\omega = \hbar k^2 / 2 m$) is called the \textbf{dispersion relation} and it determines the group and phase velocities \begin{align*}
+          v_\text{group} & = \frac{d \omega}{d k} \\
+          v_\text{phase} & = \frac{\omega}{k}.
+        \end{align*}
+\end{itemize}
+
 \end{document}

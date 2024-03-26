@@ -852,6 +852,102 @@ If $E < 0$ then $\psi = A e^{k t} + B e^{-k t}$ where $k \in \mathbb{R}$ which a
             & = 64 \xi^6 - 480 \xi^4 + 720 \xi^2 - 120
 \end{align*}
 
+\setcounter{subsection}{16}
 \subsection{}
+
+\begin{align*}
+  A e^{i k x} + B e^{-i k x} & = A [\cos (k x) + i \sin (k x)] + B [\cos (k x) - i \sin (k x)] \\
+                             & = (A + B) \cos (k x) + i (A - B) \sin (k x)                     \\
+  C                          & = A + B                                                         \\
+  D                          & = i (A - B)                                                     \\
+  -i D                       & = A - B                                                         \\
+  A                          & = \frac{C - i D}{2}                                             \\
+  B                          & = \frac{C + i D}{2}
+\end{align*}
+
+\subsection{}
+
+\begin{align*}
+  \Psi_k(x, t) & = A e^{i \left( k x - \frac{\hbar k^2}{2 m} t \right)}                                                                 \\
+  J(x, t)      & = \frac{i \hbar}{2 m} \left( \Psi \frac{\partial \Psi^*}{\partial x} - \Psi^* \frac{\partial \Psi}{\partial x} \right) \\
+               & = \frac{\hbar k |A|^2}{m}
+\end{align*}
+
+The probability travels in the same direction as the wave.
+
+\setcounter{subsection}{19}
+\subsection{}
+
+\begin{enumerate}
+  \item
+
+        \begin{align*}
+          \Psi(x, 0) & = A e^{-a |x|}                                   \\
+          1          & = \int_{-\infty}^\infty \Psi^* \Psi \,d x        \\
+                     & = |A|^2 \int_{-\infty}^\infty e^{-2 a |x|} \,d x \\
+                     & = 2 |A|^2 \int_0^\infty e^{-2 a x} \,d x         \\
+                     & = \frac{|A|^2}{a}                                \\
+          A          & = \sqrt{a}
+        \end{align*}
+
+  \item
+
+        \begin{align*}
+          \phi(k) & = \sqrt{\frac{a}{2 \pi}} \int_{-\infty}^\infty e^{-a |x| - i k x} \,d x                     \\
+                  & = \sqrt{\frac{a}{2 \pi}} \int_{-\infty}^\infty e^{-a |x|} [\cos (k x) - i \sin (k x)] \,d x \\
+                  & = \sqrt{\frac{a}{2 \pi}} \int_{-\infty}^\infty e^{-a |x|} \cos (k x) \,d x                  \\
+                  & = \sqrt{\frac{a}{2 \pi}} 2 \int_0^\infty e^{-a x} \cos (k x) \,d x                          \\
+                  & = \sqrt{\frac{a}{2 \pi}} \frac{2 a}{a^2 + k^2}
+        \end{align*}
+
+  \item \[\Psi(x, t) = \frac{a^{3 / 2}}{\pi} \int_{-\infty}^\infty \frac{1}{a^2 + k^2} e^{i \left( k x - \frac{\hbar k^2}{2 m} t \right)} \,d k\]
+\end{enumerate}
+
+\subsection{}
+
+\begin{enumerate}
+  \item
+
+        \begin{align*}
+          \Psi(x, 0) & = A e^{-a x^2}                                  \\
+          1          & = A^2 \int_{-\infty}^\infty  e^{-2 a x^2} \,d x \\
+                     & = \sqrt{\frac{\pi}{2 a}} A^2                    \\
+          A          & = \left( \frac{2 a}{\pi} \right)^{1 / 4}
+        \end{align*}
+
+  \item
+
+        \begin{align*}
+          \phi(k)    & = \frac{1}{\sqrt{2 \pi}} \left( \frac{2 a}{\pi} \right)^{1 / 4} \int_{-\infty}^\infty e^{-(a x^2 + i k x)} \,d x                                       \\
+                     & = \frac{1}{(2 \pi a)^{1 / 4}} e^{-k^2 / 4 a}                                                                                                           \\
+          \Psi(x, t) & = \frac{1}{\sqrt{2 \pi}} \frac{1}{(2 \pi a)^{1 / 4}} \int_{-\infty}^\infty e^{-\frac{k^2}{4 a} + i \left( k x - \frac{\hbar k^2}{2 m} t \right)} \,d k \\
+          \Psi(x, t) & = \left( \frac{2 a}{\pi} \right)^{1 / 4} \frac{1}{\gamma} e^{-a x^2 / \gamma^2}
+        \end{align*}
+
+  \item
+
+        \begin{align*}
+          |\Psi(x, t)|^2 & = \Psi^* \Psi                                                                                                                \\
+                         & = \left( \frac{2 a}{\pi} \right)^{1 / 2} \frac{1}{\gamma^*} e^{-a x^2 / (\gamma^*)^2} \frac{1}{\gamma} e^{-a x^2 / \gamma^2} \\
+                         & = \left( \frac{2 a}{\pi} \right)^{1 / 2} \frac{1}{\sqrt{1 - 2 i \hbar a t / m}} e^{-a x^2 / (1 - 2 i \hbar a t / m)}         \\
+                         & \qquad \frac{1}{\sqrt{1 + 2 i \hbar a t / m}} e^{-a x^2 / (1 + 2 i \hbar a t / m)}                                           \\
+                         & = \left( \frac{2 a}{\pi} \right)^{1 / 2} \frac{1}{\sqrt{1 + (2 \hbar a t / m)^2}} e^{-2 a x^2 / [1 + (2 a \hbar t / m)^2]}   \\
+                         & = \sqrt{\frac{2}{\pi}} w e^{-2 w^2 x^2}
+        \end{align*}
+
+        As $t$ increases $|\Psi|^2$ flattens out and broadens.
+
+  \item
+
+        \begin{align*}
+          \ev{x}   & = \int_{-\infty}^\infty \Psi^* x \Psi \,d x                             \\
+                   & = 0                                                                     \\
+          \ev{p}   & = m \frac{d \ev{x}}{d t}                                                \\
+                   & = 0                                                                     \\
+          \ev{x^2} & = \int_{-\infty}^\infty \Psi^* x^2 \Psi \,d x                           \\
+                   & = \sqrt{\frac{2}{\pi}} w \int_{-\infty}^\infty x^2 e^{-2 w^2 x^2} \,d x \\
+                   & = \frac{1}{4 w^2}
+        \end{align*}
+\end{enumerate}
 
 \end{document}
