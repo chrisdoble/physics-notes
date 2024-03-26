@@ -241,4 +241,18 @@
   \item In the case of the infinite square well, the stationary states of the harmonic oscillator are orthogonal \[\int_{-\infty}^\infty \psi_m^* \psi_n \,d x = \delta_{m n}.\]
 \end{itemize}
 
+\subsubsection{Analytic Method}
+
+\begin{itemize}
+  \item By introducing the term \[\xi = \sqrt{\frac{m \omega}{\hbar}} x\] the Schrödinger equation for the harmonic oscillator \[-\frac{\hbar^2}{2 m} \frac{d^2 \psi}{d x^2} + \frac{1}{2} m \omega^2 x^2 \psi = E \psi\] can be rewritten \[\frac{d^2 \psi}{d \xi^2} = (\xi^2 - K) \psi\] where \[K = \frac{2 E}{\hbar \omega}\] is the energy of the system in units of $\hbar \omega / 2$.
+
+  \item For large $\xi$ this has the approximate solution \[\psi(\xi) = h(\xi) e^{-\xi^2 / 2}.\] Substituting this into the Schrödinger equation gives \[\frac{d^2 h}{d \xi^2} - 2 \xi \frac{d h}{d \xi} + (K - 1) h = 0.\] If we assume the solution $h(\xi)$ is a power series in $\xi$ we get \[\sum_{j = 0}^\infty [(j + 1) (j + 2) a_{j + 2} - 2 j a_j + (K - 1) a_j] \xi^j = 0.\] By the uniqueness of power series expansions, the coefficient of each power of $\xi$ must be $0$ in order for the series overall to equal $0$ \[(j + 1) (j + 2) a_{j + 2} - 2 j a_j + (K - 1) a_j = 0.\] This gives a recurrence relation \[a_{j + 1} = \frac{2 j + 1 - K}{(j + 1) (j + 2)} a_j\] that can be used to generate the even- and odd-numbered coefficients by starting with $a_0$ and $a_1$, respectively.
+
+  \item However, not all choices of $a_j$ result in normalisable wavefunctions. In order for them to be valid, the power series must terminate — there must be some ``highest'' $j$ (call it $n$) such that $a_{n + 2} = 0$. This will truncate \textbf{either} the even series or the odd series. The other one must be zero from the start — $a_1 = 0$ if $n$ is even, $a_0 = 0$ if $n$ is odd.
+
+  \item In general $h_n(\xi)$ will be a polynomial of degree $n$ in $\xi$, involving even powers only if $n$ is even, and odd powers only if it's odd. Apart from the overall factor $a_0$ or $a_1$ these are the \textbf{Hermite polynomials, $\boldsymbol{H_n(\xi)}$}.
+
+  \item By convention the arbitrary multiplicative factor is chosen such that the coefficient of the highest power of $\xi$ is $2^n$. With this convention, the normalised stationary states for the harmonic oscillator are \[\psi_n = \left( \frac{m \omega}{\pi \hbar} \right)^{1 / 4} \frac{1}{\sqrt{2^n n!}} H_n(\xi) e^{-\xi^2 / 2}.\]
+\end{itemize}
+
 \end{document}
