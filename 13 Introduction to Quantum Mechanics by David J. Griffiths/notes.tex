@@ -291,4 +291,38 @@
   \item Some potentials admit only bound states (e.g. the harmonic oscillator), some admit only scattering states, and some admit both kinds depending on the energy of the particle.
 \end{itemize}
 
+\subsection{The Delta-Function Well}
+
+\begin{itemize}
+  \item The \textbf{Dirac-Delta function} is defined as \[\delta(x) = \begin{cases}
+            0      & x \ne 0 \\
+            \infty & x = 0
+          \end{cases}\] and has the property \[\int_{-\infty}^\infty \delta(x) \,d x = 1.\] Note that $\delta(x - a)$ is a spike at the point $x = a$ and thus \[f(x) \delta(x - a) = f(a) \delta(x - a).\] This behaviour can be used to ``pick out'' values from under integrals \[\int_{-\infty}^\infty f(x) \delta(x - a) \,d x = f(a) \int_{-\infty}^\infty \delta(x - a) \,d x = f(a).\]
+
+  \item The boundary conditions for $\psi$ are:
+
+        \begin{enumerate}
+          \item $\psi$ is always continuous, and
+
+          \item $d \psi / d x$ is continuous except at points where the potential is infinite.
+        \end{enumerate}
+
+  \item The potential function $V(x) = -\alpha \delta(x)$ exhibits:
+
+        \begin{itemize}
+          \item a bound state with \[\psi(x) = \frac{\sqrt{m \alpha}}{\hbar} e^{-m \alpha x / \hbar^2}\] for \[E = -\frac{m \alpha^2}{2 \hbar^2}\]
+
+          \item a scattering state with \[\psi(x) = \begin{cases}
+                    A e^{i k x} + B e^{-i k x} & x < 0 \\
+                    F e^{i k x} + G e^{-i k x} & x > 0
+                  \end{cases}\] for $E > 0$
+        \end{itemize}
+
+  \item In the scattering states \[R = \frac{\beta^2}{1 + \beta^2} \text{ where } \beta = \frac{m \alpha}{\hbar^2 k}\] is called the \textbf{reflection coefficient}. This is the relative probability that a particle coming in from the left will be reflected — if you have a beam of particles it is the fraction of particles that will be reflected.
+
+  \item In the scattering states \[T = \frac{1}{1 + \beta^2}\] is called the \textbf{transmission coefficient}. This is the relative probability taht a particle coming in from the left will be transmitted over the potential well and out to the right — if you have beam of particles it is the fraction of particles that will be transmitted.
+
+  \item Because $k = \sqrt{2 m E} / \hbar$ this means that $R$ and $T$ are functions of $E$ \[R = \frac{1}{1 + (2 \hbar^2 E / m \alpha^2)} \text{ and } T = \frac{1}{1 + (m \alpha^2 / 2 \hbar^2 E)}.\] As $E$ increases more particles are transmitted over the potential well.
+\end{itemize}
+
 \end{document}
