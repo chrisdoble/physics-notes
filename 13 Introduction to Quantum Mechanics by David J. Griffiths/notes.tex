@@ -281,7 +281,7 @@
 
 \subsection{The Delta-Function Potential}
 
-\subsection{Bound States and Scattering States}
+\subsubsection{Bound States and Scattering States}
 
 \begin{itemize}
   \item In classical mechanics, if the potential energy function $V(x)$ rises higher than the system's total energy $E$ then the particle is ``stuck'' in a potential well. It moves back and forth between the \textbf{turning points} but it can't escape. This is called a \textbf{bound state}.
@@ -291,7 +291,7 @@
   \item Some potentials admit only bound states (e.g. the harmonic oscillator), some admit only scattering states, and some admit both kinds depending on the energy of the particle.
 \end{itemize}
 
-\subsection{The Delta-Function Well}
+\subsubsection{The Delta-Function Well}
 
 \begin{itemize}
   \item The \textbf{Dirac-Delta function} is defined as \[\delta(x) = \begin{cases}
@@ -323,6 +323,56 @@
   \item In the scattering states \[T = \frac{1}{1 + \beta^2}\] is called the \textbf{transmission coefficient}. This is the relative probability taht a particle coming in from the left will be transmitted over the potential well and out to the right — if you have beam of particles it is the fraction of particles that will be transmitted.
 
   \item Because $k = \sqrt{2 m E} / \hbar$ this means that $R$ and $T$ are functions of $E$ \[R = \frac{1}{1 + (2 \hbar^2 E / m \alpha^2)} \text{ and } T = \frac{1}{1 + (m \alpha^2 / 2 \hbar^2 E)}.\] As $E$ increases more particles are transmitted over the potential well.
+\end{itemize}
+
+\subsection{The Finite Square Well}
+
+\begin{itemize}
+  \item The potential function for a finite square well is \[V(x) = \begin{cases}
+            -V_0 & -a \le x \le a \\
+            0    & |x| > a
+          \end{cases}\] where $V_0$ is a positive constant.
+
+  \item The bound states can be found by:
+
+        \begin{enumerate}
+          \item setting $E < 0$,
+
+          \item solving the Schrödinger equation for the regions $x < -a$, $-a < x < a$, and $x > a$, and
+
+          \item applying the boundary conditions that $\psi$ and $d \psi / d x$ be continuous at $x = \pm a$.
+        \end{enumerate}
+
+        This finds that the allowed energies are described by \[\tan z = \sqrt{(z_0 / z)^2 - 1}\] where \begin{align*}
+          z   & = l a                                         \\
+          z_0 & = \frac{a}{\hbar} \sqrt{2 m V_0} \text{, and} \\
+          l   & = \frac{\sqrt{2 m (E + V_0)}}{\hbar}.
+        \end{align*}
+
+  \item If $z_0$ is very large (the well is wide and deep), the intersections of $\tan z$ and $\sqrt{(z_0 / z)^2 - 1}$ occur just below $z_n = n \pi / 2$ with $n$ odd so \[E_n + V_0 \approx \frac{n^2 \pi^2 \hbar^2}{2 m (2 a)^2}.\] The left hand side is the ``distance'' between the energy level and the bottom of the well, while the right hand side is the allowed energies for an infinite square well of width $2 a$. This shows that the allowed energies of a finite square well approach those of an infinite square well as $V_0 \rightarrow \infty$ however for any finite $V_0$ there is a finite number of bound states.
+
+  \item As $z_0$ decreases (the well is narrow and shallow) there are fewer intersections of $\tan z$ and $\sqrt{(z_0 / z)^2 - 1}$, i.e. there are fewer bound states, until $z_0 < \pi / 2$ results in a single bound state. There is always one bound state.
+
+  \item The scattering states can be found by:
+
+        \begin{enumerate}
+          \item setting $E > 0$,
+
+          \item solving the Schrödinger equation for the regions $x < -a$, $-a < x < a$, and $x > a$, and
+
+          \item applying the boundary conditions that $\psi$ and $d \psi / d x$ be continuous at $x = \pm a$.
+        \end{enumerate}
+
+        Assuming that the incident wave comes in from the left this finds \[\psi(x) = \begin{cases}
+            A e^{i k x} + B e^{-i k x}  & x < - a    \\
+            C \sin (l x) + D \cos (l x) & -a < x < a \\
+            F e^{i k x}                 & x > a
+          \end{cases}\] where $A$ is the incident amplitude, $B$ is the reflected amplitude, and $F$ is the transmitted amplitude. The boundary conditions can be used to eliminate $C$ and $D$, resulting in \begin{align*}
+          B & = i \frac{\sin (2 l a)}{2 k l} (l^2 - k^2) F \text{, and}                         \\
+          F & = \frac{e^{-2 i k a} A}{\cos (2 l a) - i \frac{(k^2 + l^2)}{2 k l} \sin (2 l a)}.
+        \end{align*} This gives a transmission coefficient of \[T^{-1} = 1 + \frac{V_0^2}{4 E (E + V_0)} \sin^2 \left( \frac{2 a}{\hbar} \sqrt{2 m (E + V_0)} \right).\]
+
+  \item Notice that $T = 1$ whenever the sine is zero. This happens when \[E_n + V_0 = \frac{n^2 \pi^2 \hbar^2}{2 m (2 a)^2},\] i.e. the energy is equal to one of the allowed energies of an infinite square well.
 \end{itemize}
 
 \end{document}

@@ -969,4 +969,198 @@ The probability travels in the same direction as the wave.
   f(x) & = \frac{1}{2 \pi} \int_{-\infty}^\infty e^{i k x} \,d k
 \end{align*}
 
+\setcounter{subsection}{28}
+\subsection{}
+
+\begin{align*}
+  \psi(x)                 & = \begin{cases}
+                                F e^{-\kappa x} & x > a     \\
+                                C \sin (l x)    & 0 < x < a \\
+                                -\psi(-x)       & x < 0
+                              \end{cases}   \\
+  F e^{-\kappa a}         & = C \sin (l a)                  \\
+  -\kappa F e^{-\kappa a} & = l C \cos (l a)                \\
+  -\frac{1}{\kappa}       & = \frac{1}{l} \tan (l a)        \\
+  \tan z                  & = -\frac{l}{\kappa}             \\
+                          & = -\frac{l a}{\kappa a}         \\
+                          & = -\frac{z}{\sqrt{z_0^2 - z^2}}
+\end{align*}
+
+For large $z_0$ the intersections occur just below $z_n = n \pi$ so \begin{align*}
+  z       & = l a                                        \\
+  n \pi   & \approx \frac{\sqrt{2 m (E + V_0)}}{\hbar} a \\
+  E + V_0 & \approx \frac{n^2 \pi^2 \hbar^2}{2 m a^2}.
+\end{align*}
+
+As $z_0$ decreases there are fewer and fewer bound states. When $z_0 < \pi / 2$ there are no odd bound states.
+
+\subsection{}
+
+\begin{align*}
+  \psi(x) & = \begin{cases}
+                F e^{-\kappa x} & x > a     \\
+                D \cos (l x)    & 0 < x < a \\
+                \psi(-x)        & x < 0
+              \end{cases}                                                                      \\
+  1       & = \int_{-\infty}^\infty |\psi|^2 \,d x                                                             \\
+          & = 2 \left( |D|^2 \int_0^a \cos^2 (l x) \,d x + |F|^2 \int_a^\infty e^{-2 \kappa x} \,d x \right)   \\
+          & = 2 \left[ |D|^2 \frac{2 a l + \sin (2 a l)}{4 l} + \frac{|F|^2}{2 \kappa} e^{-2 \kappa a} \right] \\
+          & = |D|^2 \left[ a + \frac{\sin (2 a l)}{2 l} + \frac{\cos^2 (a l)}{\kappa} \right]                  \\
+          & = |D|^2 \left[ a + \frac{2 \sin (a l) \cos (a l)}{2 l} + \frac{\cos^3 (a l)}{l \sin (a l)} \right] \\
+          & = |D|^2 \left\{ a + \frac{\cos (a l)}{l \sin (a l)} [\sin^2 (a l) + \cos^2 (a l)] \right\}         \\
+          & = |D|^2 \left[ a + \frac{\cos (a l)}{l \sin (a l)} \right]                                         \\
+          & = |D|^2 \left[ a + \frac{1}{l \tan (a l)} \right]                                                  \\
+          & = |D|^2 \left[ a + \frac{1}{\kappa} \right]                                                        \\
+  D       & = \frac{1}{\sqrt{a + 1 / \kappa}}
+\end{align*}
+
+\begin{align*}
+  1                                  & = \left\{ \frac{1}{a + 1 / \kappa} \left[ a + \frac{\sin (2 a l)}{2 l} \right] + |F|^2 \frac{e^{-2 \kappa a}}{\kappa} \right\} \\
+  \frac{(F e^{-\kappa a})^2}{\kappa} & = 1 - \frac{1}{a + 1 / \kappa} \left[ a + \frac{\sin (2 a l)}{2 l} \right]                                                     \\
+  (F e^{-\kappa a})^2                & = \kappa - \frac{\kappa}{a + 1 / \kappa} \left[ a + \frac{\sin (2 a l)}{2 l} \right]                                           \\
+                                     & = \frac{\kappa a + 1 - \kappa a - \kappa \sin (a l) \cos (a l) / l}{a + 1 / \kappa}                                            \\
+                                     & = \frac{1 - \sin^2 (a l)}{a + 1 / \kappa}                                                                                      \\
+  F                                  & = \frac{e^{\kappa a} \cos (a l)}{\sqrt{a + 1 / \kappa}}
+\end{align*}
+
+\subsection{}
+
+\begin{align*}
+  1                          & = 2 a V_0                            \\
+  V_0                        & = \frac{1}{2 a}                      \\
+  z_0                        & = \frac{a}{\hbar} \sqrt{2 m V_0}     \\
+                             & = \frac{a}{\hbar} \sqrt{\frac{m}{a}} \\
+                             & = \frac{\sqrt{a m}}{\hbar}           \\
+  \lim_{a \rightarrow 0} z_0 & = 0                                  \\
+\end{align*}
+
+\setcounter{subsection}{33}
+\subsection{}
+
+\begin{enumerate}
+  \item
+
+        \begin{align*}
+          V(x)                                                   & = \begin{cases}
+                                                                       0   & x \le 0 \\
+                                                                       V_0 & x > 0
+                                                                     \end{cases}                                                                                                       \\
+          % x < 0
+          -\frac{\hbar^2}{2 m} \frac{d^2 \psi}{d x^2}            & = E \psi                                                                                                              \\
+          \frac{d^2 \psi}{d x^2}                                 & = -\frac{2 m E}{\hbar^2} \psi                                                                                         \\
+                                                                 & = -k^2 \psi                                                                                                           \\
+          k                                                      & = \frac{\sqrt{2 m E}}{\hbar}                                                                                          \\
+          \psi                                                   & = A e^{i k x} + B e^{-i k x}                                                                                          \\
+          % x > 0
+          -\frac{\hbar^2}{2 m} \frac{d^2 \psi}{d x^2} + V_0 \psi & = E \psi                                                                                                              \\
+          \frac{d^2 \psi}{d x^2}                                 & = -\frac{2 m (E - V_0)}{\hbar^2} \psi                                                                                 \\
+                                                                 & = \kappa^2 \psi                                                                                                       \\
+          \kappa                                                 & = \frac{\sqrt{2 m (V_0 - E)}}{\hbar}                                                                                  \\
+          \psi                                                   & = F e^{-\kappa x}                                                                                                     \\
+          % Boundary condition 1
+          A + B                                                  & = F                                                                                                                   \\
+          i k (A - B)                                            & = -\kappa F                                                                                                           \\
+          % Calculate B in terms of A
+          F                                                      & = -i \frac{k}{\kappa} (A - B)                                                                                         \\
+          A + B                                                  & = -i \frac{k}{\kappa} (A - B)                                                                                         \\
+          \left( 1 - i \frac{k}{\kappa} \right) B                & = -\left( 1 + i \frac{k}{\kappa} \right) A                                                                            \\
+          B                                                      & = -\frac{1 + i k / \kappa}{1 - i k / \kappa} A                                                                        \\
+          % Calculate reflection coefficient
+          R                                                      & = \frac{|B|^2}{|A|^2}                                                                                                 \\
+                                                                 & = \left( -\frac{1 + i k / \kappa}{1 - i k / \kappa} \right) \left( -\frac{1 - i k / \kappa}{1 + i k / \kappa} \right) \\
+                                                                 & = 1
+        \end{align*}
+
+  \item
+
+        \begin{align*}
+          \psi(x)                          & = \begin{cases}
+                                                 A e^{i k x} + B e^{-i k x} & x < 0 \\
+                                                 F e^{i l x}                & x > 0
+                                               \end{cases}                    \\
+          k                                & = \frac{\sqrt{2 m E}}{\hbar}                            \\
+          l                                & = \frac{\sqrt{2 m (E - V_0)}}{\hbar}                    \\
+          % Boundary conditions
+          A + B                            & = F                                                     \\
+          i k (A - B)                      & = i l F                                                 \\
+          % Calculate B in terms of A
+          F                                & = \frac{k}{l} (A - B)                                   \\
+          A + B                            & = \frac{k}{l} (A - B)                                   \\
+          \left( \frac{k}{l} + 1 \right) B & = \left( \frac{k}{l} - 1 \right) A                      \\
+          B                                & = \frac{k / l - 1}{k / l + 1} A                         \\
+          % Calculate reflection coefficient
+          R                                & = \frac{|B|^2}{|A|^2}                                   \\
+                                           & = \left( \frac{k / l - 1}{k / l + 1} \right)^2          \\
+                                           & = \left( \frac{k - l}{k + l} \right)^2                  \\
+                                           & = \frac{(k - l)^4}{(k^2 - l^2)^2}                       \\
+          k^2 - l^2                        & = \frac{2 m E}{\hbar^2} - \frac{2 m (E - V_0)}{\hbar^2} \\
+                                           & = \frac{2 m}{\hbar^2} V_0                               \\
+          k - l                            & = \frac{\sqrt{2 m}}{\hbar} (\sqrt{E} - \sqrt{E - V_0})  \\
+          R                                & = \frac{(\sqrt{E} - \sqrt{E - V_0})^4}{V_0^2}
+        \end{align*}
+
+        \setcounter{enumi}{3}
+  \item
+
+        \begin{align*}
+          % Express F in terms of A
+          B                                & = F - A                                                                 \\
+          F                                & = \frac{k}{l} (A - F + A)                                               \\
+          \left( 1 + \frac{k}{l} \right) F & = \frac{2 k}{l} A                                                       \\
+          F                                & = \frac{2 k}{k + l} A                                                   \\
+          \frac{l}{k}                      & = \sqrt{\frac{E - V_0}{E}}                                              \\
+          T                                & = \left| \frac{F}{A} \right|^2 \frac{l}{k}                              \\
+                                           & = \left( \frac{2 k}{k + l} \right)^2 \frac{l}{k}                        \\
+                                           & = \frac{4 k l}{(k + l)^2}                                               \\
+                                           & = \frac{4 k l (k - l)^2}{(k^2 - l^2)^2}                                 \\
+                                           & = \frac{4 \sqrt{E} \sqrt{E - V_0} (\sqrt{E} - \sqrt{E - V_0})^2}{V_0^2} \\
+          T + R                            & = \frac{4 k l}{(k + l)^2} + \frac{(k - l)^2}{(k + l)^2}                 \\
+                                           & = \frac{4 k l + k^2 - 2 k l + l^2}{(k + l)^2}                           \\
+                                           & = \frac{k^2 + 2 k l + l^2}{(k + l)^2}                                   \\
+                                           & = \frac{(k + l)^2}{(k + l)^2}                                           \\
+                                           & = 1
+        \end{align*}
+\end{enumerate}
+
+\subsection{}
+
+\begin{enumerate}
+  \item
+
+        \begin{align*}
+          V(x)                                                   & = \begin{cases}
+                                                                       0    & x < 0 \\
+                                                                       -V_0 & x > 0
+                                                                     \end{cases}                                                                 \\
+          % x < 0
+          -\frac{\hbar^2}{2 m} \frac{d^2 \psi}{d x^2}            & = E \psi                                                                       \\
+          \frac{d^2 \psi}{d x^2}                                 & = -\frac{2 m E}{\hbar^2} \psi                                                  \\
+                                                                 & = -k^2 \psi                                                                    \\
+          k                                                      & = \frac{\sqrt{2 m E}}{\hbar}                                                   \\
+          \psi                                                   & = A e^{i k x} + B e^{-i k x}                                                   \\
+          % x > 0
+          -\frac{\hbar^2}{2 m} \frac{d^2 \psi}{d x^2} - V_0 \psi & = E \psi                                                                       \\
+          \frac{d^2 \psi}{d x^2}                                 & = -\frac{2 m}{\hbar^2} (E + V_0) \psi                                          \\
+                                                                 & = -l^2 \psi                                                                    \\
+          l                                                      & = \frac{\sqrt{2 m (E + V_0)}}{\hbar}                                           \\
+          \psi                                                   & = F e^{i l x}                                                                  \\
+          % Boundary conditions
+          A + B                                                  & = F                                                                            \\
+          i k (A - B)                                            & = i l F                                                                        \\
+          % Calculate B in terms of A
+          k (A - B)                                              & = l (A + B)                                                                    \\
+          (k + l) B                                              & = (k - l) A                                                                    \\
+          B                                                      & = \frac{k - l}{k + l} A                                                        \\
+          R                                                      & = \left| \frac{B}{A} \right|^2                                                 \\
+                                                                 & = \left( \frac{k - l}{k + l} \right)^2                                         \\
+                                                                 & = \left( \frac{\sqrt{E} - \sqrt{E + V_0}}{\sqrt{E} + \sqrt{E + V_0}} \right)^2 \\
+                                                                 & = \frac{1}{9}
+        \end{align*}
+
+        \setcounter{enumi}{2}
+  \item
+
+        \[T = 1 - R = \frac{8}{9}\]
+\end{enumerate}
+
 \end{document}
