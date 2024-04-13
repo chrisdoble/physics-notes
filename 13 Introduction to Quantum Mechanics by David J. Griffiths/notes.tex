@@ -14,6 +14,7 @@
 }
 
 \newcommand{\ev}[1]{\langle #1 \rangle}
+\renewcommand{\vec}[1]{\boldsymbol{\mathbf{#1}}}
 
 \title{Introduction to Quantum Mechanics by David J. Griffiths Notes}
 \author{Chris Doble}
@@ -402,6 +403,26 @@
   \item A set of functions is said to be \textbf{orthonormal} if they're normalised and mutually orthogonal.
 
   \item A set of function is said to be \textbf{complete} if any other function in Hilbert space can be expressed as a linear combination of them \[f(x) = \sum_{n = 1}^\infty c_n f_n(x)\] where \[c_n = \braket{f_n | f}.\]
+\end{itemize}
+
+\subsection{Observables}
+
+\subsubsection{Hermitian Operators}
+
+\begin{itemize}
+  \item The \textbf{Hermitian conjugate} (or \textbf{adjoint}) of a matrix, indicated by a dagger $\vec{T}^\dagger$, is its transpose conjugate. A square matrix is \textbf{hermitian} (or \textbf{self-adjoint}) if it is equal to its hermitian conjugate. Using this notation, the inner product of two vectors can be written as \[\braket{\alpha | \beta} = \vec{a}^\dagger \vec{b}.\]
+
+  \item The expectation value of an observable $Q(x, p)$ can be expressed with inner-product notation \[\ev{Q} = \int \Psi^* \hat{Q} \Psi \,d x = \braket{\Psi | \hat{Q} \Psi}.\]
+
+  \item The outcome of a measurement has to be real, so \[\ev{Q} = \ev{Q}^*\] but the complex conjugate of an inner product reverses the order so \[\ev{\Psi | \hat{Q} \Psi} = \ev{\hat{Q} \Psi | \Psi}.\] Operators that have this property (that they may be applied to either the first or second member of an inner product with the same result) are called \textbf{hermitian}. They're called this because \begin{align*}
+          \braket{\Psi | \hat{Q} \Psi} & = \braket{\hat{Q} \Psi | \Psi}      \\
+          \Psi^\dagger \hat{Q} \Psi    & = (\hat{Q} \Psi)^\dagger \Psi       \\
+                                       & = \Psi^\dagger \hat{Q}^\dagger \Psi
+        \end{align*} i.e. $\hat{Q} = \hat{Q}^\dagger$ or $\hat{Q}$ is a hermitian matrix.
+
+  \item Observables are represented by hermitian operators.
+
+  \item In general, matrix multiplication is not commutative, i.e. $\vec{A} \vec{B} \ne \vec{B} \vec{A}$. The diference between the two orderings is called the \textbf{commutator} \[[\vec{A}, \vec{B}] = \vec{A} \vec{B} - \vec{B} \vec{A}\] and is a measure of ``how much'' they fail to commute.
 \end{itemize}
 
 \end{document}

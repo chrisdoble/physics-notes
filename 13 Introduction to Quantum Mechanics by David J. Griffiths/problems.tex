@@ -1486,4 +1486,88 @@ The argument for calculating the allowed energies and wavefunctions is the same,
         $f(x)$ and $x f(x)$ are in Hilbert space, but not $(d / d x) f(x)$.
 \end{enumerate}
 
+\setcounter{subsection}{3}
+\subsection{}
+
+\begin{enumerate}
+  \item
+
+        \begin{align*}
+          \braket{f | (\hat{Q} + \hat{R}) f} & = \braket{f | \hat{Q} f} + \braket{f | \hat{R} f} \\
+                                             & = \braket{\hat{Q} f | f} + \braket{\hat{R} f | f} \\
+                                             & = \braket{(\hat{Q} + \hat{R}) f | f}
+        \end{align*}
+
+  \item
+
+        \begin{align*}
+          \braket{f | \alpha \hat{Q} g} & = \alpha \braket{f | \hat{Q} g}   \\
+                                        & = \alpha \braket{\hat{Q} f | g}   \\
+          \braket{\alpha \hat{Q} f | g} & = \alpha^* \braket{\hat{Q} f | g} \\
+          \alpha                        & = \alpha^*
+        \end{align*}
+
+        $\alpha$ is real.
+
+  \item
+
+        \begin{align*}
+          \braket{f | \hat{Q} \hat{R} g} & = \braket{\hat{Q} f | \hat{R} g} \\
+                                         & = \braket{\hat{R} \hat{Q} f | g}
+        \end{align*}
+
+        The product of the operators is hermitian when $\hat{Q} \hat{R} = \hat{R} \hat{Q}$ i.e. $[\hat{Q}, \hat{R}] = 0$.
+
+  \item
+
+        \begin{align*}
+          \braket{\Psi | \hat{x} \Psi} & = \int \Psi^* \hat{x} \Psi \,d x                                                                                                                                                 \\
+                                       & = \int \Psi^* \hat{x}^* \Psi \,d x                                                                                                                                               \\
+                                       & = \int (\hat{x} \Psi)^* \Psi \,d x                                                                                                                                               \\
+                                       & = \braket{\hat{x} \Psi | \Psi}                                                                                                                                                   \\
+          \braket{\Psi | \hat{H} \Psi} & = \int \Psi^* \hat{H} \Psi \,d x                                                                                                                                                 \\
+                                       & = \int \Psi^* \left[ -\frac{\hbar^2}{2 m} \frac{d^2}{d x^2} + V(x) \right] \Psi \,d x                                                                                            \\
+                                       & = -\frac{\hbar^2}{2 m} \int \Psi^* \frac{d^2 \Psi}{d x^2} \,d x + \int \Psi^* V(x) \Psi \,d x                                                                                    \\
+                                       & = -\frac{\hbar^2}{2 m} \left[ \left. \Psi^* \frac{d \Psi}{d x} \right|_{-\infty}^\infty - \int \frac{d \Psi^*}{d x} \frac{d \Psi}{d x} \,d x \right] + \braket{V(x) \Psi | \Psi} \\
+                                       & = \frac{\hbar^2}{2 m} \left[ \left. \frac{d \Psi^*}{d x} \Psi \right|_{-\infty}^\infty - \int \frac{d^2 \Psi^*}{d x} \Psi \,d x \right] + \braket{V(x) \Psi | \Psi}              \\
+                                       & = -\frac{\hbar^2}{2 m} \int \frac{d^2}{d x^2} \Psi^* \Psi \,d x + \braket{V(x) \Psi | \Psi}                                                                                      \\
+                                       & = \Braket{-\frac{\hbar^2}{2 m} \frac{d^2}{d x^2} \Psi | \Psi} + \braket{V(x) \Psi | \Psi}                                                                                        \\
+                                       & = \braket{\hat{H} \Psi | \Psi}
+        \end{align*}
+\end{enumerate}
+
+\subsection{}
+
+\begin{enumerate}
+  \item
+
+        \begin{align*}
+          x^\dagger                            & = x              \\
+          i^\dagger                            & = -i             \\
+          \left( \frac{d}{d x} \right)^\dagger & = -\frac{d}{d x}
+        \end{align*}
+
+  \item
+
+        \begin{align*}
+          \braket{f | \hat{Q} \hat{R} g} & = \int f^\dagger \hat{Q} \hat{R} g \,d x                   \\
+                                         & = \int (\hat{Q}^\dagger f)^\dagger \hat{R} g \,d x         \\
+                                         & = \int (\hat{R}^\dagger \hat{Q}^\dagger f)^\dagger g \,d x \\
+                                         & = \braket{\hat{R}^\dagger \hat{Q}^\dagger f | g}
+        \end{align*}
+
+  \item
+
+        \begin{align*}
+          \hat{a}_+              & = \frac{1}{\sqrt{2 \hbar m \omega}} (-i \hat{p} + m \omega x)                               \\
+          \braket{f | \hat{a} g} & = \Braket{f | \frac{1}{\sqrt{2 \hbar m \omega}} (-i \hat{p} + m \omega x) g}                \\
+                                 & = \frac{1}{\sqrt{2 \hbar m \omega}} \braket{f | (-i \hat{p} + m \omega x) g}                \\
+                                 & = \frac{1}{\sqrt{2 \hbar m \omega}} (\braket{f | -i \hat{p} g} + \braket{f | m \omega x g}) \\
+                                 & = \frac{1}{\sqrt{2 \hbar m \omega}} (\braket{f | -i \hat{p} g} + \braket{m \omega x f | g}) \\
+                                 & = \frac{1}{\sqrt{2 \hbar m \omega}} (\braket{i \hat{p} f | g} + \braket{m \omega x f | g})  \\
+                                 & = \Braket{\frac{1}{\sqrt{2 \hbar m \omega}} (i \hat{p} + m \omega x) f | g}                 \\
+                                 & = \braket{\hat{a}_- f | g}
+        \end{align*}
+\end{enumerate}
+
 \end{document}
