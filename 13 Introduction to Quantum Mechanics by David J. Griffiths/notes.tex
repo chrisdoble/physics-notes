@@ -2,6 +2,7 @@
 \usepackage{amsfonts} % For mathbb
 \usepackage{amsmath} % For align*
 \usepackage{bookmark} % For links
+\usepackage{braket} % For bra-ket notation
 \usepackage{float} % For the [H] option on figures
 \usepackage{graphicx} % For images
 
@@ -373,6 +374,34 @@
         \end{align*} This gives a transmission coefficient of \[T^{-1} = 1 + \frac{V_0^2}{4 E (E + V_0)} \sin^2 \left( \frac{2 a}{\hbar} \sqrt{2 m (E + V_0)} \right).\]
 
   \item Notice that $T = 1$ whenever the sine is zero. This happens when \[E_n + V_0 = \frac{n^2 \pi^2 \hbar^2}{2 m (2 a)^2},\] i.e. the energy is equal to one of the allowed energies of an infinite square well.
+\end{itemize}
+
+\section{Formalism}
+
+\subsection{Hilbert Space}
+
+\begin{itemize}
+  \item Quantum theory is based on two constructs: \textbf{wave functions} and \textbf{operators}.
+
+  \item The \textbf{state} of a system is represented by its wave function, \textbf{observables} are represented by operators.
+
+  \item Mathematically, wave functions satisfy the conditions to be called \textbf{vectors} and operators act on them as \textbf{linear transformations}.
+
+  \item The collection of all functions of $x$ is a vector space but it's too large for use in quantum mechanics. For a wave function to represent a physically realisable state it must be normalised \[\int |\Psi|^2 \,d x = 1.\] The set of all \textbf{square-integrable} functions on a specified interval \[f(x) \text{ such that } \int_a^b |f(x)|^2 \,d x < \infty,\] is called \textbf{Hilbert space}. Thus, wave functions live in Hilbert space.
+
+  \item The inner product of two functions is defined as \[\braket{f | g} = \int_a^b f(x)^* g(x) \,d x.\] If $f$ and $g$ are both square-integrable (i.e. they are both in Hilbert space) their inner product is guaranteed to exist.
+
+  \item Note that \[\braket{g | f} = \braket{f | g}^*.\]
+
+  \item The inner product of a function with itself \[\braket{f | f} = \int_a^b |f(x)|^2 \,d x\] is real and non-negative. It is only zero when $f(x) = 0$.
+
+  \item A function is said to be \textbf{normalised} if its inner product with itself is $1$.
+
+  \item Two functions are said to be \textbf{orthogonal} if their inner product is $0$.
+
+  \item A set of functions is said to be \textbf{orthonormal} if they're normalised and mutually orthogonal.
+
+  \item A set of function is said to be \textbf{complete} if any other function in Hilbert space can be expressed as a linear combination of them \[f(x) = \sum_{n = 1}^\infty c_n f_n(x)\] where \[c_n = \braket{f_n | f}.\]
 \end{itemize}
 
 \end{document}

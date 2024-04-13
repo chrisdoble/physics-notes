@@ -2,6 +2,7 @@
 \usepackage{amsmath} % For align*
 \usepackage{amsfonts} % For mathbb
 \usepackage{bookmark} % For links
+\usepackage{braket} % For bra-ket notation
 \usepackage{enumitem} % For customisable list labels
 \usepackage{siunitx} % For units
 
@@ -1426,6 +1427,63 @@ The argument for calculating the allowed energies and wavefunctions is the same,
             i \frac{\sin (2 l a)}{2 k l} (l^2 - k^2) & 1                                        \\
             1                                        & i \frac{\sin (2 l a)}{2 k l} (l^2 - k^2) \\
           \end{pmatrix}\]
+\end{enumerate}
+
+\section{Formalism}
+
+\subsection{}
+
+\begin{enumerate}
+  \item
+
+        \begin{align*}
+          \left| \int_a^b (f^* + g^*) (f + g) \,d x \right| & = \left| \int_a^b (f^* f + f^* g + g^* f + g^* g) \,d x \right|                                                             \\
+                                                            & \le \int_a^b |f|^2 \,d x + \left| \int_a^b f^* g \,d x \right| + \left| \int_a^b g^* f \,d x \right| + \int_a^b |g|^2 \,d x \\
+                                                            & \le \int_a^b |f|^2 \,d x + 2 \sqrt{\int_a^b |f|^2 \,d x \int_a^b |g|^2 \,d x} + \int_a^b |g|^2 \,d x                        \\
+        \end{align*}
+
+        The set of all normalised functions isn't a vector space because e.g. multiplying a function by a constant also multiplies its integral by that constant meaning it's no longer a member of the vector space.
+
+  \item
+
+        \begin{align*}
+          \braket{\beta | \alpha} & = \int_a^b \beta^* \alpha \,d x                  \\
+                                  & = \left( \int_a^b \alpha^* \beta \,d x \right)^* \\
+                                  & = \braket{\alpha | \beta}^*                      \\
+          \braket{a | a}          & = \int_a^b |a|^2 \,d x                           \\
+                                  & \ge 0
+        \end{align*}
+
+        If $\braket{\alpha | \alpha} = 0$ that implies $|\alpha|^2 = 0$ everywhere in the interval and thus $\ket{\alpha} = \ket{0}$.
+
+        \begin{align*}
+          \bra{\alpha} (b \ket{\beta} + c \ket{\gamma}) & = \int_{x_1}^{x_2} \alpha^* (b \beta) \,d x + \int_{x_1}^{x_2} \alpha^* (c \gamma) \,d x \\
+                                                        & = b \int_{x_1}^{x_2} \alpha^* \beta \,d x + c \int_{x_1}^{x_2} \alpha^* \gamma \,d x     \\
+                                                        & = b \braket{\alpha | \beta} + c \braket{\alpha | \gamma}
+        \end{align*}
+\end{enumerate}
+
+\subsection{}
+
+\begin{enumerate}
+  \item
+
+        \[\int_0^1 x^{2 \nu} \,d x = \frac{1}{2 \nu + 1} \left[ x^{2 \nu + 1} \right]_0^1\]
+
+        The integral is defined for $\nu > -1 / 2$. For the case $\nu = -1 / 2$
+
+        \[\int_0^1 x^{-1} \,d x = [\ln x]_0^1 = \ln 1 - \ln 0 = 0 - \infty.\] So $f(x) = x^\nu$ is in Hilbert space for $\nu > -1 / 2$.
+
+  \item
+
+        \begin{align*}
+          \int_0^1 x \,d x      & = \frac{1}{2} \\
+          \int_0^1 x^3 \,d x    & = \frac{1}{4} \\
+          \int_0^1 x^{-1} \,d x & = [\ln x]_0^1 \\
+                                & = 0 - \infty
+        \end{align*}
+
+        $f(x)$ and $x f(x)$ are in Hilbert space, but not $(d / d x) f(x)$.
 \end{enumerate}
 
 \end{document}
