@@ -467,4 +467,14 @@
         \end{itemize}
 \end{itemize}
 
+\subsubsection{Continuous Spectra}
+
+\begin{itemize}
+  \item If the eigenvalues of a hermitian operator are continuous its eigenfunctions aren't normalisable, however they may be \textbf{Dirac orthonormalisable}. For example the general solution to the eigenvalue equation for the momentum operator is \[f_p(x) = A e^{i p x / \hbar}\] which isn't normalisable, but if we restrict ourselves to real eigenvalues then \[\int_{-\infty}^\infty f_{p'}^*(x) f_p(x) \,d x = |A|^2 \int_{-\infty}^\infty e^{i (p - p') x / \hbar} \,d x = |A|^2 2 \pi \hbar \delta(p - p').\] Choosing $A = 1 / \sqrt{2 \pi \hbar}$ then \[\braket{f_{p'} | f_p} = \delta(p - p')\] which is reminiscent of true orthonormality.
+
+  \item The eigenfunctions associated with real eigenvalues are also complete, so any square integrable function $f(x)$ can be written in the form \[f(x) = \int_{-\infty}^\infty c(p) f_p(x) \,d p = \frac{1}{\sqrt{2 \pi \hbar}} \int_{-\infty}^\infty c(p) e^{i p x / \hbar} \,d p\] where the coefficients $c(p)$ can be determined by Fourier's trick: \[\braket{f_{p'} | f_p} = \int_{-\infty}^\infty c(p) \braket{f_{p'} | f_p} \,d p = \int_{-\infty}^\infty c(p) \delta(p - p') \,d p' = c(p').\]
+
+  \item In summary: if an the spectrum of a hermitian operator is continuous, the eigenfunctions are not normalisable, they are not in Hilbert space, and they do not represent physically possibly states. However they are Dirac orthonormalisable and complete.
+\end{itemize}
+
 \end{document}
