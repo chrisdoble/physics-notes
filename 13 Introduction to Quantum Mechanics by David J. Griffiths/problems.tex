@@ -1570,4 +1570,28 @@ The argument for calculating the allowed energies and wavefunctions is the same,
         \end{align*}
 \end{enumerate}
 
+\subsection{}
+
+\begin{align*}
+  \braket{f | \hat{Q} g} & = \int_0^{2 \pi} f^* \frac{d^2 g}{d \phi^2} \,d \phi                                                                                \\
+                         & = \left. f^* \frac{d g}{d \phi} \right|_0^{2 \pi} - \int_0^{2 \pi} \left( \frac{d f}{d \phi} \right)^* \frac{d g}{d \phi} \,d \phi  \\
+                         & = \left. -\left( \frac{d f}{d \phi} \right)^* g \right|_0^{2 \pi} + \int_0^{2 \pi} \left( \frac{d^2 f}{d \phi} \right)^* g \,d \phi \\
+                         & = \braket{\hat{Q} f | g}
+\end{align*}
+
+Yes, the operator is hermitian.
+
+\begin{align*}
+  \hat{Q} f                    & = q f                                                                             \\
+  \frac{d^2 f}{d \phi^2}       & = q f                                                                             \\
+  \frac{d^2 f}{d \phi^2} - q f & = 0                                                                               \\
+  f                            & = A e^{\sqrt{q} \phi} + B e^{-\sqrt{q} \phi}                                      \\
+  f(\phi + 2 \pi)              & = A e^{\sqrt{q} (\phi + 2 \pi)} + B e^{\sqrt{q} (\phi + 2 \pi)}                   \\
+                               & = A e^{\sqrt{q} \phi} e^{2 \pi \sqrt{q}} + B e^{\sqrt{q} \phi} e^{2 \pi \sqrt{q}} \\
+  2 \pi \sqrt{q}               & = 1                                                                               \\
+  q                            & = -n^2, \,n = 0, 1, 2, \ldots
+\end{align*}
+
+The eigenfunctions are $f = A e^{\pm \sqrt{q} \phi}$ and the eigenvalues are $q = 0, 1, 2, \ldots$ The spectrum is degenerate as there are two eigenfunctions associated with each eigenvalue $q > 0$.
+
 \end{document}

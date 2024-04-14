@@ -425,4 +425,16 @@
   \item In general, matrix multiplication is not commutative, i.e. $\vec{A} \vec{B} \ne \vec{B} \vec{A}$. The diference between the two orderings is called the \textbf{commutator} \[[\vec{A}, \vec{B}] = \vec{A} \vec{B} - \vec{B} \vec{A}\] and is a measure of ``how much'' they fail to commute.
 \end{itemize}
 
+\subsubsection{Determinate States}
+
+\begin{itemize}
+  \item Normally when you measure an observable $Q$ on an ensemble of identically prepared systems you don't get the same result each time. A state in which every measurement of $Q$ is guaranteed to return the same value $q$ is called a \textbf{determinate state} for $Q$.
+
+  \item In such states, the standard deviation of $Q$ is $0$, i.e. \[\sigma^2 = \Braket{(Q - \braket{Q})^2} = \Braket{\Psi | (\hat{Q} - q)^2 \Psi} = \Braket{(\hat{Q} - q) \Psi | (\hat{Q} - q) \Psi} = 0.\] The only vector whose inner product with itself vanishes is $0$, so \[\hat{Q} \Psi = q \Psi.\] This is the \textbf{eigenvalue equation} for the operator $\hat{Q}$; $\Psi$ is an eigenfunction of $\hat{Q}$ and $q$ is the corresponding \textbf{eigenvalue}. Thus, \textbf{determinate states of $\boldsymbol{Q}$ are eigenfunctions of $\boldsymbol{\hat{Q}}$}.
+
+  \item The collection of all the eigenvalues of an operator is called its \textbf{spectrum}.
+
+  \item If two or more linearly independent eigenfunctions share the same eigenvalue the spectrum is said to be degenerate.
+\end{itemize}
+
 \end{document}
