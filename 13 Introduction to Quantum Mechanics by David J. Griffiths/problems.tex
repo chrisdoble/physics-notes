@@ -1594,4 +1594,62 @@ Yes, the operator is hermitian.
 
 The eigenfunctions are $f = A e^{\pm \sqrt{q} \phi}$ and the eigenvalues are $q = 0, 1, 2, \ldots$ The spectrum is degenerate as there are two eigenfunctions associated with each eigenvalue $q > 0$.
 
+\subsection{}
+
+\begin{enumerate}
+  \item
+
+        \begin{align*}
+          h         & = a f + b g                     \\
+          \hat{Q} h & = \hat{Q} (a f + b g)           \\
+                    & = \hat{Q} (a f) + \hat{Q} (b g) \\
+                    & = a \hat{Q} f + b \hat{Q} g     \\
+                    & = a q f + b q g                 \\
+                    & = q (a f + b g)                 \\
+                    & = q h
+        \end{align*}
+
+  \item
+
+        \begin{align*}
+          \frac{d^2}{d x^2} e^x    & = e^x          \\
+          \frac{d^2}{d x^2} e^{-x} & = e^{-x}       \\
+          f                        & = e^x + e^{-x} \\
+          g                        & = e^x - e^{-x}
+        \end{align*}
+\end{enumerate}
+
+\subsection{}
+
+\begin{enumerate}
+  \item
+
+        \begin{align*}
+          \hat{Q}                                                  & = i \frac{d}{d \phi}                               \\
+          \hat{Q} f                                                & = q f                                              \\
+          i \frac{d f}{d \phi}                                     & = q f                                              \\
+          \frac{d f}{d \phi} + i q f                               & = 0                                                \\
+          f                                                        & = A e^{-i q \phi}                                  \\
+          e^{-2 \pi i q}                                           & = 1                                                \\
+          q                                                        & = 0, \pm 1, \pm 2, \ldots                          \\
+          \int_0^{2 \pi} A e^{-i q \phi} B e^{-i q' \phi} \,d \phi & = A B \int_0^{2 \pi} e^{-i (q + q') \phi} \,d \phi \\
+                                                                   & = 0
+        \end{align*}
+
+  \item
+
+        \begin{align*}
+          \hat{Q}                                                                  & = \frac{d^2}{d \phi^2}                                                              \\
+          \hat{Q} f                                                                & = q f                                                                               \\
+          \frac{d^2 f}{d \phi^2} - q f                                             & = 0                                                                                 \\
+          f                                                                        & = A e^{\pm \sqrt{q} \phi}                                                           \\
+          q                                                                        & = -n^2, \,n = 0, 1, 2, \ldots                                                       \\
+          \int_0^{2 \pi} A e^{\pm \sqrt{q} \phi} B e^{\pm \sqrt{q'} \phi} \,d \phi & = A B \int_0^{2 \pi} e^{\pm i n \phi} e^{\pm i n' \phi} \,d \phi                    \\
+                                                                                   & = A B \int_0^{2 \pi} e^{i (\pm n \pm n') \phi} \,d \phi                             \\
+                                                                                   & = A B \left[ \frac{1}{i (\pm n \pm n')} e^{i (\pm n \pm n') \phi} \right]_0^{2 \pi} \\
+                                                                                   & = A B \frac{1}{i (\pm n \pm n')} [e^{i (\pm n \pm n') 2 \pi} - 1]                   \\
+                                                                                   & = 0
+        \end{align*}
+\end{enumerate}
+
 \end{document}

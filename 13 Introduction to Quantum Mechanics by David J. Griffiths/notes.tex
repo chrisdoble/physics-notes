@@ -437,4 +437,34 @@
   \item If two or more linearly independent eigenfunctions share the same eigenvalue the spectrum is said to be degenerate.
 \end{itemize}
 
+\subsection{Eigenfunctions of a Hermitian Operator}
+
+\begin{itemize}
+  \item If the spectrum of eigenvalues of a hermitian operator is \textbf{discrete}, i.e. the eigenvalues are separated from one another, then the eigenfunctions lie in Hilbert space and are physically realisable states.
+
+  \item If the spectrum is \textbf{continuous}, i.e. the eigenvalues fill a range, then the eigenfunctions are not normalisable and don't represent possible wave functions (although linear combinations of them may be normalisable).
+
+  \item Some operators have a discrete spectrum only (e.g. the Hamiltonian for the harmonic oscillator), some have a continuous spectrum only (e.g. the Hamiltonian for a free particle), and some have both (e.g. the Hamiltonian for a finite square well).
+\end{itemize}
+
+\subsubsection{Discrete Spectra}
+
+\begin{itemize}
+  \item The normalisable eigenfunctions of hermitian operators have two important properties:
+
+        \begin{itemize}
+          \item their eigenvalues are real, and
+
+          \item eigenfunctions belonging to distinct eigenvalues are orthogonal.
+        \end{itemize}
+
+  \item In degenerate states where two or more eigenfunctions share a single eigenvalue, any linear combination of them is also an eigenfunction. The Gram-Schmidt orthogonalisation procedure can be used to construct orthogonal eigenfunctions in each degenerate subspace, so even in the presence of degeneracy the eigenfunctions can be chosen to be orthonormal.
+
+  \item In a finite-dimensional vector space the eigenvectors of a hermitian matrix span the space, but the proof of this doesn't translate to infinite-dimensional spaces. However this property is essential to quantum mechanics so we take it as an axiom:
+
+        \begin{itemize}
+          \item The eigenfunctions of an observable operators are complete: Any function (in Hilbert space) can be expressed as a linear combination of them.
+        \end{itemize}
+\end{itemize}
+
 \end{document}
