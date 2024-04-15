@@ -477,4 +477,14 @@
   \item In summary: if an the spectrum of a hermitian operator is continuous, the eigenfunctions are not normalisable, they are not in Hilbert space, and they do not represent physically possibly states. However they are Dirac orthonormalisable and complete.
 \end{itemize}
 
+\subsection{Generalised Statistical Interpretation}
+
+\begin{itemize}
+  \item The \textbf{generalised statistical interpretation} states: If you measure an observable $Q(x, p)$ on a particle in the state $\Psi(x, t)$, you are certain to get one of the eigenvalues of the hermitian operator $\hat{Q}(x, -i \hbar d / d x)$. If the spectrum of $\hat{Q}$ is discrete, the probability of getting the particular eigenvalue $q_n$ associated with the (orthonormalised) eigenfunction $f_n(x)$ is \[|c_n|^2 \text{ where } c_n = \braket{f_n | \Psi}.\] If the spectrum is continuous, with real eigenvalues $q(z)$ and associated (Dirac-orthonormalised) eigenfunctions $f_z(x)$, the probability of getting a result in the range $d z$ is \[|c(z)|^2 \,d z \text{ where } c(z) = \braket{f_z | \Psi}.\] Upon measurement the wave function ``collapses'' to the corresponding eigenstate.
+
+  \item Because the eigenfunctions of an observable operator are complete the wavefunction can be written as a linear combination of them \[\Psi(x, t) = \sum_n c_n(t) f_n(x)\] and because they're orthonormal the coefficients are given by Fourier's trick \[c_n(t) = \braket{f_n | \Psi} = \int f_n(x)^* \Psi(x, t) \,d x.\]
+
+  \item The Dirac-orthonormalised eigenfunctions of the momentum operator are \[f_p(x) = \frac{1}{\sqrt{2 \pi \hbar}} e^{i p x / \hbar}\] so \[c(p) = \braket{f_p | \Psi} = \frac{1}{\sqrt{2 \pi \hbar}} \int_{-\infty}^\infty e^{i p x / \hbar} \Psi(x, t) \,d x.\] This is such an important quantity that it is called the \textbf{momentum space wave function $\boldsymbol{\Phi(x, t)}$}. It is essentially the Fourier transform of the position space wave function and, according to the generalised statistical interpretation, the probability that a measurement of momentum would yield a result in the range $d p$ is given by \[|\Phi(p, t)|^2 \,d p.\]
+\end{itemize}
+
 \end{document}
