@@ -1762,6 +1762,17 @@ The eigenfunctions are $f = A e^{\pm \sqrt{q} \phi}$ and the eigenvalues are $q 
 
 This doesn't tell us much because for stationary states $\sigma_H = 0$ and $\braket{p} = 0$ so this says $0 \ge 0$.
 
+\setcounter{subsection}{16}
 \subsection{}
+
+\begin{align*}
+  \left( -i \hbar \frac{d}{d x} - \braket{p} \right) \Psi                                                         & = i a (x - \braket{x}) \Psi                                                    \\
+  -i \hbar \frac{d \Psi}{d x} - \braket{p} \Psi                                                                   & = i a (x - \braket{x}) \Psi                                                    \\
+  \frac{d \Psi}{d x} + \frac{\braket{p} + i a (x - \braket{x})}{i \hbar} \Psi                                     & = 0                                                                            \\
+  \frac{d \Psi}{d x} + \left[ \frac{a}{\hbar} (x - \braket{x}) - i \frac{\braket{p}}{\hbar} \right] \Psi          & = 0                                                                            \\
+  \frac{d \Psi}{d x} + \frac{a}{\hbar} x \Psi - \frac{a}{\hbar} \braket{x} \Psi - i \frac{\braket{p}}{\hbar} \Psi & = 0                                                                            \\
+  \Psi                                                                                                            & = A e^{-a x^2 / 2 \hbar} e^{a \braket{x} x / \hbar} e^{i \braket{p} x / \hbar} \\
+                                                                                                                  & = B e^{-a (x - \braket{x})^2 / 2 \hbar} e^{i \braket{p} x / \hbar}
+\end{align*}
 
 \end{document}
