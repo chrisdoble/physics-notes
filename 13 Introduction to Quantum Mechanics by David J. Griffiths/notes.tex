@@ -487,4 +487,14 @@
   \item The Dirac-orthonormalised eigenfunctions of the momentum operator are \[f_p(x) = \frac{1}{\sqrt{2 \pi \hbar}} e^{i p x / \hbar}\] so \[c(p) = \braket{f_p | \Psi} = \frac{1}{\sqrt{2 \pi \hbar}} \int_{-\infty}^\infty e^{i p x / \hbar} \Psi(x, t) \,d x.\] This is such an important quantity that it is called the \textbf{momentum space wave function $\boldsymbol{\Phi(x, t)}$}. It is essentially the Fourier transform of the position space wave function and, according to the generalised statistical interpretation, the probability that a measurement of momentum would yield a result in the range $d p$ is given by \[|\Phi(p, t)|^2 \,d p.\]
 \end{itemize}
 
+\subsection{The Uncertainty Principle}
+
+\subsubsection{Proof of the Generalised Uncertainty Principle}
+
+\begin{itemize}
+  \item For two observables $A$ and $B$ and associated operators $\hat{A}$ and $\hat{B}$, the \textbf{generalised uncertainty principle} states \[\sigma_A^2 \sigma_B^2 \ge \left( \frac{1}{2 i} \braket{[\hat{A}, \hat{B}]} \right)^2\] where $[\hat{A}, \hat{B}]$ is the commutator of the two operators.
+
+  \item The implication of this is that there's an ``uncertainty principle'' for each pair of observables whose operators don't commute. These are called \textbf{incompatible observables} and they don't have a complete set of common eigenfunctions. On the other hand, \textbf{compatible observables} do have a complete set of common eigenfunctions and taking one measurement gives you a single eigenfunction from which you can determine all the compatible observables without needing to take another measurement.
+\end{itemize}
+
 \end{document}

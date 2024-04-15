@@ -1690,4 +1690,78 @@ The eigenfunctions are $f = A e^{\pm \sqrt{q} \phi}$ and the eigenvalues are $q 
   |\Phi(p, t)|^2 & = \frac{1}{\hbar} |\phi(p / \hbar)|^2
 \end{align*}
 
+\setcounter{subsection}{13}
+\subsection{}
+
+\begin{enumerate}
+  \item
+
+        \begin{align*}
+          [\hat{A} + \hat{B}, \hat{C}]                            & = (\hat{A} + \hat{B}) \hat{C} - \hat{C} (\hat{A} + \hat{B})                                             \\
+                                                                  & = \hat{A} \hat{C} + \hat{B} \hat{C} - \hat{C} \hat{A} - \hat{C} \hat{B}                                 \\
+                                                                  & = \hat{A} \hat{C} - \hat{C} \hat{A} + \hat{B} \hat{C} - \hat{C} \hat{B}                                 \\
+                                                                  & = [\hat{A}, \hat{C}] + [\hat{B}, \hat{C}]                                                               \\
+          \hat{A} [\hat{B}, \hat{C}] + [\hat{A}, \hat{C}] \hat{B} & = \hat{A} \hat{B} \hat{C} - \hat{A} \hat{C} \hat{B} + \hat{A} \hat{C} \hat{B} - \hat{C} \hat{A} \hat{B} \\
+                                                                  & = \hat{A} \hat{B} \hat{C} - \hat{C} \hat{A} \hat{B}                                                     \\
+                                                                  & = [\hat{A} \hat{B}, \hat{C}]
+        \end{align*}
+
+  \item
+
+        \begin{align*}
+          [x^n, \hat{p}] & = \left[ x^n, -i \hbar \frac{d}{d x} \right]                                            \\
+                         & = x^n \left( -i \hbar \frac{d}{d x} \right) - \left( -i \hbar \frac{d}{d x} \right) x^n \\
+                         & = x^n \left( -i \hbar \frac{d}{d x} \right) (1) + i \hbar n x^{n - 1}                   \\
+                         & = i \hbar n x^{n - 1}
+        \end{align*}
+
+  \item
+
+        \begin{align*}
+          [f(x), \hat{p}] g(x) & = f(x) \left( -i \hbar \frac{d}{d x} \right) g(x) - \left( -i \hbar \frac{d}{d x} \right) [f(x) g(x)] \\
+                               & = -i \hbar f(x) \frac{d g}{d x} + i \hbar \left[ \frac{d f}{d x} g(x) + f(x) \frac{d g}{d x} \right]  \\
+                               & = i \hbar \frac{d f}{d x} g(x)                                                                        \\
+          [f(x), \hat{p}]      & = i \hbar \frac{d f}{d x}
+        \end{align*}
+
+  \item
+
+        \begin{align*}
+          [\hat{H}, \hat{a}_-] g & = \hat{H} \hat{a}_- g - \hat{a}_- \hat{H} g                                                                                                                         \\
+                                 & = \hbar \omega \left( \hat{a}_- \hat{a}_+ - \frac{1}{2} \right) \hat{a}_- g - \hat{a}_- \hbar \omega \left( \hat{a}_- \hat{a}_+ - \frac{1}{2} \right) g             \\
+                                 & = \hbar \omega \hat{a}_- \hat{a}_+ \hat{a}_- g - \frac{1}{2} \hbar \omega \hat{a}_- g - \hbar \omega \hat{a}_-^2 \hat{a}_+ g + \frac{1}{2} \hbar \omega \hat{a}_- g \\
+                                 & = \hbar \omega \hat{a}_- \hat{a}_+ \hat{a}_- g - \hbar \omega \hat{a}_-^2 \hat{a}_+ g                                                                               \\
+                                 & = \hbar \omega \hat{a}_- (\hat{a}_+ \hat{a}_- - \hat{a}_- \hat{a}_+) g                                                                                              \\
+                                 & = -\hbar \omega \hat{a}_- g                                                                                                                                         \\
+          [\hat{H}, \hat{a}_-]   & = -\hbar \omega \hat{a}_-                                                                                                                                           \\
+          [\hat{H}, \hat{a}_+] g & = \hat{H} \hat{a}_+ g - \hat{a}_+ \hat{H} g                                                                                                                         \\
+                                 & = \hbar \omega \left( \hat{a}_- \hat{a}_+ - \frac{1}{2} \right) \hat{a}_+ g - \hat{a}_+ \hbar \omega \left( \hat{a}_- \hat{a}_+ - \frac{1}{2} \right) g             \\
+                                 & = \hbar \omega \hat{a}_- \hat{a}_+^2 g - \frac{1}{2} \hbar \omega \hat{a}_+ g - \hbar \omega \hat{a}_+ \hat{a}_- \hat{a}_+ g + \frac{1}{2} \hbar \omega \hat{a}_+ g \\
+                                 & = \hbar \omega \hat{a}_- \hat{a}_+^2 g - \hbar \omega \hat{a}_+ \hat{a}_- \hat{a}_+ g                                                                               \\
+                                 & = \hbar \omega (\hat{a}_- \hat{a}_+ - \hat{a}_+ \hat{a}_-) \hat{a}_+ g                                                                                              \\
+                                 & = \hbar \omega \hat{a}_+ g                                                                                                                                          \\
+          [\hat{H}, \hat{a}_+]   & = \hbar \omega \hat{a}_+
+        \end{align*}
+\end{enumerate}
+
+\subsection{}
+
+\begin{align*}
+  \left[ x, \frac{p^2}{2 m} + V \right] g & = x \left( \frac{p^2}{2 m} + V \right) g - \left( \frac{p^2}{2 m} + V \right) x g                                                                \\
+                                          & = x \frac{p^2}{2 m} g + x V g - \frac{p^2}{2 m} x g - V x g                                                                                      \\
+                                          & = \frac{1}{2 m} (x p^2 g - p^2 x g)                                                                                                              \\
+                                          & = \frac{1}{2 m} \left[ -\hbar^2 x \frac{d^2 g}{d x^2} + \hbar^2 \frac{d}{d x} \left( g + x \frac{d g}{d x} \right) \right]                       \\
+                                          & = \frac{1}{2 m} \left[ -\hbar^2 x \frac{d^2 g}{d x^2} + \hbar^2 \left( \frac{d g}{d x} + \frac{d g}{d x} + x \frac{d^2 g}{d x^2} \right) \right] \\
+                                          & = \frac{\hbar^2}{m} \frac{d g}{d x}                                                                                                              \\
+  \left[ x, \frac{p^2}{2 m} + V \right]   & = \frac{\hbar^2}{m} \frac{d}{d x}                                                                                                                \\
+                                          & = -\frac{\hbar}{i m} \braket{p}                                                                                                                  \\
+  \sigma_x^2 \sigma_H^2                   & \ge \left( \frac{1}{2 i} \Braket{\left[ x, \frac{p^2}{2 m} + V \right]} \right)^2                                                                \\
+                                          & = \frac{\hbar^2}{4 m^2} |\braket{p}|^2                                                                                                           \\
+  \sigma_x \sigma_H                       & \ge \frac{\hbar}{2 m} |\braket{p}|
+\end{align*}
+
+This doesn't tell us much because for stationary states $\sigma_H = 0$ and $\braket{p} = 0$ so this says $0 \ge 0$.
+
+\subsection{}
+
 \end{document}
