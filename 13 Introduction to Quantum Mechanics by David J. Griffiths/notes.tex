@@ -503,4 +503,16 @@
   \item The minimum uncertainty wave packet where $\sigma_x \sigma_p = \hbar / 2$ has the form \[\Psi(x, t) = A e^{-a (x - \braket{x})^2 / 2 \hbar} e^{i \braket{p} x / \hbar}\] i.e. it is Gaussian.
 \end{itemize}
 
+\subsubsection{The Energy-Time Uncertainty Principle}
+
+\begin{itemize}
+  \item The \textbf{energy-time uncertainty principle} is \[\Delta t \Delta E \ge \frac{\hbar}{2}\] where $\Delta t$ is ``the time it takes the system to change substantially'' and $\Delta E$ is ``the uncertainty in $E$.''
+
+  \item The \textbf{Generalised Ehrenfest theorem} is \[\frac{d}{d t} \braket{Q} = \frac{i}{\hbar} \Braket{\left[ \hat{H}, \hat{Q} \right]} + \Braket{\frac{\partial \hat{Q}}{\partial t}},\] i.e. the time rate change in the expected value of an observable is determined by the commutator of its operator with the Hamiltonian and the derivative of its operator with respect to time. In the typical case where its the operator doesn't explicitly depdend on time, if $\hat{Q}$ commutes with $\hat{H}$ then $\braket{Q}$ is constant and $Q$ is a conserved quantity.
+
+  \item Substituting the above into the generalised undertainty principle we get \[\sigma_H \sigma_Q \ge \frac{\hbar}{2} \left| \frac{d \braket{Q}}{d t} \right|.\] If we define $\Delta E = \sigma_H$ and \[\Delta t = \frac{\sigma_Q}{|d \braket{Q} / d t|}\] then \[\Delta E \Delta t \ge \frac{\hbar}{2}.\] Note that $\Delta t$ is the amount time it takes for the expectation value of $Q$ to change by one standard deviation.
+
+  \item If $\Delta E$ is small then $\Delta t$ must be large — if we know the energy the rate of change of all observables must be gradual. On the other hand, if $\Delta t$ is small we don't know as much about the energy.
+\end{itemize}
+
 \end{document}
