@@ -557,4 +557,30 @@
   \item Just as vectors and quantum states are expressed differently under different bases, so too are operators. For example, the position operator $\hat{x}$ is $x$ in position space but $i \hbar \partial / \partial p$ in momentum space.
 \end{itemize}
 
+\subsubsection{Dirac Notation}
+
+\begin{itemize}
+  \item Dirac proposed to split the notation for the inner product $\braket{\alpha | \beta}$ in two pieces: the \textbf{bra} $\bra{\alpha}$, and the \textbf{ket} $\ket{\beta}$.
+
+  \item A bra is a vector. In a finite-dimensional vector space it can be expressed as a column vector.
+
+  \item A ket is a linear function of vectors. When it is applied to a vector on the right it yields a complex number — the inner product. In a finite-dimensional vector space it can be expressed as a row vector.
+
+  \item The collection of all bras constitutes another vector space called \textbf{the dual space}.
+
+  \item If $\ket{\alpha}$ is a normalised vector, the operator \[\hat{P} = \ket{\alpha} \bra{\alpha}\] picks out the portion of any other vector that ``lies along'' $\ket{\alpha}$. It is called the \textbf{projection operator}.
+
+  \item If $\{\ket{e_n}\}$ is a discrete orthonormal basis then \[\sum_n \ket{e_n} \bra{e_n} = 1\] is the identity operator. This is because if we let it act on any vector $\ket{\alpha}$ we recover the expansion of $\ket{\alpha}$ in the $\{\ket{e_n}\}$ basis \[\sum_n (\braket{e_n | \alpha}) \ket{e_n} = \ket{\alpha}.\]
+
+  \item Similarly, if $\{\ket{e_z}\}$ is a Dirac orthonormalised basis then \[\int \ket{e_n} \bra{e_z} \,d z = 1.\]
+
+  \item The sum of two operators is \[(\hat{Q} + \hat{R}) \ket{\alpha} = \hat{Q} \ket{\alpha} + \hat{R} \ket{\alpha}\] and the product of two operators is \[\hat{Q} \hat{R} \ket{\alpha} = \hat{Q} (\hat{R} \ket{\alpha}).\]
+
+  \item Functions of operators are defined by the power series \begin{align*}
+          e^{\hat{Q}}           & = 1 + \hat{Q} + \frac{1}{2} \hat{Q}^2 + \frac{1}{3!} \hat{Q}^3 + \cdots \\
+          \frac{1}{1 - \hat{Q}} & = 1 + \hat{Q} + \hat{Q}^2 + \hat{Q}^3 + \cdots                          \\
+          \ln (1 + \hat{Q})     & = \hat{Q} - \frac{1}{2} \hat{Q}^2 + \frac{1}{3} \hat{Q}^3 + \cdots
+        \end{align*}
+\end{itemize}
+
 \end{document}

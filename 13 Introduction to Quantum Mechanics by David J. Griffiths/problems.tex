@@ -1880,4 +1880,201 @@ This doesn't tell us much because for stationary states $\sigma_H = 0$ and $\bra
   \frac{1}{3} - \frac{5}{4 \pi^2}                                                                                                                                                     & \ge \left( \frac{32}{9 \pi^2} \right)^2
 \end{align*}
 
+\setcounter{subsection}{22}
+\subsection{}
+
+\begin{align*}
+  \hat{P}^2 \ket{\beta} & = \hat{P} (\hat{P} \ket{\beta})                                   \\
+                        & = \hat{P} (\braket{\alpha | \beta} \ket{\alpha})                  \\
+                        & = \braket{\alpha | \beta} \hat{P} \ket{\alpha}                    \\
+                        & = \braket{\alpha | \beta} (\braket{\alpha | \alpha} \ket{\alpha}) \\
+                        & = \braket{\alpha | \beta} \ket{\alpha}                            \\
+                        & = \hat{P} \ket{\beta}
+\end{align*}
+
+So, $\hat{P}^2 = \hat{P}$.
+
+\begin{align*}
+  \hat{P} \ket{\beta}                  & = \lambda \ket{\beta} \\
+  \braket{\alpha | \beta} \ket{\alpha} & = \lambda \ket{\beta}
+\end{align*}
+
+If $\ket{\beta}$ is a constant multiple of $\ket{\alpha}$, then
+
+\begin{align*}
+  \braket{\alpha | c \alpha} \ket{\alpha} & = \lambda c \ket{\alpha} \\
+  c \braket{\alpha | \alpha} \ket{\alpha} & = \lambda c \ket{\alpha} \\
+  c \ket{\alpha}                          & = \lambda c \ket{\alpha}
+\end{align*}
+
+thus $\lambda = 1$.
+
+If $\ket{\beta}$ is orthogonal to $\ket{\alpha}$, then
+
+\begin{align*}
+  \braket{\alpha | \beta} \ket{\alpha} & = \lambda \ket{\beta} \\
+  0                                    & = \lambda \ket{\beta}
+\end{align*}
+
+thus $\lambda = 0$.
+
+\subsection{}
+
+\begin{align*}
+  \hat{Q}   & = \hat{Q}^\dagger                      \\
+  Q_{m n}   & = \braket{e_m | \hat{Q} | e_n}         \\
+  Q_{n m}   & = \braket{e_n | \hat{Q} | e_m}         \\
+  Q_{n m}^* & = \braket{e_n | \hat{Q} | e_m}^*       \\
+            & = \braket{e_m | \hat{Q}^\dagger | e_n} \\
+            & = \braket{e_m | \hat{Q} | e_n}         \\
+            & = Q_{m n}
+\end{align*}
+
+\subsection{}
+
+\begin{align*}
+  \hat{H} \ket{\alpha}                                                                                                 & = \lambda \ket{\alpha}                                                \\
+  \epsilon [(\braket{1 | \alpha} + \braket{2 | \alpha}) \ket{1} + (\braket{1 | \alpha} - \braket{2 | \alpha}) \ket{2}] & = \lambda (\braket{1 | \alpha} \ket{1} + \braket{2 | \alpha} \ket{2})
+\end{align*}
+
+From this we get two equations
+
+\begin{align*}
+  \epsilon (\braket{1 | \alpha} + \braket{2 | \alpha})  & = \lambda \braket{1 | \alpha} \\
+  \epsilon (\braket{1 | \alpha}) - \braket{2 | \alpha}) & = \lambda \braket{2 | \alpha}
+\end{align*}
+
+If we let $\ket{\alpha} = \begin{pmatrix}
+    a \\
+    b
+  \end{pmatrix}$ then this becomes
+
+\begin{align*}
+  \epsilon (a + b) & = \lambda a \\
+  \epsilon (a - b) & = \lambda b
+\end{align*}
+
+or in matrix form
+
+\begin{align*}
+  \epsilon \begin{pmatrix}
+             1 & 1  \\
+             1 & -1
+           \end{pmatrix} \begin{pmatrix}
+                           a \\
+                           b
+                         \end{pmatrix} & = \lambda \begin{pmatrix}
+                                                     a \\
+                                                     b
+                                                   \end{pmatrix}.
+\end{align*}
+
+The eigenvalues of this matrix are $\lambda = \pm \sqrt{2} \epsilon$ and the eigenvectors are $\ket{1} + (\sqrt{2} \pm 1) \ket{2}$.
+
+\subsection{}
+
+\begin{enumerate}
+  \item
+
+        \begin{align*}
+          \bra{\alpha} & = -i \bra{1} - 2 \bra{2} + i \bra{3} \\
+          \bra{\beta}  & = -i \bra{1} + 2 \bra{3}
+        \end{align*}
+
+  \item
+
+        \begin{align*}
+          \braket{\alpha | \beta} & = (-i \bra{1} - 2 \bra{2} + i \bra{3}) (i \ket{1} + 2 \ket{3})                                                      \\
+                                  & = \braket{1 | 1} - 2 i \braket{1 | 3} - 2 i \braket{2 | 1} - 4 \braket{2 | 3} - \braket{3 | 1} + 2 i \braket{3 | 3} \\
+                                  & = 1 + 2 i                                                                                                           \\
+          \braket{\beta | \alpha} & = (-i \bra{1} + 2 \bra{3}) (i \ket{1} - 2 \ket{2} - i \ket{3})                                                      \\
+                                  & = \braket{1 | 1} + 2 i \braket{1 | 2} - \braket{1 | 3} + 2 i \braket{3 | 1} - 4 \braket{3 | 2} - 2 i \braket{3 | 3} \\
+                                  & = 1 - 2 i                                                                                                           \\
+                                  & = \braket{\alpha | \beta}^*
+        \end{align*}
+
+  \item
+
+        \begin{align*}
+          \hat{A}         & = \ket{\alpha} \bra{\beta}              \\
+          \hat{A} \ket{1} & = \ket{\alpha} \braket{\beta | 1}       \\
+                          & = \ket{\alpha} \braket{1 | \beta}^*     \\
+                          & = -i \ket{\alpha}                       \\
+                          & = \ket{1} + 2 i \ket{2} - \ket{3}       \\
+          A_{1 1}         & = \braket{1 | \hat{A} | 1}              \\
+                          & = 1                                     \\
+          A_{2 1}         & = 2 i                                   \\
+          A_{3 1}         & = -1                                    \\
+          \hat{A} \ket{2} & = \ket{\alpha} \braket{\beta | 2}       \\
+                          & = \ket{\alpha} \braket{2 | \beta}^*     \\
+                          & = 0                                     \\
+          A_{1 2}         & = 0                                     \\
+          A_{2 2}         & = 0                                     \\
+          A_{3 2}         & = 0                                     \\
+          \hat{A} \ket{3} & = \ket{\alpha} \braket{\beta | 3}       \\
+                          & = \ket{\alpha} \braket{3 | \beta}^*     \\
+                          & = 2 \ket{\alpha}                        \\
+                          & = 2 i \ket{1} - 4 \ket{2} - 2 i \ket{3} \\
+          A_{1 3}         & = 2 i                                   \\
+          A_{2 3}         & = -4                                    \\
+          A_{3 3}         & = -2 i                                  \\
+          A               & = \begin{pmatrix}
+                                1   & 0 & 2 i  \\
+                                2 i & 0 & -4   \\
+                                -1  & 0 & -2 i
+                              \end{pmatrix}
+        \end{align*}
+
+        It's not hermitian.
+\end{enumerate}
+
+\subsection{}
+
+\begin{enumerate}
+  \item
+
+        \begin{align*}
+          \hat{Q} \ket{\alpha} & = \hat{Q} \sum_{n = 1}^\infty \braket{e_n | \alpha} \ket{e_n}                 \\
+                               & = \hat{Q} \left( \sum_{n = 1}^\infty \ket{e_n} \bra{e_n} \right) \ket{\alpha} \\
+                               & = \left( \sum_{n = 1}^\infty \hat{Q} \ket{e_n} \bra{e_n} \right) \ket{\alpha} \\
+                               & = \left( \sum_{n = 1}^\infty q_n \ket{e_n} \bra{e_n} \right) \ket{\alpha}     \\
+          \hat{Q}              & = \sum_{n = 1}^\infty q_n \ket{e_n} \bra{e_n}
+        \end{align*}
+
+  \item
+
+        \begin{align*}
+          \hat{Q}     & = \sum_{n = 1}^\infty q_n \ket{e_n} \bra{e_n}                                                                           \\
+          \hat{Q}^2   & = \left( \sum_{n = 1}^\infty q_n \ket{e_n} \bra{e_n} \right) \left( \sum_{l = 1}^\infty q_l \ket{e_l} \bra{e_l} \right) \\
+                      & = \sum_{n = 1}^\infty \sum_{l = 0}^\infty q_n q_l \ket{e_n} \braket{e_n | e_l} \bra{e_l}                                \\
+                      & = \sum_{n = 1}^\infty q_n^2 \ket{e_n} \bra{e_n}                                                                         \\
+          e^{\hat{Q}} & = \sum_{n = 1}^\infty e^{q_n} \ket{e_n} \bra{e_n}                                                                       \\
+                      & = \sum_{n = 1}^\infty \left( \sum_{k = 0}^\infty \frac{q_n^k}{k!} \right) \ket{e_n} \bra{e_n}                           \\
+                      & = \sum_{k = 0}^\infty \frac{1}{k!} \left( \sum_{n = 1}^\infty q_n^k \ket{e_n} \bra{e_n} \right)                         \\
+                      & = \sum_{k = 0}^\infty \frac{1}{k!} \hat{Q}^k                                                                            \\
+                      & = 1 + \hat{Q} + \frac{1}{2} \hat{Q}^2 + \frac{1}{3!} \hat{Q}^3 + \cdots
+        \end{align*}
+\end{enumerate}
+
+\subsection{}
+
+\begin{enumerate}
+  \item
+
+        \begin{align*}
+          \sin \hat{D}       & = \hat{D} - \frac{D^3}{3!} + \frac{\hat{D}^5}{5!} - \frac{\hat{D}^7}{7!} + \cdots \\
+          (\sin \hat{D}) x^5 & = 5 x^4 - 10 x^2 + 1
+        \end{align*}
+
+  \item
+
+        \begin{align*}
+          \frac{1}{1 - \hat{D} / 2}        & = 1 + \frac{\hat{D}}{2} + \left( \frac{\hat{D}}{2} \right)^2 + \left( \frac{\hat{D}}{2} \right)^3 + \cdots                                 \\
+                                           & = 1 + \frac{\hat{D}}{2} + \frac{\hat{D}^2}{4} + \frac{\hat{D}^3}{8} + \cdots                                                               \\
+          \frac{1}{1 - \hat{D} / 2} \cos x & = \cos x - \frac{1}{2} \sin x - \frac{1}{4} \cos x + \frac{1}{8} \sin x + \cdots                                                           \\
+                                           & = \left( -\frac{1}{2} + \frac{1}{8} - \frac{1}{32} + \cdots \right) \sin x + \left( 1 - \frac{1}{4} + \frac{1}{16} - \cdots \right) \cos x \\
+                                           & = -\frac{2}{5} \sin x + \frac{4}{5} \cos x
+        \end{align*}
+\end{enumerate}
+
 \end{document}
