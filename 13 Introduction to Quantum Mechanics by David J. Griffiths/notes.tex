@@ -515,4 +515,46 @@
   \item If $\Delta E$ is small then $\Delta t$ must be large — if we know the energy the rate of change of all observables must be gradual. On the other hand, if $\Delta t$ is small we don't know as much about the energy.
 \end{itemize}
 
+\subsection{Vectors and Operations}
+
+\subsubsection{Bases in Hilbert Space}
+
+\begin{itemize}
+  \item In order to express a Euclidean vector $\vec{v}$ as a tuple of components we first need to choose a basis, e.g. $\hat{x}$, $\hat{y}$, and $\hat{z}$ in $\mathbb{R}^3$. The vector can then be expressed as a linear combination of these basis vectors \[\vec{v} = v_x \hat{x} + v_y \hat{y} + v_z \hat{z}.\] The components $v_x$, $v_y$, and $v_z$ can be determined by taking the inner product between $\vec{v}$ and the associated basis vector \[v_x = \vec{v} \cdot \hat{x}, \ v_y = \vec{v} \cdot \hat{y}, \ v_z = \vec{v} \cdot \hat{z}.\] This projects $\vec{v}$ onto the basis vectors and tells us ``how much'' of each to include. Different basis vectors would result in different components.
+
+  \item A quantum state can be represented by a vector $\ket{S(t)}$ in Hilbert space.
+
+  \item As with Euclidean vectors, $\ket{S(t)}$ can be expressed in different ways by choosing different bases.
+
+  \item Because the eigenfunctions of Hermitian operators are complete and orthonormal, they can be used as a basis.
+
+  \item Some examples of eigenfunctions of the position operator $\hat{x}$ are $\ket{1}$, $\ket{4.2}$, and $\ket{-1337}$ corresponding to the positions $x = 1$, $x = 4.2$, and $x = -1337$, respectively.
+
+  \item A quantum state can be expressed in the position basis as a linear combination of the eigenfunctions of the position operator $\hat{x}$ \[\ket{S(t)} = c_1(t) \ket{1} + c_2(t) \ket{2} + \cdots\] however because there is an eigenfunction for every real value $x$ this must be expressed as an integral \[\ket{S(t)} = \int c(x, t) \ket{x} \,d x\] where the coefficient function is none other than the wave function in position space, i.e. \[\ket{S(t)} = \int \Psi(x, t) \ket{x} \,d x.\]
+
+  \item As with Euclidean vectors we can determine ``how much'' of a particular basis vector, e.g. $\ket{1}$ in the position basis, makes up a quantum state $\ket{S(t)}$ by taking the inner product \[\braket{1 | S(t)} = \int_{-\infty}^\infty \delta(x - 1) \Psi(x, t) \,d x = \Psi(1, t).\] If we take the inner product between $\ket{x}$ (a basis vector in position space but with $x$ left as a variable) and a quantum state $\ket{S(t)}$ we leave $x$ ``unset'' and extract the wave function in position space \[\braket{x | S(t)} = \int_{-\infty}^\infty \delta(x - y) \Psi(y, t) \,d y = \Psi(x, t).\]
+
+  \item The eigenfunctions of other Hermitian operators can also be used as a basis, e.g. $\hat{p}$, $\hat{H}$.
+
+  \item Operators are linear transformations on Hilbert space — they ``transform'' one vector into another \[\ket{\beta} = \hat{Q} \ket{\alpha}.\]
+
+  \item Just as vectors are represented by their components with respect to an orthonormal basis \[\ket{\alpha} = \sum_n a_n \ket{e_n}\] operators are represented with respect to a particular basis by their \textbf{matrix elements} \[\braket{e_m | \hat{Q} | e_n} = Q_{m n}.\] One way of reading this is:
+
+        \begin{enumerate}
+          \item Apply the transformation $\hat{Q}$ to the basis vector $\ket{e_n}$.
+
+          \item Take the inner product between the basis vector $\ket{e_m}$ and the transformed basis vector $\hat{Q} \ket{e_n}$.
+
+          \item Construct a matrix using these elements \[\begin{pmatrix}
+                    Q_{1 1} & Q_{1 2} & \ldots \\
+                    Q_{2 1} & Q_{2 2} & \ldots \\
+                    \vdots  & \ddots
+                  \end{pmatrix}.\]
+        \end{enumerate}
+
+        When the matrix is applied to another vector $\vec{b} = \vec{Q} \vec{a}$, each element $Q_{m n}$ represents ``how much should the $n$th component of $\vec{a}$ contribute to the $m$th component of $\vec{b}$.''
+
+  \item Just as vectors and quantum states are expressed differently under different bases, so too are operators. For example, the position operator $\hat{x}$ is $x$ in position space but $i \hbar \partial / \partial p$ in momentum space.
+\end{itemize}
+
 \end{document}
