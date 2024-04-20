@@ -583,4 +583,34 @@
         \end{align*}
 \end{itemize}
 
+\subsubsection{Changing Bases in Dirac Notation}
+
+\begin{itemize}
+  \item The identity operator can be written in terms of any complete set of eigenstates, for example the position eigenstates $\ket{x}$, the momentum eigenstates $\ket{p}$, and the energy eigenstates $\ket{n}$ \begin{align*}
+          1 & = \int d x \, \ket{x} \bra{x} \\
+          1 & = \int d p \, \ket{p} \bra{p} \\
+          1 & = \sum \ket{n} \bra{n}.
+        \end{align*} Applying each of these identity operators to a quantum state $\ket{S(t)}$ gives \begin{align*}
+          \ket{S(t)} & = \int d x \ket{x} \braket{x | S(t)}   \\
+                     & = \int \Psi(x, t) \ket{x} \,d x        \\
+          \ket{S(t)} & = \int \,d p \ket{p} \braket{p | S(t)} \\
+                     & = \int \Phi(p, t) \ket{p} \,d p        \\
+          \ket{S(t)} & = \sum_n \ket{n} \braket{n | S(t)}     \\
+                     & = \sum_n c_n(t) \ket{n}.
+        \end{align*}
+
+  \item Just as wave functions take different forms in different bases, so do operators. For example, in the position basis the position operator is given by $\hat{x} = x$ but in the momentum basis it is given by $\hat{x} = i \hbar \frac{\partial}{\partial p}$. The result of an operator can be expressed in any basis by taking the inner product with an appropriate basis vector. For example, the result of the position operator in the position basis is \[\braket{x | \hat{x} | S(t)} = x \Psi(x, t)\] while in the momentum basis it is \[\braket{p | \hat{x} | S(t)} = i \hbar \frac{\partial \Phi}{\partial p}.\]
+
+  \item The latter result can be obtained by inserting the identity operator \begin{align*}
+          \braket{p | \hat{x} | S(t)} & = \Braket{p | \hat{x} \int d x \Ket{x} \Bra{x} | S(t)}                                                    \\
+                                      & = \int \braket{p | \hat{x} | x} \braket{x | S(t)} \,d x                                                   \\
+                                      & = \int \braket{p | x | x} \Psi(x, t) \,d x                                                                \\
+                                      & = \int x \braket{p | x} \Psi(x, t) \,d x                                                                  \\
+                                      & = \int x \braket{x | p}^* \Psi(x, t) \,d x                                                                \\
+                                      & = \int x \frac{e^{-i p x / \hbar}}{\sqrt{2 \pi \hbar}} \Psi(x, t) \,d x                                   \\
+                                      & = i \hbar \frac{\partial}{\partial p} \int \frac{e^{-i p x / \hbar}}{\sqrt{2 \pi \hbar}} \Psi(x, t) \,d x \\
+                                      & = i \hbar \frac{\partial \Phi}{\partial p}.
+        \end{align*}
+\end{itemize}
+
 \end{document}
