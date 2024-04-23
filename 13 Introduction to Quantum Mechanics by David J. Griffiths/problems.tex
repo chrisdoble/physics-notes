@@ -14,6 +14,9 @@
 
 \DeclareMathOperator{\erf}{erf}
 \newcommand{\ev}[1]{\left< #1 \right>}
+\renewcommand{\Im}{\operatorname{Im}}
+\renewcommand{\Re}{\operatorname{Re}}
+\renewcommand{\vec}[1]{\boldsymbol{\mathbf{#1}}}
 
 \setlist[enumerate, 1]{label={(\alph*)}}
 \setlist[enumerate, 2]{label={(\roman*)}}
@@ -2087,5 +2090,523 @@ The eigenvalues of this matrix are $\lambda = \pm \sqrt{2} \epsilon$ and the eig
          & = \int \braket{x | n}^* \Psi(x, t) \,d x       \\
          & = \int \psi_n(x)^* \Psi(x, t) \,d x
 \end{align*}
+
+\subsection{}
+
+\begin{align*}
+  \ket{e_1}           & = 1                                                        \\
+  \braket{e_1 | e_1}  & = \int_{-1}^1 \,d x                                        \\
+                      & = 2                                                        \\
+  \ket{e_1'}          & = \frac{1}{\sqrt{2}}                                       \\
+  \ket{e_2}           & = x                                                        \\
+  \braket{e_1' | e_2} & = \int_{-1}^1 \frac{1}{\sqrt{2}} x \,d x                   \\
+                      & = \frac{1}{\sqrt{2}} \left[ \frac{1}{2} x^2 \right]_{-1}^1 \\
+                      & = 0                                                        \\
+  \braket{e_2 | e_2}  & = \int_{-1}^1 x^2 \,d x                                    \\
+                      & = \left[ \frac{1}{3} x^3 \right]_{-1}^1                    \\
+                      & = \frac{2}{3}                                              \\
+  \ket{e_2'}          & = \sqrt{\frac{3}{2}} x                                     \\
+  \ket{e_3}           & = x^2                                                      \\
+  \braket{e_1' | e_3} & = \int_{-1}^1 \frac{1}{\sqrt{2}} x^2 \,d x                 \\
+                      & = \frac{1}{\sqrt{2}} \left[ \frac{1}{3} x^3 \right]_{-1}^1 \\
+                      & = \frac{\sqrt{2}}{3}                                       \\
+  \braket{e_2' | e_3} & = \int_{-1}^1 \sqrt{\frac{3}{2}} x^3 \,d x                 \\
+                      & = 0                                                        \\
+  \ket{e_3'}          & = x^2 - \frac{\sqrt{2}}{3} \ket{e_1'}                      \\
+                      & = x^2 - \frac{1}{3}
+\end{align*}
+
+\begin{align*}
+  \braket{e_3' | e_3'} & = \int_{-1}^1 \left( x^2 - \frac{1}{3} \right)^2 \,d x                                  \\
+                       & = \int_{-1}^1 \left( x^4 - \frac{2}{3} x^2 + \frac{1}{9} \right) \,d x                  \\
+                       & = \left[ \frac{1}{5} x^5 - \frac{2}{9} x^3 + \frac{1}{9} x \right]_{-1}^1               \\
+                       & = \frac{2}{5} - \frac{4}{9} + \frac{2}{9}                                               \\
+                       & = \frac{18}{45} - \frac{20}{45} + \frac{10}{45}                                         \\
+                       & = \frac{8}{45}                                                                          \\
+  \ket{e_3''}          & = \sqrt{\frac{45}{8}} \left( x^2 - \frac{1}{3} \right)                                  \\
+                       & = \sqrt{\frac{5}{2}} \left( \frac{3}{2} x^2 - \frac{1}{2} \right)                       \\
+  \ket{e_4}            & = x^3                                                                                   \\
+  \braket{e_1' | e_4}  & = \int_{-1}^1 \frac{1}{\sqrt{2}} x^3 \,d x                                              \\
+                       & = 0                                                                                     \\
+  \braket{e_2' | e_4}  & = \int_{-1}^1 \sqrt{\frac{3}{2}} x^4 \,d x                                              \\
+                       & = \sqrt{\frac{3}{2}} \left[ \frac{1}{5} x^5 \right]                                     \\
+                       & = \frac{\sqrt{6}}{5}                                                                    \\
+  \braket{e_3'' | e_4} & = \int_{-1}^1 \sqrt{\frac{5}{2}} \left( \frac{3}{2} x^2 - \frac{1}{2} \right) x^3 \,d x \\
+                       & = \sqrt{\frac{5}{2}} \int_{-1}^1 \left( \frac{3}{2} x^5 - \frac{1}{2} x^3 \right) \,d x \\
+                       & = 0                                                                                     \\
+  \ket{e_4'}           & = \ket{e_4} - \frac{\sqrt{6}}{5} \ket{e_2'}                                             \\
+                       & = x^3 - \frac{3}{5} x
+\end{align*}
+
+\begin{align*}
+  \braket{e_4' | e_4'} & = \int_{-1}^1 \left( x^3 - \frac{3}{5} x \right)^2 \,d x                      \\
+                       & = \int_{-1}^1 \left( x^6 - \frac{6}{5} x^4 + \frac{9}{25} x^2 \right) \,d x   \\
+                       & = \left[ \frac{1}{7} x^7 - \frac{6}{25} x^5 + \frac{3}{25} x^3 \right]_{-1}^1 \\
+                       & = \frac{2}{7} - \frac{12}{25} + \frac{6}{25}                                  \\
+                       & = \frac{50}{175} - \frac{84}{175} + \frac{42}{175}                            \\
+                       & = \frac{8}{175}                                                               \\
+  \ket{e_4''}          & = \sqrt{\frac{175}{8}} \left( x^3 - \frac{3}{5} x \right)                     \\
+                       & = \sqrt{\frac{7}{2}} \left( \frac{5}{2} x^3 - \frac{3}{2} x \right)
+\end{align*}
+
+\subsection{}
+
+\begin{enumerate}
+  \item
+
+        \begin{align*}
+          \braket{\hat{Q}} & = \braket{\Psi | \hat{Q} | \Psi}           \\
+                           & = \braket{\Psi | \hat{Q}^\dagger | \Psi}^* \\
+                           & = -\braket{\Psi | \hat{Q} | \Psi}^*        \\
+                           & = -\braket{\hat{Q}}^*
+        \end{align*}
+
+  \item
+
+        \begin{align*}
+          \hat{Q} \ket{\psi}                     & = \lambda \ket{\psi}               \\
+          \braket{\psi | \hat{Q} | \psi}         & = \braket{\psi | \lambda | \psi}   \\
+                                                 & = \lambda \braket{\psi | \psi}     \\
+          \braket{\psi | \hat{Q} | \psi}^*       & = \lambda^* \braket{\psi | \psi}^* \\
+          \braket{\psi | \hat{Q}^\dagger | \psi} & = \lambda^* \braket{\psi | \psi}   \\
+          -\braket{\psi | \hat{Q} | \psi}        & = \lambda^* \braket{\psi | \psi}   \\
+          \braket{\psi | \hat{Q} | \psi}         & = -\lambda^* \braket{\psi | \psi}  \\
+          \hat{Q} \ket{\psi}                     & = -\lambda^* \ket{\psi}
+        \end{align*}
+
+  \item
+
+        \begin{align*}
+          \hat{Q} \ket{f}                  & = \lambda_1 \ket{f}           \\
+          \hat{Q} \ket{g}                  & = \lambda_2 \ket{g}           \\
+          \braket{g | \hat{Q} | f}         & = \braket{g | \lambda_1 | f}  \\
+                                           & = \lambda_1 \braket{g | f}    \\
+          \braket{f | \hat{Q}^\dagger | g} & = \lambda_1^* \braket{f | g}  \\
+          -\braket{f | \hat{Q} | g}        & = \lambda_1^* \braket{f | g}  \\
+          \braket{f | \lambda_2 | g}       & = -\lambda_1^* \braket{f | g} \\
+          \lambda_2 \braket{f | g}         & = -\lambda_1^* \braket{f | g} \\
+          \lambda_2                        & = -\lambda_1^*                \\
+          \lambda_2                        & = \lambda_1                   \\
+          \braket{f | g}                   & = 0
+        \end{align*}
+
+  \item
+
+        \begin{align*}
+          % Hermitian
+          [\hat{A}, \hat{B}]         & = \hat{A} \hat{B} - \hat{B} \hat{A}                                 \\
+          [\hat{A}, \hat{B}]^\dagger & = (\hat{A} \hat{B} - \hat{B} \hat{A})^\dagger                       \\
+                                     & = \hat{A}^\dagger \hat{B}^\dagger - \hat{B}^\dagger \hat{A}^\dagger \\
+                                     & = -(\hat{A} \hat{B} - \hat{B} \hat{A})                              \\
+                                     & = -[\hat{A}, \hat{B}]                                               \\
+          % Anti-hermitian
+          [\hat{A}, \hat{B}]^\dagger & = \hat{A}^\dagger \hat{B}^\dagger - \hat{B}^\dagger \hat{A}^\dagger \\
+                                     & = -(\hat{A} \hat{B} - \hat{B} \hat{A})                              \\
+                                     & = -[\hat{A}, \hat{B}]
+        \end{align*}
+
+  \item
+
+        \begin{align*}
+          \hat{Q} \ket{q_n} & = \lambda_n \ket{q_n}                   \\
+                            & = (x + i y) \ket{q_n}                   \\
+                            & = x \ket{q_n} + i y \ket{q_n}           \\
+                            & = \hat{X} \ket{q_n} + \hat{Y} \ket{q_n} \\
+                            & = (\hat{X} + \hat{Y}) \ket{q_n}
+        \end{align*}
+\end{enumerate}
+
+\subsection{}
+
+\begin{enumerate}
+  \item $\psi_1$
+
+  \item $b_1$ and $b_2$ with $P(b_1) = \frac{9}{25}$ and $P(b_2) = \frac{16}{25}$.
+
+  \item
+
+        \begin{align*}
+          \phi_1 & = \frac{3}{5} \psi_1 + \frac{4}{5} \psi_2                                   \\
+          \phi_2 & = \frac{4}{5} \psi_1 - \frac{3}{5} \psi_2                                   \\
+          P(a_1) & = P(b_1) \left( \frac{3}{5} \right)^2 + P(b_2) \left( \frac{4}{5} \right)^2 \\
+                 & = \left( \frac{9}{25} \right)^2 + \left( \frac{16}{25} \right)^2            \\
+                 & = \frac{337}{625}                                                           \\
+                 & \approx 53.9\%
+        \end{align*}
+\end{enumerate}
+
+\subsection{}
+
+\begin{enumerate}
+  \item
+
+        \begin{align*}
+          \Phi_n(p, t) & = \frac{1}{\sqrt{2 \pi \hbar}} \int_0^a e^{-i p x / \hbar} \sqrt{\frac{2}{a}} \sin \left( \frac{n \pi}{a} x \right) e^{-i E_n t / \hbar} \,d x \\
+                       & = \frac{1}{\sqrt{\pi \hbar a}} e^{-i E_n t / \hbar} \int_0^a e^{-i p x / \hbar} \sin \left( \frac{n \pi}{a} x \right) \,d x                    \\
+                       & = \sqrt{\frac{a \pi}{\hbar}} \frac{n e^{-i E_n t / \hbar}}{(n \pi)^2 - (a p / \hbar)^2} [1 - (-1)^n e^{-i p a / \hbar}]
+        \end{align*}
+
+  \item
+
+        \begin{align*}
+          |\Phi_n(p, t)|^2 & = \frac{a \pi}{\hbar} \frac{4 n^2}{[(n \pi)^2 - (a p / \hbar)^2]^2} \begin{cases}
+                                                                                                   \cos^2 \left( \frac{a}{2 \hbar} p \right) & n \text{ odd}  \\
+                                                                                                   \sin^2 \left( \frac{a}{2 \hbar} p \right) & n \text{ even}
+                                                                                                 \end{cases}
+        \end{align*}
+\end{enumerate}
+
+\subsection{}
+
+\begin{align*}
+  \Psi(x, 0) & = \begin{cases}
+                   \frac{1}{\sqrt{2 n \lambda}} e^{i 2 \pi x / \lambda} & -n \lambda < x < n \lambda \\
+                   0                                                    & \text{otherwise}
+                 \end{cases}                                                                                          \\
+  \Phi(p, 0) & = \int_{-\infty}^\infty \frac{1}{\sqrt{2 \pi \hbar}} e^{-i p x / \hbar} \Psi(x, 0) \,d x                                                                                          \\
+             & = \frac{1}{2 \sqrt{\pi \hbar n \lambda}} \int_{-n \lambda}^{n \lambda} e^{i (2 \pi / \lambda - p / \hbar) x} \,d x                                                                \\
+             & = \frac{1}{2 \sqrt{\pi \hbar n \lambda}} \frac{1}{i (2 \pi / \lambda - p / \hbar)} \left[ e^{i (2 \pi / \lambda - p / \hbar) x} \right]_{-n \lambda}^{n \lambda}                  \\
+             & = \frac{1}{2 \sqrt{\pi \hbar n \lambda}} \frac{1}{i (2 \pi / \lambda - p / \hbar)} e^{i (2 \pi / \lambda - p / \hbar) n \lambda} - e^{-i (2 \pi / \lambda - p / \hbar) n \lambda} \\
+             & = \frac{1}{\sqrt{\pi \hbar n \lambda}} \frac{1}{2 \pi / \lambda - p / \hbar} \sin \left[ \left( \frac{2 \pi}{\lambda} - \frac{p}{\hbar} \right) n \lambda \right]                 \\
+             & = \sqrt{\frac{\lambda \hbar}{n \pi}} \frac{1}{\lambda p - 2 \pi \hbar} \sin \left( \frac{n \lambda}{\hbar} p \right)                                                              \\
+  w_x        & = 2 n \lambda                                                                                                                                                                     \\
+  w_p        & = \frac{2 \pi \hbar}{n \lambda}
+\end{align*}
+
+As $n \rightarrow \infty$, $w_x \rightarrow \infty$ and $w_p \rightarrow 0$.
+
+\begin{align*}
+  w_x w_p & = 2 n \lambda \frac{2 \pi \hbar}{n \lambda} \\
+          & = 4 \pi \hbar                               \\
+          & \ge \frac{\hbar}{2}
+\end{align*}
+
+\subsection{}
+
+\begin{enumerate}
+  \item
+
+        \begin{align*}
+          1 & = \int_{-\infty}^\infty \left( \frac{A}{x^2 + a^2} \right)^2 \,d x \\
+            & = |A|^2 \int_{-\infty}^\infty \frac{1}{(x^2 + a^2)^2} \,d x        \\
+            & = \frac{\pi |A|^2}{2 a^3}                                          \\
+          A & = a \sqrt{\frac{2 a}{\pi}}
+        \end{align*}
+
+  \item
+
+        \begin{align*}
+          \braket{x}   & = \braket{\Psi | x | \Psi}                                                \\
+                       & = \int_{-\infty}^\infty \Psi^* x \Psi \,d x                               \\
+                       & = \frac{a^3}{\pi} \int_{-\infty}^\infty \frac{2 x}{(x^2 + a^2)^2} \,d x   \\
+          u            & = x^2 + a^2                                                               \\
+          d u          & = 2 x \,d x                                                               \\
+          \braket{x}   & = \frac{a^3}{\pi} \int_{-\infty}^\infty \frac{1}{u^2}                     \\
+                       & = \frac{a^3}{\pi} \left[ -\frac{1}{u} \right]_{-\infty}^\infty            \\
+                       & = 0                                                                       \\
+          \braket{x^2} & = \braket{\Psi | x^2 \Psi}                                                \\
+                       & = \int_{-\infty}^\infty \Psi^* x^2 \Psi \,d x                             \\
+                       & = \frac{2 a^3}{\pi} \int_{-\infty}^\infty \frac{x^2}{(x^2 + a^2)^2} \,d x \\
+                       & = a^2                                                                     \\
+          \sigma_x     & = \sqrt{\braket{x^2} - \braket{x}^2}                                      \\
+                       & = a
+        \end{align*}
+
+  \item
+
+        \begin{align*}
+          \Phi(x, 0)                                                       & = \int_{-\infty}^\infty \frac{1}{\sqrt{2 \pi \hbar}} e^{-i p x / \hbar} a \sqrt{\frac{2 a}{\pi}} \frac{1}{x^2 + a^2} \,d x \\
+                                                                           & = \frac{a \sqrt{a}}{\pi \sqrt{\hbar}} \int_{-\infty}^\infty e^{-i p x / \hbar} \frac{1}{x^2 + a^2} \,d x                   \\
+                                                                           & = \sqrt{\frac{a}{\hbar}} e^{-|p| a / \hbar}                                                                                \\
+          \frac{a}{\hbar} \int_{-\infty}^\infty e^{-2 |p| a / \hbar} \,d p & = 1
+        \end{align*}
+
+  \item
+
+        \begin{align*}
+          \braket{p}   & = \braket{\Phi | p | \Phi}                                             \\
+                       & = \int_{-\infty}^\infty \Phi^* p \Psi \,d p                            \\
+                       & = \frac{a}{\hbar} \int_{-\infty}^\infty p e^{-2 |p| a / \hbar} \,d p   \\
+                       & = 0                                                                    \\
+          \braket{p^2} & = \frac{a}{\hbar} \int_{-\infty}^\infty p^2 e^{-2 |p| a / \hbar} \,d p \\
+                       & = \frac{\hbar^2}{2 a^2}                                                \\
+          \sigma_p     & = \sqrt{\braket{p^2} - \braket{p}^2}                                   \\
+                       & = \frac{\hbar}{\sqrt{2} a}
+        \end{align*}
+
+  \item
+
+        \begin{align*}
+          \sigma_x \sigma_p & = \frac{\hbar}{\sqrt{2}} \\
+                            & \ge \frac{\hbar}{2}
+        \end{align*}
+\end{enumerate}
+
+\subsection{}
+
+\begin{align*}
+  [\hat{H}, x p]             & = x [\hat{H}, p] + [\hat{H}, x] p                                            \\
+                             & = i \hbar x \frac{d V}{d x} - \frac{i \hbar p^2}{m}                          \\
+  \frac{d}{d t} \braket{x p} & = \frac{i}{\hbar} \braket{[\hat{H}, x p]}                                    \\
+                             & = \frac{i}{\hbar} \Braket{i \hbar x \frac{d V}{d x} - \frac{i \hbar p^2}{m}} \\
+                             & = \Braket{\frac{p^2}{m}} - \Braket{x \frac{d V}{d x}}                        \\
+                             & = 2 \braket{T} - \Braket{x \frac{d V}{d x}}
+\end{align*}
+
+The left hand side is $0$ because expectation values are constant in stationary states.
+
+\begin{align*}
+  V                 & = \frac{1}{2} m \omega^2 x^2 \\
+  \frac{d V}{d x}   & = m \omega^2 x               \\
+  x \frac{d V}{d x} & = m \omega^2 x               \\
+                    & = 2 V                        \\
+  2 \braket{T}      & = \Braket{x \frac{d V}{d x}} \\
+                    & = \braket{2 V}               \\
+                    & = 2 \braket{V}               \\
+  \braket{T}        & = \braket{V}
+\end{align*}
+
+\subsection{}
+
+\begin{align*}
+  \Psi(x, 0)             & = \frac{1}{\sqrt{2}} (\psi_1 + \psi_2)                                                                                                                                              \\
+  \Psi(x, t)             & = \frac{1}{\sqrt{2}} (\psi_1 e^{-i E_1 t / \hbar} + \psi_2 e^{-i E_2 t / \hbar})                                                                                                    \\
+  0                      & = \int_{-\infty}^\infty \Psi(x, 0) \Psi(x, t) \,d x                                                                                                                                 \\
+                         & = \frac{1}{2} \int_{-\infty}^\infty (\psi_1 + \psi_2) (\psi_1 e^{-i E_1 t / \hbar} + \psi_2 e^{-i E_2 t / \hbar}) \,d x                                                             \\
+                         & = \frac{1}{2} \int_{-\infty}^\infty (\psi_1^2 e^{-i E_1 t / \hbar} + \psi_1 \psi_2 e^{-i E_2 t / \hbar} + \psi_1 \psi_2 e^{-i E_1 t / \hbar} + \psi_2^2 e^{-i E_2 t / \hbar}) \,d x \\
+                         & = \frac{1}{2} (e^{-i E_1 t / \hbar} + e^{-i E_2 t / \hbar})                                                                                                                         \\
+                         & = e^{-i E_1 t / \hbar} + e^{-i E_2 t / \hbar}                                                                                                                                       \\
+  e^{-i E_1 t / \hbar}   & = -e^{-i E_2 t / \hbar}                                                                                                                                                             \\
+                         & = e^{\pi i} e^{-i E_2 t / \hbar}                                                                                                                                                    \\
+  -\frac{i E_1 t}{\hbar} & = i \left( \pi - \frac{E_2 t}{\hbar} \right)                                                                                                                                        \\
+  -\frac{E_1 t}{\hbar}   & = \pi - \frac{E_2 t}{\hbar}                                                                                                                                                         \\
+  t                      & = \frac{\pi \hbar}{E_2 - E_1}                                                                                                                                                       \\
+  \Delta t               & = \frac{t}{\pi}                                                                                                                                                                     \\
+                         & = \frac{\hbar}{E_2 - E_1}                                                                                                                                                           \\
+  \Delta E               & = \frac{1}{2} (E_2 - E_1)                                                                                                                                                           \\
+  \Delta E \Delta t      & = \frac{\hbar}{2}
+\end{align*}
+
+\setcounter{subsection}{40}
+\subsection{}
+
+\begin{align*}
+  \Psi                         & = \frac{e^{i \theta_0}}{\sqrt{2}} \psi_0 e^{-i \omega t / 2} + \frac{e^{i \theta_1}}{\sqrt{2}} \psi_1 e^{-3 i \omega t / 2}                                                     \\
+  \braket{p}                   & = \braket{\Psi | p | \Psi}                                                                                                                                                      \\
+                               & = \frac{1}{2} \braket{\psi_0 | p | \psi_0} + \frac{1}{2} e^{i (\theta_1 - \theta_0)} e^{-i \omega t} \braket{\psi_0 | p | \psi_1}                                               \\
+                               & \qquad + \frac{1}{2} e^{i (\theta_0 - \theta_1)} e^{i \omega t} \braket{\psi_1 | p | \psi_0} + \frac{1}{2} \braket{\psi_1 | p | \psi_1}                                         \\
+  \braket{\psi_0 | p | \psi_0} & = \frac{d}{d t} \braket{\psi_0 | x | \psi_0}                                                                                                                                    \\
+                               & = 0                                                                                                                                                                             \\
+  \braket{\psi_1 | p | \psi_1} & = \frac{d}{d t} \braket{\psi_1 | x | \psi_1}                                                                                                                                    \\
+                               & = 0                                                                                                                                                                             \\
+  \braket{p}                   & = \frac{1}{2} e^{i (\theta_1 - \theta_0 - \omega t)} \braket{\psi_0 | p | \psi_1} + \frac{1}{2} e^{-i (\theta_1 - \theta_0 - \omega t)} \braket{\psi_1 | p | \psi_0}            \\
+  \braket{\psi_0 | p | \psi_1} & = -i \sqrt{\frac{\hbar m \omega}{2}}                                                                                                                                            \\
+  \braket{\psi_1 | p | \psi_0} & = i \sqrt{\frac{\hbar m \omega}{2}}                                                                                                                                             \\
+  \braket{p}                   & = -\frac{1}{2} i e^{i (\theta_1 - \theta_0 - \omega t)} \sqrt{\frac{\hbar m \omega}{2}} + \frac{1}{2} i e^{-i (\theta_1 - \theta_0 - \omega t)} \sqrt{\frac{\hbar m \omega}{2}} \\
+                               & = -\frac{1}{2} i \sqrt{\frac{\hbar m \omega}{2}} (e^{i (\theta_1 - \theta_0 - \omega t)} - e^{-i (\theta_1 - \theta_0 - \omega t)})                                             \\
+                               & = \sqrt{\frac{\hbar m \omega}{2}} \sin (\theta_1 - \theta_0 - \omega t)
+\end{align*}
+
+The largest possible value of $\braket{p}$ is $\sqrt{\hbar m \omega / 2}$. If it takes on this value at $t = 0$ then \[\Psi(x, t) = \frac{1}{\sqrt{2}} e^{-i \omega t / 2} (\psi_0 + i \psi_1 e^{-i \omega t}).\]
+
+\setcounter{subsection}{42}
+\subsection{}
+
+\begin{enumerate}
+  \item
+
+        \begin{align*}
+          |z|^2                 & = \Re(z)^2 + \Im(z)^2                                                                                                                                                 \\
+                                & = \left( \frac{z + z^*}{2} \right)^2 + \left( \frac{z - z^*}{2 i} \right)^2                                                                                           \\
+          \sigma_A^2 \sigma_B^2 & \ge \left( \frac{\braket{f | g} + \braket{g | f}}{2} \right)^2 + \left( \frac{\braket{f | g} - \braket{g | f}}{2 i} \right)^2                                         \\
+                                & = \left( \frac{\braket{\hat{A} \hat{B}} + \braket{\hat{B} \hat{A}} - 2 \braket{A} \braket{B}}{2} \right)^2 + \left( \frac{\braket{[\hat{A}, \hat{B}]}}{2 i} \right)^2 \\
+                                & = \frac{1}{4} [\braket{-i [\hat{A}, \hat{B}]}^2 + (\braket{\hat{A} \hat{B}} + \braket{\hat{B} \hat{A}} - 2 \braket{A} \braket{B})^2]                                  \\
+                                & = \frac{1}{4} (\braket{C}^2 + \braket{D}^2)
+        \end{align*}
+
+  \item
+
+        \begin{align*}
+          B                     & = A                                                   \\
+          \hat{C}               & = -i [\hat{A}, \hat{B}]                               \\
+                                & = 0                                                   \\
+          \hat{D}               & = 2 (\hat{A}^2 - \braket{A}^2)                        \\
+          \braket{D}            & = \braket{\Psi | D | \Psi}                            \\
+                                & = \braket{\Psi | 2 (\hat{A}^2 - \braket{A}^2) | \Psi} \\
+                                & = 2 (\braket{\Psi | \hat{A}^2 | \Psi} - \braket{A}^2) \\
+                                & = 2 (\braket{A^2} - \braket{A}^2)                     \\
+                                & = 2 \sigma_A^2                                        \\
+          \sigma_A^2 \sigma_B^2 & = \frac{1}{4} (\braket{C}^2 + \braket{D}^2)           \\
+          \sigma_A^4            & \ge \sigma_A^4
+        \end{align*}
+\end{enumerate}
+
+\subsection{}
+
+\begin{enumerate}
+  \item
+
+        The eigenvalues of $\vec{H}$ are $a - b$, $a + b$, and $c$ and the associated eigenvectors are $\begin{pmatrix}
+            -1 \\
+            0  \\
+            1
+          \end{pmatrix}$, $\begin{pmatrix}
+            1 \\
+            0 \\
+            1
+          \end{pmatrix}$, and $\begin{pmatrix}
+            0 \\
+            1 \\
+            0
+          \end{pmatrix}$, respectively.
+
+        \[\ket{S(t)} = \begin{pmatrix}
+            0 \\
+            1 \\
+            0
+          \end{pmatrix} e^{-i c t / \hbar}\]
+
+  \item
+
+        \begin{align*}
+          \begin{pmatrix}
+            1 \\
+            0 \\
+            0
+          \end{pmatrix} & = \frac{1}{2} \left[ \begin{pmatrix}
+                                                   1 \\
+                                                   0 \\
+                                                   1
+                                                 \end{pmatrix} - \begin{pmatrix}
+                                                                   -1 \\
+                                                                   0  \\
+                                                                   1
+                                                                 \end{pmatrix} \right]                                                     \\
+          \ket{S(t)}      & = \frac{1}{2} \left[ \begin{pmatrix}
+                                                     1 \\
+                                                     0 \\
+                                                     1
+                                                   \end{pmatrix} e^{-i (a + b) t / \hbar} - \begin{pmatrix}
+                                                                                              -1 \\
+                                                                                              0  \\
+                                                                                              1
+                                                                                            \end{pmatrix} e^{-i (a - b) t / \hbar} \right] \\
+                          & = \frac{1}{2} e^{-i a t / \hbar} \begin{pmatrix}
+                                                               e^{-i b t / \hbar} + e^{i b t / \hbar} \\
+                                                               0                                      \\
+                                                               e^{-i b t / \hbar} - e^{i b t / \hbar}
+                                                             \end{pmatrix}                                      \\
+                          & = e^{-i a t / \hbar} \begin{pmatrix}
+                                                   \cos (b t / \hbar) \\
+                                                   0                  \\
+                                                   -i \sin (b t / \hbar)
+                                                 \end{pmatrix}
+        \end{align*}
+\end{enumerate}
+
+\subsection{}
+
+\begin{align*}
+  \braket{n | \hat{x} | S(t)} & = \Braket{n | \hat{x} \sum_{n' = 0}^\infty \Ket{n'} \Bra{n'} | S(t)}                                                          \\
+                              & = \sum_{n' = 0}^\infty \braket{n | \hat{x} | n'} \braket{n' | S(t)}                                                           \\
+                              & = \sqrt{\frac{\hbar}{2 m \omega}} \sum_{n' = 0}^\infty (\sqrt{n'} \delta_{n, n' - 1} + \sqrt{n} \delta_{n', n - 1}) c_{n'}(t) \\
+                              & = \sqrt{\frac{\hbar}{2 m \omega}} [\sqrt{n + 1} c_{n + 1}(t) + \sqrt{n} c_{n - 1}(t)]
+\end{align*}
+
+\subsection{}
+
+\begin{enumerate}
+  \item
+
+        \begin{align*}
+          h_1       & = \hbar \omega                      \\
+          h_2       & = 2 \hbar \omega                    \\
+          h_3       & = 2 \hbar \omega                    \\
+          \ket{h_1} & = \begin{pmatrix}
+                          1 \\
+                          0 \\
+                          0
+                        \end{pmatrix}                    \\
+          \ket{h_2} & = \begin{pmatrix}
+                          0 \\
+                          1 \\
+                          0
+                        \end{pmatrix}                    \\
+          \ket{h_3} & = \begin{pmatrix}
+                          0 \\
+                          0 \\
+                          1
+                        \end{pmatrix}                    \\
+          a_1       & = 2 \lambda                         \\
+          a_2       & = \lambda                           \\
+          a_3       & = -\lambda                          \\
+          \ket{a_1} & = \begin{pmatrix}
+                          0 \\
+                          0 \\
+                          1
+                        \end{pmatrix}                    \\
+          \ket{a_2} & = \frac{1}{\sqrt{2}} \begin{pmatrix}
+                                             1 \\
+                                             1 \\
+                                             0
+                                           \end{pmatrix} \\
+          \ket{a_3} & = \frac{1}{\sqrt{2}} \begin{pmatrix}
+                                             -1 \\
+                                             1  \\
+                                             0
+                                           \end{pmatrix} \\
+          b_1       & = 2 \mu                             \\
+          b_2       & = \mu                               \\
+          b_3       & = -\mu                              \\
+          \ket{b_1} & = \begin{pmatrix}
+                          1 \\
+                          0 \\
+                          0
+                        \end{pmatrix}                    \\
+          \ket{b_2} & = \frac{1}{\sqrt{2}} \begin{pmatrix}
+                                             0 \\
+                                             1 \\
+                                             1
+                                           \end{pmatrix} \\
+          \ket{b_3} & = \frac{1}{\sqrt{2}} \begin{pmatrix}
+                                             0  \\
+                                             -1 \\
+                                             1
+                                           \end{pmatrix}
+        \end{align*}
+
+  \item
+
+        \begin{align*}
+          \braket{H} & = \braket{S(0) | H | S(0)}                                \\
+                     & = \begin{pmatrix}
+                           c_1^* & c_2^* & c_3^*
+                         \end{pmatrix} \hbar \omega \begin{pmatrix}
+                                                      1 & 0 & 0 \\
+                                                      0 & 2 & 0 \\
+                                                      0 & 0 & 2
+                                                    \end{pmatrix} \begin{pmatrix}
+                                                                    c_1 \\
+                                                                    c_2 \\
+                                                                    c_3
+                                                                  \end{pmatrix} \\
+                     & = \hbar \omega \begin{pmatrix}
+                                        c_1^* & c_2^* & c_3^*
+                                      \end{pmatrix} \begin{pmatrix}
+                                                      c_1   \\
+                                                      2 c_2 \\
+                                                      2 c_3
+                                                    \end{pmatrix}               \\
+                     & = \hbar \omega (|c_1|^2 + 2 |c_2|^2 + 2 |c_3|^2)          \\
+          \braket{A} & = \lambda (c_1^* c_2 + c_2^* c_1 + 2 |c_3|^2)             \\
+          \braket{B} & = \mu (2 |c_1|^2 + c_2^* c_3 + c_3^* c_2)
+        \end{align*}
+
+  \item
+
+        \[\ket{S(t)} = c_1 \ket{h_1} e^{-i \omega t} + c_2 \ket{h_2} e^{-2 i \omega t} + c_3 \ket{h_3} e^{-2 i \omega t}\]
+
+        You could measure $H$ as $\hbar \omega$ with probability $|c_1|^2$ or $2 \hbar \omega$ with probability $|c_2|^2 + |c_3|^2$.
+\end{enumerate}
 
 \end{document}
