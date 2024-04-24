@@ -2735,4 +2735,43 @@ The largest possible value of $\braket{p}$ is $\sqrt{\hbar m \omega / 2}$. If it
   \end{align*}
 \end{enumerate}
 
+\subsection{}
+
+\begin{enumerate}
+  \item 
+
+  \begin{align*}
+    \phi(r, \theta, \phi) &= A e^{-r / a} \\
+    \frac{\partial \psi}{\partial r} &= -\frac{A}{a} e^{-r / a} \\
+    \frac{\partial}{\partial r} \left( r^2 \frac{\partial \psi}{\partial r} \right) &= \frac{\partial}{\partial r} \left( -\frac{A}{a} r^2 e^{-r / a} \right) \\
+    &= -\frac{A}{a} \left( 2 r e^{-r / a} - \frac{1}{a} r^2 e^{-r / a} \right) \\
+    &= \frac{A}{a^2} r^2 \left( 1 - \frac{2 a}{r} \right) e^{-r / a} \\
+    \frac{\partial \psi}{\partial \theta} &= 0 \\
+    \frac{\partial^2 \psi}{\partial \phi^2} &= 0 \\
+    -\frac{\hbar^2}{2 m} \frac{A}{a^2} \left( 1 - \frac{2 a}{r} \right) e^{-r / a} + V(r) A e^{-r / a} &= E A e^{-r / a} \\
+    -\frac{\hbar^2}{2 m a^2} \left( 1 - \frac{2 a}{r} \right) + V(r) &= E \\
+    -\frac{\hbar^2}{2 m a^2} &= E \\
+    V(r) &= -\frac{\hbar^2}{m a r}
+  \end{align*}
+
+  \item
+
+  \begin{align*}
+    \phi(r, \theta, \phi) &= A e^{-r^2 / a^2} \\
+    \frac{\partial \psi}{\partial r} &= -\frac{2}{a^2} r A e^{-r^2 / a^2} \\
+    \frac{\partial}{\partial r} \left( r^2 \frac{\partial \psi}{\partial r} \right) &= \frac{\partial}{\partial r} \left( -\frac{2}{a^2} r^3 A e^{-r^2 / a^2} \right) \\
+    &= -\frac{2 A}{a^2} \left( 3 r^2 e^{-r^2 / a^2} - \frac{2}{a^2} r^4 e^{-r^2 / a^2} \right) \\
+    &= \frac{2 A}{a^2} r^2 \left( \frac{2}{a^2} r^2 - 3 \right) e^{-r^2 / a^2}
+  \end{align*}
+
+  \begin{align*}
+    -\frac{\hbar^2}{2 m} \frac{2 A}{a^2} \left( \frac{2}{a^2} r^2 - 3 \right) e^{-r^2 / a^2} + V(r) A e^{-r^2 / a^2} &= E A e^{-r^2 / a^2} \\
+    -\frac{\hbar^2}{2 m} \frac{2}{a^2} \left( \frac{2}{a^2} r^2 - 3 \right) + V(r) &= E \\
+    \frac{\hbar^2}{2 m} \frac{2}{a^2} 3 &= E \\
+    \frac{3 \hbar^2}{m a^2} &= E \\
+    \frac{3 \hbar^2}{m a^2} + \frac{\hbar^2}{2 m} \frac{2}{a^2} \left( \frac{2}{a^2} r^2 - 3 \right) &= V(r) \\
+    \frac{2 \hbar^2}{m a^4} r^2 &= V(r) \\
+  \end{align*}
+\end{enumerate}
+
 \end{document}
