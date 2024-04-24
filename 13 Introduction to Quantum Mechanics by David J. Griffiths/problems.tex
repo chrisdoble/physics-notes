@@ -1270,7 +1270,7 @@ As $z_0$ decreases there are fewer and fewer bound states. When $z_0 < \pi / 2$ 
           \Psi(x, 0)               & = \begin{cases}
                                          \frac{2 \sqrt{3}}{a \sqrt{a}} x       & 0 \le x \le a / 2 \\
                                          \frac{2 \sqrt{3}}{a \sqrt{a}} (a - x) & a / 2 \le x \le a
-                                       \end{cases}    \\
+\end{cases} \\
           \frac{d}{d x} \Psi(x, 0) & = \frac{2 \sqrt{3}}{a \sqrt{a}} \left[ 1 - 2 \theta \left( x - \frac{a}{2} \right) \right]
         \end{align*}
 
@@ -2262,7 +2262,7 @@ The eigenvalues of this matrix are $\lambda = \pm \sqrt{2} \epsilon$ and the eig
   \Psi(x, 0) & = \begin{cases}
                    \frac{1}{\sqrt{2 n \lambda}} e^{i 2 \pi x / \lambda} & -n \lambda < x < n \lambda \\
                    0                                                    & \text{otherwise}
-                 \end{cases}                                                                                          \\
+\end{cases}                                                                                         \\
   \Phi(p, 0) & = \int_{-\infty}^\infty \frac{1}{\sqrt{2 \pi \hbar}} e^{-i p x / \hbar} \Psi(x, 0) \,d x                                                                                          \\
              & = \frac{1}{2 \sqrt{\pi \hbar n \lambda}} \int_{-n \lambda}^{n \lambda} e^{i (2 \pi / \lambda - p / \hbar) x} \,d x                                                                \\
              & = \frac{1}{2 \sqrt{\pi \hbar n \lambda}} \frac{1}{i (2 \pi / \lambda - p / \hbar)} \left[ e^{i (2 \pi / \lambda - p / \hbar) x} \right]_{-n \lambda}^{n \lambda}                  \\
@@ -2607,6 +2607,132 @@ The largest possible value of $\braket{p}$ is $\sqrt{\hbar m \omega / 2}$. If it
         \[\ket{S(t)} = c_1 \ket{h_1} e^{-i \omega t} + c_2 \ket{h_2} e^{-2 i \omega t} + c_3 \ket{h_3} e^{-2 i \omega t}\]
 
         You could measure $H$ as $\hbar \omega$ with probability $|c_1|^2$ or $2 \hbar \omega$ with probability $|c_2|^2 + |c_3|^2$.
+\end{enumerate}
+
+\section{Quantum Mechanics in Three Dimensions}
+
+\subsection{}
+
+\begin{enumerate}
+  \item
+
+        \begin{align*}
+          [r_i, r_j] & = 0                                                                                                                   \\
+          [p_i, p_j] & = 0                                                                                                                   \\
+          [x, p_x] f & = x \left( -i \hbar \frac{\partial}{\partial x} \right) f - \left( -i \hbar \frac{\partial}{\partial x} \right) (x f) \\
+                     & = -i \hbar x \frac{\partial f}{\partial x} + i \hbar \left( f + x \frac{\partial f}{\partial x} \right)               \\
+                     & = i \hbar f                                                                                                           \\
+          [p_x, x]   & = \left( -i \hbar \frac{\partial}{\partial x} \right) (x f) - x \left( -i \hbar \frac{\partial}{\partial x} \right) f \\
+                     & = -i \hbar \left( f + x \frac{\partial f}{\partial x} \right) + i \hbar x \frac{\partial f}{\partial x}               \\
+                     & = -i \hbar f                                                                                                          \\
+          [x, p_y]   & = x \left( -i \hbar \frac{\partial}{\partial y} \right) f - \left( -i \hbar \frac{\partial}{\partial y} \right) (x f) \\
+                     & = -i \hbar x \frac{\partial f}{\partial y} + i \hbar x \frac{\partial f}{\partial y}                                  \\
+                     & = 0                                                                                                                   \\
+          [r_i, p_j] & = i \hbar \delta_{i j}                                                                                                \\
+          [p_i, r_j] & = -i \hbar \delta_{i j}
+        \end{align*}
+
+  \item
+
+        \begin{align*}
+          [\hat{H}, x] f                 & = \left( -\frac{\hbar^2}{2 m} \nabla^2 + V \right) (x f) - x \left( -\frac{\hbar^2}{2 m} \nabla^2 + V \right) f                                                                                                                                                                \\
+                                         & = -\frac{\hbar^2}{2 m} \left[ \frac{\partial}{\partial x} \left( f + x \frac{\partial f}{\partial x} \right) + \frac{\partial}{\partial y} \left( x \frac{\partial f}{\partial y} \right) + \frac{\partial}{\partial x} \left( z \frac{\partial f}{\partial z} \right) \right] \\
+                                         & \qquad + V x f + \frac{\hbar^2}{2 m} x \nabla^2 f - V x f                                                                                                                                                                                                                      \\
+                                         & = -\frac{\hbar^2}{2 m} \left( 2 \frac{\partial f}{\partial x} + x \nabla^2 f \right) + \frac{\hbar^2}{2 m} x \nabla^2 f                                                                                                                                                        \\
+                                         & = -\frac{\hbar^2}{m} \frac{\partial f}{\partial x}                                                                                                                                                                                                                             \\
+          [\hat{H}, x]                   & = -\frac{\hbar^2}{m} \frac{\partial}{\partial x}                                                                                                                                                                                                                               \\
+          [\hat{H}, \vec{r}]             & = -\frac{\hbar^2}{m} \nabla                                                                                                                                                                                                                                                    \\
+          \frac{d}{d t} \braket{\vec{r}} & = \frac{i}{\hbar} \braket{[\hat{H}, \vec{r}]}                                                                                                                                                                                                                                  \\
+                                         & = \frac{1}{m} \braket{-i \hbar \nabla}                                                                                                                                                                                                                                         \\
+                                         & = \frac{1}{m} \braket{\vec{p}}                                                                                                                                                                                                                                                 \\
+          [\hat{H}, \hat{p}_x] f         & = \left( -\frac{\hbar^2}{2 m} \nabla^2 + V \right) \left( -i \hbar \frac{\partial}{\partial x} \right) f - \left( -i \hbar \frac{\partial}{\partial x} \right) \left( -\frac{\hbar^2}{2 m} \nabla^2 + V \right) f                                                              \\
+                                         & = -i \hbar \left( -\frac{\hbar^2}{2 m} \nabla^2 + V \right) \frac{\partial f}{\partial x} + i \hbar \left( \frac{\partial}{\partial x} \right) \left( -\frac{\hbar^2}{2 m} \nabla^2 f + V f \right)                                                                            \\
+                                         & = i \frac{\hbar^3}{2 m} \nabla^2 \frac{\partial f}{\partial x} - i \hbar V \frac{\partial f}{\partial x} - i \frac{\hbar^3}{2 m} \nabla^2 \frac{\partial f}{\partial x} + i \hbar \left( \frac{\partial V}{\partial x} f + V \frac{\partial f}{\partial x} \right)             \\
+                                         & = i \hbar \frac{\partial V}{\partial x} f                                                                                                                                                                                                                                      \\
+          [\hat{H}, \hat{p}_x]           & = i \hbar \frac{\partial V}{\partial x}                                                                                                                                                                                                                                        \\
+          [\hat{H}, \vec{p}]             & = i \hbar \nabla V                                                                                                                                                                                                                                                             \\
+          \frac{d}{d t} \braket{\vec{p}} & = \frac{i}{\hbar} \braket{[\hat{H}, \vec{p}]}                                                                                                                                                                                                                                  \\
+                                         & = \braket{-\nabla V}
+        \end{align*}
+
+  \item
+
+        \begin{align*}
+          \sigma_{r_i} \sigma_{p_j} & \ge \frac{1}{2 i} \braket{[r_i, p_j]} \\
+                                    & = \frac{1}{2 i} i \hbar \delta_{i j}  \\
+                                    & = \frac{\hbar}{2} \delta_{i j}
+        \end{align*}
+\end{enumerate}
+
+\subsection{}
+
+\begin{enumerate}
+  \item
+
+        \begin{align*}
+          \psi(\vec{r})                                                                                                                                             & = X(x) Y(y) Z(z)         \\
+          -\frac{\hbar^2}{2 m} \nabla^2 \psi                                                                                                                        & = E \psi                 \\
+          -\frac{\hbar^2}{2 m} \left( \frac{\partial^2 X}{\partial x^2} Y Z + X \frac{\partial^2 Y}{\partial y^2} Z + X Y \frac{\partial^2 Z}{\partial z^2} \right) & = E X Y Z                \\
+          \frac{X''}{X} + \frac{Y''}{Y} + \frac{Z''}{Z}                                                                                                             & = -\frac{2 m}{\hbar^2} E
+        \end{align*}
+
+        The terms on the left hand side are each functions of a different variable, so they must be constant. Starting with the $X$ term:
+
+        \begin{align*}
+          \frac{X''}{X}  & = -\alpha \\
+          X'' + \alpha X & = 0
+        \end{align*}
+
+        If $\alpha < 0$
+
+        \[X = A_x e^{\sqrt{-\alpha} x} + B_x e^{-\sqrt{-\alpha x}}\]
+
+        If $\alpha = 0$
+
+        \[X = A_x x + B_x\]
+
+        If $\alpha > 0$
+
+        \[X = A_x \sin (\sqrt{\alpha} x) + B_x \cos (\sqrt{\alpha} x)\]
+
+        Boundary conditions require that $\alpha > 0$. $X(0) = 0$ so $B_x = 0$. $X(a) = 0$ so $\sqrt{\alpha} = n_x \pi / a \Rightarrow \alpha = n_x^2 \pi^2 / a^2$, \[X = A_x \sin \left( \frac{n_x \pi}{a} x \right).\]
+
+        Repeating the above for $Y$ and $Z$ finds \begin{align*}
+          Y & = A_y \sin \left( \frac{n_y \pi}{a} y \right) \\
+          Z & = A_z \sin \left( \frac{n_z \pi}{a} z \right)
+        \end{align*} so \[\psi(\vec{r}) = A_x A_y A_z \sin \left( \frac{n_x \pi}{a} x \right) \sin \left( \frac{n_y \pi}{a} y \right) \sin \left( \frac{n_z \pi}{a} z \right).\]
+
+        Assuming $A_x = A_y = A_z = A$ and normalising finds \begin{align*}
+          1   & = \int_0^a \int_0^a \int_0^a A^6 \sin^2 \left( \frac{n_x \pi}{a} x \right) \sin^2 \left( \frac{n_y \pi}{a} y \right) \sin^2 \left( \frac{n_z \pi}{a} z \right) \,d^3 \vec{r} \\
+              & = A^6 \frac{a^3}{8}                                                                                                                                                          \\
+          A^6 & = \frac{8}{a^3}                                                                                                                                                              \\
+              & = \left( \frac{2}{a} \right)^3                                                                                                                                               \\
+          A   & = \sqrt{\frac{2}{a}}
+        \end{align*} so \[\psi(\vec{r}) = \left( \frac{2}{a} \right)^{3 / 2} \sin \left( \frac{n_x \pi}{a} x \right) \sin \left( \frac{n_y \pi}{a} y \right) \sin \left( \frac{n_z \pi}{a} z \right).\]
+
+        Finally \begin{align*}
+          -\frac{2 m}{\hbar^2} E & = -\alpha - \beta - \gamma                                                                 \\
+                                 & = -\frac{\pi^2 n_x^2}{a^2} - \frac{\pi^2 n_y^2}{a^2} - \frac{\pi^2 n_z^2}{a^2}             \\
+          E                      & = \frac{\pi^2 \hbar^2}{2 m a^2} (n_x^2 + n_y^2 + n_z^2), \,n_x, n_y, n_z = 1, 2, 3, \ldots
+        \end{align*}
+
+  \item
+
+  \begin{align*}
+    E_1 &= 3 \frac{\pi^2 \hbar^2}{2 m a^2}, \,n = 1 \\
+    E_2 &= 6 \frac{\pi^2 \hbar^2}{2 m a^2}, \,n = 3 \\
+    E_3 &= 9 \frac{\pi^2 \hbar^2}{2 m a^2}, \,n = 3 \\
+    E_4 &= 11 \frac{\pi^2 \hbar^2}{2 m a^2}, \,n = 3 \\
+    E_5 &= 12 \frac{\pi^2 \hbar^2}{2 m a^2}, \,n = 1 \\
+    E_6 &= 14 \frac{\pi^2 \hbar^2}{2 m a^2}, \,n = 6 \\
+  \end{align*}
+
+  \item
+
+  \begin{align*}
+    E_{14} &= 27 \frac{\pi^2 \hbar^2}{2 m a^2} \\
+    d &= 4
+  \end{align*}
 \end{enumerate}
 
 \end{document}
