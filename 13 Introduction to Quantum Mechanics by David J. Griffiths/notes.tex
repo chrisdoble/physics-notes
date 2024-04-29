@@ -640,4 +640,37 @@
   \end{align*}
 \end{itemize}
 
+\subsubsection{The Angular Equation}
+
+\begin{itemize}
+  \item The \textbf{Legendre differential equation} is defined as \[(1 - x^2) y'' - 2 x y' + n (n + 1) y = 0.\]
+
+  \item The \textbf{Legendre polynomials} are solutions to the Legendre differential equation for non-negative integer $n$. They are given by \textbf{Rodrigues' formula} \[P_n(x) = \frac{1}{2^n n!} \frac{d^n}{d x^n} (x^2 - 1)^n.\]
+
+  \item The \textbf{Legendre functions} are solutions to the Legendre differential equation for non-integer (possibly complex) $n$.
+
+  \item The \textbf{associated Legendre differential equation} is defined as \[(1 - x^2) y'' - 2 x y' + \left[ n (n + 1) - \frac{m^2}{1 - x^2} \right] y = 0.\]
+
+  \item The \textbf{associated Legendre polynomials} are solutions to the associated Legendre differential equation for non-negative integer $n$ and $|m| \le n$. For non-negative $m$ they can be defined as \[P_n^m = (-1)^m (1 - x^2)^{m / 2} \frac{d^m}{d x^m} (P_n(x))\] and for negative $m$ they can be defined as \[P_n^{-m}(x) = (-1)^m \frac{(n - m)!}{(n + m)!} P_n^m(x).\]
+
+  \item The \textbf{associated Legendre functions} are solutions to the associated Legendre differential equation for non-integer (possible complex) $n$ and $m$.
+
+  \item The following summarises the family of Legendre polynomials/functions:
+
+  \begin{center}
+    \begin{tabular}{ |c||c|c| }
+      \hline
+      & Legendre DE & Associated Legendre DE \\
+      \hline \hline
+      Integer parameters & $P_n(x)$ & $P_n^m(x)$ \\
+      Non-integer parameters & $P_\lambda(x)$, $Q_\lambda(x)$ & $P_\lambda^\mu(x)$, $Q_\lambda^\mu(x)$ \\
+      \hline
+    \end{tabular}
+  \end{center}
+
+  \item Multiplying the $\theta$, $\phi$ term of the three-dimensional Schrödinger equation in spherical coordinates by $Y \sin^2 \theta$ we get \[\sin \theta \frac{\partial}{\partial \theta} \left( \sin \theta \frac{\partial Y}{\partial \theta} \right) + \frac{\partial^2 Y}{\partial \phi^2} = -\ell (\ell + 1) \sin^2 \theta Y.\] Assuming a solution of the form \[Y(\theta, \phi) = \Theta(\theta) \Phi(\phi)\] and applying separation of variables we find \[\Phi(\phi) = e^{i m \phi}\] for integer $m$. The $\theta$ equation is \[\sin \theta \frac{d}{d \theta} \left( \sin \theta \frac{d \Theta}{d \theta} \right) + [\ell (\ell + 1) \sin^2 \theta - m^2] \Theta = 0\] the solution to which is \[\Theta(\theta) = A P_\ell^m (\cos \theta).\]
+
+  \item The normalised angular wave functions are called \textbf{spherical harmonics} \[Y_\ell^m(\theta, \phi) = \sqrt{\frac{2 \ell + 1}{4 \pi} \frac{(\ell - m)!}{(\ell + m)!}} e^{i m \phi} P_\ell^m (\cos \theta).\]
+\end{itemize}
+
 \end{document}
