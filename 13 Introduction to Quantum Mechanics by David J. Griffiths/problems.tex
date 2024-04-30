@@ -2826,4 +2826,69 @@ It's not a valid physical solution because it blows up at $\theta = 0$ and $\the
                             & = \frac{1}{\ell!} \sqrt{\frac{(2 \ell + 1)!}{4 \pi}} \left( -\frac{1}{2} e^{i \phi} \sin \theta \right)^\ell
 \end{align*}
 
+\setcounter{subsection}{8}
+\subsection{}
+
+\begin{enumerate}
+  \item
+
+        \begin{align*}
+          n_1(x) & = -(-x) \left( \frac{1}{x} \frac{d}{d x} \right) \frac{\cos x}{x}                                                                \\
+                 & = -\frac{\sin x}{x} - \frac{\cos x}{x^2}                                                                                         \\
+          n_2(x) & = -(-x)^2 \left( \frac{1}{x} \frac{d}{d x} \right)^2 \frac{\cos x}{x}                                                            \\
+                 & = -x^2 \left( \frac{1}{x} \frac{d}{d x} \right) \left[ \frac{1}{x} \frac{d}{d x} \left( \frac{\cos x}{x} \right) \right]         \\
+                 & = -x^2 \left( \frac{1}{x} \frac{d}{d x} \right) \left[ \frac{1}{x} \left( -\frac{\sin x}{x} - \frac{\cos x}{x^2} \right) \right] \\
+                 & = x \frac{d}{d x} \left( \frac{\sin x}{x^2} + \frac{\cos x}{x^3} \right)                                                         \\
+                 & = x \left( \frac{\cos x}{x^2} - \frac{2 \sin x}{x^3} - \frac{\sin x}{x^3} - \frac{3 \cos x}{x^4} \right)                         \\
+                 & = \left( \frac{1}{x} - \frac{3}{x^3} \right) \cos x - \frac{3 \sin x}{x^2}
+        \end{align*}
+
+  \item
+
+        \begin{align*}
+          n_1(x) & \approx -\frac{x}{x} - \frac{1}{x^2}                                 \\
+                 & = -1 - \frac{1}{x^2}                                                 \\
+          n_2(x) & \approx \left( \frac{1}{x} - \frac{3}{x^3} \right) - \frac{3}{x^2} x \\
+                 & = -\frac{2}{x} - \frac{3}{x^3}
+        \end{align*}
+\end{enumerate}
+
+\subsection{}
+
+\begin{enumerate}
+  \item
+
+        \begin{align*}
+          -\frac{\hbar^2}{2 m} \frac{d^2 u}{d r^2} + \frac{\hbar^2}{2 m} \frac{2}{r^2} u & = E u                                                                    \\
+          \frac{d^2 u}{d r^2} - \frac{2}{r^2} u                                          & = -\frac{2 m E}{\hbar^2} u                                               \\
+          \frac{d^2 u}{d r^2}                                                            & = \left( \frac{2}{r^2} - k^2 \right) u                                   \\
+          j_1(k r)                                                                       & = \frac{\sin (k r)}{(k r)^2} - \frac{\cos (k r)}{k r}                    \\
+          u                                                                              & = A r j_1(k r)                                                           \\
+                                                                                         & = A r \left[ \frac{\sin (k r)}{(k r)^2} - \frac{\cos (k r)}{k r} \right]
+        \end{align*}
+
+        \begin{align*}
+          \frac{d u}{d r}     & = A \left[ \frac{\sin (k r)}{(k r)^2} - \frac{\cos (k r)}{k r} \right]                                                                        \\
+                              & \qquad + A r \left[ \frac{k \cos (k r)}{(k r)^2} - \frac{2 \sin (k r)}{k^2 r^3} + \frac{k \sin (k r)}{k r} + \frac{\cos (k r)}{k r^2} \right] \\
+                              & = \frac{A}{k r} \left[ \frac{\sin (k r)}{k r} - \cos (k r) \right]                                                                            \\
+                              & \qquad + \frac{A}{k} \left[ \frac{2 \cos (k r)}{r} - \frac{2 \sin (k r)}{k r^2} + k \sin (k r) \right]                                        \\
+          \frac{d^2 u}{d r^2} & = \frac{A (-2 + k^2 r^2) (k r \cos (k r) - \sin (k r))}{k^2 r^3}                                                                              \\
+                              & = \frac{2 - k^2 r^2}{r^2} A r \left[ \frac{\sin (k r)}{(k r)^2} - \frac{\cos (k r)}{k r} \right]                                              \\
+                              & = \left( \frac{2}{r^2} - k^2 \right) u
+        \end{align*}
+
+  \item
+
+        \begin{align*}
+          0                                  & = \frac{\sin x}{x^2} - \frac{\cos x}{x}                                              \\
+                                             & = \frac{\sin x}{x} - \cos x                                                          \\
+          \cos x                             & = \frac{\sin x}{x}                                                                   \\
+          x                                  & = \tan x                                                                             \\
+          x                                  & \approx \left( N + \frac{1}{2} \right) \pi, \,n \in \mathbb{Z}                       \\
+          k a                                & = x                                                                                  \\
+          \frac{\sqrt{2 m E_{N 1}}}{\hbar} a & \approx \left( N + \frac{1}{2} \right) \pi                                           \\
+          E_{N 1}                            & = \frac{\hbar^2 \pi^2}{2 m a^2} \left( N + \frac{1}{2} \right)^2, \,N \in \mathbb{Z}
+        \end{align*}
+\end{enumerate}
+
 \end{document}

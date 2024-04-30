@@ -673,4 +673,21 @@
   \item The normalised angular wave functions are called \textbf{spherical harmonics} \[Y_\ell^m(\theta, \phi) = \sqrt{\frac{2 \ell + 1}{4 \pi} \frac{(\ell - m)!}{(\ell + m)!}} e^{i m \phi} P_\ell^m (\cos \theta).\]
 \end{itemize}
 
+\subsubsection{The Radial Equation}
+
+\begin{itemize}
+  \item The radial part of the wave equation is \[\frac{d}{d r} \left( r^2 \frac{d R}{d r} \right) - \frac{2 m r^2}{\hbar^2} [V(r) - E] R = \ell (\ell + 1) R.\] If we substitute $u(r) = r R(r)$ then this becomes \[-\frac{\hbar^2}{2 m} \frac{d^2 u}{d r^2} + \left[ V + \frac{\hbar^2}{2 m} \frac{\ell (\ell + 1)}{r^2} \right] u = E u.\] This is identical in form to the one-dimensional Schrödinger equation but with an \textbf{effective potential} of \[V_\text{eff} = V + \frac{\hbar^2}{2 m} \frac{\ell (\ell + 1)}{r^2}.\] The extra term is known as the \textbf{centrifugal term} and it tends to force the particle outwards from the origin.
+
+  \item Differential equations of the form \[x^2 \frac{d^2 y}{d x^2} + 2 x \frac{d y}{d x} + (x^2 - n (n + 1)) y = 0\] have two linearly independent solutions: the \textbf{spherical Bessel function} of order $n$ \[j_n(x) = (-x)^n \left( \frac{1}{x} \frac{d}{d x} \right)^n \frac{\sin x}{x}\] and the \textbf{spherical Neumann function} of order $n$ \[n_n(x) = -(-x)^n \left( \frac{1}{x} \frac{d}{d x} \right)^n \frac{\cos x}{x}.\]
+  
+  \item The Bessel functions are oscillatory and have an infinite number of zeroes, but they are not located at ``nice'' points and must be computed numerically.
+
+  \item In an \textbf{infinite spherical well} with potential \[V(r) = \begin{cases}
+    0 & r \le a \\
+    \infty & r > a
+  \end{cases}\] the radial equation takes the form \[\frac{d^2 u}{d r^2} = \left[ \frac{\ell (\ell + 1)}{r^2} - k^2 \right] u\] where $k = \sqrt{2 m E} / \hbar$. This has the general solution \[u(r) = A r j_\ell(k r) + B r n_\ell(k r).\] The allowed energies are given by \[E_{N \ell} = \frac{\hbar^2}{2 m a^2} \beta_{N \ell}^2\] where $N$ is a positive integer and $\beta_{N \ell}$ is the $N$th zero of the $\ell$th spherical Bessel function.
+
+  \item The \textbf{principal quantum number} $n$ is used to order the energies of a system — $n = 1$ is the ground state, $n = 2$ is the next highest energy, any so on.
+\end{itemize}
+
 \end{document}
