@@ -2891,4 +2891,134 @@ It's not a valid physical solution because it blows up at $\theta = 0$ and $\the
         \end{align*}
 \end{enumerate}
 
+\setcounter{subsection}{11}
+\subsection{}
+
+\begin{align*}
+  R_{n \ell}(r) & = \frac{1}{r} \left( \frac{r}{a n} \right)^{\ell + 1} e^{-r / a n} v(r / a n)                                                 \\
+  R_{3 0}       & = e^{-r / 3 a} \frac{c_0}{3 a} \left[ 1 - 2 \left( \frac{r}{3 a} \right) - \frac{1}{3} \left( \frac{r}{3 a} \right)^2 \right] \\
+  R_{3 1}       & = \frac{1}{r} \left( \frac{r}{3 a} \right)^2 c_0 \left[ 1 - \frac{1}{2} \left( \frac{r}{3 a} \right) \right]                  \\
+  R_{3 2}       & = \frac{1}{r} \left( \frac{r}{3 a} \right)^3 c_0
+\end{align*}
+
+\subsection{}
+
+\begin{enumerate}
+  \item
+
+        \begin{align*}
+          R_{2 0}(r) & = \frac{c_0}{2 a} \left( 1 - \frac{r}{2 a} \right) e^{-r / 2 a}                             \\
+          1          & = \int_0^\infty |R_{2 0}|^2 r^2 \,d r                                                       \\
+                     & = \frac{c_0^2}{4 a^2} \int_0^\infty \left( 1 - \frac{r}{2 a} \right)^2 e^{-r / a} r^2 \,d r \\
+                     & = \frac{a c_0^2}{2}                                                                         \\
+          c_0        & = \sqrt{\frac{2}{a}}                                                                        \\
+          R_{2 0}(r) & = \frac{1}{\sqrt{2}} a^{-3 / 2} \left( 1 - \frac{r}{2 a} \right) e^{-r / 2 a}               \\
+          \psi_{200} & = R_{20} Y_0^0                                                                              \\
+                     & = \frac{1}{\sqrt{2 \pi a}} \frac{1}{2 a} \left( 1 - \frac{r}{2 a} \right) e^{-r / 2 a}
+        \end{align*}
+
+  \item
+
+        \begin{align*}
+          R_{2 1}(r)      & = \frac{c_0}{4 a^2} r e^{-r / 2 a}                                                     \\
+          1               & = \frac{c_0^2}{16 a^4} \int_0^\infty r^4 e^{-r / a} \,d r                              \\
+                          & = \frac{24}{16} a c_0^2                                                                \\
+          c_0             & = \sqrt{\frac{2}{3 a}}                                                                 \\
+          R_{2 1}(r)      & = \sqrt{\frac{2}{3 a}} \frac{1}{4 a^2} r e^{-r / 2 a}                                  \\
+          \psi_{21 \pm 1} & = R_{21} Y_1^1                                                                         \\
+                          & = \mp \frac{1}{\sqrt{\pi a}} \frac{1}{8 a^2} r e^{-r / 2 a} \sin \theta e^{\pm i \phi} \\
+          \psi_{210}      & = \frac{1}{\sqrt{2 \pi a}} \frac{1}{4 a^2} r e^{-r / 2 a} \cos \theta
+        \end{align*}
+\end{enumerate}
+
+\subsection{}
+
+\begin{enumerate}
+  \item
+
+        \begin{align*}
+          L_q & = \frac{e^x}{q!} \left( \frac{d}{d x} \right)^q (e^{-x} x^q)                 \\
+          L_0 & = 1                                                                          \\
+          L_1 & = e^x \frac{d}{d x} (x e^{-x})                                               \\
+              & = e^x (e^{-x} - x e^{-x})                                                    \\
+              & = 1 - x                                                                      \\
+          L_2 & = \frac{1}{2} e^x \left( \frac{d}{d x} \right)^2 (x^2 e^{-x})                \\
+              & = \frac{1}{2} e^x \frac{d}{d x} (2 x e^{-x} - x^2 e^{-x})                    \\
+              & = \frac{1}{2} e^x (2 e^{-x} - 2 x e^{-x} - 2 x e^{-x} + x^2 e^{-x})          \\
+              & = 1 - 2 x + \frac{1}{2} x^2                                                  \\
+          L_3 & = \frac{1}{6} e^x \left( \frac{d}{d x} \right)^3 (x^3 e^{-x})                \\
+              & = \frac{1}{6} e^x \left( \frac{d}{d x} \right)^2 (3 x^2 e^{-x} - x^3 e^{-x}) \\
+              & = \frac{1}{6} e^x \frac{d}{d x} (6 x e^{-x} - 6 x^2 e^{-x} + x^3 e^{-x})     \\
+              & = \frac{1}{6} e^x (6 e^{-x} - 18 x e^{-x} + 9 x^2 e^{-x} - x^3 e^{-x})       \\
+              & = 1 - 3 x + \frac{3}{2} x^2 - \frac{1}{6} x^3
+        \end{align*}
+\end{enumerate}
+
+\subsection{}
+
+\begin{enumerate}
+  \item
+
+        \begin{align*}
+          \psi_{100}   & = \frac{1}{\sqrt{\pi a^3}} e^{-r / a}                                                                              \\
+          \braket{r}   & = \int \psi_{100}^* r \psi_{100}                                                                                   \\
+                       & = \frac{1}{\pi a^3} \int_0^\infty \int_0^\pi \int_0^{2 \pi} r^3 e^{-2 r / a} \sin \theta \,d r \,d \theta \,d \phi \\
+                       & = \frac{4}{a^3} \int_0^\infty r^3 e^{-2 r / a} \,d r                                                               \\
+                       & = \frac{3}{2} a                                                                                                    \\
+          \braket{r^2} & = \frac{4}{a^3} \int_0^\infty r^4 e^{-2 r / a} \,d r                                                               \\
+                       & = 3 a^2
+        \end{align*}
+
+  \item
+
+        \begin{align*}
+          \braket{x}   & = 0   \\
+          \braket{x^2} & = a^2
+        \end{align*}
+
+  \item
+
+        \begin{align*}
+          \psi_{211}   & = R_{21} Y_1^1                                                                                                                    \\
+                       & = -\frac{1}{\sqrt{\pi a}} \frac{1}{8 a^2} r e^{-r / 2 a} \sin \theta e^{i \phi}                                                   \\
+          \braket{x^2} & = \int \psi_{211}^* x^2 \psi_{211}                                                                                                \\
+                       & = \frac{1}{64 \pi a^5} \int_0^\infty \int_0^\pi \int_0^{2 \pi} r^6 e^{-r / a} \sin^5 \theta \cos^2 \phi \,d r \,d \theta \,d \phi \\
+                       & = 12 a^2
+        \end{align*}
+\end{enumerate}
+
+\subsection{}
+
+\begin{align*}
+  P(r)         & = \int |\psi_{100}|^2 r^2 \sin \theta \,d \theta \,d \phi                      \\
+               & = \frac{4}{a^3} r^2 e^{-2 r / a}                                               \\
+  P'(r)        & = \frac{4}{a^3} \left( 2 r e^{-2 r / a} - \frac{2}{a} r^2 e^{-2 r / a} \right) \\
+               & = \frac{8}{a^3} r \left( 1 - \frac{r}{a} \right) e^{-2 r / a}                  \\
+  r_\text{max} & = a
+\end{align*}
+
+\setcounter{subsection}{17}
+\subsection{}
+
+\begin{enumerate}
+  \item
+
+        \begin{align*}
+          \Psi(\vec{r}, t) & = \frac{1}{\sqrt{2}} (\psi_{211} + \psi_{21-1}) e^{-i E_2 t / \hbar}                                                                                                                        \\
+                           & = \frac{1}{\sqrt{2}} R_{21} (Y_1^1 + Y_1^{-1}) e^{-i E_1 t / 4 \hbar}                                                                                                                       \\
+                           & = \frac{1}{4 a^2} \frac{1}{\sqrt{3 a}} r e^{-r / 2 a} \left( -\sqrt{\frac{3}{8 \pi}} \sin \theta e^{i \phi} + \sqrt{\frac{3}{8 \pi}} \sin \theta e^{-i \phi} \right) e^{-i E_1 t / 4 \hbar} \\
+                           & = -i \frac{1}{4 a^2} \frac{1}{\sqrt{2 \pi a}} r e^{-r / 2 a} \sin \theta \sin \phi \,e^{-i E_1 t / 4 \hbar}                                                                                 \\
+        \end{align*}
+
+  \item
+
+        \begin{align*}
+          \braket{V} & = \int \Psi^* \left( -\frac{e^2}{4 \pi \epsilon_0} \frac{1}{r} \right) \Psi                                                                                                                               \\
+                     & = -\frac{e^2}{4 \pi \epsilon_0} \frac{1}{16 a^4} \frac{1}{2 \pi a} \int_0^\infty \int_0^\pi \int_0^{2 \pi} r^2 e^{-r / a} \sin^2 \theta \sin^2 \phi \frac{1}{r} r^2 \sin \theta \,d r \,d \theta \,d \phi \\
+                     & = -\frac{e^2}{128 \pi^2 \epsilon_0 a^5} \int_0^\infty \int_0^\pi \int_0^{2 \pi} r^3 e^{-r / a} \sin^3 \theta \sin^2 \phi \,d r \,d \theta \,d \phi                                                        \\
+                     & = -\frac{e^2}{4 \pi \epsilon_0} \frac{1}{4 a}                                                                                                                                                             \\
+                     & = \qty{-6.8}{eV}
+        \end{align*}
+\end{enumerate}
+
 \end{document}

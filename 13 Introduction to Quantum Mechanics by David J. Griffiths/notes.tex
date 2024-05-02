@@ -5,6 +5,7 @@
 \usepackage{braket} % For bra-ket notation
 \usepackage{float} % For the [H] option on figures
 \usepackage{graphicx} % For images
+\usepackage{siunitx} % For units
 
 \graphicspath{{./images/}}
 \hypersetup{
@@ -688,6 +689,34 @@
   \end{cases}\] the radial equation takes the form \[\frac{d^2 u}{d r^2} = \left[ \frac{\ell (\ell + 1)}{r^2} - k^2 \right] u\] where $k = \sqrt{2 m E} / \hbar$. This has the general solution \[u(r) = A r j_\ell(k r) + B r n_\ell(k r).\] The allowed energies are given by \[E_{N \ell} = \frac{\hbar^2}{2 m a^2} \beta_{N \ell}^2\] where $N$ is a positive integer and $\beta_{N \ell}$ is the $N$th zero of the $\ell$th spherical Bessel function.
 
   \item The \textbf{principal quantum number} $n$ is used to order the energies of a system — $n = 1$ is the ground state, $n = 2$ is the next highest energy, any so on.
+\end{itemize}
+
+\subsection{The Hydrogen Atom}
+
+\begin{itemize}
+  \item The potential energy of the electron in a hydrogen atom is \[V(r) = -\frac{e^2}{4 \pi \epsilon_0} \frac{1}{r}\] and thus its radial equation is \[-\frac{\hbar^2}{2 m_e} \frac{d^2 u}{d r^2} + \left[ -\frac{e^2}{4 \pi \epsilon_0} \frac{1}{r} + \frac{\hbar^2}{2 m_e} \frac{\ell (\ell + 1)}{r^2} \right] u = E u.\]
+\end{itemize}
+
+\subsubsection{The Radial Wave Function}
+
+\begin{itemize}
+  \item For bound states $E < 0$ and we can introduce the constant \[\kappa = \frac{\sqrt{-2 m_e E}}{\hbar}.\] Dividing the radial equation above by $E$ and substituting $\kappa$ gives \[\frac{1}{\kappa^2} \frac{d^2 u}{d r^2} = \left[ 1 - \frac{m_e e^2}{2 \pi \epsilon_0 \hbar^2 \kappa} \frac{1}{(\kappa r)} + \frac{\ell (\ell + 1)}{(\kappa r)^2} \right] u.\] This suggests we should introduce \[\rho = \kappa r \quad \text{and} \quad \rho_0 = \frac{m_e e^2}{2 \pi \epsilon_0 \hbar^2 \kappa}\] which gives \[\frac{d^2 u}{d \rho^2} = \left[ 1 - \frac{\rho_0}{\rho} + \frac{\ell (\ell + 1)}{\rho^2} \right] u.\]
+
+  \item As $\rho \rightarrow \infty$ the constant term dominates and $u(\rho) \approx A e^{-\rho}$. As $\rho \rightarrow 0$ the centrifugal term dominates and $u(\rho) \approx C \rho^{\ell + 1}$. Using this behaviour we can propose a solution of the form \[u(\rho) = \rho^{\ell + 1} e^{-\rho} v(\rho)\] where $v(\rho)$ can be expressed in a power series in $\rho$ \[v(\rho) = \sum_{j = 0}^\infty c_j \rho^j.\] Differentiating $v(\rho)$ and substituting it into the radial equation we can find a recurrence relation for the coefficients $c_j$.
+
+  \item The coefficients $c_j$ for large $j$ determine the behaviour of $v(\rho)$ for large $\rho$ because they are associated with greater powers of $\rho$. If we assume their behaviour holds for all coefficients we find that $v(\rho)$ blows up for large $\rho$. We conclude that the series must terminate at some $j = N > 0$, i.e. $c_N = 0$.
+  
+  \item The spatial wave functions are defined as \[\psi_{n \ell m}(r, \theta, \phi) = R_{n \ell}(r) Y_\ell^m(\theta, \phi)\] where $n > 0$ is the \textbf{principal quantum number}, $\ell < n$ is the \textbf{azimuthal quantum number}, $|m| \le \ell$ is the \textbf{magnetic quantum number}, \[R_{n \ell}(r) = \frac{1}{r} \rho^{\ell + 1} e^{-\rho} v(\rho),\] and $v(\rho)$ is a polynomial of degree $n - \ell - 1$ (this is why $\ell$ must be less than $n$) whose coefficients are determined by the recurrence relation.
+  
+  \item Apart from normalisation, $v(\rho)$ can be written as \[v(\rho) = L_{n - \ell - 1}^{2 \ell + 1}(2 \rho)\] where \[L_q^p(x) = (-1)^p \left( \frac{d}{d x} \right)^p L_{p + q}(x)\] is an \textbf{associated Laguerre polynomial} and \[L_q(x) = \frac{e^x}{q!} \left( \frac{d}{d x} \right)^q (e^{-x} x^q)\] is the $q$th \textbf{Laguerre polynomial}.
+  
+  \item The allowed energies of the electron in a hydrogen atom are \[E_n = -\left[ \frac{m_e}{2 \hbar^2} \left( \frac{e^2}{4 \pi \epsilon_0} \right)^2 \right] \frac{1}{n^2} = \frac{E_1}{n^2}, \,n = 1, 2, 3, \ldots\] This is called the \textbf{Bohr formula}.
+
+  \item The \textbf{ground state} is the state of lowest energy \[E_1 = \qty{-13.6}{eV}.\]
+
+  \item For each value of $n$ there are $n - 1$ values of $\ell$ and for each value of $\ell$ there are $2 \ell + 1$ values of $m$. As the allowed energies are determined entirely by $n$ this means that the degeneracy of energy $E_n$ is \[d(n) = \sum_{\ell = 0}^{n - 1} (2 \ell + 1) = n^2.\]
+  
+  \item The normalised hydrogen wave functions are \[\psi_{n \ell m} = \sqrt{\left( \frac{2}{n a} \right)^3 \frac{(n - \ell - 1)!}{2 n (n + \ell)!}} e^{-r / n a} \left( \frac{2 r}{n a} \right)^\ell \left[ L_{n - \ell - 1}^{2 \ell + 1} (2 r / n a) \right] Y_\ell^m(\theta, \phi).\]
 \end{itemize}
 
 \end{document}
