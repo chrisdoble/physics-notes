@@ -719,4 +719,22 @@
   \item The normalised hydrogen wave functions are \[\psi_{n \ell m} = \sqrt{\left( \frac{2}{n a} \right)^3 \frac{(n - \ell - 1)!}{2 n (n + \ell)!}} e^{-r / n a} \left( \frac{2 r}{n a} \right)^\ell \left[ L_{n - \ell - 1}^{2 \ell + 1} (2 r / n a) \right] Y_\ell^m(\theta, \phi).\]
 \end{itemize}
 
+\subsubsection{The Spectrum of Hydrogen}
+
+\begin{itemize}
+  \item In principle, if you put a hydrogen atom into some stationary state $\Psi_{n \ell m}$ it should stay there forever. However, if it is pertubed (e.g. by collision with another atom, or by shining light on it), it may undergo a \textbf{transition} to another stationary state — either by absorbing energy and moving to a higher energy state or by giving off energy in the form of electromagnetic radition and moving to a lower energy state. In practice these perturbations are always present.
+
+  \item The energy of the emitted light is determined by the energy difference between the initial and final states \[E_\gamma = E_i - E_f = E_1 \left( \frac{1}{n_i^2} - \frac{1}{n_f^2} \right).\]
+
+  \item The energy of a photon is determined by its frequency as given by the Planck formula \[E_\gamma = h f\] and its wavelength is given by \[\lambda = \frac{c}{f}\] so \begin{align*}
+          \frac{1}{\lambda} & = \frac{f}{c}                                                                                                                \\
+                            & = \frac{E_\gamma}{c h}                                                                                                       \\
+                            & = \frac{E_1}{c h} \left( \frac{1}{n_i^2} - \frac{1}{n_f^2} \right)                                                           \\
+                            & = \frac{m_e}{4 \pi c \hbar^3} \left( \frac{e^2}{4 \pi \epsilon_0} \right)^2 \left( \frac{1}{n_f^2} - \frac{1}{n_i^2} \right) \\
+                            & = \mathcal{R} \left( \frac{1}{n_f^2} - \frac{1}{n_i^2} \right)
+        \end{align*} where \[\mathcal{R} = \frac{m_e}{4 \pi c \hbar^3} \left( \frac{e^2}{4 \pi \epsilon_0} \right)^2 = \qty{1.097e7}{m^{-1}}\] is known as the \textbf{Rydberg constant} and the equation above is known as the \textbf{Rydberg formula} for the spectrum of hydrogen.
+
+  \item Transitions to the ground state ($n_f = 1$) are known as the \textbf{Lyman series}, transitions to the first excited state ($n_f = 2$) are known as the \textbf{Balmer series}, and transitions to the second excited state ($n_f = 3$) are known as the \textbf{Paschen series}.
+\end{itemize}
+
 \end{document}
