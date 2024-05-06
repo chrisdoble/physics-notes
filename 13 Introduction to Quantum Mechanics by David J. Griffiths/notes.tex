@@ -737,4 +737,43 @@
   \item Transitions to the ground state ($n_f = 1$) are known as the \textbf{Lyman series}, transitions to the first excited state ($n_f = 2$) are known as the \textbf{Balmer series}, and transitions to the second excited state ($n_f = 3$) are known as the \textbf{Paschen series}.
 \end{itemize}
 
+\subsection{Angular Momentum}
+
+\begin{itemize}
+  \item The angular momentum operators are defined as \begin{align*}
+          L_x & = y p_z - z p_y              \\
+          L_y & = z p_x - x p_z \text{, and} \\
+          L_z & = x p_y - y p_x
+        \end{align*} where $p_x = -i \hbar \partial / \partial x$, etc.
+\end{itemize}
+
+\subsubsection{Eigenvalues}
+
+\begin{itemize}
+  \item The angular momentum operators don't commute \begin{align*}
+          [L_x, L_y] & = i \hbar L_z              \\
+          [L_y, L_z] & = i \hbar L_x \text{, and} \\
+          [L_z, L_x] & = i \hbar L_y.
+        \end{align*}
+
+  \item According to the generalised uncertainty principle \begin{align*}
+          \sigma_{L_x}^2 \sigma_{L_y}^2 & \ge \left( \frac{1}{2 i} \braket{i \hbar L_z} \right)^2 \\
+                                        & = \frac{\hbar^2}{4} \braket{L_z}^2                      \\
+          \sigma_{L_x} \sigma_{L_y}     & \ge \frac{\hbar}{2} |\braket{L_z}|
+        \end{align*} this means there are no states that are simultaneously eigenfunctions of $L_x$ and $L_y$ so you can't measure them at the same time.
+
+  \item On the other hand, the square of the total angular momentum \[L^2 = L_x^2 + L_y^2 + L_z^2\] does commute with each component of the angular momentum \begin{align*}
+          [L^2, L_x] & = 0              \\
+          [L^2, L_y] & = 0 \text{, and} \\
+          [L^2, L_z] & = 0
+        \end{align*} so they can be measured at the same time.
+
+  \item The eigenvalues of $L^2$ are $\hbar^2 \ell (\ell + 1)$ where $\ell$ may be an integer or half integer. The eigenvalues of $L_z$ are $m \hbar$ where $m$ goes from $-\ell$ to $\ell$ in integer steps. \begin{align*}
+          \ell & = 0, \,1 / 2, \,2, \,3 / 2, \ldots                 \\
+          m    & = -\ell, \,-\ell + 1, \,\ldots, \,\ell - 1, \,\ell
+        \end{align*}
+
+  \item This means the magnitude of the angular momentum is $\hbar \sqrt{\ell (\ell + 1)}$ and the maximum $z$ component of the angular momentum is $\hbar \ell$. Because $\sqrt{\ell (\ell + 1)} > \ell$ (except when $\ell = 0$) this means the angular momentum can never point in the $z$ direction. Another way of phrasing this is: if the angular momentum pointed in the $z$ direction we would know all three components (the other two components are $0$) and we would be in violation of the uncertainty principle because the components don't commute.
+\end{itemize}
+
 \end{document}
