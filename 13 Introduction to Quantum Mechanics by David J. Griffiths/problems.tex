@@ -3141,6 +3141,71 @@ The same argument for $\braket{f_\ell^m | L_- L_+ f_\ell^m}$ finds $A_\ell^m$.
         \end{align*}
 \end{enumerate}
 
+\setcounter{subsection}{23}
 \subsection{}
+
+\begin{enumerate}
+  \item
+
+        \begin{align*}
+          L_+ L_- f & = \hbar e^{i \phi} \left( \frac{\partial}{\partial \theta} + i \cot \theta \frac{\partial}{\partial \phi} \right) \left[ -\hbar e^{-i \phi} \left( \frac{\partial}{\partial \theta} - i \cot \theta \frac{\partial}{\partial \phi} \right) \right] f                                                  \\
+                    & = -\hbar^2 e^{i \phi} \left( \frac{\partial}{\partial \theta} + i \cot \theta \frac{\partial}{\partial \phi} \right) \left[ e^{-i \phi} \left( \frac{\partial f}{\partial \theta} - i \cot \theta \frac{\partial f}{\partial \phi} \right) \right]                                                    \\
+                    & = -\hbar^2 e^{i \phi} \left[ e^{-i \phi} \left( \frac{\partial^2 f}{\partial \theta^2} + i \csc^2 \theta \frac{\partial f}{\partial \phi} - i \cot \theta \frac{\partial^2 f}{\partial \phi \partial \theta} \right) \right.                                                                          \\
+                    & \qquad \left. + \cot \theta e^{-i \phi} \left( \frac{\partial f}{\partial \theta} - i \cot \theta \frac{\partial f}{\partial \phi} \right) + i \cot \theta e^{-i \phi} \left( \frac{\partial^2 f}{\partial \phi \partial \theta} - i \cot \theta \frac{\partial^2 f}{\partial \phi^2} \right) \right] \\
+                    & = -\hbar^2 \left( \frac{\partial^2 f}{\partial \theta^2} + i \csc^2 \theta \frac{\partial f}{\partial \phi} + \cot \theta \frac{\partial f}{\partial \theta} - i \cot^2 \theta \frac{\partial f}{\partial \phi} + \cot^2 \theta \frac{\partial^2 f}{\partial \phi^2} \right)                          \\
+                    & = -\hbar^2 \left( \frac{\partial^2 f}{\partial \theta^2} + i \frac{\partial f}{\partial \phi} + \cot \theta \frac{\partial f}{\partial \theta} + \cot^2 \theta \frac{\partial^2 f}{\partial \phi^2} \right)                                                                                           \\
+          L_+ L_-   & = -\hbar^2 \left( \frac{\partial^2}{\partial \theta^2} + \cot \theta \frac{\partial}{\partial \theta} + \cot^2 \theta \frac{\partial^2}{\partial \phi^2} + i \frac{\partial}{\partial \phi} \right)
+        \end{align*}
+
+  \item
+
+        \begin{align*}
+          L^2 & = L_+ L_- + L_z^2 - \hbar L_z                                                                                                                                                                                                                                                               \\
+              & = -\hbar^2 \left( \frac{\partial^2}{\partial \theta^2} + \cot \theta \frac{\partial}{\partial \theta} + \cot^2 \theta \frac{\partial^2}{\partial \phi^2} + i \frac{\partial}{\partial \phi} \right) - \hbar^2 \frac{\partial^2}{\partial \phi^2} + i \hbar^2 \frac{\partial}{\partial \phi} \\
+              & = -\hbar^2 \left( \frac{\partial^2}{\partial \theta^2} + \cot \theta \frac{\partial}{\partial \theta} + \cot^2 \theta \frac{\partial^2}{\partial \phi^2} + i \frac{\partial}{\partial \phi} + \frac{\partial^2}{\partial \phi^2} - i \frac{\partial}{\partial \phi} \right)                 \\
+              & = -\hbar^2 \left[ \frac{1}{\sin \theta} \frac{\partial}{\partial \theta} \left( \sin \theta \frac{\partial}{\partial \theta} \right) + \cot^2 \theta \frac{\partial^2}{\partial \phi^2} + \frac{\partial^2}{\partial \phi^2} \right]                                                        \\
+              & = -\hbar^2 \left[ \frac{1}{\sin \theta} \frac{\partial}{\partial \theta} \left( \sin \theta \frac{\partial}{\partial \theta} \right) + \frac{1}{\sin^2 \theta} \frac{\partial^2}{\partial \phi^2} \right]
+        \end{align*}
+\end{enumerate}
+
+\subsection{}
+
+\begin{enumerate}
+  \item \[L_+ Y_\ell^\ell = 0\]
+
+  \item
+
+        \begin{align*}
+          L_z Y_\ell^\ell                                                  & = \hbar \ell Y_\ell^\ell                                                                                                                         \\
+          -i \hbar \frac{\partial Y_\ell^\ell}{\partial \phi}              & = \hbar \ell Y_\ell^\ell                                                                                                                         \\
+          \frac{\partial Y_\ell^\ell}{\partial \phi}                       & = i \ell Y_\ell^\ell                                                                                                                             \\
+          Y_\ell^\ell                                                      & = e^{i \ell \phi} \Theta(\theta)                                                                                                                 \\
+          0                                                                & = L_+ Y_\ell^\ell                                                                                                                                \\
+                                                                           & = \hbar e^{i \phi} \left( \frac{\partial}{\partial \theta} + i \cot \theta \frac{\partial}{\partial \phi} \right) e^{i \ell \phi} \Theta(\theta) \\
+                                                                           & = \hbar e^{i \phi} \left[ e^{i \ell \phi} \frac{\partial \Theta}{\partial \theta} - \ell \cot \theta e^{i \ell \phi} \Theta(\theta) \right]      \\
+                                                                           & = \frac{\partial \Theta}{\partial \theta} - \ell \cot \theta \Theta(\theta)                                                                      \\
+          \frac{1}{\Theta(\theta)} \frac{\partial \Theta}{\partial \theta} & = \ell \cot \theta                                                                                                                               \\
+          \int \frac{1}{\Theta(\theta)} \,d \Theta                         & = \ell \int \frac{\cos \theta}{\sin \theta} \,d \theta                                                                                           \\
+          \ln \Theta                                                       & = \ell \ln \sin \theta + c_1                                                                                                                     \\
+                                                                           & = \ln (\sin^\ell \theta) + c_1                                                                                                                   \\
+          \ln \frac{\Theta}{\sin^\ell \theta}                              & = c_1                                                                                                                                            \\
+          \frac{\Theta}{\sin^\ell \theta}                                  & = c_2                                                                                                                                            \\
+          \Theta                                                           & = c_2 \sin^\ell \theta                                                                                                                           \\
+          Y_\ell^\ell                                                      & = c e^{i \ell \phi} \sin^\ell \theta
+        \end{align*}
+\end{enumerate}
+
+\subsection{}
+
+\begin{align*}
+  Y_2^1(\theta, \phi) & = -\sqrt{\frac{15}{8 \pi}} \sin \theta \cos \theta e^{i \phi}                                                                                                                                    \\
+                      & = -\frac{1}{2} \sqrt{\frac{15}{8 \pi}} \sin (2 \theta) e^{i \phi}                                                                                                                                \\
+  L_+ Y_2^1           & = \hbar e^{i \phi} \left( \frac{\partial}{\partial \theta} + i \cot \theta \frac{\partial}{\partial \phi} \right) \left[ -\frac{1}{2} \sqrt{\frac{15}{8 \pi}} \sin (2 \theta) e^{i \phi} \right] \\
+                      & = -\frac{1}{2} \sqrt{\frac{15}{8 \pi}} \hbar e^{i \phi} [2 \cos(2 \theta) e^{i \phi} - \cot \theta \sin (2 \theta) e^{i \phi}]                                                                   \\
+                      & = \sqrt{\frac{15}{8 \pi}} \hbar (e^{i \phi} \sin \theta)^2                                                                                                                                       \\
+                      & = \hbar \sqrt{(2 - 1) (2 + 1 + 1)} Y_2^1                                                                                                                                                         \\
+                      & = 2 \hbar Y_2^1                                                                                                                                                                                  \\
+  Y_2^1               & = \frac{1}{4} \sqrt{\frac{15}{2 \pi}} (e^{i \phi} \sin \theta)^2
+\end{align*}
 
 \end{document}

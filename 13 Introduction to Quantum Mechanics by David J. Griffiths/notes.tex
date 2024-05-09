@@ -776,4 +776,18 @@
   \item This means the magnitude of the angular momentum is $\hbar \sqrt{\ell (\ell + 1)}$ and the maximum $z$ component of the angular momentum is $\hbar \ell$. Because $\sqrt{\ell (\ell + 1)} > \ell$ (except when $\ell = 0$) this means the angular momentum can never point in the $z$ direction. Another way of phrasing this is: if the angular momentum pointed in the $z$ direction we would know all three components (the other two components are $0$) and we would be in violation of the uncertainty principle because the components don't commute.
 \end{itemize}
 
+\subsubsection{Eigenfunctions}
+
+\begin{itemize}
+  \item The cartesian components of the angular momentum operator in spherical coordinates are \begin{align*}
+          L_x & = -i \hbar \left( -\sin \phi \frac{\partial}{\partial \theta} - \cos \phi \cot \theta \frac{\partial}{\partial \phi} \right),            \\
+          L_y & = -i \hbar \left( \cos \phi \frac{\partial}{\partial \theta} - \sin \phi \cot \theta \frac{\partial}{\partial \phi} \right), \text{ and} \\
+          L_z & = -i \hbar \frac{\partial}{\partial \phi}.
+        \end{align*}
+
+  \item The squared magnitude of the angular momentum operator in spherical coordinates is \[L^2 = -\hbar^2 \left[ \frac{1}{\sin \theta} \frac{\partial}{\partial \theta} \left( \sin \theta \frac{\partial}{\partial \theta} \right) + \frac{1}{\sin^2 \theta} \frac{\partial^2}{\partial \phi^2} \right].\]
+
+  \item The eigenfunctions of the operators $H$, $L^2$, and $L_z$ are the spherical harmonics $Y_\ell^m$.
+\end{itemize}
+
 \end{document}
