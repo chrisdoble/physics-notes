@@ -17,6 +17,7 @@
 \renewcommand{\Im}{\operatorname{Im}}
 \renewcommand{\Re}{\operatorname{Re}}
 \renewcommand{\vec}[1]{\boldsymbol{\mathbf{#1}}}
+\newcommand{\uvec}[1]{\hat{\vec{#1}}}
 
 \setlist[enumerate, 1]{label={(\alph*)}}
 \setlist[enumerate, 2]{label={(\roman*)}}
@@ -3221,5 +3222,291 @@ The same argument for $\braket{f_\ell^m | L_- L_+ f_\ell^m}$ finds $A_\ell^m$.
 \end{align*}
 
 This is $100$ times the speed of light, so no it doesn't make sense.
+
+\subsection{}
+
+\begin{enumerate}
+  \item
+
+        \begin{align*}
+          [S_x, S_y] & = S_x S_y - S_y S_x              \\
+                     & = \begin{pmatrix}
+                           i \hbar^2 / 2 & 0              \\
+                           0             & -i \hbar^2 / 2
+                         \end{pmatrix} \\
+                     & = i \hbar S_z                    \\
+          [S_y, S_z] & = i \hbar S_x                    \\
+          [S_z, S_x] & = i \hbar S_y
+        \end{align*}
+
+  \item
+
+        \begin{align*}
+          \sigma_x \sigma_x & = \begin{pmatrix}
+                                  1 & 0 \\
+                                  0 & 1
+                                \end{pmatrix}              \\
+                            & = \delta_{x x}                \\
+          \delta_x \delta_y & = \begin{pmatrix}
+                                  i & 0  \\
+                                  0 & -i
+                                \end{pmatrix}              \\
+                            & = i \epsilon_{x y z} \sigma_z \\
+          \delta_x \delta_z & = \begin{pmatrix}
+                                  0 & -1 \\
+                                  1 & 0
+                                \end{pmatrix}              \\
+                            & = i \epsilon_{x z y} \sigma_y \\
+          \delta_y \delta_x & = \begin{pmatrix}
+                                  -i & 0 \\
+                                  0  & 1
+                                \end{pmatrix}              \\
+                            & = i \epsilon_{y x z} \sigma_z \\
+          \delta_y \delta_y & = \begin{pmatrix}
+                                  1 & 0 \\
+                                  0 & 1
+                                \end{pmatrix}              \\
+                            & = \delta_{y y}                \\
+          \delta_y \delta_z & = \begin{pmatrix}
+                                  0 & i \\
+                                  i & 0
+                                \end{pmatrix}              \\
+                            & = i \epsilon_{y z x} \sigma_x \\
+          \delta_z \delta_x & = \begin{pmatrix}
+                                  0  & 1 \\
+                                  -1 & 0
+                                \end{pmatrix}              \\
+                            & = i \epsilon_{z x y} \sigma_y \\
+          \delta_z \delta_y & = \begin{pmatrix}
+                                  0  & -i \\
+                                  -i & 0
+                                \end{pmatrix}              \\
+                            & = i \epsilon_{z y x} \sigma_x \\
+          \delta_z \delta_z & = \begin{pmatrix}
+                                  1 & 0 \\
+                                  0 & 1
+                                \end{pmatrix}              \\
+                            & = \delta_{z z}
+        \end{align*}
+\end{enumerate}
+
+\subsection{}
+
+\begin{enumerate}
+  \item
+
+        \begin{align*}
+          1 & = \chi^\dagger \chi                  \\
+            & = |A|^2 \begin{pmatrix}
+                        -3 i & 4
+                      \end{pmatrix} \begin{pmatrix}
+                                      3 i \\
+                                      4
+                                    \end{pmatrix} \\
+            & = 25 |A|^2                           \\
+          A & = \pm \frac{1}{5}
+        \end{align*}
+
+  \item
+
+        \begin{align*}
+          \chi                             & = \frac{1}{5} \begin{pmatrix}
+                                                             3 i \\
+                                                             4
+                                                           \end{pmatrix}                                  \\
+          % S_x
+          P \left( \frac{\hbar}{2} \right) & = \frac{1}{2} \left| \frac{1}{5} (3 i + 4) \right|^2          \\
+                                           & = \frac{1}{50} (-3 i + 4) (3 i + 4)                           \\
+                                           & = \frac{1}{2}                                                 \\
+          \braket{S_x}                     & = 0                                                           \\
+          % S_y
+          \braket{S_y}                     & = \chi^\dagger S_y \chi                                       \\
+                                           & = \frac{\hbar}{50} \begin{pmatrix}
+                                                                  -3 i & 4
+                                                                \end{pmatrix} \begin{pmatrix}
+                                                                                0 & -i \\
+                                                                                i & 0
+                                                                              \end{pmatrix} \begin{pmatrix}
+                                                                                              3 i \\
+                                                                                              4
+                                                                                            \end{pmatrix} \\
+                                           & = \frac{\hbar}{50} \begin{pmatrix}
+                                                                  -3 i & 4
+                                                                \end{pmatrix} \begin{pmatrix}
+                                                                                0  & -4 i \\
+                                                                                -3 & 0
+                                                                              \end{pmatrix}               \\
+                                           & = -\frac{12}{25} \hbar                                        \\
+          % S_z
+          \braket{S_z}                     & = \frac{\hbar}{50} \begin{pmatrix}
+                                                                  -3 i & 4
+                                                                \end{pmatrix} \begin{pmatrix}
+                                                                                1 & 0  \\
+                                                                                0 & -1
+                                                                              \end{pmatrix} \begin{pmatrix}
+                                                                                              3 i \\
+                                                                                              4
+                                                                                            \end{pmatrix} \\
+                                           & = \frac{\hbar}{50} \begin{pmatrix}
+                                                                  -3 i & 4
+                                                                \end{pmatrix} \begin{pmatrix}
+                                                                                3 i \\
+                                                                                -4
+                                                                              \end{pmatrix}               \\
+                                           & = -\frac{7}{50} \hbar
+        \end{align*}
+
+  \item
+
+        \begin{align*}
+          \braket{S_x^2} & = \frac{\hbar^2}{100} \begin{pmatrix}
+                                                   -3 i & 4
+                                                 \end{pmatrix} \begin{pmatrix}
+                                                                 1 & 0 \\
+                                                                 0 & 1
+                                                               \end{pmatrix} \begin{pmatrix}
+                                                                               3 i \\
+                                                                               4
+                                                                             \end{pmatrix} \\
+                         & = \frac{\hbar^2}{4}                                              \\
+          \sigma_{S_x}   & = \sqrt{\braket{S_x^2} - \braket{S_x}^2}                         \\
+                         & = \frac{\hbar}{2}                                                \\
+          \braket{S_y^2} & = \frac{\hbar^2}{4}                                              \\
+          \sigma_{S_y}   & = \sqrt{\frac{1}{4} \hbar^2 - \frac{144}{625} \hbar^2}           \\
+                         & = \frac{7}{50} \hbar                                             \\
+          \sigma_{S_z}   & = \frac{12}{25} \hbar
+        \end{align*}
+
+  \item
+
+        \begin{align*}
+          \sigma_{S_x} \sigma_{S_y} & = \frac{7}{100} \hbar^2            \\
+                                    & = \frac{\hbar}{2} |\braket{S_z}|   \\
+                                    & \ge \frac{\hbar}{2} |\braket{S_z}| \\
+          \sigma_{S_y} \sigma_{S_z} & = \frac{42}{625} \hbar^2           \\
+                                    & \ge \frac{\hbar}{2} |\braket{S_x}| \\
+                                    & = 0                                \\
+          \sigma_{S_z} \sigma_{S_x} & = \frac{6}{25} \hbar^2             \\
+                                    & = \frac{\hbar}{2} |\braket{S_y}|   \\
+                                    & \ge \frac{\hbar}{2} |\braket{S_z}|
+        \end{align*}
+\end{enumerate}
+
+\subsection{}
+
+\begin{align*}
+  \chi                                             & = \begin{pmatrix}
+                                                         a \\
+                                                         b
+                                                       \end{pmatrix}                      \\
+  \braket{S_x}                                     & = \frac{\hbar}{2} (a^* b + a b^*)     \\
+  \braket{S_y}                                     & = i \frac{\hbar}{2} (a b^* - a^* b)   \\
+  \braket{S_z}                                     & = \frac{\hbar}{2} (|a|^2 - |b|^2)     \\
+  \braket{S_x^2}                                   & = \frac{\hbar^2}{4} (|a|^2 + |b|^2)   \\
+  \braket{S_y^2}                                   & = \frac{\hbar^2}{4} (|a|^2 + |b|^2)   \\
+  \braket{S_z^2}                                   & = \frac{\hbar^2}{4} (|a|^2 + |b|^2)   \\
+  \braket{S^2}                                     & = 3 \frac{\hbar^2}{4} (|a|^2 + |b|^2) \\
+  \braket{S_x^2} + \braket{S_y^2} + \braket{S_z^2} & = 3 \frac{\hbar^2}{4} (|a|^2 + |b|^2) \\
+                                                   & = \braket{S^2}
+\end{align*}
+
+\subsection{}
+
+\begin{enumerate}
+  \item
+
+        \begin{align*}
+          0                               & = \begin{vmatrix}
+                                                -\lambda    & -i \hbar / 2 \\
+                                                i \hbar / 2 & -\lambda
+                                              \end{vmatrix}                     \\
+                                          & = \lambda^2 - \frac{\hbar^2}{4}                  \\
+          \lambda                         & = \pm \frac{\hbar}{2}                            \\
+          \frac{\hbar}{2} \begin{pmatrix}
+                            0 & -i \\
+                            i & 0
+                          \end{pmatrix} \begin{pmatrix}
+                                          \alpha \\
+                                          \beta
+                                        \end{pmatrix} & = \pm \frac{\hbar}{2} \begin{pmatrix}
+                                                                                \alpha \\
+                                                                                \beta
+                                                                              \end{pmatrix} \\
+          \begin{pmatrix}
+            -i \beta \\
+            i \alpha
+          \end{pmatrix}                 & = \pm \begin{pmatrix}
+                                                  \alpha \\
+                                                  \beta
+                                                \end{pmatrix}                               \\
+          \beta                           & = \pm i \alpha                                   \\
+          \chi_+^{(y)}                    & = \frac{1}{\sqrt{2}} \begin{pmatrix}
+                                                                   1 \\
+                                                                   i
+                                                                 \end{pmatrix}              \\
+          \chi_-^{(y)}                    & = \frac{1}{\sqrt{2}} \begin{pmatrix}
+                                                                   1 \\
+                                                                   -i
+                                                                 \end{pmatrix}
+        \end{align*}
+
+  \item
+
+        \begin{align*}
+          \chi & = \begin{pmatrix}
+                     a \\
+                     b
+                   \end{pmatrix}                                                                                              \\
+               & = \left( \frac{a - i b}{\sqrt{2}} \right) \chi_+^{(x)} + \left( \frac{a + i b}{\sqrt{2}} \right) \chi_-^{(y)}
+        \end{align*}
+
+        You could get $\frac{\hbar}{2}$ with probability $\frac{|a - i b|^2}{2}$ or $-\frac{\hbar}{2}$ with probability $\frac{|a + i b|^2}{2}$.
+
+        \begin{align*}
+          \frac{1}{2} |a - i b|^2 + \frac{1}{2} |a + i b|^2 & = \frac{1}{2} (a + i b) (a - i b) + \frac{1}{2} (a - i b) (a + i b) \\
+                                                            & = \frac{1}{2} (a^2 + b^2) + \frac{1}{2} (a^2 + b^2)                 \\
+                                                            & = 1
+        \end{align*}
+
+  \item $\hbar^2 / 2$ with probability $1$.
+\end{enumerate}
+
+\subsection{}
+
+\begin{align*}
+  S_r & = S \cdot \uvec{r}                                                                              \\
+      & = S_x \sin \theta \cos \phi + S_y \sin \theta \sin \phi + S_z \cos \theta                       \\
+      & = \frac{\hbar}{2} \left[ \begin{pmatrix}
+                                     0                     & \sin \theta \cos \phi \\
+                                     \sin \theta \cos \phi & 0
+                                   \end{pmatrix} + \begin{pmatrix}
+                                                     0                       & -i \sin \theta \sin \phi \\
+                                                     i \sin \theta \sin \phi & 0
+                                                   \end{pmatrix} \right.     \\
+      & \qquad \left. + \begin{pmatrix}
+                            \cos \theta & 0            \\
+                            0           & -\cos \theta
+                          \end{pmatrix} \right]                                                      \\
+      & = \frac{\hbar}{2} \begin{pmatrix}
+                            \cos \theta                           & \sin \theta (\cos \phi - i \sin \phi) \\
+                            \sin \theta (\cos \phi + i \sin \phi) & -\cos \theta
+                          \end{pmatrix} \\
+      & = \frac{\hbar}{2} \begin{pmatrix}
+                            \cos \theta            & e^{-i \phi} \sin \theta \\
+                            e^{i \phi} \sin \theta & -\cos \theta
+                          \end{pmatrix}
+\end{align*}
+
+\begin{align*}
+  \begin{vmatrix}
+    \frac{\hbar}{2} \cos \theta - \lambda  & \frac{\hbar}{2} e^{-i \phi} \sin \theta \\
+    \frac{\hbar}{2} e^{i \phi} \sin \theta & -\frac{\hbar}{2} \cos \theta - \lambda
+  \end{vmatrix} & = \left( \frac{\hbar}{2} \cos \theta - \lambda \right) \left( -\frac{\hbar}{2} \cos \theta - \lambda \right)                                                                                     \\
+                                                                                      & \qquad - \left( \frac{\hbar}{2} e^{-i \phi} \sin \theta \right) \left( \frac{\hbar}{2} e^{i \phi} \sin \theta \right)      \\
+                                                                                      & = -\frac{\hbar^2}{4} \cos^2 \theta - \lambda \frac{\hbar}{2} \cos \theta + \lambda \frac{\hbar}{2} \cos \theta + \lambda^2 \\
+                                                                                      & \qquad -\frac{\hbar^2}{4} \sin^2 \theta                                                                                    \\
+                                                                                      & = \lambda^2 - \frac{\hbar^2}{4} \\
+                                                                                      \lambda & = \pm \frac{\hbar}{2}
+\end{align*}
 
 \end{document}

@@ -808,4 +808,91 @@
   \item Every elementary particle has a specific and immutable value of $s$ called the \textbf{spin} of that species: $\pi$ mesons have spin 0, electrons have spin $1 / 2$, etc. On the other hand the orbital angular momentum quantum number $\ell$ may take on any integer value and can change when the system is perturbed.
 \end{itemize}
 
+\subsubsection{Spin 1/2}
+
+\begin{itemize}
+  \item For spin-1/2 particles, $s = \frac{1}{2}$ and $m$ may take on two values: $-\frac{1}{2}$ or $\frac{1}{2}$. This means there are two eigenstates $\ket{s m}$: $\ket{\frac{1}{2} \frac{1}{2}}$ which is called \textbf{spin up} $\uparrow$ and $\ket{\frac{1}{2} \left( -\frac{1}{2} \right)}$ which is called \textbf{spin down} $\downarrow$.
+
+  \item If we let \[\chi_+ = \begin{pmatrix}
+            1 \\
+            0
+          \end{pmatrix}\] represent spin up and \[\chi_- = \begin{pmatrix}
+            0 \\
+            1
+          \end{pmatrix}\] represent spin down the general state of a spin-1/2 particle can be expressed as \[\chi = \begin{pmatrix}
+            a \\
+            b
+          \end{pmatrix} = a \chi_+ + b \chi_-.\]
+
+  \item With respect to this basis operators become 2x2 matrices: \begin{align*}
+          S^2 & = \frac{3}{4} \hbar^2 \begin{pmatrix}
+                                        1 & 0 \\
+                                        0 & 1
+                                      \end{pmatrix},         \\
+          S_x & = \frac{\hbar}{2} \begin{pmatrix}
+                                    0 & 1 \\
+                                    1 & 0 \\
+                                  \end{pmatrix},             \\
+          S_y & = \frac{\hbar}{2} \begin{pmatrix}
+                                    0 & -i \\
+                                    i & 0
+                                  \end{pmatrix}, \text{ and} \\
+          S_z & = \frac{\hbar}{2} \begin{pmatrix}
+                                    1 & 0  \\
+                                    0 & -1
+                                  \end{pmatrix}.
+        \end{align*}
+
+  \item Since $S_x$, $S_y$, and $S_z$ all carry a factor of $\hbar / 2$ it is tidier to write $\vec{S} = \frac{\hbar}{2} \vec{\sigma}$ where \begin{align*}
+          \sigma_x & = \begin{pmatrix}
+                         0 & 1 \\
+                         1 & 0
+                       \end{pmatrix},             \\
+          \sigma_y & = \begin{pmatrix}
+                         0 & -i \\
+                         i & 0
+                       \end{pmatrix}, \text{ and} \\
+          \sigma_z & = \begin{pmatrix}
+                         1 & 0  \\
+                         0 & -1
+                       \end{pmatrix}.
+        \end{align*} These are called the \textbf{Pauli spin matrices}.
+
+  \item If you measure $S_z$ on a particle in a general state \[\chi = \begin{pmatrix}
+            a \\
+            b
+          \end{pmatrix}\] there is a $|a|^2$ probability of getting $\hbar / 2$ and a $|b|^2$ probability of getting $-\hbar / 2$. Since these are the only possibilities $|a|^2 + |b|^2 = 1$.
+
+  \item According to the generalised statistical interpretation of quantum mechanics, if you measure $S_x$ on a particle in a general state $\chi$ the possible results are the eigenvalues of the $S_x$ matrix. Solving the characteristic equation finds \[\begin{vmatrix}
+            -\lambda  & \hbar / 2 \\
+            \hbar / 2 & -\lambda
+          \end{vmatrix} = 0 \Rightarrow \lambda^2 = \left( \frac{\hbar}{2} \right)^2 \Rightarrow \lambda = \pm \frac{\hbar}{2}\] as expected. The eigenvectors can be determined as usual \[\frac{\hbar}{2} \begin{pmatrix}
+            0 & 1 \\
+            1 & 0
+          \end{pmatrix} \begin{pmatrix}
+            \alpha \\
+            \beta
+          \end{pmatrix} = \pm \frac{\hbar}{2} \begin{pmatrix}
+            \alpha \\
+            \beta
+          \end{pmatrix} \Rightarrow \begin{pmatrix}
+            \beta \\
+            \alpha
+          \end{pmatrix} = \pm \begin{pmatrix}
+            \alpha \\
+            \beta
+          \end{pmatrix}\] so $\beta = \pm \alpha$ and the normalised eigenvectors are \[\chi_+^{(x)} = \begin{pmatrix}
+            1 / \sqrt{2} \\
+            1 / \sqrt{2}
+          \end{pmatrix}\] with eigenvalue $\hbar / 2$ and \[\chi_-^{(x)} = \begin{pmatrix}
+            1 / \sqrt{2} \\
+            -1 / \sqrt{2}
+          \end{pmatrix}\] with eigenvalue $-\hbar / 2$.
+
+  \item As the eigenvectors of a Hermitian matrix are linearly independent, any state \[\chi = \begin{pmatrix}
+            a \\
+            b
+          \end{pmatrix}\] can be expressed as a linear combination of these eigenvectors \[\chi = \left( \frac{a + b}{\sqrt{2}} \right) \chi_+^{(x)} + \left( \frac{a - b}{\sqrt{2}} \right) \chi_-^{(x)}.\] Thus if you measure $S_x$ the probability of getting $\hbar / 2$ is $(1 / 2) |a + b|^2$ and the probability of getting $-\hbar / 2$ is $(1 / 2) |a - b|^2$.
+\end{itemize}
+
 \end{document}
