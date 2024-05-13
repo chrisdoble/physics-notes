@@ -895,4 +895,21 @@
           \end{pmatrix}\] can be expressed as a linear combination of these eigenvectors \[\chi = \left( \frac{a + b}{\sqrt{2}} \right) \chi_+^{(x)} + \left( \frac{a - b}{\sqrt{2}} \right) \chi_-^{(x)}.\] Thus if you measure $S_x$ the probability of getting $\hbar / 2$ is $(1 / 2) |a + b|^2$ and the probability of getting $-\hbar / 2$ is $(1 / 2) |a - b|^2$.
 \end{itemize}
 
+\subsubsection{Electron in a Magnetic Field}
+
+\begin{itemize}
+  \item A spinning charged particle constitutes a magnetic dipole. Its magnetic dipole moment is proportional to its spin angular momentum \[\vec{\mu} = \gamma \vec{S}\] where $\gamma$ is called the \textbf{gyromagnetic ratio}.
+
+  \item When a magnetic dipole is placed in a magnetic field $\vec{B}$ it experiences a torque $\vec{\mu} \times \vec{B}$ which tends to align it parallel to the field. The energy associated with this torque is \[H = -\vec{\mu} \cdot \vec{B}\] so the Hamiltonian matrix for a spinning charged particle at rest is \[H = -\gamma \vec{B} \cdot \vec{S}\] where \begin{align*}
+          \vec{B} \cdot \vec{S} & = \begin{pmatrix}
+                                      B_x & B_y & B_z
+                                    \end{pmatrix} \cdot \begin{pmatrix}
+                                                          S_x \\
+                                                          S_y \\
+                                                          S_z
+                                                        \end{pmatrix}                           \\
+                                & = \frac{\hbar}{2} (B_x \sigma_x + B_y \sigma_y + B_z \sigma_z)
+        \end{align*} is a $2 \times 2$ matrix.
+\end{itemize}
+
 \end{document}

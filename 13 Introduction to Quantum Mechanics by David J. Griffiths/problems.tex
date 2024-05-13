@@ -3509,4 +3509,97 @@ This is $100$ times the speed of light, so no it doesn't make sense.
                                                                                       \lambda & = \pm \frac{\hbar}{2}
 \end{align*}
 
+\setcounter{subsection}{34}
+\subsection{}
+
+\begin{enumerate}
+  \item
+
+        \begin{align*}
+          \chi(t)               & = \begin{pmatrix}
+                                      \cos (\alpha / 2) e^{i \gamma B_0 t / 2} \\
+                                      \sin (\alpha / 2) e^{-i \gamma B_0 t / 2}
+                                    \end{pmatrix}                                                           \\
+          \frac{1}{2} |a + b|^2 & = \frac{1}{2} [\cos (\alpha / 2) e^{-i \gamma B_0 t / 2} + \sin (\alpha / 2) e^{i \gamma B_0 t / 2}] \\
+                                & \qquad [\cos (\alpha / 2) e^{i \gamma B_0 t / 2} + \sin (\alpha / 2) e^{-i \gamma B_0 t / 2}]        \\
+                                & = \frac{1}{2} [\cos^2 (\alpha / 2) + \cos (\alpha / 2) \sin (\alpha / 2) e^{-i \gamma B_0 t}         \\
+                                & \qquad + \cos (\alpha / 2) \sin (\alpha / 2) e^{i \gamma B_0 t} + \sin^2 (\alpha / 2)]               \\
+                                & = \frac{1}{2} [1 + \sin \alpha \cos (\gamma B_0 t)]
+        \end{align*}
+
+  \item
+
+        \begin{align*}
+          \frac{1}{2} |a - i b|^2 & = \frac{1}{2} [\cos (\alpha / 2) e^{-i \gamma B_0 t / 2} + i \sin (\alpha / 2) e^{i \gamma B_0 t / 2}] \\
+                                  & \qquad [\cos (\alpha / 2) e^{i \gamma B_0 t / 2} - i \sin (\alpha / 2) e^{-i \gamma B_0 t / 2}]        \\
+                                  & = \frac{1}{2} [\cos^2 (\alpha / 2) - i \cos (\alpha / 2) \sin (\alpha / 2) e^{-i \gamma B_0 t}         \\
+                                  & \qquad + i \cos (\alpha / 2) \sin (\alpha / 2) e^{i \gamma B_0 t} + \sin^2 (\alpha / 2)]               \\
+                                  & = \frac{1}{2} [1 - \sin \alpha \sin (\gamma B_0 t)]
+        \end{align*}
+
+  \item \[|a|^2 = \cos^2 \frac{\alpha}{2}\]
+\end{enumerate}
+
+\subsection{}
+
+\begin{enumerate}
+  \item
+
+        \begin{align*}
+          \vec{B} & = B_0 \cos (\omega t) \hat{k}                                \\
+          H       & = -\gamma \vec{B} \cdot \vec{S}                              \\
+                  & = -\gamma B_0 \cos (\omega t) S_z                            \\
+                  & = -\frac{\gamma B_0 \hbar}{2} \cos (\omega t) \begin{pmatrix}
+                                                                    1 & 0  \\
+                                                                    0 & -1
+                                                                  \end{pmatrix}
+        \end{align*}
+
+  \item
+
+        \begin{align*}
+          i \hbar \frac{\partial \chi}{\partial t} & = H \chi                                                                \\
+          i \hbar \begin{pmatrix}
+                    a'(t) \\
+                    b'(t)
+                  \end{pmatrix}                  & = -\frac{\gamma B_0 \hbar}{2} \cos (\omega t) \begin{pmatrix}
+                                                                                                   a(t) \\
+                                                                                                   -b(t)
+                                                                                                 \end{pmatrix}              \\
+          i \hbar a'(t)                            & = -\frac{\gamma B_0 \hbar}{2} \cos (\omega t) a(t)                      \\
+          \frac{1}{a(t)} a'(t)                     & = i \frac{\gamma B_0}{2} \cos (\omega t)                                \\
+          \ln [a(t)]                               & = i \frac{\gamma B_0}{2 \omega} \sin (\omega t) + c_1                   \\
+          a(t)                                     & = A e^{i \gamma B_0 \sin (\omega t) / 2 \omega}                         \\
+          i \hbar b'(t)                            & = \frac{\gamma B_0 \hbar}{2} \cos (\omega t) b(t)                       \\
+          \frac{1}{b(t)} b'(t)                     & = -i \frac{\gamma B_0}{2} \cos (\omega t)                               \\
+          \ln [b(t)]                               & = -i \frac{\gamma B_0}{2 \omega} \sin (\omega t) + c_2                  \\
+          b(t)                                     & = B e^{-i \gamma B_0 \sin (\omega t) / 2 \omega}                        \\
+          \chi                                     & = \begin{pmatrix}
+                                                         A e^{i \gamma B_0 \sin (\omega t) / 2 \omega} \\
+                                                         B e^{-i \gamma B_0 \sin (\omega t) / 2 \omega}
+                                                       \end{pmatrix}                  \\
+          % At t = 0
+          1                                        & = \frac{1}{2} |A + B|^2                                                 \\
+                                                   & = \frac{1}{2} (A^* + B^*) (A + B)                                       \\
+                                                   & = \frac{1}{2} (|A|^2 + A^* B + B^* A + |B|^2)                           \\
+          0                                        & = \frac{1}{2} |A - B|^2                                                 \\
+                                                   & = \frac{1}{2} (A^* - B^*) (A - B)                                       \\
+                                                   & = \frac{1}{2} (|A|^2 - A^* B - B^* A + |B|^2)                           \\
+          \chi                                     & = \frac{1}{\sqrt{2}} \begin{pmatrix}
+                                                                            e^{i \gamma B_0 \sin (\omega t) / 2 \omega} \\
+                                                                            e^{-i \gamma B_0 \sin (\omega t) / 2 \omega}
+                                                                          \end{pmatrix}
+        \end{align*}
+
+  \item
+
+        \begin{align*}
+          \frac{A - B}{\sqrt{2}} & = \frac{1}{2} [e^{i \gamma B_0 \sin (\omega t) / 2 \omega} - e^{-i \gamma B_0 \sin (\omega t) / 2 \omega}] \\
+                                 & = i \sin \left[ \frac{\gamma B_0}{2 \omega} \sin (\omega t) \right]                                        \\
+          \frac{1}{2} |A - B|^2  & = \sin^2 \left[ \frac{\gamma B_0}{2 \omega} \sin (\omega t) \right]
+        \end{align*}
+
+  \item \[|B_0| = \frac{\omega \pi}{\gamma}\]
+\end{enumerate}
+
 \end{document}
