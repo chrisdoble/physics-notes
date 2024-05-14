@@ -912,4 +912,22 @@
         \end{align*} is a $2 \times 2$ matrix.
 \end{itemize}
 
+\subsubsection{Addition of Angular Momenta}
+
+\begin{itemize}
+  \item If you have two particles with spins $s_1$ and $s_2$, the first is in the state $\ket{s_1 m_1}$, and the second is in the state $\ket{s_2 m_2}$, the composite state can be denoted $\ket{s_1 s_2 m_1 m_2}$.
+
+  \item The $z$ component of the angular momentum, $m$, of the composite state is \begin{align*}
+          S_z \ket{s_1 s_2 m_1 m_2} & = S_z^{(1)} \ket{s_1 s_2 m_1 m_2} + S_z^{(2)} \ket{s_1 s_2 m_1 m_2} \\
+                                    & = \hbar (m_1 + m_2) \ket{s_1 s_2 m_1 m_2}                           \\
+                                    & = \hbar m \ket{s_1 s_2 m_1 m_2}
+        \end{align*} where $m = m_1 + m_2$.
+
+  \item If you have two spin-1/2 particles, each can be spin up or down giving four possible states: $\ket{\uparrow \uparrow}$, $\ket{\uparrow \downarrow}$, $\ket{\downarrow \uparrow}$, and $\ket{\downarrow \downarrow}$. The $m$ value for each of these states is the sum of the $m$ values of each particle, giving $1$, $0$, $0$, and $-1$, respectively. In a quantum system we expect the $m$ value to range from $-s$ to $+s$ in integer increments. This suggests that for this system $s = 1$ but we have two states where $m = 0$. If we apply the lowering operator to $\ket{\uparrow \uparrow}$ we get $\hbar (\ket{\uparrow \downarrow} + \ket{\downarrow \uparrow})$. Due to the nature of the lowering operator we know that this state has $s = 1$ and $m = 0$ so the states $\ket{\uparrow \uparrow}$, $\frac{1}{\sqrt{2}} (\ket{\uparrow \downarrow} + \ket{\downarrow \uparrow})$, and $\ket{\downarrow \downarrow}$ form a \textbf{triplet} combination for which $s = 1$. We have one remaining state for which $m = 0$. As $m$ ranges from $-s$ to $+s$ this suggests that we need to find a linear combination of the basis states for which $s = 0$ — this turns out to be $\frac{1}{\sqrt{2}} (\ket{\uparrow \downarrow} - \ket{\downarrow \uparrow})$ and is called a \textbf{singlet state}. If we apply the $S^2$ operator to the triplet states we get $1 (1 + 1) \hbar^2 = 2 \hbar^2$ and if we apply it to the singlet state we get $0 (0 + 1) \hbar^2 = 0$ as expected.
+
+  \item In general, if you combine spin $s_1$ with spin $s_2$ the resulting system can have spins $s_1 + s_2$, $s_1 + s_2 - 1$, $s_1 + s_2 - 2$, $\ldots$, $|s_1 - s_2|$. The greatest total spin occurs when the particles spins are parallel then lowers in integer decrements as one of the particles moves through its possible spin states until the lowest total spin occurs when they're antiparallel.
+
+  \item The state of a composite system $\ket{s m}$ will be a linear combination of the basis states for that system. For the two spin-1/2 particle system above this is most obvious for the singlet state and the $m = 0$ triplet state. In general, \[\ket{s m} = \sum_{m_1 + m_2 = m} C_{m_1 m_2 m}^{s_1 s_2 s} \ket{s_1 s_2 m_1 m_2}\] where $C_{m_1 m_2 m}^{s_1 s_2 s}$ are called the \textbf{Clebsch-Gordan coefficients} and the only states that contribute are those for which $m_1 + m_2 = m$.
+\end{itemize}
+
 \end{document}

@@ -3602,4 +3602,66 @@ This is $100$ times the speed of light, so no it doesn't make sense.
   \item \[|B_0| = \frac{\omega \pi}{\gamma}\]
 \end{enumerate}
 
+\subsection{}
+
+\begin{enumerate}
+  \item
+
+        \begin{align*}
+          S_- \ket{1 0} & = S_- \left[ \frac{1}{\sqrt{2}} (\ket{\uparrow \downarrow} + \ket{\downarrow \uparrow}) \right]                                                                                                              \\
+                        & = \frac{1}{\sqrt{2}} [(S_-^{(1)} \ket{\uparrow}) \ket{\downarrow} + \ket{\uparrow} (S_-^{(2)} \ket{\downarrow}) + (S_-^{(1)} \ket{\downarrow}) \ket{\uparrow} + \ket{\downarrow} (S_-^{(2)} \ket{\uparrow})] \\
+                        & = \frac{1}{\sqrt{2}} [\hbar \ket{\downarrow \downarrow} + \hbar \ket{\downarrow \downarrow}]                                                                                                                 \\
+                        & = \sqrt{2} \hbar \ket{1 \,{-1}}
+        \end{align*}
+
+  \item
+
+        \begin{align*}
+          S_+ \ket{0 0} & = S_+ \left[ \frac{1}{\sqrt{2}} (\ket{\uparrow \downarrow} - \ket{\downarrow \uparrow}) \right]                                                                                                              \\
+                        & = \frac{1}{\sqrt{2}} [(S_+^{(1)} \ket{\uparrow}) \ket{\downarrow} + \ket{\uparrow} (S_+^{(2)} \ket{\downarrow}) - (S_+^{(1)} \ket{\downarrow}) \ket{\uparrow} - \ket{\downarrow} (S_+^{(2)} \ket{\uparrow})] \\
+                        & = \frac{1}{\sqrt{2}} (\hbar \ket{\uparrow \uparrow} - \hbar \ket{\uparrow \uparrow})                                                                                                                         \\
+                        & = 0                                                                                                                                                                                                          \\
+          S_- \ket{0 0} & = S_- \left[ \frac{1}{\sqrt{2}} (\ket{\uparrow \downarrow} - \ket{\downarrow \uparrow}) \right]                                                                                                              \\
+                        & = \frac{1}{\sqrt{2}} [(S_-^{(1)} \ket{\uparrow}) \ket{\downarrow} + \ket{\uparrow} (S_-^{(2)} \ket{\downarrow}) - (S_-^{(1)} \ket{\downarrow}) \ket{\uparrow} - \ket{\downarrow} (S_-^{(2)} \ket{\uparrow})] \\
+                        & = \frac{1}{\sqrt{2}} (\hbar \ket{\downarrow \downarrow} - \hbar \ket{\downarrow \downarrow})                                                                                                                 \\
+                        & = 0
+        \end{align*}
+
+  \item
+
+        \begin{align*}
+          S^{(1)} \cdot S^{(2)} \ket{\uparrow \uparrow}     & = (S_x^{(1)} \ket{\uparrow}) (S_x^{(2)} \ket{\uparrow}) + (S_y^{(1)} \ket{\uparrow}) (S_y^{(2)} \ket{\uparrow})                                                                                         \\
+                                                            & \qquad + (S_z^{(1)} \ket{\uparrow}) (S_z^{(2)} \ket{\uparrow})                                                                                                                                          \\
+                                                            & = \left( \frac{\hbar}{2} \ket{\downarrow} \right) \left( \frac{\hbar}{2} \ket{\downarrow} \right) + \left( \frac{i \hbar}{2} \ket{\downarrow} \right) \left( \frac{i \hbar}{2} \ket{\downarrow} \right) \\
+                                                            & \qquad + \left( \frac{\hbar}{2} \ket{\uparrow} \right) \left( \frac{\hbar}{2} \ket{\uparrow} \right)                                                                                                    \\
+                                                            & = \frac{\hbar^2}{4} \ket{\downarrow \downarrow} - \frac{\hbar^2}{4} \ket{\downarrow \downarrow} + \frac{\hbar^2}{4} \ket{\uparrow \uparrow}                                                             \\
+          S^2 \ket{\uparrow \uparrow}                       & = \left( \frac{3 \hbar^2}{4} + \frac{3 \hbar^2}{4} + 2 \frac{\hbar^2}{4} \right) \ket{\uparrow \uparrow}                                                                                                \\
+                                                            & = 2 \hbar^2 \ket{\uparrow \uparrow}                                                                                                                                                                     \\
+          S^{(1)} \cdot S^{(2)} \ket{\downarrow \downarrow} & = (S_x^{(1)} \ket{\downarrow}) (S_x^{(2)} \ket{\downarrow}) + (S_y^{(1)} \ket{\downarrow}) (S_y^{(2)} \ket{\downarrow})                                                                                 \\
+                                                            & \qquad + (S_z^{(1)} \ket{\downarrow}) (S_z^{(2)} \ket{\downarrow})                                                                                                                                      \\
+                                                            & = \left( \frac{\hbar}{2} \ket{\uparrow} \right) \left( \frac{\hbar}{2} \ket{\uparrow} \right) + \left( -\frac{i \hbar}{2} \ket{\uparrow} \right) \left( -\frac{i \hbar}{2} \ket{\uparrow} \right)       \\
+                                                            & \qquad \left( -\frac{\hbar}{2} \ket{\downarrow} \right) \left( -\frac{\hbar}{2} \ket{\downarrow} \right)                                                                                                \\
+                                                            & = \frac{\hbar^2}{4} \ket{\uparrow \uparrow} - \frac{\hbar^2}{4} \ket{\uparrow \uparrow} + \frac{\hbar^2}{4} \ket{\downarrow \downarrow}                                                                 \\
+          S^2 \ket{\downarrow \downarrow}                   & = \left( \frac{3 \hbar^2}{4} + \frac{3 \hbar^2}{4} + 2 \frac{\hbar^2}{4} \right) \ket{\downarrow \downarrow}                                                                                            \\
+                                                            & = 2 \hbar^2 \ket{\downarrow \downarrow}
+        \end{align*}
+\end{enumerate}
+
+\subsection{}
+
+\begin{enumerate}
+  \item $3 / 2, 1 / 2$
+
+  \item $0, 1$
+\end{enumerate}
+
+\setcounter{subsection}{39}
+\subsection{}
+
+\begin{enumerate}
+  \item \[\ket{3 1} = \frac{1}{\sqrt{15}} \ket{2 2} \ket{1 -1} + \sqrt{\frac{8}{15}} \ket{2 1} \ket{1 0} + \sqrt{\frac{6}{15}} \ket{2 0} \ket{1 1}\]
+
+        $2 \hbar$ with probability $1 / 15$, $\hbar$ with probability $8 / 15$, and $0$ with probability $6 / 15$.
+\end{enumerate}
+
 \end{document}
