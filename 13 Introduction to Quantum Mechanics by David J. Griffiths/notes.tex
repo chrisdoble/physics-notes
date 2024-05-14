@@ -930,4 +930,12 @@
   \item The state of a composite system $\ket{s m}$ will be a linear combination of the basis states for that system. For the two spin-1/2 particle system above this is most obvious for the singlet state and the $m = 0$ triplet state. In general, \[\ket{s m} = \sum_{m_1 + m_2 = m} C_{m_1 m_2 m}^{s_1 s_2 s} \ket{s_1 s_2 m_1 m_2}\] where $C_{m_1 m_2 m}^{s_1 s_2 s}$ are called the \textbf{Clebsch-Gordan coefficients} and the only states that contribute are those for which $m_1 + m_2 = m$.
 \end{itemize}
 
+\subsection{Electromagnetic Interactions}
+
+\subsubsection{Minimal Coupling}
+
+\begin{itemize}
+  \item The Hamiltonian for a particle of charge $q$ and momentum $\vec{p}$ in the presence of electromagnetic fields is \[H = \frac{1}{2 m} (\vec{p} - q \vec{A})^2 + q \varphi\] where $\vec{A}$ is the vector potential and $\varphi$ is the scalar potential: \[\vec{E} = -\nabla \varphi - \frac{\partial \vec{A}}{\partial t}, \ \vec{B} = \nabla \times \vec{A}.\] Making the substitution $\vec{p} \rightarrow -i \hbar \nabla$ we obtain the Hamiltonian operator \[\hat{H} = \frac{1}{2 m} (-i \hbar \nabla - q \vec{A})^2 + q \varphi\] and the Schrödinger equation becomes \[i \hbar \frac{\partial \Phi}{\partial t} = \left[ \frac{1}{2 m} (-i \hbar \nabla - q \vec{A})^2 + q \varphi \right] \Psi.\] This is the quantum implementation of the Lorentz force law; it is sometimes called the \textbf{minimal coupling rule}.
+\end{itemize}
+
 \end{document}
