@@ -1271,7 +1271,7 @@ As $z_0$ decreases there are fewer and fewer bound states. When $z_0 < \pi / 2$ 
           \Psi(x, 0)               & = \begin{cases}
                                          \frac{2 \sqrt{3}}{a \sqrt{a}} x       & 0 \le x \le a / 2 \\
                                          \frac{2 \sqrt{3}}{a \sqrt{a}} (a - x) & a / 2 \le x \le a
-\end{cases} \\
+                                       \end{cases} \\
           \frac{d}{d x} \Psi(x, 0) & = \frac{2 \sqrt{3}}{a \sqrt{a}} \left[ 1 - 2 \theta \left( x - \frac{a}{2} \right) \right]
         \end{align*}
 
@@ -2263,7 +2263,7 @@ The eigenvalues of this matrix are $\lambda = \pm \sqrt{2} \epsilon$ and the eig
   \Psi(x, 0) & = \begin{cases}
                    \frac{1}{\sqrt{2 n \lambda}} e^{i 2 \pi x / \lambda} & -n \lambda < x < n \lambda \\
                    0                                                    & \text{otherwise}
-\end{cases}                                                                                         \\
+                 \end{cases}                                                                                         \\
   \Phi(p, 0) & = \int_{-\infty}^\infty \frac{1}{\sqrt{2 \pi \hbar}} e^{-i p x / \hbar} \Psi(x, 0) \,d x                                                                                          \\
              & = \frac{1}{2 \sqrt{\pi \hbar n \lambda}} \int_{-n \lambda}^{n \lambda} e^{i (2 \pi / \lambda - p / \hbar) x} \,d x                                                                \\
              & = \frac{1}{2 \sqrt{\pi \hbar n \lambda}} \frac{1}{i (2 \pi / \lambda - p / \hbar)} \left[ e^{i (2 \pi / \lambda - p / \hbar) x} \right]_{-n \lambda}^{n \lambda}                  \\
@@ -2719,60 +2719,60 @@ The largest possible value of $\braket{p}$ is $\sqrt{\hbar m \omega / 2}$. If it
 
   \item
 
-  \begin{align*}
-    E_1 &= 3 \frac{\pi^2 \hbar^2}{2 m a^2}, \,n = 1 \\
-    E_2 &= 6 \frac{\pi^2 \hbar^2}{2 m a^2}, \,n = 3 \\
-    E_3 &= 9 \frac{\pi^2 \hbar^2}{2 m a^2}, \,n = 3 \\
-    E_4 &= 11 \frac{\pi^2 \hbar^2}{2 m a^2}, \,n = 3 \\
-    E_5 &= 12 \frac{\pi^2 \hbar^2}{2 m a^2}, \,n = 1 \\
-    E_6 &= 14 \frac{\pi^2 \hbar^2}{2 m a^2}, \,n = 6 \\
-  \end{align*}
+        \begin{align*}
+          E_1 & = 3 \frac{\pi^2 \hbar^2}{2 m a^2}, \,n = 1  \\
+          E_2 & = 6 \frac{\pi^2 \hbar^2}{2 m a^2}, \,n = 3  \\
+          E_3 & = 9 \frac{\pi^2 \hbar^2}{2 m a^2}, \,n = 3  \\
+          E_4 & = 11 \frac{\pi^2 \hbar^2}{2 m a^2}, \,n = 3 \\
+          E_5 & = 12 \frac{\pi^2 \hbar^2}{2 m a^2}, \,n = 1 \\
+          E_6 & = 14 \frac{\pi^2 \hbar^2}{2 m a^2}, \,n = 6 \\
+        \end{align*}
 
   \item
 
-  \begin{align*}
-    E_{14} &= 27 \frac{\pi^2 \hbar^2}{2 m a^2} \\
-    d &= 4
-  \end{align*}
+        \begin{align*}
+          E_{14} & = 27 \frac{\pi^2 \hbar^2}{2 m a^2} \\
+          d      & = 4
+        \end{align*}
 \end{enumerate}
 
 \subsection{}
 
 \begin{enumerate}
-  \item 
+  \item
 
-  \begin{align*}
-    \phi(r, \theta, \phi) &= A e^{-r / a} \\
-    \frac{\partial \psi}{\partial r} &= -\frac{A}{a} e^{-r / a} \\
-    \frac{\partial}{\partial r} \left( r^2 \frac{\partial \psi}{\partial r} \right) &= \frac{\partial}{\partial r} \left( -\frac{A}{a} r^2 e^{-r / a} \right) \\
-    &= -\frac{A}{a} \left( 2 r e^{-r / a} - \frac{1}{a} r^2 e^{-r / a} \right) \\
-    &= \frac{A}{a^2} r^2 \left( 1 - \frac{2 a}{r} \right) e^{-r / a} \\
-    \frac{\partial \psi}{\partial \theta} &= 0 \\
-    \frac{\partial^2 \psi}{\partial \phi^2} &= 0 \\
-    -\frac{\hbar^2}{2 m} \frac{A}{a^2} \left( 1 - \frac{2 a}{r} \right) e^{-r / a} + V(r) A e^{-r / a} &= E A e^{-r / a} \\
-    -\frac{\hbar^2}{2 m a^2} \left( 1 - \frac{2 a}{r} \right) + V(r) &= E \\
-    -\frac{\hbar^2}{2 m a^2} &= E \\
-    V(r) &= -\frac{\hbar^2}{m a r}
-  \end{align*}
+        \begin{align*}
+          \phi(r, \theta, \phi)                                                                              & = A e^{-r / a}                                                            \\
+          \frac{\partial \psi}{\partial r}                                                                   & = -\frac{A}{a} e^{-r / a}                                                 \\
+          \frac{\partial}{\partial r} \left( r^2 \frac{\partial \psi}{\partial r} \right)                    & = \frac{\partial}{\partial r} \left( -\frac{A}{a} r^2 e^{-r / a} \right)  \\
+                                                                                                             & = -\frac{A}{a} \left( 2 r e^{-r / a} - \frac{1}{a} r^2 e^{-r / a} \right) \\
+                                                                                                             & = \frac{A}{a^2} r^2 \left( 1 - \frac{2 a}{r} \right) e^{-r / a}           \\
+          \frac{\partial \psi}{\partial \theta}                                                              & = 0                                                                       \\
+          \frac{\partial^2 \psi}{\partial \phi^2}                                                            & = 0                                                                       \\
+          -\frac{\hbar^2}{2 m} \frac{A}{a^2} \left( 1 - \frac{2 a}{r} \right) e^{-r / a} + V(r) A e^{-r / a} & = E A e^{-r / a}                                                          \\
+          -\frac{\hbar^2}{2 m a^2} \left( 1 - \frac{2 a}{r} \right) + V(r)                                   & = E                                                                       \\
+          -\frac{\hbar^2}{2 m a^2}                                                                           & = E                                                                       \\
+          V(r)                                                                                               & = -\frac{\hbar^2}{m a r}
+        \end{align*}
 
   \item
 
-  \begin{align*}
-    \phi(r, \theta, \phi) &= A e^{-r^2 / a^2} \\
-    \frac{\partial \psi}{\partial r} &= -\frac{2}{a^2} r A e^{-r^2 / a^2} \\
-    \frac{\partial}{\partial r} \left( r^2 \frac{\partial \psi}{\partial r} \right) &= \frac{\partial}{\partial r} \left( -\frac{2}{a^2} r^3 A e^{-r^2 / a^2} \right) \\
-    &= -\frac{2 A}{a^2} \left( 3 r^2 e^{-r^2 / a^2} - \frac{2}{a^2} r^4 e^{-r^2 / a^2} \right) \\
-    &= \frac{2 A}{a^2} r^2 \left( \frac{2}{a^2} r^2 - 3 \right) e^{-r^2 / a^2}
-  \end{align*}
+        \begin{align*}
+          \phi(r, \theta, \phi)                                                           & = A e^{-r^2 / a^2}                                                                        \\
+          \frac{\partial \psi}{\partial r}                                                & = -\frac{2}{a^2} r A e^{-r^2 / a^2}                                                       \\
+          \frac{\partial}{\partial r} \left( r^2 \frac{\partial \psi}{\partial r} \right) & = \frac{\partial}{\partial r} \left( -\frac{2}{a^2} r^3 A e^{-r^2 / a^2} \right)          \\
+                                                                                          & = -\frac{2 A}{a^2} \left( 3 r^2 e^{-r^2 / a^2} - \frac{2}{a^2} r^4 e^{-r^2 / a^2} \right) \\
+                                                                                          & = \frac{2 A}{a^2} r^2 \left( \frac{2}{a^2} r^2 - 3 \right) e^{-r^2 / a^2}
+        \end{align*}
 
-  \begin{align*}
-    -\frac{\hbar^2}{2 m} \frac{2 A}{a^2} \left( \frac{2}{a^2} r^2 - 3 \right) e^{-r^2 / a^2} + V(r) A e^{-r^2 / a^2} &= E A e^{-r^2 / a^2} \\
-    -\frac{\hbar^2}{2 m} \frac{2}{a^2} \left( \frac{2}{a^2} r^2 - 3 \right) + V(r) &= E \\
-    \frac{\hbar^2}{2 m} \frac{2}{a^2} 3 &= E \\
-    \frac{3 \hbar^2}{m a^2} &= E \\
-    \frac{3 \hbar^2}{m a^2} + \frac{\hbar^2}{2 m} \frac{2}{a^2} \left( \frac{2}{a^2} r^2 - 3 \right) &= V(r) \\
-    \frac{2 \hbar^2}{m a^4} r^2 &= V(r) \\
-  \end{align*}
+        \begin{align*}
+          -\frac{\hbar^2}{2 m} \frac{2 A}{a^2} \left( \frac{2}{a^2} r^2 - 3 \right) e^{-r^2 / a^2} + V(r) A e^{-r^2 / a^2} & = E A e^{-r^2 / a^2} \\
+          -\frac{\hbar^2}{2 m} \frac{2}{a^2} \left( \frac{2}{a^2} r^2 - 3 \right) + V(r)                                   & = E                  \\
+          \frac{\hbar^2}{2 m} \frac{2}{a^2} 3                                                                              & = E                  \\
+          \frac{3 \hbar^2}{m a^2}                                                                                          & = E                  \\
+          \frac{3 \hbar^2}{m a^2} + \frac{\hbar^2}{2 m} \frac{2}{a^2} \left( \frac{2}{a^2} r^2 - 3 \right)                 & = V(r)               \\
+          \frac{2 \hbar^2}{m a^4} r^2                                                                                      & = V(r)               \\
+        \end{align*}
 \end{enumerate}
 
 \subsection{}
@@ -2823,7 +2823,7 @@ It's not a valid physical solution because it blows up at $\theta = 0$ and $\the
                             & = (-1)^\ell (1 - x^2)^{\ell / 2} \left( \frac{d}{d x} \right)^\ell \left[ \frac{1}{2^\ell \ell!} \left( \frac{d}{d x} \right)^\ell (x^2 - 1)^\ell  \right] \\
                             & = (-1)^\ell \frac{1}{2^\ell \ell!} (1 - x^2)^{\ell / 2} \left( \frac{d}{d x} \right)^{2 \ell} (x^2 - 1)^\ell                                               \\
                             & = (-1)^\ell \frac{(2 \ell)!}{2^\ell \ell!} (1 - x^2)^{\ell / 2}                                                                                            \\
-  Y_\ell^\ell(\theta, \phi) & = \sqrt{\frac{2 \ell + 1}{4 \pi (2 \ell)!}} e^{i \ell \phi} (-1)^\ell \frac{(2 \ell)!}{2^\ell \ell!} (1 - \cos^2 \theta)^{\ell / 2}                                  \\
+  Y_\ell^\ell(\theta, \phi) & = \sqrt{\frac{2 \ell + 1}{4 \pi (2 \ell)!}} e^{i \ell \phi} (-1)^\ell \frac{(2 \ell)!}{2^\ell \ell!} (1 - \cos^2 \theta)^{\ell / 2}                        \\
                             & = \frac{1}{\ell!} \sqrt{\frac{(2 \ell + 1)!}{4 \pi}} \left( -\frac{1}{2} e^{i \phi} \sin \theta \right)^\ell
 \end{align*}
 
@@ -3505,8 +3505,8 @@ This is $100$ times the speed of light, so no it doesn't make sense.
                                                                                       & \qquad - \left( \frac{\hbar}{2} e^{-i \phi} \sin \theta \right) \left( \frac{\hbar}{2} e^{i \phi} \sin \theta \right)      \\
                                                                                       & = -\frac{\hbar^2}{4} \cos^2 \theta - \lambda \frac{\hbar}{2} \cos \theta + \lambda \frac{\hbar}{2} \cos \theta + \lambda^2 \\
                                                                                       & \qquad -\frac{\hbar^2}{4} \sin^2 \theta                                                                                    \\
-                                                                                      & = \lambda^2 - \frac{\hbar^2}{4} \\
-                                                                                      \lambda & = \pm \frac{\hbar}{2}
+                                                                                      & = \lambda^2 - \frac{\hbar^2}{4}                                                                                            \\
+  \lambda                                                                             & = \pm \frac{\hbar}{2}
 \end{align*}
 
 \setcounter{subsection}{34}
@@ -3558,33 +3558,33 @@ This is $100$ times the speed of light, so no it doesn't make sense.
   \item
 
         \begin{align*}
-          i \hbar \frac{\partial \chi}{\partial t} & = H \chi                                                                \\
+          i \hbar \frac{\partial \chi}{\partial t} & = H \chi                                                                  \\
           i \hbar \begin{pmatrix}
                     a'(t) \\
                     b'(t)
                   \end{pmatrix}                  & = -\frac{\gamma B_0 \hbar}{2} \cos (\omega t) \begin{pmatrix}
                                                                                                    a(t) \\
                                                                                                    -b(t)
-                                                                                                 \end{pmatrix}              \\
-          i \hbar a'(t)                            & = -\frac{\gamma B_0 \hbar}{2} \cos (\omega t) a(t)                      \\
-          \frac{1}{a(t)} a'(t)                     & = i \frac{\gamma B_0}{2} \cos (\omega t)                                \\
-          \ln [a(t)]                               & = i \frac{\gamma B_0}{2 \omega} \sin (\omega t) + c_1                   \\
-          a(t)                                     & = A e^{i \gamma B_0 \sin (\omega t) / 2 \omega}                         \\
-          i \hbar b'(t)                            & = \frac{\gamma B_0 \hbar}{2} \cos (\omega t) b(t)                       \\
-          \frac{1}{b(t)} b'(t)                     & = -i \frac{\gamma B_0}{2} \cos (\omega t)                               \\
-          \ln [b(t)]                               & = -i \frac{\gamma B_0}{2 \omega} \sin (\omega t) + c_2                  \\
-          b(t)                                     & = B e^{-i \gamma B_0 \sin (\omega t) / 2 \omega}                        \\
+                                                                                                 \end{pmatrix}                \\
+          i \hbar a'(t)                            & = -\frac{\gamma B_0 \hbar}{2} \cos (\omega t) a(t)                        \\
+          \frac{1}{a(t)} a'(t)                     & = i \frac{\gamma B_0}{2} \cos (\omega t)                                  \\
+          \ln [a(t)]                               & = i \frac{\gamma B_0}{2 \omega} \sin (\omega t) + c_1                     \\
+          a(t)                                     & = A e^{i \gamma B_0 \sin (\omega t) / 2 \omega}                           \\
+          i \hbar b'(t)                            & = \frac{\gamma B_0 \hbar}{2} \cos (\omega t) b(t)                         \\
+          \frac{1}{b(t)} b'(t)                     & = -i \frac{\gamma B_0}{2} \cos (\omega t)                                 \\
+          \ln [b(t)]                               & = -i \frac{\gamma B_0}{2 \omega} \sin (\omega t) + c_2                    \\
+          b(t)                                     & = B e^{-i \gamma B_0 \sin (\omega t) / 2 \omega}                          \\
           \chi                                     & = \begin{pmatrix}
                                                          A e^{i \gamma B_0 \sin (\omega t) / 2 \omega} \\
                                                          B e^{-i \gamma B_0 \sin (\omega t) / 2 \omega}
                                                        \end{pmatrix}                  \\
           % At t = 0
-          1                                        & = \frac{1}{2} |A + B|^2                                                 \\
-                                                   & = \frac{1}{2} (A^* + B^*) (A + B)                                       \\
-                                                   & = \frac{1}{2} (|A|^2 + A^* B + B^* A + |B|^2)                           \\
-          0                                        & = \frac{1}{2} |A - B|^2                                                 \\
-                                                   & = \frac{1}{2} (A^* - B^*) (A - B)                                       \\
-                                                   & = \frac{1}{2} (|A|^2 - A^* B - B^* A + |B|^2)                           \\
+          1                                        & = \frac{1}{2} |A + B|^2                                                   \\
+                                                   & = \frac{1}{2} (A^* + B^*) (A + B)                                         \\
+                                                   & = \frac{1}{2} (|A|^2 + A^* B + B^* A + |B|^2)                             \\
+          0                                        & = \frac{1}{2} |A - B|^2                                                   \\
+                                                   & = \frac{1}{2} (A^* - B^*) (A - B)                                         \\
+                                                   & = \frac{1}{2} (|A|^2 - A^* B - B^* A + |B|^2)                             \\
           \chi                                     & = \frac{1}{\sqrt{2}} \begin{pmatrix}
                                                                             e^{i \gamma B_0 \sin (\omega t) / 2 \omega} \\
                                                                             e^{-i \gamma B_0 \sin (\omega t) / 2 \omega}
@@ -3662,6 +3662,406 @@ This is $100$ times the speed of light, so no it doesn't make sense.
   \item \[\ket{3 1} = \frac{1}{\sqrt{15}} \ket{2 2} \ket{1 -1} + \sqrt{\frac{8}{15}} \ket{2 1} \ket{1 0} + \sqrt{\frac{6}{15}} \ket{2 0} \ket{1 1}\]
 
         $2 \hbar$ with probability $1 / 15$, $\hbar$ with probability $8 / 15$, and $0$ with probability $6 / 15$.
+\end{enumerate}
+
+\setcounter{subsection}{45}
+\subsection{}
+
+\begin{enumerate}
+  \item
+
+        \begin{align*}
+          V(r)                                                                                                                         & = \frac{1}{2} m \omega^2 r^2                                \\
+                                                                                                                                       & = \frac{1}{2} m \omega^2 (x^2 + y^2 + z^2)                  \\
+          \psi                                                                                                                         & = X Y Z                                                     \\
+          -\frac{\hbar^2}{2 m} \nabla^2 \psi + V \psi                                                                                  & = E \psi                                                    \\
+          -\frac{\hbar^2}{2 m} \left( \frac{X''}{X} + \frac{Y''}{Y} + \frac{Z''}{Z} \right) + \frac{1}{2} m \omega^2 (x^2 + y^2 + z^2) & = E                                                         \\
+          -\frac{\hbar^2}{2 m} \frac{X''}{X} + \frac{1}{2} m \omega^2 x^2                                                              & = c_1                                                       \\
+          -\frac{\hbar^2}{2 m} X'' + \frac{1}{2} m \omega^2 x^2 X                                                                      & = c_1 X                                                     \\
+          c_1                                                                                                                          & = E_{x_n}                                                   \\
+                                                                                                                                       & = \left( n_x + \frac{1}{2} \right) \hbar \omega             \\
+          \frac{\hbar^2}{2 m} \left( \frac{Y''}{Y} + \frac{Z''}{Z} \right) - \frac{1}{2} m \omega^2 (y^2 + z^2) + E                    & = c_1                                                       \\
+          \frac{\hbar^2}{2 m} \frac{Y''}{Y} - \frac{1}{2} m \omega^2 y^2 + E                                                           & = c_2                                                       \\
+          -\frac{\hbar^2}{2 m} Y'' + \frac{1}{2} m \omega^2 y^2 Y                                                                      & = (E - c_2) Y                                               \\
+          E - c_2                                                                                                                      & = \left( n_y + \frac{1}{2} \right) \hbar \omega             \\
+          c_1 - \frac{\hbar^2}{2 m} \frac{Z''}{Z} + \frac{1}{2} m \omega^2 z^2                                                         & = c_2                                                       \\
+          -\frac{\hbar^2}{2 m} Z'' + \frac{1}{2} m \omega^2 z^2 Z                                                                      & = (c_2 - c_1) Z                                             \\
+          c_2 - c_1                                                                                                                    & = \left( n_z + \frac{1}{2} \right) \hbar \omega             \\
+          c_2                                                                                                                          & = (n_x + n_z + 1) \hbar \omega                              \\
+          E                                                                                                                            & = \left( n_x + n_y + n_z + \frac{3}{2} \right) \hbar \omega \\
+                                                                                                                                       & = \left( n + \frac{3}{2} \right) \hbar \omega
+        \end{align*}
+\end{enumerate}
+
+\setcounter{subsection}{47}
+\subsection{}
+
+\begin{enumerate}
+  \setcounter{enumi}{1}
+  \item
+
+        \begin{align*}
+          V            & = -\frac{1}{4 \pi \epsilon_0} \frac{e^2}{r}           \\
+          \nabla V     & = \frac{\partial V}{\partial r} \uvec{r}              \\
+                       & = \frac{1}{4 \pi \epsilon_0} \frac{e^2}{r^2} \uvec{r} \\
+          2 \braket{T} & = \braket{\vec{r} \cdot \nabla V}                     \\
+                       & = \Braket{\frac{1}{4 \pi \epsilon_0} \frac{e^2}{r}}   \\
+                       & = -\braket{V}                                         \\
+          E_n          & = \braket{T} + \braket{V}                             \\
+                       & = \braket{T} - 2 \braket{T}                           \\
+                       & = -\braket{T}                                         \\
+          \braket{T}   & = -E_n                                                \\
+          \braket{V}   & = 2 E_n
+        \end{align*}
+
+  \item
+
+        \begin{align*}
+          V            & = \frac{1}{2} m \omega^2 r^2 \\
+          \nabla V     & = m \omega^2 r \,\uvec{r}    \\
+          2 \braket{T} & = \braket{m \omega^2 r^2}    \\
+                       & = 2 \braket{V}               \\
+          \braket{T}   & = \braket{V}                 \\
+          E_n          & = \braket{T} + \braket{V}    \\
+                       & = 2 \braket{T}               \\
+          \braket{T}   & = \frac{E_n}{2}              \\
+          \braket{V}   & = \frac{E_n}{2}
+        \end{align*}
+\end{enumerate}
+
+\setcounter{subsection}{51}
+\subsection{}
+
+\begin{enumerate}
+  \item
+
+        \begin{align*}
+          \psi_{3 2 1} & = \frac{1}{9 a} \frac{1}{\sqrt{30 a}} e^{-r / 3 a} \frac{4 r^2}{9 a^2} L_0^5 \left( \frac{2 r}{3 a} \right) Y_2^1 (\theta, \phi) \\
+                       & = -\frac{1}{\sqrt{\pi a}} \frac{r^2}{81 a^3} e^{-r / 3 a} \cos \theta \sin \theta e^{i \phi}
+        \end{align*}
+
+  \item
+
+        \begin{align*}
+          \int |\psi_{3 2 1}|^2 & = \frac{1}{81^2 \pi a^7} \int_0^\infty \int_0^\pi \int_0^{2 \pi} r^6 e^{-2 r / 3 a} \cos^2 \theta \sin^3 \theta \,d r \,d \theta \,d \phi \\
+                                & = \frac{2}{81^2 a^7} \int_0^\infty \int_0^\pi r^6 e^{-2 r / 3 a} \cos^2 \theta \sin^3 \theta \,d r \,d \theta                             \\
+                                & = \frac{8}{15 \cdot 81^2 a^7} \int_0^\infty r^6 e^{-2 r / 3 a} \,d r                                                                      \\
+                                & = 1
+        \end{align*}
+
+  \item
+
+        \begin{align*}
+          \braket{r^s} & = \int \psi_{3 2 1}^* r^s \psi_{3 2 1}                              \\
+                       & = \frac{8}{98415 a^7} \int_0^\infty r^s r^6 e^{-2 r / 3 a} \,d r    \\
+                       & = \frac{8}{98415 a^7} (s + 6)! \left( \frac{3 a}{2} \right)^{s + 7} \\
+                       & = \frac{1}{720} (s + 6!) \left( \frac{3 a}{2} \right)^s             \\
+                       & = \frac{(s + 6)!}{6!} \left( \frac{3 a}{2} \right)^s
+        \end{align*}
+
+        Finite for $s > -7$
+\end{enumerate}
+
+\subsection{}
+
+\begin{enumerate}
+  \item \[\psi_{4 3 3} = -\frac{1}{\sqrt{\pi a}} \frac{1}{6144 a^4} e^{-r / 4 a} r^3 \sin^3 \theta e^{3 i \phi}\]
+
+  \item
+
+        \begin{align*}
+          \braket{r} & = \frac{1}{6144^2 \pi a^9} \int_0^\infty \int_0^\pi \int_0^{2 \pi} r^9 e^{-r / 2 a} \sin^7 \theta \,d r \,d \theta \,d \phi \\
+                     & = \frac{2}{6144^2 a^9} \int_0^\infty \int_0^\pi r^9 e^{-r / 2 a} \sin^7 \theta \,d r \,d \theta                             \\
+                     & = \frac{64}{35 \cdot 6144^2 a^9} \int_0^\infty r^9 e^{-r / 2 a} \,d r                                                       \\
+                     & = \frac{64}{35 \cdot 6144^2 a^9} 371589120 a^10                                                                             \\
+                     & = 18 a
+        \end{align*}
+
+  \item
+
+        \begin{align*}
+          (L_x^2 + L_y^2) \psi_{4 3 3} & = (L^2 - L_z^2) \psi_{4 3 3}                     \\
+                                       & = [\hbar^2 3 (3 + 1) - \hbar^2 3^2] \psi_{4 3 3} \\
+                                       & = 3 \hbar^2 \psi_{4 3 3}
+        \end{align*}
+
+        Probability 1.
+\end{enumerate}
+
+\subsection{}
+
+\begin{enumerate}
+  \item
+
+        \begin{align*}
+          \psi_{1 0 0}    & = \frac{1}{\sqrt{\pi a^3}} e^{-r / a}                                                                         \\
+          P_\text{inside} & = \frac{1}{\pi a^3} \int_0^b \int_0^\pi \int_0^{2 \pi} e^{-2 r / a} r^2 \sin \theta \,d r \,d \theta \,d \phi \\
+                          & = \frac{2}{a^3} \int_0^b \int_0^\pi e^{-2 r / a} r^2 \sin \theta \,d r \,d \theta                             \\
+                          & = \frac{4}{a^3} \int_0^b e^{-2 r / a} r^2 \,d r                                                               \\
+                          & = \frac{4}{a^3} \frac{1}{4} a \left[ a^2 - \left( a^2 + 2 a b + 2 b^2 \right) e^{-2 b / a} \right]            \\
+                          & = 1 - \left[ 1 + 2 \frac{b}{a} + 2 \left( \frac{b}{a} \right)^2 \right] e^{-2 b / a}
+        \end{align*}
+
+  \item
+
+        \begin{align*}
+          P_\text{inside} & = 1 - \left( 1 + \epsilon + \frac{1}{2} \epsilon^2 \right) e^{-\epsilon}                                                                                        \\
+                          & = 1 - \left( 1 + \epsilon + \frac{1}{2} \epsilon^2 \right) \left( 1 - \epsilon + \frac{\epsilon^2}{2} - \frac{\epsilon^3}{6} + \cdots \right)                   \\
+                          & = 1 - \left( 1 - \epsilon + \frac{\epsilon^2}{2} - \frac{\epsilon^3}{6} + \cdots \right) - \left( \epsilon - \epsilon^2 + \frac{\epsilon^3}{2} - \cdots \right) \\
+                          & \qquad - \left( \frac{1}{2} \epsilon^2 - \frac{1}{2} \epsilon^3 + \cdots \right)                                                                                \\
+                          & = \frac{\epsilon^3}{6} + \cdots                                                                                                                                 \\
+                          & = \frac{4}{3} \left( \frac{b}{a} \right)^3 + \cdots
+        \end{align*}
+
+  \item
+
+        \begin{align*}
+          P_\text{inside} & \approx \frac{4 \pi b^3}{3} |\psi(0)|^2    \\
+                          & = \frac{4 \pi b^3}{3} \frac{1}{\pi a^3}    \\
+                          & = \frac{4}{3} \left( \frac{b}{a} \right)^3
+        \end{align*}
+
+  \item
+
+        \[P_\text{inside} \approx \num{1.07e-14}\]
+\end{enumerate}
+
+\subsection{}
+
+\begin{enumerate}
+  \item
+
+        \begin{align*}
+          R_{n (n - 1)}(r) & = c_0 \frac{1}{r} \rho^{\ell + 1} e^{-\rho}                                           \\
+                           & = c_0 \frac{1}{r} \left( \frac{r}{a n} \right)^n e^{-r / a n}                         \\
+                           & = N_n r^{n - 1} e^{-r / a n}                                                          \\
+          1                & = N_n^2 \int_0^\infty r^{2 n} e^{-2 r / a n} \,d r                                    \\
+          u                & = \frac{2 r}{a n}                                                                     \\
+          r                & = \frac{a n u}{2}                                                                     \\
+          d r              & = \frac{a n}{2} \,d u                                                                 \\
+          1                & = N_n^2 \int_0^\infty \left( \frac{a n u}{2} \right)^{2 n} e^{-u} \frac{a n}{2} \,d u \\
+                           & = N_n^2 \left( \frac{a n}{2} \right)^{2 n + 1} \int_0^\infty u^{2 n} e^{-u} \,d u     \\
+                           & = N_n^2 \left( \frac{a n}{2} \right)^{2 n + 1} \Gamma(2 n + 1)                        \\
+                           & = N_n^2 \left( \frac{a n}{2} \right)^{2 n + 1} (2 n)!                                 \\
+          N_n              & = \left( \frac{2}{a n} \right)^n \sqrt{\frac{2}{a n (2 n)!}}
+        \end{align*}
+
+  \item
+
+        \begin{align*}
+          \braket{r}   & = \int R^* r R                                                                                           \\
+                       & = N_n^2 \int_0^\infty r^{2 n + 1} e^{-2 r / a n} \,d r                                                   \\
+          u            & = \frac{2 r}{a n}                                                                                        \\
+          r            & = \frac{a n u}{2}                                                                                        \\
+          d r          & = \frac{a n}{2} \,d u                                                                                    \\
+          \braket{r}   & = N_n^2 \int_0^\infty \left( \frac{a n u}{2} \right)^{2 n + 1} e^{-u} \frac{a n}{2} \,d u                \\
+                       & = \left( n + \frac{1}{2} \right) n a                                                                     \\
+          \braket{r^2} & = \int R^* r^2 R                                                                                         \\
+                       & = \left( \frac{2}{a n} \right)^{2 n} \frac{2}{a n (2 n)!} \int_0^\infty r^{2 n + 2} e^{-2 r / a n} \,d r \\
+                       & = \left( n + \frac{1}{2} \right) (n + 1) (n a)^2
+        \end{align*}
+
+  \item
+
+        \begin{align*}
+          \sigma_r & = \sqrt{\braket{r^2} - \braket{r}^2}                                                               \\
+                   & = \sqrt{\left( n + \frac{1}{2} \right) (n + 1) (n a)^2 - \left( n + \frac{1}{2} \right)^2 (n a)^2} \\
+                   & = \left( n + \frac{1}{2} \right) n a \sqrt{\frac{n + 1}{n + \frac{1}{2}} - 1}                      \\
+                   & = \braket{r} \sqrt{\frac{n + 1 - n - \frac{1}{2}}{n + \frac{1}{2}}}                                \\
+                   & = \frac{\braket{r}}{\sqrt{2 n + 1}}
+        \end{align*}
+\end{enumerate}
+
+\setcounter{subsection}{56}
+\subsection{}
+
+\begin{enumerate}
+  \item
+
+        \begin{align*}
+          A                     & = x^2                                                              \\
+          B                     & = L_z                                                              \\
+          [A, B]                & = [x^2, L_z]                                                       \\
+                                & = x [x, L_z] + [x, L_z] x                                          \\
+                                & = x [x, x p_y - y p_x] + [x, x p_y - y p_x] x                      \\
+                                & = x [x, x p_y] - x [x, y p_x] + [x, x p_y] x - [x, y p_x] x        \\
+                                & = x^2 [x, p_y] + x [x, x] p_y - x y [x, p_x] - x [x, y] p_x        \\
+                                & \qquad + x [x, p_y] x + [x, x] p_y x - y [x, p_x] x - [x, y] p_x x \\
+                                & = -i \hbar x y - i \hbar x y                                       \\
+                                & = -2 i \hbar x y                                                   \\
+          \sigma_A^2 \sigma_B^2 & \ge \left( \frac{1}{2 i} \braket{[A, B]} \right)^2                 \\
+                                & = \left( \frac{1}{2 i} \braket{-2 i \hbar x y} \right)^2           \\
+                                & = \hbar^2 \braket{x y}^2                                           \\
+          \sigma_A \sigma_B     & = \hbar |\langle x y \rangle|
+        \end{align*}
+
+  \item
+
+        \begin{align*}
+          L_z \psi_{n \ell m}   & = m \hbar \psi_{n \ell m}                \\
+          L_z^2 \psi_{n \ell m} & = m^2 \hbar^2 \psi_{n \ell m}            \\
+          \sigma_B              & = \sqrt{\braket{L_z^2} - \braket{L_z}^2} \\
+                                & = \sqrt{m^2 \hbar^2 - m^2 \hbar^2}       \\
+                                & = 0
+        \end{align*}
+
+  \item \[\braket{x y} = 0\]
+\end{enumerate}
+
+\subsection{}
+
+\begin{enumerate}
+  \item
+        \begin{align*}
+          1 & = \chi^\dagger \chi                  \\
+            & = |A|^2 \begin{pmatrix}
+                        1 + 2 i & 2
+                      \end{pmatrix} \begin{pmatrix}
+                                      1 - 2 i \\
+                                      2
+                                    \end{pmatrix} \\
+            & = |A|^2 [(1 + 2 i) (1 - 2 i) + 4]    \\
+            & = 9 |A|^2                            \\
+          A & = \frac{1}{3}
+        \end{align*}
+
+  \item
+
+        \[\chi = \frac{1}{3} \begin{pmatrix}
+            1 - 2 i \\
+            2
+          \end{pmatrix}\]
+
+        You could get $\frac{\hbar}{2}$ with probability $\frac{1}{9} (1 + 2 i) (1 - 2 i) = \frac{5}{9}$ or $-\frac{\hbar}{2}$ with probability $\frac{4}{9}$.
+
+        \[\braket{S_z} = \left( \frac{5}{9} - \frac{4}{9} \right) \frac{\hbar}{2} = \frac{\hbar}{18}\]
+
+  \item
+
+        You could get $\frac{\hbar}{2}$ with probability \[\frac{1}{9} \frac{(3 + 2 i) (3 - 2 i)}{2} = \frac{13}{18}\] or $-\frac{\hbar}{2}$ with probability \[\frac{1}{9} \frac{(-1 + 2 i) (-1 - 2 i)}{2} = \frac{5}{18}.\]
+
+        \[\braket{S_x} = \left( \frac{13}{18} - \frac{5}{18} \right) \frac{\hbar}{2} = \frac{2}{9} \hbar\]
+
+  \item
+
+        You could get $\frac{\hbar}{2}$ with probability \[\frac{1}{9} \frac{(1 + 4 i) (1 - 4 i)}{2} = \frac{17}{18}\] or $-\frac{\hbar}{2}$ with probability \[\frac{1}{18}.\]
+
+        \[\braket{S_y} = \left( \frac{17}{18} - \frac{1}{18} \right) \frac{\hbar}{2} = \frac{4}{9} \hbar\]
+\end{enumerate}
+
+\setcounter{subsection}{60}
+\subsection{}
+
+The basis states are $\ket{\frac{3}{2}}$, $\ket{\frac{1}{2}}$, $\ket{-\frac{1}{2}}$, and $\ket{-\frac{3}{2}}$. The matrix corresponding to the raising operator is \[S_+ = \hbar \begin{pmatrix}
+    0 & \sqrt{3} & 0 & 0        \\
+    0 & 0        & 2 & 0        \\
+    0 & 0        & 0 & \sqrt{3} \\
+    0 & 0        & 0 & 0
+  \end{pmatrix}\] and the matrix corresponding to the lowering operator is \[S_- = \hbar \begin{pmatrix}
+    0        & 0 & 0        & 0 \\
+    \sqrt{3} & 0 & 0        & 0 \\
+    0        & 2 & 0        & 0 \\
+    0        & 0 & \sqrt{3} & 0
+  \end{pmatrix}.\] $S_\pm = S_x \pm S_y$ so \begin{align*}
+  S_x & = \frac{S_+ + S_-}{2}                                       \\
+      & = \frac{\hbar}{2} \begin{pmatrix}
+                            0        & \sqrt{3} & 0        & 0        \\
+                            \sqrt{3} & 0        & 2        & 0        \\
+                            0        & 2        & 0        & \sqrt{3} \\
+                            0        & 0        & \sqrt{3} & 0
+                          \end{pmatrix}.
+\end{align*}
+
+The eigenvalues of $S_x$ are $\frac{3}{2} \hbar$, $\frac{1}{2} \hbar$, $-\frac{1}{2} \hbar$, and $-\frac{3}{2} \hbar$, as expected.
+
+\setcounter{subsection}{63}
+\subsection{}
+
+\begin{enumerate}
+  \item You would get $2 \hbar^2$ with probability $1$.
+
+  \item You could get $0$ with probability $\frac{1}{3}$ or $3 \hbar$ with probability $\frac{2}{3}$.
+
+  \item You would get $\frac{3}{4} \hbar^2$ with probability $1$.
+
+  \item You could get $\frac{\hbar}{2}$ with probability $\frac{1}{3}$ or $-\frac{\hbar}{2}$ with probability $\frac{2}{3}$.
+
+  \item
+
+        \begin{align*}
+          \sqrt{\frac{1}{3}} \Ket{\frac{1}{2} \frac{1}{2}} \ket{1 0} + \sqrt{\frac{2}{3}} \Ket{\frac{1}{2} {-\frac{1}{2}}} \ket{1 1} & = \frac{1}{\sqrt{3}} \left( \sqrt{\frac{2}{3}} \Ket{\frac{3}{2} \frac{1}{2}} - \frac{1}{\sqrt{3}} \Ket{\frac{1}{2} \frac{1}{2}} \right)        \\
+                                                                                                                                     & \qquad + \sqrt{\frac{2}{3}} \left( \frac{1}{\sqrt{3}} \Ket{\frac{3}{2} \frac{1}{2}} + \sqrt{\frac{2}{3}} \Ket{\frac{1}{2} \frac{1}{2}} \right) \\
+                                                                                                                                     & = \sqrt{\frac{8}{9}} \Ket{\frac{3}{2} \frac{1}{2}} + \sqrt{\frac{1}{9}} \Ket{\frac{1}{2} \frac{1}{2}}
+        \end{align*}
+
+        You could measure $\frac{15}{4} \hbar^2$ with probability $\frac{8}{9}$ or $\frac{3}{4} \hbar^2$ with probability $\frac{1}{9}$.
+
+  \item You would measure $\frac{\hbar}{2}$ with probability $1$.
+
+  \item
+
+        \begin{align*}
+           & R_{2 1}^* \left( \sqrt{\frac{1}{3}} (Y_1^0)^* \chi_+^\dagger + \sqrt{\frac{2}{3}} (Y_1^1)^* \chi_-^\dagger \right) R_{2 1} \left( \sqrt{\frac{1}{3}} Y_1^0 \chi_+ + \sqrt{\frac{2}{3}} Y_1^1 \chi_- \right) \\
+           & = \frac{1}{3} |R_{2 1}|^2 (|Y_1^0|^2 + 2 |Y_1^1|^2)                                                                                                                                                         \\
+           & = \frac{1}{3} \frac{1}{24 a^5} r^2 e^{-r / a} \left( \frac{3}{4 \pi} \cos^2 \theta + \frac{3}{4 \pi} \sin^2 \theta \right)                                                                                  \\
+           & = \frac{1}{96 \pi a^5} r^2 e^{-r / a}
+        \end{align*}
+
+  \item
+
+        \begin{align*}
+           & \frac{1}{3} |R_{2 1}|^2 \int_0^\pi \int_0^{2 \pi} |Y_1^0|^2 \sin \theta \,d \theta \,d \phi                                           \\
+           & = \frac{1}{3} \frac{1}{24 a^5} r^2 e^{-r / a} \int_0^\pi \int_0^{2 \pi} \frac{3}{4 \pi} \cos^2 \theta \sin \theta \,d \theta \,d \phi \\
+           & = \frac{1}{48 a^5} r^2 e^{-r / a} \int_0^\pi \cos^2 \theta \sin \theta \,d \theta                                                     \\
+           & = \frac{1}{72 a^5} r^2 e^{-r / a}
+        \end{align*}
+\end{enumerate}
+
+\setcounter{subsection}{69}
+\subsection{}
+
+\begin{enumerate}
+  \item
+
+        At $t = 0$ all particles are in the spin-up state with respect to the $z$ axis $\ket{\uparrow}$. At $t = t_1$ the spin of a fraction $f$ of the particles is measured with respect to the $z$ axis (the $z$ group) and the remaining fraction $1 - f$ is measured with respect to the $x$ axis (the $x$ group). There is no change in the $z$ group so the fraction of particles in the state $\ket{\uparrow}$ is $f$. The $x$ group is evenly split, so the fraction of particles in either the $\ket{\leftarrow}$ or $\ket{\rightarrow}$ states is $\frac{1}{2} (1 - f)$. At $t = t_2$ the spin of all particles is measured with respect to the $x$ axis. The $z$ group is evenly split and the $x$ group is unchanged so the fraction of particles in either the $\ket{\leftarrow}$ or $\ket{\rightarrow}$ states is $\frac{1}{2} f + \frac{1}{2} (1 - f) = \frac{1}{2}$. The subensemble of particles in the $\ket{\rightarrow}$ state is comprised of particles from both the $z$ and $x$ groups. Of those from the $z$ group, all of them were in the spin-up state at $t = t_1$, and of those from the $x$ group, they also were all in the spin-up state at $t = t_1$. In conclusion: all of the particles in the subensemble had spin-up in the first measurement.
+
+  \item
+
+        \begin{align*}
+          P_+                            & = \cos^2 (\theta_{a b} / 2)                                    \\
+          P_-                            & = \sin^2 (\theta_{a b} / 2)                                    \\
+          P_{++}                         & = \cos^2 (\theta_{a b} / 2) \cos^2 (\theta_{b c} / 2)          \\
+          P_{+-}                         & = \cos^2 (\theta_{a b} / 2) \sin^2 (\theta_{b c} / 2)          \\
+          P_{-+}                         & = \sin^2 (\theta_{a b} / 2) \sin^2 (\theta_{b c} / 2)          \\
+          P_{--}                         & = \sin^2 (\theta_{a b} / 2) \cos^2 (\theta_{b c} / 2)          \\
+          \frac{P_{++}}{P_{++} + P_{-+}} & = \frac{1}{1 + P_{-+} / P_{++}}                                \\
+                                         & = [1 + \tan^2 (\theta_{ab} / 2) \tan^2 (\theta_{bc} / 2)]^{-1}
+        \end{align*}
+\end{enumerate}
+
+\subsection{}
+
+\begin{enumerate}
+  \item
+
+        \begin{align*}
+          \psi_{2 1 m}    & = \frac{1}{\sqrt{24 a^5}} r e^{-r / 2 a} Y_1^m(\theta, \phi)                            \\
+          \psi_{2 1 {-1}} & = \frac{1}{\sqrt{24 a^5}} r e^{-r / 2 a} \sqrt{\frac{3}{8 \pi}} \sin \theta e^{-i \phi} \\
+                          & = \frac{1}{\sqrt{64 \pi a^5}} r e^{-r / 2 a} \sin \theta e^{-i \phi}                    \\
+          \psi_{2 1 0}    & = \frac{1}{\sqrt{24 a^5}} r e^{-r / 2 a} \sqrt{\frac{3}{4 \pi}} \cos \theta             \\
+                          & = \frac{1}{\sqrt{32 \pi a^5}} r e^{-r / 2 a} \cos \theta                                \\
+          \psi_{2 1 1}    & = -\frac{1}{\sqrt{24 a^5}} r e^{-r / 2 a} \sqrt{\frac{3}{8 \pi}} \sin \theta e^{i \phi} \\
+                          & = -\frac{1}{\sqrt{64 \pi a^5}} r e^{-r / 2 a} \sin \theta e^{i \phi}                    \\
+          \psi_{2 p_x}    & = \frac{1}{\sqrt{32 \pi a^3}} \frac{x}{a} e^{-r / 2 a}                                  \\
+                          & = \frac{1}{\sqrt{32 \pi a^5}} r e^{-r / 2 a} \sin \theta \cos \phi                      \\
+                          & = \frac{1}{\sqrt{2}} (\psi_{2 1 {-1}} - \psi_{2 1 1})                                   \\
+          \psi_{2 p_y}    & = \frac{1}{\sqrt{32 \pi a^3}} \frac{y}{a} e^{-r / 2 a}                                  \\
+                          & = \frac{1}{\sqrt{32 \pi a^5}} r e^{-r / 2 a} \sin \theta \sin \phi                      \\
+                          & = \frac{i}{\sqrt{2}} (\psi_{2 1 {-1}} + \psi_{2 1 1})                                   \\
+          \psi_{2 p_z}    & = \frac{1}{\sqrt{32 \pi a^3}} \frac{z}{a} e^{-r / 2 a}                                  \\
+                          & = \frac{1}{\sqrt{32 \pi a^5}} r e^{-r / 2 a} \cos \theta                                \\
+                          & = \psi_{2 1 0}
+        \end{align*}
 \end{enumerate}
 
 \end{document}
