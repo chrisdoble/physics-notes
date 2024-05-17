@@ -4064,4 +4064,116 @@ The eigenvalues of $S_x$ are $\frac{3}{2} \hbar$, $\frac{1}{2} \hbar$, $-\frac{1
         \end{align*}
 \end{enumerate}
 
+\section{Identical Particles}
+
+\subsection{}
+
+\begin{enumerate}
+  \item
+
+        \begin{align*}
+          \vec{R} + \frac{\mu}{m_1} \vec{r} & = \frac{m_1 \vec{r}_1 + m_2 \vec{r}_2}{m_1 + m_2} + \frac{m_2}{m_1 + m_2} (\vec{r}_1 - \vec{r}_2) \\
+                                            & = \frac{m_1 \vec{r}_1 + m_2 \vec{r}_2 + m_2 \vec{r}_1 - m_2 \vec{r}_2}{m_1 + m_2}                 \\
+                                            & = \vec{r}_1                                                                                       \\
+          \vec{R} - \frac{\mu}{m_2} \vec{r} & = \frac{m_1 \vec{r}_1 + m_2 \vec{r}_2}{m_1 + m_2} - \frac{m_1}{m_1 + m_2} (\vec{r}_1 - \vec{r}_2) \\
+                                            & = \frac{m_1 \vec{r}_1 + m_2 \vec{r}_2 - m_1 \vec{r}_1 + m_1 \vec{r}_2}{m_1 + m_2}                 \\
+                                            & = \vec{r}_2                                                                                       \\
+        \end{align*}
+
+        Let $\vec{r} = (x, y, z)$ and $\vec{R} = (X, Y, Z)$, then
+
+        \begin{align*}
+          (\nabla_1)_x & = \frac{\partial}{\partial x_1}                                                                                             \\
+                       & = \frac{\partial X}{\partial x_1} \frac{\partial}{\partial X} + \frac{\partial x}{\partial x_1} \frac{\partial}{\partial x} \\
+                       & = \frac{\mu}{m_2} (\nabla_R)_x + (\nabla_r)_x                                                                               \\
+          \nabla_1     & = \frac{\mu}{m_2} \nabla_R + \nabla_r                                                                                       \\
+          (\nabla_2)_x & = \frac{\partial}{\partial x_2}                                                                                             \\
+                       & = \frac{\partial X}{\partial x_2} \frac{\partial}{\partial X} + \frac{\partial x}{\partial x_2} \frac{\partial}{\partial x} \\
+                       & = \frac{\mu}{m_1} (\nabla_R)_x - (\nabla_r)_x                                                                               \\
+          \nabla_2     & = \frac{\mu}{m_1} \nabla_R - \nabla_r
+        \end{align*}
+
+  \item
+
+        \begin{align*}
+          \nabla_1^2 \psi & = \nabla_1 \cdot \nabla_1 \psi                                                                                                                                              \\
+                          & = \nabla_1 \cdot \left( \frac{\mu}{m_2} \nabla_R \psi + \nabla_r \psi \right)                                                                                               \\
+                          & = \frac{\mu}{m_2} \nabla_R \cdot \left( \frac{\mu}{m_2} \nabla_R \psi + \nabla_r \psi \right) + \nabla_r \cdot \left( \frac{\mu}{m_2} \nabla_R \psi + \nabla_r \psi \right) \\
+                          & = \left( \frac{\mu}{m_2} \right)^2 \nabla_R^2 \psi + 2 \frac{\mu}{m_2} (\nabla_r \cdot \nabla_R) \psi + \nabla_r^2 \psi                                                     \\
+          \nabla_2^2 \psi & = \nabla_2 \cdot \nabla_2 \psi                                                                                                                                              \\
+                          & = \nabla_2 \cdot \left( \frac{\mu}{m_1} \nabla_R \psi - \nabla_r \psi \right)                                                                                               \\
+                          & = \frac{\mu}{m_1} \nabla_R \cdot \left( \frac{\mu}{m_1} \nabla_R \psi - \nabla_r \psi \right) - \nabla_r \left( \frac{\mu}{m_1} \nabla_R \psi - \nabla_r \psi \right)       \\
+                          & = \left( \frac{\mu}{m_1} \right)^2 \nabla_R^2 \psi - 2 \frac{\mu}{m_1} (\nabla_r \cdot \nabla_R) \psi + \nabla_r^2 \psi
+        \end{align*}
+
+        \begin{align*}
+          -\frac{\hbar^2}{2 m_1} \nabla_1^2 \psi - \frac{\hbar^2}{2 m_2} \nabla_2^2 \psi + V \psi                                                                                                     & = E \psi \\
+          -\frac{\hbar^2}{2 m_1} \left[ \left( \frac{\mu}{m_2} \right)^2 \nabla_R^2 \psi + 2 \frac{\mu}{m_2} (\nabla_r \cdot \nabla_R) \psi + \nabla_r^2 \psi \right]                                 &          \\
+          -\frac{\hbar^2}{2 m_2} \left[ \left( \frac{\mu}{m_1} \right)^2 \nabla_R^2 \psi - 2 \frac{\mu}{m_1} (\nabla_r \cdot \nabla_R) \psi + \nabla_r^2 \psi \right] + V \psi                        & = E \psi \\
+          -\frac{\hbar^2 \mu^2}{2} \left( \frac{1}{m_1 m_2^2} + \frac{1}{m_1^2 m_2} \right) \nabla_R^2 \psi - \frac{\hbar^2}{2} \left( \frac{1}{m_1} + \frac{1}{m_2} \right) \nabla_r^2 \psi + V \psi & = E \psi \\
+          -\frac{\hbar^2}{2 (m_1 + m_2)} \nabla_R^2 \psi - \frac{\hbar^2}{2 \mu} \nabla_r^2 \psi + V \psi                                                                                             & = E \psi
+        \end{align*}
+
+  \item
+
+        \begin{align*}
+          \psi(\vec{R}, \vec{r})                                                                                                                                                          & = \psi_R(\vec{R}) \psi_r(\vec{r}) \\
+          -\frac{\hbar^2}{2 (m_1 + m_2)} \nabla_R^2 \psi_R \psi_r - \frac{\hbar^2}{2 \mu} \nabla_r^2 \psi_r \psi_R + V(\vec{r}) \psi_R \psi_r                                             & = E \psi_R \psi_r                 \\
+          -\frac{\hbar^2}{2 (m_1 + m_2)} \frac{\nabla_R^2 \psi_R}{\psi_R} - \frac{\hbar^2}{2 \mu} \frac{\nabla_r^2 \psi_r}{\psi_r} + V(\vec{r})                                           & = E                               \\
+          \left( -\frac{\hbar^2}{2 (m_1 + m_2)} \frac{\nabla_R^2 \psi_R}{\psi_R} - E_R \right) + \left(-\frac{\hbar^2}{2 \mu} \frac{\nabla_r^2 \psi_r}{\psi_r} + V(\vec{r}) - E_r \right) & = 0
+        \end{align*}
+\end{enumerate}
+
+\subsection{}
+
+\begin{enumerate}
+  \item
+
+        \begin{align*}
+          \mu & = \frac{m_e m_p}{m_e + m_p}                                            \\
+          E_1 & = -\frac{\mu}{2 \hbar^2} \left( \frac{e^2}{4 \pi \epsilon_0} \right)^2 \\
+              & \approx \qty{-13.5982}{eV}                                             \\
+        \end{align*}
+
+  \item
+
+        \begin{align*}
+          \Delta E_\text{H} & = E_{3_H} - E_{2_H}                                                                                         \\
+                            & = \frac{E_{1_H}}{9} - \frac{E_{1_H}}{4}                                                                     \\
+                            & = \left( \frac{1}{9} - \frac{1}{4} \right) E_{1_H}                                                          \\
+                            & \approx \qty{1.888}{eV}                                                                                     \\
+          \lambda_H         & = \qty{6.569e-7}{m}                                                                                         \\
+          E_{1_D}           & = \frac{m_e (m_n + m_p)}{m_e + m_n + m_p} \frac{1}{2 \hbar^2} \left( \frac{e^2}{4 \pi \epsilon_0} \right)^2 \\
+          \Delta E_\text{D} & = E_{3_D} - E_{2_D}                                                                                         \\
+                            & = \left( \frac{1}{9} - \frac{1}{4} \right) E_{1_D}                                                          \\
+                            & \approx \qty{1.889}{eV}                                                                                     \\
+          \lambda_D         & = \qty{6.567e-7}{m}                                                                                         \\
+          \Delta \lambda    & = \qty{1.79e-10}{m}
+        \end{align*}
+
+  \item
+
+        \begin{align*}
+          \mu  & = \frac{m_e^2}{m_e + m_2} \\
+               & = \frac{1}{2} m_e         \\
+          E_1' & = \frac{1}{2} E_1         \\
+               & = \qty{-6.8}{eV}
+        \end{align*}
+
+  \item
+
+        \begin{align*}
+          \mu_p                 & = \frac{m_e m_p}{m_e + m_p}                                     \\
+          \mu_\mu               & = \frac{m_\mu m_p}{m_\mu + m_p}                                 \\
+          \frac{\mu_\mu}{\mu_p} & = \frac{m_\mu m_p}{m_\mu + m_p} \cdot \frac{m_e + m_p}{m_e m_p} \\
+                                & = \frac{m_\mu (m_e + m_p)}{m_e (m_\mu + m_p)}                   \\
+                                & = 206.77 \frac{m_e + m_p}{206.77 m_e + m_p}                     \\
+                                & \approx 185.943                                                 \\
+          \frac{1}{\lambda}     & = R' \left( 1 - \frac{1}{4} \right)                             \\
+                                & = \frac{3}{4} R'                                                \\
+          \lambda               & = \frac{4}{3 R'}                                                \\
+                                & \approx \qty{6.54e-10}{m}
+        \end{align*}
+\end{enumerate}
+
 \end{document}

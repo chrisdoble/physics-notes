@@ -938,4 +938,32 @@
   \item The Hamiltonian for a particle of charge $q$ and momentum $\vec{p}$ in the presence of electromagnetic fields is \[H = \frac{1}{2 m} (\vec{p} - q \vec{A})^2 + q \varphi\] where $\vec{A}$ is the vector potential and $\varphi$ is the scalar potential: \[\vec{E} = -\nabla \varphi - \frac{\partial \vec{A}}{\partial t}, \ \vec{B} = \nabla \times \vec{A}.\] Making the substitution $\vec{p} \rightarrow -i \hbar \nabla$ we obtain the Hamiltonian operator \[\hat{H} = \frac{1}{2 m} (-i \hbar \nabla - q \vec{A})^2 + q \varphi\] and the Schrödinger equation becomes \[i \hbar \frac{\partial \Phi}{\partial t} = \left[ \frac{1}{2 m} (-i \hbar \nabla - q \vec{A})^2 + q \varphi \right] \Psi.\] This is the quantum implementation of the Lorentz force law; it is sometimes called the \textbf{minimal coupling rule}.
 \end{itemize}
 
+\section{Identical Particles}
+
+\subsection{Two-Particle Systems}
+
+\begin{itemize}
+  \item For a single particle $\Psi(\vec{r}, t)$ is a function of the spatial coordinates $\vec{r}$ and the time $t$. For two particles $\Psi(\vec{r}_1, \vec{r}_2, t)$ is a function of the coordinates of the particles $\vec{r}_1$ and $\vec{r}_2$, and the time $t$.
+
+  \item The evolution of a two-particle wavefunction is determined by the \\ Schrödinger equation \[i \hbar \frac{\partial \Psi}{\partial t} = \hat{H} \Psi\] where \[\hat{H} = -\frac{\hbar^2}{2 m_1} \nabla_1^2 - \frac{\hbar^2}{2 m_2} \nabla_2^2 + V(\vec{r}_1, \vec{r}_2, t).\]
+
+  \item The statistical interpretation is similar where \[|\Psi(\vec{r}_1, \vec{r}_2, t)|^2 \,d^3 \vec{r}_1 \,d^3 \vec{r}_2\] is the probability of finding particle one in the volume $d^3 \vec{r}_1$ and particle two in the volume $d^3 \vec{r}_2$.
+
+  \item As always, the wavefunction must be normalised \[\int |\Psi(\vec{r}_1, \vec{r}_2, t)|^2 \,d^3 \vec{r}_1 \,d^3 \vec{r}_2 = 1.\]
+
+  \item For time-independent potentials we can obtain a complete set of solutions by separation of variables \[\Psi(\vec{r}_1, \vec{r}_2, t) = \psi(\vec{r}_1, \vec{r}_2) e^{-i E t / \hbar}\] where the spatial wavefunciton $\psi$ satisfies the time-independent \\ Schrödinger equation \[-\frac{\hbar^2}{2 m_1} \nabla_1^2 \psi - \frac{\hbar^2}{2 m_2} \nabla_2^2 \psi + V \psi = E \psi.\]
+
+  \item In general, solving the time-independent Schrödinger equation for two particles is difficult but two special cases can be reduced to one-particle problems:
+
+        \begin{enumerate}
+          \item \textbf{Noninteracting particles}. In this case the potential energy can be expressed as \[V(\vec{r}_1, \vec{r}_2) = V_1(\vec{r}_1) + V_2(\vec{r}_2)\] and the equation can be solved via separation of variables \[\psi(\vec{r}_1, \vec{r}_2) = \psi_a(\vec{r}_1) \psi_b(\vec{r}_2).\] Plugging this in to the time-independent Schrödinger equation and collecting terms in $\vec{r}_1$ or $\vec{r}_2$ alone we find that $\psi_a$ and $\psi_b$ each satisfy the one-particle Schrödinger equation and the two-particle wave function is the product of the one-particle functions \begin{align*}
+                  \Psi(\vec{r}_1, \vec{r}_2, t) & = \psi_a(\vec{r}_1) \psi_b(\vec{r}_2) e^{-i E_a t / \hbar} e^{-i E_b t / \hbar}                               \\
+                                                & = \left( \psi_a(\vec{r}_1) e^{-i E_a t / \hbar} \right) \left( \psi_b(\vec{r}_2) e^{-i E_b t / \hbar} \right) \\
+                                                & = \Psi_a(\vec{r}_1, t) \Psi_b(\vec{r}_2, t).
+                \end{align*} In this case it makes sense to say that particle 1 is in state $a$ and particle 2 is in state $b$. However, any linear combination of these kind of solutions will also satisfy the time-dependent Schrödinger equation, e.g. \[\Psi(\vec{r}_1, \vec{r}_2 ,t) = \frac{3}{5} \Psi_a(\vec{r}_1, t) \Psi_b(\vec{r}_2, t) + \frac{4}{5} \Psi_c(\vec{r}_1, t) \Psi_d(\vec{r}_2, t).\] In this case, the state of particle 1 depends on the state of particle 2 and vice versa in the sense that if you measure that particle 1 is in state $a$ you know particle 2 is in state $b$ (ditto for states $c$ and $d$). We say that the two particles are \textbf{entangled}. An entangled state is one that cannot be written as the product to single-particle states.
+
+          \item \textbf{Central potentials}. If the two particles only interact with one another via a potential that depends on their separation \[V(\vec{r}_1, \vec{r}_2) \rightarrow V(|\vec{r}_1 - \vec{r}_2|)\] the two-body problem reduces to an equivalent one-body problem as it does in classical mechanics. In general, though, the two particles will be subject to other forces that complicates the analysis.
+        \end{enumerate}
+\end{itemize}
+
 \end{document}
