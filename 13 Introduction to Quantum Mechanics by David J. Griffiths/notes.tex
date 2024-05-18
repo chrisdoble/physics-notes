@@ -978,4 +978,16 @@
   \item It follows that two identical fermions can't occupy the same state, for if $\psi_a = \psi_b$ then \[\psi_-(\vec{r}_1, \vec{r}_2) = A[\psi_a (\vec{r}_1) \psi_a (\vec{r}_2) - \psi_a(\vec{r}_1) \psi_a(\vec{r}_1)] = 0\] the wavefunction disappears. This is the \textbf{Pauli exclusion principle} and it applies to all fermions.
 \end{itemize}
 
+\subsubsection{Exchange Forces}
+
+\begin{itemize}
+  \item For distinguishable particles, the expectation value of the squared distance between them is \[\braket{(x_1 - x_2)^2} = \braket{x^2}_a + \braket{x^2}_b - 2 \braket{x}_a \braket{x}_b.\]
+
+  \item For identical particles, the expectation value of the squared distance between them is \[\braket{(x_1 - x_2)^2}_\pm = \braket{x^2}_a + \braket{x^2}_b - 2 \braket{x}_a \braket{x}_b \mp 2 |\braket{x}_{a b}|^2\] where \[\braket{x}_{a b} = \int x \psi_a(x)^* \psi_b(x) \,d x.\]
+
+  \item The difference between the two above expectation values is $\mp 2 |\braket{x}_{a b}|^2$. This shows that identical bosons (the upper sign) tend to be slightly closer than distinguishable particles and identical fermions (the lower sign) tend to be slightly further away. The system behaves as if there were a ``force of attraction'' between identical bosons and a ``force of repulsion'' between identical fermions. This is called an \textbf{exchange force}.
+
+  \item Note that $\braket{x}_{a b}$ vanishes if there is no overlap in the wavefunctions — if $\psi_a$ is $0$ whenever $\psi_b$ is nonzero and vice versa, the intergal will be zero. The consequence of this is that the particles need to be relatively close together in order for this effect to occur.
+\end{itemize}
+
 \end{document}
