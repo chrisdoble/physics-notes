@@ -966,4 +966,16 @@
         \end{enumerate}
 \end{itemize}
 
+\subsubsection{Bosons and Fermions}
+
+\begin{itemize}
+  \item As in the previous section, if you have two noninteracting particles the system's wavefunction is the product of the one-particle wavefunctions \[\psi(\vec{r}_1, \vec{r}_2) = \psi_a(\vec{r}_1) \psi_b(\vec{r}_2).\] However, this assumes that you can distinguish between the two particles upon measurement. If you can't — for example if the system consists of two electrons — the wavefunction can be updated to be noncommittal as to which particle is in which state \[\psi_\pm(\vec{r}_1, \vec{r}_2) = A [\psi_a(\vec{r}_1) \psi_b(\vec{r}_2) \pm \psi_b(\vec{r}_1) \psi_a(\vec{r}_2)],\] i.e. if you measure a particle to be in state $a$ it could be either particle.
+
+  \item This theory admits two kinds of particles: \textbf{bosons} (the plus sign), and \textbf{fermions} (the minus sign). Bosons are \textbf{symmetric} upon interchange ($\psi_+(\vec{r}_1, \vec{r}_2) = \psi_+(\vec{r}_2, \vec{r}_1)$) whereas fermions are \textbf{antisymmetric} upon interchange ($\psi_-(\vec{r}_1, \vec{r}_2) = -\psi_-(\vec{r}_2, \vec{r}_1)$).
+
+  \item All particles with integer spins are bosons and all particles with half integer spins are fermions.
+
+  \item It follows that two identical fermions can't occupy the same state, for if $\psi_a = \psi_b$ then \[\psi_-(\vec{r}_1, \vec{r}_2) = A[\psi_a (\vec{r}_1) \psi_a (\vec{r}_2) - \psi_a(\vec{r}_1) \psi_a(\vec{r}_1)] = 0\] the wavefunction disappears. This is the \textbf{Pauli exclusion principle} and it applies to all fermions.
+\end{itemize}
+
 \end{document}
