@@ -1016,4 +1016,14 @@
   \item A neutral atom of atomic number $Z$ consists of a heavy nucleus with electric charge $Z e$ surrounded by $Z$ electrons of mass $m$ and charge $-e$. The Hamiltonian for this system is \[\hat{H} = \sum_j^Z \left\{ -\frac{\hbar^2}{2 m} \nabla_j^2 - \left( \frac{1}{4 \pi \epsilon_0} \right) \frac{Z e^2}{r_j} \right\} + \frac{1}{2} \left( \frac{1}{4 \pi \epsilon_0} \right) \sum_{j \ne k}^Z \frac{e^2}{|\vec{r}_j - \vec{r}_k|}\] where the term in curly brackets represents the kinetic and potential energy of the $j$th electron in the electric field of the nucleus and the second sum is the potential energy associated with the mutual repulsion of the electrons. This equation cannot be solved exactly except for $Z = 1$ (hydrogen).
 \end{itemize}
 
+\subsubsection{Helium}
+
+\begin{itemize}
+  \item After hydrogen, the simplest atom is helium with $Z = 2$. Its Hamiltonian is \[\hat{H} = \left\{ -\frac{\hbar^2}{2 m} \nabla_1^2 - \frac{1}{4 \pi \epsilon_0} \frac{2 e^2}{r_1} \right\} + \left\{ -\frac{\hbar^2}{2 m} \nabla_2^2 - \frac{1}{4 \pi \epsilon_0} \frac{2 e^2}{r_2} \right\} + \frac{1}{4 \pi \epsilon_0} \frac{e^2}{|\vec{r}_1 - \vec{r}_2|}.\] If we ignore the last term the Schrödinger equation becomes separable and the solutions can be written as the product of hydrogen wavefunctions \[\psi(\vec{r}_1, \vec{r}_2) = \psi_{n \ell m}(\vec{r}_1) \psi_{n' \ell' m}(\vec{r}_2)\] except they have half the Bohr radius and four times the Bohr energies.
+
+  \item The ground state would be \[\psi_0(\vec{r}_1, \vec{r}_2) = \psi_{1 0 0}(\vec{r}_1) \psi_{1 0 0}(\vec{r}_2) = \frac{8}{\pi a^3} e^{-2 (r_1 + r_2) / a}.\] Because we're dealing with two spin-1/2 particles, the Pauli exclusion principle demands that the total wavefunction is antisymmetric. $\psi_0$ is symmetric so the spin state must be antisymmetric and thus the ground state of helium is in the singlet configuration.
+
+  \item The excited states of helium consist of one electron in the hydrogenic ground state and the other in an excited state \[\psi = \psi_{n \ell m} \psi_{1 0 0}.\] If both electrons were in an excited state, only would immediately drop to ground and release enough energy to ionise the atom. Because the electrons are now in different states the Pauli exclusion principle is satisfied and they can be in both singlet and triplet spin states. The former are called \textbf{parahelium} and the latter are called \textbf{orthohelium}.
+\end{itemize}
+
 \end{document}

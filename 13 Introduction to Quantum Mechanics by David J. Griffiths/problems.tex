@@ -4306,4 +4306,76 @@ The eigenvalues of $S_x$ are $\frac{3}{2} \hbar$, $\frac{1}{2} \hbar$, $-\frac{1
         \end{align*}
 \end{enumerate}
 
+\setcounter{subsection}{12}
+\subsection{}
+
+\begin{enumerate}
+  \item
+
+        \begin{align*}
+          E_\text{before}   & = 4 \left( \frac{E_1}{4} + \frac{E_1}{4} \right) \\
+                            & = 2 E_1                                          \\
+          E_\text{after}    & = 4 \left( \frac{E_1}{4} + E_1 \right)           \\
+                            & = 5 E_1                                          \\
+          E_\text{electron} & = 4 \frac{E_1}{4} + \Delta E                     \\
+                            & = -2 E_1                                         \\
+                            & = \qty{27.2}{eV}
+        \end{align*}
+
+  \item
+
+        \begin{align*}
+          \mathcal{R}'      & = \frac{m_e}{4 \pi c \hbar^3} \left( \frac{2 e^2}{4 \pi \epsilon_0} \right)^2 \\
+                            & = 4 \mathcal{R}                                                               \\
+          \frac{1}{\lambda} & = 4 \mathcal{R} \left( \frac{1}{n_f^2} - \frac{1}{n_i^2} \right)
+        \end{align*}
+\end{enumerate}
+
+\subsection{}
+
+\begin{enumerate}
+  \item If the electrons were identical bosons the total wavefunction would be symmetric — a symmetric spatial wavefunction would be paired with a triplet spin state and an antisymmetric spatial wavefunction would be paired with a singlet spin state.
+
+  \item If the electrons were distinguishable particles there would be no \\ (anti)symmetry requirement on the total wavefunction, so every energy level could be in the singlet or triplet state.
+\end{enumerate}
+
+\subsection{}
+
+\begin{enumerate}
+  \item
+
+        \begin{align*}
+          \biggl< \frac{1}{|\vec{r}_1 - \vec{r}_2|} \biggr> & = \int \psi_0^* \frac{1}{|\vec{r}_1 - \vec{r}_2|} \psi_0                                                                                                  \\
+                                                            & = \int \frac{1}{|r_1 - r_2|} |\psi_0|^2 \,d^3 \vec{r}_2 \,d^3 \vec{r}_1                                                                                   \\
+                                                            & = \frac{64}{\pi^2 a^6} \int_0^\infty \int_0^\pi \int_0^{2 \pi} \frac{1}{\sqrt{r_1^2 + r_2^2 - 2 r_1 r_2 \cos \theta_2}}                                   \\
+                                                            & \qquad e^{-4 (r_1 + r_2) / a} r_2^2 \sin \theta_2 \,d r_2 \,d \theta_2 \,d \phi_2 \,d^3 \vec{r}_1                                                         \\
+                                                            & = \frac{128}{\pi a^6} \int_0^\infty \frac{r_1 + r_2 - |r_1 - r_2|}{r_1 r_2} e^{-4 (r_1 + r_2) / a} r_2^2 \,d r_2 \,d^3 \vec{r}_1                          \\
+                                                            & = \frac{256}{\pi a^6} \left( \int_0^{r_1} \frac{r_2^2}{r_1} e^{-4 (r_1 + r_2) / a} \,d r_2 \,d^3 \vec{r}_1 \right.                                        \\
+                                                            & \qquad \left. + \int_{r_1}^\infty r_2 e^{-4 (r_1 + r_2) / a} \,d r_2 \,d^3 \vec{r}_1 \right)                                                              \\
+                                                            & = \frac{256}{\pi a^6} \int_0^\infty \int_0^\pi \int_0^{2 \pi} \frac{a^2 e^{-8 r_1 / a} \left[ a \left( e^{4 r_1 / a} - 1 \right) - 2 r_1 \right]}{32 r_1} \\
+                                                            & \qquad r_1^2 \sin \theta_1 \,d r_1 \,d \theta_1 \,d \phi_1                                                                                                \\
+                                                            & = \frac{8}{\pi a^4} \int_0^\infty \int_0^\pi \int_0^{2 \pi} r_1 e^{-8 r_1 / a} \left[ a \left( e^{4 r_1 / a} - 1 \right) - 2 r_1 \right]                  \\
+                                                            & \qquad \sin \theta_1 \,d r_1 \,d \theta_1 \,d \phi_1                                                                                                      \\
+                                                            & = \frac{32}{a^4} \int_0^\infty r_1 e^{-8 r_1 / a} \left[ a \left( e^{4 r_1 / a} - 1 \right) - 2 r_1 \right] \,d r_1                                       \\
+                                                            & = \frac{5}{4 a}
+        \end{align*}
+
+  \item
+
+        \begin{align*}
+          E_\text{interaction} & = \frac{e^2}{4 \pi \epsilon_0} \biggl< \frac{1}{|\vec{r}_1 - \vec{r}_2|} \biggr> \\
+                               & \approx \qty{34}{eV}                                                             \\
+          E_0'                 & = E_0 + E_\text{interaction}                                                     \\
+                               & \approx \qty{-75}{eV}
+        \end{align*}
+\end{enumerate}
+
+\subsection{}
+
+\begin{align*}
+  \psi_0(\vec{r}_1, \vec{r}_2, \vec{r}_3) & = \psi_{1 0 0}(\vec{r}_1) \psi_{1 0 0}(\vec{r}_2) \psi_{2 0 0}(\vec{r}_3) \\
+  E_1'                                    & = 9 (E_1 + E_1 + E_2)                                                     \\
+                                          & \approx \qty{-275.4}{eV}                                                  \\
+\end{align*}
+
 \end{document}
