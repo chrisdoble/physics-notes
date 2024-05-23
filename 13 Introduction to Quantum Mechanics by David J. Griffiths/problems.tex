@@ -4440,4 +4440,74 @@ The eigenvalues of $S_x$ are $\frac{3}{2} \hbar$, $\frac{1}{2} \hbar$, $-\frac{1
 
 $S = 2$, $L = 6$, $J = 8$, the $n = 1, 2, \text{ and } 3$ shells are filled, the $n = 4 \text{ and } 5$ shells are partially filled.
 
+\subsection{}
+
+\begin{align*}
+  E_\text{tot}             & = \frac{\hbar^2 (3 \pi^2 N d)^{5 / 3}}{10 \pi^2 m} V^{-2 / 3} \\
+                           & = \frac{3 N d}{5} E_F                                         \\
+  \frac{E_\text{tot}}{N d} & = \frac{3}{5} E_F
+\end{align*}
+
+\subsection{}
+
+\begin{enumerate}
+  \item
+
+        \begin{align*}
+          \rho_\text{electron} & = \frac{N_A \rho_\text{mass}}{m_a V}         \\
+                               & = \qty{8.50e28}{m^{-3}}                      \\
+          E_F                  & = \frac{\hbar^2}{2 m} (3 \rho \pi^2)^{2 / 3} \\
+                               & = \qty{7.05}{eV}
+        \end{align*}
+
+  \item
+
+        \begin{align*}
+          E_F & = \frac{1}{2} m v^2      \\
+          v   & = \sqrt{\frac{2 E_F}{m}} \\
+              & = \qty{1.57e6}{m/s}
+        \end{align*}
+
+        It is safe to assume the electrons in copper are nonrelativistic.
+
+  \item
+
+        \begin{align*}
+          k_B T & = E_F             \\
+          T     & = \frac{E_F}{k_B} \\
+                & = \qty{8.18e4}{K}
+        \end{align*}
+
+  \item
+
+        \begin{align*}
+          P & = \frac{(3 \pi^2)^{2 / 3} \hbar^2}{5 m} \rho^{5 / 3} \\
+            & = \qty{3.84e10}{Pa}
+        \end{align*}
+\end{enumerate}
+
+\subsection{}
+
+\begin{align*}
+  \rho_\text{electron} & = \frac{\rho_\text{mass}}{m_a}                               \\
+                       & = \qty{1.64e28}{m^{-3}}                                      \\
+  E_F                  & = \frac{\hbar^2}{2 m} (3 \rho_\text{electron} \pi^2)^{2 / 3} \\
+                       & = \qty{4.28e-4}{eV}                                          \\
+  k_B T_F              & = E_F                                                        \\
+  T_F                  & = \frac{E_F}{k_B}                                            \\
+                       & = \qty{4.96}{K}
+\end{align*}
+
+\subsection{}
+
+\begin{align*}
+  P               & = \frac{(3 \pi^2)^{2 / 3} \hbar^2}{5 m} \rho^{5 / 3}                                 \\
+                  & = \frac{(3 \pi^2)^{2 / 3} \hbar^2}{5 m} \left( \frac{N d}{V} \right)^{5 / 3}         \\
+  \frac{d P}{d V} & = -\frac{5}{3} \frac{(3 \pi^2)^{2 / 3} \hbar^2}{5 m} \frac{(N d)^{5 / 3}}{V^{8 / 3}} \\
+                  & = -\frac{5}{3} \frac{P}{V}                                                           \\
+  B               & = -V \frac{d P}{d V}                                                                 \\
+                  & = \frac{5}{3} P                                                                      \\
+  B_\text{copper} & = \qty{6.4e10}{Pa}
+\end{align*}
+
 \end{document}

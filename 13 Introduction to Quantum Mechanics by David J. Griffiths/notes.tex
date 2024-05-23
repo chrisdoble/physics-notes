@@ -1040,4 +1040,26 @@
   \item The total orbital and spin angular momentum for an atom are often expressed using \textbf{term symbols} that have the form \[^{2 S + 1}L_J\] where $S$ is the total spin angular momentum, $L$ is the letter associated with the total orbital angular momentum (the same as in spectroscopic notation), and $J$ is the grand total angular momentum. For example \[^3 P_0\] represents an atom with $S = 1$, $L = 1$, and $J = 0$.
 \end{itemize}
 
+\subsection{Solids}
+
+\subsubsection{The Free Electron Gas}
+
+\begin{itemize}
+  \item In the solid state, some of the loosely-bound outermost valence electrons in each atom become detached and can move throughout the material without being attached to a particular parent nucleus.
+
+  \item The ``electron gas'' or ``Fermi gas'' model assumes the object is a rectangular solid of dimensions $l_x$, $l_y$, and $l_z$ and that an electron experiences no forces inside except at the boundaries \[V(x, y, z) = \begin{cases}
+            0      & 0 < x < l_x, 0 < y < l_y, 0 < z < l_z \\
+            \infty & \text{otherwise}
+          \end{cases}.\] The Schrödinger equation is separable in Cartesian coordinates and applying the boundary conditions gives the normalised wavefunctions \[\psi_{n_x n_y n_z} = \sqrt{\frac{8}{l_x l_y l_z}} \sin \left( \frac{n_x \pi}{l_x} x \right) \sin \left( \frac{n_y \pi}{l_y} \right) \sin \left( \frac{n_z \pi}{l_z} \right)\] with $n_x, n_y, n_z \in \mathbb{Z}$. The allowed energies are \[E_{n_x n_y n_z} = \frac{\hbar^2 \pi^2}{2 m} \left( \frac{n_x^2}{l_x^2} + \frac{n_y^2}{l_y^2} + \frac{n_z^2}{l_z^2} \right) = \frac{\hbar^2 k^2}{2 m}\] where $k$ is the magnitude of the \textbf{wave vector $\vec{k} = (k_x, k_y, k_z)$}.
+
+        If you imagine a three-dimensional space with axes $k_x$, $k_y$, and $k_z$ and planes drawn at $k_x = (\pi / l_x), (2 \pi / l_x), \ldots$, at $k_y = (\pi / l_y), (2 \pi / l_y), \ldots$, and at $k_z = (\pi / l_z), (2 \pi / l_z), \ldots$ each intersection point represents a distinct (one-particle) stationary state. Each block in this grid and hence also each state occupies a volume \[\frac{\pi^3}{l_x l_y l_z} = \frac{\pi^3}{V}.\]
+
+        Electrons are fermions so they can't occupy the same state, but they want to occupy the lowest states possible. The energy of an electron is proportional to $n_x^2 + n_y^2 + n_z^2$ which is the distance from the origin of $k$-space. The first electron will occupy the state $(n_x, n_y, n_z) = (0, 0, 0)$, the next $(1, 0, 0)$, the next $(0, 1, 0)$, etc. In other words the electrons will fill up an octant of a sphere outwards from the origin of $k$-space. Suppose the object is comprised of $N$ atoms, each of which contributes $d$ free electrons. The radius of this sphere $k_F$ is determined by the fact that each pair of spin-up and spin-down electrons requires a volume of $\pi^3 / V$: \begin{align*}
+          \frac{1}{8} \left( \frac{4}{3} \pi k_F^3 \right) & = \frac{N d}{2} \left( \frac{\pi^3}{V} \right) \\
+          k_F                                              & = (3 \rho \pi^2)^{1 / 3}
+        \end{align*} where $\rho = N d / V$ is the \textbf{free electron density} (the number of free electrons per unit volume).
+
+        The boundary separating occupied and unoccupied states is called the \textbf{Fermi surface} and the corresponding energy is the \textbf{Fermi energy} \[E_F = \frac{\hbar^2}{2 m} (3 \rho \pi^2)^{2 / 3}.\] The total energy of all the filled states is \[E_\text{tot} = \frac{\hbar^2 k_F^5 V}{10 \pi^2 m} = \frac{\hbar^2 (3 \pi^2 N d)^{5 / 3}}{10 \pi^2 m} V^{-2 / 3}.\]
+\end{itemize}
+
 \end{document}
