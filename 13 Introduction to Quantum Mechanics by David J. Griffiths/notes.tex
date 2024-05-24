@@ -1062,4 +1062,24 @@
         The boundary separating occupied and unoccupied states is called the \textbf{Fermi surface} and the corresponding energy is the \textbf{Fermi energy} \[E_F = \frac{\hbar^2}{2 m} (3 \rho \pi^2)^{2 / 3}.\] The total energy of all the filled states is \[E_\text{tot} = \frac{\hbar^2 k_F^5 V}{10 \pi^2 m} = \frac{\hbar^2 (3 \pi^2 N d)^{5 / 3}}{10 \pi^2 m} V^{-2 / 3}.\]
 \end{itemize}
 
+\subsubsection{Band Structure}
+
+\begin{itemize}
+  \item We want to update our model to account for the forces exerted on electrons by the regularly spaced, positively charged, essentially stable nuclei.
+
+  \item \textbf{Bloch's theorem} states that the solutions to the Schrödinger equation \[-\frac{\hbar^2}{2 m} \frac{d^2 \psi}{d x^2} + V(x) \psi = E \psi\] with periodic potential \[V(x + a) = V(x)\] can be taken to satisfy the condition \[\psi(x + a) = e^{i q a} \psi(x)\] for some constant $q$.
+
+  \item No real solid goes on forever, so the edges will spoil Bloch's theorem. However, any macroscopic crystal will contain on the order of Avogadro's number of atoms and the edge effects are unlikely to influence the behaviour of electrons deep inside. To salvage Bloch's theorem we wrap the $x$ axis in a circle such that after a large number $N \approx 10^{23}$ of periods we impose the boundary condition \[\psi(x + N a) = \psi(x).\] It follows that \[e^{i N q a} \psi(x) = \psi(x)\] so $e^{i N q a} = 1$, $N q a = 2 \pi n$, and \[q = \frac{2 \pi n}{N a}, \,n \in \mathbb{Z}.\] This means that $q$ is real and $|\psi|^2$ is periodic, as expected.
+
+  \item We can model the potential as a \textbf{Dirac comb} consisting of evenly-spaced delta-function spikes \[V(x) = \alpha \sum_{j = 0}^{N - 1} \delta(x - j a).\] From this we can solve the Schrödinger equation in the region $0 < x < a$ where the potential is $0$, use Bloch's theorem to solve in the region $-a < x < 0$, apply the boundary condition that $\psi$ is continuous at $x = 0$, and apply the boundary condition that the derivative of $\psi$ suffers a discontinuity proportional to the strength of the delta function at $x = 0$.
+
+        From this we find \[\cos(q a) = \cos(k a) + \frac{m \alpha}{\hbar^2 k} \sin(k a).\] If we introduce \[z = k a \text{ and } \beta = \frac{m \alpha a}{\hbar^2}\] the right hand side can be written as \[f(z) = \cos z + \beta \frac{\sin z}{z}.\] If we plot this you can see that there are regions where $|f(z)| > 1$ and it's not possible to solve the equation above. These \textbf{gaps} represent forbidden energies and they are separated by \textbf{bands} of allowed energies.
+
+        Since $q a = 2 \pi n / N$ where $n$ can be any integer and $N$ is such a huge number, $n$ can be chosen such that $\cos(q a)$ takes on effectively any value between $-1$ and $1$. The intersection of each of these values with $f(z)$ yields an allowed energy. Evidently there are $N$ allowed energies per band, so closely spaced that we can regard them as continuous.
+
+  \item Due to the Pauli exclusion principle, only two electrons can occupy each energy level. In practice there will be $N d$ free electrons, so if $d = 1$ the first band will be half filled, if $d = 2$ the first band will be filled, if $d = 3$ the second band will be half filled, etc.
+
+  \item If the topmost band is partially filled it takes very little energy to excite and electron to the next allowed level — these materials are called \textbf{conductors}. If the topmost band is completely filled it will take much more energy to excite an electron as it needs to jump across the band gap — these materials are called \textbf{insulators}. If the gap is narrow and the temperature is high then random thermal energy can knock an electron over the band gap — these materials are called \textbf{semiconductors}.
+\end{itemize}
+
 \end{document}
