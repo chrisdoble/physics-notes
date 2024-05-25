@@ -4538,4 +4538,61 @@ $S = 2$, $L = 6$, $J = 8$, the $n = 1, 2, \text{ and } 3$ shells are filled, the
                              & \approx \qty{0.345}{eV}
 \end{align*}
 
+\setcounter{subsection}{28}
+\subsection{}
+
+\begin{enumerate}
+  \item Each particle can be in one of three states, so $3^3 = 27$.
+
+  \item
+
+        \begin{align*}
+          a a a \\
+          a a b \\
+          a b b \\
+          a a c \\
+          a c c \\
+          b b b \\
+          b b c \\
+          b c c \\
+          c c c \\
+          a b c
+        \end{align*}
+
+        10
+
+  \item Fermions can't be in the same state, so 1.
+\end{enumerate}
+
+\subsection{}
+
+\begin{align*}
+  E_{n_x, n_y}            & = \frac{\hbar^2 \pi^2}{2 m} \left( \frac{n_x^2}{l_x^2} + \frac{n_y^2}{l_y^2} \right) \\
+                          & = \frac{\hbar^2 k^2}{2 m}                                                            \\
+  \frac{\pi^2}{l_x l_y}   & = \frac{\pi^2}{A}                                                                    \\
+  \frac{1}{4} (\pi k_F^2) & = \frac{N d}{2} \left( \frac{\pi^2}{A} \right)                                       \\
+  k_F                     & = \sqrt{2 \sigma \pi}                                                                \\
+  E_F                     & = \frac{\hbar^2}{2 m} k_F^2                                                          \\
+                          & = \frac{\pi \hbar^2 \sigma}{m}
+\end{align*}
+
+\setcounter{subsection}{31}
+\subsection{}
+
+\begin{enumerate}
+  \item
+
+        \begin{align*}
+          \frac{1}{8} \left( \frac{4}{3} \pi k_\pm^3 \right) & = N_\pm \left( \frac{\pi^3}{V} \right)                                                                                                    \\
+          k_\pm                                              & = \left( \frac{6 \pi^2 N_\pm}{V} \right)^{1 / 3}                                                                                          \\
+          d E                                                & = \frac{\hbar^2 k^2}{2 m} \frac{V}{2 \pi^2} k^2 \,d k                                                                                     \\
+                                                             & = \frac{\hbar^2 V}{4 \pi^2 m} k^4 \,d k                                                                                                   \\
+          E_\text{total}                                     & = \frac{\hbar^2 V}{4 \pi^2 m} \left( \int_0^{k_+} k^4 \,d k + \int_0^{k_-} k^4 \,d k \right)                                              \\
+                                                             & = \frac{\hbar^2 V}{20 \pi^2 m} \left[ \left( \frac{6 \pi^2 N_+}{V} \right)^{5 / 3} + \left( \frac{6 \pi^2 N_-}{V} \right)^{5 / 3} \right] \\
+                                                             & = \frac{\hbar^2}{20 \pi^2 m} [(6 \pi^2 N_+)^{5 / 3} + (6 \pi^2 N_-)^{5 / 3}] V^{-2 / 3}
+        \end{align*}
+
+        If $N_+ = N_- = N$ then \[E_\text{total} = \frac{\hbar^2 (6 \pi^2 N)^{5 / 3}}{10 \pi^2 m} V^{-2 / 3}\]
+\end{enumerate}
+
 \end{document}
