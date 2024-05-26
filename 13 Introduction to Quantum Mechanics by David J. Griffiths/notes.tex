@@ -1111,4 +1111,22 @@
         \end{align*}
 \end{itemize}
 
+\subsubsection{How Operators Transsform}
+
+\begin{itemize}
+  \item There are two ways to calculate the effect of translation on an expectation value. An \textbf{active transformation} actually shifts the wavefunction over some distance, i.e. $\psi'(x) = \hat{T}(a) \psi(x) = \psi(x - a)$. A \textbf{passive transformation} leaves the wave function where it is and instead shifts the origin of the coordinate system in the opposite direction — this is achieved by transforming the operator.
+
+  \item The transformed operator $\hat{Q}'$ is defined to be the operator that gives the same expectation value in the untranslated state $\psi$ as does the operator $\hat{Q}$ in the translated state $\psi'$ \begin{align*}
+          \braket{\psi' | \hat{Q} | \psi'} & = \braket{T \psi | \hat{Q} | T \psi}                     \\
+                                           & = \braket{\psi | \hat{T}^\dagger \hat{Q} \hat{T} | \psi} \\
+                                           & = \braket{\psi | \hat{Q}' | \psi}
+        \end{align*} so $\hat{Q}' = \hat{T}^\dagger \hat{Q} \hat{T}$.
+
+  \item The transformed operator $\hat{x}'$ that is obtained by applying a transformation through a distance $a$ to the operator $\hat{x}$ is \[\hat{x}' = \hat{x} + a.\]
+
+  \item The transformed operator $\hat{p}'$ that is obtained by applying a transformation through a distance $a$ to the operator $\hat{p}$ is \[\hat{p}' = \hat{p}.\]
+
+  \item Using the above we can determine any transformed operator \[\hat{Q}(\hat{x}, \hat{p}) = \hat{T}^\dagger \hat{Q}(\hat{x}, \hat{p}) \hat{T} = \hat{Q}(\hat{x}', \hat{p}') = \hat{Q}(\hat{x} + a, \hat{p}).\]
+\end{itemize}
+
 \end{document}

@@ -4626,4 +4626,23 @@ $S = 2$, $L = 6$, $J = 8$, the $n = 1, 2, \text{ and } 3$ shells are filled, the
                           & = 1
 \end{align*}
 
+\subsection{}
+
+\begin{align*}
+  \hat{p}' f(x) & = \hat{T}(a)^\dagger \hat{p} \hat{T}(a) f(x)                 \\
+                & = \hat{T}(-a) \left( -i \hbar \frac{d}{d x} \right) f(x - a) \\
+                & = \hat{T}(-a) [-i \hbar f'(x - a)]                           \\
+                & = -i \hbar f'(x)                                             \\
+                & = \hat{p}
+\end{align*}
+
+\subsection{}
+
+\begin{align*}
+  \hat{Q}'(\hat{x}, \hat{p}) f(x) & = \hat{T}(a)^\dagger \hat{Q}(\hat{x}, \hat{p}) \hat{T}(a) f(x)                                            \\
+                                  & = \hat{T}(-a) \left( \sum_{m = 0}^\infty \sum_{n = 0}^\infty a_{m n} \hat{x}^m \hat{p}^m \right) f(x - a) \\
+                                  & = \left( \sum_{m = 0}^\infty \sum_{n = 0}^\infty a_{m n} (\hat{x} + a)^m \hat{p}^m \right) f(x)           \\
+                                  & = \hat{Q}(\hat{x} + a, \hat{p}) f(x)
+\end{align*}
+
 \end{document}
