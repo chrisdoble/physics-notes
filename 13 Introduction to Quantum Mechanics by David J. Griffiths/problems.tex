@@ -4595,4 +4595,23 @@ $S = 2$, $L = 6$, $J = 8$, the $n = 1, 2, \text{ and } 3$ shells are filled, the
         If $N_+ = N_- = N$ then \[E_\text{total} = \frac{\hbar^2 (6 \pi^2 N)^{5 / 3}}{10 \pi^2 m} V^{-2 / 3}\]
 \end{enumerate}
 
+\section{Symmetries \& Conservation Laws}
+
+\subsection{}
+
+\begin{enumerate}
+  \item $\psi(x, y, z)$ mirrored across the $xy$ plane becomes $\psi(x, y, -z)$, then rotated $\ang{180}$ around the $z$ axis becomes $\psi(-x, -y, -z)$.
+
+  \item In spherical coordinates, mirorring across the $xy$ plan turns $\theta$ into $\pi - \theta$ and rotating $\ang{180}$ around the $z$ axis $\phi$ becomes $\phi + \pi$ so $\psi(r, \theta, \phi)$ becomes $\psi(r, \pi - \theta, \phi + \pi)$.
+
+  \item
+
+        \begin{align*}
+          \hat{\Pi} \psi_{n \ell m}(r, \theta, \phi) & = \hat{\Pi} [R_{n \ell}(r) Y_\ell^m(\theta, \phi)] \\
+                                                     & = R_{n \ell}(r) Y_\ell^m(\pi - \theta, \phi + \pi) \\
+                                                     & = (-1)^\ell R_{n \ell}(r) Y_\ell^m(\theta, \phi)   \\
+                                                     & = (-1)^\ell \psi_{n \ell m}(r, \theta, \phi)
+        \end{align*}
+\end{enumerate}
+
 \end{document}
