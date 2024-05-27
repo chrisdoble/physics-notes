@@ -1163,4 +1163,27 @@
         Both of these are true if the operator commutes with the Hamiltonian.
 \end{itemize}
 
+\subsection{Parity}
+
+\subsubsection{Parity in One Dimension}
+
+\begin{itemize}
+  \item In one-dimension, the parity operator is defined as \[\hat{\Pi} \psi(x) = \psi(-x).\]
+
+  \item The parity operator is its own inverse.
+
+  \item The position and momentum operators are ``odd under parity'' \begin{align*}
+          \hat{x}' & = \hat{\Pi}^\dagger \hat{x} \hat{\Pi} = -\hat{x}  \\
+          \hat{p}' & = \hat{\Pi}^\dagger \hat{p} \hat{\Pi} = -\hat{p}.
+        \end{align*}
+
+  \item A system has \textbf{inversion symmetry} if the Hamiltonian is unchanged by a parity transformation \[\hat{H}' = \hat{\Pi}^\dagger \hat{H} \hat{\Pi} = \hat{H}\] or \[[\hat{H}, \hat{\Pi}] = 0.\]
+
+  \item If the Hamiltonian describes a particle of mass $m$ in a one-dimensional potential $V(x)$ then inversion symmetry means the potential is an even function of position \[V(x) = V(-x).\]
+
+  \item Inversion symmetry means we can find a complete set of simultaneous eigenstates of $\hat{H}$ and $\hat{\Pi}$ \[\hat{\Pi} \psi_n(x) = \psi_n(-x) = \pm \psi_n(x)\] so the stationary states of a potential that is an even function of position are themselves even or odd functions.
+
+  \item Inversion symmetry also means that, according to Ehrenfest's theorem, \[\frac{d}{d t} \braket{\Pi} = \frac{i}{\hbar} \braket{[\hat{H}, \hat{\Pi}]} = 0\] so parity is conserved for a particle moving in a symmetric potential, e.g. if a wave function is even at time $t = 0$ it will be even at any later time $t$.
+\end{itemize}
+
 \end{document}

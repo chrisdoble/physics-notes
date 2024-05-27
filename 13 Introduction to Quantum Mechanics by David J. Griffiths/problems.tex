@@ -4671,4 +4671,34 @@ $S = 2$, $L = 6$, $J = 8$, the $n = 1, 2, \text{ and } 3$ shells are filled, the
         \end{align*}
 \end{enumerate}
 
+\subsection{}
+
+\begin{enumerate}
+  \item
+
+        \begin{align*}
+          \braket{\phi | \hat{\Pi} \psi} & = \int_{-\infty}^\infty \phi^*(x) \hat{\Pi} \psi(x) \,d x \\
+                                         & = \int_{-\infty}^\infty \phi^*(x) \psi(-x) \,d x          \\
+          u                              & = -x                                                      \\
+          d u                            & = -d x                                                    \\
+          \braket{\phi | \hat{\Pi} \psi} & = \int_\infty^{-\infty} \phi^*(-u) \psi(u) (-du)          \\
+                                         & = \int_{-\infty}^\infty \phi^*(-u) \psi(u) \,d u          \\
+                                         & = \int_{-\infty}^\infty \hat{\Pi} \phi^*(u) \psi(u) \,d u \\
+                                         & = \braket{\hat{\Pi} \phi | \psi}                          \\
+          \hat{\Pi}                      & = \hat{\Pi}^\dagger
+        \end{align*}
+
+  \item
+
+        \begin{align*}
+          \hat{\Pi} f(x)  & = \lambda f(x)           \\
+          f(-x)           & = \lambda f(x)           \\
+          \hat{\Pi} f(-x) & = \lambda f(-x)          \\
+          f(x)            & = \lambda f(-x)          \\
+          f(x)            & = \lambda (\lambda f(x)) \\
+                          & = \lambda^2 f(x)         \\
+          \lambda         & = \pm 1
+        \end{align*}
+\end{enumerate}
+
 \end{document}
