@@ -1111,7 +1111,7 @@
         \end{align*}
 \end{itemize}
 
-\subsubsection{How Operators Transsform}
+\subsubsection{How Operators Transform}
 
 \begin{itemize}
   \item There are two ways to calculate the effect of translation on an expectation value. An \textbf{active transformation} actually shifts the wavefunction over some distance, i.e. $\psi'(x) = \hat{T}(a) \psi(x) = \psi(x - a)$. A \textbf{passive transformation} leaves the wave function where it is and instead shifts the origin of the coordinate system in the opposite direction — this is achieved by transforming the operator.
@@ -1127,6 +1127,26 @@
   \item The transformed operator $\hat{p}'$ that is obtained by applying a transformation through a distance $a$ to the operator $\hat{p}$ is \[\hat{p}' = \hat{p}.\]
 
   \item Using the above we can determine any transformed operator \[\hat{Q}(\hat{x}, \hat{p}) = \hat{T}^\dagger \hat{Q}(\hat{x}, \hat{p}) \hat{T} = \hat{Q}(\hat{x}', \hat{p}') = \hat{Q}(\hat{x} + a, \hat{p}).\]
+\end{itemize}
+
+\subsubsection{Translational Symmetry}
+
+\begin{itemize}
+  \item A system is \textbf{translationally invariant} (equivalent to saying it has translational symmetry) if the Hamiltonian is unchanged by the transformation \[\hat{H}' = \hat{T}^\dagger \hat{H} \hat{T} = \hat{H}.\] Because $\hat{T}$ is unitary we can multiply both sides of this equation by $\hat{T}$ to get \[\hat{H} \hat{T} = \hat{T} \hat{H}.\] Therefore, a system has translational symmetry if the Hamiltonian commutes with the translation operator: \[[\hat{H}, \hat{T}] = 0.\]
+
+  \item The Hamiltonian for a particle of mass $m$ in a one-dimensional potential is \[\hat{H} = \frac{\hat{p}^2}{2 m} + V(x).\] Therefore the transformed Hamiltonian is \[\hat{H}' = \frac{\hat{p}^2}{2 m} + V(x + a).\] and translational symmetry implies \[V(x + a) = V(x).\]
+
+  \item $V(x + a) = V(x)$ either implies $V(x)$ is constant, in which case the system is said to have \textbf{continuous translational symmetry}, or that $V(x)$ is periodic, in which case it is said to have \textbf{discrete translational symmetry}.
+
+  \item If two operators commute they have a complete set of simultaneous eigenstates. That means if the Hamiltonian is translationally invariant (i.e. if it commutes with the translation operator), then the eigenstates $\psi(x)$ of the Hamiltonian can be chosen to be simultaneous eigenstates of $\hat{T}$: \[\hat{H} \psi(x) = E \psi(x) \text{ and } \hat{T}(a) \psi(x) = \lambda \psi(x).\] Since $\hat{T}$ is unitary, its eigenvalues have magnitude $1$ which means $\lambda$ can be written $\lambda = e^{i \phi}$ for some real number $\phi$. Conventionally this is written as \[\psi(x - a) = e^{-i q a} \psi(x).\]
+
+  \item Alternatively this can be written as \[\psi(x) = e^{i q x} u(x)\] where $u(x)$ is a periodic function of $x$: $u(x + a) = u(x)$ and $e^{i q x}$ is a travelling wave with wavelength $2 \pi / q$. This is known as \textbf{Bloch's theorem} and it says that the stationary states of a particle in a periodic potential are periodic functions multiplying travelling waves.
+
+  \item If a system has continuous translation symmetry then the Hamiltonian commutes with $\hat{T}(a)$ for any choice of $a$. It's useful to consider an infinitesimal translation \[\hat{T}(\delta) = e^{-i \delta \hat{p} / \hbar} \approx 1 - i \frac{\delta}{\hbar} \hat{p}.\]
+
+  \item If the Hamiltonian has continuous translation symmetry then it commutes with the translation operator and hence \[[\hat{H}, \hat{T}(\delta)] = \left[ \hat{H}, 1 - \frac{\delta}{\hbar} \hat{p} \right] = 0 \Rightarrow [\hat{H}, \hat{p}] = 0.\] Then, according to the generalised Ehrenfest's theorem \[\frac{d}{d t} \braket{p} = \frac{i}{\hbar} \braket{[\hat{H}, \hat{p}]} = 0\] i.e. momentum is conserved.
+
+  \item Continuous translation symmetry implies conservation of momentum.
 \end{itemize}
 
 \end{document}

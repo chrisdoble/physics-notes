@@ -4645,4 +4645,30 @@ $S = 2$, $L = 6$, $J = 8$, the $n = 1, 2, \text{ and } 3$ shells are filled, the
                                   & = \hat{Q}(\hat{x} + a, \hat{p}) f(x)
 \end{align*}
 
+\subsection{}
+
+\begin{align*}
+  \psi(x)                  & = e^{i q x} u(x)            \\
+  \psi(x - a)              & = e^{-i q a} \psi(x)        \\
+  e^{i q (x - a)} u(x - a) & = e^{-i q a} e^{i q x} u(x) \\
+                           & = e^{i q (x - a)} u(x)      \\
+  u(x - a)                 & = u(x)
+\end{align*}
+
+\setcounter{subsection}{6}
+\subsection{}
+
+\begin{enumerate}
+  \item
+
+        \begin{align*}
+          \hat{T}(a) \psi(x_1, x_2) & = \psi(x_1 - a, x_2 - a)                                                                                                      \\
+                                    & = \sum_{n = 0}^\infty \frac{1}{n!} (-a)^n \frac{d^n}{d x_1^n} \psi(x_1, x_2 - a)                                              \\
+                                    & = \exp \left( -\frac{i a}{\hbar} \hat{p}_1 \right) \psi(x_1, x_2 - a)                                                         \\
+                                    & = \exp \left( -\frac{i a}{\hbar} \hat{p}_1 \right) \sum_{n = 0}^\infty \frac{1}{n!} (-a)^n \frac{d^n}{d x_2^n} \psi(x_1, x_2) \\
+                                    & = \exp \left[ -\frac{i a}{\hbar} (\hat{p}_1 + \hat{p}_2) \right] \psi(x_1, x_2)                                               \\
+                                    & = \exp \left( -\frac{i a}{\hbar} \hat{P} \right) \psi(x_1, x_2)
+        \end{align*}
+\end{enumerate}
+
 \end{document}
