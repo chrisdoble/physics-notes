@@ -16,6 +16,7 @@
 
 \newcommand{\ev}[1]{\langle #1 \rangle}
 \renewcommand{\vec}[1]{\boldsymbol{\mathbf{#1}}}
+\newcommand{\uvec}[1]{\hat{\vec{#1}}}
 
 \title{Introduction to Quantum Mechanics by David J. Griffiths Notes}
 \author{Chris Doble}
@@ -1184,6 +1185,27 @@
   \item Inversion symmetry means we can find a complete set of simultaneous eigenstates of $\hat{H}$ and $\hat{\Pi}$ \[\hat{\Pi} \psi_n(x) = \psi_n(-x) = \pm \psi_n(x)\] so the stationary states of a potential that is an even function of position are themselves even or odd functions.
 
   \item Inversion symmetry also means that, according to Ehrenfest's theorem, \[\frac{d}{d t} \braket{\Pi} = \frac{i}{\hbar} \braket{[\hat{H}, \hat{\Pi}]} = 0\] so parity is conserved for a particle moving in a symmetric potential, e.g. if a wave function is even at time $t = 0$ it will be even at any later time $t$.
+\end{itemize}
+
+\subsubsection{Parity in Three Dimensions}
+
+\begin{itemize}
+  \item In three-dimensions the parity operator is defined as \[\hat{\Pi} \psi(\vec{r}) = \psi'(\vec{r}) = \psi(-\vec{r}).\]
+
+  \item Again, the position and momentum operators are odd under parity \begin{align*}
+          \hat{r}' & = \hat{\Pi}^\dagger \hat{r} \hat{\Pi} = -\hat{r}, \\
+          \hat{p}' & = \hat{\Pi}^\dagger \hat{p} \hat{\Pi} = -\hat{p}.
+        \end{align*}
+
+  \item Any other operator transforms as \[\hat{Q}'(\uvec{r}, \uvec{p}) = \hat{\Pi}^\dagger \hat{Q}(\uvec{r}, \uvec{p}) \hat{\Pi} = \hat{Q}(-\uvec{r}, -\uvec{p}).\]
+
+  \item $\uvec{L}$ is even under parity \[\uvec{L}' = \hat{\Pi}^\dagger \uvec{L} \hat{\Pi} = \uvec{r}' \times \uvec{p}' = (-\uvec{r}) \times (-\uvec{p}) = \uvec{r} \times \uvec{p} = \uvec{L}.\]
+
+  \item Vectors that are even under parity (unlike ``true'' vectors such as $\uvec{r}$ and $\uvec{p}$) are called \textbf{pseudovectors}.
+
+  \item Scalars that are odd under parity (unlike ``true'' scalars such as $\uvec{r} \cdot \uvec{r}$) are called \textbf{pseudoscalars}.
+
+  \item In three dimensions, the Hamiltonian for a particle of mass $m$ moving in a potential $V(\vec{r})$ will have inversion symmetry if $V(-\vec{r}) = V(\vec{r})$. Any central potential satisfies this condition.
 \end{itemize}
 
 \end{document}
