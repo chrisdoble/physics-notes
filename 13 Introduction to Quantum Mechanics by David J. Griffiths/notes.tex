@@ -1208,4 +1208,18 @@
   \item In three dimensions, the Hamiltonian for a particle of mass $m$ moving in a potential $V(\vec{r})$ will have inversion symmetry if $V(-\vec{r}) = V(\vec{r})$. Any central potential satisfies this condition.
 \end{itemize}
 
+\subsubsection{Parity Selection Rules}
+
+\begin{itemize}
+  \item A particular quantum state can be considered a vector $\ket{S(t)}$. That vector can be expressed with respect to any number of different bases, for example the position basis \[\Psi(x, t) = \braket{x | S(t)}.\] Similarly, operators can be expressed with respect to a particular basis by their \textbf{matrix elements} \[\braket{e_m | \hat{Q} | e_n} = Q_{m n}.\]
+
+  \item \textbf{Selection rules} tell you when a matrix element is zero based on the symmetry of the situation.
+
+  \item The selection rules of the electric dipole operator \[\uvec{p}_e = q \uvec{r}\] determine which atomic transitions are allowed and which are forbidden. The operator is odd under parity because the position vector $\uvec{r}$ is odd \[\hat{\Pi}^\dagger \uvec{p}_e \hat{\Pi} = -\uvec{p}_e.\] If we consider the matrix elements of the operator between two states $\psi_{n \ell m}$ and $\psi_{n' \ell' m}$ we get \begin{align*}
+          \braket{n' \ell' m' | \uvec{p}_e | n \ell m} & = -\braket{n' \ell' m | \hat{\Pi}^\dagger \uvec{p}_e \hat{\Pi} | n \ell m} \\
+                                                       & = -\braket{n' \ell' m | (-1)^{\ell'} \uvec{p}_e (-1)^\ell | n \ell m}      \\
+                                                       & = (-1)^{\ell + \ell' + 1} \braket{n' \ell' m | \uvec{p}_e | n \ell m}.     \\
+        \end{align*} From this we can see \[\braket{n' \ell' m | \uvec{p}_e | n \ell m} = \vec{0} \text{ if } \ell + \ell' \text{ is even.}\] This is called \textbf{Laporte's rule}; it says that the matrix elements of the dipole moment operator vanish between states with the same parity. Laporte's rule applies to any operator that is odd under parity.
+\end{itemize}
+
 \end{document}
