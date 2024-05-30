@@ -2,6 +2,7 @@
 \usepackage{amsmath} % For align*
 \usepackage{bookmark} % For links
 \usepackage{braket} % For bra-ket notation
+\usepackage{qcircuit} % For quantum circuit diagrams
 
 \hypersetup{
   colorlinks=true,
@@ -91,6 +92,35 @@
   \item Given any basis states $\ket{a}$ and $\ket{b}$ it is possible to express an arbitrary state as a linear combination $\alpha \ket{a} + \beta \ket{b}$ of those states. For example, if $\ket{a} = \ket{+} = (\ket{0} + \ket{1}) / \sqrt{2}$ and $\ket{b} = \ket{-} = (\ket{0} - \ket{1}) / \sqrt{2}$ then \[\ket{\phi} = \alpha \ket{0} + \beta \ket{1} = \alpha \frac{\ket{+} + \ket{-}}{\sqrt{2}} + \beta \frac{\ket{0} - \ket{1}}{\sqrt{2}} = \frac{\alpha + \beta}{\sqrt{2}} \ket{+} + \frac{\alpha - \beta}{\sqrt{2}} \ket{-}.\]
 
   \item If $\ket{a}$ and $\ket{b}$ are orthonormal, it's also possible to perform a measurement with respect to that basis. In the example above you would measure $\ket{+}$ with probability $|\alpha + \beta|^2 / 2$ and $\ket{-}$ with probability $|\alpha - \beta|^2 / 2$.
+\end{itemize}
+
+\subsubsection{Quantum circuits}
+
+\begin{itemize}
+  \item Applying a \textsc{cnot} gate three times swaps the state of two qubits: \begin{align*}
+          \ket{a, b} & \rightarrow \ket{a, a \oplus b}                                           \\
+                     & \rightarrow \ket{a \oplus (a \oplus b), a \oplus b} = \ket{b, a \oplus b} \\
+                     & \rightarrow \ket{b, (a \oplus b) \oplus b} = \ket{b, a}.
+        \end{align*} This can be represented in a quantum circuit diagram \[\Qcircuit @C=1em @R=.7em {
+          & \ctrl{1} & \targ & \ctrl{1} & \qw \\
+          & \targ & \ctrl{-1} & \targ & \qw
+          }\] which is equivalent to \[\Qcircuit @C=1em @R=1.5em {
+          & \qswap & \qw \\
+          & \qswap \qwx & \qw
+          }\]
+
+  \item Quantum circuits don't allow loops (they are acyclic), they don't allow multiple wires to be joined into one, and they don't allow one wire to be split into multiple wires.
+
+  \item If $U$ is a unitary matrix operating on $n$ qubits then $U$ can be regarded as a quantum gate. Then we can define a controlled-$U$ gate which takes a single control qubit and $n$ target qubits. If the control qubit is set to $0$ then nothing happens to the target qubits. If it's set to 1 then the $U$ gate is applied to the target qubits. \[\Qcircuit @C=1em @R=.7em {
+          & \ctrl{1} & \qw \\
+          & \multigate{2}{U} & \qw \\
+          & \ghost{U} & \qw \\
+          & \ghost{U} & \qw
+          }\]
+
+  \item Measurement is represented as \[\Qcircuit @C=1em @R=.7em {
+          \lstick{\ket{\psi}} & \meter & \cw
+          }\] where the double lines represent a classical bit.
 \end{itemize}
 
 \end{document}
