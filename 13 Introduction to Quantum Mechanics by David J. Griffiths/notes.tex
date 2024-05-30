@@ -1222,4 +1222,34 @@
         \end{align*} From this we can see \[\braket{n' \ell' m | \uvec{p}_e | n \ell m} = \vec{0} \text{ if } \ell + \ell' \text{ is even.}\] This is called \textbf{Laporte's rule}; it says that the matrix elements of the dipole moment operator vanish between states with the same parity. Laporte's rule applies to any operator that is odd under parity.
 \end{itemize}
 
+\subsection{Rotational Symmetry}
+
+\subsubsection{Rotations About the $z$ Axis}
+
+\begin{itemize}
+  \item $\hat{R}_z$ is the operator that rotates a function about the $z$ axis by an angle $\varphi$ \[\hat{R}_z(\varphi) \psi(r, \theta, \phi) = \psi'(r, \theta, \phi) = \psi(r, \theta, \phi - \varphi).\]
+
+  \item This operator can be expressed in terms of the angular momentum operator by replacing $\psi(r, \theta, \phi - \varphi)$ by its Taylor series (expanded around $\phi$) \begin{align*}
+          \hat{R}_z(\varphi) \psi(r, \theta, \phi) & = \psi(r, \theta, \phi - \varphi)                                                                            \\
+                                                   & = \sum_{n = 0}^\infty \frac{1}{n!} (-\varphi)^n \frac{d^n}{d \phi^n} \psi(r, \theta, \phi)                   \\
+                                                   & = \sum_{n = 0}^\infty \frac{1}{n!} \left( -\frac{i \varphi}{\hbar} \hat{L}_z \right)^n \psi(r, \theta, \phi) \\
+                                                   & = \exp \left( -\frac{i \varphi}{\hbar} \hat{L}_z \right) \psi(r, \theta, \phi)                               \\
+          \hat{R}_z(\varphi)                       & = \exp \left( -\frac{i \varphi}{\hbar} \hat{L}_z \right).
+        \end{align*}
+
+  \item The $\uvec{r}$ operator transforms under rotation like \[\begin{pmatrix}
+            \hat{x}' \\
+            \hat{y}' \\
+            \hat{z}'
+          \end{pmatrix} = \begin{pmatrix}
+            \cos \varphi & -\sin \varphi & 0 \\
+            \sin \varphi & \cos \varphi  & 0 \\
+            0            & 0             & 1
+          \end{pmatrix} \begin{pmatrix}
+            \hat{x} \\
+            \hat{y} \\
+            \hat{z}
+          \end{pmatrix}.\]
+\end{itemize}
+
 \end{document}
