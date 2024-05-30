@@ -85,4 +85,12 @@
   \item Any multiple qubit logic gate may be composed from \textsc{cnot} and single qubit gates.
 \end{itemize}
 
+\subsubsection{Measurements in bases other than the computational basis}
+
+\begin{itemize}
+  \item Given any basis states $\ket{a}$ and $\ket{b}$ it is possible to express an arbitrary state as a linear combination $\alpha \ket{a} + \beta \ket{b}$ of those states. For example, if $\ket{a} = \ket{+} = (\ket{0} + \ket{1}) / \sqrt{2}$ and $\ket{b} = \ket{-} = (\ket{0} - \ket{1}) / \sqrt{2}$ then \[\ket{\phi} = \alpha \ket{0} + \beta \ket{1} = \alpha \frac{\ket{+} + \ket{-}}{\sqrt{2}} + \beta \frac{\ket{0} - \ket{1}}{\sqrt{2}} = \frac{\alpha + \beta}{\sqrt{2}} \ket{+} + \frac{\alpha - \beta}{\sqrt{2}} \ket{-}.\]
+
+  \item If $\ket{a}$ and $\ket{b}$ are orthonormal, it's also possible to perform a measurement with respect to that basis. In the example above you would measure $\ket{+}$ with probability $|\alpha + \beta|^2 / 2$ and $\ket{-}$ with probability $|\alpha - \beta|^2 / 2$.
+\end{itemize}
+
 \end{document}
