@@ -1268,4 +1268,16 @@
   \item If the Hamiltonian is rotationally invariant angular momentum is conserved.
 \end{itemize}
 
+\subsection{Degeneracy}
+
+\begin{itemize}
+  \item A transformation operator $\hat{Q}$ (e.g. rotation, translation), has a generating operator (e.g. $\uvec{L}$, $\uvec{p}$). If the Hamiltonian is symmetric under $\hat{Q}$, that implies it commutes with $\hat{Q}$ and also the generating operator. By Ehrenfest's theorem this means the observable associated with the generating operator is conserved. Thus symmetries result in conserved quantities.
+
+  \item Symmetries lead to most degeneracies in the energy spectrum. For example, if we have a stationary state $\ket{\psi_n}$ then $\ket{\psi_n'} = \hat{Q} \ket{\psi_n}$ is another stationary state of the same energy: \[\hat{H} \ket{\psi_n'} = \hat{H} (\hat{Q} \ket{\psi_n}) = \hat{Q} \hat{H} \ket{\psi_n} = \hat{Q} E_n \ket{\psi_n} = E_n \ket{\psi_n'}.\]
+
+  \item If there is only one symmetry operator (or multiple that all commute), you do not get degeneracy in the spectrum.
+
+  \item If there are multiple operators that don't commute with each other, you get degeneracy in the spectrum.
+\end{itemize}
+
 \end{document}

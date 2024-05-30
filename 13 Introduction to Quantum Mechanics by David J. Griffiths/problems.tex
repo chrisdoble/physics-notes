@@ -4890,4 +4890,67 @@ So $\braket{n' \ell' m | \uvec{L} | n \ell m} = \vec{0}$ if $\ell + \ell'$ is od
                                  \end{pmatrix}
 \end{align*}
 
+\setcounter{subsection}{17}
+\subsection{}
+
+\begin{enumerate}
+  \item
+
+        \begin{align*}
+          [\hat{\Pi}, \hat{T}(a)] f(x) & = \hat{\Pi} \hat{T}(a) f(x) - \hat{T}(a) \hat{\Pi} f(x) \\
+                                       & = \hat{\Pi} f(x - a) - \hat{T}(a) f(-x)                 \\
+                                       & = f(-x + a) - f(-x - a)
+        \end{align*}
+
+  \item
+
+        \begin{align*}
+          f_p(x)           & = \frac{1}{\sqrt{2 \pi \hbar}} e^{i p x / \hbar}    \\
+          \hat{\Pi} f_p(x) & = \frac{1}{\sqrt{2 \pi \hbar}} e^{i p (-x) / \hbar} \\
+                           & = f_{-p}(x)
+        \end{align*}
+
+  \item
+
+        \begin{align*}
+          \hat{T}(a) \left[ \frac{1}{\sqrt{\pi \hbar}} \cos \left( \frac{p x}{\hbar} \right) \right] & = \frac{1}{\sqrt{\pi \hbar}} \cos \left( \frac{p (x - a)}{\hbar} \right)                                         \\
+                                                                                                     & = \frac{1}{\sqrt{\pi \hbar}} \cos \left( \frac{p x}{\hbar} - \frac{p a}{\hbar} \right)                           \\
+          -\frac{p a}{\hbar}                                                                         & = \arctan \left( -\frac{b}{a} \right)                                                                            \\
+          \tan \left( -\frac{p a}{\hbar} \right)                                                     & = -\frac{b}{a}                                                                                                   \\
+          b                                                                                          & = -a \tan \left( -\frac{p a}{\hbar} \right)                                                                      \\
+          \frac{1}{\sqrt{\pi \hbar}}                                                                 & = \sqrt{a^2 + b^2}                                                                                               \\
+          \frac{1}{\pi \hbar}                                                                        & = a^2 + b^2                                                                                                      \\
+                                                                                                     & = a^2 + a^2 \tan^2 \left( -\frac{p a}{\hbar} \right)                                                             \\
+                                                                                                     & = a^2 \left[ 1 + \tan^2 \left( -\frac{p a}{\hbar} \right) \right]                                                \\
+                                                                                                     & = a^2 \sec^2 \left( -\frac{p a}{\hbar} \right)                                                                   \\
+          a                                                                                          & = \frac{1}{\sqrt{\pi \hbar}} \cos \left( -\frac{p a}{\hbar} \right)                                              \\
+          \frac{1}{\pi \hbar}                                                                        & = \frac{1}{\pi \hbar} \cos^2 \left( -\frac{p a}{\hbar} \right) + b^2                                             \\
+          b                                                                                          & = \frac{1}{\sqrt{\pi \hbar}} \sin \left( -\frac{p a}{\hbar} \right)                                              \\
+          \hat{T}(a) \left[ \frac{1}{\sqrt{\pi \hbar}} \cos \left( \frac{p x}{\hbar} \right) \right] & = \frac{1}{\sqrt{\pi \hbar}} \cos \left( -\frac{p a}{\hbar} \right) \cos \left( \frac{p x}{\hbar} \right)        \\
+                                                                                                     & \qquad + \frac{1}{\sqrt{\pi \hbar}} \sin \left( -\frac{p a}{\hbar} \right) \sin \left( \frac{p x}{\hbar} \right)
+        \end{align*}
+\end{enumerate}
+
+\subsection{}
+
+\begin{enumerate}
+  \item
+
+        \begin{align*}
+          [\hat{L}_i, \hat{V}_j]   & = i \hbar \epsilon_{i j k} \hat{V}_k                  \\
+          \epsilon_{i j k}         & = \begin{cases}
+                                         1  & i j k = 123, \,231, \,312 \\
+                                         -1 & i j k = 132, \,213, \,321 \\
+                                         0  & \text{otherwise}
+                                       \end{cases}                      \\
+          \hat{V}_\pm              & = \hat{V}_x \pm i \hat{V}_y                           \\
+          [\hat{L}_z, \hat{V}_\pm] & = [\hat{L}_z, \hat{V}_x \pm i \hat{V}_y]              \\
+                                   & = [\hat{L}_z, \hat{V}_x] \pm i [\hat{L}_z, \hat{V}_y] \\
+                                   & = i \hbar \hat{V}_y \pm i (-i \hbar \hat{V}_x)        \\
+                                   & = \hbar (\pm \hat{V}_x + i \hat{V}_y)                 \\
+          [\hat{L}_z, \hat{V}_+]   & = \hbar \hat{V}_+                                     \\
+          [\hat{L}_z, \hat{V}_-]   & = -\hbar \hat{V}_-
+        \end{align*}
+\end{enumerate}
+
 \end{document}
