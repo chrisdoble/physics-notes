@@ -44,4 +44,12 @@
   \item Before measurement a qubit is in a linear combination of $\ket{0}$ and $\ket{1}$ but when measured you get one or the other and the state of the system changes to match the measured result.
 \end{itemize}
 
+\subsubsection{Multiple Bits}
+
+\begin{itemize}
+  \item A two qubit system has four computational basis state $\ket{00}$, $\ket{01}$, $\ket{10}$, and $\ket{11}$ so the general expression for the state of such a system is \[\ket{\psi} = \alpha_{00} \ket{00} + \alpha_{01} \ket{01} + \alpha_{10} \ket{10} + \alpha_{11} \ket{11}.\]
+
+  \item If you were to measure the first qubit, you would get $\ket{0}$ with probability $|\alpha_{00}|^2 + |\alpha_{01}|^2$ and the system would be left in the state \[\ket{\psi} = \frac{\alpha_{00} \ket{00} + \alpha_{01} \ket{01}}{\sqrt{|\alpha_{00}|^2 + |\alpha_{01}|^2}},\] i.e. it is renormalised such that the normalisation condition still holds.
+\end{itemize}
+
 \end{document}
