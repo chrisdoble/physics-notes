@@ -19,4 +19,29 @@
 
 \tableofcontents
 
+\part{Fundamental concepts}
+
+\section{Introduction and overview}
+
+\setcounter{subsection}{1}
+\subsection{Quantum bits}
+
+\begin{itemize}
+  \item The special states $\ket{0}$ and $\ket{1}$ form an orthonormal basis and are known as \textbf{computational basis states}.
+
+  \item A quantum bit (\textbf{qubit}) is a linear combination of the computational basis states \[\ket{\psi} = \alpha \ket{0} + \beta \ket{1}\] where $\alpha$ and $\beta$ are complex numbers.
+
+  \item When we measure a qubit we either get $\ket{0}$ with probability $|\alpha|^2$ or $\ket{1}$ with probability $|\beta|^2$. Thus, $|\alpha|^2 + |\beta|^2 = 1$ and a qubit can be thought of as a unit vector in a two-dimensional complex vector space.
+
+  \item If a qubit is in the state \[\ket{+} = \frac{1}{\sqrt{2}} (\ket{0} + \ket{1})\] there's a 50/50 chance of measuring $\ket{0}$ or $\ket{1}$.
+
+  \item If we let \[\alpha = e^{i \gamma} \cos \frac{\theta}{2}\] and \[\beta = e^{i \gamma} e^{i \varphi} \sin \frac{\theta}{2}\] then \begin{align*}
+          |\alpha|^2 + |\beta|^2 & = \alpha^* \alpha + \beta^* \beta                   \\
+                                 & = \cos^2 \frac{\theta}{2} + \sin^2 \frac{\theta}{2} \\
+                                 & = 1
+        \end{align*} so the qubit is still normalised and it can be written \[\ket{\psi} = e^{i \gamma} \left( \cos \frac{\theta}{2} \ket{0} + e^{i \varphi} \sin \frac{\theta}{2} \ket{1} \right).\] It turns out that $e^{i \gamma}$ has no observable effects and we can effectively write \[\ket{\psi} = \cos \frac{\theta}{2} \ket{0} + e^{i \varphi} \sin \frac{\theta}{2} \ket{1}.\] This defines a point on a three-dimensional sphere known as the \textbf{Bloch sphere} where $\theta$ and $\varphi$ take on their usual roles in a spherical coordinate system.
+
+  \item Before measurement a qubit is in a linear combination of $\ket{0}$ and $\ket{1}$ but when measured you get one or the other and the state of the system changes to match the measured result.
+\end{itemize}
+
 \end{document}
