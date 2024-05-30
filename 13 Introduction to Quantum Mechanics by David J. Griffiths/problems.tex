@@ -4843,4 +4843,51 @@ So $\braket{n' \ell' m | \uvec{L} | n \ell m} = \vec{0}$ if $\ell + \ell'$ is od
         \end{align*}
 \end{enumerate}
 
+\setcounter{subsection}{14}
+\subsection{}
+
+\begin{align*}
+  \hat{f}' & = \hat{R}^\dagger \hat{f} \hat{R}                                                                                                                   \\
+           & = \exp \left( \frac{i \varphi}{\hbar} \uvec{n} \cdot \uvec{L} \right) \hat{f} \exp \left( -\frac{i \varphi}{\hbar} \uvec{n} \cdot \uvec{L} \right)  \\
+           & \approx \left( 1 + \frac{i \delta}{\hbar} \uvec{n} \cdot \uvec{L} \right) \hat{f} \left( 1 - \frac{i \delta}{\hbar} \uvec{n} \cdot \uvec{L} \right) \\
+           & = \hat{f} + \frac{i \delta}{\hbar} \uvec{n} \cdot [\uvec{L}, \hat{f}]                                                                               \\
+           & = \hat{f}
+\end{align*}
+
+\subsection{}
+
+\begin{align*}
+  [\hat{L}_i, \hat{V}_j]     & = i \hbar \epsilon_{i j k} \hat{V}_k                                                                               \\
+  \epsilon_{i j k}           & = \begin{cases}
+                                   1  & i j k = 123, \,231, \,312 \\
+                                   -1 & i j k = 132, \,213, \,321 \\
+                                   0  & \text{otherwise}
+                                 \end{cases}                                                                                   \\
+  \hat{R}_{\uvec{y}}(\delta) & = \exp \left( -\frac{i \delta}{\hbar} \uvec{y} \cdot \uvec{L} \right)                                              \\
+                             & = 1 - \frac{i \delta}{\hbar} \hat{L}_y                                                                             \\
+  \uvec{V}'                  & = \hat{R}_{\uvec{y}}(\delta)^\dagger \uvec{V} \hat{R}_{\uvec{y}}(\delta)                                           \\
+                             & = \left( 1 + \frac{i \delta}{\hbar} \hat{L}_y \right) \uvec{V} \left( 1 - \frac{i \delta}{\hbar} \hat{L}_y \right) \\
+                             & \approx \uvec{V} + \frac{i \delta}{\hbar} [\hat{L}_y, \uvec{V}]                                                    \\
+                             & = \begin{pmatrix}
+                                   \hat{V}_x + \frac{i \delta}{\hbar} [\hat{L}_y, \hat{V}_x] \\
+                                   \hat{V}_y + \frac{i \delta}{\hbar} [\hat{L}_y, \hat{V}_y] \\
+                                   \hat{V}_z + \frac{i \delta}{\hbar} [\hat{L}_y, \hat{V}_z]
+                                 \end{pmatrix}                          \\
+                             & = \begin{pmatrix}
+                                   \hat{V}_x + \delta \hat{V}_z \\
+                                   \hat{V}_y                    \\
+                                   \hat{V}_z - \delta V_x
+                                 \end{pmatrix}                                                                                     \\
+                             & = \begin{pmatrix}
+                                   1       & 0 & \delta \\
+                                   0       & 1 & 0      \\
+                                   -\delta & 0 & 1
+                                 \end{pmatrix} \uvec{V}                                                                                           \\
+  D                          & = \begin{pmatrix}
+                                   \cos \varphi  & 0 & \sin \varphi \\
+                                   0             & 1 & 0            \\
+                                   -\sin \varphi & 0 & \cos \varphi
+                                 \end{pmatrix}
+\end{align*}
+
 \end{document}
