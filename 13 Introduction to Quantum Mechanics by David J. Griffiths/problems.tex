@@ -4953,4 +4953,30 @@ So $\braket{n' \ell' m | \uvec{L} | n \ell m} = \vec{0}$ if $\ell + \ell'$ is od
         \end{align*}
 \end{enumerate}
 
+\subsection{}
+
+\begin{align*}
+  0                                       & = \braket{n' \ell' m' | [\hat{L}_-, \hat{f}] | n \ell m}                                                                    \\
+                                          & = \braket{n' \ell' m' | \hat{L}_- \hat{f} | n \ell m} - \braket{n' \ell' m' | \hat{f} \hat{L}_- | n \ell m}                 \\
+                                          & = A_{\ell'}^{m'} \braket{n' \ell' (m' + 1) | \hat{f} | n \ell m} - B_\ell^m \braket{n' \ell' m' | \hat{f} | n \ell (m - 1)} \\
+  \ell'                                   & = \ell                                                                                                                      \\
+  m'                                      & = m - 1                                                                                                                     \\
+  A_{\ell'}^{m'}                          & = \hbar \sqrt{\ell' (\ell' + 1) - m' (m' + 1)}                                                                              \\
+                                          & = \hbar \sqrt{\ell (\ell + 1) - m (m - 1)}                                                                                  \\
+  B_\ell^m                                & = \hbar \sqrt{\ell (\ell + 1) - m (m - 1)}                                                                                  \\
+  \braket{n' \ell m | \hat{f} | n \ell m} & = \braket{n' \ell (m - 1) | \hat{f} | n \ell (m - 1)}                                                                       \\
+  \braket{n' \ell m | \hat{f} | n \ell m} & = \braket{n' \ell (m + 1) | \hat{f} | n \ell (m + 1)}
+\end{align*}
+
+\subsection{}
+
+\begin{align*}
+  \psi                     & = \frac{1}{\sqrt{2}} (\psi_{211} + \psi_{21{-1}})                                                                                                                                     \\
+  \braket{\psi | r | \psi} & = \frac{1}{2} (\bra{\psi_{211}} + \bra{\psi_{21{-1}}}) r (\ket{\psi_{211} + \ket{\psi_{21{-1}}}})                                                                                     \\
+                           & = \frac{1}{2} (\braket{\psi_{211} | r | \psi_{211}} + \braket{\psi_{211} | r | \psi_{21{-1}}} + \braket{\psi_{21{-1}} | r | \psi_{211}} + \braket{\psi_{21{-1}} | r | \psi_{21{-1}}}) \\
+                           & = \frac{1}{2} (\braket{\psi_{211} | r | \psi_{211}} + \braket{\psi_{21{-1}} | r | \psi_{21{-1}}})                                                                                     \\
+                           & = \braket{21||r||21}                                                                                                                                                                  \\
+                           & = 30 a^2
+\end{align*}
+
 \end{document}
