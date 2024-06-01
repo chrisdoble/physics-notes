@@ -1298,4 +1298,17 @@
         \end{align*} where $C_{m1 \,m_2 \,M}^{j_1 \,j_2 \,J}$ are the Clebsch-Gordan coefficients and they vanish unless $M = m_1 + m_2$ and $J = j_1 + j2, j_1 + j_2 - 1, \ldots, |j_1 - j_2|$. In particular, the matrix elements of any component of a vector operator $\braket{n' \ell' m' | \hat{V}_i | n \ell m}$ are nonzero only if $\Delta \ell = 0, \pm 1$ and $\Delta m = 0, \pm 1$.
 \end{itemize}
 
+\subsection{Translations in Time}
+
+\begin{itemize}
+  \item The time translation operator has the effect \[\hat{U}(t) \Psi(x, 0) = \Psi(x, t)\] and is defined as \[\hat{U}(t) = \exp \left( -\frac{i t}{\hbar} \hat{H} \right).\]
+
+  \item The time translation operator offers a compact way to state the procedure for solving the time-dependent Schrödinger equation: first, write the wave function at time $t = 0$ as a superposition of stationary states \[\Psi(x, 0) = \sum_n c_n \psi_n(x),\] then apply the time translation operator \begin{align*}
+          \Psi(x, t) & = \hat{U}(t) \Psi(x, 0)                         \\
+                     & = \sum_n c_n \hat{U}(t) \psi_n(x)               \\
+                     & = \sum_n c_n e^{-i \hat{H} t / \hbar} \psi_n(x) \\
+                     & = \sum_n c_n e^{-i E_n t / \hbar} \psi_n(x).
+        \end{align*} This mimics the process of first solving the time-independent Schrödinger equation then tacking on the time-dependent factors.
+\end{itemize}
+
 \end{document}
