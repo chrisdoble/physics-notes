@@ -4979,4 +4979,53 @@ So $\braket{n' \ell' m | \uvec{L} | n \ell m} = \vec{0}$ if $\ell + \ell'$ is od
                            & = 30 a^2
 \end{align*}
 
+\subsection{}
+
+\begin{enumerate}
+  \item
+
+        \begin{align*}
+          [\hat{L}_i, \hat{V}_j]     & = i \hbar \epsilon_{i j k} \hat{V}_k                                                                        \\
+          \epsilon_{i j k}           & = \begin{cases}
+                                           1  & i j k = 123, \,231, \,312 \\
+                                           -1 & i j k = 132, \,213, \,321 \\
+                                           0  & \text{otherwise}
+                                         \end{cases}                                                                            \\
+          [\hat{L}_z, \hat{V}_z]     & = i \hbar \epsilon_{1 1 k} \hat{V}_k                                                                        \\
+                                     & = 0                                                                                                         \\
+          [\hat{L}_z, \hat{V}_\pm]   & = [\hat{L}_z, \hat{V}_x \pm i \hat{V}_y]                                                                    \\
+                                     & = [\hat{L}_z, \hat{V}_x] \pm i [\hat{L}_z, \hat{V}_y]                                                       \\
+                                     & = i \hbar \hat{V}_y \pm i (-i \hbar \hat{V}_x)                                                              \\
+                                     & = \hbar (\pm \hat{V}_x + i \hat{V}_y)                                                                       \\
+                                     & = \pm \hbar \hat{V}_\pm                                                                                     \\
+          [\hat{L}_\pm, \hat{V}_\pm] & = [\hat{L}_x \pm i \hat{L}_y, \hat{V}_x \pm i \hat{V}_y]                                                    \\
+                                     & = [\hat{L}_x \pm i \hat{L}_y, \hat{V}_x] \pm i [\hat{L}_x \pm i \hat{L}_y, \hat{V}_y]                       \\
+                                     & = [\hat{L}_x, \hat{V}_x] \pm i [\hat{L}_y, \hat{V}_x] \pm i [\hat{L}_x, \hat{V}_y] - [\hat{L}_y, \hat{V}_y] \\
+                                     & = \pm i (-i \hbar \hat{V}_z + i \hbar \hat{V}_z)                                                            \\
+                                     & = 0                                                                                                         \\
+          [\hat{L}_\pm, \hat{V}_z]   & = [\hat{L}_x \pm i \hat{L}_y, \hat{V}_z]                                                                    \\
+                                     & = [\hat{L}_x, \hat{V}_z] \pm i [\hat{L}_y, \hat{V}_z]                                                       \\
+                                     & = -i \hbar \hat{V}_y \pm i (i \hbar \hat{V}_x)                                                              \\
+                                     & = \hbar (\mp \hat{V}_x - i \hat{V}_y)                                                                       \\
+                                     & = \mp \hbar \hat{V}_\pm                                                                                     \\
+          [\hat{L}_\pm, \hat{V}_\mp] & = [\hat{L}_x \pm i \hat{L}_y, \hat{V}_x \mp i \hat{V}_y]                                                    \\
+                                     & = [\hat{L}_x \pm i \hat{L}_y, \hat{V}_x] \mp i [\hat{L}_x \pm i \hat{L}_y, \hat{V}_y]                       \\
+                                     & = [\hat{L}_x, \hat{V}_x] \pm i [\hat{L}_y, \hat{V}_x] \mp i [\hat{L}_x, \hat{V}_y] + [\hat{L}_y, \hat{V}_y] \\
+                                     & = \pm i ([\hat{L}_y, \hat{V}_x] - [\hat{L}_x, \hat{V}_y])                                                   \\
+                                     & = \pm i (-i \hbar \hat{V}_z - i \hbar \hat{V}_z)                                                            \\
+                                     & = \pm 2 \hbar \hat{V}_z
+        \end{align*}
+
+  \item
+
+        \begin{align*}
+          0 & = \braket{n' \ell' m' | [\hat{L}_z, \hat{V}_z] | n \ell m}                                                      \\
+            & = \braket{n' \ell' m' | \hat{L}_z \hat{V}_z | n \ell m} - \braket{n' \ell' m' | \hat{V}_z \hat{L}_z | n \ell m} \\
+            & = \hbar m' \braket{n' \ell' m' | \hat{V}_z | n \ell m} - \hbar m \braket{n' \ell' m' | \hat{V}_z | n \ell m}    \\
+            & = (m' - m) \braket{n' \ell' m' | \hat{V}_z | n \ell m}
+        \end{align*}
+
+        so $\braket{n' \ell' m' | \hat{V}_z | n \ell m} = 0$ unless $m' = m$.
+\end{enumerate}
+
 \end{document}

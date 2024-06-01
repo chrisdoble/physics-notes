@@ -1288,4 +1288,14 @@
   \item The selection rule for a scalar operator $\hat{f}$ is \[\braket{n' \ell' m' | \hat{f} | n \ell m} = \delta_{\ell \ell'} \delta_{m m'} \braket{n' \ell || f || n \ell}\] where $\braket{n' \ell || f || n \ell}$ is called a \textbf{reduced matrix element} and means ``a constant that depends on $n$, $\ell$, and $n'$, but not $m$.''
 \end{itemize}
 
+\subsubsection{Selection Rules for Vector Operators}
+
+\begin{itemize}
+  \item The selection rules for a vector operator $\uvec{V}$ are \begin{align*}
+          \braket{n' \ell' m' | \hat{V}_+ | n \ell m} & = -\sqrt{2} C_{m 1 m'}^{\ell 1 \ell'} \braket{n \ell' || V || n \ell}   \\
+          \braket{n' \ell' m' | \hat{V}_- | n \ell m} & = \sqrt{2} C_{m {-1} m'}^{\ell 1 \ell'} \braket{n \ell' || V || n \ell} \\
+          \braket{n' \ell' m' | \hat{V}_z | n \ell m} & = C_{m 0 m}^{\ell 1 \ell'} \braket{n \ell' || V || n \ell}
+        \end{align*} where $C_{m1 \,m_2 \,M}^{j_1 \,j_2 \,J}$ are the Clebsch-Gordan coefficients and they vanish unless $M = m_1 + m_2$ and $J = j_1 + j2, j_1 + j_2 - 1, \ldots, |j_1 - j_2|$. In particular, the matrix elements of any component of a vector operator $\braket{n' \ell' m' | \hat{V}_i | n \ell m}$ are nonzero only if $\Delta \ell = 0, \pm 1$ and $\Delta m = 0, \pm 1$.
+\end{itemize}
+
 \end{document}
