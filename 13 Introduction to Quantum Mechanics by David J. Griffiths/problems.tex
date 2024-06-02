@@ -5028,4 +5028,18 @@ So $\braket{n' \ell' m | \uvec{L} | n \ell m} = \vec{0}$ if $\ell + \ell'$ is od
         so $\braket{n' \ell' m' | \hat{V}_z | n \ell m} = 0$ unless $m' = m$.
 \end{enumerate}
 
+\setcounter{subsection}{25}
+\subsection{}
+
+\begin{align*}
+  \hat{p}_H(t) \psi_n(x) & = \hat{U}^\dag(t) \hat{p} \hat{U}(t) \psi_n(x)                                                                                           \\
+                         & = e^{i \hat{H} t / \hbar} i \sqrt{\frac{\hbar m \omega}{2}} (\hat{a}_+ - \hat{a}_-) e^{-i \hat{H} t / \hbar} \psi_n(x)                   \\
+                         & = \sqrt{\frac{\hbar m \omega}{2}} e^{-i E_n t / \hbar} e^{i \hat{H} t / \hbar} (\hat{a}_+ - \hat{a}_-) \psi_n(x)                         \\
+                         & = \sqrt{\frac{\hbar m \omega}{2}} e^{-i E_n t / \hbar} e^{i \hat{H} t / \hbar} [\sqrt{n + 1} \psi_{n + 1}(x) - \sqrt{n} \psi_{n - 1}(x)] \\
+                         & = \sqrt{\frac{\hbar m \omega}{2}} e^{-i E_n t / \hbar} [\sqrt{n + 1} e^{i E_{n + 1} t / \hbar} \psi_{n + 1}(x)                           \\
+                         & \qquad - \sqrt{n} e^{i E_{n - 1} t / \hbar} \psi_{n - 1}(x)]                                                                             \\
+                         & = \sqrt{\frac{\hbar m \omega}{2}} [\sqrt{n + 1} e^{i \omega t} \psi_{n + 1}(x) - \sqrt{n} e^{-i \omega t} \psi_{n - 1}(x)]               \\
+  \hat{p}_H              & = \sqrt{\frac{\hbar m \omega}{2}} (e^{i \omega t} \hat{a}_+ - e^{-i \omega t} \hat{a}_-)
+\end{align*}
+
 \end{document}

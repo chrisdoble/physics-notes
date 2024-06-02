@@ -1311,4 +1311,14 @@
         \end{align*} This mimics the process of first solving the time-independent Schrödinger equation then tacking on the time-dependent factors.
 \end{itemize}
 
+\subsubsection{The Heisenberg Picture}
+
+\begin{itemize}
+  \item We can also apply the time translation operator to operators \[\hat{Q}_H(T) = \hat{U}^\dag(t) \hat{Q} \hat{U}(t).\] These are called \textbf{Hiesenberg picture} operators.
+
+  \item Applying the time translation operator to $\hat{x}$ gives \[\hat{x}_H(\delta) \approx \hat{x}_H(0) + \frac{1}{m} \hat{p}_H(0) \delta.\] This closely matches the classical equation \[x(t) = x(0) + v(0) t.\]
+
+  \item This textbook works in the \textbf{Schrödginer picture} where operators are constant and the wave function evolves in time. Under the Hiesenberg picture things are reversed — operators evolve in time and the wave function is constant. The two are equivalent however \[\braket{\Psi(t) | \hat{Q} | \Psi(t)} = \braket{\Psi(0) | \hat{U}^\dag \hat{Q} \hat{U} | \Psi(0)} = \braket{\Psi_H | \hat{Q}_H(t) | \Psi_H}.\]
+\end{itemize}
+
 \end{document}
