@@ -5042,4 +5042,18 @@ So $\braket{n' \ell' m | \uvec{L} | n \ell m} = \vec{0}$ if $\ell + \ell'$ is od
   \hat{p}_H              & = \sqrt{\frac{\hbar m \omega}{2}} (e^{i \omega t} \hat{a}_+ - e^{-i \omega t} \hat{a}_-)
 \end{align*}
 
+\setcounter{subsection}{30}
+\subsection{}
+
+\begin{align*}
+  \psi(x)            & = \sqrt{\lambda} e^{-\lambda |x|}                                                                                                                                                                      \\
+  \Phi(p)            & = \frac{1}{\sqrt{2 \pi \hbar}} \int_{-\infty}^\infty e^{-i p x / \hbar} \sqrt{\lambda} e^{-\lambda |x|} \,d x                                                                                          \\
+                     & = \sqrt{\frac{\lambda}{2 \pi \hbar}} \int_{-\infty}^\infty e^{-(\lambda |x| + i p x / \hbar)} \,d x                                                                                                    \\
+                     & = \sqrt{\frac{2 \lambda}{\pi \hbar}} \frac{\lambda \hbar^2}{(p - i \lambda \hbar) (p + i \lambda \hbar)}                                                                                               \\
+  \hat{T}(a) \psi(x) & = \int_{-\infty}^\infty e^{-i a p / \hbar} f_p(x) \Phi(p) \,d p                                                                                                                                        \\
+                     & = \int_{-\infty}^\infty e^{-i a p / \hbar} \frac{1}{\sqrt{2 \pi \hbar}} e^{i p x / \hbar} \sqrt{\frac{2 \lambda}{\pi \hbar}} \frac{\lambda \hbar^2}{(p - i \lambda \hbar) (p + i \lambda \hbar)} \,d p \\
+                     & = \frac{\hbar \lambda^{3 / 2}}{\pi} \int_{-\infty}^\infty e^{i p (x - a) / \hbar} \frac{1}{(p - i \lambda \hbar) (p + i \lambda \hbar)} \,d p                                                          \\
+                     & = \sqrt{\lambda} e^{-\lambda |x - a|}
+\end{align*}
+
 \end{document}
