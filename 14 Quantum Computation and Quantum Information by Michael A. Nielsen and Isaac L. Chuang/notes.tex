@@ -171,4 +171,14 @@
   \item If the classical computer is non-deterministic, i.e. it can generate random numbers, this can be simulated on a quantum computer by preparing a qubit in the state $\ket{0}$, sending it through a Hadamard gate to produce $(\ket{0} + \ket{1}) / \sqrt{2}$, and then measuring the state. The result will be $\ket{0}$ or $\ket{1}$ with 50/50 probability.
 \end{itemize}
 
+\subsubsection{Quantum parallelism}
+
+\begin{itemize}
+  \item Quantum parallelism allows quantum computers to evaluate a function $f(x)$ over many different values of $x$ simultaneously. For example, if you have a gate that accepts two input qubits $\ket{x, y}$ and produces two output qubits $\ket{x, y \oplus f(x)}$ you can start with $\ket{0, 0}$, send the first bit through a Hadamard gate to produce $(\ket{0} + \ket{1}) \ket{0} / \sqrt{2}$, then send both bits through the $f(x)$ gate to produce $(\ket{0, f(0)} + \ket{1, f(1)}) / \sqrt{2}$.
+
+  \item The above process can be generalised to functions on an arbitrary number of bits by using a general operation known as the \textbf{Hadamard transform} which is $n$ Hadamard gates operating in parallel on $n$ qubits. This is denoted $H^{\otimes n}$, e.g. \[H^{\otimes 2} = \left( \frac{\ket{0} + \ket{1}}{\sqrt{2}} \right) \left( \frac{\ket{0} + \ket{1}}{\sqrt{2}} \right) = \frac{1}{2} (\ket{0 0} + \ket{0 1} + \ket{1 0} + \ket{1 1}).\]
+
+  \item However, quantum parallelism isn't particularly useful in itself because upon measurement you only get a single value $\ket{x, f(x)}$.
+\end{itemize}
+
 \end{document}
