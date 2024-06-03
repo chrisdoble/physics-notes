@@ -155,4 +155,20 @@
   \item This doesn't enable faster-than-light communication because Alice still needs to communicate classical information to Bob which is limited by the speed of light. Bob then uses this information to conditionally apply further gates to his qubit to get it into the teleported state.
 \end{itemize}
 
+\subsection{Quantum algorithms}
+
+\subsubsection{Classical computations on a quantum computer}
+
+\begin{itemize}
+  \item Classical circuits may contain irreversible operations, e.g. \textsc{nand} gates, but quantum circuits must be reversible. In order to simulate classical circuits on a quantum computer we must find a way to make these irreversible operations reversible.
+
+  \item Any classical circuit can be replaced by an equivalent classical circuit containing only reversible elements by making use of the \textbf{Toffoli gate}. This gate has three input bits and three output bits. Two bits are control bits and are unaffected by the gate. The third bit is a target bit that is flipped if both of the control bits are $1$ and is otherwise left alone. Applying the Toffoli gate twice has the effect $(a, b, c) \rightarrow (a, b, c \oplus a b) \rightarrow (a, b, c)$ and thus the gate is reversible.
+
+  \item The Toffoli gate can also be used to simulate \textsc{nand} gates and to do \textsc{fanout}. With this it is possible to make any classical circuit reversible.
+
+  \item The equivalent quantum Toffoli gate works as expected, e.g. it changes $\ket{1 1 0}$ to $\ket{1 1 1}$. This ensures quantum computers are capable of performing any classical computation.
+
+  \item If the classical computer is non-deterministic, i.e. it can generate random numbers, this can be simulated on a quantum computer by preparing a qubit in the state $\ket{0}$, sending it through a Hadamard gate to produce $(\ket{0} + \ket{1}) / \sqrt{2}$, and then measuring the state. The result will be $\ket{0}$ or $\ket{1}$ with 50/50 probability.
+\end{itemize}
+
 \end{document}
