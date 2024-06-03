@@ -195,4 +195,34 @@
   \item The Deutsch-Jozsa algorithm can be used to determine if a function $f$ is constant (always returns the same value) or balanced (returns $0$ for half of its domain and $1$ for the other half) with a single evaluation of $f$. The same problem on a classical computer requires $2^n / 2 + 1$ evaluations of $f$.
 \end{itemize}
 
+\subsubsection{Quantum algorithms summarized}
+
+\begin{itemize}
+  \item There are three classes of quantum algorithms which provide an advantage over known classical algorithms:
+
+        \begin{itemize}
+          \item algorithms based on quantum versions of the Fourier transform,
+
+          \item quantum search algorithms, and
+
+          \item quantum simulation where a quantum computer is used to simulate a quantum system.
+        \end{itemize}
+
+  \item Classically the fast Fourier transform takes roughly $N \log (N) = n 2^n$ steps to transform $N = 2^n$ numbers. On a quantum computer this can be accomplished in about $\log^2 (N) = n^2$ steps which is an exponential saving.
+
+  \item However, the Fourier transform is being performed on the amplitudes of the quantum state, not on the input vector itself. This means we need clever ways to extract this information.
+
+  \item Classical search algorithms are typically $\mathcal{O}(n)$ whereas the quantum equivalents are $\mathcal{O}(\sqrt{n})$.
+
+  \item \textbf{Computational complexity theory} is the subject of classifying the difficuly of various computational problems. The most basic idea is a \textbf{complexity class} which can be though of as a collection of computational problems that all share some common feature with respect to the computational resources needed to solve those problems.
+
+  \item One complexity class is $\mathbf{P}$ — the class of problems that can be solved quickly on a classical computer.
+
+  \item Another is $\mathbf{NP}$ — the class of problems whose solutions can be verified quickly on a classical computer.
+
+  \item $\mathbf{P}$ is a subset of $\mathbf{NP}$, but it's not known if the're equal.
+
+  \item $\mathbf{NP}$-complete problems are an important subclass of $\mathbf{NP}$ problems. They're important because: there are many problems that are known to be $\mathbf{NP}$-complete, and any given $\mathbf{NP}$-complete problem is known to be ``at least as hard'' as all other $\mathbf{NP}$ problems, i.e. an algorithm to solve a specific $\mathbf{NP}$-complete problem can be modified to solve any other $\mathbf{NP}$ problem. If $\mathbf{P} \ne \mathbf{NP}$ then it will follow that no $\mathbf{NP}$-complete problem can be efficiently solved on a classical computer.
+\end{itemize}
+
 \end{document}
