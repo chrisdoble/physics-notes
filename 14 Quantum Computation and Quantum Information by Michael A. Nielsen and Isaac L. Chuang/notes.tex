@@ -245,4 +245,18 @@
   \item Shannon's noisy channel coding theorem quantifies the amount of information that can be transmitted through a noisy channel. The idea is to encode the information using error-correcting codes so that any noise introduced by the channel can be corrected at the other end. For example, a single bit of information may be encoded across two bits, in which case the channel has a capacity of half a bit.
 \end{itemize}
 
+\section{Introduction to quantum mechanics}
+
+\subsection{Linear algebra}
+
+\subsubsection{Bases and linear independence}
+
+\begin{itemize}
+  \item A \textbf{spanning set} for a vector space is a set of vectors $\ket{v_1}, \ldots, \ket{v_n}$ such that any vector $\ket{v}$ in the vector space can be written as a linear combination $\ket{v} = \sum_i a_i \ket{v}_i$ of vectors in that set. We say that the vectors $\ket{v_1}, \ldots, \ket{v_n}$ \textbf{span} the vector space.
+
+  \item A set of non-zero vectors $\ket{v_1}, \ldots, \ket{v_n}$ are \textbf{linearly dependent} if there exists a set of complex numbers $a_1, \ldots, a_n$ with $a_i \ne 0$ for at least one value of $i$ such that \[a_1 \ket{v_1} + \ldots + a_n \ket{v_n} = 0.\] A set of vectors is \textbf{linearly independent} if it's not linearly dependent.
+
+  \item Any two sets of linearly independent vectors which span a vector space $V$ contain the same number of elements. We call such a set a \textbf{basis} for $V$.
+\end{itemize}
+
 \end{document}
