@@ -72,4 +72,125 @@ Using the basis $\ket{+} = (\ket{0} + \ket{1}) / \sqrt{2}$ and $\ket{-} = (\ket{
                                                        \end{bmatrix}
 \end{align*}
 
+\subsection*{Exercise 2.5}
+
+\begin{align*}
+  \begin{bmatrix}
+    y_1^* & \ldots & y_n^*
+  \end{bmatrix} \begin{bmatrix}
+                  z_1    \\
+                  \vdots \\
+                  z_n
+                \end{bmatrix} & = \begin{bmatrix}
+                                    y_1^* & \ldots & y_n^*
+                                  \end{bmatrix} \left( \begin{bmatrix}
+                                                         z_1    \\
+                                                         0      \\
+                                                         \vdots \\
+                                                         0
+                                                       \end{bmatrix} + \begin{bmatrix}
+                                                                         0      \\
+                                                                         z_2    \\
+                                                                         \vdots \\
+                                                                         0
+                                                                       \end{bmatrix} + \cdots + \begin{bmatrix}
+                                                                                                  0      \\
+                                                                                                  0      \\
+                                                                                                  \vdots \\
+                                                                                                  z_n
+                                                                                                \end{bmatrix} \right) \\
+                                & = \begin{bmatrix}
+                                      y_1^* & \ldots & y_n^*
+                                    \end{bmatrix} \begin{bmatrix}
+                                                    z_1    \\
+                                                    0      \\
+                                                    \vdots \\
+                                                    0
+                                                  \end{bmatrix} + \cdots + \begin{bmatrix}
+                                                                             y_1^* & \ldots & y_n^*
+                                                                           \end{bmatrix} \begin{bmatrix}
+                                                                                           0      \\
+                                                                                           0      \\
+                                                                                           \vdots \\
+                                                                                           z_n
+                                                                                         \end{bmatrix}               \\
+                                & = z_1 \begin{bmatrix}
+                                          y_1^* & \ldots & y_n^*
+                                        \end{bmatrix} \begin{bmatrix}
+                                                        1      \\
+                                                        0      \\
+                                                        \vdots \\
+                                                        0
+                                                      \end{bmatrix} + \cdots + z_n \begin{bmatrix}
+                                                                                     y_1^* & \ldots & y_n^*
+                                                                                   \end{bmatrix} \begin{bmatrix}
+                                                                                                   0      \\
+                                                                                                   0      \\
+                                                                                                   \vdots \\
+                                                                                                   1
+                                                                                                 \end{bmatrix}       \\
+  \begin{bmatrix}
+    y_1^* & \ldots & y_n^*
+  \end{bmatrix} \begin{bmatrix}
+                  z_1    \\
+                  \vdots \\
+                  z_n
+                \end{bmatrix} & = y_1^* z_1 + y_2^* z_2 + \ldots + y_n^* z_n                                          \\
+                                & = (y_1 z_1^* + y_2 z_2^* + \ldots + y_n z_n^*)^*                                    \\
+                                & = \left( \begin{bmatrix}
+                                             z_1^* & \cdots & z_n^*
+                                           \end{bmatrix} \begin{bmatrix}
+                                                           y_1    \\
+                                                           \vdots \\
+                                                           y_n
+                                                         \end{bmatrix} \right)^*                                      \\
+  \begin{bmatrix}
+    v_1^* & \cdots & v_n^*
+  \end{bmatrix} \begin{bmatrix}
+                  v_1    \\
+                  \vdots \\
+                  v_n
+                \end{bmatrix} & = |v_1|^2 + \cdots + |v_n|^2                                                          \\
+                                & \ge 0
+\end{align*}
+
+\subsection*{Exercise 2.6}
+
+\begin{align*}
+  \left( \sum_i \lambda_i \ket{w_i}, \ket{v} \right) & = \left( \ket{v}, \sum_i \lambda_i \ket{w_i} \right)^*   \\
+                                                     & = \left( \sum_i \lambda_i (\ket{v}, \ket{w_i}) \right)^* \\
+                                                     & = \sum_i \lambda_i^* (\ket{v}, \ket{w_i})^*              \\
+                                                     & = \sum_i \lambda_i^* (\ket{w_i}, \ket{v})
+\end{align*}
+
+\subsection*{Exercise 2.7}
+
+\begin{align*}
+  \braket{w | v}              & = \begin{bmatrix}
+                                    1 & 1
+                                  \end{bmatrix} \begin{bmatrix}
+                                                  1 \\
+                                                  -1
+                                                \end{bmatrix}      \\
+                              & = (1) (1) + (1) (-1)                \\
+                              & = 0                                 \\
+  \frac{\ket{w}}{||\ket{w}||} & = \frac{1}{\sqrt{2}} \begin{bmatrix}
+                                                       1 \\
+                                                       1
+                                                     \end{bmatrix} \\
+  \frac{\ket{v}}{||\ket{v}||} & = \frac{1}{\sqrt{2}} \begin{bmatrix}
+                                                       1 \\
+                                                       -1
+                                                     \end{bmatrix}
+\end{align*}
+
+\subsection*{Exercise 2.9}
+
+\begin{align*}
+  \sigma_0 & = \ket{0} \bra{0} + \ket{1} \bra{1}     \\
+  \sigma_1 & = \ket{1} \bra{0} + \ket{0} \bra{1}     \\
+  \sigma_2 & = i \ket{1} \bra{0} - i \ket{0} \bra{1} \\
+  \sigma_3 & = \ket{0} \bra{0} - \ket{1} \bra{1}
+\end{align*}
+
 \end{document}

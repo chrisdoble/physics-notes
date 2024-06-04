@@ -1,4 +1,5 @@
 \documentclass{article}
+\usepackage{amsfonts} % For mathbb
 \usepackage{amsmath} % For align*
 \usepackage{bookmark} % For links
 \usepackage{braket} % For bra-ket notation
@@ -297,6 +298,46 @@
                          0 & -1
                        \end{bmatrix}
         \end{align*}
+\end{itemize}
+
+\subsubsection{Inner products}
+
+\begin{itemize}
+  \item An \textbf{inner product} is a function which takes as input two vectors $\ket{v}$ and $\ket{w}$ from a vector space and produces a complex number as output. It can be denoted $(\ket{v}, \ket{w})$, but this isn't the standard quantum mechanical notation. The standard notation is $\braket{v | w}$ where $\bra{v}$ is the dual vector to the vector $\ket{v}$. The dual vector is a linear operator from the inner product space $V$ to the complex numbers $\mathbb{C}$, defined by \[\bra{v} (\ket{w}) = \braket{v | w} = (\ket{v}, \ket{w}).\]
+
+  \item A function $(\cdot, \cdot)$ from $V \times V$ to $\mathbb{C}$ is an inner product if
+
+        \begin{itemize}
+          \item it is linear in the second argument \[\left( \ket{v}, \sum_i \lambda_i \ket{w_i} \right) = \sum_i \lambda_i (\ket{v}, \ket{w_i}),\]
+
+          \item $(\ket{v}, \ket{w}) = (\ket{w}, \ket{v})^*$, and
+
+          \item $(\ket{v}, \ket{v}) \ge 0$ with equality if and only if $\ket{v} = 0$.
+        \end{itemize}
+
+  \item A vector space equipped with an inner product is called an \textbf{inner product space}.
+
+  \item In finite dimensional complex vector spaces, a Hilbert space is the same as an inner product space.
+
+  \item Vectors $\ket{w}$ and $\ket{v}$ are \textbf{orthogonal} if their inner product is zero.
+
+  \item The \textbf{norm} of a vector is defined as \[||\ket{v}|| = \sqrt{\braket{v, v}}.\]
+
+  \item A \textbf{unit vector} is a vector $\ket{v}$ such that $||\ket{v}|| = 1$. We also say such a vector is \textbf{normalised}.
+
+  \item A vector can be normalised by dividing by its norm.
+
+  \item A set $\ket{i}$ of vectors with index $i$ is \textbf{orthonormal} if each vector is a unit vector and distinct vectors in the set are orthogonal, i.e. $\braket{i | j} = \delta_{i j}$.
+
+  \item If $\ket{v}$ is a vector in an inner product space $V$ and $\ket{w}$ is a vector in an inner product space $W$, then $\ket{w} \bra{v}$ is the linear operator from $V$ to $W$ whose action is defined by \[(\ket{w} \bra{v}) (\ket{v'}) = \ket{w} \braket{v | v'} = \braket{v | v'} \ket{w}.\]
+
+  \item Let $\ket{i}$ be any orthonormal basis for the vector space $V$, so an arbitrary vector $\ket{v}$ can be written $\ket{v} = \sum_i v_i \ket{i}$ for some set of complex numbers $v_i$. Therefore \[\left( \sum_i \ket{i} \bra{i} \right) \ket{v} = \sum_i \ket{i} \braket{i | v} = \sum_i v_i \ket{i} = \ket{v}\] and thus \[\sum_i \ket{i} \bra{i} = I.\] This is known as the \textbf{completeness relation}.
+
+  \item Suppose $A : V \rightarrow W$ is a linear operator, $\ket{v_i}$ is an orthonormal basis for $V$, and $\ket{w_j}$ is an orthonormal basis for $W$. We can use the completeness relation twice to obtain \begin{align*}
+          A & = I_W A I_V                                              \\
+            & = \sum_{i j} \ket{w_j} \braket{w_j | A | v_i} \bra{v_i}  \\
+            & = \sum_{i j} \braket{w_k | A | v_i} \ket{w_j} \bra{v_i}.
+        \end{align*} This is known as the \textbf{outer product representation} of $A$. From this we can see the matrix representation of $A$ has $\braket{w_k | A | v_i}$ in the $i$th column and $j$th row.
 \end{itemize}
 
 \end{document}
