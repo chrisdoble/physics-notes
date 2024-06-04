@@ -235,4 +235,14 @@
   \item If you chain Stern-Gerlach devices, the first measuring in the $\hat{z}$ direction and the $\ket{+z}$ output passing into another device measuring in the $\hat{x}$ direction you see a 50/50 split in the output. If you pass the $\ket{+x}$ output into another device measuring in the $\hat{z}$ direction you again see a 50/50 split.
 \end{itemize}
 
+\subsection{Quantum information}
+
+\subsubsection{Quantum information theory: example problems}
+
+\begin{itemize}
+  \item Shannon's noiseless channel coding theorem quantifies how many bits are required to store information being emitted by a source of information. A classical information source is described by a set of probabilities $p_j, \,j = 1, 2, \ldots, d$. Each use of the source results in the ``letter'' $j$ being emitted, chosen at random with probability $p_j$, independently for each use of the source. If letters that occur more frequently can be represented using fewer bits, the information can be compressed. Shannon's noiseless channel coding theorem quantifies exactly how well such a compression scheme can work.
+
+  \item Shannon's noisy channel coding theorem quantifies the amount of information that can be transmitted through a noisy channel. The idea is to encode the information using error-correcting codes so that any noise introduced by the channel can be corrected at the other end. For example, a single bit of information may be encoded across two bits, in which case the channel has a capacity of half a bit.
+\end{itemize}
+
 \end{document}
