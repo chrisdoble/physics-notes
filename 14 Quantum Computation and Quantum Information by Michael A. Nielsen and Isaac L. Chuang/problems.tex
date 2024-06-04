@@ -30,4 +30,46 @@
 
 \[(1, -1) + (1, 2) - (2, 1) = (0, 0)\]
 
+\subsection*{Exercise 2.2}
+
+\[A = \begin{bmatrix}
+    0 & 1 \\
+    1 & 0
+  \end{bmatrix}\]
+
+Using the basis $\ket{+} = (\ket{0} + \ket{1}) / \sqrt{2}$ and $\ket{-} = (\ket{0} - \ket{1}) / \sqrt{2}$ we get
+
+\begin{align*}
+  \ket{0}                                          & = \frac{\ket{+} + \ket{-}}{\sqrt{2}} \\
+  \ket{1}                                          & = \frac{\ket{+} - \ket{-}}{\sqrt{2}} \\
+  \begin{bmatrix}
+    a_{0 0} & a_{0 1} \\
+    a_{1 0} & a_{1 1}
+  \end{bmatrix} \frac{1}{\sqrt{2}} \begin{bmatrix}
+                                     1 \\
+                                     1
+                                   \end{bmatrix} & = \frac{1}{\sqrt{2}} \begin{bmatrix}
+                                                                          1 \\
+                                                                          -1
+                                                                        \end{bmatrix}    \\
+  a_{0 0} + a_{0 1}                                & = 1                                  \\
+  a_{1 0} + a_{1 1}                                & = -1                                 \\
+  \begin{bmatrix}
+    a_{0 0} & a_{0 1} \\
+    a_{1 0} & a_{1 1}
+  \end{bmatrix} \frac{1}{\sqrt{2}} \begin{bmatrix}
+                                     1 \\
+                                     -1
+                                   \end{bmatrix} & = \frac{1}{\sqrt{2}} \begin{bmatrix}
+                                                                          1 \\
+                                                                          1
+                                                                        \end{bmatrix}    \\
+  a_{0 0} - a_{0 1}                                & = 1                                  \\
+  a_{1 0} - a_{1 1}                                & = 1                                  \\
+  A                                                & = \begin{bmatrix}
+                                                         1 & 0  \\
+                                                         0 & -1
+                                                       \end{bmatrix}
+\end{align*}
+
 \end{document}
