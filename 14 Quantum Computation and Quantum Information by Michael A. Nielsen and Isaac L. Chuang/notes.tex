@@ -340,4 +340,18 @@
         \end{align*} This is known as the \textbf{outer product representation} of $A$. From this we can see the matrix representation of $A$ has $\braket{w_k | A | v_i}$ in the $i$th column and $j$th row.
 \end{itemize}
 
+\subsubsection{Eigenvector and eigenvalues}
+
+\begin{itemize}
+  \item An \textbf{eigenvector} of a linear operator $A$ on a vector space is a non-zero vector $\ket{v}$ such that $A \ket{v} = v \ket{v}$ where $v$ is a complex number known as the \textbf{eigenvalue} of $A$ corresponding to $\ket{v}$.
+
+  \item The \textbf{characteristic function} of an operator is defined to be $c(\lambda) = \det |A - \lambda I|$ and the solutions to $c(\lambda) = 0$ are the eigenvalues of the operator $A$.
+
+  \item The \textbf{eigenspace} corresponding to en eigenvalue $v$ is the set of vectors which have eigenvalue $v$.
+
+  \item A \textbf{diagonal representation} of an operator $A$ on a vector space $V$ is a representation $A = \sum_i \lambda_i \ket{i} \bra{i}$ where the vectors $\ket{i}$ form an orthonormal set of eigenvectors for $A$ with corresponding eigenvalues $\lambda_i$. In other words, the basis vectors are chosen to be orthonormal eigenvectors. The matrix representation in this basis has the eigenvalues along the diagonal and zeroes everywhere else.
+
+  \item When an eigenspace is more than one-dimensional (i.e. there are multiple eigenvectors associated with a particular eigenvalue) we say that it is \textbf{degenerate}.
+\end{itemize}
+
 \end{document}
