@@ -269,4 +269,34 @@
   \item Linear operators can be expressed as matrices. Suppose $A : V \rightarrow W$ is a linear operator between the vector spaces $V$ and $W$, $\ket{v_1}, \ldots, \ket{v_m}$ is a basis for $V$, and $\ket{w_1}, \ldots, \ket{w_n}$ is a basis for $W$. Then for each $j$ in the range $1, \ldots, m$ there exist complex numbers $A_{1 j}$ throught $A_{n j}$ such that \[A \ket{v_j} = \sum_i A_{i j} \ket{w_i},\] i.e. the result of applying $A$ to each basis vector $\ket{v_j}$ can be expressed as a linear combination of the basis vectors $\ket{w_i}$ and the coefficients $A_{i j}$ form the matrix representation of $A$.
 \end{itemize}
 
+\subsubsection{The Pauli matrices}
+
+\begin{itemize}
+  \item The Pauli matrices are defined as \begin{align*}
+          \sigma_0 & = I              \\
+                   & = \begin{bmatrix}
+                         1 & 0 \\
+                         0 & 1
+                       \end{bmatrix} \\
+          \sigma_1 & = \sigma_x       \\
+                   & = X              \\
+                   & = \begin{bmatrix}
+                         0 & 1 \\
+                         1 & 0
+                       \end{bmatrix} \\
+          \sigma_2 & = \sigma_y       \\
+                   & = Y              \\
+                   & = \begin{bmatrix}
+                         0 & -i \\
+                         i & 0
+                       \end{bmatrix} \\
+          \sigma_3 & = \sigma_z       \\
+                   & = Z              \\
+                   & = \begin{bmatrix}
+                         1 & 0  \\
+                         0 & -1
+                       \end{bmatrix}
+        \end{align*}
+\end{itemize}
+
 \end{document}
