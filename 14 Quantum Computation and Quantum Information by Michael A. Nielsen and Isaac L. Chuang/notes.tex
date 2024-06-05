@@ -380,4 +380,45 @@
   \item A \textbf{positive operator} $A$ is defined to be an operator such that for any vector $\ket{v}$, $(\ket{v}, A \ket{v})$ is a real, non-negative number. If $(\ket{v}, A \ket{v})$ is strictly greater than zero for all $\ket{v} \ne 0$ then we say $A$ is \textbf{positive definite}.
 \end{itemize}
 
+\subsubsection{Tensor Products}
+
+\begin{itemize}
+  \item Suppose $V$ and $W$ are vector spaces of dimension $m$ and $n$ respectively. Then $V \otimes W$ (read ``$V$ tensor $W$'') is an $m n$ dimensional vector space. The elements of $V \otimes W$ are linear combinations of ``tensor products'' $\ket{v} \otimes \ket{w}$ of elements $\ket{v}$ of $V$ and $\ket{w}$ of $W$. In particular, if $\ket{i}$ and $\ket{j}$ are orthonormal bases for the spaces $V$ and $W$ then $\ket{i} \otimes \ket{j}$ is a basis for $V \otimes W$. We often use the abbreviated notations $\ket{v} \ket{w}$, $\ket{v, w}$, and $\ket{v w}$ for $\ket{v} \otimes \ket{w}$.
+
+  \item The tensor product satisfies the following properties:
+
+        \begin{enumerate}
+          \item For an arbitrary scalar $z$ and elements $\ket{v}$ of $V$ and $\ket{w}$ of $W$, \[z (\ket{v} \otimes \ket{w}) = (z \ket{v}) \otimes \ket{w} = \ket{v} \otimes (z \ket{w}).\]
+
+          \item For arbitrary $\ket{v_1}$ and $\ket{v_2}$ in $V$ and $\ket{w}$ in $W$, \[(\ket{v_1} + \ket{v_2}) \otimes \ket{w} = \ket{v_1} \otimes \ket{w} + \ket{v_2} \otimes \ket{w}.\]
+
+          \item For arbitrary $\ket{v}$ in $V$ and $\ket{w_1}$ and $\ket{w_2}$ in $W$, \[\ket{v} \otimes (\ket{w_1} + \ket{w_2}) = \ket{v} \otimes \ket{w_1} + \ket{v} \otimes \ket{w_2}.\]
+        \end{enumerate}
+
+  \item Suppose $\ket{v}$ and $\ket{w}$ are vectors in $V$ and $W$, and $A$ and $B$ are linear operators on $V$ and $W$, respectively. Then we can define a linear operator $A \otimes B$ on $V \otimes W$ by the equation \[(A \otimes B) (\ket{v} \otimes \ket{w}) = A \ket{v} \otimes B \ket{w}.\]
+
+  \item An arbitrary linear operator $C$ mapping $V \otimes W$ to $V' \otimes W'$ can be represented as a linear combination of tensor products of operators mapping $V$ to $V'$ and $W$ to $W'$, \[C = \sum_i c_i A_i \otimes B_i.\]
+
+  \item The inner product on $V \otimes W$ is defined as \[\left( \sum_i a_i \ket{v_i} \otimes \ket{w_i}, \sum_j b_j \ket{v_j'} \otimes \ket{w_j'} \right) = \sum_{i j} a_i^* b_j \braket{v_i | v_j'} \braket{w_i | w_j'}.\]
+
+  \item Suppose $A$ is an $m$ by $n$ matrix and $B$ is a $p$ by $q$ matrix. \textbf{Kronecker product} representation of the tensor product is defined as \[A \otimes B = \begin{bmatrix}
+            A_{1 1} B & A_{1 2} B & \cdots & A_{1 n} B \\
+            A_{2 1} B & A_{2 2} B & \cdots & A_{b n} B \\
+            \vdots    & \vdots    & \vdots & \vdots    \\
+            A_{m 1} B & A_{m 2} B & \cdots & A_{m n} B
+          \end{bmatrix}\] where the terms $A_{i j} B$ represent a $p$ by $q$ submatrices.
+
+        For example, the tensor product of the Pauli matrices $X$ and $Y$ is \[X \otimes Y = \begin{bmatrix}
+            0 Y & 1 Y \\
+            1 Y & 0 Y
+          \end{bmatrix} = \begin{bmatrix}
+            0 & 0  & 0 & -i \\
+            0 & 0  & i & 0  \\
+            0 & -i & 0 & 0  \\
+            i & 0  & 0 & 0
+          \end{bmatrix}.\]
+
+  \item The notation $\ket{\psi}^{\otimes k}$ means $\ket{\psi}$ tensored with itself $k$ times.
+\end{itemize}
+
 \end{document}
