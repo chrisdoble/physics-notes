@@ -248,4 +248,107 @@ Using the basis $\ket{+} = (\ket{0} + \ket{1}) / \sqrt{2}$ and $\ket{-} = (\ket{
 
 The eigenvalue $1$ is degenerate. Because the matrix only has one eigenvector it can't diagonalised.
 
+\subsection*{Exercise 2.13}
+
+\[(\ket{w} \bra{v})^\dag = \bra{v}^\dag \ket{w}^\dag = \ket{v} \bra{w}\]
+
+\subsection*{Exercise 2.16}
+
+\begin{align*}
+  P^2 & = \left( \sum_{i = 1}^k \ket{i} \bra{i} \right) \left( \sum_{j = 1}^k \ket{j} \bra{j} \right) \\
+      & = \sum_{i = j = 1}^k \ket{i} \braket{i | j} \bra{j}                                           \\
+      & = \sum_{i = j = 1}^k \ket{i} \delta_{i j} \bra{j}                                             \\
+      & = \sum_{i = 1}^k \ket{i} \bra{i}                                                              \\
+      & = P
+\end{align*}
+
+\subsection*{Exercise 2.17}
+
+\begin{align*}
+  A                                & = A^\dag                                               \\
+  \sum_i \lambda_i \ket{i} \bra{i} & = \left( \sum_i \lambda_i \ket{i} \bra{i} \right)^\dag \\
+                                   & = \sum_i \lambda_i^* \ket{i} \bra{i}
+\end{align*}
+
+$\lambda_i = \lambda_i^*$ implies the eigenvalues are real.
+
+\subsection*{Exercise 2.18}
+
+\begin{align*}
+  U^\dag U                                                                                             & = I                      \\
+  \left( \sum_i \lambda_i \ket{i} \bra{i} \right)^\dag \left( \sum_i \lambda_j \ket{j} \bra{j} \right) & = \sum_k \ket{k} \bra{k} \\
+  \sum_{i j} \lambda_i^* \lambda_j \ket{i} \braket{i | j} \bra{j}                                      & = \sum_k \ket{k} \bra{k} \\
+  \sum_{i j} \lambda_i^* \lambda_j \ket{i} \delta_{i j} \bra{j}                                        & = \sum_k \ket{k} \bra{k} \\
+  \sum_i |\lambda_i|^2 \ket{i} \bra{i}                                                                 & = \sum_k \ket{k} \bra{k} \\
+  |\lambda_i|^2                                                                                        & = 1                      \\
+  \lambda_i                                                                                            & = e^{i \theta}
+\end{align*}
+
+\subsection*{Exercise 2.19}
+
+\begin{align*}
+  I^\dag   & = \begin{bmatrix}
+                 1 & 0 \\
+                 0 & 1
+               \end{bmatrix}^\dag \\
+           & = \begin{bmatrix}
+                 1 & 0 \\
+                 0 & 1
+               \end{bmatrix}     \\
+           & = I                  \\
+  I^\dag I & = I I                \\
+           & = I                  \\
+  X^\dag   & = \begin{bmatrix}
+                 0 & 1 \\
+                 1 & 0
+               \end{bmatrix}^\dag \\
+           & = \begin{bmatrix}
+                 0 & 1 \\
+                 1 & 0
+               \end{bmatrix}     \\
+           & = X                  \\
+  X^\dag X & = X X                \\
+           & = I                  \\
+  Y^\dag   & = \begin{bmatrix}
+                 0 & -i \\
+                 i & 0
+               \end{bmatrix}^\dag \\
+           & = \begin{bmatrix}
+                 0 & -i \\
+                 i & 0
+               \end{bmatrix}     \\
+           & = Y                  \\
+  Y^\dag Y & = Y Y                \\
+           & = I                  \\
+  Z^\dag   & = \begin{bmatrix}
+                 1 & 0  \\
+                 0 & -1
+               \end{bmatrix}^\dag \\
+           & = \begin{bmatrix}
+                 1 & 0  \\
+                 0 & -1
+               \end{bmatrix}     \\
+           & = Z                  \\
+  Z^\dag Z & = Z Z                \\
+           & = I
+\end{align*}
+
+\subsection*{Exercise 2.22}
+
+\begin{align*}
+  \braket{v_1 | A | v_2} & = \braket{v_1 | A v_2}                       \\
+                         & = \braket{v_1 | \lambda_2 v_2}               \\
+                         & = \lambda_2 \braket{v_1 | v_2}               \\
+  \braket{v_1 | A | v_2} & = \braket{A^\dag v_1 | v_2}                  \\
+                         & = \braket{A v_1 | v_2}                       \\
+                         & = \braket{\lambda_1 v_1 | v_2}               \\
+                         & = \lambda_1 \braket{v_1 | v_2}               \\
+  0                      & = (\lambda_2 - \lambda_1) \braket{v_1 | v_2} \\
+                         & = \braket{v_1 | v_2}                         \\
+\end{align*}
+
+\subsection*{Exercise 2.23}
+
+For each basis vector $\ket{i}, i = 1, \ldots k$, $P \ket{i} = \ket{i}$ and so they are eigenvectorrs of $P$ with eigenvalue $1$. For each basis vector $\ket{j}, j = k + 1, \ldots, d$, $P \ket{j} = 0$ and so they are eigenvectors of $P$ with eigenvalue of $0$. That is a total of $d$ eigenvectors so all eigenvalues are either $0$ or $1$.
+
 \end{document}

@@ -354,4 +354,30 @@
   \item When an eigenspace is more than one-dimensional (i.e. there are multiple eigenvectors associated with a particular eigenvalue) we say that it is \textbf{degenerate}.
 \end{itemize}
 
+\subsubsection{Adjoints and Hermitian operators}
+
+\begin{itemize}
+  \item If $A$ is any linear operator on a Hilbert space $V$, then there exists a unique linear operator $A^\dag$ on $V$ such that for all vectors $\ket{v}, \ket{w} \in V$, \[(\ket{v}, A \ket{w}) = (A^\dag \ket{v}, \ket{w}).\] This operator is known as the \textbf{adjoint} or \textbf{Hermitian conjugate} of the operator $A$. From definition it can be seen that $(A B)^\dag = B^\dag A^\dag$, $\ket{v}^\dag = \bra{v}$, and $(A \ket{v})^\dag = \bra{v} A^\dag$.
+
+  \item In a matrix representation of an operator $A$, the action of the Hermitian conjugation operation is to take the conjugate transpose of its matrix $A^\dag = (A^*)^T$.
+
+  \item An operator that is its own adjoint is known as \textbf{Hermitian} or \textbf{self-adjoint}.
+
+  \item Suppose $W$ is a $k$-dimensional vector subspace of the $d$-dimensional vector space $V$. Using the Gram-Schmidt procedure it's possible to construct an orthonormal basis $\ket{1}, \ldots, \ket{d}$ for $V$ such that $\ket{1}, \ldots, \ket{k}$ is an orthonormal basis for $W$. For example, $\hat{x}, \hat{y}, \hat{z}$ is an orthonormal basis for $\mathbb{R}^3$ where $\hat{x}, \hat{y}$ is an orthonormal basis for the subspace $\mathbb{R}^2$.
+
+        By definition, \[P = \sum_{i = 1}^k \ket{i} \bra{i}\] is the \textbf{projector} onto the subspace $W$ — it ``picks out'' only those components of the vector present in $W$. $\ket{v} \bra{v}$ is Hermitian for any vector $\ket{v}$ \[(\ket{v} \bra{v})^\dag = \bra{v}^\dag \ket{v}^\dag = \ket{v} \bra{v}\] and thus $P$ is also Hermitian $P^\dag = P$.
+
+        The \textbf{orthogonal complement} of $P$ is the operator $Q = I - P$. This is a projector onto the vector space spanned by $\ket{k + 1}, \ldots, \ket{d}$. This can be seen as \[Q \ket{v} = (I - P) \ket{v} = I \ket{v} - P \ket{v},\] i.e. subtract from $\ket{v}$ the components present in $W$ leaving only those outside of $W$.
+
+  \item An operator $A$ is said to be \textbf{normal} if $A A^\dag = A^\dag A$. An operator that is Hermitian is guaranteed to be normal.
+
+  \item The \textbf{spectral decomposition theorem} states that any normal operator $M$ on a vector space $V$ is diagonal with respect to some orthonormal basis for $V$ and, conversely, any diagonalisable operator is normal.
+
+  \item A matrix $U$ is said to be unitary if $U^\dag U = I$. Similarly an operator $U$ is unitary if $U^\dag U = I$. A unitary operator also satisfies $U U^\dag = I$ and therefore $U$ is normal and has a spectral decomposition.
+
+  \item Unitary operators preserve inner products between vectors.
+
+  \item A \textbf{positive operator} $A$ is defined to be an operator such that for any vector $\ket{v}$, $(\ket{v}, A \ket{v})$ is a real, non-negative number. If $(\ket{v}, A \ket{v})$ is strictly greater than zero for all $\ket{v} \ne 0$ then we say $A$ is \textbf{positive definite}.
+\end{itemize}
+
 \end{document}
