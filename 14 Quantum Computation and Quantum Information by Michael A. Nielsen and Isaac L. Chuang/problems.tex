@@ -14,6 +14,9 @@
 
 \setlist[enumerate, 1]{label={(\alph*)}}
 
+\newcommand{\tr}{\operatorname{tr}}
+\renewcommand{\vec}[1]{\boldsymbol{\mathbf{#1}}}
+
 \title{Quantum Computation and Quantum Information by Michael A. Nielsen and Isaac L. Chuang Problems}
 \author{Chris Doble}
 \date{June 2024}
@@ -479,6 +482,119 @@ For each basis vector $\ket{i}, i = 1, \ldots k$, $P \ket{i} = \ket{i}$ and so t
 \begin{align*}
   (A \otimes B)^\dagger (\ket{a} \otimes \ket{b}) & = (A^\dagger \otimes B^\dagger) (\ket{a} \otimes \ket{b}) \\
                                                   & = (A \otimes B) (\ket{a} \otimes \ket{b})
+\end{align*}
+
+\subsection*{Exercise 2.34}
+
+\begin{align*}
+  A         & = \begin{bmatrix}
+                  4 & 3 \\
+                  3 & 4
+                \end{bmatrix}                            \\
+  \lambda_1 & = 1                                         \\
+  \vec{x}_1 & = \begin{bmatrix}
+                  -1 \\
+                  1
+                \end{bmatrix}                            \\
+  \lambda_2 & = 7                                         \\
+  \vec{x}_2 & = \begin{bmatrix}
+                  1 \\
+                  1
+                \end{bmatrix}                            \\
+  P         & = \begin{bmatrix}
+                  -1 & 1 \\
+                  1  & 1
+                \end{bmatrix}                            \\
+  A         & = P D P^{-1}                                \\
+  D         & = P^{-1} A P                                \\
+            & = \begin{bmatrix}
+                  1 & 0 \\
+                  0 & 7
+                \end{bmatrix}                            \\
+  \sqrt{A}  & = P \sqrt{D} P^{-1}                         \\
+            & = \frac{1}{2} \begin{bmatrix}
+                              1 + \sqrt{7}  & -1 + \sqrt{7} \\
+                              -1 + \sqrt{7} & 1 + \sqrt{7}
+                            \end{bmatrix} \\
+  \ln A     & = P \ln (D) P^{-1}                          \\
+            & = \frac{\ln 7}{2} \begin{bmatrix}
+                                  1 & 1 \\
+                                  1 & 1
+                                \end{bmatrix}
+\end{align*}
+
+\subsection*{Exercise 2.35}
+
+\begin{align*}
+  \vec{v}                                    & = (v_x, v_y, v_z)                                                   \\
+  \vec{v} \cdot \vec{\sigma}                 & = v_x \sigma_1 + v_y \sigma_2 + v_z \sigma_3                        \\
+                                             & = \begin{bmatrix}
+                                                   v_z         & v_x - i v_y \\
+                                                   v_x + i v_y & -v_z
+                                                 \end{bmatrix}                                         \\
+  A                                          & = i \theta \vec{v} \cdot \vec{\sigma}                               \\
+  \lambda_1                                  & = -i \theta v                                                       \\
+  \vec{x}_1                                  & = \begin{bmatrix}
+                                                   (v_z - v) / (v_x + i v_y) \\
+                                                   1
+                                                 \end{bmatrix}                                         \\
+  \lambda_2                                  & = i \theta v                                                        \\
+  \vec{x}_2                                  & = \begin{bmatrix}
+                                                   (v_z + v) / (v_x + i v_y) \\
+                                                   1
+                                                 \end{bmatrix}                                         \\
+  P                                          & = \begin{bmatrix}
+                                                   \vec{x}_1 & \vec{x}_2
+                                                 \end{bmatrix}                                             \\
+  \exp (i \theta \vec{v} \cdot \vec{\sigma}) & = P \begin{bmatrix}
+                                                     e^{\lambda_1} & 0             \\
+                                                     0             & e^{\lambda_2}
+                                                   \end{bmatrix} P^{-1}                                   \\
+                                             & = \begin{bmatrix}
+                                                   \cos \theta + i v_z \sin \theta & i (v_x - i v_y) \sin \theta     \\
+                                                   i (v_x + i v_y) \sin \theta     & \cos \theta - i v_z \sin \theta
+                                                 \end{bmatrix} \\
+                                             & = \cos \theta I + i \sin \theta \begin{bmatrix}
+                                                                                 v_z         & v_x - i v_y \\
+                                                                                 v_x + i v_y & -v_z
+                                                                               \end{bmatrix}           \\
+                                             & = \cos \theta I + i \sin \theta \vec{v} \cdot \vec{\sigma}
+\end{align*}
+
+\subsection*{Exercise 2.36}
+
+\begin{align*}
+  \tr I & = 1 + 1 \\
+        & = 2     \\
+  \tr X & = 0 + 0 \\
+        & = 0     \\
+  \tr Y & = 0 + 0 \\
+        & = 0     \\
+  \tr Z & = 1 - 1 \\
+        & = 0
+\end{align*}
+
+\subsection*{Exercise 2.37}
+
+\begin{align*}
+  \tr (A B) & = \sum_i \braket{i | A B | i}                  \\
+            & = \sum_i \braket{i | A I B | i}                \\
+            & = \sum_i \braket{i | A i} \braket{i | B | i}   \\
+            & = \sum_i \braket{i | B | i} \braket{i | A | i} \\
+            & = \sum_i \braket{i | B I A | i}                \\
+            & = \sum_i \braket{i | B A | i}                  \\
+            & = \tr (B A)
+\end{align*}
+
+\subsection*{Exercise 2.38}
+
+\begin{align*}
+  \tr (A + B) & = \sum_i (A_{ii} + B_{ii})      \\
+              & = \sum_i A_{ii} + \sum_i B_{ii} \\
+              & = \tr A + \tr B                 \\
+  \tr (z A)   & = \sum_i z A_{ii}               \\
+              & = z \sum_i A_{ii}               \\
+              & = z \tr A
 \end{align*}
 
 \end{document}

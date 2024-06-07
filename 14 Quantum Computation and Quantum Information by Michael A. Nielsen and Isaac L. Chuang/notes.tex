@@ -11,6 +11,8 @@
   urlcolor=blue
 }
 
+\newcommand{\tr}{\operatorname{tr}}
+
 \title{Quantum Computation and Quantum Information by Michael A. Nielsen and Isaac L. Chuang}
 \author{Chris Doble}
 \date{May 2024}
@@ -419,6 +421,27 @@
           \end{bmatrix}.\]
 
   \item The notation $\ket{\psi}^{\otimes k}$ means $\ket{\psi}$ tensored with itself $k$ times.
+\end{itemize}
+
+\subsubsection{Operator functions}
+
+\begin{itemize}
+  \item Generally speaking, given a function $f : \mathbb{C} \rightarrow \mathbb{C}$, it is possible to define a corresponding matrix function on normal matrices (or some subclass such as the Hermitian matrices). Let \[A = \sum_i \lambda_i \ket{i} \bra{i}\] be the spectral decomposition for a normal operator $A$. Then, keeping in mind that $\ket{i} \bra{i}$ is a matrix then \[f(A) = \sum_i f(i) \ket{i} \bra{i}.\] For example, \[e^{\theta Z} = \begin{bmatrix}
+            e^\theta & 0           \\
+            0        & e^{-\theta}
+          \end{bmatrix}.\]
+
+  \item The \textbf{trace} of a matrix $A$ is the sum of its diagonal elements \[\tr A = \sum_i A_{i i}.\]
+
+  \item The trace is cyclic $\tr (A B) = \tr (B A)$ and linear $\tr (A + B) = \tr A + \tr B$, $\tr (z A) = z \tr A$. From the cyclic property it can be seen that the trace is invariant under the unitary similarity transformation $A \rightarrow U A U^\dag$ as $\tr (U A U^\dag) = \tr (U^\dag U A) = \tr A$.
+
+  \item The trace of an operator $A$ is defined as the trace of any matrix representation of $A$ under any orthonormal basis \[\tr A = \sum_i \braket{i | A | i}.\]
+
+  \item To evaluate $\tr (A \ket{\psi} \bra{\psi})$ we can use the Gram-Schmidt procedure to express $\ket{\psi}$ in an orthonormal basis $\ket{i}$ that includes the normalised $\ket{\psi}$ as an element \begin{align*}
+          \tr (A \ket{\psi} \bra{\psi}) & = \sum_i \braket{i | (A \ket{\psi} \bra{\psi}) | i} \\
+                                        & = \sum_i \braket{i | A | \psi} \braket{\psi | i}    \\
+                                        & = \braket{\psi | A | \psi}.
+        \end{align*}
 \end{itemize}
 
 \end{document}
