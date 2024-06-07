@@ -454,4 +454,12 @@
   \item The \textbf{simultaneous diagonalisation theorem} states that, if $A$ and $B$ are Hermitian operators, then $[A, B] = 0$ if and only if there exists an orthonormal basis such that both $A$ and $B$ are diagonal with respect to that basis. That is, they share a common set of eigenvectors in that basis.
 \end{itemize}
 
+\subsubsection{The polar and singular value decompositions}
+
+\begin{itemize}
+  \item If $A$ is a linear operator on a vector space $V$ then there exists unitary $U$ and positive operators $J$ and $K$ such that \[A = U J = K U\] where the unique positive operators $J$ and $K$ satisfying these equations are defined by $J = \sqrt{A^\dag A}$ and $K = \sqrt{A A^\dag}$. Moveover, if $A$ is invertible then $U$ is unique.
+
+  \item If $A$ is a square matrix then there exist unitary matrices $U$ and $V$, and a diagonal matrix $D$ with non-negative entries such that \[A = U D V.\] The diagonal elements of $D$ are called the singular values of $A$.
+\end{itemize}
+
 \end{document}
