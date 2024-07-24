@@ -492,4 +492,10 @@
   \item For example, to measure a qubit in the computational basis there are two measurement operators, $M_0 = \ket{0} \bra{0}$ and $M_1 = \ket{1} \bra{1}$. Each measurement operator is Hermitian $M_0^2 = M_0$, $M_1^2 = M_1$. If the state is $\ket{\psi} = a \ket{0} + b \ket{1}$ then the probability of measuring $0$ is \[p(0) = \bra{\psi} M_0^\dagger M_0 \ket{0} = \bra{\psi} M_0 \ket{\psi} = \braket{\psi | 0} \braket{0 | \psi} = |a|^2.\] The state after the measurement is \[\frac{M_0 \ket{\psi}}{|a|} = \frac{a}{|a|} \ket{0},\] and because $a / |a|$ is unitary it has no practical impact and the result is effectively $\ket{0}$.
 \end{itemize}
 
+\subsubsection{Distinguishing Quantum States}
+
+\begin{itemize}
+  \item If Alice chooses a state $\ket{\psi_i}$ ($1 \le i \le n$) from a fixed set of states and gives it to Bob, it's only possible for Bob to reliably distinguish the state if $\ket{\psi_i}$ are orthonormal.
+\end{itemize}
+
 \end{document}
