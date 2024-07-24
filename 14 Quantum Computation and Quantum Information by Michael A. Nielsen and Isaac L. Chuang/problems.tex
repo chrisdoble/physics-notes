@@ -660,4 +660,90 @@ For each basis vector $\ket{i}, i = 1, \ldots k$, $P \ket{i} = \ket{i}$ and so t
   U & = I
 \end{align*}
 
+\subsection*{Exercise 2.51}
+
+\begin{align*}
+  H           & = \frac{1}{\sqrt{2}} \begin{bmatrix}
+                                       1 & 1  \\
+                                       1 & -1
+                                     \end{bmatrix}        \\
+  H^\dagger   & = \frac{1}{\sqrt{2}} \begin{bmatrix}
+                                       1 & 1  \\
+                                       1 & -1
+                                     \end{bmatrix}        \\
+  H^\dagger H & = \frac{1}{2} \begin{bmatrix}
+                                1 & 1  \\
+                                1 & -1
+                              \end{bmatrix} \begin{bmatrix}
+                                              1 & 1  \\
+                                              1 & -1
+                                            \end{bmatrix} \\
+              & = \frac{1}{2} \begin{bmatrix}
+                                2 & 0 \\
+                                0 & 2
+                              \end{bmatrix}               \\
+              & = I
+\end{align*}
+
+\subsection*{Exercise 2.52}
+
+\begin{align*}
+  H^2 & = H H         \\
+      & = H^\dagger H \\
+      & I
+\end{align*}
+
+\subsection*{Exercise 2.53}
+
+\begin{align*}
+  H \vec{v}                                                                                              & = \lambda \vec{v}      \\
+  \frac{1}{\sqrt{2}} \begin{bmatrix}
+                       1 & 1  \\
+                       1 & -1
+                     \end{bmatrix} \vec{v} - \lambda \vec{v}                                                                & = 0 \\
+  \begin{bmatrix}
+    \frac{1}{\sqrt{2}} - \lambda & \frac{1}{\sqrt{2}}            \\
+    \frac{1}{\sqrt{2}}           & -\frac{1}{\sqrt{2}} - \lambda
+  \end{bmatrix} \vec{v}              & = 0                                          \\
+  \left( \frac{1}{\sqrt{2}} - \lambda \right) \left( -\frac{1}{\sqrt{2}} - \lambda \right) - \frac{1}{2} & = 0                    \\
+  -\frac{1}{2} + \lambda^2 - \frac{1}{2}                                                                 & = 0                    \\
+  \lambda^2 - 1                                                                                          & = 0                    \\
+  (\lambda - 1) (\lambda + 1)                                                                            & = 0
+\end{align*}
+
+The eigenvalues are $\pm 1$. The eigenvectors are $\begin{bmatrix}
+    1 \\
+    -1 \pm \sqrt{2}
+  \end{bmatrix}$.
+
+\subsection*{Exercise 2.54}
+
+\begin{align*}
+  \exp(A) \exp(B) & = \exp \left( \sum_i a_i \ket{i} \bra{i} \right) \exp \left( \sum_i b_i \ket{i} \bra{i} \right) \\
+                  & = \exp \left( \sum_i a_i \ket{i} \bra{i} + \sum_i b_i \ket{i} \bra{i} \right)                   \\
+                  & = \exp(A + B)
+\end{align*}
+
+\subsection*{Exercise 2.55}
+
+\begin{align*}
+  U(t_1, t_2)                     & = \exp \left[ \frac{-i H(t_2 - t_1)}{\hbar} \right] \\
+  U(t_1, t_2)^\dagger             & = \exp \left[ \frac{i H(t_2 - t_1)}{\hbar} \right]  \\
+  U(t_1, t_2)^\dagger U(t_1, t_2) & = 1
+\end{align*}
+
+\subsection*{Exercise 2.56}
+
+\begin{align*}
+  K         & = -i \ln (U)                                             \\
+  \ln U     & = \ln \left( \sum_u u \ket{u} \bra{u} \right)            \\
+            & = \sum_u \ln (u) \ket{u} \bra{u}                         \\
+            & = \sum_u i \theta_u \ket{u} \bra{u}                      \\
+  K         & = -i \ln (U)                                             \\
+            & = \sum_u \theta_u \ket{u} \bra{u}                        \\
+  K^\dagger & = \left( \sum_u \theta_u \ket{u} \bra{u} \right)^\dagger \\
+            & = \sum_u \theta_u \ket{u} \bra{u}                        \\
+            & = K
+\end{align*}
+
 \end{document}

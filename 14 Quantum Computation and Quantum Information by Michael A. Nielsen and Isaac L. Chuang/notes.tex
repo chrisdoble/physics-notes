@@ -462,4 +462,26 @@
   \item If $A$ is a square matrix then there exist unitary matrices $U$ and $V$, and a diagonal matrix $D$ with non-negative entries such that \[A = U D V.\] The diagonal elements of $D$ are called the singular values of $A$.
 \end{itemize}
 
+\subsection{The postulates of quantum mechanics}
+
+\subsubsection{State space}
+
+\begin{itemize}
+  \item Associated to any isolated physical system is a complex vector space with inner product (i.e. a Hilbert space) known as the \textbf{state space} of the system. The system is completely described by its \textbf{state vector}, which is a unit vector in the system's state space.
+
+  \item The simplest quantum mechanical system is the qubit. It has a two-dimensional state space where $\ket{0}$ and $\ket{1}$ forn an orthonormal basis for the state space.
+
+  \item An arbitrary state vector in this state space can be written \[\ket{\psi} = a \ket{0} + b \ket{1}.\] The requirement that $\ket{\psi}$ be a unit vector means that \[|a|^2 + |b|^2 = 1.\]
+\end{itemize}
+
+\subsubsection{Evolution}
+
+\begin{itemize}
+  \item The evolution of a closed quantum system is described by a \textbf{unitary transformation}. That is, the state $\ket{\psi}$ of the system at time $t_1$ is related to the state $\ket{\psi'}$ of the system at time $t_2$ by a unitary operator $U$ which depends only on the times $t_1$ and $t_2$, \[\ket{\psi'} = U \ket{\psi}.\] As a reminder, a unitary operator is one where \[U^\dagger U = U U^\dagger = I.\]
+
+  \item The time evolution of the state of a closed quantum system is described by the \textbf{Schrödinger equation}, \[i \hbar \frac{d \ket{\psi}}{d t} = H \ket{\psi}\] where $\hbar$ is \textbf{Planck's constant}, $H$ is a Hermitian operator known as the \textbf{Hamiltonian} of the system.
+
+  \item Because the Hamiltonian is a Hermitian operator it has a spectral decomposition \[H = \sum_E E \ket{E} \bra{E}\] with eigenvalues $E$ and normalised eigenvectors $\ket{E}$. The states $\ket{E}$ are known as the \textbf{energy eigenstates} and $E$ is the energy of the state $\ket{E}$.
+\end{itemize}
+
 \end{document}
