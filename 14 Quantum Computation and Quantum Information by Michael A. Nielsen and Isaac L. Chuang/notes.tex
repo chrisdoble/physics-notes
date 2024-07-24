@@ -484,4 +484,12 @@
   \item Because the Hamiltonian is a Hermitian operator it has a spectral decomposition \[H = \sum_E E \ket{E} \bra{E}\] with eigenvalues $E$ and normalised eigenvectors $\ket{E}$. The states $\ket{E}$ are known as the \textbf{energy eigenstates} and $E$ is the energy of the state $\ket{E}$.
 \end{itemize}
 
+\subsubsection{Quantum measurement}
+
+\begin{itemize}
+  \item Quantum measurements are described by a collection $\{M_n\}$ of \textbf{measurement operators}. These are operators acting on the state space of the system being measured. The index $m$ refers to the measurement outcomes that may occur during the experiment. If the state of the quantum system is $\ket{\psi}$ immediately before the measurement then the probability that result $m$ occurs is given by \[p(m) = \bra{\psi} M_m^\dagger M_m \ket{\psi},\] and the state of the system after measurement is \[\frac{M_m \ket{\psi}}{\sqrt{\bra{\psi} M_m^\dagger M_m \ket{\psi}}}.\]
+
+  \item For example, to measure a qubit in the computational basis there are two measurement operators, $M_0 = \ket{0} \bra{0}$ and $M_1 = \ket{1} \bra{1}$. Each measurement operator is Hermitian $M_0^2 = M_0$, $M_1^2 = M_1$. If the state is $\ket{\psi} = a \ket{0} + b \ket{1}$ then the probability of measuring $0$ is \[p(0) = \bra{\psi} M_0^\dagger M_0 \ket{0} = \bra{\psi} M_0 \ket{\psi} = \braket{\psi | 0} \braket{0 | \psi} = |a|^2.\] The state after the measurement is \[\frac{M_0 \ket{\psi}}{|a|} = \frac{a}{|a|} \ket{0},\] and because $a / |a|$ is unitary it has no practical impact and the result is effectively $\ket{0}$.
+\end{itemize}
+
 \end{document}

@@ -746,4 +746,13 @@ The eigenvalues are $\pm 1$. The eigenvectors are $\begin{bmatrix}
             & = K
 \end{align*}
 
+\subsection*{Exercise 2.57}
+
+Assuming the state to be measured is $\ket{\psi}$, then the state of the system after the first measurement is \[\ket{\psi'} = \frac{L_l \ket{\psi}}{\sqrt{\braket{\psi | L_l^\dagger L_l | \psi}}}.\] The state of the system after the second measurement is \begin{align*}
+  \ket{\psi''} & = \frac{M_m \ket{\psi'}}{\sqrt{\braket{\psi' | M_m^\dagger M_m | \psi'}}}                                                                                                                                                                                          \\
+               & = \frac{1}{\sqrt{\braket{\frac{L_l \ket{\psi}}{\sqrt{\braket{\psi | L_l^\dagger L_l | \psi}}} | M_m^\dagger M_m | \frac{L_l \ket{\psi}}{\sqrt{\braket{\psi | L_l^\dagger L_l | \psi}}}}}} \frac{M_m L_l \ket{\psi}}{\sqrt{\braket{\psi | L_l^\dagger L_l | \psi}}} \\
+               & = \frac{M_m L_l \ket{\psi}}{\sqrt{\braket{\psi | L_l^\dagger M_m^\dagger M_m L_l | \psi}}}                                                                                                                                                                         \\
+               & = \frac{N_{l m} \psi}{\sqrt{\braket{\psi | N_{l m}^\dagger N_{l m} | \psi}}}
+\end{align*}
+
 \end{document}
