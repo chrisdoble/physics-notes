@@ -12,6 +12,7 @@
 }
 
 \newcommand{\tr}{\operatorname{tr}}
+\renewcommand{\vec}[1]{\boldsymbol{\mathbf{#1}}}
 
 \title{Quantum Computation and Quantum Information by Michael A. Nielsen and Isaac L. Chuang}
 \author{Chris Doble}
@@ -496,6 +497,23 @@
 
 \begin{itemize}
   \item If Alice chooses a state $\ket{\psi_i}$ ($1 \le i \le n$) from a fixed set of states and gives it to Bob, it's only possible for Bob to reliably distinguish the state if $\ket{\psi_i}$ are orthonormal.
+\end{itemize}
+
+\subsubsection{Projective Measurements}
+
+\begin{itemize}
+  \item A \textbf{projective measurement} is described by an observable, $M$, a Hermitian operator on the state space of the system being observed. The observable has a spectral decomposition \[M = \sum_m m P_m\] where $P_m$ is the projector onto the eigenspace of $M$ with eigenvalue $m$. The possible outcomes of the measurement correspond to the eigenvalues $m$ of the observable. Upon measuring the state $\ket{\psi}$, the probability of getting result $m$ is given by \[p(m) = \braket{\psi | P_m | \psi}.\] Given that $m$ occurred, the state of the quantum system immediately after the measurement is \[\frac{P_m \ket{\psi}}{\sqrt{p(m)}}.\]
+
+  \item In other words, on measuring the state $\ket{\psi}$ you'll get one of the eigenvalues $m$ of $M$ with probability \[p(m) = \braket{\psi | P_m | \psi}\] and the state will collapse to the eigenvector associated with $m$.
+
+  \item The average (or expected) value of a measurement is \begin{align*}
+          \vec{E}(M) & = \sum_m m \,p(m)                                   \\
+                     & = \sum_m m \braket{\psi | P_m | \psi}               \\
+                     & = \bra{\psi} \left( \sum_m m P_m \right) \ket{\psi} \\
+                     & = \braket{\psi | M | \psi}.
+        \end{align*} This is often written $\braket{M}$.
+
+  \item The standard deviation of a measurement is \[\Delta(M) = \sqrt{\braket{M^2} - \braket{M}^2}.\]
 \end{itemize}
 
 \end{document}

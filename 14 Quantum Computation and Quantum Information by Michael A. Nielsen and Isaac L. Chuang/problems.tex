@@ -755,4 +755,74 @@ Assuming the state to be measured is $\ket{\psi}$, then the state of the system 
                & = \frac{N_{l m} \psi}{\sqrt{\braket{\psi | N_{l m}^\dagger N_{l m} | \psi}}}
 \end{align*}
 
+\subsection*{Exercise 2.58}
+
+\begin{align*}
+  \braket{M} & = m \\
+  \Delta(M)  & = 0
+\end{align*}
+
+\subsection*{Exercise 2.59}
+
+\begin{align*}
+  \braket{X}   & = \braket{0 | X | 0}                           \\
+               & = \begin{bmatrix}
+                     1 & 0
+                   \end{bmatrix} \begin{bmatrix}
+                                   0 & 1 \\
+                                   1 & 0
+                                 \end{bmatrix} \begin{bmatrix}
+                                                 1 \\
+                                                 0
+                                               \end{bmatrix}   \\
+               & = 0                                            \\
+  \braket{X^2} & = \braket{0 | X^2 | 0}                         \\
+               & = \begin{bmatrix}
+                     1 & 0
+                   \end{bmatrix} \begin{bmatrix}
+                                   0 & 1 \\
+                                   1 & 0
+                                 \end{bmatrix}^2 \begin{bmatrix}
+                                                   1 \\
+                                                   0
+                                                 \end{bmatrix} \\
+               & = \begin{bmatrix}
+                     1 & 0
+                   \end{bmatrix} \begin{bmatrix}
+                                   1 & 0 \\
+                                   0 & 1
+                                 \end{bmatrix} \begin{bmatrix}
+                                                 1 \\
+                                                 0
+                                               \end{bmatrix}   \\
+               & = 1                                            \\
+  \Delta(X)    & = \sqrt{\braket{X^2} - \braket{X}^2}           \\
+               & = 1
+\end{align*}
+
+\subsection*{Exercise 2.60}
+
+\begin{align*}
+  \vec{v} \cdot \vec{\sigma} & = v_1 \sigma_x + v_2 \sigma_2 + v_3 \sigma_3                     \\
+                             & = v_1 \begin{bmatrix}
+                                       0 & 1 \\
+                                       1 & 0
+                                     \end{bmatrix} + v_2 \begin{bmatrix}
+                                                           0 & -i \\
+                                                           i & 0
+                                                         \end{bmatrix} + v_3 \begin{bmatrix}
+                                                                               1 & 0  \\
+                                                                               0 & -1
+                                                                             \end{bmatrix}     \\
+                             & = \begin{bmatrix}
+                                   v_3         & v_1 - i v_2 \\
+                                   v_1 + i v_2 & -v_3
+                                 \end{bmatrix}                                      \\
+  0                          & = (v_3 - \lambda) (-v_3 - \lambda) - (v_1 - i v_2) (v_1 + i v_2) \\
+                             & = \lambda^2 - v_1^2 - v_2^2 - v_3^2                              \\
+                             & = \lambda^2 - 1                                                  \\
+                             & = (\lambda - 1) (\lambda + 1)                                    \\
+  \lambda                    & = \pm 1                                                          \\
+\end{align*}
+
 \end{document}
