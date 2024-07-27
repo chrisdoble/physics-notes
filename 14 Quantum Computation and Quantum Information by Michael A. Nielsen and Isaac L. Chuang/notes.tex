@@ -524,4 +524,16 @@
   \item Projective measurements assume that performing the same measurement multiple times leaves the system unchanged which isn't always the case, e.g. if performing the measurement destroys the system. For this reason the general measurement postulate is often more useful.
 \end{itemize}
 
+\subsubsection{Phase}
+
+\begin{itemize}
+  \item The term ``phase'' can have several meanings in quantum mechanics.
+
+  \item One is \textbf{global phase factor} — a unitary complex factor applied to an entire quantum state. For example, applying a measurement operator $M$ to the quantum state $e^{i \theta} \ket{\psi}$ where $\theta$ is a real number gives $\braket{\psi | e^{-i \theta} M^\dagger M e^{i \theta} | \psi} = \braket{\psi | M^\dagger M | \psi}$, i.e. the factor has no effect on measurement.
+
+  \item Another is \textbf{relative phase factor} — complex factors applied to different basis vectors in a quantum state. For example, in the states \[\frac{\ket{0} + \ket{1}}{\sqrt{2}} \text{ and } \frac{\ket{0} - \ket{1}}{\sqrt{2}}\] the amplitudes of the $\ket{0}$ basis vectors are both $1 / \sqrt{2}$ while the amplitudes of the $\ket{1}$ basis vectors are $1 / \sqrt{2}$ and $-1 / \sqrt{2}$. The magnitude of the $\ket{1}$ amplitudes are the same but they differ in sign. More generally, we say that two amplitudes, $a$ and $b$, differ by a relative phase if there is a real $\theta$ such that $a = e^{i \theta} b$. Two states are said to differ by a relative phase in some basis if each of the amplitudes in that basis is related by such a phase factor.
+
+  \item States that differ by relative phase factors in some basis have observable differences in measurement statistics, i.e. we can distinguish them.
+\end{itemize}
+
 \end{document}
