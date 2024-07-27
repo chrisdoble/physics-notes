@@ -516,4 +516,12 @@
   \item The standard deviation of a measurement is \[\Delta(M) = \sqrt{\braket{M^2} - \braket{M}^2}.\]
 \end{itemize}
 
+\subsubsection{POVM measurements}
+
+\begin{itemize}
+  \item The general measurement postulate gives us ways to both determine the probability of measuring a particular value $p(m) = \braket{\psi | M_m^\dagger M_m | \psi}$, and to determine the state of the system after measuring that value \[\ket{\psi'} = \frac{M_m \ket{\psi}}{\sqrt{\braket{\psi | M_m^\dagger M_m | \psi}}}.\] However, in some cases we don't care about the post-measurement state in which case we can define \[E_m = M_m^\dagger M_m\] and the probabilities are given by $p(m) = \braket{\psi | E_m | \psi}$. The set of operators $E_m$ are called the \textbf{POVM elements} and they are sufficient to determine the probabilities of the different measurement outcomes. The complete set $\{E_m\}$ is known as \textbf{a POVM}.
+
+  \item Projective measurements assume that performing the same measurement multiple times leaves the system unchanged which isn't always the case, e.g. if performing the measurement destroys the system. For this reason the general measurement postulate is often more useful.
+\end{itemize}
+
 \end{document}
