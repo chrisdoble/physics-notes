@@ -846,4 +846,23 @@ So $U_m$ can be arbitrary unitary operators.
   \frac{\ket{0} - \ket{1}}{\sqrt{2}} & = \ket{-}
 \end{align*}
 
+\subsection*{Exercise 2.66}
+
+\begin{align*}
+  X                              & = \begin{bmatrix}
+                                       0 & 1 \\
+                                       1 & 0
+                                     \end{bmatrix}                                                                                          \\
+  Z                              & = \begin{bmatrix}
+                                       1 & 0  \\
+                                       0 & -1
+                                     \end{bmatrix}                                                                                          \\
+  \ket{\psi}                     & = \frac{\ket{00} + \ket{11}}{\sqrt{2}}                                                                    \\
+  Z_2 \ket{\psi}                 & = \frac{\ket{00} - \ket{11}}{\sqrt{2}}                                                                    \\
+  X_1 Z_2 \ket{\psi}             & = \frac{\ket{10} - \ket{01}}{\sqrt{2}}                                                                    \\
+  \braket{\psi | X_1 Z_2 | \psi} & = \left( \frac{\bra{00} + \bra{11}}{\sqrt{2}} \right) \left( \frac{\ket{10} - \ket{01}}{\sqrt{2}} \right) \\
+                                 & = \frac{1}{2} (\braket{00 | 10} - \braket{00 | 01} + \braket{11 | 10} - \braket{11 | 01})                 \\
+                                 & = 0
+\end{align*}
+
 \end{document}
